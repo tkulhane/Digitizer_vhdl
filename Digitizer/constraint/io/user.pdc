@@ -1,0 +1,189 @@
+# Microsemi I/O Physical Design Constraints file
+
+# User I/O Constraints file 
+
+# Version: 2022.1 2022.1.0.10
+
+# Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
+
+# Date generated: Thu Mar  2 15:27:46 2023 
+
+
+# 
+# User Locked I/O Bank Settings
+# 
+
+set_iobank -bank_name Bank0  \
+    -vcci 1.35               \
+    -fixed true
+
+set_iobank -bank_name Bank1  \
+    -vcci 1.80               \
+    -fixed true
+
+set_iobank -bank_name Bank2  \
+    -vcci 1.80               \
+    -fixed true
+
+set_iobank -bank_name Bank3  \
+    -vcci 1.80               \
+    -fixed true
+
+set_iobank -bank_name Bank4  \
+    -vcci 3.30               \
+    -fixed true
+
+set_iobank -bank_name Bank5  \
+    -vcci 1.80               \
+    -fixed true
+
+set_iobank -bank_name Bank6  \
+    -vcci 1.35               \
+    -fixed true
+
+set_iobank -bank_name Bank7  \
+    -vcci 1.35               \
+    -fixed true
+
+
+# 
+# Unlocked I/O Bank Settings
+# The I/O Bank Settings can be locked by directly editing this file
+# or by making changes in the I/O Attribute Editor
+# 
+
+
+# 
+# User Locked I/O settings
+# 
+
+set_io -port_name DBGport_0  \
+    -pin_name AA3            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_1  \
+    -pin_name AB5            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_2  \
+    -pin_name AA5            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_3  \
+    -pin_name W4             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_4  \
+    -pin_name AA4            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_5  \
+    -pin_name AB6            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_6  \
+    -pin_name V3             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_7  \
+    -pin_name V4             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LED_1  \
+    -pin_name U11        \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LED_2  \
+    -pin_name T5         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LED_3  \
+    -pin_name W8         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LED_4  \
+    -pin_name W9         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name RX_0  \
+    -pin_name U7        \
+    -fixed true         \
+    -io_std LVCMOS33    \
+    -DIRECTION INPUT
+
+
+set_io -port_name RX_1  \
+    -pin_name AA9       \
+    -fixed true         \
+    -io_std LVCMOS33    \
+    -DIRECTION INPUT
+
+
+set_io -port_name TX_0  \
+    -pin_name V9        \
+    -fixed true         \
+    -io_std LVCMOS33    \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name TX_1  \
+    -pin_name W5        \
+    -fixed true         \
+    -io_std LVCMOS33    \
+    -DIRECTION OUTPUT
+
+
+
+# 
+# Dedicated Peripheral I/O Settings
+# 
+
+
+# 
+# Unlocked I/O settings
+# The I/Os in this section are unplaced or placed but are not locked
+# the other listed attributes have been applied
+# 
+
+
+#
+#Ports using Dedicated Pins
+
+#
+

@@ -1,0 +1,442 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09M
+Install: C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DESKTOP-TDPVUTD
+
+Implementation : synthesis
+Synopsys HDL compiler and linker, Version comp202109synp1, Build 219R, Built Feb 23 2022 09:27:03, @
+
+Modified Files: 5
+FID:  path (prevtimestamp, timestamp)
+86       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26)
+147      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27)
+182      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v (2023-05-09 14:09:19, 2023-05-09 15:06:32)
+183      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\FIFOs_Reader.vhd (2023-05-09 14:09:02, 2023-05-09 20:05:28)
+185      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Sample_RAM_Block_MUX.vhd (N/A, 2023-05-09 14:31:32)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 109
+MID:  lib.cell.view
+0        work.APBM.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+1        work.APBS.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+2        work.BANKCTRLM.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+3        work.BANKCTRL_GPIO.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+4        work.BANKCTRL_HSIO.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+5        work.BANKEN.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+6        work.CLKBUF_DIFF.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+7        work.CLKBUF_DIFF_ODT.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+160      work.COREFIFO_C4.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+161      work.COREFIFO_C4_COREFIFO_C4_0_COREFIFO.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+162      work.COREFIFO_C4_COREFIFO_C4_0_LSRAM_top.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+163      work.COREFIFO_C4_COREFIFO_C4_0_corefifo_NstagesSync.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+164      work.COREFIFO_C4_COREFIFO_C4_0_corefifo_async.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+165      work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+166      work.COREFIFO_C4_COREFIFO_C4_0_corefifo_grayToBinConv.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+167      work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+168      work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+169      work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+170      work.COREFIFO_C5.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+171      work.COREFIFO_C5_COREFIFO_C5_0_COREFIFO.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+172      work.COREFIFO_C5_COREFIFO_C5_0_LSRAM_top.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+173      work.COREFIFO_C5_COREFIFO_C5_0_corefifo_NstagesSync.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+174      work.COREFIFO_C5_COREFIFO_C5_0_corefifo_async.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+175      work.COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+176      work.COREFIFO_C5_COREFIFO_C5_0_corefifo_grayToBinConv.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+177      work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+178      work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+179      work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+18       work.CORELNKTMR_V.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+29       work.CRN_COMMON.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+30       work.CRN_INT.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+31       work.CRYPTO.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+32       work.CRYPTO_SOC.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+34       work.DEBUG.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+35       work.DLL.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+36       work.DRI.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+180      work.Data_Block.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (module definition)
+37       work.ENFORCE.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+193      work.Event_Info_RAM_Block.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+38       work.GLITCHDETECT.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+39       work.GPSS_COMMON.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+40       work.HS_IO_CLK.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+41       work.ICB_BANKCLK.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+42       work.ICB_CLKDIV.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+43       work.ICB_CLKDIVDELAY.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+44       work.ICB_CLKINT.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+45       work.ICB_CLKSTOP.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+46       work.ICB_CLKSTOP_EN.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+47       work.ICB_INT.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+48       work.ICB_MUXING.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+49       work.ICB_NGMUX.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+50       work.INIT.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+51       work.IOD.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+181      work.Input_Data_Part.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+52       work.LANECTRL.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+53       work.LANERST.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+54       work.OSC_RC160MHZ.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+55       work.OSC_RC200MHZ.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+56       work.OSC_RC2MHZ.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+57       work.PCIE.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+58       work.PCIE_COMMON.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+59       work.PFSOC_SCSM.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+194      work.PF_DPSRAM_C5.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v (2023-05-09 14:09:19, 2023-05-09 15:06:32) <-- (may instantiate this module)
+195      work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v (2023-05-09 14:09:19, 2023-05-09 15:06:32) <-- (may instantiate this module)
+196      work.PF_DPSRAM_C7.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+197      work.PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+198      work.PF_DPSRAM_C8_Event_Status.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+199      work.PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+66       work.PF_SPI.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+67       work.PLL.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+68       work.QUADRST.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+69       work.QUADRST_PCIE.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+70       work.SCB.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+71       work.SYSCTRL_RESET_STATUS.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+72       work.SYSRESET.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+73       work.SYS_SERVICES.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+200      work.Sample_RAM_Block.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v (2023-05-09 14:09:19, 2023-05-09 15:06:32) <-- (module definition)
+74       work.TAMPER.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+75       work.TVS.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+76       work.TX_PLL.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+182      work.Trigger_Top_Part.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+78       work.UPROM.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+79       work.USPI.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+80       work.VOLTAGEDETECT.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+81       work.VREFBANKDYN.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+82       work.VREFCTRL.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+83       work.XCVR.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+84       work.XCVR_64B6XB.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+85       work.XCVR_8B10B.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+86       work.XCVR_APB_LINK.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+87       work.XCVR_APB_LINK_V.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+88       work.XCVR_APB_LINK_V2.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+89       work.XCVR_DUAL_PCS.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+90       work.XCVR_PIPE.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+91       work.XCVR_PIPE_AXI0.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+92       work.XCVR_PIPE_AXI1.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+93       work.XCVR_PMA.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+94       work.XCVR_REF_CLK.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+95       work.XCVR_REF_CLK_N.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+96       work.XCVR_REF_CLK_P.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+97       work.XCVR_TEST.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+98       work.XCVR_VV.verilog may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\polarfire_syn_comps.v (2023-05-09 14:10:45, 2023-05-09 22:18:26) <-- (module definition)
+201      work.fifos_reader.rtl may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\FIFOs_Reader.vhd (2023-05-09 14:09:02, 2023-05-09 20:05:28) <-- (architecture and entity definition)
+203      work.sample_ram_block_decoder.rtl may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v (2023-05-09 14:09:19, 2023-05-09 15:06:32) <-- (may instantiate this module)
+205      work.sample_ram_block_mux.rtl may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v (2023-05-09 14:09:19, 2023-05-09 15:06:32) <-- (may instantiate this module)
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Sample_RAM_Block_MUX.vhd (N/A, 2023-05-09 14:31:32) <-- (architecture and entity definition)
+183      work.test_generator.rtl may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+185      work.trigger_control.rtl may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+187      work.trigger_main.rtl may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+189      work.trigger_unit.rtl may have changed because the following files changed:
+                        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Data_Block\Data_Block.v (2023-05-09 14:09:15, 2023-05-09 14:34:27) <-- (may instantiate this module)
+
+*******************************************************************
+Unmodified files: 110
+FID:  path (timestamp)
+0        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v (2022-03-10 08:59:56)
+1        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\arith.vhd (2022-03-10 08:59:58)
+2        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\location.map (2022-03-10 08:59:58)
+3        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\numeric.vhd (2022-03-10 08:59:58)
+4        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\std.vhd (2022-03-10 08:59:58)
+5        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\std1164.vhd (2022-03-10 08:59:58)
+6        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\std_textio.vhd (2022-03-10 08:59:58)
+7        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\unsigned.vhd (2022-03-10 08:59:58)
+8        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd\hyperents.vhd (2022-03-10 08:59:58)
+9        C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd\snps_haps_pkg.vhd (2022-03-10 08:59:58)
+10       C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd\umr_capim.vhd (2022-03-10 08:59:58)
+11       C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vlog\hypermods.v (2022-03-10 08:59:58)
+12       C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vlog\scemi_objects.v (2022-03-10 08:59:58)
+13       C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vlog\scemi_pipes.svh (2022-03-10 08:59:58)
+14       C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vlog\umr_capim.v (2022-03-10 08:59:58)
+87       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0.v (2023-02-10 16:00:46)
+88       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v (2023-02-10 16:00:46)
+89       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.v (2023-02-10 16:00:46)
+90       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v (2023-02-10 16:00:45)
+91       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_NstagesSync.v (2023-02-10 16:00:46)
+92       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v (2023-02-10 16:00:46)
+93       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v (2023-02-10 16:00:46)
+94       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_grayToBinConv.v (2023-02-10 16:00:46)
+95       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync.v (2023-02-10 16:00:46)
+96       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync_scntr.v (2023-02-10 16:00:46)
+97       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1.v (2023-02-10 16:01:52)
+98       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO.v (2023-02-10 16:01:52)
+99       C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO_C1_COREFIFO_C1_0_LSRAM_top.v (2023-02-10 16:01:52)
+100      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO_C1_COREFIFO_C1_0_ram_wrapper.v (2023-02-10 16:01:51)
+101      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_NstagesSync.v (2023-02-10 16:01:52)
+102      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_async.v (2023-02-10 16:01:52)
+103      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_fwft.v (2023-02-10 16:01:52)
+104      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_grayToBinConv.v (2023-02-10 16:01:52)
+105      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_sync.v (2023-02-10 16:01:52)
+106      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_sync_scntr.v (2023-02-10 16:01:52)
+107      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3.v (2023-02-13 13:59:17)
+108      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v (2023-02-13 13:59:17)
+109      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO_C3_COREFIFO_C3_0_LSRAM_top.v (2023-02-13 13:59:17)
+110      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO_C3_COREFIFO_C3_0_ram_wrapper.v (2023-02-13 13:59:16)
+111      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_NstagesSync.v (2023-02-13 13:59:17)
+112      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_async.v (2023-02-13 13:59:17)
+113      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_fwft.v (2023-02-13 13:59:17)
+114      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_grayToBinConv.v (2023-02-13 13:59:17)
+115      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_sync.v (2023-02-13 13:59:17)
+116      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_sync_scntr.v (2023-02-13 13:59:17)
+117      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4.v (2023-05-04 16:06:49)
+118      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO.v (2023-05-04 16:06:49)
+119      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO_C4_COREFIFO_C4_0_LSRAM_top.v (2023-05-04 16:06:49)
+120      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO_C4_COREFIFO_C4_0_ram_wrapper.v (2023-05-04 16:06:48)
+121      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_NstagesSync.v (2023-05-04 16:06:49)
+122      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_async.v (2023-05-04 16:06:49)
+123      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_fwft.v (2023-05-04 16:06:49)
+124      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_grayToBinConv.v (2023-05-04 16:06:49)
+125      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_sync.v (2023-05-04 16:06:49)
+126      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_sync_scntr.v (2023-05-04 16:06:49)
+127      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5.v (2023-05-04 16:07:13)
+128      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\COREFIFO.v (2023-05-04 16:07:13)
+129      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\COREFIFO_C5_COREFIFO_C5_0_LSRAM_top.v (2023-05-04 16:07:13)
+130      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\COREFIFO_C5_COREFIFO_C5_0_ram_wrapper.v (2023-05-04 16:07:12)
+131      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\corefifo_NstagesSync.v (2023-05-04 16:07:13)
+132      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\corefifo_async.v (2023-05-04 16:07:13)
+133      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\corefifo_fwft.v (2023-05-04 16:07:13)
+134      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\corefifo_grayToBinConv.v (2023-05-04 16:07:13)
+135      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\corefifo_sync.v (2023-05-04 16:07:13)
+136      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\corefifo_sync_scntr.v (2023-05-04 16:07:13)
+137      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0.v (2023-02-08 09:56:01)
+138      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\core\corereset_pf.v (2023-02-08 09:56:01)
+139      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREUART_C0\COREUART_C0.v (2023-02-08 10:06:39)
+140      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Clock_gen.v (2023-02-08 10:06:39)
+141      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v (2023-02-08 10:06:39)
+142      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Rx_async.v (2023-02-08 10:06:39)
+143      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v (2023-02-08 10:06:39)
+144      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\fifo_256x8_54sxa.v (2023-02-08 10:06:39)
+145      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Clock_Reset\Clock_Reset.v (2023-04-13 20:16:22)
+146      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Controler\Controler.v (2023-04-15 00:45:37)
+175      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Event_Info_RAM_Block\Event_Info_RAM_Block.v (2023-05-09 12:31:52)
+148      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Input_Data_Part\Input_Data_Part.v (2023-04-20 14:34:34)
+149      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0.v (2023-04-13 20:33:05)
+150      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v (2023-04-13 20:33:05)
+176      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_DPSRAM_C5\PF_DPSRAM_C5.v (2023-05-09 13:35:52)
+177      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_DPSRAM_C5\PF_DPSRAM_C5_0\PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM.v (2023-05-09 13:35:52)
+178      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7.v (2023-05-09 12:31:38)
+179      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7_0\PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v (2023-05-09 12:31:38)
+180      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_Status.v (2023-05-09 12:28:17)
+181      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_Status_0\PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM.v (2023-05-09 12:28:17)
+151      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0.v (2023-02-08 09:55:38)
+152      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v (2023-02-08 09:55:38)
+153      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_OSC_C0\PF_OSC_C0.v (2023-02-08 09:57:17)
+154      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\PF_OSC_C0\PF_OSC_C0_0\PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v (2023-02-08 09:57:17)
+155      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Top\Top.v (2023-05-09 10:47:13)
+156      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v (2023-05-04 16:07:35)
+157      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\component\work\UART_Protocol\UART_Protocol.v (2023-05-09 12:02:33)
+158      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\ADI_SPI.vhd (2023-02-12 19:48:44)
+159      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Answer_Encoder.vhd (2023-04-15 00:48:26)
+160      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Command_Decoder.vhd (2023-04-17 09:40:42)
+161      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Communication_ANW_MUX.vhd (2023-03-02 22:22:42)
+162      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Communication_CMD_MUX.vhd (2023-03-03 22:48:50)
+163      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\REGISTERS.vhd (2023-03-03 22:47:28)
+184      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Sample_RAM_Block_Decoder.vhd (2023-05-09 13:57:09)
+164      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Synchronizer.vhd (2023-02-08 10:04:48)
+174      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\System_Controler.vhd (2023-04-09 19:58:52)
+165      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Test_Generator.vhd (2023-04-11 16:00:47)
+166      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Trigger_Control.vhd (2023-04-09 16:56:31)
+167      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Trigger_Main.vhd (2023-04-08 21:04:48)
+168      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\Trigger_Unit.vhd (2023-04-11 16:00:43)
+169      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\UART_RX_Protocol.vhd (2023-04-17 09:37:55)
+170      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\UART_TX_Protocol.vhd (2023-03-03 22:44:54)
+171      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\cmd_table.vhd (2023-04-14 23:02:23)
+172      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\cmd_table_trigger.vhd (2023-04-08 17:29:54)
+173      C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\hdl\mko.vhd (2023-03-02 15:16:32)
+
+*******************************************************************
+Unchanged modules: 72
+MID:  lib.cell.view
+8        work.COREFIFO_C0.verilog
+9        work.COREFIFO_C0_COREFIFO_C0_0_COREFIFO.verilog
+10       work.COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.verilog
+11       work.COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync.verilog
+12       work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async.verilog
+13       work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft.verilog
+14       work.COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv.verilog
+15       work.COREFIFO_C0_COREFIFO_C0_0_corefifo_sync.verilog
+16       work.COREFIFO_C0_COREFIFO_C0_0_corefifo_sync_scntr.verilog
+17       work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.verilog
+108      work.COREFIFO_C1.verilog
+109      work.COREFIFO_C1_COREFIFO_C1_0_COREFIFO.verilog
+110      work.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top.verilog
+111      work.COREFIFO_C1_COREFIFO_C1_0_corefifo_NstagesSync.verilog
+112      work.COREFIFO_C1_COREFIFO_C1_0_corefifo_async.verilog
+113      work.COREFIFO_C1_COREFIFO_C1_0_corefifo_fwft.verilog
+114      work.COREFIFO_C1_COREFIFO_C1_0_corefifo_grayToBinConv.verilog
+115      work.COREFIFO_C1_COREFIFO_C1_0_corefifo_sync.verilog
+116      work.COREFIFO_C1_COREFIFO_C1_0_corefifo_sync_scntr.verilog
+117      work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper.verilog
+124      work.COREFIFO_C3.verilog
+125      work.COREFIFO_C3_COREFIFO_C3_0_COREFIFO.verilog
+126      work.COREFIFO_C3_COREFIFO_C3_0_LSRAM_top.verilog
+127      work.COREFIFO_C3_COREFIFO_C3_0_corefifo_NstagesSync.verilog
+128      work.COREFIFO_C3_COREFIFO_C3_0_corefifo_async.verilog
+129      work.COREFIFO_C3_COREFIFO_C3_0_corefifo_fwft.verilog
+130      work.COREFIFO_C3_COREFIFO_C3_0_corefifo_grayToBinConv.verilog
+131      work.COREFIFO_C3_COREFIFO_C3_0_corefifo_sync.verilog
+132      work.COREFIFO_C3_COREFIFO_C3_0_corefifo_sync_scntr.verilog
+133      work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper.verilog
+19       work.CORERESET_PF_C0.verilog
+20       work.CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF.verilog
+21       work.COREUART_C0.verilog
+22       work.COREUART_C0_COREUART_C0_0_COREUART.verilog
+23       work.COREUART_C0_COREUART_C0_0_Clock_gen.verilog
+24       work.COREUART_C0_COREUART_C0_0_Rx_async.verilog
+25       work.COREUART_C0_COREUART_C0_0_Tx_async.verilog
+26       work.COREUART_C0_COREUART_C0_0_fifo_256x8.verilog
+27       work.COREUART_C0_COREUART_C0_0_fifo_ctrl_256.verilog
+28       work.COREUART_C0_COREUART_C0_0_ram16x8.verilog
+33       work.Clock_Reset.verilog
+138      work.Controler.verilog
+60       work.PF_CCC_C0.verilog
+61       work.PF_CCC_C0_PF_CCC_C0_0_PF_CCC.verilog
+62       work.PF_INIT_MONITOR_C0.verilog
+63       work.PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.verilog
+64       work.PF_OSC_C0.verilog
+65       work.PF_OSC_C0_PF_OSC_C0_0_PF_OSC.verilog
+77       work.Top.verilog
+105      work.UART_Protocol.verilog
+122      work.adi_spi.rtl
+123      work.adi_spi.vhdl
+118      work.answer_encoder.rtl
+119      work.answer_encoder.vhdl
+120      work.command_decoder.rtl
+121      work.command_decoder.vhdl
+134      work.communication_anw_mux.rtl
+135      work.communication_anw_mux.vhdl
+106      work.communication_cmd_mux.rtl
+107      work.communication_cmd_mux.vhdl
+158      work.mko.rtl
+159      work.mko.vhdl
+136      work.registers.rtl
+137      work.registers.vhdl
+99       work.synchronizer.arch
+100      work.synchronizer.vhdl
+191      work.system_controler.rtl
+192      work.system_controler.vhdl
+101      work.uart_rx_protocol.rtl
+102      work.uart_rx_protocol.vhdl
+103      work.uart_tx_protocol.rtl
+104      work.uart_tx_protocol.vhdl

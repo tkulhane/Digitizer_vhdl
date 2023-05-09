@@ -1,0 +1,59 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09M
+Install: C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DESKTOP-TDPVUTD
+
+Implementation : synthesis
+
+# Written on Tue May  9 22:18:48 2023
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\synthesis.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                                               Requested     Requested     Clock        Clock                     Clock
+Level     Clock                                                               Frequency     Period        Type         Group                     Load 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared     default_clkgroup          1    
+                                                                                                                                                      
+0 -       System                                                              100.0 MHz     10.000        system       system_clkgroup           0    
+                                                                                                                                                      
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     1549 
+                                                                                                                                                      
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_2     1048 
+======================================================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                                                    Clock     Source                                                                Clock Pin                                                      Non-clock Pin     Non-clock Pin                                              
+Clock                                                               Load      Pin                                                                   Seq Example                                                    Seq Example       Comb Example                                               
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0     -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
+                                                                                                                                                                                                                                                                                                
+System                                                              0         -                                                                     -                                                              -                 -                                                          
+                                                                                                                                                                                                                                                                                                
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     1549      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            Controler_0.ADI_SPI_0.write_read_buffer.C                      -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_0.I(BUFG)     
+                                                                                                                                                                                                                                                                                                
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1048      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
+================================================================================================================================================================================================================================================================================================
