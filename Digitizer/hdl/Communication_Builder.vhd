@@ -43,7 +43,18 @@ architecture rtl of Communication_Builder is
 ------------------------------------------------------------------------------------------------------------
 --Signals Declaration
 ------------------------------------------------------------------------------------------------------------ 
-    type FSM_state is (IDLE, );
+    type FSM_state is   ( 
+                            IDLE,               --IDLE
+                            READ_EVENT_INFO,    --Read event info RAMs     
+
+                            COMMUNICATION_REQ,  --Request for selecrted communication 
+                            SEND_EVENT_HEAD,    --Send event head to communication
+                            SEND_PACKET_HEAD,   --Send packet head to communication
+                            SEND_DATA_FRAMES,   --Sending data frames composits from 3 samples
+                            SEND_PACKET_TAIL,   --Send packet tail to communication
+                            SEND_EVENT_TAIL     --Send event tail to communication
+                    
+                        );
     signal state_reg, next_state : FSM_state;
 
 
@@ -51,6 +62,11 @@ architecture rtl of Communication_Builder is
     signal Event_RAM_R_Address_Integer : integer range 0 to 1024-1 := 0;
 
     signal Status_Event_WriteDone : std_logic; 
+
+    signal Event_Info_Buffer_Store : std_logic;
+    signal Event_Start_ADDR_Buffer : std_logic_vector(19 downto 0);
+    signal Event_Number_Buffer : std_logic_vector(19 downto 0);
+    signal Event_Size_Buffer : std_logic_vector(19 downto 0);
 
 begin
 
@@ -61,7 +77,7 @@ begin
 
 
 ------------------------------------------------------------------------------------------------------------
---FSM memory ride
+--FSM builder ride
 ------------------------------------------------------------------------------------------------------------
     --state memory and reset
     process(Reset_N,Clock)
@@ -86,8 +102,11 @@ begin
         
             when IDLE =>
                 if(Status_Event_WriteDone = '1') then
-                    next_state <= ;
+                    next_state <= READ_EVENT_INFO;
                 end if;
+
+            when READ_EVENT_INFO =>
+                
             
             when others =>
                 null; 
@@ -103,6 +122,7 @@ begin
         
             when IDLE =>
                 Event_RAM_ADDR_GEN_Enable <= '0';
+                Event_Info_Buffer_Store <= '0';
 
             when others =>
 
@@ -110,6 +130,32 @@ begin
 
     end process;
 
+
+
+------------------------------------------------------------------------------------------------------------
+--process event info buffer
+------------------------------------------------------------------------------------------------------------
+process(Clock,Reset_N)
+
+begin
+
+    if(Reset_N = '0') then
+        Event_Start_ADDR_Buffer <= (others => '0');
+        Event_Number_Buffer <= (others => '0');
+        Event_Size_Buffer <= (others => '0');
+
+    elsif(Clock'event and Clock = '1') then
+
+        if(Event_Info_Buffer_Store = '1')then
+            Event_Start_ADDR_Buffer <= Event_RAM_R_Data_Start_ADDR;
+            Event_Number_Buffer <= Event_RAM_R_Data_Number;
+            Event_Size_Buffer <= Event_RAM_R_Data_Size;
+
+        end if;
+        
+    end if;
+
+end process;
 
 ------------------------------------------------------------------------------------------------------------
 --process Event RAM Write Address Generator
@@ -136,8 +182,6 @@ begin
 		end if;
 
     end process;    
-
-
 
 ------------------------------------------------------------------------------------------------------------
 --process status watcher

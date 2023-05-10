@@ -109,7 +109,7 @@ begin
     Event_RAM_W_Address <= std_logic_vector(to_unsigned(Event_RAM_W_Address_Integer, 10));
 
 ------------------------------------------------------------------------------------------------------------
---FSM memory ride
+--FSM 
 ------------------------------------------------------------------------------------------------------------
     --state memory and reset
     process(Reset_N,Clock)
