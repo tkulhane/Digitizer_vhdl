@@ -25,7 +25,8 @@ entity Communication_Builder is
         Communication_Data_Frame : out std_logic_vector(31 downto 0);
         Communication_Data_Enable : out std_logic;
         Communication_Data_Full : in std_logic;
-        Communication_Data_Req : out std_logic;
+        Communication_Data_Req : out std_logic
+        
 
     );
 end Communication_Builder;

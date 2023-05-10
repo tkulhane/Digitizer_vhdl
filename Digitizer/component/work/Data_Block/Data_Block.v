@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue May  9 14:34:27 2023
+// Created by SmartDesign Tue May  9 23:25:06 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -165,8 +165,8 @@ FIFOs_Reader FIFOs_Reader_0(
         // Inputs
         .Clock                         ( Clock ),
         .Reset_N                       ( Reset_N ),
-        .Event_FIFO_R_Data             ( Trigger_Top_Part_0_Q ),
         .Event_FIFO_Empty              ( Trigger_Top_Part_0_EMPTY ),
+        .Event_FIFO_R_Data             ( Trigger_Top_Part_0_Q ),
         .Block_0_Sample_FIFO_0_R_Data  ( Input_Data_Part_0_Q_0 ),
         .Block_0_Sample_FIFO_1_R_Data  ( Input_Data_Part_0_Q_1 ),
         .Block_0_Sample_FIFO_2_R_Data  ( Input_Data_Part_0_Q_2 ),
@@ -180,20 +180,20 @@ FIFOs_Reader FIFOs_Reader_0(
         .Event_FIFO_R_Enable           ( FIFOs_Reader_0_Event_FIFO_R_Enable ),
         .Block_0_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .Block_1_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
+        .Event_RAM_W_Enable_Start_ADDR ( FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR ),
+        .Event_RAM_W_Enable_Number     ( FIFOs_Reader_0_Event_RAM_W_Enable_Number ),
+        .Event_RAM_W_Enable_Size       ( FIFOs_Reader_0_Event_RAM_W_Enable_Size ),
+        .Event_RAM_W_Enable_Status     ( FIFOs_Reader_0_Event_RAM_W_Enable_Status ),
+        .Sample_RAM_W_Enable           ( FIFOs_Reader_0_Sample_RAM_W_Enable ),
+        .Diag_Valid                    (  ),
         .Event_RAM_W_Address           ( FIFOs_Reader_0_Event_RAM_W_Address ),
         .Event_RAM_W_Data_Start_ADDR   ( FIFOs_Reader_0_Event_RAM_W_Data_Start_ADDR ),
         .Event_RAM_W_Data_Number       ( FIFOs_Reader_0_Event_RAM_W_Data_Number ),
         .Event_RAM_W_Data_Size         ( FIFOs_Reader_0_Event_RAM_W_Data_Size ),
         .Event_RAM_W_Data_Status       ( FIFOs_Reader_0_Event_RAM_W_Data_Status ),
-        .Event_RAM_W_Enable_Start_ADDR ( FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR ),
-        .Event_RAM_W_Enable_Number     ( FIFOs_Reader_0_Event_RAM_W_Enable_Number ),
-        .Event_RAM_W_Enable_Size       ( FIFOs_Reader_0_Event_RAM_W_Enable_Size ),
-        .Event_RAM_W_Enable_Status     ( FIFOs_Reader_0_Event_RAM_W_Enable_Status ),
         .Sample_RAM_W_Address          ( FIFOs_Reader_0_Sample_RAM_W_Address ),
         .Sample_RAM_W_Block_Address    ( FIFOs_Reader_0_Sample_RAM_W_Block_Address ),
-        .Sample_RAM_W_Data             ( FIFOs_Reader_0_Sample_RAM_W_Data ),
-        .Sample_RAM_W_Enable           ( FIFOs_Reader_0_Sample_RAM_W_Enable ),
-        .Diag_Valid                    (  ) 
+        .Sample_RAM_W_Data             ( FIFOs_Reader_0_Sample_RAM_W_Data ) 
         );
 
 //--------Input_Data_Part

@@ -32,7 +32,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "EXT"
 KEY VendorTechnology_VCCI_2.5_VOLTR "EXT"
 KEY VendorTechnology_VCCI_3.3_VOLTR "EXT"
 KEY VendorTechnology_VOLTR "EXT"
-KEY ProjectLocation "C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer"
+KEY ProjectLocation "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer"
 KEY ProjectDescription ""
 KEY UseRootLocationForLinkedFiles "FALSE"
 KEY RootLocationENVForLinkedFiles ""
@@ -1575,8 +1575,8 @@ PARENT="<project>\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_St
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1683622089"
-SIZE="4636"
+TIME="1683655983"
+SIZE="4901"
 ENDFILE
 VALUE "<project>\simulation\SRAM_test_presynth_simulation.log,log"
 STATE="utd"
@@ -1585,8 +1585,8 @@ SIZE="22032"
 ENDFILE
 VALUE "<project>\simulation\TB_Data_Block_presynth_simulation.log,log"
 STATE="utd"
-TIME="1683622178"
-SIZE="34289"
+TIME="1683656562"
+SIZE="26331"
 ENDFILE
 VALUE "<project>\simulation\tb_UART_Protocol_presynth_simulation.log,log"
 STATE="utd"
@@ -1620,22 +1620,22 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\Top.so,so"
 STATE="utd"
-TIME="1681717379"
+TIME="1683663537"
 SIZE="228"
 ENDFILE
 VALUE "<project>\synthesis\Top.vm,syn_vm"
 STATE="ood"
-TIME="1681717378"
-SIZE="1600381"
+TIME="1683663536"
+SIZE="1524302"
 ENDFILE
 VALUE "<project>\synthesis\Top_syn.prj,prj"
 STATE="utd"
-TIME="1681717380"
-SIZE="14118"
+TIME="1683663538"
+SIZE="15547"
 ENDFILE
 VALUE "<project>\synthesis\Top_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1681717379"
+TIME="1683663536"
 SIZE="11697"
 ENDFILE
 ENDLIST
@@ -1957,8 +1957,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -1966,7 +1966,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\ModelSimPro\win32acoem\modelsim.exe"
-PARAM=" -l TB_Data_Block_presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -1995,20 +1995,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-SmartDesign;Controler;0
-SmartDesign;Clock_Reset;0
-Timing Report Explorer;Timing Report Explorer;0
-Reports;Reports;0
-ReportsCurrentItem;Verify Timing:Top_max_timing_multi_corner.xml
-SmartDesign;Data_Block;0
-SmartDesign;Input_Data_Part;0
-SmartDesign;Event_Info_RAM_Block;0
-SmartDesign;Sample_RAM_Block;0
-SmartDesign;Top;0
-HDL;hdl\UART_TX_Protocol.vhd;0
-Constraint Manager;Constraint Manager;0
-SmartDesign;UART_Protocol;0
-ACTIVEVIEW;Controler
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
