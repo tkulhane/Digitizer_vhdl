@@ -47,13 +47,17 @@ architecture rtl of Communication_Builder is
     signal state_reg, next_state : FSM_state;
 
 
+    signal Event_RAM_ADDR_GEN_Enable : std_logic;
+    signal Event_RAM_R_Address_Integer : integer range 0 to 1024-1 := 0;
+
+    signal Status_Event_WriteDone : std_logic; 
 
 begin
 
 ------------------------------------------------------------------------------------------------------------
 --Signals Routing
 ------------------------------------------------------------------------------------------------------------   
-
+    Event_RAM_R_Address <= std_logic_vector(to_unsigned(Event_RAM_R_Address_Integer, 10));
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -81,7 +85,9 @@ begin
         case state_reg is
         
             when IDLE =>
-
+                if(Status_Event_WriteDone = '1') then
+                    next_state <= ;
+                end if;
             
             when others =>
                 null; 
@@ -96,6 +102,7 @@ begin
         case state_reg is
         
             when IDLE =>
+                Event_RAM_ADDR_GEN_Enable <= '0';
 
             when others =>
 
@@ -105,17 +112,51 @@ begin
 
 
 ------------------------------------------------------------------------------------------------------------
---process 
+--process Event RAM Write Address Generator
 ------------------------------------------------------------------------------------------------------------
     process(Clock,Reset_N)
 
     begin
 
         if(Reset_N = '0') then
+            Event_RAM_R_Address_Integer <= 0;
+		
+		elsif(Clock'event and Clock = '1') then
+            
+            if(Event_RAM_ADDR_GEN_Enable = '1') then
+                
+                if(Event_RAM_W_Address_Integer >= 1023) then
+                    Event_RAM_R_Address_Integer <= 0;
+                else
+                    Event_RAM_R_Address_Integer <= Event_RAM_R_Address_Integer + 1;
+                end if;
+
+            end if;
+	
+		end if;
+
+    end process;    
+
+
+
+------------------------------------------------------------------------------------------------------------
+--process status watcher
+------------------------------------------------------------------------------------------------------------
+    process(Clock,Reset_N)
+
+    begin
+
+        if(Reset_N = '0') then
+            Status_Event_WriteDone <= '0';
 
 		elsif(Clock'event and Clock = '1') then
 
-
+            if(Event_RAM_R_Data_Status = Event_Status_ID_WriteDone) then
+                Status_Event_WriteDone <= '1';
+            else
+                Status_Event_WriteDone <= '0';
+            end if;
+            
 		end if;
 
     end process;
