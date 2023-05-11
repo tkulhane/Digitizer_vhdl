@@ -64,7 +64,15 @@ architecture rtl of FIFOs_Reader is
 ----------------------------------------------------------------------------------------------------------
 --Signals Declaration
 ------------------------------------------------------------------------------------------------------------ 
-    type FSM_state is (IDLE, Event_FIFO_Read, Event_Process_Set, Event_Process_Reset  , Sample_FIFOs_Read_1, Sample_FIFOs_Read_2);
+    type FSM_state is   (
+                            IDLE, 
+                            Event_FIFO_Read, 
+                            Event_Process_Set, 
+                            Event_Process_Reset, 
+                            Sample_FIFOs_Read_1, 
+                            Sample_FIFOs_Read_2,
+                            Store_Event_End
+                        );
     signal state_reg, next_state : FSM_state;
 
     signal NewEventInFIFO : std_logic;
@@ -125,7 +133,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, Event_FIFO_Empty, NewEventInFIFO, EndEventInFIFO, Event_In_Process, Event_RAM_ADDR_Is_Free, Sample_RAM_W_Address_Unsigned)
+    process(next_state, state_reg, Event_FIFO_Empty, NewEventInFIFO, EndEventInFIFO, Event_In_Process, Event_RAM_ADDR_Is_Free)
     begin
 
         next_state <= state_reg;
@@ -158,13 +166,17 @@ begin
                 next_state <= Sample_FIFOs_Read_2;
 
             when Sample_FIFOs_Read_2 =>
-                if(Event_FIFO_Empty = '1') then
-                    next_state <= IDLE;
-                elsif(Event_In_Process = '0') then
-                     next_state <= IDLE;
+                if(Event_In_Process = '0') then
+                     next_state <= Store_Event_End;
+                elsif(Event_FIFO_Empty = '1') then --možná upravit nebo signalizovat chybovou událost
+                    --next_state <= IDLE;
+                    next_state <= Store_Event_End;
                 else
                     next_state <= Event_FIFO_Read;
                 end if;
+
+            when Store_Event_End =>
+                next_state <= IDLE;
                 
 
             when others =>
@@ -261,16 +273,16 @@ begin
                 Sample_RAM_W_Enable <= '0';
                 Sample_RAM_ADDR_GEN_Enable <= '0';
 
-                Event_RAM_ADDR_GEN_Enable <= '1';
+                Event_RAM_ADDR_GEN_Enable <= '0';
                 Event_RAM_W_Enable_Start_ADDR <= '0';
                 Event_RAM_W_Enable_Number <= '0';
-                Event_RAM_W_Enable_Size <= '1';
-                Event_RAM_W_Enable_Status <= '1';
+                Event_RAM_W_Enable_Size <= '0';
+                Event_RAM_W_Enable_Status <= '0';
 
                 Event_RAM_W_Data_Start_ADDR <= (others => '0');
                 Event_RAM_W_Data_Number <= (others => '0');
-                Event_RAM_W_Data_Size <= std_logic_vector(Event_Size_Counter);
-                Event_RAM_W_Data_Status <= Event_Status_ID_WriteDone;
+                Event_RAM_W_Data_Size <= (others => '0');
+                Event_RAM_W_Data_Status <= (others => '0');
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '0';
@@ -323,6 +335,30 @@ begin
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '1';
 
+            when Store_Event_End =>
+                Event_FIFO_R_Enable <= '0';
+                Block_0_Sample_FIFO_R_Enable <= '0';
+                Block_1_Sample_FIFO_R_Enable <= '1';
+                Event_In_Process_Set <= '0';
+                Event_In_Process_Reset <= '0';
+                Data_MUX_Sel <= 1;
+                Sample_RAM_W_Enable <= '1';
+                Sample_RAM_ADDR_GEN_Enable <= '1';
+
+                Event_RAM_ADDR_GEN_Enable <= '1';
+                Event_RAM_W_Enable_Start_ADDR <= '0';
+                Event_RAM_W_Enable_Number <= '0';
+                Event_RAM_W_Enable_Size <= '1';
+                Event_RAM_W_Enable_Status <= '1';
+
+                Event_RAM_W_Data_Start_ADDR <= (others => '0');
+                Event_RAM_W_Data_Number <= (others => '0');
+                Event_RAM_W_Data_Size <= std_logic_vector(Event_Size_Counter);
+                Event_RAM_W_Data_Status <= Event_Status_ID_WriteDone;
+
+                Event_Size_Counter_Reset_N <= '1';
+                Event_Size_Counter_Enable <= '1';
+
             when others =>
                 Event_FIFO_R_Enable <= '0';
                 Block_0_Sample_FIFO_R_Enable <= '0';
@@ -346,6 +382,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '0';
                 Event_Size_Counter_Enable <= '0';
+
 
 
         end case;
