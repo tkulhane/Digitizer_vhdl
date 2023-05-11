@@ -151,7 +151,7 @@ begin
         --set threshold
         SEND_CMD( X"01", X"0033", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         --set samples count
-        SEND_CMD( X"02", X"000F", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        SEND_CMD( X"02", X"002F", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
          
 
         wait for 200 ns;

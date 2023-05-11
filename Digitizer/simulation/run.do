@@ -1,5 +1,5 @@
 quietly set ACTELLIBNAME PolarFire
-quietly set PROJECT_DIR "C:/VHDL_temp/Digitizer/Digitizer_ver2/Digitizer"
+quietly set PROJECT_DIR "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer"
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"
@@ -10,6 +10,7 @@ if {[file exists presynth/_info]} {
 vmap presynth presynth
 vmap PolarFire "C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/PolarFire"
 
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Communication_Builder.vhd"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_DPSRAM_C7/PF_DPSRAM_C7_0/PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_DPSRAM_C7/PF_DPSRAM_C7.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_DPSRAM_C8_Event_Status/PF_DPSRAM_C8_Event_Status_0/PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM.v"

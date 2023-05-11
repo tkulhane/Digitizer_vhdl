@@ -1055,13 +1055,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.cxf,actgen_cxf"
 STATE="utd"
-TIME="1683635667"
-SIZE="4232"
+TIME="1683791465"
+SIZE="4354"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.v,hdl"
 STATE="utd"
-TIME="1683635667"
-SIZE="15249"
+TIME="1683791465"
+SIZE="17067"
 PARENT="<project>\component\work\Data_Block\Data_Block.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -1488,8 +1488,8 @@ SIZE="7339"
 ENDFILE
 VALUE "<project>\hdl\Communication_Builder.vhd,hdl"
 STATE="utd"
-TIME="1683662663"
-SIZE="3489"
+TIME="1683814910"
+SIZE="20045"
 ENDFILE
 VALUE "<project>\hdl\Communication_CMD_MUX.vhd,hdl"
 STATE="utd"
@@ -1498,8 +1498,8 @@ SIZE="7020"
 ENDFILE
 VALUE "<project>\hdl\FIFOs_Reader.vhd,hdl"
 STATE="utd"
-TIME="1683655528"
-SIZE="18703"
+TIME="1683785243"
+SIZE="18692"
 ENDFILE
 VALUE "<project>\hdl\mko.vhd,hdl"
 STATE="utd"
@@ -1600,7 +1600,7 @@ SIZE="5105"
 ENDFILE
 VALUE "<project>\stimulus\TB_Data_Block.vhd,tb_hdl"
 STATE="utd"
-TIME="1683642726"
+TIME="1683792677"
 SIZE="7173"
 ENDFILE
 VALUE "<project>\stimulus\tb_UART_Protocol.vhd,tb_hdl"
@@ -1630,7 +1630,7 @@ SIZE="1524302"
 ENDFILE
 VALUE "<project>\synthesis\Top_syn.prj,prj"
 STATE="utd"
-TIME="1683663538"
+TIME="1683667480"
 SIZE="15547"
 ENDFILE
 VALUE "<project>\synthesis\Top_vm.sdc,syn_sdc"
@@ -1966,7 +1966,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\ModelSimPro\win32acoem\modelsim.exe"
-PARAM=""
+PARAM=" -l TB_Data_Block_presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -1996,7 +1996,11 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+SmartDesign;Data_Block;0
+SmartDesign;Event_Info_RAM_Block;0
+HDL;hdl\Communication_Builder.vhd;0
+SmartDesign;Top;0
+ACTIVEVIEW;hdl\Communication_Builder.vhd
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -2017,6 +2021,8 @@ ENDLIST
 LIST "Command_Decoder::work","hdl\Command_Decoder.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Communication_ANW_MUX::work","hdl\Communication_ANW_MUX.vhd","FALSE","FALSE"
+ENDLIST
+LIST "Communication_Builder::work","hdl\Communication_Builder.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Communication_CMD_MUX::work","hdl\Communication_CMD_MUX.vhd","FALSE","FALSE"
 ENDLIST
@@ -2189,6 +2195,7 @@ ENDLIST
 LIST "COREUART_C0_COREUART_C0_0_Tx_async::work","component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v","FALSE","FALSE"
 ENDLIST
 LIST "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
+SUBBLOCK "Communication_Builder::work","hdl\Communication_Builder.vhd","FALSE","FALSE"
 SUBBLOCK "Event_Info_RAM_Block::work","component\work\Event_Info_RAM_Block\Event_Info_RAM_Block.v","TRUE","FALSE"
 SUBBLOCK "FIFOs_Reader::work","hdl\FIFOs_Reader.vhd","FALSE","FALSE"
 SUBBLOCK "Input_Data_Part::work","component\work\Input_Data_Part\Input_Data_Part.v","TRUE","FALSE"

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue May  9 23:25:06 2023
+// Created by SmartDesign Thu May 11 09:51:05 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -45,7 +45,16 @@ wire   [15:0] C_read_data_frame_net_0;
 wire   [15:0] C_write_data_frame;
 wire          C_write_read;
 wire          Clock;
+wire   [9:0]  Communication_Builder_0_Event_RAM_R_Address;
+wire   [7:0]  Communication_Builder_0_Event_RAM_W_Data_Status;
+wire          Communication_Builder_0_Event_RAM_W_Enable_Status;
+wire   [15:0] Communication_Builder_0_Sample_RAM_R_Address;
+wire   [3:0]  Communication_Builder_0_Sample_RAM_R_Block_Address;
 wire   [7:0]  Event_Info_RAM_Block_0_A_DOUT_Event_Status;
+wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
+wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
+wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR;
+wire   [7:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Status;
 wire          FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
 wire          FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable;
 wire          FIFOs_Reader_0_Event_FIFO_R_Enable;
@@ -72,6 +81,7 @@ wire   [15:0] Input_Data_Part_1_Q_1;
 wire   [15:0] Input_Data_Part_1_Q_2;
 wire   [15:0] Input_Data_Part_1_Q_3;
 wire          Reset_N;
+wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
 wire   [11:0] Test_Generator_0_Test_Data_0;
 wire   [11:0] Test_Generator_0_Test_Data_1;
 wire   [11:0] Test_Generator_0_Test_Data_2;
@@ -94,8 +104,6 @@ wire   [15:0] C_read_data_frame_net_1;
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire          GND_net;
-wire   [9:0]  B_ADDR_const_net_0;
-wire   [7:0]  B_DIN_Event_Status_const_net_0;
 wire   [2:0]  Order_Of_TRG_Unit_0_const_net_0;
 wire   [2:0]  Order_Of_TRG_Unit_1_const_net_0;
 wire   [2:0]  Order_Of_TRG_Unit_3_const_net_0;
@@ -104,24 +112,18 @@ wire   [2:0]  Order_Of_TRG_Unit_0_const_net_1;
 wire   [2:0]  Order_Of_TRG_Unit_1_const_net_1;
 wire   [2:0]  Order_Of_TRG_Unit_3_const_net_1;
 wire   [2:0]  Order_Of_TRG_Unit_2_const_net_1;
-wire   [15:0] B_ADDR_const_net_1;
-wire   [3:0]  B_Block_Address_vector_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign GND_net                            = 1'b0;
-assign B_ADDR_const_net_0                 = 10'h000;
-assign B_DIN_Event_Status_const_net_0     = 8'h00;
-assign Order_Of_TRG_Unit_0_const_net_0    = 3'h0;
-assign Order_Of_TRG_Unit_1_const_net_0    = 3'h1;
-assign Order_Of_TRG_Unit_3_const_net_0    = 3'h3;
-assign Order_Of_TRG_Unit_2_const_net_0    = 3'h2;
-assign Order_Of_TRG_Unit_0_const_net_1    = 3'h4;
-assign Order_Of_TRG_Unit_1_const_net_1    = 3'h5;
-assign Order_Of_TRG_Unit_3_const_net_1    = 3'h7;
-assign Order_Of_TRG_Unit_2_const_net_1    = 3'h6;
-assign B_ADDR_const_net_1                 = 16'h0000;
-assign B_Block_Address_vector_const_net_0 = 4'h0;
+assign GND_net                         = 1'b0;
+assign Order_Of_TRG_Unit_0_const_net_0 = 3'h0;
+assign Order_Of_TRG_Unit_1_const_net_0 = 3'h1;
+assign Order_Of_TRG_Unit_3_const_net_0 = 3'h3;
+assign Order_Of_TRG_Unit_2_const_net_0 = 3'h2;
+assign Order_Of_TRG_Unit_0_const_net_1 = 3'h4;
+assign Order_Of_TRG_Unit_1_const_net_1 = 3'h5;
+assign Order_Of_TRG_Unit_3_const_net_1 = 3'h7;
+assign Order_Of_TRG_Unit_2_const_net_1 = 3'h6;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
@@ -136,6 +138,28 @@ assign C_read_data_frame[15:0] = C_read_data_frame_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
+//--------Communication_Builder
+Communication_Builder Communication_Builder_0(
+        // Inputs
+        .Clock                       ( Clock ),
+        .Reset_N                     ( Reset_N ),
+        .Event_RAM_R_Data_Start_ADDR ( Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR ),
+        .Event_RAM_R_Data_Number     ( Event_Info_RAM_Block_0_B_DOUT_Event_Number ),
+        .Event_RAM_R_Data_Size       ( Event_Info_RAM_Block_0_B_DOUT_Event_Size ),
+        .Event_RAM_R_Data_Status     ( Event_Info_RAM_Block_0_B_DOUT_Event_Status ),
+        .Sample_RAM_R_Data           ( Sample_RAM_Block_0_B_Output_Data ),
+        .Communication_Data_Full     ( GND_net ),
+        // Outputs
+        .Event_RAM_R_Address         ( Communication_Builder_0_Event_RAM_R_Address ),
+        .Event_RAM_W_Enable_Status   ( Communication_Builder_0_Event_RAM_W_Enable_Status ),
+        .Event_RAM_W_Data_Status     ( Communication_Builder_0_Event_RAM_W_Data_Status ),
+        .Sample_RAM_R_Address        ( Communication_Builder_0_Sample_RAM_R_Address ),
+        .Sample_RAM_R_Block_Address  ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
+        .Communication_Data_Frame    (  ),
+        .Communication_Data_Enable   (  ),
+        .Communication_Data_Req      (  ) 
+        );
+
 //--------Event_Info_RAM_Block
 Event_Info_RAM_Block Event_Info_RAM_Block_0(
         // Inputs
@@ -143,21 +167,21 @@ Event_Info_RAM_Block Event_Info_RAM_Block_0(
         .A_WEN_Event_Number      ( FIFOs_Reader_0_Event_RAM_W_Enable_Number ),
         .A_WEN_Event_Size        ( FIFOs_Reader_0_Event_RAM_W_Enable_Size ),
         .A_WEN_Event_Status      ( FIFOs_Reader_0_Event_RAM_W_Enable_Status ),
-        .B_WEN_Event_Status      ( GND_net ),
+        .B_WEN_Event_Status      ( Communication_Builder_0_Event_RAM_W_Enable_Status ),
         .CLK                     ( Clock ),
         .A_ADDR                  ( FIFOs_Reader_0_Event_RAM_W_Address ),
-        .B_ADDR                  ( B_ADDR_const_net_0 ),
+        .B_ADDR                  ( Communication_Builder_0_Event_RAM_R_Address ),
         .A_DIN_Event_Start_ADDR  ( FIFOs_Reader_0_Event_RAM_W_Data_Start_ADDR ),
         .A_DIN_Event_Number      ( FIFOs_Reader_0_Event_RAM_W_Data_Number ),
         .A_DIN_Event_Size        ( FIFOs_Reader_0_Event_RAM_W_Data_Size ),
         .A_DIN_Event_Status      ( FIFOs_Reader_0_Event_RAM_W_Data_Status ),
-        .B_DIN_Event_Status      ( B_DIN_Event_Status_const_net_0 ),
+        .B_DIN_Event_Status      ( Communication_Builder_0_Event_RAM_W_Data_Status ),
         // Outputs
         .A_DOUT_Event_Status     ( Event_Info_RAM_Block_0_A_DOUT_Event_Status ),
-        .B_DOUT_Event_Status     (  ),
-        .B_DOUT_Event_Start_ADDR (  ),
-        .B_DOUT_Event_Number     (  ),
-        .B_DOUT_Event_Size       (  ) 
+        .B_DOUT_Event_Status     ( Event_Info_RAM_Block_0_B_DOUT_Event_Status ),
+        .B_DOUT_Event_Start_ADDR ( Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR ),
+        .B_DOUT_Event_Number     ( Event_Info_RAM_Block_0_B_DOUT_Event_Number ),
+        .B_DOUT_Event_Size       ( Event_Info_RAM_Block_0_B_DOUT_Event_Size ) 
         );
 
 //--------FIFOs_Reader
@@ -260,10 +284,10 @@ Sample_RAM_Block Sample_RAM_Block_0(
         .A_DIN                  ( FIFOs_Reader_0_Sample_RAM_W_Data ),
         .A_ADDR                 ( FIFOs_Reader_0_Sample_RAM_W_Address ),
         .A_Block_Address_vector ( FIFOs_Reader_0_Sample_RAM_W_Block_Address ),
-        .B_ADDR                 ( B_ADDR_const_net_1 ),
-        .B_Block_Address_vector ( B_Block_Address_vector_const_net_0 ),
+        .B_ADDR                 ( Communication_Builder_0_Sample_RAM_R_Address ),
+        .B_Block_Address_vector ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
         // Outputs
-        .B_Output_Data          (  ) 
+        .B_Output_Data          ( Sample_RAM_Block_0_B_Output_Data ) 
         );
 
 //--------Test_Generator
