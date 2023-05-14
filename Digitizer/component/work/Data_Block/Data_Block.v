@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 11 09:51:05 2023
+// Created by SmartDesign Sun May 14 19:11:33 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -13,10 +13,14 @@ module Data_Block(
     C_write_data_frame,
     C_write_read,
     Clock,
+    Communication_Data_Full,
     Reset_N,
     // Outputs
     C_busy,
     C_read_data_frame,
+    Communication_Data_Enable,
+    Communication_Data_Frame,
+    Communication_Data_Req,
     Y
 );
 
@@ -28,12 +32,16 @@ input         C_enable_cmd;
 input  [15:0] C_write_data_frame;
 input         C_write_read;
 input         Clock;
+input         Communication_Data_Full;
 input         Reset_N;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
 output        C_busy;
 output [15:0] C_read_data_frame;
+output        Communication_Data_Enable;
+output [31:0] Communication_Data_Frame;
+output        Communication_Data_Req;
 output        Y;
 //--------------------------------------------------------------------
 // Nets
@@ -50,6 +58,10 @@ wire   [7:0]  Communication_Builder_0_Event_RAM_W_Data_Status;
 wire          Communication_Builder_0_Event_RAM_W_Enable_Status;
 wire   [15:0] Communication_Builder_0_Sample_RAM_R_Address;
 wire   [3:0]  Communication_Builder_0_Sample_RAM_R_Block_Address;
+wire          Communication_Data_Enable_net_0;
+wire   [31:0] Communication_Data_Frame_net_0;
+wire          Communication_Data_Full;
+wire          Communication_Data_Req_net_0;
 wire   [7:0]  Event_Info_RAM_Block_0_A_DOUT_Event_Status;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
@@ -100,6 +112,9 @@ wire          Trigger_Top_Part_0_TRG_Last_Is_Last;
 wire   [11:0] Trigger_Top_Part_0_TRG_Threshold;
 wire          C_busy_net_1;
 wire   [15:0] C_read_data_frame_net_1;
+wire          Communication_Data_Enable_net_1;
+wire   [31:0] Communication_Data_Frame_net_1;
+wire          Communication_Data_Req_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -127,14 +142,20 @@ assign Order_Of_TRG_Unit_2_const_net_1 = 3'h6;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
-assign Y                       = 1'b0;
+assign Y                               = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign C_busy_net_1            = C_busy_net_0;
-assign C_busy                  = C_busy_net_1;
-assign C_read_data_frame_net_1 = C_read_data_frame_net_0;
-assign C_read_data_frame[15:0] = C_read_data_frame_net_1;
+assign C_busy_net_1                    = C_busy_net_0;
+assign C_busy                          = C_busy_net_1;
+assign C_read_data_frame_net_1         = C_read_data_frame_net_0;
+assign C_read_data_frame[15:0]         = C_read_data_frame_net_1;
+assign Communication_Data_Enable_net_1 = Communication_Data_Enable_net_0;
+assign Communication_Data_Enable       = Communication_Data_Enable_net_1;
+assign Communication_Data_Frame_net_1  = Communication_Data_Frame_net_0;
+assign Communication_Data_Frame[31:0]  = Communication_Data_Frame_net_1;
+assign Communication_Data_Req_net_1    = Communication_Data_Req_net_0;
+assign Communication_Data_Req          = Communication_Data_Req_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -143,21 +164,21 @@ Communication_Builder Communication_Builder_0(
         // Inputs
         .Clock                       ( Clock ),
         .Reset_N                     ( Reset_N ),
+        .Communication_Data_Full     ( Communication_Data_Full ),
         .Event_RAM_R_Data_Start_ADDR ( Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR ),
         .Event_RAM_R_Data_Number     ( Event_Info_RAM_Block_0_B_DOUT_Event_Number ),
         .Event_RAM_R_Data_Size       ( Event_Info_RAM_Block_0_B_DOUT_Event_Size ),
         .Event_RAM_R_Data_Status     ( Event_Info_RAM_Block_0_B_DOUT_Event_Status ),
         .Sample_RAM_R_Data           ( Sample_RAM_Block_0_B_Output_Data ),
-        .Communication_Data_Full     ( GND_net ),
         // Outputs
-        .Event_RAM_R_Address         ( Communication_Builder_0_Event_RAM_R_Address ),
         .Event_RAM_W_Enable_Status   ( Communication_Builder_0_Event_RAM_W_Enable_Status ),
+        .Communication_Data_Enable   ( Communication_Data_Enable_net_0 ),
+        .Communication_Data_Req      ( Communication_Data_Req_net_0 ),
+        .Event_RAM_R_Address         ( Communication_Builder_0_Event_RAM_R_Address ),
         .Event_RAM_W_Data_Status     ( Communication_Builder_0_Event_RAM_W_Data_Status ),
         .Sample_RAM_R_Address        ( Communication_Builder_0_Sample_RAM_R_Address ),
         .Sample_RAM_R_Block_Address  ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
-        .Communication_Data_Frame    (  ),
-        .Communication_Data_Enable   (  ),
-        .Communication_Data_Req      (  ) 
+        .Communication_Data_Frame    ( Communication_Data_Frame_net_0 ) 
         );
 
 //--------Event_Info_RAM_Block

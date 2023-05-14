@@ -10,6 +10,7 @@ if {[file exists presynth/_info]} {
 vmap presynth presynth
 vmap PolarFire "C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/PolarFire"
 
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/cmd_table.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Communication_Builder.vhd"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_DPSRAM_C7/PF_DPSRAM_C7_0/PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_DPSRAM_C7/PF_DPSRAM_C7.v"
@@ -50,7 +51,6 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Trigger_Control.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Trigger_Main.vhd"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/Trigger_Top_Part/Trigger_Top_Part.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/Data_Block/Data_Block.v"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/cmd_table.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/TB_Data_Block.vhd"
 
 vsim -L PolarFire -L presynth  -t 1ps -pli C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll -gSIM_PA5M300T=0 presynth.TB_Data_Block

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue May  9 15:06:32 2023
+// Created by SmartDesign Fri May 12 20:58:34 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -74,6 +74,7 @@ wire   [15:0]  Output_vector_net_0;
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire           GND_net;
+wire           VCC_net;
 wire   [63:0]  B_DIN_const_net_0;
 wire   [63:0]  B_DIN_const_net_1;
 wire   [63:0]  B_DIN_const_net_2;
@@ -94,6 +95,7 @@ wire   [63:0]  Input_Data_15_const_net_0;
 // Constant assignments
 //--------------------------------------------------------------------
 assign GND_net                   = 1'b0;
+assign VCC_net                   = 1'b1;
 assign B_DIN_const_net_0         = 64'h0000000000000000;
 assign B_DIN_const_net_1         = 64'h0000000000000000;
 assign B_DIN_const_net_2         = 64'h0000000000000000;
@@ -143,7 +145,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector0to0 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),
@@ -160,7 +162,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_0(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector1to1 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),
@@ -177,7 +179,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_1(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector2to2 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),
@@ -194,7 +196,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_2(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector3to3 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),
@@ -211,7 +213,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_2_0(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector4to4 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),
@@ -228,7 +230,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_2_1(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector5to5 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),
@@ -245,7 +247,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_2_2(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector6to6 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),
@@ -262,7 +264,7 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_2_3(
         .A_WEN    ( A_WEN ),
         .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector7to7 ),
         .B_WEN    ( GND_net ),
-        .B_BLK_EN ( GND_net ),
+        .B_BLK_EN ( VCC_net ),
         .CLK      ( CLK ),
         .A_DIN    ( A_DIN ),
         .A_ADDR   ( A_ADDR ),

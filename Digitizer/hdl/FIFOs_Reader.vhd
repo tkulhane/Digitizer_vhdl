@@ -99,6 +99,9 @@ architecture rtl of FIFOs_Reader is
     signal Event_Size_Counter_Enable: std_logic;
     signal Event_Size_Counter: unsigned(19 downto 0);
 
+    signal Event_Number_Counter_Enable : std_logic;
+    signal Event_Number_Counter : unsigned(19 downto 0);
+
 
 begin
 
@@ -214,6 +217,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '0';
                 Event_Size_Counter_Enable <= '0';
+                Event_Number_Counter_Enable <= '0'; 
                 
             when Event_FIFO_Read =>
                 Event_FIFO_R_Enable <= '1';
@@ -238,6 +242,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '0';
+                Event_Number_Counter_Enable <= '0'; 
 
             when Event_Process_Set =>
                 Event_FIFO_R_Enable <= '0';
@@ -256,12 +261,13 @@ begin
                 Event_RAM_W_Enable_Status <= '1';
 
                 Event_RAM_W_Data_Start_ADDR <= std_logic_vector(Sample_RAM_W_Address_Unsigned);
-                Event_RAM_W_Data_Number <= (others => '0');
+                Event_RAM_W_Data_Number <= std_logic_vector(Event_Number_Counter);
                 Event_RAM_W_Data_Size <= (others => '0');
                 Event_RAM_W_Data_Status <= Event_Status_ID_InWrite;
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '0';
+                Event_Number_Counter_Enable <= '0'; 
 
             when Event_Process_Reset =>
                 Event_FIFO_R_Enable <= '0';
@@ -286,6 +292,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '0';
+                Event_Number_Counter_Enable <= '0'; 
 
             when Sample_FIFOs_Read_1 =>
                 Event_FIFO_R_Enable <= '0';
@@ -310,6 +317,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '1';
+                Event_Number_Counter_Enable <= '0'; 
 
             when Sample_FIFOs_Read_2 =>
                 Event_FIFO_R_Enable <= '0';
@@ -334,6 +342,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '1';
+                Event_Number_Counter_Enable <= '0'; 
 
             when Store_Event_End =>
                 Event_FIFO_R_Enable <= '0';
@@ -358,6 +367,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '1';
+                Event_Number_Counter_Enable <= '1'; 
 
             when others =>
                 Event_FIFO_R_Enable <= '0';
@@ -382,6 +392,7 @@ begin
 
                 Event_Size_Counter_Reset_N <= '0';
                 Event_Size_Counter_Enable <= '0';
+                Event_Number_Counter_Enable <= '0'; 
 
 
 
@@ -524,6 +535,27 @@ begin
             end if;
 	
 		end if;
+
+    end process;
+
+------------------------------------------------------------------------------------------------------------
+--process Event Size Calc Counter
+------------------------------------------------------------------------------------------------------------
+    process(Clock, Reset_N)
+
+    begin
+
+        if(Reset_N = '0') then
+            Event_Number_Counter <= (others => '0');
+    
+        elsif(Clock'event and Clock = '1') then
+        
+            if(Event_Number_Counter_Enable = '1') then
+                Event_Number_Counter <= Event_Number_Counter + 1;
+
+            end if;
+
+        end if;
 
     end process;
 

@@ -2,6 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library work;
+use work.cmd_table.all;
 
 entity Communication_Builder is
     port
@@ -52,7 +54,8 @@ architecture rtl of Communication_Builder is
                             SEND_EVENT_HEAD,    --Send event head to communication
                             SEND_PACKET_HEAD,   --Send packet head to communication
                             READ_SAMPLE_DATA,   --Read sample data frm RAM
-                            SEND_DATA_FRAMES,   --Sending data frames composits from 3 samples
+                            SEND_DATA_FRAMES_1,   --Sending data frames composits from 2 samples
+                            SEND_DATA_FRAMES_2,   --Sending data frames composits from 2 samples
                             SEND_PACKET_TAIL,   --Send packet tail to communication
                             SEND_EVENT_TAIL,    --Send event tail to communication
                             NEXT_EVENT_ADDR,    --Generate next event ram address
@@ -61,6 +64,8 @@ architecture rtl of Communication_Builder is
                         );
     signal state_reg, next_state : FSM_state;
 
+
+    signal NumOfFramesInPacket : integer range 0 to 32 := 30;
 
     signal Event_RAM_ADDR_GEN_Enable : std_logic;
     signal Event_RAM_R_Address_Integer : integer range 0 to 1024-1 := 0;
@@ -74,22 +79,40 @@ architecture rtl of Communication_Builder is
 
     signal Status_Event_WriteDone : std_logic; 
 
+    signal Sample_Buffer_Store : std_logic;
+
     signal Event_Info_Buffer_Store : std_logic;
     signal Event_Start_ADDR_Buffer : std_logic_vector(19 downto 0);
     signal Event_Number_Buffer : std_logic_vector(19 downto 0);
     signal Event_Size_Buffer : std_logic_vector(19 downto 0);
 
-    signal Data_Counter_Go : std_logic;
-    signal Data_Counter_Modulo : std_logic;
-    signal Data_Counter_Reset_N : std_logic;
-    signal Data_Counter : unsigned (7 downto 0);
+    signal Frame_Counter_Go : std_logic;
+    signal Frame_Counter_Modulo : std_logic;
+    signal Frame_Counter_Reset_N : std_logic;
+    signal Frame_Counter : unsigned (5 downto 0);
 
-    signal DATA_FRAME : std_logic_vector(31 downto 0);
+    signal Packet_Counter_Go : std_logic;
+    --signal Packet_Counter_Modulo : std_logic;
+    signal Packet_Counter_Reset_N : std_logic;
+    signal Packet_Counter : unsigned (23 downto 0);
 
-    signal EVENT_HEAD : std_logic_vector(7 downto 0)  := X"AA";
-    signal EVENT_TAIL : std_logic_vector(7 downto 0)  := X"BB";
-    signal PACKET_HEAD : std_logic_vector(7 downto 0) := X"CC";
-    signal PACKET_TAIL : std_logic_vector(7 downto 0) := X"DD";
+    signal Read_sID_Sample_0 : std_logic_vector(3 downto 0);
+    signal Read_sID_Sample_1 : std_logic_vector(3 downto 0);
+    signal Read_sID_Sample_2 : std_logic_vector(3 downto 0);
+    signal Read_sID_Sample_3 : std_logic_vector(3 downto 0);
+
+    signal Read_Sample_0 : std_logic_vector(11 downto 0);
+    signal Read_Sample_1 : std_logic_vector(11 downto 0);
+    signal Read_Sample_2 : std_logic_vector(11 downto 0);
+    signal Read_Sample_3 : std_logic_vector(11 downto 0);
+
+    signal Data_Frame_1 : std_logic_vector(31 downto 0);
+    signal Data_Frame_2 : std_logic_vector(31 downto 0);
+
+    signal EVENT_HEAD : std_logic_vector(31 downto 0);
+    signal EVENT_TAIL : std_logic_vector(31 downto 0);
+    signal PACKET_HEAD : std_logic_vector(31 downto 0);
+    signal PACKET_TAIL : std_logic_vector(31 downto 0);
 
 begin
 
@@ -101,7 +124,18 @@ begin
     Sample_RAM_R_Address        <= std_logic_vector(Sample_RAM_R_Address_Unsigned(15 downto 0));
     Sample_RAM_R_Block_Address  <= std_logic_vector(Sample_RAM_R_Address_Unsigned(19 downto 16));
 
-    DATA_FRAME <= X"01234567";
+
+    Data_Frame_1 <= CMD_CONST_CDb_Data & '0' & std_logic_vector(Frame_Counter) & Read_Sample_1 & Read_Sample_0;
+    Data_Frame_2 <= CMD_CONST_CDb_Data & '0' & std_logic_vector(Frame_Counter) & Read_Sample_3 & Read_Sample_2;
+
+    --Data_Frame_1 <= X"00" & Read_Sample_1 & Read_Sample_0;
+    --Data_Frame_2 <= X"00" & Read_Sample_3 & Read_Sample_2;
+
+    EVENT_HEAD  <= CMD_CONST_CDb_Command & CMD_CONST_EVENT_HEAD(6 downto 0) & "0000" & Event_Number_Buffer;
+    EVENT_TAIL  <= CMD_CONST_CDb_Command & CMD_CONST_EVENT_TAIL(6 downto 0) & std_logic_vector(Packet_Counter);
+    PACKET_HEAD <= CMD_CONST_CDb_Command & CMD_CONST_PACKET_HEAD(6 downto 0) & std_logic_vector(Packet_Counter);
+    PACKET_TAIL <= CMD_CONST_CDb_Command & CMD_CONST_PACKET_TAIL(6 downto 0) & "000000000000000000" & std_logic_vector(Frame_Counter);
+
    
     Event_RAM_W_Data_Status <= Event_Status_ID_Free;
 
@@ -122,7 +156,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, Status_Event_WriteDone, Communication_Data_Full, Sample_RAM_ADDR_GEN_Modulo, Data_Counter_Modulo)
+    process(next_state, state_reg, Status_Event_WriteDone, Communication_Data_Full, Sample_RAM_ADDR_GEN_Modulo, Frame_Counter_Modulo)
     begin
 
         next_state <= state_reg;
@@ -149,10 +183,13 @@ begin
                 next_state <= READ_SAMPLE_DATA;
 
             when READ_SAMPLE_DATA =>
-                next_state <= SEND_DATA_FRAMES;
+                next_state <= SEND_DATA_FRAMES_1;
 
-            when SEND_DATA_FRAMES =>
-                if(Data_Counter_Modulo = '1' or Sample_RAM_ADDR_GEN_Modulo = '1') then
+            when SEND_DATA_FRAMES_1 =>
+                next_state <= SEND_DATA_FRAMES_2;
+
+            when SEND_DATA_FRAMES_2 =>
+                if(Frame_Counter_Modulo = '1' or Sample_RAM_ADDR_GEN_Modulo = '1') then
                      next_state <= SEND_PACKET_TAIL;
                 else
                     next_state <= READ_SAMPLE_DATA;
@@ -181,21 +218,25 @@ begin
     end process;
 
     --output function
-    process(state_reg)
+    process(state_reg, EVENT_HEAD, PACKET_HEAD, PACKET_TAIL, EVENT_TAIL, Data_Frame_1, Data_Frame_2)
     begin
 
         case state_reg is
         
             when IDLE =>
-                Event_RAM_ADDR_GEN_Enable   <= '0';
                 Event_Info_Buffer_Store     <= '0';
+                Event_RAM_ADDR_GEN_Enable   <= '0';
 
                 Sample_RAM_ADDR_GEN_Reset_N <= '0';
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
+
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '0';
+                Packet_Counter_Go           <= '0';
 
                 Communication_Data_Req      <= '0';
                 Communication_Data_Enable   <= '0';
@@ -211,8 +252,12 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
+
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '0';
+                Packet_Counter_Go           <= '0';
 
                 Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '0';
@@ -228,10 +273,14 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
 
-                Communication_Data_Req      <= '0';
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '0';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '0';
                 Communication_Data_Frame    <= (others => '0');
 
@@ -245,12 +294,16 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '1';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
 
-                Communication_Data_Req      <= '0';
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '1';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '1';
-                Communication_Data_Frame    <= EVENT_HEAD & X"000000";
+                Communication_Data_Frame    <= EVENT_HEAD;
 
                 Event_RAM_W_Enable_Status   <= '0';
 
@@ -262,12 +315,16 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '1'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
 
-                Communication_Data_Req      <= '0';
-                Communication_Data_Enable   <= '0';
-                Communication_Data_Frame    <= PACKET_HEAD & X"000000";
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '1';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
+                Communication_Data_Enable   <= '1';
+                Communication_Data_Frame    <= PACKET_HEAD;
 
                 Event_RAM_W_Enable_Status   <= '0';
 
@@ -279,16 +336,20 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '1';
 
-                Data_Counter_Reset_N         <= '1'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '1';
 
-                Communication_Data_Req      <= '0';
+                Frame_Counter_Reset_N       <= '1'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '1';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '0';
                 Communication_Data_Frame    <= (others => '0');
 
                 Event_RAM_W_Enable_Status   <= '0';
 
-            when SEND_DATA_FRAMES =>
+            when SEND_DATA_FRAMES_1 =>
                 Event_RAM_ADDR_GEN_Enable   <= '0';
                 Event_Info_Buffer_Store     <= '0';
 
@@ -296,12 +357,37 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '1'; 
-                Data_Counter_Go             <= '1';
+                Sample_Buffer_Store         <= '0';
 
-                Communication_Data_Req      <= '0';
+                Frame_Counter_Reset_N       <= '1'; 
+                Frame_Counter_Go            <= '1';
+                Packet_Counter_Reset_N      <= '1';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '1';
-                Communication_Data_Frame    <= DATA_FRAME;
+                Communication_Data_Frame    <= Data_Frame_1;
+
+                Event_RAM_W_Enable_Status   <= '0';
+
+            when SEND_DATA_FRAMES_2 =>
+                Event_RAM_ADDR_GEN_Enable   <= '0';
+                Event_Info_Buffer_Store     <= '0';
+
+                Sample_RAM_ADDR_GEN_Reset_N <= '1';
+                Sample_RAM_ADDR_GEN_Init    <= '0';
+                Sample_RAM_ADDR_GEN_Enable  <= '0';
+
+                Sample_Buffer_Store         <= '0';
+
+                Frame_Counter_Reset_N       <= '1'; 
+                Frame_Counter_Go            <= '1';
+                Packet_Counter_Reset_N      <= '1';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
+                Communication_Data_Enable   <= '1';
+                Communication_Data_Frame    <= Data_Frame_2;
 
                 Event_RAM_W_Enable_Status   <= '0';
 
@@ -313,12 +399,16 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
 
-                Communication_Data_Req      <= '0';
+                Frame_Counter_Reset_N       <= '1'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '1';
+                Packet_Counter_Go           <= '1';
+
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '1';
-                Communication_Data_Frame    <= PACKET_TAIL & X"000000";
+                Communication_Data_Frame    <= PACKET_TAIL;
 
                 Event_RAM_W_Enable_Status   <= '0';
 
@@ -330,12 +420,16 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
 
-                Communication_Data_Req      <= '0';
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '1';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '1';
-                Communication_Data_Frame    <= EVENT_TAIL & X"000000";
+                Communication_Data_Frame    <= EVENT_TAIL;
 
                 Event_RAM_W_Enable_Status   <= '1';
 
@@ -347,10 +441,12 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '0';
+                Packet_Counter_Go           <= '0';
 
-                Communication_Data_Req      <= '0';
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '0';
                 Communication_Data_Frame    <= (others => '0');
 
@@ -364,10 +460,14 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
 
-                Communication_Data_Req      <= '0';
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '0';
+                Packet_Counter_Go           <= '0';
+
+                Communication_Data_Req      <= '1';
                 Communication_Data_Enable   <= '0';
                 Communication_Data_Frame    <= (others => '0');
 
@@ -381,8 +481,12 @@ begin
                 Sample_RAM_ADDR_GEN_Init    <= '0';
                 Sample_RAM_ADDR_GEN_Enable  <= '0';
 
-                Data_Counter_Reset_N         <= '0'; 
-                Data_Counter_Go             <= '0';
+                Sample_Buffer_Store         <= '0';
+
+                Frame_Counter_Reset_N       <= '0'; 
+                Frame_Counter_Go            <= '0';
+                Packet_Counter_Reset_N      <= '0';
+                Packet_Counter_Go           <= '0';
 
                 Communication_Data_Req      <= '0';
                 Communication_Data_Enable   <= '0';
@@ -415,6 +519,46 @@ begin
             Event_Start_ADDR_Buffer <= Event_RAM_R_Data_Start_ADDR;
             Event_Number_Buffer <= Event_RAM_R_Data_Number;
             Event_Size_Buffer <= Event_RAM_R_Data_Size;
+
+        end if;
+        
+    end if;
+
+end process;
+
+------------------------------------------------------------------------------------------------------------
+--process sample buffer
+------------------------------------------------------------------------------------------------------------
+process(Clock,Reset_N)
+
+begin
+
+    if(Reset_N = '0') then
+
+        Read_sID_Sample_0 <= (others => '0');
+        Read_sID_Sample_1 <= (others => '0');
+        Read_sID_Sample_2 <= (others => '0');
+        Read_sID_Sample_3 <= (others => '0');
+    
+        Read_Sample_0 <= (others => '0');
+        Read_Sample_1 <= (others => '0');
+        Read_Sample_2 <= (others => '0');
+        Read_Sample_3 <= (others => '0');
+
+
+    elsif(Clock'event and Clock = '1') then
+
+        if(Sample_Buffer_Store = '1') then
+
+            Read_sID_Sample_0 <= Sample_RAM_R_Data(15 downto 12);
+            Read_sID_Sample_1 <= Sample_RAM_R_Data(31 downto 28);
+            Read_sID_Sample_2 <= Sample_RAM_R_Data(47 downto 44);
+            Read_sID_Sample_3 <= Sample_RAM_R_Data(63 downto 60);
+        
+            Read_Sample_0 <= Sample_RAM_R_Data(11 downto 0);
+            Read_Sample_1 <= Sample_RAM_R_Data(27 downto 16);
+            Read_Sample_2 <= Sample_RAM_R_Data(43 downto 32);
+            Read_Sample_3 <= Sample_RAM_R_Data(59 downto 48);
 
         end if;
         
@@ -515,33 +659,29 @@ end process;
 ------------------------------------------------------------------------------------------------------------
 --data frames counter
 ------------------------------------------------------------------------------------------------------------
-    process(Data_Counter_Reset_N,Clock)
+    process(Frame_Counter_Reset_N,Clock)
 
     begin
 
-        if(Data_Counter_Reset_N = '0') then
-            Data_Counter <= (others => '0');
-            Data_Counter_Modulo <= '0';
+        if(Frame_Counter_Reset_N = '0') then
+            Frame_Counter <= (others => '0');
+            Frame_Counter_Modulo <= '0';
 
         elsif(Clock'event and Clock = '1') then
 
-            if(Data_Counter_Go = '1') then
+            if(Frame_Counter_Go = '1') then
             
-                if(Data_Counter >= 8 - 2) then
+                if(Frame_Counter >= (NumOfFramesInPacket - 2)) then
                 
-                    Data_Counter_Modulo <= '1';
+                    Frame_Counter_Modulo <= '1';
             
                 else
                 
-                    Data_Counter_Modulo <= '0';
-                    Data_Counter <= Data_Counter + 1;
+                    Frame_Counter_Modulo <= '0';
             
                 end if;
 
-            --else
-                
-                --Data_Counter_Modulo <= '0'; 
-                --Data_Counter := (others => '0');       
+                Frame_Counter <= Frame_Counter + 1;
                     
             end if;
 
@@ -549,8 +689,30 @@ end process;
 
     end process;
 
-   
+------------------------------------------------------------------------------------------------------------
+--packet frames counter
+------------------------------------------------------------------------------------------------------------
+process(Packet_Counter_Reset_N,Clock)
 
+begin
+
+    if(Packet_Counter_Reset_N = '0') then
+        Packet_Counter <= (others => '0');
+
+    elsif(Clock'event and Clock = '1') then
+
+        if(Packet_Counter_Go = '1') then
+        
+            Packet_Counter <= Packet_Counter + 1;
+        
+                
+        end if;
+
+    end if;
+
+end process;
+
+   
 
 
 
