@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)</text>
-<text>Date: Tue May  9 22:19:09 2023
+<text>Date: Mon May 15 21:48:42 2023
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -56,7 +56,7 @@
 </row>
 <row>
  <cell>Source</cell>
- <cell>C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\Top.vm</cell>
+ <cell>C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.vm</cell>
 </row>
 </table>
 <section><name>Options</name></section>
@@ -78,15 +78,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>3623</cell>
+ <cell>29553</cell>
  <cell>299544</cell>
- <cell>1.21</cell>
+ <cell>9.87</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>3233</cell>
+ <cell>28696</cell>
  <cell>299544</cell>
- <cell>1.08</cell>
+ <cell>9.58</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -120,9 +120,9 @@
 </row>
 <row>
  <cell>LSRAM</cell>
- <cell>22</cell>
+ <cell>691</cell>
  <cell>952</cell>
- <cell>2.31</cell>
+ <cell>72.58</cell>
 </row>
 <row>
  <cell>Math</cell>
@@ -194,8 +194,8 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>2831</cell>
- <cell>2441</cell>
+ <cell>4677</cell>
+ <cell>3820</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
@@ -204,8 +204,8 @@
 </row>
 <row>
  <cell>LSRAM Interface Logic</cell>
- <cell>792</cell>
- <cell>792</cell>
+ <cell>24876</cell>
+ <cell>24876</cell>
 </row>
 <row>
  <cell>Math Interface Logic</cell>
@@ -214,8 +214,8 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>3623</cell>
- <cell>3233</cell>
+ <cell>29553</cell>
+ <cell>28696</cell>
 </row>
 </table>
 <section><name>Detailed Carry Chains Resource Usage</name></section>
@@ -227,12 +227,16 @@
  <cell>Used</cell>
 </row>
 <row>
+ <cell>6</cell>
+ <cell>1</cell>
+</row>
+<row>
  <cell>9</cell>
  <cell>9</cell>
 </row>
 <row>
  <cell>10</cell>
- <cell>1</cell>
+ <cell>2</cell>
 </row>
 <row>
  <cell>11</cell>
@@ -251,15 +255,27 @@
  <cell>2</cell>
 </row>
 <row>
+ <cell>15</cell>
  <cell>17</cell>
- <cell>3</cell>
 </row>
 <row>
- <cell>18</cell>
- <cell>3</cell>
+ <cell>16</cell>
+ <cell>28</cell>
+</row>
+<row>
+ <cell>17</cell>
+ <cell>1</cell>
 </row>
 <row>
  <cell>20</cell>
+ <cell>5</cell>
+</row>
+<row>
+ <cell>21</cell>
+ <cell>3</cell>
+</row>
+<row>
+ <cell>24</cell>
  <cell>1</cell>
 </row>
 <row>
@@ -276,7 +292,7 @@
 </row>
 <row>
  <cell>Total</cell>
- <cell>77</cell>
+ <cell>127</cell>
 </row>
 </table>
 <section><name>Detailed 4LUT Groups Resource Usage</name></section>
@@ -343,7 +359,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>1451</cell>
+ <cell>4163</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Main_CLOCK</cell>
 </row>
@@ -358,7 +374,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>1311</cell>
+ <cell>2593</cell>
  <cell>INT_NET</cell>
  <cell>Net   : dff_arst</cell>
 </row>
@@ -373,7 +389,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>1034</cell>
+ <cell>1038</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_UART_CLOCK</cell>
 </row>
@@ -388,7 +404,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>866</cell>
+ <cell>870</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Synchronizer_0_Chain[1]</cell>
 </row>
@@ -434,104 +450,104 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>80</cell>
+ <cell>616</cell>
  <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/REG_Test_Generator_Enable</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_N_122_i</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REG_Test_Generator_Enable</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]</cell>
 </row>
 <row>
- <cell>69</cell>
+ <cell>579</cell>
  <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset_Z</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]</cell>
 </row>
 <row>
- <cell>50</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/UART_TX_Protocol_0/countere</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[8]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13]</cell>
 </row>
 <row>
- <cell>50</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/UART_TX_Protocol_0/countere</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[8]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12]</cell>
 </row>
 <row>
- <cell>49</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/UART_TX_Protocol_0/state_reg_data[12]</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[12]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11]</cell>
 </row>
 <row>
- <cell>49</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/UART_TX_Protocol_0/state_reg_data[12]</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[12]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10]</cell>
 </row>
 <row>
- <cell>46</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIRHM91</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]</cell>
 </row>
 <row>
- <cell>46</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIVAD71</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]</cell>
 </row>
 <row>
- <cell>45</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]</cell>
 </row>
 <row>
- <cell>45</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]</cell>
 </row>
 </table>
 <section><name>High fanout nets (through buffer trees)</name></section>
@@ -542,104 +558,104 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>80</cell>
+ <cell>616</cell>
  <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/REG_Test_Generator_Enable</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_N_122_i</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REG_Test_Generator_Enable</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]</cell>
 </row>
 <row>
- <cell>69</cell>
+ <cell>579</cell>
  <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset_Z</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]</cell>
 </row>
 <row>
- <cell>50</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/UART_TX_Protocol_0/countere</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[8]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13]</cell>
 </row>
 <row>
- <cell>50</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/UART_TX_Protocol_0/countere</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[8]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12]</cell>
 </row>
 <row>
- <cell>49</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/UART_TX_Protocol_0/state_reg_data[12]</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[12]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11]</cell>
 </row>
 <row>
- <cell>49</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/UART_TX_Protocol_0/state_reg_data[12]</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[12]</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10]</cell>
 </row>
 <row>
- <cell>46</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIRHM91</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]</cell>
 </row>
 <row>
- <cell>46</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIVAD71</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]</cell>
 </row>
 <row>
- <cell>45</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]</cell>
 </row>
 <row>
- <cell>45</cell>
+ <cell>578</cell>
  <cell>INT_NET</cell>
- <cell>Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid</cell>
+ <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid</cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]</cell>
 </row>
 </table>
 </doc>

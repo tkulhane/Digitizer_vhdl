@@ -22,7 +22,7 @@
 Starting:    C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
 Hostname:    DESKTOP-TDPVUTD
-Date:        Sat Apr 15 00:45:53 2023
+Date:        Mon May 15 20:44:09 2023
 Version:     S-2021.09M
 
 Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log Top_syn.tcl
@@ -36,69 +36,64 @@ License Option: actel_oem
 Running in Vendor Mode
 
 auto_infer_blackbox is not supported in current product.
-log file: "C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\Top.srr"
+log file: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.srr"
 Running: synthesis in foreground
 
 Running Top_syn|synthesis
 
 Running Flow: compile (Compile) on Top_syn|synthesis
-# Sat Apr 15 00:45:54 2023
+# Mon May 15 20:44:09 2023
 
 Running Flow: compile_flow (Compile Process) on Top_syn|synthesis
-# Sat Apr 15 00:45:54 2023
+# Mon May 15 20:44:09 2023
 
 Running: compiler (Compile Input) on Top_syn|synthesis
-# Sat Apr 15 00:45:54 2023
-Copied C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\synwork\Top_comp.srs to C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\Top.srs
+# Mon May 15 20:44:09 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\Top_comp.srs to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.srs
 
 compiler completed
-# Sat Apr 15 00:46:07 2023
+# Mon May 15 20:44:27 2023
 
 Return Code: 0
-Run Time:00h:00m:13s
+Run Time:00h:00m:18s
 
 Running: multi_srs_gen (Multi-srs Generator) on Top_syn|synthesis
-# Sat Apr 15 00:46:07 2023
+# Mon May 15 20:44:27 2023
 
 multi_srs_gen completed
-# Sat Apr 15 00:46:08 2023
+# Mon May 15 20:44:27 2023
 
 Return Code: 0
-Run Time:00h:00m:01s
-Copied C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\synwork\Top_mult.srs to C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\Top.srs
+Run Time:00h:00m:00s
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\Top_mult.srs to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.srs
 Complete: Compile Process on Top_syn|synthesis
 
 Running: premap (Premap) on Top_syn|synthesis
-# Sat Apr 15 00:46:08 2023
+# Mon May 15 20:44:27 2023
 
 premap completed with warnings
-# Sat Apr 15 00:46:10 2023
+# Mon May 15 20:44:31 2023
 
 Return Code: 1
-Run Time:00h:00m:02s
+Run Time:00h:00m:04s
 Complete: Compile on Top_syn|synthesis
 
 Running Flow: map (Map) on Top_syn|synthesis
-# Sat Apr 15 00:46:10 2023
+# Mon May 15 20:44:31 2023
 License granted for 4 parallel jobs
 
 Running: fpga_mapper (Map & Optimize) on Top_syn|synthesis
-# Sat Apr 15 00:46:10 2023
-fpga_mapper exited with errors
-Job failed on: Top_syn|synthesis
+# Mon May 15 20:44:31 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\Top_m.srm to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.srm
 
-Job: "fpga_mapper" terminated with error status: 2
-See log file: "C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\synlog\Top_fpga_mapper.srr"
-# Sat Apr 15 00:46:12 2023
+fpga_mapper completed with warnings
+# Mon May 15 20:45:03 2023
 
-Return Code: 2
-Run Time:00h:00m:02s
+Return Code: 1
+Run Time:00h:00m:32s
 Complete: Map on Top_syn|synthesis
 Complete: Logic Synthesis on Top_syn|synthesis
-Error: At line 2 while processing "Top_syn.tcl"
-2
 TCL script complete: "Top_syn.tcl"
-TCL script had errors: "Top_syn.tcl"
-exit status=9
-exit status=9
+exit status=0
+exit status=0
 License checkin: synplifypro_actel

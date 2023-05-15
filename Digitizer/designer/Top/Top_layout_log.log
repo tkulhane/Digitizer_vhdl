@@ -1,4 +1,4 @@
-INFO: Reading User SDC file C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\constraint\Top_derived_constraints.sdc.
+INFO: Reading User SDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.sdc.
 INFO: The option "Abort flow if errors are found in SDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated SDC files. Please uncheck the option to ignore the errors and continue running the tool.
 
 No errors or warnings found.
@@ -14,10 +14,10 @@ Repair min-delay         : OFF
 Incremental              : OFF
 Inter-clock optimization : ON
 
-INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
 
  Running Timing based Global Demotion. 
-        Moved 1267 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+        Moved 2 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
    - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
@@ -36,10 +36,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 3 seconds
+Total time spent in I/O Bank and Globals Assigner: 4 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Tue May  9 22:19:50 2023
+Design: Top                             Started: Mon May 15 21:49:42 2023
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -53,40 +53,45 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 0 seconds
-Placement                : 7 seconds
-Improvement              : 7 seconds
+Clustering (1 pass)      : 3 seconds
+Placement                : 30 seconds
+Improvement              : 24 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Tue May  9 22:20:26 2023
-Total CPU Time:     00:00:37            Total Elapsed Time: 00:00:36
-Total Memory Usage: 1239.9 Mbytes
+Finished: Mon May 15 21:51:16 2023
+Total CPU Time:     00:01:54            Total Elapsed Time: 00:01:34
+Total Memory Usage: 1508.8 Mbytes
                         o - o - o - o - o - o
 
+
+Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
+    Driver: Data_Block_0/Communication_Builder_0/state_reg[1]:Q
+       Net: Data_Block_0/Communication_Builder_0/state_reg_Z[1]
+Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\TopStarted: Tue May  9 22:20:32 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Mon May 15 21:51:33 2023
 
 
 Router completed successfully.
 
-Design: C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top
-Finished: Tue May  9 22:21:29 2023
-Total CPU Time:     00:03:13            Total Elapsed Time: 00:00:57
-Total Memory Usage: 5294.3 Mbytes
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
+Finished: Mon May 15 21:52:32 2023
+Total CPU Time:     00:02:15            Total Elapsed Time: 00:00:59
+Total Memory Usage: 5366.8 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
-+---------------+------+--------+------------+
-| Type          | Used | Total  | Percentage |
-+---------------+------+--------+------------+
-| 4LUT          | 3623 | 299544 | 1.21       |
-| DFF           | 3234 | 299544 | 1.08       |
-| I/O Register  | 0    | 510    | 0.00       |
-| Logic Element | 4050 | 299544 | 1.35       |
-+---------------+------+--------+------------+
++---------------+-------+--------+------------+
+| Type          | Used  | Total  | Percentage |
++---------------+-------+--------+------------+
+| 4LUT          | 29553 | 299544 | 9.87       |
+| DFF           | 28697 | 299544 | 9.58       |
+| I/O Register  | 0     | 510    | 0.00       |
+| Logic Element | 30286 | 299544 | 10.11      |
++---------------+-------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+

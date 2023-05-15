@@ -1,6 +1,6 @@
 DESIGN=Top
-DESDIR=C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top
-TARGET_DIR=C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top
+DESDIR=C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top
+TARGET_DIR=C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top
 FAM=PolarFire
 DIE=PA5M300TS_ES
 PACKAGE=fcg1152

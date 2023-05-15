@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Tue May  9 22:19:09 2023
+Date: Mon May 15 21:48:42 2023
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -18,7 +18,7 @@ Source Files
 +---------+------------------------------------------------------------------+
 | Topcell | Top                                                              |
 | Format  | Verilog                                                          |
-| Source  | C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\Top.vm |
+| Source  | C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.vm |
 +---------+------------------------------------------------------------------+
 
 Options
@@ -27,56 +27,60 @@ Options
 +----------------------------------------------------+----+
 
 Resource Usage
-+---------------------------+------+--------+------------+
-| Type                      | Used | Total  | Percentage |
-+---------------------------+------+--------+------------+
-| 4LUT                      | 3623 | 299544 | 1.21       |
-| DFF                       | 3233 | 299544 | 1.08       |
-| I/O Register              | 0    | 1536   | 0.00       |
-| User I/O                  | 17   | 512    | 3.32       |
-| -- Single-ended I/O       | 17   | 512    | 3.32       |
-| -- Differential I/O Pairs | 0    | 256    | 0.00       |
-| uSRAM                     | 0    | 2772   | 0.00       |
-| LSRAM                     | 22   | 952    | 2.31       |
-| Math                      | 0    | 924    | 0.00       |
-| H-Chip Global             | 5    | 48     | 10.42      |
-| PLL                       | 1    | 8      | 12.50      |
-| DLL                       | 0    | 8      | 0.00       |
-| CRN_INT                   | 1    | 24     | 4.17       |
-| INIT                      | 1    | 1      | 100.00     |
-| OSC_RC160MHZ              | 1    | 1      | 100.00     |
-| Transceiver Lanes         | 0    | 16     | 0.00       |
-| Transceiver PCIe          | 0    | 2      | 0.00       |
-| ICB_CLKINT                | 3    | 72     | 4.17       |
-+---------------------------+------+--------+------------+
++---------------------------+-------+--------+------------+
+| Type                      | Used  | Total  | Percentage |
++---------------------------+-------+--------+------------+
+| 4LUT                      | 29553 | 299544 | 9.87       |
+| DFF                       | 28696 | 299544 | 9.58       |
+| I/O Register              | 0     | 1536   | 0.00       |
+| User I/O                  | 17    | 512    | 3.32       |
+| -- Single-ended I/O       | 17    | 512    | 3.32       |
+| -- Differential I/O Pairs | 0     | 256    | 0.00       |
+| uSRAM                     | 0     | 2772   | 0.00       |
+| LSRAM                     | 691   | 952    | 72.58      |
+| Math                      | 0     | 924    | 0.00       |
+| H-Chip Global             | 5     | 48     | 10.42      |
+| PLL                       | 1     | 8      | 12.50      |
+| DLL                       | 0     | 8      | 0.00       |
+| CRN_INT                   | 1     | 24     | 4.17       |
+| INIT                      | 1     | 1      | 100.00     |
+| OSC_RC160MHZ              | 1     | 1      | 100.00     |
+| Transceiver Lanes         | 0     | 16     | 0.00       |
+| Transceiver PCIe          | 0     | 2      | 0.00       |
+| ICB_CLKINT                | 3     | 72     | 4.17       |
++---------------------------+-------+--------+------------+
 
 Detailed Logic Resource Usage
-+-----------------------+------+------+
-| Type                  | 4LUT | DFF  |
-+-----------------------+------+------+
-| Fabric Logic          | 2831 | 2441 |
-| uSRAM Interface Logic | 0    | 0    |
-| LSRAM Interface Logic | 792  | 792  |
-| Math Interface Logic  | 0    | 0    |
-| Total Used            | 3623 | 3233 |
-+-----------------------+------+------+
++-----------------------+-------+-------+
+| Type                  | 4LUT  | DFF   |
++-----------------------+-------+-------+
+| Fabric Logic          | 4677  | 3820  |
+| uSRAM Interface Logic | 0     | 0     |
+| LSRAM Interface Logic | 24876 | 24876 |
+| Math Interface Logic  | 0     | 0     |
+| Total Used            | 29553 | 28696 |
++-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
 +--------+------+
 | Length | Used |
+| 6      | 1    |
 | 9      | 9    |
-| 10     | 1    |
+| 10     | 2    |
 | 11     | 21   |
 | 12     | 17   |
 | 13     | 8    |
 | 14     | 2    |
-| 17     | 3    |
-| 18     | 3    |
-| 20     | 1    |
+| 15     | 17   |
+| 16     | 28   |
+| 17     | 1    |
+| 20     | 5    |
+| 21     | 3    |
+| 24     | 1    |
 | 26     | 2    |
 | 32     | 3    |
 | 33     | 7    |
-| Total  | 77   |
+| Total  | 127  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
@@ -101,16 +105,16 @@ Nets assigned to chip global resources
 +--------+---------+-------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                |
 +--------+---------+-------------------------------------------------------------------------------------+
-| 1451   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
+| 4163   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 1311   | INT_NET | Net   : dff_arst                                                                    |
+| 2593   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
-| 1034   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK                                                    |
+| 1038   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK                                                    |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 866    | INT_NET | Net   : Clock_Reset_0_Synchronizer_0_Chain[1]                                       |
+| 870    | INT_NET | Net   : Clock_Reset_0_Synchronizer_0_Chain[1]                                       |
 |        |         | Driver: Clock_Reset_0/Synchronizer_0/Chain_RNI23CB[1]/U0_RGB1                       |
 |        |         | Source: NETLIST                                                                     |
 | 1      | INT_NET | Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL                                   |
@@ -125,54 +129,54 @@ Nets assigned to row global resources
 +--------+------+------+
 
 High fanout nets
-+--------+---------+----------------------------------------------------------------------------------------------------+
-| Fanout | Type    | Name                                                                                               |
-+--------+---------+----------------------------------------------------------------------------------------------------+
-| 80     | INT_NET | Net   : Data_Block_0/REG_Test_Generator_Enable                                                     |
-|        |         | Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REG_Test_Generator_Enable                |
-| 69     | INT_NET | Net   : Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset_Z                     |
-|        |         | Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset                       |
-| 50     | INT_NET | Net   : UART_Protocol_0/UART_TX_Protocol_0/countere                                                |
-|        |         | Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[8]                                            |
-| 50     | INT_NET | Net   : UART_Protocol_1/UART_TX_Protocol_0/countere                                                |
-|        |         | Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[8]                                            |
-| 49     | INT_NET | Net   : UART_Protocol_0/UART_TX_Protocol_0/state_reg_data[12]                                      |
-|        |         | Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[12]                                           |
-| 49     | INT_NET | Net   : UART_Protocol_1/UART_TX_Protocol_0/state_reg_data[12]                                      |
-|        |         | Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[12]                                           |
-| 46     | INT_NET | Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i              |
-|        |         | Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIRHM91 |
-| 46     | INT_NET | Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i              |
-|        |         | Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIVAD71 |
-| 45     | INT_NET | Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid                                 |
-|        |         | Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid        |
-| 45     | INT_NET | Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid                                 |
-|        |         | Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid        |
-+--------+---------+----------------------------------------------------------------------------------------------------+
++--------+---------+-----------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                  |
++--------+---------+-----------------------------------------------------------------------+
+| 616    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_N_122_i                           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]             |
+| 579    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]  |
++--------+---------+-----------------------------------------------------------------------+
 
 High fanout nets (through buffer trees)
-+--------+---------+----------------------------------------------------------------------------------------------------+
-| Fanout | Type    | Name                                                                                               |
-+--------+---------+----------------------------------------------------------------------------------------------------+
-| 80     | INT_NET | Net   : Data_Block_0/REG_Test_Generator_Enable                                                     |
-|        |         | Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REG_Test_Generator_Enable                |
-| 69     | INT_NET | Net   : Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset_Z                     |
-|        |         | Driver: Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/REQ_Counters_Reset                       |
-| 50     | INT_NET | Net   : UART_Protocol_0/UART_TX_Protocol_0/countere                                                |
-|        |         | Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[8]                                            |
-| 50     | INT_NET | Net   : UART_Protocol_1/UART_TX_Protocol_0/countere                                                |
-|        |         | Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[8]                                            |
-| 49     | INT_NET | Net   : UART_Protocol_0/UART_TX_Protocol_0/state_reg_data[12]                                      |
-|        |         | Driver: UART_Protocol_0/UART_TX_Protocol_0/state_reg[12]                                           |
-| 49     | INT_NET | Net   : UART_Protocol_1/UART_TX_Protocol_0/state_reg_data[12]                                      |
-|        |         | Driver: UART_Protocol_1/UART_TX_Protocol_0/state_reg[12]                                           |
-| 46     | INT_NET | Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i              |
-|        |         | Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIRHM91 |
-| 46     | INT_NET | Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/N_64_i              |
-|        |         | Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/dout_valid_RNIVAD71 |
-| 45     | INT_NET | Net   : UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid                                 |
-|        |         | Driver: UART_Protocol_0/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid        |
-| 45     | INT_NET | Net   : UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/middle_valid                                 |
-|        |         | Driver: UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk17.u_corefifo_fwft/middle_valid        |
-+--------+---------+----------------------------------------------------------------------------------------------------+
++--------+---------+-----------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                  |
++--------+---------+-----------------------------------------------------------------------+
+| 616    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_N_122_i                           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]             |
+| 579    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]          |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10] |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]  |
+| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]           |
+|        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]  |
++--------+---------+-----------------------------------------------------------------------+
 

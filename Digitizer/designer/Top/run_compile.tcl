@@ -19,9 +19,9 @@ set_defvar -name {RTG4_MITIGATION_ON} -value {0}
 set_defvar -name {USE_CONSTRAINT_FLOW} -value True
 set_defvar -name {FHB_AUTO_INSTANTIATION} -value {0}
 
-set_partition_info -name "/Top" -timestamp "1683634270"
-set_partition_info -name "/Top/Controler_0" -timestamp "1683634270"
-set_partition_info -name "/Top/Data_Block_0" -timestamp "1683663530"
+set_partition_info -name "/Top" -timestamp "1684180065"
+set_partition_info -name "/Top/Controler_0" -timestamp "1684177672"
+set_partition_info -name "/Top/Data_Block_0" -timestamp "1684180065"
 set_compile_info \
     -category {"Device Selection"} \
     -name {"Family"} \
@@ -65,16 +65,16 @@ set_compile_info \
 set_compile_info \
     -category {"Source Files"} \
     -name {"Source"} \
-    -value {"C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\synthesis\Top.vm"}
+    -value {"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.vm"}
 set_compile_info \
     -category {"Options"} \
     -name {"Limit the number of high fanout nets to display to"} \
     -value {"10"}
 compile \
-    -desdir {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top} \
+    -desdir {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top} \
     -design Top \
     -fam PolarFire \
     -die PA5M300TS_ES \
     -pkg fcg1152 \
-    -partition_pdc_file {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top.nmatinit.pdc} \
+    -partition_pdc_file {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top.nmatinit.pdc} \
     -merge_pdc 0

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon May 15 20:04:21 2023
+// Created by SmartDesign Mon May 15 21:46:02 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -97,8 +97,8 @@ wire          TX_net_1;
 wire          Diag_Valid_LED_net_1;
 wire          RX_FIFO_EMPTY_net_1;
 wire          TX_FIFO_FULL_net_1;
-wire   [39:0] RX_Fifo_Data_net_1;
 wire          Communication_Data_Full_net_1;
+wire   [39:0] RX_Fifo_Data_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -122,10 +122,10 @@ assign RX_FIFO_EMPTY_net_1           = RX_FIFO_EMPTY_net_0;
 assign RX_FIFO_EMPTY                 = RX_FIFO_EMPTY_net_1;
 assign TX_FIFO_FULL_net_1            = TX_FIFO_FULL_net_0;
 assign TX_FIFO_FULL                  = TX_FIFO_FULL_net_1;
-assign RX_Fifo_Data_net_1            = RX_Fifo_Data_net_0;
-assign RX_Fifo_Data[39:0]            = RX_Fifo_Data_net_1;
 assign Communication_Data_Full_net_1 = Communication_Data_Full_net_0;
 assign Communication_Data_Full       = Communication_Data_Full_net_1;
+assign RX_Fifo_Data_net_1            = RX_Fifo_Data_net_0;
+assign RX_Fifo_Data[39:0]            = RX_Fifo_Data_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -135,11 +135,11 @@ Communication_TX_Arbiter Communication_TX_Arbiter_0(
         .Clock                     ( UART_Clock ),
         .Reset_N                   ( UART_RESET_N ),
         .Control_Fifo_WE           ( TX_FIFO_WE ),
-        .Control_Fifo_Data         ( TX_Fifo_Data ),
-        .Communication_Data_Frame  ( Communication_Data_Frame ),
         .Communication_Data_Enable ( Communication_Data_Enable ),
         .Communication_Data_Req    ( Communication_Data_Req ),
         .TX_Fifo_Full              ( COREFIFO_C0_FULL ),
+        .Control_Fifo_Data         ( TX_Fifo_Data ),
+        .Communication_Data_Frame  ( Communication_Data_Frame ),
         // Outputs
         .Control_Fifo_Full         ( TX_FIFO_FULL_net_0 ),
         .Communication_Data_Full   ( Communication_Data_Full_net_0 ),

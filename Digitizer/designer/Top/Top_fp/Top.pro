@@ -1,6 +1,6 @@
 <project name="Top" version="1.2">
     <ProjectDirectory>
-        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_fp
+        C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_fp
     </ProjectDirectory>
     <View>
         ChainView
@@ -9,7 +9,7 @@
         MPF300TS_ES
     </LiberoTargetDevice>
     <LogFile>
-        C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_fp\Top.log
+        C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_fp\Top.log
     </LogFile>
     <SerializationOption>
         Skip

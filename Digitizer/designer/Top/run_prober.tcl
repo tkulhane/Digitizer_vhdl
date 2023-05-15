@@ -1,5 +1,5 @@
 probe \
-    -desdir {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top} \
+    -desdir {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top} \
     -design Top \
     -fam PolarFire \
     -die PA5M300TS_ES \

@@ -15,6 +15,6 @@ set_def {RTG4_MITIGATION_ON} {0}
 set_def USE_CONSTRAINTS_FLOW 1
 set_def NETLIST_TYPE EDIF
 set_name Top
-set_workdir {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top}
-set_log     {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_sdc.log}
+set_workdir {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top}
+set_log     {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_sdc.log}
 set_design_state pre_layout

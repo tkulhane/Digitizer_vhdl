@@ -3,9 +3,9 @@ set_device \
     -die PA5M300TS_ES \
     -pkg fcg1152
 set_proj_dir \
-    -path {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer}
+    -path {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer}
 set_impl_dir \
-    -path {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top}
+    -path {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top}
 set_is_relative_path \
     -value {FALSE}
 set_root_path_dir \

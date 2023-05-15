@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May  4 16:06:49 2023
+// Created by SmartDesign Mon May 15 20:42:31 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,7 +17,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "AE_STATIC_EN:false"  \
 "AEVAL:4"  \
 "AF_STATIC_EN:true"  \
-"AFVAL:65534"  \
+"AFVAL:16380"  \
 "CTRL_TYPE:2"  \
 "DIE_SIZE:15"  \
 "ECC:0"  \
@@ -30,14 +30,14 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "PREFETCH:true"  \
 "RAM_OPT:0"  \
 "RDCNT_EN:false"  \
-"RDEPTH:65536"  \
+"RDEPTH:16384"  \
 "RE_POLARITY:0"  \
 "READ_DVALID:false"  \
 "RWIDTH:16"  \
 "SYNC:1"  \
 "SYNC_RESET:0"  \
 "UNDERFLOW_EN:false"  \
-"WDEPTH:65536"  \
+"WDEPTH:16384"  \
 "WE_POLARITY:0"  \
 "WRCNT_EN:false"  \
 "WRITE_ACK:false"  \
@@ -120,7 +120,7 @@ COREFIFO_C4_COREFIFO_C4_0_COREFIFO #(
         .AE_STATIC_EN ( 0 ),
         .AEVAL        ( 4 ),
         .AF_STATIC_EN ( 1 ),
-        .AFVAL        ( 65534 ),
+        .AFVAL        ( 16380 ),
         .CTRL_TYPE    ( 2 ),
         .DIE_SIZE     ( 15 ),
         .ECC          ( 0 ),
@@ -134,14 +134,14 @@ COREFIFO_C4_COREFIFO_C4_0_COREFIFO #(
         .PREFETCH     ( 1 ),
         .RAM_OPT      ( 0 ),
         .RDCNT_EN     ( 0 ),
-        .RDEPTH       ( 65536 ),
+        .RDEPTH       ( 16384 ),
         .RE_POLARITY  ( 0 ),
         .READ_DVALID  ( 0 ),
         .RWIDTH       ( 16 ),
         .SYNC         ( 1 ),
         .SYNC_RESET   ( 0 ),
         .UNDERFLOW_EN ( 0 ),
-        .WDEPTH       ( 65536 ),
+        .WDEPTH       ( 16384 ),
         .WE_POLARITY  ( 0 ),
         .WRCNT_EN     ( 0 ),
         .WRITE_ACK    ( 0 ),
