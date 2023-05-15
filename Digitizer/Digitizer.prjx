@@ -1056,13 +1056,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.cxf,actgen_cxf"
 STATE="utd"
-TIME="1684084293"
-SIZE="5070"
+TIME="1684174477"
+SIZE="4921"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.v,hdl"
 STATE="utd"
-TIME="1684084292"
-SIZE="18258"
+TIME="1684174476"
+SIZE="17945"
 PARENT="<project>\component\work\Data_Block\Data_Block.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -1412,13 +1412,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1683716087"
-SIZE="4150"
+TIME="1684174465"
+SIZE="5508"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.v,hdl"
 STATE="utd"
-TIME="1683716087"
-SIZE="9610"
+TIME="1684174464"
+SIZE="11492"
 PARENT="<project>\component\work\Top\Top.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -1436,13 +1436,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\UART_Protocol\UART_Protocol.cxf,actgen_cxf"
 STATE="utd"
-TIME="1683716087"
-SIZE="4077"
+TIME="1684173861"
+SIZE="4919"
 ENDFILE
 VALUE "<project>\component\work\UART_Protocol\UART_Protocol.v,hdl"
 STATE="utd"
-TIME="1683716087"
-SIZE="7601"
+TIME="1684173860"
+SIZE="9658"
 PARENT="<project>\component\work\UART_Protocol\UART_Protocol.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -1454,8 +1454,8 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1683716087"
-SIZE="2192"
+TIME="1684174496"
+SIZE="2265"
 ENDFILE
 VALUE "<project>\hdl\ADI_SPI.vhd,hdl"
 STATE="utd"
@@ -1496,6 +1496,11 @@ VALUE "<project>\hdl\Communication_CMD_MUX.vhd,hdl"
 STATE="utd"
 TIME="1683716087"
 SIZE="6810"
+ENDFILE
+VALUE "<project>\hdl\Communication_TX_Arbiter.vhd,hdl"
+STATE="utd"
+TIME="1684173315"
+SIZE="4861"
 ENDFILE
 VALUE "<project>\hdl\FIFOs_Reader.vhd,hdl"
 STATE="utd"
@@ -1576,7 +1581,7 @@ PARENT="<project>\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_St
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1684083795"
+TIME="1684092499"
 SIZE="4995"
 ENDFILE
 VALUE "<project>\simulation\SRAM_test_presynth_simulation.log,log"
@@ -1586,8 +1591,8 @@ SIZE="21817"
 ENDFILE
 VALUE "<project>\simulation\TB_Data_Block_presynth_simulation.log,log"
 STATE="utd"
-TIME="1684084173"
-SIZE="50097"
+TIME="1684093046"
+SIZE="49333"
 ENDFILE
 VALUE "<project>\simulation\tb_UART_Protocol_presynth_simulation.log,log"
 STATE="utd"
@@ -1601,8 +1606,8 @@ SIZE="4920"
 ENDFILE
 VALUE "<project>\stimulus\TB_Data_Block.vhd,tb_hdl"
 STATE="utd"
-TIME="1684092416"
-SIZE="12418"
+TIME="1684162775"
+SIZE="13420"
 ENDFILE
 VALUE "<project>\stimulus\tb_UART_Protocol.vhd,tb_hdl"
 STATE="utd"
@@ -2000,10 +2005,12 @@ SmartDesign;Data_Block;0
 SmartDesign;Event_Info_RAM_Block;0
 SmartDesign;Sample_RAM_Block;0
 StartPage;StartPage;0
-SmartDesign;Top;0
 SmartDesign;Controler;0
+SmartDesign;Top;0
 SmartDesign;Trigger_Top_Part;0
-ACTIVEVIEW;Controler
+Constraint Manager;Constraint Manager;0
+SmartDesign;UART_Protocol;0
+ACTIVEVIEW;Constraint Manager
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -2028,6 +2035,8 @@ ENDLIST
 LIST "Communication_Builder::work","hdl\Communication_Builder.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Communication_CMD_MUX::work","hdl\Communication_CMD_MUX.vhd","FALSE","FALSE"
+ENDLIST
+LIST "Communication_TX_Arbiter::work","hdl\Communication_TX_Arbiter.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Controler::work","component\work\Controler\Controler.v","TRUE","FALSE"
 SUBBLOCK "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -2366,6 +2375,7 @@ ENDLIST
 LIST "UART_Protocol::work","component\work\UART_Protocol\UART_Protocol.v","TRUE","FALSE"
 SUBBLOCK "COREFIFO_C0::work","component\work\COREFIFO_C0\COREFIFO_C0.v","TRUE","FALSE"
 SUBBLOCK "COREUART_C0::work","component\work\COREUART_C0\COREUART_C0.v","TRUE","FALSE"
+SUBBLOCK "Communication_TX_Arbiter::work","hdl\Communication_TX_Arbiter.vhd","FALSE","FALSE"
 SUBBLOCK "UART_RX_Protocol::work","hdl\UART_RX_Protocol.vhd","FALSE","FALSE"
 SUBBLOCK "UART_TX_Protocol::work","hdl\UART_TX_Protocol.vhd","FALSE","FALSE"
 SUBBLOCK "mko::work","hdl\mko.vhd","FALSE","FALSE"

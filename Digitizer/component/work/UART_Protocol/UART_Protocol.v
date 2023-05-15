@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue May  9 12:02:33 2023
+// Created by SmartDesign Mon May 15 20:04:21 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,6 +8,9 @@
 // UART_Protocol
 module UART_Protocol(
     // Inputs
+    Communication_Data_Enable,
+    Communication_Data_Frame,
+    Communication_Data_Req,
     Logic_Clock,
     Logic_RESET_N,
     Number_Communication,
@@ -18,6 +21,7 @@ module UART_Protocol(
     UART_Clock,
     UART_RESET_N,
     // Outputs
+    Communication_Data_Full,
     Diag_Valid_LED,
     RX_FIFO_EMPTY,
     RX_Fifo_Data,
@@ -28,6 +32,9 @@ module UART_Protocol(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input         Communication_Data_Enable;
+input  [31:0] Communication_Data_Frame;
+input         Communication_Data_Req;
 input         Logic_Clock;
 input         Logic_RESET_N;
 input  [3:0]  Number_Communication;
@@ -40,6 +47,7 @@ input         UART_RESET_N;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output        Communication_Data_Full;
 output        Diag_Valid_LED;
 output        RX_FIFO_EMPTY;
 output [39:0] RX_Fifo_Data;
@@ -48,8 +56,15 @@ output        TX_FIFO_FULL;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire          Communication_Data_Enable;
+wire   [31:0] Communication_Data_Frame;
+wire          Communication_Data_Full_net_0;
+wire          Communication_Data_Req;
+wire   [39:0] Communication_TX_Arbiter_0_TX_Fifo_Data;
+wire          Communication_TX_Arbiter_0_TX_Fifo_WE;
 wire          COREFIFO_C0_0_0_FULL;
 wire   [39:0] COREFIFO_C0_0_Q;
+wire          COREFIFO_C0_FULL;
 wire   [7:0]  COREUART_C0_0_DATA_OUT;
 wire          COREUART_C0_0_RXRDY;
 wire          COREUART_C0_0_TXRDY;
@@ -83,6 +98,7 @@ wire          Diag_Valid_LED_net_1;
 wire          RX_FIFO_EMPTY_net_1;
 wire          TX_FIFO_FULL_net_1;
 wire   [39:0] RX_Fifo_Data_net_1;
+wire          Communication_Data_Full_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -98,19 +114,39 @@ assign BAUD_VAL_const_net_0 = 13'h0002;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign TX_net_1             = TX_net_0;
-assign TX                   = TX_net_1;
-assign Diag_Valid_LED_net_1 = Diag_Valid_LED_net_0;
-assign Diag_Valid_LED       = Diag_Valid_LED_net_1;
-assign RX_FIFO_EMPTY_net_1  = RX_FIFO_EMPTY_net_0;
-assign RX_FIFO_EMPTY        = RX_FIFO_EMPTY_net_1;
-assign TX_FIFO_FULL_net_1   = TX_FIFO_FULL_net_0;
-assign TX_FIFO_FULL         = TX_FIFO_FULL_net_1;
-assign RX_Fifo_Data_net_1   = RX_Fifo_Data_net_0;
-assign RX_Fifo_Data[39:0]   = RX_Fifo_Data_net_1;
+assign TX_net_1                      = TX_net_0;
+assign TX                            = TX_net_1;
+assign Diag_Valid_LED_net_1          = Diag_Valid_LED_net_0;
+assign Diag_Valid_LED                = Diag_Valid_LED_net_1;
+assign RX_FIFO_EMPTY_net_1           = RX_FIFO_EMPTY_net_0;
+assign RX_FIFO_EMPTY                 = RX_FIFO_EMPTY_net_1;
+assign TX_FIFO_FULL_net_1            = TX_FIFO_FULL_net_0;
+assign TX_FIFO_FULL                  = TX_FIFO_FULL_net_1;
+assign RX_Fifo_Data_net_1            = RX_Fifo_Data_net_0;
+assign RX_Fifo_Data[39:0]            = RX_Fifo_Data_net_1;
+assign Communication_Data_Full_net_1 = Communication_Data_Full_net_0;
+assign Communication_Data_Full       = Communication_Data_Full_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
+//--------Communication_TX_Arbiter
+Communication_TX_Arbiter Communication_TX_Arbiter_0(
+        // Inputs
+        .Clock                     ( UART_Clock ),
+        .Reset_N                   ( UART_RESET_N ),
+        .Control_Fifo_WE           ( TX_FIFO_WE ),
+        .Control_Fifo_Data         ( TX_Fifo_Data ),
+        .Communication_Data_Frame  ( Communication_Data_Frame ),
+        .Communication_Data_Enable ( Communication_Data_Enable ),
+        .Communication_Data_Req    ( Communication_Data_Req ),
+        .TX_Fifo_Full              ( COREFIFO_C0_FULL ),
+        // Outputs
+        .Control_Fifo_Full         ( TX_FIFO_FULL_net_0 ),
+        .Communication_Data_Full   ( Communication_Data_Full_net_0 ),
+        .TX_Fifo_WE                ( Communication_TX_Arbiter_0_TX_Fifo_WE ),
+        .TX_Fifo_Data              ( Communication_TX_Arbiter_0_TX_Fifo_Data ) 
+        );
+
 //--------COREFIFO_C0
 COREFIFO_C0 COREFIFO_C0_inst_0(
         // Inputs
@@ -118,11 +154,11 @@ COREFIFO_C0 COREFIFO_C0_inst_0(
         .RCLOCK   ( UART_Clock ),
         .WRESET_N ( Logic_RESET_N ),
         .RRESET_N ( UART_RESET_N ),
-        .WE       ( TX_FIFO_WE ),
+        .WE       ( Communication_TX_Arbiter_0_TX_Fifo_WE ),
         .RE       ( Diag_Valid_TX ),
-        .DATA     ( TX_Fifo_Data ),
+        .DATA     ( Communication_TX_Arbiter_0_TX_Fifo_Data ),
         // Outputs
-        .FULL     ( TX_FIFO_FULL_net_0 ),
+        .FULL     ( COREFIFO_C0_FULL ),
         .EMPTY    ( Diag_Valid_RX ),
         .Q        ( COREFIFO_C0_0_Q ) 
         );

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun May 14 19:11:33 2023
+// Created by SmartDesign Mon May 15 20:14:37 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -20,8 +20,7 @@ module Data_Block(
     C_read_data_frame,
     Communication_Data_Enable,
     Communication_Data_Frame,
-    Communication_Data_Req,
-    Y
+    Communication_Data_Req
 );
 
 //--------------------------------------------------------------------
@@ -42,7 +41,6 @@ output [15:0] C_read_data_frame;
 output        Communication_Data_Enable;
 output [31:0] Communication_Data_Frame;
 output        Communication_Data_Req;
-output        Y;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -111,14 +109,13 @@ wire          Trigger_Top_Part_0_TRG_First_Is_First;
 wire          Trigger_Top_Part_0_TRG_Last_Is_Last;
 wire   [11:0] Trigger_Top_Part_0_TRG_Threshold;
 wire          C_busy_net_1;
-wire   [15:0] C_read_data_frame_net_1;
 wire          Communication_Data_Enable_net_1;
-wire   [31:0] Communication_Data_Frame_net_1;
 wire          Communication_Data_Req_net_1;
+wire   [15:0] C_read_data_frame_net_1;
+wire   [31:0] Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire          GND_net;
 wire   [2:0]  Order_Of_TRG_Unit_0_const_net_0;
 wire   [2:0]  Order_Of_TRG_Unit_1_const_net_0;
 wire   [2:0]  Order_Of_TRG_Unit_3_const_net_0;
@@ -130,7 +127,6 @@ wire   [2:0]  Order_Of_TRG_Unit_2_const_net_1;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign GND_net                         = 1'b0;
 assign Order_Of_TRG_Unit_0_const_net_0 = 3'h0;
 assign Order_Of_TRG_Unit_1_const_net_0 = 3'h1;
 assign Order_Of_TRG_Unit_3_const_net_0 = 3'h3;
@@ -140,22 +136,18 @@ assign Order_Of_TRG_Unit_1_const_net_1 = 3'h5;
 assign Order_Of_TRG_Unit_3_const_net_1 = 3'h7;
 assign Order_Of_TRG_Unit_2_const_net_1 = 3'h6;
 //--------------------------------------------------------------------
-// TieOff assignments
-//--------------------------------------------------------------------
-assign Y                               = 1'b0;
-//--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
 assign C_busy_net_1                    = C_busy_net_0;
 assign C_busy                          = C_busy_net_1;
-assign C_read_data_frame_net_1         = C_read_data_frame_net_0;
-assign C_read_data_frame[15:0]         = C_read_data_frame_net_1;
 assign Communication_Data_Enable_net_1 = Communication_Data_Enable_net_0;
 assign Communication_Data_Enable       = Communication_Data_Enable_net_1;
-assign Communication_Data_Frame_net_1  = Communication_Data_Frame_net_0;
-assign Communication_Data_Frame[31:0]  = Communication_Data_Frame_net_1;
 assign Communication_Data_Req_net_1    = Communication_Data_Req_net_0;
 assign Communication_Data_Req          = Communication_Data_Req_net_1;
+assign C_read_data_frame_net_1         = C_read_data_frame_net_0;
+assign C_read_data_frame[15:0]         = C_read_data_frame_net_1;
+assign Communication_Data_Frame_net_1  = Communication_Data_Frame_net_0;
+assign Communication_Data_Frame[31:0]  = Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
