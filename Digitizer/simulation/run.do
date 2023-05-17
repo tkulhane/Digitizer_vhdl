@@ -1,5 +1,5 @@
 quietly set ACTELLIBNAME PolarFire
-quietly set PROJECT_DIR "//mac/Home/Documents/_temp_VHDL/Digitizer_vhdl/Digitizer"
+quietly set PROJECT_DIR "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer"
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"

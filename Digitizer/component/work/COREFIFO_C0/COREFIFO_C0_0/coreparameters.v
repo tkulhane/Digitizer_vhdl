@@ -1,25 +1,25 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Fri Feb 10 16:00:46 2023
+// Created by Microsemi SmartDesign Wed May 17 11:27:24 2023
 // Parameters for COREFIFO
 //--------------------------------------------------------------------
 
 
 parameter AE_STATIC_EN = 0;
 parameter AEVAL = 4;
-parameter AF_STATIC_EN = 0;
-parameter AFVAL = 1020;
+parameter AF_STATIC_EN = 1;
+parameter AFVAL = 1010;
 parameter CTRL_TYPE = 2;
 parameter DIE_SIZE = 15;
 parameter ECC = 0;
 parameter ESTOP = 1;
 parameter FAMILY = 26;
 parameter FSTOP = 1;
-parameter FWFT = 1;
+parameter FWFT = 0;
 parameter HDL_License = "U";
 parameter NUM_STAGES = 2;
 parameter OVERFLOW_EN = 0;
 parameter PIPE = 1;
-parameter PREFETCH = 0;
+parameter PREFETCH = 1;
 parameter RAM_OPT = 0;
 parameter RDCNT_EN = 0;
 parameter RDEPTH = 1024;
@@ -33,5 +33,5 @@ parameter UNDERFLOW_EN = 0;
 parameter WDEPTH = 1024;
 parameter WE_POLARITY = 0;
 parameter WRCNT_EN = 0;
-parameter WRITE_ACK = 0;
+parameter WRITE_ACK = 1;
 parameter WWIDTH = 40;

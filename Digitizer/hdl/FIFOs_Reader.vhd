@@ -189,7 +189,7 @@ begin
     end process;
 
     --output function
-    process(state_reg,Sample_RAM_W_Address_Unsigned,Event_Size_Counter)
+    process(state_reg,Sample_RAM_W_Address_Unsigned,Event_Size_Counter,Event_Number_Counter)
     begin
 
         case state_reg is

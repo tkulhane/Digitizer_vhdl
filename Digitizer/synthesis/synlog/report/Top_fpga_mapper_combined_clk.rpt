@@ -7,21 +7,21 @@
 
 Clock optimization not enabled
 1 non-gated/non-generated clock tree(s) driving 1 clock pin(s) of sequential element(s)
-3 gated/generated clock tree(s) driving 5202 clock pin(s) of sequential element(s)
-0 instances converted, 5202 sequential instances remain driven by gated/generated clocks
+3 gated/generated clock tree(s) driving 5491 clock pin(s) of sequential element(s)
+0 instances converted, 5491 sequential instances remain driven by gated/generated clocks
 
 =================================================================== Non-Gated/Non-Generated Clocks ===================================================================
 Clock Tree ID     Driving Element                                     Drive Element Type                   Fanout     Sample Instance                                 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @K:CKID0004       Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160     clock definition on OSC_RC160MHZ     1          Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0
 ======================================================================================================================================================================
-=================================================================================================== Gated/Generated Clocks ===================================================================================================
-Clock Tree ID     Driving Element                                       Drive Element Type     Fanout     Sample Instance                                              Explanation                                            
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0      PLL                    4163       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_5      No gated clock conversion method for cell cell:ACG4.SLE
-@K:CKID0002       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0      PLL                    1038       Clock_Reset_0.Synchronizer_0.Chain[0]                        No gated clock conversion method for cell cell:ACG4.SLE
-@K:CKID0003       Data_Block_0.Communication_Builder_0.state_reg[1]     SLE                    1          Data_Block_0.Communication_Builder_0.Sample_Buffer_Store     No gated clock conversion method for cell cell:ACG4.SLE
-==============================================================================================================================================================================================================================
+===================================================================================================== Gated/Generated Clocks =====================================================================================================
+Clock Tree ID     Driving Element                                            Drive Element Type     Fanout     Sample Instance                                             Explanation                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0           PLL                    4384       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_5     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0002       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0           PLL                    1100       Clock_Reset_0.Synchronizer_0.Chain[0]                       No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0003       Data_Block_0.Communication_Builder_0.un1_state_reg_5_0     CFG3                   7          Data_Block_0.Communication_Builder_0.wait_next_state[6]     No gated clock conversion method for cell cell:ACG4.SLE
+==================================================================================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]

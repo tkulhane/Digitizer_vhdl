@@ -318,6 +318,14 @@ begin
         wait until SYSCLK'event and SYSCLK = '1';
         Communication_Data_Full <= '0';
 
+
+        wait for 1 us;
+        wait until SYSCLK'event and SYSCLK = '1';
+        Communication_Data_Full <= '1';
+        wait for 300 ns;
+        wait until SYSCLK'event and SYSCLK = '1';
+        Communication_Data_Full <= '0';
+
         
         wait until Communication_Data_Req = '0';
         wait until SYSCLK'event and SYSCLK = '1';

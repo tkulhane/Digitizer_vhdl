@@ -245,7 +245,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --encoder
 ------------------------------------------------------------------------------------------------------------
-    process(cmd_ID,ADCSPI_rx_data,REG_rx_data,CD_CMD_Data,CMD_DATA_Part_2,CMD_DATA_Part_1,CMD_DATA_Part_0,TRG_rx_data)
+    process(cmd_ID,ADCSPI_rx_data,REG_rx_data,CD_CMD_Data,CMD_DATA_Part_2,CMD_DATA_Part_1,CMD_DATA_Part_0,TRG_rx_data,SYS_rx_data)
     begin
 
         case cmd_ID is

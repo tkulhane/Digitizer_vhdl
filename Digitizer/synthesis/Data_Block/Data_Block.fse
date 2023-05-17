@@ -1,4 +1,18 @@
 
+fsm_encoding {237087011} onehot
+
+fsm_state_encoding {237087011} anw_state {00001}
+
+fsm_state_encoding {237087011} switch_state {00010}
+
+fsm_state_encoding {237087011} switch_wait_state {00100}
+
+fsm_state_encoding {237087011} data_ack_state {01000}
+
+fsm_state_encoding {237087011} data_state {10000}
+
+fsm_registers {237087011} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]} 
+
 fsm_encoding {3011281128} onehot
 
 fsm_state_encoding {3011281128} idle {000001}
@@ -33,30 +47,32 @@ fsm_state_encoding {16129812910} store_event_end {1000000}
 
 fsm_registers {16129812910} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]} 
 
-fsm_encoding {2914981499} onehot
+fsm_encoding {2917181719} onehot
 
-fsm_state_encoding {2914981499} idle {000000000001}
+fsm_state_encoding {2917181719} idle {0000000000001}
 
-fsm_state_encoding {2914981499} communication_req {000000000010}
+fsm_state_encoding {2917181719} communication_req {0000000000010}
 
-fsm_state_encoding {2914981499} read_event_info {000000000100}
+fsm_state_encoding {2917181719} read_event_info {0000000000100}
 
-fsm_state_encoding {2914981499} send_event_head {000000001000}
+fsm_state_encoding {2917181719} send_event_head {0000000001000}
 
-fsm_state_encoding {2914981499} send_packet_head {000000010000}
+fsm_state_encoding {2917181719} send_packet_head {0000000010000}
 
-fsm_state_encoding {2914981499} read_sample_data {000000100000}
+fsm_state_encoding {2917181719} read_sample_data {0000000100000}
 
-fsm_state_encoding {2914981499} send_data_frames_1 {000001000000}
+fsm_state_encoding {2917181719} send_data_frames_1 {0000001000000}
 
-fsm_state_encoding {2914981499} send_data_frames_2 {000010000000}
+fsm_state_encoding {2917181719} send_data_frames_2 {0000010000000}
 
-fsm_state_encoding {2914981499} send_packet_tail {000100000000}
+fsm_state_encoding {2917181719} send_packet_tail {0000100000000}
 
-fsm_state_encoding {2914981499} send_event_tail {001000000000}
+fsm_state_encoding {2917181719} send_event_tail {0001000000000}
 
-fsm_state_encoding {2914981499} next_event_addr {010000000000}
+fsm_state_encoding {2917181719} next_event_addr {0010000000000}
 
-fsm_state_encoding {2914981499} end_wait {100000000000}
+fsm_state_encoding {2917181719} end_wait {0100000000000}
 
-fsm_registers {2914981499} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]}  {state_reg[7]}  {state_reg[8]}  {state_reg[9]}  {state_reg[10]}  {state_reg[11]} 
+fsm_state_encoding {2917181719} wait_for_fifo {1000000000000}
+
+fsm_registers {2917181719} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]}  {state_reg[7]}  {state_reg[8]}  {state_reg[9]}  {state_reg[10]}  {state_reg[11]}  {state_reg[12]} 

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Feb 10 16:00:46 2023
+// Created by SmartDesign Wed May 17 11:27:24 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -16,18 +16,18 @@
 create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -component_name {COREFIFO_C0} -params {\
 "AE_STATIC_EN:false"  \
 "AEVAL:4"  \
-"AF_STATIC_EN:false"  \
-"AFVAL:1020"  \
+"AF_STATIC_EN:true"  \
+"AFVAL:1010"  \
 "CTRL_TYPE:2"  \
 "DIE_SIZE:15"  \
 "ECC:0"  \
 "ESTOP:true"  \
 "FSTOP:true"  \
-"FWFT:true"  \
+"FWFT:false"  \
 "NUM_STAGES:2"  \
 "OVERFLOW_EN:false"  \
 "PIPE:1"  \
-"PREFETCH:false"  \
+"PREFETCH:true"  \
 "RAM_OPT:0"  \
 "RDCNT_EN:false"  \
 "RDEPTH:1024"  \
@@ -40,7 +40,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "WDEPTH:1024"  \
 "WE_POLARITY:0"  \
 "WRCNT_EN:false"  \
-"WRITE_ACK:false"  \
+"WRITE_ACK:true"  \
 "WWIDTH:40"   }
 # Exporting Component Description of COREFIFO_C0 to TCL done
 */
@@ -56,9 +56,11 @@ module COREFIFO_C0(
     WE,
     WRESET_N,
     // Outputs
+    AFULL,
     EMPTY,
     FULL,
-    Q
+    Q,
+    WACK
 );
 
 //--------------------------------------------------------------------
@@ -74,12 +76,15 @@ input         WRESET_N;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output        AFULL;
 output        EMPTY;
 output        FULL;
 output [39:0] Q;
+output        WACK;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire          AFULL_net_0;
 wire   [39:0] DATA;
 wire          EMPTY_net_0;
 wire          FULL_net_0;
@@ -87,11 +92,14 @@ wire   [39:0] Q_net_0;
 wire          RCLOCK;
 wire          RE;
 wire          RRESET_N;
+wire          WACK_net_0;
 wire          WCLOCK;
 wire          WE;
 wire          WRESET_N;
 wire          FULL_net_1;
 wire          EMPTY_net_1;
+wire          AFULL_net_1;
+wire          WACK_net_1;
 wire   [39:0] Q_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -110,6 +118,10 @@ assign FULL_net_1  = FULL_net_0;
 assign FULL        = FULL_net_1;
 assign EMPTY_net_1 = EMPTY_net_0;
 assign EMPTY       = EMPTY_net_1;
+assign AFULL_net_1 = AFULL_net_0;
+assign AFULL       = AFULL_net_1;
+assign WACK_net_1  = WACK_net_0;
+assign WACK        = WACK_net_1;
 assign Q_net_1     = Q_net_0;
 assign Q[39:0]     = Q_net_1;
 //--------------------------------------------------------------------
@@ -119,19 +131,19 @@ assign Q[39:0]     = Q_net_1;
 COREFIFO_C0_COREFIFO_C0_0_COREFIFO #( 
         .AE_STATIC_EN ( 0 ),
         .AEVAL        ( 4 ),
-        .AF_STATIC_EN ( 0 ),
-        .AFVAL        ( 1020 ),
+        .AF_STATIC_EN ( 1 ),
+        .AFVAL        ( 1010 ),
         .CTRL_TYPE    ( 2 ),
         .DIE_SIZE     ( 15 ),
         .ECC          ( 0 ),
         .ESTOP        ( 1 ),
         .FAMILY       ( 26 ),
         .FSTOP        ( 1 ),
-        .FWFT         ( 1 ),
+        .FWFT         ( 0 ),
         .NUM_STAGES   ( 2 ),
         .OVERFLOW_EN  ( 0 ),
         .PIPE         ( 1 ),
-        .PREFETCH     ( 0 ),
+        .PREFETCH     ( 1 ),
         .RAM_OPT      ( 0 ),
         .RDCNT_EN     ( 0 ),
         .RDEPTH       ( 1024 ),
@@ -144,7 +156,7 @@ COREFIFO_C0_COREFIFO_C0_0_COREFIFO #(
         .WDEPTH       ( 1024 ),
         .WE_POLARITY  ( 0 ),
         .WRCNT_EN     ( 0 ),
-        .WRITE_ACK    ( 0 ),
+        .WRITE_ACK    ( 1 ),
         .WWIDTH       ( 40 ) )
 COREFIFO_C0_0(
         // Inputs
@@ -161,11 +173,11 @@ COREFIFO_C0_0(
         // Outputs
         .FULL       ( FULL_net_0 ),
         .EMPTY      ( EMPTY_net_0 ),
-        .AFULL      (  ),
+        .AFULL      ( AFULL_net_0 ),
         .AEMPTY     (  ),
         .OVERFLOW   (  ),
         .UNDERFLOW  (  ),
-        .WACK       (  ),
+        .WACK       ( WACK_net_0 ),
         .DVLD       (  ),
         .MEMWE      (  ),
         .MEMRE      (  ),

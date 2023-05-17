@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon May 15 21:46:20 2023
+// Created by SmartDesign Wed May 17 18:10:36 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -74,35 +74,39 @@ wire          Controler_0_TRG_enable_cmd;
 wire          Controler_0_TRG_write_read;
 wire          Data_Block_0_C_busy;
 wire   [15:0] Data_Block_0_C_read_data_frame;
-wire          Data_Block_0_Communication_Data_Enable;
 wire   [31:0] Data_Block_0_Communication_Data_Frame;
-wire          Data_Block_0_Communication_Data_Req;
-wire          RX_0;
+wire          RX_1;
 wire          DBGport_1_net_0;
 wire          DBGport_2_net_0;
+wire          DBGport_2_0;
+wire          DBGport_3_net_0;
+wire          DBGport_4_net_0;
 wire          ADC_sdio;
-wire          DBGport_6_net_0;
+wire          DBGport_5_0;
+wire          DBGport_6_0;
 wire          DBGport_7_net_0;
 wire          LED_1_net_0;
 wire          LED_2_net_0;
-wire          RX_1;
-wire          TX_1_net_0;
+wire          RX_0;
+wire          TX_0_net_0;
 wire   [39:0] UART_Protocol_0_RX_Fifo_Data;
 wire          UART_Protocol_0_RX_FIFO_EMPTY;
 wire          UART_Protocol_0_TX_FIFO_FULL;
-wire          UART_Protocol_1_Communication_Data_Full;
 wire   [39:0] UART_Protocol_1_RX_Fifo_Data;
 wire          UART_Protocol_1_RX_FIFO_EMPTY;
 wire          UART_Protocol_1_TX_FIFO_FULL;
 wire          DBGport_0_net_0;
 wire          DBGport_1_net_1;
-wire          DBGport_6_net_1;
+wire          DBGport_4_net_1;
+wire          DBGport_5_0_net_0;
+wire          DBGport_6_0_net_0;
 wire          DBGport_7_net_1;
+wire          TX_0_net_1;
 wire          DBGport_1_net_2;
-wire          TX_1_net_1;
 wire          LED_1_net_1;
 wire          LED_2_net_1;
-wire          DBGport_2_net_1;
+wire          DBGport_2_0_net_0;
+wire          DBGport_3_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -120,32 +124,35 @@ assign Number_Communication_const_net_1     = 4'h2;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
-assign DBGport_4       = 1'b0;
-assign DBGport_5       = 1'b0;
-assign LED_3           = 1'b0;
-assign LED_4           = 1'b0;
-assign DBGport_3       = 1'b0;
+assign LED_3             = 1'b0;
+assign LED_4             = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign DBGport_0_net_0 = RX_0;
-assign DBGport_0       = DBGport_0_net_0;
-assign DBGport_1_net_1 = DBGport_1_net_0;
-assign DBGport_1       = DBGport_1_net_1;
-assign DBGport_6_net_1 = DBGport_6_net_0;
-assign DBGport_6       = DBGport_6_net_1;
-assign DBGport_7_net_1 = DBGport_7_net_0;
-assign DBGport_7       = DBGport_7_net_1;
-assign DBGport_1_net_2 = DBGport_1_net_0;
-assign TX_0            = DBGport_1_net_2;
-assign TX_1_net_1      = TX_1_net_0;
-assign TX_1            = TX_1_net_1;
-assign LED_1_net_1     = LED_1_net_0;
-assign LED_1           = LED_1_net_1;
-assign LED_2_net_1     = LED_2_net_0;
-assign LED_2           = LED_2_net_1;
-assign DBGport_2_net_1 = DBGport_2_net_0;
-assign DBGport_2       = DBGport_2_net_1;
+assign DBGport_0_net_0   = RX_1;
+assign DBGport_0         = DBGport_0_net_0;
+assign DBGport_1_net_1   = DBGport_1_net_0;
+assign DBGport_1         = DBGport_1_net_1;
+assign DBGport_4_net_1   = DBGport_4_net_0;
+assign DBGport_4         = DBGport_4_net_1;
+assign DBGport_5_0_net_0 = DBGport_5_0;
+assign DBGport_5         = DBGport_5_0_net_0;
+assign DBGport_6_0_net_0 = DBGport_6_0;
+assign DBGport_6         = DBGport_6_0_net_0;
+assign DBGport_7_net_1   = DBGport_7_net_0;
+assign DBGport_7         = DBGport_7_net_1;
+assign TX_0_net_1        = TX_0_net_0;
+assign TX_0              = TX_0_net_1;
+assign DBGport_1_net_2   = DBGport_1_net_0;
+assign TX_1              = DBGport_1_net_2;
+assign LED_1_net_1       = LED_1_net_0;
+assign LED_1             = LED_1_net_1;
+assign LED_2_net_1       = LED_2_net_0;
+assign LED_2             = LED_2_net_1;
+assign DBGport_2_0_net_0 = DBGport_2_0;
+assign DBGport_2         = DBGport_2_0_net_0;
+assign DBGport_3_net_1   = DBGport_3_net_0;
+assign DBGport_3         = DBGport_3_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -174,8 +181,8 @@ Controler Controler_0(
         .SRC_2_Fifo_Read_Data     ( UART_Protocol_1_RX_Fifo_Data ),
         .TRG_rx_data              ( Data_Block_0_C_read_data_frame ),
         // Outputs
-        .ADC_sclk                 ( DBGport_6_net_0 ),
-        .ADC_ss_n                 ( DBGport_7_net_0 ),
+        .ADC_sclk                 (  ),
+        .ADC_ss_n                 (  ),
         .SRC_1_Fifo_Read_Enable   ( Controler_0_SRC_1_Fifo_Read_Enable ),
         .DEST_1_Fifo_Write_Enable ( Controler_0_DEST_1_Fifo_Write_Enable ),
         .DEST_2_Fifo_Write_Enable ( Controler_0_DEST_2_Fifo_Write_Enable ),
@@ -198,15 +205,19 @@ Data_Block Data_Block_0(
         .C_write_read              ( Controler_0_TRG_write_read ),
         .Clock                     ( Clock_Reset_0_Main_CLOCK ),
         .Reset_N                   ( Clock_Reset_0_Main_RESET_N ),
-        .Communication_Data_Full   ( UART_Protocol_1_Communication_Data_Full ),
+        .Communication_Data_Full   ( DBGport_6_0 ),
         .C_addr_frame              ( Controler_0_TRG_addr ),
         .C_write_data_frame        ( Controler_0_TRG_data ),
+        .Communication_DATA_Ack    ( DBGport_4_net_0 ),
         // Outputs
         .C_busy                    ( Data_Block_0_C_busy ),
-        .Communication_Data_Enable ( Data_Block_0_Communication_Data_Enable ),
-        .Communication_Data_Req    ( Data_Block_0_Communication_Data_Req ),
+        .Communication_Data_Enable ( DBGport_5_0 ),
+        .Communication_Data_Req    ( DBGport_7_net_0 ),
         .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ) 
+        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ),
+        .Diag_0                    ( DBGport_2_0 ),
+        .Diag_1                    ( DBGport_3_net_0 ),
+        .Diag_2                    (  ) 
         );
 
 //--------UART_Protocol
@@ -225,12 +236,16 @@ UART_Protocol UART_Protocol_0(
         .Number_Communication      ( Number_Communication_const_net_0 ),
         .Communication_Data_Frame  ( Communication_Data_Frame_const_net_0 ),
         // Outputs
-        .TX                        ( DBGport_1_net_0 ),
+        .TX                        ( TX_0_net_0 ),
         .Diag_Valid_LED            ( LED_1_net_0 ),
         .RX_FIFO_EMPTY             ( UART_Protocol_0_RX_FIFO_EMPTY ),
         .TX_FIFO_FULL              ( UART_Protocol_0_TX_FIFO_FULL ),
         .Communication_Data_Full   (  ),
-        .RX_Fifo_Data              ( UART_Protocol_0_RX_Fifo_Data ) 
+        .RX_Fifo_Data              ( UART_Protocol_0_RX_Fifo_Data ),
+        .Diag_0                    (  ),
+        .Diag_1                    (  ),
+        .Diag_2                    (  ),
+        .Communication_DATA_Ack    (  ) 
         );
 
 //--------UART_Protocol
@@ -243,18 +258,22 @@ UART_Protocol UART_Protocol_1(
         .Logic_RESET_N             ( Clock_Reset_0_Main_RESET_N ),
         .RX_FIFO_RE                ( Controler_0_SRC_2_Fifo_Read_Enable ),
         .TX_FIFO_WE                ( Controler_0_DEST_2_Fifo_Write_Enable ),
-        .Communication_Data_Req    ( Data_Block_0_Communication_Data_Req ),
-        .Communication_Data_Enable ( Data_Block_0_Communication_Data_Enable ),
+        .Communication_Data_Req    ( DBGport_7_net_0 ),
+        .Communication_Data_Enable ( DBGport_5_0 ),
         .TX_Fifo_Data              ( Controler_0_DEST_2_Fifo_Write_Data ),
         .Number_Communication      ( Number_Communication_const_net_1 ),
         .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ),
         // Outputs
-        .TX                        ( TX_1_net_0 ),
+        .TX                        ( DBGport_1_net_0 ),
         .Diag_Valid_LED            ( LED_2_net_0 ),
         .RX_FIFO_EMPTY             ( UART_Protocol_1_RX_FIFO_EMPTY ),
         .TX_FIFO_FULL              ( UART_Protocol_1_TX_FIFO_FULL ),
-        .Communication_Data_Full   ( UART_Protocol_1_Communication_Data_Full ),
-        .RX_Fifo_Data              ( UART_Protocol_1_RX_Fifo_Data ) 
+        .Communication_Data_Full   ( DBGport_6_0 ),
+        .RX_Fifo_Data              ( UART_Protocol_1_RX_Fifo_Data ),
+        .Diag_0                    (  ),
+        .Diag_1                    (  ),
+        .Diag_2                    (  ),
+        .Communication_DATA_Ack    ( DBGport_4_net_0 ) 
         );
 
 

@@ -1,28 +1,28 @@
-read_sdc -scenario "timing_analysis" -netlist "optimized" -pin_separator "/" -ignore_errors {C:/VHDL_temp/Digitizer/Digitizer_ver2/Digitizer/designer/Top/timing_analysis.sdc}
+read_sdc -scenario "timing_analysis" -netlist "optimized" -pin_separator "/" -ignore_errors {C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/designer/Top/timing_analysis.sdc}
 set_options -analysis_scenario "timing_analysis" 
 save
-set has_violations {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_has_violations}
+set has_violations {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_has_violations}
 set fp [open $has_violations w]
 set coverage [report \
     -type     constraints_coverage \
     -format   xml \
     -slacks   no \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_timing_constraints_coverage.xml} ]
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_timing_constraints_coverage.xml} ]
 puts $fp "_timing_constraints_coverage $coverage"
 report \
     -type     combinational_loops \
     -format   xml \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_timing_combinational_loops.xml}
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_timing_combinational_loops.xml}
 report_timing \
     -delay_type     max \
     -max_paths  1000 \
     -file      \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\max_report.json}
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\max_report.json}
 report_timing \
     -delay_type     min \
     -max_paths  1000 \
     -file      \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\min_report.json}
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\min_report.json}
 set_options -max_opcond slow_lv_lt -min_opcond slow_lv_lt
 set max_timing_violations_slow_lv_lt "not_run"
 puts $fp "_max_timing_violations_slow_lv_lt $max_timing_violations_slow_lv_lt"
@@ -60,7 +60,7 @@ set max_timing_violations_multi_corner [report \
     -max_paths  20 \
     -max_expanded_paths  0 \
     -max_parallel_paths  1 \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_max_timing_violations_multi_corner.xml} ]
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_max_timing_violations_multi_corner.xml} ]
 puts $fp "_max_timing_violations_multi_corner $max_timing_violations_multi_corner"
 set max_timing_multi_corner [report \
     -type     timing \
@@ -72,7 +72,7 @@ set max_timing_multi_corner [report \
     -max_paths  5 \
     -max_expanded_paths  1 \
     -max_parallel_paths  1 \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_max_timing_multi_corner.xml} ]
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_max_timing_multi_corner.xml} ]
 puts $fp "_max_timing_multi_corner $max_timing_multi_corner"
 set min_timing_violations_multi_corner [report \
     -type     timing_violations \
@@ -84,7 +84,7 @@ set min_timing_violations_multi_corner [report \
     -max_paths  20 \
     -max_expanded_paths  0 \
     -max_parallel_paths  1 \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_min_timing_violations_multi_corner.xml} ]
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_min_timing_violations_multi_corner.xml} ]
 puts $fp "_min_timing_violations_multi_corner $min_timing_violations_multi_corner"
 set min_timing_multi_corner [report \
     -type     timing \
@@ -96,6 +96,6 @@ set min_timing_multi_corner [report \
     -max_paths  5 \
     -max_expanded_paths  1 \
     -max_parallel_paths  1 \
-    {C:\VHDL_temp\Digitizer\Digitizer_ver2\Digitizer\designer\Top\Top_min_timing_multi_corner.xml} ]
+    {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top_min_timing_multi_corner.xml} ]
 puts $fp "_min_timing_multi_corner $min_timing_multi_corner"
 close $fp
