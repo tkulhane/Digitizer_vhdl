@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed May 17 20:54:56 2023
+// Created by SmartDesign Sat May 20 13:20:18 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -24,7 +24,8 @@ module Data_Block(
     Communication_Data_Req,
     Diag_0,
     Diag_1,
-    Diag_2
+    Diag_2,
+    Diag_3
 );
 
 //--------------------------------------------------------------------
@@ -49,6 +50,7 @@ output        Communication_Data_Req;
 output        Diag_0;
 output        Diag_1;
 output        Diag_2;
+output        Diag_3;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -72,6 +74,7 @@ wire          Communication_Data_Req_net_0;
 wire          Diag_0_net_0;
 wire          Diag_1_net_0;
 wire          Diag_2_net_0;
+wire          Diag_3_net_0;
 wire   [7:0]  Event_Info_RAM_Block_0_A_DOUT_Event_Status;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
@@ -128,6 +131,7 @@ wire   [31:0] Communication_Data_Frame_net_1;
 wire          Diag_0_net_1;
 wire          Diag_1_net_1;
 wire          Diag_2_net_1;
+wire          Diag_3_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -169,6 +173,8 @@ assign Diag_1_net_1                    = Diag_1_net_0;
 assign Diag_1                          = Diag_1_net_1;
 assign Diag_2_net_1                    = Diag_2_net_0;
 assign Diag_2                          = Diag_2_net_1;
+assign Diag_3_net_1                    = Diag_3_net_0;
+assign Diag_3                          = Diag_3_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -195,7 +201,8 @@ Communication_Builder Communication_Builder_0(
         .Communication_Data_Req      ( Communication_Data_Req_net_0 ),
         .Diag_0                      ( Diag_0_net_0 ),
         .Diag_1                      ( Diag_1_net_0 ),
-        .Diag_2                      ( Diag_2_net_0 ) 
+        .Diag_2                      ( Diag_2_net_0 ),
+        .Diag_3                      ( Diag_3_net_0 ) 
         );
 
 //--------Event_Info_RAM_Block

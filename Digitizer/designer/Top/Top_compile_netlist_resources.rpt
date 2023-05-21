@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Wed May 17 20:56:42 2023
+Date: Sun May 21 19:46:45 2023
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -30,16 +30,16 @@ Resource Usage
 +---------------------------+-------+--------+------------+
 | Type                      | Used  | Total  | Percentage |
 +---------------------------+-------+--------+------------+
-| 4LUT                      | 29683 | 299544 | 9.91       |
-| DFF                       | 28985 | 299544 | 9.68       |
+| 4LUT                      | 36667 | 299544 | 12.24      |
+| DFF                       | 35909 | 299544 | 11.99      |
 | I/O Register              | 0     | 1536   | 0.00       |
 | User I/O                  | 17    | 512    | 3.32       |
 | -- Single-ended I/O       | 17    | 512    | 3.32       |
 | -- Differential I/O Pairs | 0     | 256    | 0.00       |
 | uSRAM                     | 0     | 2772   | 0.00       |
-| LSRAM                     | 691   | 952    | 72.58      |
+| LSRAM                     | 883   | 952    | 92.75      |
 | Math                      | 0     | 924    | 0.00       |
-| H-Chip Global             | 6     | 48     | 12.50      |
+| H-Chip Global             | 5     | 48     | 10.42      |
 | PLL                       | 1     | 8      | 12.50      |
 | DLL                       | 0     | 8      | 0.00       |
 | CRN_INT                   | 1     | 24     | 4.17       |
@@ -54,18 +54,19 @@ Detailed Logic Resource Usage
 +-----------------------+-------+-------+
 | Type                  | 4LUT  | DFF   |
 +-----------------------+-------+-------+
-| Fabric Logic          | 4807  | 4109  |
+| Fabric Logic          | 4879  | 4121  |
 | uSRAM Interface Logic | 0     | 0     |
-| LSRAM Interface Logic | 24876 | 24876 |
+| LSRAM Interface Logic | 31788 | 31788 |
 | Math Interface Logic  | 0     | 0     |
-| Total Used            | 29683 | 28985 |
+| Total Used            | 36667 | 35909 |
 +-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
 +--------+------+
 | Length | Used |
 | 7      | 1    |
-| 9      | 9    |
+| 8      | 1    |
+| 9      | 10   |
 | 10     | 2    |
 | 11     | 22   |
 | 12     | 16   |
@@ -74,20 +75,23 @@ Detailed Carry Chains Resource Usage
 | 15     | 16   |
 | 16     | 29   |
 | 17     | 1    |
-| 20     | 5    |
-| 21     | 3    |
+| 18     | 1    |
+| 19     | 1    |
+| 20     | 4    |
+| 21     | 2    |
 | 24     | 1    |
 | 26     | 2    |
 | 32     | 3    |
 | 33     | 7    |
-| Total  | 127  |
+| Total  | 129  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
 +--------+------+
 | Length | Used |
+| 2      | 48   |
 | 5      | 2    |
-| Total  | 2    |
+| Total  | 50   |
 +--------+------+
 
 I/O Function
@@ -105,10 +109,10 @@ Nets assigned to chip global resources
 +--------+---------+-------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                |
 +--------+---------+-------------------------------------------------------------------------------------+
-| 4384   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
+| 4787   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 2801   | INT_NET | Net   : dff_arst                                                                    |
+| 2822   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
 | 1100   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK                                                    |
@@ -116,9 +120,6 @@ Nets assigned to chip global resources
 |        |         | Source: NETLIST                                                                     |
 | 932    | INT_NET | Net   : Chain_arst1                                                                 |
 |        |         | Driver: Clock_Reset_0/Synchronizer_0/Chain_RNI23CB[1]/U0_RGB1                       |
-|        |         | Source: NETLIST                                                                     |
-| 7      | INT_NET | Net   : Data_Block_0/Communication_Builder_0/N_4_inferred_clock_RNIJEC8_Z           |
-|        |         | Driver: Data_Block_0/Communication_Builder_0/N_4_inferred_clock_RNIJEC8/U0_RGB1     |
 |        |         | Source: NETLIST                                                                     |
 | 1      | INT_NET | Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL                                   |
 |        |         | Driver: Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT/U0_RGB1                 |
@@ -135,25 +136,25 @@ High fanout nets
 +--------+---------+-----------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                  |
 +--------+---------+-----------------------------------------------------------------------+
-| 616    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_N_122_i                           |
+| 806    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_N_122_i                           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]             |
-| 579    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]           |
+| 771    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]  |
 +--------+---------+-----------------------------------------------------------------------+
 
@@ -161,25 +162,25 @@ High fanout nets (through buffer trees)
 +--------+---------+-----------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                  |
 +--------+---------+-----------------------------------------------------------------------+
-| 616    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_N_122_i                           |
+| 806    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_N_122_i                           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]             |
-| 579    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]           |
+| 771    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]          |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]          |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10] |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]  |
-| 578    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]           |
+| 770    | INT_NET | Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]           |
 |        |         | Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]  |
 +--------+---------+-----------------------------------------------------------------------+
 

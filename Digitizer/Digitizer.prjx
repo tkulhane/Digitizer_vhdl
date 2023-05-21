@@ -1057,13 +1057,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.cxf,actgen_cxf"
 STATE="utd"
-TIME="1684339800"
-SIZE="5552"
+TIME="1684581618"
+SIZE="5706"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.v,hdl"
 STATE="utd"
-TIME="1684339800"
-SIZE="18904"
+TIME="1684581618"
+SIZE="19166"
 PARENT="<project>\component\work\Data_Block\Data_Block.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -1389,13 +1389,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Sample_RAM_Block\Sample_RAM_Block.cxf,actgen_cxf"
 STATE="utd"
-TIME="1684179995"
+TIME="1684395601"
 SIZE="3007"
 ENDFILE
 VALUE "<project>\component\work\Sample_RAM_Block\Sample_RAM_Block.v,hdl"
 STATE="utd"
-TIME="1684179994"
-SIZE="9175"
+TIME="1684395600"
+SIZE="9745"
 PARENT="<project>\component\work\Sample_RAM_Block\Sample_RAM_Block.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -1413,13 +1413,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1684339836"
-SIZE="4232"
+TIME="1684586449"
+SIZE="4150"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.v,hdl"
 STATE="utd"
-TIME="1684339836"
-SIZE="11683"
+TIME="1684586449"
+SIZE="11814"
 PARENT="<project>\component\work\Top\Top.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -1455,7 +1455,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1684335222"
+TIME="1684690990"
 SIZE="2197"
 ENDFILE
 VALUE "<project>\hdl\ADI_SPI.vhd,hdl"
@@ -1490,8 +1490,8 @@ SIZE="7339"
 ENDFILE
 VALUE "<project>\hdl\Communication_Builder.vhd,hdl"
 STATE="utd"
-TIME="1684339756"
-SIZE="32298"
+TIME="1684690715"
+SIZE="33597"
 ENDFILE
 VALUE "<project>\hdl\Communication_CMD_MUX.vhd,hdl"
 STATE="utd"
@@ -1505,8 +1505,8 @@ SIZE="6795"
 ENDFILE
 VALUE "<project>\hdl\FIFOs_Reader.vhd,hdl"
 STATE="utd"
-TIME="1684309874"
-SIZE="21367"
+TIME="1684397237"
+SIZE="21381"
 ENDFILE
 VALUE "<project>\hdl\mko.vhd,hdl"
 STATE="utd"
@@ -1582,7 +1582,7 @@ PARENT="<project>\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_St
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1684267504"
+TIME="1684679999"
 SIZE="4986"
 ENDFILE
 VALUE "<project>\simulation\SRAM_test_presynth_simulation.log,log"
@@ -1592,8 +1592,8 @@ SIZE="22032"
 ENDFILE
 VALUE "<project>\simulation\TB_Data_Block_presynth_simulation.log,log"
 STATE="utd"
-TIME="1684267738"
-SIZE="56414"
+TIME="1684680175"
+SIZE="52046"
 ENDFILE
 VALUE "<project>\simulation\tb_UART_Protocol_presynth_simulation.log,log"
 STATE="utd"
@@ -1607,8 +1607,8 @@ SIZE="5105"
 ENDFILE
 VALUE "<project>\stimulus\TB_Data_Block.vhd,tb_hdl"
 STATE="utd"
-TIME="1684265385"
-SIZE="13658"
+TIME="1684522467"
+SIZE="13990"
 ENDFILE
 VALUE "<project>\stimulus\tb_UART_Protocol.vhd,tb_hdl"
 STATE="utd"
@@ -1617,33 +1617,33 @@ SIZE="5614"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer0.so,so"
 STATE="utd"
-TIME="1677101397"
+TIME="1684334051"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\synwork\layer1.so,so"
 STATE="utd"
-TIME="1677693663"
+TIME="1684397272"
 SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\Top.so,so"
 STATE="utd"
-TIME="1684285644"
+TIME="1684586532"
 SIZE="228"
 ENDFILE
 VALUE "<project>\synthesis\Top.vm,syn_vm"
-STATE="ood"
-TIME="1684285642"
-SIZE="3691414"
+STATE="utd"
+TIME="1684586529"
+SIZE="4150485"
 ENDFILE
 VALUE "<project>\synthesis\Top_syn.prj,prj"
 STATE="utd"
-TIME="1684285644"
+TIME="1684586532"
 SIZE="15762"
 ENDFILE
 VALUE "<project>\synthesis\Top_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1684285642"
-SIZE="11910"
+TIME="1684586530"
+SIZE="11907"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -1778,7 +1778,7 @@ VALUE "<project>\simulation\PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_
 ENDLIST
 ENDLIST
 LIST "Top::work"
-FILE "<project>\component\work\Top\Top.cxf,actgen_cxf"
+FILE "<project>\component\work\Top\Top.v,hdl"
 LIST SynthesisConstraints
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 ENDLIST
@@ -1788,6 +1788,38 @@ ENDLIST
 LIST PNRConstraints
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 VALUE "<project>\constraint\io\user.pdc,io_pdc"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl3
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -1989,6 +2021,38 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "Top::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl3
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -2004,13 +2068,14 @@ LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 Reports;Reports;0
 ReportsCurrentItem;Run Programming Action:Top_PROGRAM.log
-SmartDesign;UART_Protocol;0
 SmartDesign;Data_Block;0
 SmartDesign;Clock_Reset;0
 SmartDesign;Top;0
 StartPage;StartPage;0
-HDL;component\work\Top\Top.v;0
-ACTIVEVIEW;Top
+Constraint Manager;Constraint Manager;0
+SmartDesign;Controler;0
+SmartDesign;UART_Protocol;0
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -2206,7 +2271,7 @@ LIST "COREUART_C0_COREUART_C0_0_Rx_async::work","component\work\COREUART_C0\CORE
 ENDLIST
 LIST "COREUART_C0_COREUART_C0_0_Tx_async::work","component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v","FALSE","FALSE"
 ENDLIST
-LIST "Data_Block::work","component\work\Data_Block\Data_Block.cxf","TRUE","FALSE"
+LIST "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
 SUBBLOCK "Communication_Builder::work","hdl\Communication_Builder.vhd","FALSE","FALSE"
 SUBBLOCK "Event_Info_RAM_Block::work","component\work\Event_Info_RAM_Block\Event_Info_RAM_Block.v","TRUE","FALSE"
 SUBBLOCK "FIFOs_Reader::work","hdl\FIFOs_Reader.vhd","FALSE","FALSE"
@@ -2355,10 +2420,10 @@ LIST "System_Controler::work","hdl\System_Controler.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Test_Generator::work","hdl\Test_Generator.vhd","FALSE","FALSE"
 ENDLIST
-LIST "Top::work","component\work\Top\Top.cxf","TRUE","FALSE"
+LIST "Top::work","component\work\Top\Top.v","TRUE","FALSE"
 SUBBLOCK "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.v","TRUE","FALSE"
 SUBBLOCK "Controler::work","component\work\Controler\Controler.v","TRUE","FALSE"
-SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.cxf","TRUE","FALSE"
+SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
 SUBBLOCK "UART_Protocol::work","component\work\UART_Protocol\UART_Protocol.v","TRUE","FALSE"
 ENDLIST
 LIST "Trigger_Control::work","hdl\Trigger_Control.vhd","FALSE","FALSE"
@@ -2414,7 +2479,7 @@ LIST "SRAM_test::work","stimulus\SRAM_test.vhd","FALSE","TRUE"
 SUBBLOCK "SRAM::work","component\work\SRAM\SRAM.v","TRUE","FALSE"
 ENDLIST
 LIST "TB_Data_Block::work","stimulus\TB_Data_Block.vhd","FALSE","TRUE"
-SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.cxf","TRUE","FALSE"
+SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
 ENDLIST
 LIST "tb_UART_Protocol::work","stimulus\tb_UART_Protocol.vhd","FALSE","TRUE"
 SUBBLOCK "UART_Protocol::work","component\work\UART_Protocol\UART_Protocol.v","TRUE","FALSE"

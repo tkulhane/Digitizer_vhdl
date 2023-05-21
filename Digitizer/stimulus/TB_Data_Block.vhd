@@ -48,6 +48,7 @@ architecture behavioral of TB_Data_Block is
     signal Communication_Data_Enable : std_logic;
     signal Communication_Data_Frame : std_logic_vector(31 downto 0);
     signal Communication_Data_Req : std_logic;
+    signal Communication_DATA_Ack : std_logic;
 
 
     file output_buf : text;  -- text is keyword
@@ -67,6 +68,7 @@ architecture behavioral of TB_Data_Block is
             Clock : in std_logic;
             Reset_N : in std_logic;
             Communication_Data_Full : in std_logic;
+            Communication_DATA_Ack : in std_logic;
 
             -- Outputs
             C_read_data_frame : out std_logic_vector(15 downto 0);
@@ -146,6 +148,7 @@ begin
             Clock => SYSCLK,
             Reset_N => NSYSRESET,
             Communication_Data_Full => Communication_Data_Full,
+            Communication_DATA_Ack => Communication_DATA_Ack,
 
             -- Outputs
             C_read_data_frame => CTRL_read_data_frame,
@@ -313,11 +316,14 @@ begin
     process
     begin
         Communication_Data_Full <= '1';
+        Communication_DATA_Ack <= '0';
         wait until Communication_Data_Req = '1';
         wait for 40 ns;
         wait until SYSCLK'event and SYSCLK = '1';
         Communication_Data_Full <= '0';
-
+        Communication_DATA_Ack <= '1';
+        wait until SYSCLK'event and SYSCLK = '1';
+        Communication_DATA_Ack <= '0';
 
         wait for 1 us;
         wait until SYSCLK'event and SYSCLK = '1';

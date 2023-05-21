@@ -1,10 +1,9 @@
-# Written by Synplify Pro version map202109act, Build 055R. Synopsys Run ID: sid1684349742 
+# Written by Synplify Pro version map202109act, Build 055R. Synopsys Run ID: sid1684691125 
 # Top Level Design Parameters 
 
 # Clocks 
 create_clock -period 6.250 -waveform {0.000 3.125} -name {Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK} [get_pins {Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK}] 
 create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock} [get_pins {Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1}] 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {Communication_Builder|N_4_inferred_clock} [get_pins {Data_Block_0/Communication_Builder_0/un1_state_reg_5_0/Y}] 
 
 # Virtual Clocks 
 
@@ -41,7 +40,6 @@ set_false_path -to [get_cells {UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/gen
 
 # Clock Delay Constraints 
 set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock}]
-set_clock_groups -asynchronous -group [get_clocks {Communication_Builder|N_4_inferred_clock}]
 
 # syn_mode Attributes 
 

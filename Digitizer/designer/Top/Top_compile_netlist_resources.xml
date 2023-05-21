@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)</text>
-<text>Date: Wed May 17 20:56:41 2023
+<text>Date: Sun May 21 19:46:44 2023
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -78,15 +78,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>29683</cell>
+ <cell>36667</cell>
  <cell>299544</cell>
- <cell>9.91</cell>
+ <cell>12.24</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>28985</cell>
+ <cell>35909</cell>
  <cell>299544</cell>
- <cell>9.68</cell>
+ <cell>11.99</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -120,9 +120,9 @@
 </row>
 <row>
  <cell>LSRAM</cell>
- <cell>691</cell>
+ <cell>883</cell>
  <cell>952</cell>
- <cell>72.58</cell>
+ <cell>92.75</cell>
 </row>
 <row>
  <cell>Math</cell>
@@ -132,9 +132,9 @@
 </row>
 <row>
  <cell>H-Chip Global</cell>
- <cell>6</cell>
+ <cell>5</cell>
  <cell>48</cell>
- <cell>12.50</cell>
+ <cell>10.42</cell>
 </row>
 <row>
  <cell>PLL</cell>
@@ -194,8 +194,8 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>4807</cell>
- <cell>4109</cell>
+ <cell>4879</cell>
+ <cell>4121</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
@@ -204,8 +204,8 @@
 </row>
 <row>
  <cell>LSRAM Interface Logic</cell>
- <cell>24876</cell>
- <cell>24876</cell>
+ <cell>31788</cell>
+ <cell>31788</cell>
 </row>
 <row>
  <cell>Math Interface Logic</cell>
@@ -214,8 +214,8 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>29683</cell>
- <cell>28985</cell>
+ <cell>36667</cell>
+ <cell>35909</cell>
 </row>
 </table>
 <section><name>Detailed Carry Chains Resource Usage</name></section>
@@ -231,8 +231,12 @@
  <cell>1</cell>
 </row>
 <row>
+ <cell>8</cell>
+ <cell>1</cell>
+</row>
+<row>
  <cell>9</cell>
- <cell>9</cell>
+ <cell>10</cell>
 </row>
 <row>
  <cell>10</cell>
@@ -267,12 +271,20 @@
  <cell>1</cell>
 </row>
 <row>
+ <cell>18</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>19</cell>
+ <cell>1</cell>
+</row>
+<row>
  <cell>20</cell>
- <cell>5</cell>
+ <cell>4</cell>
 </row>
 <row>
  <cell>21</cell>
- <cell>3</cell>
+ <cell>2</cell>
 </row>
 <row>
  <cell>24</cell>
@@ -292,7 +304,7 @@
 </row>
 <row>
  <cell>Total</cell>
- <cell>127</cell>
+ <cell>129</cell>
 </row>
 </table>
 <section><name>Detailed 4LUT Groups Resource Usage</name></section>
@@ -304,12 +316,16 @@
  <cell>Used</cell>
 </row>
 <row>
+ <cell>2</cell>
+ <cell>48</cell>
+</row>
+<row>
  <cell>5</cell>
  <cell>2</cell>
 </row>
 <row>
  <cell>Total</cell>
- <cell>2</cell>
+ <cell>50</cell>
 </row>
 </table>
 <section><name>I/O Function</name></section>
@@ -359,7 +375,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>4384</cell>
+ <cell>4787</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Main_CLOCK</cell>
 </row>
@@ -374,7 +390,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>2801</cell>
+ <cell>2822</cell>
  <cell>INT_NET</cell>
  <cell>Net   : dff_arst</cell>
 </row>
@@ -419,21 +435,6 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>7</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/Communication_Builder_0/N_4_inferred_clock_RNIJEC8_Z</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/Communication_Builder_0/N_4_inferred_clock_RNIJEC8/U0_RGB1</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Source: NETLIST</cell>
-</row>
-<row>
  <cell>1</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL</cell>
@@ -465,7 +466,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>616</cell>
+ <cell>806</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_N_122_i</cell>
 </row>
@@ -475,7 +476,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]</cell>
 </row>
 <row>
- <cell>579</cell>
+ <cell>771</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]</cell>
 </row>
@@ -485,7 +486,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]</cell>
 </row>
@@ -495,7 +496,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]</cell>
 </row>
@@ -505,7 +506,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]</cell>
 </row>
@@ -515,7 +516,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]</cell>
 </row>
@@ -525,7 +526,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]</cell>
 </row>
@@ -535,7 +536,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]</cell>
 </row>
@@ -545,7 +546,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]</cell>
 </row>
@@ -555,7 +556,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]</cell>
 </row>
@@ -573,7 +574,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>616</cell>
+ <cell>806</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_N_122_i</cell>
 </row>
@@ -583,7 +584,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]</cell>
 </row>
 <row>
- <cell>579</cell>
+ <cell>771</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[0]</cell>
 </row>
@@ -593,7 +594,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]</cell>
 </row>
@@ -603,7 +604,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]</cell>
 </row>
@@ -613,7 +614,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]</cell>
 </row>
@@ -623,7 +624,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]</cell>
 </row>
@@ -633,7 +634,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]</cell>
 </row>
@@ -643,7 +644,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]</cell>
 </row>
@@ -653,7 +654,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]</cell>
 </row>
@@ -663,7 +664,7 @@
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]</cell>
 </row>
 <row>
- <cell>578</cell>
+ <cell>770</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]</cell>
 </row>

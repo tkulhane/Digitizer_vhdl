@@ -89,7 +89,7 @@ architecture rtl of FIFOs_Reader is
     signal Block_1_Data : std_logic_vector(63 downto 0);
 
     signal Sample_RAM_ADDR_GEN_Enable : std_logic;
-    signal Sample_RAM_W_Address_Unsigned : unsigned(19 downto 0);
+    signal Sample_RAM_W_Address_Unsigned : unsigned(17 downto 0);
 
     signal Event_RAM_ADDR_GEN_Enable : std_logic;
     signal Event_RAM_W_Address_Integer : integer range 0 to 1024-1 := 0;
@@ -116,7 +116,7 @@ begin
     AbortedEventInFIFO <= Event_FIFO_R_Data(2);
 
     Sample_RAM_W_Address        <= std_logic_vector(Sample_RAM_W_Address_Unsigned(15 downto 0));
-    Sample_RAM_W_Block_Address  <= std_logic_vector(Sample_RAM_W_Address_Unsigned(19 downto 16));
+    Sample_RAM_W_Block_Address  <= "00" & std_logic_vector(Sample_RAM_W_Address_Unsigned(17 downto 16));
     Event_RAM_W_Address <= std_logic_vector(to_unsigned(Event_RAM_W_Address_Integer, 10));
 
 ------------------------------------------------------------------------------------------------------------
@@ -260,7 +260,7 @@ begin
                 Event_RAM_W_Enable_Size <= '0';
                 Event_RAM_W_Enable_Status <= '1';
 
-                Event_RAM_W_Data_Start_ADDR <= std_logic_vector(Sample_RAM_W_Address_Unsigned);
+                Event_RAM_W_Data_Start_ADDR <= "00" & std_logic_vector(Sample_RAM_W_Address_Unsigned);
                 Event_RAM_W_Data_Number <= std_logic_vector(Event_Number_Counter);
                 Event_RAM_W_Data_Size <= (others => '0');
                 Event_RAM_W_Data_Status <= Event_Status_ID_InWrite;
