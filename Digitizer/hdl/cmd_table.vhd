@@ -13,13 +13,19 @@ package cmd_table is
     constant CMD_CONST_SET_System_Controler     : std_logic_vector(7 downto 0) := x"03";
     constant CMD_CONST_GET_System_Controler     : std_logic_vector(7 downto 0) := x"04";
     
-    constant CMD_CONST_SET_MainRegisters        : std_logic_vector(7 downto 0) := x"11";
-    constant CMD_CONST_GET_MainRegisters        : std_logic_vector(7 downto 0) := x"12";
+    constant CMD_CONST_SET_TestRegisters        : std_logic_vector(7 downto 0) := x"11";
+    constant CMD_CONST_GET_TestRegisters        : std_logic_vector(7 downto 0) := x"12";
 
-    constant CMD_CONST_SET_InfoRegisters        : std_logic_vector(7 downto 0) := x"23";
-    constant CMD_CONST_GET_InfoRegisters        : std_logic_vector(7 downto 0) := x"24";
-    constant CMD_CONST_SET_AdcRegisters         : std_logic_vector(7 downto 0) := x"25";
-    constant CMD_CONST_GET_AdcRegisters         : std_logic_vector(7 downto 0) := x"26";
+    --constant CMD_CONST_SET_InfoRegisters        : std_logic_vector(7 downto 0) := x"23";
+    --constant CMD_CONST_GET_InfoRegisters        : std_logic_vector(7 downto 0) := x"24";
+    constant CMD_CONST_SET_AdcRegisters         : std_logic_vector(7 downto 0) := x"21";
+    constant CMD_CONST_GET_AdcRegisters         : std_logic_vector(7 downto 0) := x"22";
+    constant CMD_CONST_SET_HmcRegisters         : std_logic_vector(7 downto 0) := x"23";
+    constant CMD_CONST_GET_HmcRegisters         : std_logic_vector(7 downto 0) := x"24";
+    constant CMD_CONST_SET_Lmx1Registers        : std_logic_vector(7 downto 0) := x"25";
+    constant CMD_CONST_GET_Lmx1Registers        : std_logic_vector(7 downto 0) := x"26";
+    constant CMD_CONST_SET_Lmx2Registers        : std_logic_vector(7 downto 0) := x"27";
+    constant CMD_CONST_GET_Lmx2Registers        : std_logic_vector(7 downto 0) := x"28";
     
     constant CMD_CONST_SET_TriggerRegisters     : std_logic_vector(7 downto 0) := x"31";
     constant CMD_CONST_GET_TriggerRegisters     : std_logic_vector(7 downto 0) := x"32";
@@ -32,5 +38,18 @@ package cmd_table is
     constant CMD_CONST_PACKET_TAIL              : std_logic_vector(7 downto 0) := x"7D";
     
 
+------------------------------------------------------------------------------------------------------------
+--perif numbers constant
+------------------------------------------------------------------------------------------------------------
+    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 7;
+
+    constant PER_NUM_CONST_System_Controler         : Natural := 0;
+    constant PER_NUM_CONST_TestRegisters            : Natural := 1;
+    constant PER_NUM_CONST_ADC                      : Natural := 2;
+    constant PER_NUM_CONST_HMC                      : Natural := 3;
+    constant PER_NUM_CONST_LMX1                     : Natural := 4;
+    constant PER_NUM_CONST_LMX2                     : Natural := 5;
+    constant PER_NUM_CONST_Trigger                  : Natural := 6;
+    
 
 end package;

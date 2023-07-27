@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sat May 20 14:40:49 2023
+// Created by SmartDesign Wed Jul 26 09:16:47 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -26,7 +26,8 @@ module Top(
     TX_0,
     TX_1,
     // Inouts
-    ADC_sdio
+    ADC_sdio,
+    HMC_sdio
 );
 
 //--------------------------------------------------------------------
@@ -55,6 +56,7 @@ output TX_1;
 // Inout
 //--------------------------------------------------------------------
 inout  ADC_sdio;
+inout  HMC_sdio;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -87,6 +89,7 @@ wire          ADC_sdio;
 wire          DBGport_5_2;
 wire          DBGport_6_net_0;
 wire          DBGport_7_0;
+wire          HMC_sdio;
 wire          LED_1_net_0;
 wire          LED_2_net_0;
 wire          RX_0;
@@ -182,6 +185,8 @@ Controler Controler_0(
         .SRC_1_Fifo_Read_Data     ( UART_Protocol_0_RX_Fifo_Data ),
         .SRC_2_Fifo_Read_Data     ( UART_Protocol_1_RX_Fifo_Data ),
         .TRG_rx_data              ( Data_Block_0_C_read_data_frame ),
+        .LMX1_miso                ( GND_net ),
+        .LMX2_miso                ( GND_net ),
         // Outputs
         .ADC_sclk                 (  ),
         .ADC_ss_n                 (  ),
@@ -196,8 +201,17 @@ Controler Controler_0(
         .DEST_2_Fifo_Write_Data   ( Controler_0_DEST_2_Fifo_Write_Data ),
         .TRG_addr                 ( Controler_0_TRG_addr ),
         .TRG_data                 ( Controler_0_TRG_data ),
+        .HMC_sclk                 (  ),
+        .HMC_ss_n                 (  ),
+        .LMX1_ss_n                (  ),
+        .LMX1_mosi                (  ),
+        .LMX1_sclk                (  ),
+        .LMX2_ss_n                (  ),
+        .LMX2_mosi                (  ),
+        .LMX2_sclk                (  ),
         // Inouts
-        .ADC_sdio                 ( ADC_sdio ) 
+        .ADC_sdio                 ( ADC_sdio ),
+        .HMC_sdio                 ( HMC_sdio ) 
         );
 
 //--------Data_Block
@@ -208,19 +222,19 @@ Data_Block Data_Block_0(
         .Clock                     ( Clock_Reset_0_Main_CLOCK ),
         .Reset_N                   ( Clock_Reset_0_Main_RESET_N ),
         .Communication_Data_Full   ( DBGport_3_net_0 ),
+        .Communication_DATA_Ack    ( DBGport_4_net_0 ),
         .C_addr_frame              ( Controler_0_TRG_addr ),
         .C_write_data_frame        ( Controler_0_TRG_data ),
-        .Communication_DATA_Ack    ( DBGport_4_net_0 ),
         // Outputs
         .C_busy                    ( Data_Block_0_C_busy ),
         .Communication_Data_Enable ( DBGport_2_0 ),
         .Communication_Data_Req    ( DBGport_0_0 ),
-        .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ),
         .Diag_0                    ( DBGport_4_0 ),
         .Diag_1                    ( DBGport_5_2 ),
         .Diag_2                    ( DBGport_6_net_0 ),
-        .Diag_3                    ( DBGport_7_0 ) 
+        .Diag_3                    ( DBGport_7_0 ),
+        .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
+        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ) 
         );
 
 //--------UART_Protocol
@@ -244,11 +258,11 @@ UART_Protocol UART_Protocol_0(
         .RX_FIFO_EMPTY             ( UART_Protocol_0_RX_FIFO_EMPTY ),
         .TX_FIFO_FULL              ( UART_Protocol_0_TX_FIFO_FULL ),
         .Communication_Data_Full   (  ),
-        .RX_Fifo_Data              ( UART_Protocol_0_RX_Fifo_Data ),
         .Diag_0                    (  ),
         .Diag_1                    (  ),
         .Diag_2                    (  ),
-        .Communication_DATA_Ack    (  ) 
+        .Communication_DATA_Ack    (  ),
+        .RX_Fifo_Data              ( UART_Protocol_0_RX_Fifo_Data ) 
         );
 
 //--------UART_Protocol
@@ -272,11 +286,11 @@ UART_Protocol UART_Protocol_1(
         .RX_FIFO_EMPTY             ( UART_Protocol_1_RX_FIFO_EMPTY ),
         .TX_FIFO_FULL              ( UART_Protocol_1_TX_FIFO_FULL ),
         .Communication_Data_Full   ( DBGport_3_net_0 ),
-        .RX_Fifo_Data              ( UART_Protocol_1_RX_Fifo_Data ),
         .Diag_0                    (  ),
         .Diag_1                    (  ),
         .Diag_2                    (  ),
-        .Communication_DATA_Ack    ( DBGport_4_net_0 ) 
+        .Communication_DATA_Ack    ( DBGport_4_net_0 ),
+        .RX_Fifo_Data              ( UART_Protocol_1_RX_Fifo_Data ) 
         );
 
 

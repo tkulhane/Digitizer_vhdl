@@ -1,3 +1,15 @@
+
+Info: Device 'MPF300TS_ES' requires Two-port LSRAM cells with Read-width > 20 to be remapped 
+      Two-port LSRAM instances with Read-width > 20:                      2
+      Two-port LSRAM instances with Read-width > 20 and a single clock:   2
+      Two-port LSRAM instances with read-width > 20 and two clocks:       0
+      Number of AND gates inserted:                                       0
+      Number of LSRAM cells inserted:                                     0
+
+Info: Following Two-port LSRAM instances with Read-width > 20 and a single clock were remapped: 
+      UART_Protocol_0/COREFIFO_C6_0/COREFIFO_C6_0/genblk22.UI_ram_wrapper_1/L3_syncnonpipe/COREFIFO_C6_COREFIFO_C6_0_LSRAM_top_R0C0 
+      UART_Protocol_1/COREFIFO_C6_0/COREFIFO_C6_0/genblk22.UI_ram_wrapper_1/L3_syncnonpipe/COREFIFO_C6_COREFIFO_C6_0_LSRAM_top_R0C0 
+
 Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT:A'.
 Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0:A'.
 Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4:A'.
@@ -14,14 +26,14 @@ Info: Global design data:
 Info: List of globals that cannot be demoted: 
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
-    4787   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
+    5357   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
     1100   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4' 
     0      0      1      'Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT' 
 
 Info: List of globals considered for demotion: 
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
-    0      2822   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
+    0      3343   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
     0      932    0      'Clock_Reset_0/Synchronizer_0/Chain_RNI23CB[1]' 
 
 Info: Demotion information: 

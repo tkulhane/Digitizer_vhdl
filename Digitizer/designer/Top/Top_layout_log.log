@@ -17,7 +17,7 @@ Inter-clock optimization : ON
 INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
 
  Running Timing based Global Demotion. 
-        Moved 2 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+        Moved 14 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
    - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
@@ -25,7 +25,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Timing based Global Demotion completed successfully. 
 
 Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 16 fixed I/O macros, 1 unfixed I/O macros
+Info:  I/O Bank and Globals Assigner identified 16 fixed I/O macros, 2 unfixed I/O macros
 Info:  I/O Bank and Globals Assigner identified bank 'Bank0' as being fixed at VCCI:1.35V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank1' as being fixed at VCCI:1.80V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank2' as being fixed at VCCI:1.80V VCCR:n/a
@@ -36,10 +36,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 3 seconds
+Total time spent in I/O Bank and Globals Assigner: 4 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Sun May 21 19:48:03 2023
+Design: Top                             Started: Wed Jul 26 13:54:25 2023
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -48,52 +48,52 @@ Improving placement ...
 
 CDC Report:
     Total number of CDC synchronizer driver/sink pairs     : 176
-    Maximum distance between CDC synchronizer driver & sink:   1 cluster(s)
+    Maximum distance between CDC synchronizer driver & sink:   0 cluster(s)
 
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 7 seconds
-Placement                : 37 seconds
-Improvement              : 24 seconds
+Clustering (1 pass)      : 10 seconds
+Placement                : 41 seconds
+Improvement              : 30 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Sun May 21 19:49:53 2023
-Total CPU Time:     00:02:18            Total Elapsed Time: 00:01:50
-Total Memory Usage: 1654.7 Mbytes
+Finished: Wed Jul 26 13:56:31 2023
+Total CPU Time:     00:02:37            Total Elapsed Time: 00:02:06
+Total Memory Usage: 1675.6 Mbytes
                         o - o - o - o - o - o
 
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sun May 21 19:50:13 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Jul 26 13:56:52 2023
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Sun May 21 19:51:16 2023
-Total CPU Time:     00:02:29            Total Elapsed Time: 00:01:03
-Total Memory Usage: 5382.8 Mbytes
+Finished: Wed Jul 26 13:57:57 2023
+Total CPU Time:     00:02:14            Total Elapsed Time: 00:01:05
+Total Memory Usage: 5387.9 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 36667 | 299544 | 12.24      |
-| DFF           | 35910 | 299544 | 11.99      |
+| 4LUT          | 37344 | 299544 | 12.47      |
+| DFF           | 36548 | 299544 | 12.20      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 37502 | 299544 | 12.52      |
+| Logic Element | 38232 | 299544 | 12.76      |
 +---------------+-------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+
 | Type   | Count | Percentage |
 +--------+-------+------------+
-| Locked |  16   | 94.12%     |
-| Placed |  1    | 5.88%      |
+| Locked |  16   | 88.89%     |
+| Placed |  2    | 11.11%     |
 +--------+-------+------------+
 
 Completed writing pin report files.

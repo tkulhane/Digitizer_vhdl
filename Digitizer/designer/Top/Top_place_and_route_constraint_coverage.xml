@@ -3,7 +3,7 @@
 <doc>
 <text>SmartTime Version 2022.1.0.10</text>
 <text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Sun May 21 19:47:40 2023 </text>
+Date: Wed Jul 26 13:54:00 2023 </text>
 <table>
 <header>
 </header>
@@ -50,52 +50,52 @@ Date: Sun May 21 19:47:40 2023 </text>
 </header>
 <row>
  <cell>Setup</cell>
- <cell>        40136</cell>
- <cell>            3</cell>
- <cell>        40139</cell>
+ <cell>        41348</cell>
+ <cell>            4</cell>
+ <cell>        41352</cell>
 </row>
 <row>
  <cell>Recovery</cell>
- <cell>         4065</cell>
+ <cell>         4586</cell>
  <cell>            0</cell>
- <cell>         4065</cell>
+ <cell>         4586</cell>
 </row>
 <row>
  <cell>Output Setup</cell>
  <cell>            0</cell>
- <cell>           14</cell>
- <cell>           14</cell>
+ <cell>           15</cell>
+ <cell>           15</cell>
 </row>
 <row>
  <cell>Total Setup</cell>
- <cell>        44201</cell>
- <cell>           17</cell>
- <cell>        44218</cell>
+ <cell>        45934</cell>
+ <cell>           19</cell>
+ <cell>        45953</cell>
 </row>
 <separator/>
 <row>
  <cell>Hold</cell>
- <cell>        40136</cell>
- <cell>            3</cell>
- <cell>        40139</cell>
+ <cell>        41348</cell>
+ <cell>            4</cell>
+ <cell>        41352</cell>
 </row>
 <row>
  <cell>Removal</cell>
- <cell>         4065</cell>
+ <cell>         4586</cell>
  <cell>            0</cell>
- <cell>         4065</cell>
+ <cell>         4586</cell>
 </row>
 <row>
  <cell>Output Hold</cell>
  <cell>            0</cell>
- <cell>           14</cell>
- <cell>           14</cell>
+ <cell>           15</cell>
+ <cell>           15</cell>
 </row>
 <row>
  <cell>Total Hold</cell>
- <cell>        44201</cell>
- <cell>           17</cell>
- <cell>        44218</cell>
+ <cell>        45934</cell>
+ <cell>           19</cell>
+ <cell>        45953</cell>
 </row>
 </table>
 <section>
@@ -111,67 +111,69 @@ Date: Sun May 21 19:47:40 2023 </text>
 </header>
 <row>
  <cell>Setup</cell>
- <cell>        38233</cell>
- <cell>            1</cell>
- <cell>        38234</cell>
+ <cell>        39445</cell>
+ <cell>            2</cell>
+ <cell>        39447</cell>
 </row>
 <row>
  <cell>Recovery</cell>
- <cell>         2973</cell>
+ <cell>         3494</cell>
  <cell>            0</cell>
- <cell>         2973</cell>
+ <cell>         3494</cell>
 </row>
 <row>
  <cell>Output Setup</cell>
  <cell>            0</cell>
- <cell>            9</cell>
- <cell>            9</cell>
+ <cell>           10</cell>
+ <cell>           10</cell>
 </row>
 <row>
  <cell>Total Setup</cell>
- <cell>        41206</cell>
- <cell>           10</cell>
- <cell>        41216</cell>
+ <cell>        42939</cell>
+ <cell>           12</cell>
+ <cell>        42951</cell>
 </row>
 <separator/>
 <row>
  <cell>Hold</cell>
- <cell>        38233</cell>
- <cell>            1</cell>
- <cell>        38234</cell>
+ <cell>        39445</cell>
+ <cell>            2</cell>
+ <cell>        39447</cell>
 </row>
 <row>
  <cell>Removal</cell>
- <cell>         2973</cell>
+ <cell>         3494</cell>
  <cell>            0</cell>
- <cell>         2973</cell>
+ <cell>         3494</cell>
 </row>
 <row>
  <cell>Output Hold</cell>
  <cell>            0</cell>
- <cell>            9</cell>
- <cell>            9</cell>
+ <cell>           10</cell>
+ <cell>           10</cell>
 </row>
 <row>
  <cell>Total Hold</cell>
- <cell>        41206</cell>
- <cell>           10</cell>
- <cell>        41216</cell>
+ <cell>        42939</cell>
+ <cell>           12</cell>
+ <cell>        42951</cell>
 </row>
 </table>
 <section>
 <name>Enhancement Suggestions</name>
 <text></text>
-<text> - Max input delay constraint missing on port:</text>
+<text> - Max input delay constraint missing on ports:</text>
 <text>   </text>
 <list>
  <item>ADC_sdio</item>
+ <item>HMC_sdio</item>
 </list>
 <text></text>
-<text> - Min input delay constraint missing on port:</text>
+<text> - Min input delay constraint missing on ports:</text>
 <text>   </text>
 <list>
  <item>ADC_sdio</item>
+ <item>HMC_sdio</item>
 </list>
 <text></text>
 <text></text>
@@ -183,6 +185,7 @@ Date: Sun May 21 19:47:40 2023 </text>
  <item>DBGport_1</item>
  <item>DBGport_2</item>
  <item>DBGport_3</item>
+ <item>HMC_sdio</item>
  <item>LED_1</item>
  <item>LED_2</item>
  <item>TX_0</item>
@@ -197,6 +200,7 @@ Date: Sun May 21 19:47:40 2023 </text>
  <item>DBGport_1</item>
  <item>DBGport_2</item>
  <item>DBGport_3</item>
+ <item>HMC_sdio</item>
  <item>LED_1</item>
  <item>LED_2</item>
  <item>TX_0</item>
@@ -204,16 +208,18 @@ Date: Sun May 21 19:47:40 2023 </text>
 </list>
 <text></text>
 <text></text>
-<text> - Setup unconstrained for the following pin:</text>
+<text> - Setup unconstrained for the following pins:</text>
 <text>   </text>
 <list>
  <item>Controler_0/ADI_SPI_0/rx_data_buffer[0]:D</item>
+ <item>Controler_0/ADI_SPI_1/rx_data_buffer[0]:D</item>
 </list>
 <text></text>
-<text> - Hold unconstrained for the following pin:</text>
+<text> - Hold unconstrained for the following pins:</text>
 <text>   </text>
 <list>
  <item>Controler_0/ADI_SPI_0/rx_data_buffer[0]:D</item>
+ <item>Controler_0/ADI_SPI_1/rx_data_buffer[0]:D</item>
 </list>
 <text></text>
 </section>

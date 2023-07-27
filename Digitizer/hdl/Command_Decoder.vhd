@@ -42,6 +42,27 @@ entity Command_Decoder is
         ADCSPI_write_read : out std_logic;                                      --write/read bit and command
         ADCSPI_addr_frame : out std_logic_vector(14 downto 0);        --send address
         ADCSPI_tx_data_frame : out std_logic_vector(7 downto 0);     --send data
+
+        --HMC ADI-SPI interface
+        HMCSPI_busy : in std_logic;                                          
+        HMCSPI_enable_cmd : out std_logic;                                   
+        HMCSPI_write_read : out std_logic;                                     
+        HMCSPI_addr_frame : out std_logic_vector(14 downto 0);        
+        HMCSPI_tx_data_frame : out std_logic_vector(7 downto 0);
+
+        --LMX1 SPI interface
+        LMX1SPI_busy : in std_logic;                                          
+        LMX1SPI_enable_cmd : out std_logic;                                   
+        LMX1SPI_write_read : out std_logic;                                     
+        LMX1SPI_addr_frame : out std_logic_vector(6 downto 0);        
+        LMX1SPI_tx_data_frame : out std_logic_vector(15 downto 0);
+
+        --LMX2 SPI interface
+        LMX2SPI_busy : in std_logic;                                          
+        LMX2SPI_enable_cmd : out std_logic;                                   
+        LMX2SPI_write_read : out std_logic;                                     
+        LMX2SPI_addr_frame : out std_logic_vector(6 downto 0);        
+        LMX2SPI_tx_data_frame : out std_logic_vector(15 downto 0);     
         
         --Trigger
         TRG_busy : in std_logic;
@@ -58,6 +79,7 @@ end Command_Decoder;
 
 
 architecture rtl of Command_Decoder is
+
 
     constant To_Fault_Count_Cycle     : integer := 200E6;
 
@@ -76,7 +98,7 @@ architecture rtl of Command_Decoder is
 
     signal store_command_data : std_logic;
     signal data_valid_for_decode : std_logic;
-    signal decode_vector : std_logic_vector(3 downto 0);
+    signal decode_vector : std_logic_vector(PER_NUM_WidthOfPeriferiesVector - 1 downto 0);
 
     signal Perif_BUSY : std_logic;
     signal Not_Decode_Value : std_logic;
@@ -92,33 +114,56 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --signal routing
 ------------------------------------------------------------------------------------------------------------
-    Perif_BUSY <= SYS_busy OR ADCSPI_busy OR REG_busy OR TRG_busy;
+    Perif_BUSY <=   SYS_busy OR 
+                    ADCSPI_busy OR 
+                    REG_busy OR 
+                    TRG_busy OR 
+                    HMCSPI_busy OR
+                    LMX1SPI_busy OR
+                    LMX2SPI_busy;
     
     --write read
     SYS_write_read      <= Has_Answer;
     REG_write_read      <= Has_Answer;
     ADCSPI_write_read   <= Has_Answer;
     TRG_write_read      <= Has_Answer;
+    HMCSPI_write_read   <= Has_Answer;
+    LMX1SPI_write_read  <= Has_Answer;
+    LMX2SPI_write_read  <= Has_Answer;
 
     --perif data routing
     SYS_addr    <= cmd_data(23 downto 16);
     SYS_data    <= cmd_data(15 downto 0);
 
-    REG_addr                <= cmd_data(23 downto 8);
-    REG_data                <= cmd_data(7 downto 0);
+    REG_addr    <= cmd_data(23 downto 8);
+    REG_data    <= cmd_data(7 downto 0);
 
     ADCSPI_addr_frame       <= cmd_data(22 downto 8);
     ADCSPI_tx_data_frame    <= cmd_data(7 downto 0);
 
+    HMCSPI_addr_frame <= cmd_data(22 downto 8);
+    HMCSPI_tx_data_frame <= cmd_data(7 downto 0);
+
+    LMX1SPI_addr_frame <= cmd_data(22 downto 16);
+    LMX1SPI_tx_data_frame <= cmd_data(15 downto 0);
+
+    LMX2SPI_addr_frame <= cmd_data(22 downto 16);
+    LMX2SPI_tx_data_frame <= cmd_data(15 downto 0);
+
+
     TRG_addr    <= cmd_data(23 downto 16);
     TRG_data    <= cmd_data(15 downto 0);
-    
 
     --decoder output routing to enable cmd signals
-    SYS_enable_cmd      <= data_valid_for_decode and decode_vector(0);
-    REG_enable_cmd      <= data_valid_for_decode and decode_vector(1);
-    ADCSPI_enable_cmd   <= data_valid_for_decode and decode_vector(2);
-    TRG_enable_cmd      <= data_valid_for_decode and decode_vector(3);
+    SYS_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_System_Controler);
+    REG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_TestRegisters);
+    ADCSPI_enable_cmd   <= data_valid_for_decode and decode_vector(PER_NUM_CONST_ADC);
+    HMCSPI_enable_cmd   <= data_valid_for_decode and decode_vector(PER_NUM_CONST_HMC);
+
+    LMX1SPI_enable_cmd  <= data_valid_for_decode and decode_vector(PER_NUM_CONST_LMX1);
+    LMX2SPI_enable_cmd  <= data_valid_for_decode and decode_vector(PER_NUM_CONST_LMX2);
+
+    TRG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Trigger);
 
 ------------------------------------------------------------------------------------------------------------
 --FSM decoder ride
@@ -368,60 +413,90 @@ begin
 
         elsif(Clock'event and Clock = '1') then    
 
+            decode_vector <= (others => '0');
+
             case cmd_ID is
 
                 when CMD_CONST_Loopback =>
-                    decode_vector       <= "0000";
+                    decode_vector       <= (others => '0');
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0'; 
 
+                --system controler
                 when CMD_CONST_SET_System_Controler =>
-                    decode_vector       <= "0001";
+                    decode_vector(PER_NUM_CONST_System_Controler) <= '1';
                     Has_Answer          <= '0';
                     Not_Decode_Value    <= '0';
 
                 when CMD_CONST_GET_System_Controler =>
-                    decode_vector       <= "0001";
+                    decode_vector(PER_NUM_CONST_System_Controler) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
 
-                when CMD_CONST_SET_MainRegisters =>
-                    decode_vector       <= "0010";
+                --test registers
+                when CMD_CONST_SET_TestRegisters =>
+                    decode_vector(PER_NUM_CONST_TestRegisters) <= '1';
                     Has_Answer          <= '0';
                     Not_Decode_Value    <= '0';
 
-                when CMD_CONST_GET_MainRegisters=>
-                    decode_vector       <= "0010";
+                when CMD_CONST_GET_TestRegisters=>
+                    decode_vector(PER_NUM_CONST_TestRegisters) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
-
-                when CMD_CONST_SET_InfoRegisters=>
-                    decode_vector       <= "0000";
-                    Has_Answer          <= '0';
-                    Not_Decode_Value    <= '0';
-
-                when CMD_CONST_GET_InfoRegisters=>
-                    decode_vector       <= "0000";
-                    Has_Answer          <= '1';
-                    Not_Decode_Value    <= '0';
-
+                
+                --ADC
                 when CMD_CONST_SET_AdcRegisters =>
-                    decode_vector       <= "0100";
+                    decode_vector(PER_NUM_CONST_ADC) <= '1';
                     Has_Answer          <= '0';
                     Not_Decode_Value    <= '0';
 
                 when CMD_CONST_GET_AdcRegisters =>
-                    decode_vector       <= "0100";
+                    decode_vector(PER_NUM_CONST_ADC) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
-                    
+
+                --HMC
+                when CMD_CONST_SET_HmcRegisters =>
+                    decode_vector(PER_NUM_CONST_HMC) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
+
+                when CMD_CONST_GET_HmcRegisters =>
+                    decode_vector(PER_NUM_CONST_HMC) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
+                --LMX1
+                when CMD_CONST_SET_Lmx1Registers =>
+                    decode_vector(PER_NUM_CONST_LMX1) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
+
+                when CMD_CONST_GET_Lmx1Registers =>
+                    decode_vector(PER_NUM_CONST_LMX1) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
+                --LMX2
+                when CMD_CONST_SET_Lmx2Registers =>
+                    decode_vector(PER_NUM_CONST_LMX2) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
+
+                when CMD_CONST_GET_Lmx2Registers =>
+                    decode_vector(PER_NUM_CONST_LMX2) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
+
+                --trigger    
                 when CMD_CONST_SET_TriggerRegisters =>
-                    decode_vector       <= "1000";
+                    decode_vector(PER_NUM_CONST_Trigger) <= '1';
                     Has_Answer          <= '0';
                     Not_Decode_Value    <= '0';
                     
                 when CMD_CONST_GET_TriggerRegisters =>
-                    decode_vector       <= "1000";
+                    decode_vector(PER_NUM_CONST_Trigger) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
                     

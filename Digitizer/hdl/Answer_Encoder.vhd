@@ -31,6 +31,15 @@ entity Answer_Encoder is
 
         --ADC ADI-SPI interface
         ADCSPI_rx_data : in std_logic_vector(7 downto 0);
+
+        --HMC HMC-SPI interface
+        HMCSPI_rx_data : in std_logic_vector(7 downto 0);
+
+        --LMX1 SPI interface
+        LMX1SPI_rx_data : in std_logic_vector(15 downto 0);
+
+        --LMX2 SPI interface
+        LMX2SPI_rx_data : in std_logic_vector(15 downto 0);
         
         --Trigger
         TRG_rx_data : in std_logic_vector(15 downto 0);
@@ -256,30 +265,49 @@ begin
             when CMD_CONST_FAULT =>
                 periph_data <= (others => '1');
 
+            --system controler
             when CMD_CONST_SET_System_Controler =>
                 periph_data <= (others => '0');
 
             when CMD_CONST_GET_System_Controler =>
                 periph_data <= CMD_DATA_Part_2 & SYS_rx_data;
 
-            when CMD_CONST_SET_MainRegisters =>
+            --Test registers
+            when CMD_CONST_SET_TestRegisters =>
                 periph_data <= (others => '0');
 
-            when CMD_CONST_GET_MainRegisters=>
+            when CMD_CONST_GET_TestRegisters=>
                 periph_data <= CMD_DATA_Part_2 & CMD_DATA_Part_1 & REG_rx_data;
 
-            when CMD_CONST_SET_InfoRegisters=>
-                periph_data <= (others => '0');
-
-            when CMD_CONST_GET_InfoRegisters=>
-                periph_data <= (others => '0');
-
+            --ADC
             when CMD_CONST_SET_AdcRegisters =>
-                periph_data <= CMD_DATA_Part_2 & CMD_DATA_Part_1 & ADCSPI_rx_data;
+                periph_data <= (others => '0');
 
             when CMD_CONST_GET_AdcRegisters =>
                 periph_data <= CMD_DATA_Part_2 & CMD_DATA_Part_1 & ADCSPI_rx_data;
-                    
+
+            --HMC
+            when CMD_CONST_SET_HmcRegisters =>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_HmcRegisters =>
+                periph_data <= CMD_DATA_Part_2 & CMD_DATA_Part_1 & HMCSPI_rx_data;
+
+            --LMX1
+            when CMD_CONST_SET_Lmx1Registers =>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_Lmx1Registers =>
+                periph_data <= CMD_DATA_Part_2 & LMX1SPI_rx_data;
+
+            --LMX2
+            when CMD_CONST_SET_Lmx2Registers =>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_Lmx2Registers =>
+                periph_data <= CMD_DATA_Part_2 & LMX2SPI_rx_data;
+        
+            --Trigger
             when CMD_CONST_SET_TriggerRegisters=>
                 periph_data <= (others => '0');
 

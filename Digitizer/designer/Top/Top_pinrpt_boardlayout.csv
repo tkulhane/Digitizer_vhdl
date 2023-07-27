@@ -1,6 +1,6 @@
 Device Selection
 Report Version,Date,Product,Release,Version,Design Name,Family,Die,Package
-0.1,Sun May 21 19:51:29 2023,Designer,v2022.1,2022.1.0.10,Top,PolarFire,MPF300TS_ES,FCG1152
+0.1,Wed Jul 26 13:58:11 2023,Designer,v2022.1,2022.1.0.10,Top,PolarFire,MPF300TS_ES,FCG1152
 Pin Report
 Pin,Port,Function,Bank,State,I/O Std,Direction,Used I/O Reg,User I/O Lock Down,Clamp Diode,Resistor Pull,Schmitt Trigger,Vcm Input Range,On Die Termination,Odt Value (Ohm),Input Delay,Slew,Output Drive (mA),Impedance (ohm),Output Load (pF),Source Termination (Ohm),Output Delay,Board Layout
 A2,---,GPIO251PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -8,7 +8,7 @@ A3,---,GPIO251NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,-
 A4,---,GPIO253NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 A5,---,GPIO255NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 A6,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.8v
-A7,ADC_sdio,GPIO16PB2,Bank2,Assigned,LVCMOS18,Inout,None,No,ON,Up,OFF,---,OFF,120,OFF,OFF,8,---,5,---,OFF,ADC_sdio
+A7,---,GPIO16PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 A8,---,GPIO16NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 A9,---,GPIO25NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 A10,---,GPIO28NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -685,7 +685,7 @@ G3,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,
 G4,---,GPIO244PB2/CCC_SW_CLKIN_S_0,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 G5,---,GPIO11PB2/CLKIN_S_7,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 G6,---,GPIO10NB2/LPRB_B,Bank2,User Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Probe B
-G7,---,GPIO8NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G7,ADC_sdio,GPIO8NB2/DQS,Bank2,Assigned,LVCMOS18,Inout,None,No,ON,Up,OFF,---,OFF,120,OFF,OFF,8,---,5,---,OFF,ADC_sdio
 G8,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.8v
 G9,---,GPIO6PB2/CLKIN_S_4,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 G10,---,GPIO21PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -884,7 +884,7 @@ M32,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,--
 M33,---,XCVR_3_TX3_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 M34,---,XCVR_3_TX3_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 N1,---,GPIO220NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-N2,---,GPIO220PB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N2,HMC_sdio,GPIO220PB5,Bank5,Assigned,LVCMOS18,Inout,None,No,ON,Up,OFF,---,OFF,120,OFF,OFF,8,---,5,---,OFF,HMC_sdio
 N3,---,GPIO224NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 N4,---,GPIO224PB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 N5,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS

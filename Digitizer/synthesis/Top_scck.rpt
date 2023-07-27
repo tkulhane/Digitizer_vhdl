@@ -13,7 +13,7 @@ Hostname: DESKTOP-TDPVUTD
 
 Implementation : synthesis
 
-# Written on Sun May 21 19:45:21 2023
+# Written on Wed Jul 26 09:18:21 2023
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc"
@@ -34,7 +34,7 @@ Clock Summary
 Level     Clock                                                               Frequency     Period        Type                                                                     Group                     Load 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared                                                                 default_clkgroup          1    
-1 .         Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0             10.0 MHz      100.000       generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup          5048 
+1 .         Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0             10.0 MHz      100.000       generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup          5619 
                                                                                                                                                                                                                   
 0 -       System                                                              100.0 MHz     10.000        system                                                                   system_clkgroup           0    
                                                                                                                                                                                                                   
@@ -45,13 +45,13 @@ Level     Clock                                                               Fr
 Clock Load Summary
 ******************
 
-                                                                    Clock     Source                                                                Clock Pin                                                      Non-clock Pin     Non-clock Pin                                              
-Clock                                                               Load      Pin                                                                   Seq Example                                                    Seq Example       Comb Example                                               
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0     -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
-Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               5048      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            Controler_0.ADI_SPI_0.write_read_buffer.C                      -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_0.I(BUFG)     
-                                                                                                                                                                                                                                                                                                
-System                                                              0         -                                                                     -                                                              -                 -                                                          
-                                                                                                                                                                                                                                                                                                
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
-================================================================================================================================================================================================================================================================================================
+                                                                    Clock     Source                                                                Clock Pin                                                       Non-clock Pin     Non-clock Pin                                              
+Clock                                                               Load      Pin                                                                   Seq Example                                                     Seq Example       Comb Example                                               
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0      -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
+Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               5619      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            UART_Protocol_1.Communication_TX_Arbiter_0.state_reg[0:4].C     -                 Controler_0.SPI_LMX_0_0.spi_master_0.un1_clk.I[0](inv)     
+                                                                                                                                                                                                                                                                                                 
+System                                                              0         -                                                                     -                                                               -                 -                                                          
+                                                                                                                                                                                                                                                                                                 
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                 -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
+=================================================================================================================================================================================================================================================================================================

@@ -1,5 +1,5 @@
 #defaultlanguage:vhdl
-#OPTIONS:"|-mixedhdl|-top|work.UART_TX_Protocol|-top|work.UART_RX_Protocol|-top|work.mko|-top|work.Communication_TX_Arbiter|-top|work.Test_Generator|-top|work.FIFOs_Reader|-top|work.Communication_Builder|-top|work.Trigger_Main|-top|work.Trigger_Control|-top|work.Sample_RAM_Block_MUX|-top|work.Sample_RAM_Block_Decoder|-top|work.Trigger_Unit|-top|work.System_Controler|-top|work.REGISTERS|-top|work.Communication_CMD_MUX|-top|work.Communication_ANW_MUX|-top|work.Command_Decoder|-top|work.Answer_Encoder|-top|work.ADI_SPI|-top|work.Synchronizer|-mpparams|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\Top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|0|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-mixedhdl|-top|work.UART_TX_Protocol|-top|work.UART_RX_Protocol|-top|work.mko|-top|work.Communication_TX_Arbiter|-top|work.Test_Generator|-top|work.FIFOs_Reader|-top|work.Communication_Builder|-top|work.Trigger_Main|-top|work.Trigger_Control|-top|work.Sample_RAM_Block_MUX|-top|work.Sample_RAM_Block_Decoder|-top|work.Trigger_Unit|-top|work.System_Controler|-top|work.REGISTERS|-top|work.Communication_CMD_MUX|-top|work.Communication_ANW_MUX|-top|work.Command_Decoder|-top|work.Answer_Encoder|-top|work.ADI_SPI|-top|work.spi_master|-top|work.SPI_interface|-top|work.Synchronizer|-mpparams|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\Top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|0|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\bin64\\c_vhdl.exe":1646899180
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\lib\\vhd2008\\location.map":1646899198
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\lib\\vhd2008\\std.vhd":1646899198
@@ -13,12 +13,14 @@
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\lib\\vhd\\hyperents.vhd":1646899198
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Synchronizer.vhd":1675847088
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\ADI_SPI.vhd":1676227724
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\cmd_table.vhd":1684174848
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Answer_Encoder.vhd":1684309891
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Command_Decoder.vhd":1681717242
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\cmd_table.vhd":1690224835
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Answer_Encoder.vhd":1690355682
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Command_Decoder.vhd":1690296409
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_ANW_MUX.vhd":1677792162
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_CMD_MUX.vhd":1677880130
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\REGISTERS.vhd":1677880048
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\SPI_interface.vhd":1690296630
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\spi_master.vhd":1690296630
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\System_Controler.vhd":1681063132
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_Builder.vhd":1684690715
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\FIFOs_Reader.vhd":1684397237
@@ -41,20 +43,22 @@
 5 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_ANW_MUX.vhd" vhdl
 6 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_CMD_MUX.vhd" vhdl
 7 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\REGISTERS.vhd" vhdl
-8 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\System_Controler.vhd" vhdl
-9 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd" vhdl
-10 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd" vhdl
-11 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd" vhdl
-12 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_Decoder.vhd" vhdl
-13 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_MUX.vhd" vhdl
-14 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator.vhd" vhdl
-15 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\cmd_table_trigger.vhd" vhdl
-16 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd" vhdl
-17 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd" vhdl
-18 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_TX_Arbiter.vhd" vhdl
-19 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\UART_RX_Protocol.vhd" vhdl
-20 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\UART_TX_Protocol.vhd" vhdl
-21 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\mko.vhd" vhdl
+8 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SPI_interface.vhd" vhdl
+9 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd" vhdl
+10 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\System_Controler.vhd" vhdl
+11 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd" vhdl
+12 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd" vhdl
+13 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd" vhdl
+14 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_Decoder.vhd" vhdl
+15 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_MUX.vhd" vhdl
+16 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator.vhd" vhdl
+17 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\cmd_table_trigger.vhd" vhdl
+18 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd" vhdl
+19 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd" vhdl
+20 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_TX_Arbiter.vhd" vhdl
+21 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\UART_RX_Protocol.vhd" vhdl
+22 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\UART_TX_Protocol.vhd" vhdl
+23 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\mko.vhd" vhdl
 
 # Dependency Lists (Uses list)
 0 -1
@@ -66,24 +70,26 @@
 6 -1
 7 -1
 8 -1
-9 2 
+9 -1
 10 -1
-11 -1
+11 2 
 12 -1
 13 -1
 14 -1
 15 -1
-16 15 
+16 -1
 17 -1
-18 -1
+18 17 
 19 -1
 20 -1
 21 -1
+22 -1
+23 -1
 
 # Dependency Lists (Users Of)
 0 -1
 1 -1
-2 9 4 3 
+2 11 4 3 
 3 -1
 4 -1
 5 -1
@@ -96,13 +102,15 @@
 12 -1
 13 -1
 14 -1
-15 16 
+15 -1
 16 -1
-17 -1
+17 18 
 18 -1
 19 -1
 20 -1
 21 -1
+22 -1
+23 -1
 
 # Design Unit to File Association
 arch work synchronizer arch 0
@@ -119,31 +127,35 @@ arch work communication_cmd_mux rtl 6
 module work communication_cmd_mux 6
 arch work registers rtl 7
 module work registers 7
-arch work system_controler rtl 8
-module work system_controler 8
-arch work communication_builder rtl 9
-module work communication_builder 9
-arch work fifos_reader rtl 10
-module work fifos_reader 10
-arch work trigger_unit rtl 11
-module work trigger_unit 11
-arch work sample_ram_block_decoder rtl 12
-module work sample_ram_block_decoder 12
-arch work sample_ram_block_mux rtl 13
-module work sample_ram_block_mux 13
-arch work test_generator rtl 14
-module work test_generator 14
-arch work trigger_control rtl 16
-module work trigger_control 16
-arch work trigger_main rtl 17
-module work trigger_main 17
-arch work communication_tx_arbiter rtl 18
-module work communication_tx_arbiter 18
-arch work uart_rx_protocol rtl 19
-module work uart_rx_protocol 19
-arch work uart_tx_protocol rtl 20
-module work uart_tx_protocol 20
-arch work mko rtl 21
-module work mko 21
+arch work spi_interface rtl 8
+module work spi_interface 8
+arch work spi_master behavioural 9
+module work spi_master 9
+arch work system_controler rtl 10
+module work system_controler 10
+arch work communication_builder rtl 11
+module work communication_builder 11
+arch work fifos_reader rtl 12
+module work fifos_reader 12
+arch work trigger_unit rtl 13
+module work trigger_unit 13
+arch work sample_ram_block_decoder rtl 14
+module work sample_ram_block_decoder 14
+arch work sample_ram_block_mux rtl 15
+module work sample_ram_block_mux 15
+arch work test_generator rtl 16
+module work test_generator 16
+arch work trigger_control rtl 18
+module work trigger_control 18
+arch work trigger_main rtl 19
+module work trigger_main 19
+arch work communication_tx_arbiter rtl 20
+module work communication_tx_arbiter 20
+arch work uart_rx_protocol rtl 21
+module work uart_rx_protocol 21
+arch work uart_tx_protocol rtl 22
+module work uart_tx_protocol 22
+arch work mko rtl 23
+module work mko 23
 
 # Unbound Instances to File Association
