@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Jul 26 09:16:47 2023
+// Created by SmartDesign Fri Jul 28 23:01:46 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -182,11 +182,11 @@ Controler Controler_0(
         .DEST_2_Fifo_Full         ( UART_Protocol_1_TX_FIFO_FULL ),
         .SRC_2_Fifo_Empty         ( UART_Protocol_1_RX_FIFO_EMPTY ),
         .TRG_busy                 ( Data_Block_0_C_busy ),
+        .LMX1_miso                ( GND_net ),
+        .LMX2_miso                ( GND_net ),
         .SRC_1_Fifo_Read_Data     ( UART_Protocol_0_RX_Fifo_Data ),
         .SRC_2_Fifo_Read_Data     ( UART_Protocol_1_RX_Fifo_Data ),
         .TRG_rx_data              ( Data_Block_0_C_read_data_frame ),
-        .LMX1_miso                ( GND_net ),
-        .LMX2_miso                ( GND_net ),
         // Outputs
         .ADC_sclk                 (  ),
         .ADC_ss_n                 (  ),
@@ -197,10 +197,6 @@ Controler Controler_0(
         .TRG_enable_cmd           ( Controler_0_TRG_enable_cmd ),
         .TRG_write_read           ( Controler_0_TRG_write_read ),
         .SYS_Main_Reset_N         ( DBGport_2_net_0 ),
-        .DEST_1_Fifo_Write_Data   ( Controler_0_DEST_1_Fifo_Write_Data ),
-        .DEST_2_Fifo_Write_Data   ( Controler_0_DEST_2_Fifo_Write_Data ),
-        .TRG_addr                 ( Controler_0_TRG_addr ),
-        .TRG_data                 ( Controler_0_TRG_data ),
         .HMC_sclk                 (  ),
         .HMC_ss_n                 (  ),
         .LMX1_ss_n                (  ),
@@ -209,6 +205,10 @@ Controler Controler_0(
         .LMX2_ss_n                (  ),
         .LMX2_mosi                (  ),
         .LMX2_sclk                (  ),
+        .DEST_1_Fifo_Write_Data   ( Controler_0_DEST_1_Fifo_Write_Data ),
+        .DEST_2_Fifo_Write_Data   ( Controler_0_DEST_2_Fifo_Write_Data ),
+        .TRG_addr                 ( Controler_0_TRG_addr ),
+        .TRG_data                 ( Controler_0_TRG_data ),
         // Inouts
         .ADC_sdio                 ( ADC_sdio ),
         .HMC_sdio                 ( HMC_sdio ) 

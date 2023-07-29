@@ -1916,6 +1916,18 @@ SIZE="11522"
 PARENT="<project>\component\work\UART_Protocol\UART_Protocol.cxf"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\component\work\UART_Protocol_new\UART_Protocol_new.cxf,actgen_cxf"
+STATE="utd"
+TIME="1690578042"
+SIZE="5895"
+ENDFILE
+VALUE "<project>\component\work\UART_Protocol_new\UART_Protocol_new.v,hdl"
+STATE="utd"
+TIME="1690578042"
+SIZE="11602"
+PARENT="<project>\component\work\UART_Protocol_new\UART_Protocol_new.cxf"
+IS_READONLY="TRUE"
+ENDFILE
 VALUE "<project>\constraint\io\user.pdc,io_pdc"
 STATE="utd"
 TIME="1677767266"
@@ -1924,7 +1936,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1690561916"
+TIME="1690561980"
 SIZE="2330"
 ENDFILE
 VALUE "<project>\hdl\ADI_SPI.vhd,hdl"
@@ -2116,7 +2128,7 @@ TIME="1690556277"
 SIZE="228"
 ENDFILE
 VALUE "<project>\synthesis\Top.vm,syn_vm"
-STATE="ood"
+STATE="utd"
 TIME="1690561917"
 SIZE="4437037"
 ENDFILE
@@ -2297,6 +2309,38 @@ LIST PNRConstraints
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 VALUE "<project>\constraint\io\user.pdc,io_pdc"
 ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl3
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST "CORESPI::CORESPI_LIB"
 FILE "<project>\component\Actel\DirectCore\CORESPI\5.2.104\rtl\vlog\core\corespi.v,hdl"
@@ -2315,6 +2359,39 @@ ENDLIST
 LIST AssociatedStimulus
 ENDLIST
 LIST Other_Association
+LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\wave.do,do"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\runall.do,do"
+ENDLIST
+LIST COREFIFO_C6_COREFIFO_C6_0_COREFIFO
+VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\mti\scripts\wave.do,do"
+VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\mti\scripts\runall.do,do"
+ENDLIST
+LIST COREUART_C0_COREUART_C0_0_COREUART
+VALUE "<project>\component\work\COREUART_C0\COREUART_C0_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
+VALUE "<project>\component\work\COREUART_C0\COREUART_C0_0\mti\scripts\wave_vlog.do,do"
+ENDLIST
 LIST CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF
 VALUE "<project>\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\test\corereset_pf_tb.v,tb_hdl"
 ENDLIST
@@ -2379,39 +2456,6 @@ VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\
 VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
 VALUE "<project>\component\work\COREFIFO_C5\COREFIFO_C5_0\mti\scripts\wave.do,do"
 VALUE "<project>\component\work\COREFIFO_C5\COREFIFO_C5_0\mti\scripts\runall.do,do"
-ENDLIST
-LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
-VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\top_define.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
-VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\testbench.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
-VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\wave.do,do"
-VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\runall.do,do"
-ENDLIST
-LIST COREFIFO_C6_COREFIFO_C6_0_COREFIFO
-VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\test\user\top_define.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
-VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\test\user\testbench.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
-VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
-VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\mti\scripts\wave.do,do"
-VALUE "<project>\component\work\COREFIFO_C6\COREFIFO_C6_0\mti\scripts\runall.do,do"
-ENDLIST
-LIST COREUART_C0_COREUART_C0_0_COREUART
-VALUE "<project>\component\work\COREUART_C0\COREUART_C0_0\coreparameters.v,tb_hdl"
-VALUE "<project>\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\test\user\testbnch.v,tb_hdl"
-VALUE "<project>\component\work\COREUART_C0\COREUART_C0_0\mti\scripts\wave_vlog.do,do"
 ENDLIST
 LIST PF_XCVR_ERM_C0
 VALUE "<project>\component\work\PF_XCVR_ERM_C0\I_XCVR\PF_XCVR_ERM_C0_I_XCVR_PF_XCVR_sim.v,hdl"
@@ -2512,8 +2556,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -2537,6 +2581,38 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "Top::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl3
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -2550,8 +2626,23 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+SmartDesign;UART_Protocol_new;0
+SmartDesign;UART_Protocol;0
+Reports;Reports;0
+ReportsCurrentItem;Run Programming Action:Top_PROGRAM.log
+Constraint Manager;Constraint Manager;0
+SmartDesign;Top;0
+HDL;hdl\cmd_table.vhd;0
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+HDL;hdl\UART_TX_Protocol.vhd;0
+SmartDesign;Controler;0
+SmartDesign;SRAM;0
+SmartDesign;SPI_LMX;0
+HDL;hdl\REGISTERS.vhd;0
+HDL;hdl\Command_Decoder.vhd;0
+SmartDesign;Clock_Reset;0
+SmartDesign;Data_Block;0
+ACTIVEVIEW;UART_Protocol_new
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -3009,6 +3100,15 @@ ENDLIST
 LIST "Trigger_Unit::work","hdl\Trigger_Unit.vhd","FALSE","FALSE"
 ENDLIST
 LIST "UART_Protocol::work","component\work\UART_Protocol\UART_Protocol.v","TRUE","FALSE"
+SUBBLOCK "COREFIFO_C0::work","component\work\COREFIFO_C0\COREFIFO_C0.v","TRUE","FALSE"
+SUBBLOCK "COREFIFO_C6::work","component\work\COREFIFO_C6\COREFIFO_C6.v","TRUE","FALSE"
+SUBBLOCK "COREUART_C0::work","component\work\COREUART_C0\COREUART_C0.v","TRUE","FALSE"
+SUBBLOCK "Communication_TX_Arbiter::work","hdl\Communication_TX_Arbiter.vhd","FALSE","FALSE"
+SUBBLOCK "UART_RX_Protocol::work","hdl\UART_RX_Protocol.vhd","FALSE","FALSE"
+SUBBLOCK "UART_TX_Protocol::work","hdl\UART_TX_Protocol.vhd","FALSE","FALSE"
+SUBBLOCK "mko::work","hdl\mko.vhd","FALSE","FALSE"
+ENDLIST
+LIST "UART_Protocol_new::work","component\work\UART_Protocol_new\UART_Protocol_new.v","TRUE","FALSE"
 SUBBLOCK "COREFIFO_C0::work","component\work\COREFIFO_C0\COREFIFO_C0.v","TRUE","FALSE"
 SUBBLOCK "COREFIFO_C6::work","component\work\COREFIFO_C6\COREFIFO_C6.v","TRUE","FALSE"
 SUBBLOCK "COREUART_C0::work","component\work\COREUART_C0\COREUART_C0.v","TRUE","FALSE"

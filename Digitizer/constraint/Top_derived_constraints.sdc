@@ -1,5 +1,5 @@
 # Microsemi Corp.
-# Date: 2023-Jul-28 18:33:00
+# Date: 2023-Jul-28 23:01:59
 # This file was generated based on the following SDC source files:
 #   C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.sdc
 #   C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C1/COREFIFO_C1_0/COREFIFO_C1_COREFIFO_C1_0_COREFIFO.sdc
