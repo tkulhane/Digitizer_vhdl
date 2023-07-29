@@ -1882,12 +1882,12 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1690561916"
+TIME="1690578107"
 SIZE="4308"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.v,hdl"
 STATE="utd"
-TIME="1690561916"
+TIME="1690578106"
 SIZE="12345"
 PARENT="<project>\component\work\Top\Top.cxf"
 IS_READONLY="TRUE"
@@ -1936,7 +1936,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1690561980"
+TIME="1690578119"
 SIZE="2330"
 ENDFILE
 VALUE "<project>\hdl\ADI_SPI.vhd,hdl"
@@ -2128,7 +2128,7 @@ TIME="1690556277"
 SIZE="228"
 ENDFILE
 VALUE "<project>\synthesis\Top.vm,syn_vm"
-STATE="utd"
+STATE="ood"
 TIME="1690561917"
 SIZE="4437037"
 ENDFILE
@@ -2308,38 +2308,6 @@ ENDLIST
 LIST PNRConstraints
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 VALUE "<project>\constraint\io\user.pdc,io_pdc"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
 ENDLIST
 ENDLIST
 LIST "CORESPI::CORESPI_LIB"
@@ -2581,38 +2549,6 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "Top::work"
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -2626,11 +2562,10 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;synthesis:synplify.log
 SmartDesign;UART_Protocol_new;0
 SmartDesign;UART_Protocol;0
-Reports;Reports;0
-ReportsCurrentItem;Run Programming Action:Top_PROGRAM.log
-Constraint Manager;Constraint Manager;0
 SmartDesign;Top;0
 HDL;hdl\cmd_table.vhd;0
 StartPage;StartPage;0
@@ -2642,7 +2577,7 @@ HDL;hdl\REGISTERS.vhd;0
 HDL;hdl\Command_Decoder.vhd;0
 SmartDesign;Clock_Reset;0
 SmartDesign;Data_Block;0
-ACTIVEVIEW;UART_Protocol_new
+ACTIVEVIEW;UART_Protocol
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
