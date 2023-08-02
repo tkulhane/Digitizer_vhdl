@@ -29,6 +29,8 @@ package cmd_table is
     
     constant CMD_CONST_SET_TriggerRegisters     : std_logic_vector(7 downto 0) := x"31";
     constant CMD_CONST_GET_TriggerRegisters     : std_logic_vector(7 downto 0) := x"32";
+    constant CMD_CONST_SET_GPIO                 : std_logic_vector(7 downto 0) := x"33";
+    constant CMD_CONST_GET_GPIO                 : std_logic_vector(7 downto 0) := x"34";
 
 
 
@@ -41,7 +43,7 @@ package cmd_table is
 ------------------------------------------------------------------------------------------------------------
 --perif numbers constant
 ------------------------------------------------------------------------------------------------------------
-    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 7;
+    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 8;
 
     constant PER_NUM_CONST_System_Controler         : Natural := 0;
     constant PER_NUM_CONST_TestRegisters            : Natural := 1;
@@ -50,6 +52,7 @@ package cmd_table is
     constant PER_NUM_CONST_LMX1                     : Natural := 4;
     constant PER_NUM_CONST_LMX2                     : Natural := 5;
     constant PER_NUM_CONST_Trigger                  : Natural := 6;
+    constant PER_NUM_CONST_GPIO                     : Natural := 7;
     
 
 end package;

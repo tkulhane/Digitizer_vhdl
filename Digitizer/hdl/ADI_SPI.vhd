@@ -26,7 +26,7 @@ entity ADI_SPI is
         sclk : buffer std_logic;                                        --spi clk (clock)
         ss_n : buffer std_logic;                                        --spi ss  (slave select)
         sdio : inout std_logic                                          --spi sdio (input output 3 state) 
-
+        --sdio : buffer std_logic                                          --spi sdio (input output 3 state) 
     );
 end ADI_SPI;
 

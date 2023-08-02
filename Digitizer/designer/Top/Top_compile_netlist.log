@@ -18,22 +18,24 @@ Info: [127205813]:  CMPPF_149: Added 'ADLIB:CRN_INT' instance type before pin 'C
 ===============================================================================.
 
 Info: Global design data: 
-      Total globals:                       5 
+      Total globals:                       7 
       Globals that cannot be demoted:      3 
-      Globals considered for demotion:     2 
+      Globals considered for demotion:     4 
 
 
 Info: List of globals that cannot be demoted: 
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
-    5357   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
+    5784   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
     1100   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4' 
     0      0      1      'Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT' 
 
 Info: List of globals considered for demotion: 
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
-    0      3343   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
+    323    0      0      'I_1' 
+    2      0      1      'USB_3_Protocol_0/Synchronizer_0/Chain_inferred_clock_RNIQM6D[1]' 
+    0      3684   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
     0      932    0      'Clock_Reset_0/Synchronizer_0/Chain_RNI23CB[1]' 
 
 Info: Demotion information: 
@@ -43,12 +45,14 @@ Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
 ===============================================================================.
 
 Info: Device 'MPF300TS_ES' requires fabric generated global resources driven from the fabric to be gated by the 'INIT:FABRIC_POR_N' signal 
-    Chip globals:                  2 
+    Chip globals:                  4 
     Row globals:                   0 
-    Number of AND2 gates inserted: 2 
+    Number of AND2 gates inserted: 4 
 Info: Chip global resources driven by the following fabric instances were gated by the 'INIT:FABRIC_POR_N' signal: 
     Clock_Reset_0/Synchronizer_0/Chain[1]
+    FTDI_CLK_ibuf/U_IOIN
     Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep
+    USB_3_Protocol_0/Synchronizer_0/Chain[1]
 Info: The following net is being driven by 'INIT:FABRIC_POR_N'.  Your design may encounter a race condition in case this cone of logic belongs to a clock domain that is also gated by 'INIT:FABRIC_POR_N'.  If so, Microsemi recommends that the net be driven by 'INIT:GPIO_ACTIVE' or 'INIT:HSIO_ACTIVE' instead.
     Clock_Reset_0/CORERESET_PF_C0_0_PLL_POWERDOWN_B
 Info: read prtition file C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/designer/Top/Top.nmatinit.pdc.

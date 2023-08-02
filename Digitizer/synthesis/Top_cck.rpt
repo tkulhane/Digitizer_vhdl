@@ -13,7 +13,7 @@ Hostname: DESKTOP-TDPVUTD
 
 Implementation : synthesis
 
-# Written on Fri Jul 28 23:02:42 2023
+# Written on Wed Aug  2 16:58:21 2023
 
 ##### DESIGN INFO #######################################################
 
@@ -25,7 +25,7 @@ Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\design
 
 ##### SUMMARY ############################################################
 
-Found 1 issues in 1 out of 11 constraints
+Found 1 issues in 1 out of 13 constraints
 
 
 ##### DETAILS ############################################################
@@ -39,7 +39,13 @@ Starting                                                            Ending      
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 System                                                              Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     100.000          |     No paths         |     No paths         |     No paths                         
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     100.000          |     100.000          |     50.000           |     50.000                           
+Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               Top|FTDI_CLK                                                        |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               Synchronizer_1|Chain_inferred_clock[1]                              |     Diff grp         |     No paths         |     No paths         |     No paths                         
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Top|FTDI_CLK                                                        Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Top|FTDI_CLK                                                        Top|FTDI_CLK                                                        |     10.000           |     No paths         |     No paths         |     No paths                         
+Synchronizer_1|Chain_inferred_clock[1]                              Top|FTDI_CLK                                                        |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Synchronizer_1|Chain_inferred_clock[1]                              Synchronizer_1|Chain_inferred_clock[1]                              |     10.000           |     No paths         |     No paths         |     No paths                         
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     Diff grp         |     No paths         |     No paths         |     No paths                         
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
 ===================================================================================================================================================================================================================================================
@@ -50,8 +56,10 @@ PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF
 Unconstrained Start/End Points
 ******************************
 
+p:ADC_sclk
 p:ADC_sdio (bidir end point)
 p:ADC_sdio (bidir start point)
+p:ADC_ss_n
 p:DBGport_0
 p:DBGport_1
 p:DBGport_2
@@ -60,12 +68,97 @@ p:DBGport_4
 p:DBGport_5
 p:DBGport_6
 p:DBGport_7
+p:FTDI_BE[0]
+p:FTDI_BE[1]
+p:FTDI_BE[2]
+p:FTDI_BE[3]
+p:FTDI_DATA[0] (bidir end point)
+p:FTDI_DATA[0] (bidir start point)
+p:FTDI_DATA[1] (bidir end point)
+p:FTDI_DATA[1] (bidir start point)
+p:FTDI_DATA[2] (bidir end point)
+p:FTDI_DATA[2] (bidir start point)
+p:FTDI_DATA[3] (bidir end point)
+p:FTDI_DATA[3] (bidir start point)
+p:FTDI_DATA[4] (bidir end point)
+p:FTDI_DATA[4] (bidir start point)
+p:FTDI_DATA[5] (bidir end point)
+p:FTDI_DATA[5] (bidir start point)
+p:FTDI_DATA[6] (bidir end point)
+p:FTDI_DATA[6] (bidir start point)
+p:FTDI_DATA[7] (bidir end point)
+p:FTDI_DATA[7] (bidir start point)
+p:FTDI_DATA[8] (bidir end point)
+p:FTDI_DATA[8] (bidir start point)
+p:FTDI_DATA[9] (bidir end point)
+p:FTDI_DATA[9] (bidir start point)
+p:FTDI_DATA[10] (bidir end point)
+p:FTDI_DATA[10] (bidir start point)
+p:FTDI_DATA[11] (bidir end point)
+p:FTDI_DATA[11] (bidir start point)
+p:FTDI_DATA[12] (bidir end point)
+p:FTDI_DATA[12] (bidir start point)
+p:FTDI_DATA[13] (bidir end point)
+p:FTDI_DATA[13] (bidir start point)
+p:FTDI_DATA[14] (bidir end point)
+p:FTDI_DATA[14] (bidir start point)
+p:FTDI_DATA[15] (bidir end point)
+p:FTDI_DATA[15] (bidir start point)
+p:FTDI_DATA[16] (bidir end point)
+p:FTDI_DATA[16] (bidir start point)
+p:FTDI_DATA[17] (bidir end point)
+p:FTDI_DATA[17] (bidir start point)
+p:FTDI_DATA[18] (bidir end point)
+p:FTDI_DATA[18] (bidir start point)
+p:FTDI_DATA[19] (bidir end point)
+p:FTDI_DATA[19] (bidir start point)
+p:FTDI_DATA[20] (bidir end point)
+p:FTDI_DATA[20] (bidir start point)
+p:FTDI_DATA[21] (bidir end point)
+p:FTDI_DATA[21] (bidir start point)
+p:FTDI_DATA[22] (bidir end point)
+p:FTDI_DATA[22] (bidir start point)
+p:FTDI_DATA[23] (bidir end point)
+p:FTDI_DATA[23] (bidir start point)
+p:FTDI_DATA[24] (bidir end point)
+p:FTDI_DATA[24] (bidir start point)
+p:FTDI_DATA[25] (bidir end point)
+p:FTDI_DATA[25] (bidir start point)
+p:FTDI_DATA[26] (bidir end point)
+p:FTDI_DATA[26] (bidir start point)
+p:FTDI_DATA[27] (bidir end point)
+p:FTDI_DATA[27] (bidir start point)
+p:FTDI_DATA[28] (bidir end point)
+p:FTDI_DATA[28] (bidir start point)
+p:FTDI_DATA[29] (bidir end point)
+p:FTDI_DATA[29] (bidir start point)
+p:FTDI_DATA[30] (bidir end point)
+p:FTDI_DATA[30] (bidir start point)
+p:FTDI_DATA[31] (bidir end point)
+p:FTDI_DATA[31] (bidir start point)
+p:FTDI_GPIO_0
+p:FTDI_GPIO_1
+p:FTDI_nOE
+p:FTDI_nRD
+p:FTDI_nRXF
+p:FTDI_nTXE
+p:FTDI_nWR
+p:HMC_sclk
 p:HMC_sdio (bidir end point)
 p:HMC_sdio (bidir start point)
+p:HMC_ss_n
 p:LED_1
 p:LED_2
 p:LED_3
 p:LED_4
+p:LMX1_miso
+p:LMX1_mosi
+p:LMX1_sclk
+p:LMX1_ss_n
+p:LMX2_miso
+p:LMX2_mosi
+p:LMX2_sclk
+p:LMX2_ss_n
 p:RX_0
 p:RX_1
 p:TX_0
@@ -183,6 +276,54 @@ set_false_path -to [get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[10]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[10]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 
 Library Report
 **************

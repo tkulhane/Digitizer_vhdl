@@ -70,6 +70,14 @@ entity Command_Decoder is
         TRG_write_read : out std_logic;
         TRG_addr : out std_logic_vector(7 downto 0);
         TRG_data : out std_logic_vector(15 downto 0);
+        
+        --GPIO
+        GPIO_busy : in std_logic;
+        GPIO_enable_cmd : out std_logic;
+        GPIO_write_read : out std_logic;
+        GPIO_addr : out std_logic_vector(7 downto 0);
+        GPIO_data : out std_logic_vector(15 downto 0);
+        
 
         Diag_Valid : out std_logic
     
@@ -120,7 +128,8 @@ begin
                     TRG_busy OR 
                     HMCSPI_busy OR
                     LMX1SPI_busy OR
-                    LMX2SPI_busy;
+                    LMX2SPI_busy OR
+                    GPIO_busy;
     
     --write read
     SYS_write_read      <= Has_Answer;
@@ -130,6 +139,7 @@ begin
     HMCSPI_write_read   <= Has_Answer;
     LMX1SPI_write_read  <= Has_Answer;
     LMX2SPI_write_read  <= Has_Answer;
+    GPIO_write_read     <= Has_Answer;
 
     --perif data routing
     SYS_addr    <= cmd_data(23 downto 16);
@@ -154,6 +164,9 @@ begin
     TRG_addr    <= cmd_data(23 downto 16);
     TRG_data    <= cmd_data(15 downto 0);
 
+    GPIO_addr   <= cmd_data(23 downto 16);
+    GPIO_data   <= cmd_data(15 downto 0);
+
     --decoder output routing to enable cmd signals
     SYS_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_System_Controler);
     REG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_TestRegisters);
@@ -164,6 +177,7 @@ begin
     LMX2SPI_enable_cmd  <= data_valid_for_decode and decode_vector(PER_NUM_CONST_LMX2);
 
     TRG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Trigger);
+    GPIO_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_GPIO);
 
 ------------------------------------------------------------------------------------------------------------
 --FSM decoder ride
@@ -497,6 +511,17 @@ begin
                     
                 when CMD_CONST_GET_TriggerRegisters =>
                     decode_vector(PER_NUM_CONST_Trigger) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
+                --gpio 
+                when CMD_CONST_SET_GPIO =>
+                    decode_vector(PER_NUM_CONST_GPIO) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
+                    
+                when CMD_CONST_GET_GPIO =>
+                    decode_vector(PER_NUM_CONST_GPIO) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
                     

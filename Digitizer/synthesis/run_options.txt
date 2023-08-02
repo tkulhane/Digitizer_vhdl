@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version S-2021.09M
 #--  Project file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\run_options.txt
-#--  Written on Fri Jul 28 23:02:06 2023
+#--  Written on Wed Aug  2 16:57:45 2023
 
 
 #project files
@@ -47,6 +47,7 @@ add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/SP
 add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/spi_master.vhd"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/SPI_LMX/SPI_LMX.v"
 add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/System_Controler.vhd"
+add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/gpio_controler.vhd"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/Controler/Controler.v"
 add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/Communication_Builder.vhd"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/PF_DPSRAM_C7/PF_DPSRAM_C7_0/PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v"
@@ -119,6 +120,29 @@ add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/UA
 add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/UART_TX_Protocol.vhd"
 add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/mko.vhd"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/UART_Protocol/UART_Protocol.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/corefifo_fwft.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/corefifo_sync_scntr.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/corefifo_sync.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/corefifo_NstagesSync.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/corefifo_grayToBinConv.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/corefifo_async.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/COREFIFO_C7_COREFIFO_C7_0_LSRAM_top.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7_0/rtl/vlog/core/COREFIFO.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C7/COREFIFO_C7.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/corefifo_fwft.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/corefifo_sync_scntr.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/corefifo_sync.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/corefifo_NstagesSync.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/corefifo_grayToBinConv.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/corefifo_async.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/COREFIFO_C8_COREFIFO_C8_0_LSRAM_top.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/COREFIFO_C8_COREFIFO_C8_0_ram_wrapper.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8_0/rtl/vlog/core/COREFIFO.v"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/COREFIFO_C8/COREFIFO_C8.v"
+add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/ft601_fifo_interface.vhd"
+add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/ftdi_to_fifo_interface.vhd"
+add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/USB_3_Protocol/USB_3_Protocol.v"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/Top/Top.v"
 add_file -fpga_constraint "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/designer/Top/synthesis.fdc"
 

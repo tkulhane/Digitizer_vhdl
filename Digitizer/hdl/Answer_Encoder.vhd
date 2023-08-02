@@ -44,6 +44,9 @@ entity Answer_Encoder is
         --Trigger
         TRG_rx_data : in std_logic_vector(15 downto 0);
 
+        --gpio
+        GPIO_rx_data : in std_logic_vector(15 downto 0);
+
 
         Diag_Valid : out std_logic                                     
     );
@@ -313,6 +316,13 @@ begin
 
             when CMD_CONST_GET_TriggerRegisters=>
                 periph_data <= CMD_DATA_Part_2 & TRG_rx_data;
+
+            --gpio
+            when CMD_CONST_SET_GPIO=>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_GPIO=>
+                periph_data <= CMD_DATA_Part_2 & GPIO_rx_data;
 
 
             when others =>

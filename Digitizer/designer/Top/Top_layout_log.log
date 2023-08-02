@@ -1,0 +1,99 @@
+INFO: Reading User SDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.sdc.
+INFO: The option "Abort flow if errors are found in SDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated SDC files. Please uncheck the option to ignore the errors and continue running the tool.
+
+No errors or warnings found.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+***** Place and Route Configurations *****
+Timing-driven            : ON
+Power-driven             : OFF
+I/O Register Combining   : OFF
+Global Pins Demotion     : ON
+Driver Replication       : OFF
+High-effort              : OFF
+Repair min-delay         : OFF
+Incremental              : OFF
+Inter-clock optimization : ON
+
+INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
+
+ Running Timing based Global Demotion. 
+        Moved 52 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+=== Registers Duplicated ===
+1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
+   - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
+
+ Timing based Global Demotion completed successfully. 
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 75 fixed I/O macros, 0 unfixed I/O macros
+Info:  I/O Bank and Globals Assigner identified bank 'Bank0' as being fixed at VCCI:1.35V VCCR:n/a
+Info:  I/O Bank and Globals Assigner identified bank 'Bank1' as being fixed at VCCI:1.80V VCCR:n/a
+Info:  I/O Bank and Globals Assigner identified bank 'Bank2' as being fixed at VCCI:3.30V VCCR:n/a
+Info:  I/O Bank and Globals Assigner identified bank 'Bank4' as being fixed at VCCI:3.30V VCCR:n/a
+Info:  I/O Bank and Globals Assigner identified bank 'Bank5' as being fixed at VCCI:3.30V VCCR:n/a
+Info:  I/O Bank and Globals Assigner identified bank 'Bank6' as being fixed at VCCI:1.35V VCCR:n/a
+Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at VCCI:1.35V VCCR:n/a
+Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 5 seconds
+
+Placer V5.0 - 2022.1.0 
+Design: Top                             Started: Wed Aug  2 17:00:47 2023
+
+Initializing Normal-Effort Timing-Driven Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+
+CDC Report:
+    Total number of CDC synchronizer driver/sink pairs     : 264
+    Maximum distance between CDC synchronizer driver & sink:   1 cluster(s)
+
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 8 seconds
+Placement                : 39 seconds
+Improvement              : 27 seconds
+
+Placer completed successfully.
+
+Design: Top                             
+Finished: Wed Aug  2 17:02:45 2023
+Total CPU Time:     00:02:30            Total Elapsed Time: 00:01:58
+Total Memory Usage: 1709.5 Mbytes
+                        o - o - o - o - o - o
+
+
+Router 
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Aug  2 17:03:05 2023
+
+
+Router completed successfully.
+
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
+Finished: Wed Aug  2 17:04:06 2023
+Total CPU Time:     00:02:26            Total Elapsed Time: 00:01:01
+Total Memory Usage: 5390.0 Mbytes
+                        o - o - o - o - o - o
+
+Resource Usage
++---------------+-------+--------+------------+
+| Type          | Used  | Total  | Percentage |
++---------------+-------+--------+------------+
+| 4LUT          | 38152 | 299544 | 12.74      |
+| DFF           | 37436 | 299544 | 12.50      |
+| I/O Register  | 0     | 510    | 0.00       |
+| Logic Element | 39280 | 299544 | 13.11      |
++---------------+-------+--------+------------+
+
+I/O Placement
++--------+-------+------------+
+| Type   | Count | Percentage |
++--------+-------+------------+
+| Locked |  75   | 100.00%    |
+| Placed |  0    | 0.00%      |
++--------+-------+------------+
+
+Completed writing pin report files.
