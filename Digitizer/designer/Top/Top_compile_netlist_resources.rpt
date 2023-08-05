@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Wed Aug  2 16:59:21 2023
+Date: Sat Aug  5 22:17:26 2023
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -30,8 +30,8 @@ Resource Usage
 +---------------------------+-------+--------+------------+
 | Type                      | Used  | Total  | Percentage |
 +---------------------------+-------+--------+------------+
-| 4LUT                      | 38152 | 299544 | 12.74      |
-| DFF                       | 37435 | 299544 | 12.50      |
+| 4LUT                      | 38481 | 299544 | 12.85      |
+| DFF                       | 37639 | 299544 | 12.57      |
 | I/O Register              | 0     | 1536   | 0.00       |
 | User I/O                  | 75    | 512    | 14.65      |
 | -- Single-ended I/O       | 75    | 512    | 14.65      |
@@ -54,11 +54,11 @@ Detailed Logic Resource Usage
 +-----------------------+-------+-------+
 | Type                  | 4LUT  | DFF   |
 +-----------------------+-------+-------+
-| Fabric Logic          | 6148  | 5431  |
+| Fabric Logic          | 6477  | 5635  |
 | uSRAM Interface Logic | 0     | 0     |
 | LSRAM Interface Logic | 32004 | 32004 |
 | Math Interface Logic  | 0     | 0     |
-| Total Used            | 38152 | 37435 |
+| Total Used            | 38481 | 37639 |
 +-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
@@ -74,7 +74,7 @@ Detailed Carry Chains Resource Usage
 | 14     | 2    |
 | 15     | 16   |
 | 16     | 29   |
-| 17     | 1    |
+| 17     | 5    |
 | 18     | 1    |
 | 19     | 1    |
 | 20     | 4    |
@@ -83,15 +83,15 @@ Detailed Carry Chains Resource Usage
 | 26     | 2    |
 | 32     | 3    |
 | 33     | 9    |
-| Total  | 156  |
+| Total  | 160  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
 +--------+------+
 | Length | Used |
-| 2      | 58   |
+| 2      | 48   |
 | 5      | 2    |
-| Total  | 60   |
+| Total  | 50   |
 +--------+------+
 
 I/O Function
@@ -109,10 +109,10 @@ Nets assigned to chip global resources
 +--------+---------+-------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                |
 +--------+---------+-------------------------------------------------------------------------------------+
-| 5784   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
+| 5988   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 3684   | INT_NET | Net   : dff_arst                                                                    |
+| 3861   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
 | 1100   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK                                                    |

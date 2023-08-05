@@ -514,13 +514,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Controler\Controler.cxf,actgen_cxf"
 STATE="utd"
-TIME="1690987131"
-SIZE="9542"
+TIME="1691266424"
+SIZE="10205"
 ENDFILE
 VALUE "<project>\component\work\Controler\Controler.v,hdl"
 STATE="utd"
-TIME="1690987130"
-SIZE="26356"
+TIME="1691266423"
+SIZE="28815"
 PARENT="<project>\component\work\Controler\Controler.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -2138,13 +2138,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1690984380"
+TIME="1691266501"
 SIZE="8511"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.v,hdl"
 STATE="utd"
-TIME="1690984380"
-SIZE="18826"
+TIME="1691266501"
+SIZE="19113"
 PARENT="<project>\component\work\Top\Top.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -2204,7 +2204,7 @@ IS_TARGET="TRUE"
 ENDFILE
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1690988248"
+TIME="1691266533"
 SIZE="2838"
 ENDFILE
 VALUE "<project>\hdl\ADI_SPI.vhd,hdl"
@@ -2214,13 +2214,13 @@ SIZE="9585"
 ENDFILE
 VALUE "<project>\hdl\Answer_Encoder.vhd,hdl"
 STATE="utd"
-TIME="1690983174"
-SIZE="11444"
+TIME="1691266006"
+SIZE="11440"
 ENDFILE
 VALUE "<project>\hdl\cmd_table.vhd,hdl"
 STATE="utd"
-TIME="1690982527"
-SIZE="3296"
+TIME="1691265746"
+SIZE="3294"
 ENDFILE
 VALUE "<project>\hdl\cmd_table_trigger.vhd,hdl"
 STATE="utd"
@@ -2229,8 +2229,8 @@ SIZE="1598"
 ENDFILE
 VALUE "<project>\hdl\Command_Decoder.vhd,hdl"
 STATE="utd"
-TIME="1690982593"
-SIZE="21645"
+TIME="1691265807"
+SIZE="21638"
 ENDFILE
 VALUE "<project>\hdl\Communication_ANW_MUX.vhd,hdl"
 STATE="utd"
@@ -2269,8 +2269,8 @@ SIZE="621"
 ENDFILE
 VALUE "<project>\hdl\gpio_controler.vhd,hdl"
 STATE="utd"
-TIME="1690988210"
-SIZE="5688"
+TIME="1691152671"
+SIZE="13886"
 ENDFILE
 VALUE "<project>\hdl\mko.vhd,hdl"
 STATE="utd"
@@ -2281,6 +2281,11 @@ VALUE "<project>\hdl\REGISTERS.vhd,hdl"
 STATE="utd"
 TIME="1677880048"
 SIZE="4544"
+ENDFILE
+VALUE "<project>\hdl\Reset_Controler.vhd,hdl"
+STATE="utd"
+TIME="1691258384"
+SIZE="13273"
 ENDFILE
 VALUE "<project>\hdl\Sample_RAM_Block_Decoder.vhd,hdl"
 STATE="utd"
@@ -2306,11 +2311,6 @@ VALUE "<project>\hdl\Synchronizer.vhd,hdl"
 STATE="utd"
 TIME="1675847088"
 SIZE="855"
-ENDFILE
-VALUE "<project>\hdl\System_Controler.vhd,hdl"
-STATE="utd"
-TIME="1681063132"
-SIZE="6316"
 ENDFILE
 VALUE "<project>\hdl\Test_Generator.vhd,hdl"
 STATE="utd"
@@ -2411,7 +2411,7 @@ TIME="1690984486"
 SIZE="228"
 ENDFILE
 VALUE "<project>\synthesis\Top.vm,syn_vm"
-STATE="utd"
+STATE="ood"
 TIME="1690984484"
 SIZE="4792897"
 ENDFILE
@@ -2625,38 +2625,6 @@ ENDLIST
 LIST PNRConstraints
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 VALUE "<project>\constraint\io\user.pdc,io_pdc"
-ENDLIST
-LIST ProjectState5.1
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
 ENDLIST
 ENDLIST
 LIST "CORESPI::CORESPI_LIB"
@@ -2926,38 +2894,6 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
-LIST "Top::work"
-LIST Impl1
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl2
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-LIST Impl3
-ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
-LIST FlowOptions
-UsePhySynth=FALSE
-UseSynth=TRUE
-UseFhbAutoInst=FALSE
-ENDLIST
-Used_File_List
-ENDUsed_File_List
-ENDLIST
-ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -2974,8 +2910,12 @@ ORIENTATION;HORIZONTAL
 Reports;Reports;0
 ReportsCurrentItem;Run Programming Action:Top_PROGRAM.log
 StartPage;StartPage;0
-SmartDesign;Controler;0
 Constraint Manager;Constraint Manager;0
+SmartDesign;Controler;0
+SmartDesign;Data_Block;0
+SmartDesign;Input_Data_Part;0
+SmartDesign;Event_Info_RAM_Block;0
+HDL;hdl\Command_Decoder.vhd;0
 SmartDesign;Top;0
 ACTIVEVIEW;Reports
 ENDLIST
@@ -3014,8 +2954,8 @@ SUBBLOCK "Command_Decoder::work","hdl\Command_Decoder.vhd","FALSE","FALSE"
 SUBBLOCK "Communication_ANW_MUX::work","hdl\Communication_ANW_MUX.vhd","FALSE","FALSE"
 SUBBLOCK "Communication_CMD_MUX::work","hdl\Communication_CMD_MUX.vhd","FALSE","FALSE"
 SUBBLOCK "REGISTERS::work","hdl\REGISTERS.vhd","FALSE","FALSE"
+SUBBLOCK "Reset_Controler::work","hdl\Reset_Controler.vhd","FALSE","FALSE"
 SUBBLOCK "SPI_LMX::work","component\work\SPI_LMX\SPI_LMX.v","TRUE","FALSE"
-SUBBLOCK "System_Controler::work","hdl\System_Controler.vhd","FALSE","FALSE"
 SUBBLOCK "gpio_controler::work","hdl\gpio_controler.vhd","FALSE","FALSE"
 ENDLIST
 LIST "COREFIFO_C0::work","component\work\COREFIFO_C0\COREFIFO_C0.v","TRUE","FALSE"
@@ -3460,6 +3400,8 @@ LIST "PF_XCVR_ERM_C0_I_XCVR_PF_XCVR::work","component\work\PF_XCVR_ERM_C0\I_XCVR
 ENDLIST
 LIST "REGISTERS::work","hdl\REGISTERS.vhd","FALSE","FALSE"
 ENDLIST
+LIST "Reset_Controler::work","hdl\Reset_Controler.vhd","FALSE","FALSE"
+ENDLIST
 LIST "Sample_RAM_Block::work","component\work\Sample_RAM_Block\Sample_RAM_Block.v","TRUE","FALSE"
 SUBBLOCK "PF_DPSRAM_C5::work","component\work\PF_DPSRAM_C5\PF_DPSRAM_C5.v","TRUE","FALSE"
 SUBBLOCK "Sample_RAM_Block_Decoder::work","hdl\Sample_RAM_Block_Decoder.vhd","FALSE","FALSE"
@@ -3477,8 +3419,6 @@ LIST "SRAM::work","component\work\SRAM\SRAM.v","TRUE","FALSE"
 SUBBLOCK "PF_DPSRAM_C2::work","component\work\PF_DPSRAM_C2\PF_DPSRAM_C2.v","TRUE","FALSE"
 ENDLIST
 LIST "Synchronizer::work","hdl\Synchronizer.vhd","FALSE","FALSE"
-ENDLIST
-LIST "System_Controler::work","hdl\System_Controler.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Test_Generator::work","hdl\Test_Generator.vhd","FALSE","FALSE"
 ENDLIST

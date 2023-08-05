@@ -22,12 +22,12 @@ entity Command_Decoder is
         AE_busy : in std_logic;
         AE_FAULT_PROCESSED_EXECUTE : out std_logic;
 
-        --System Controler
-        SYS_busy : in std_logic;
-        SYS_enable_cmd : out std_logic;
-        SYS_write_read : out std_logic;
-        SYS_addr : out std_logic_vector(7 downto 0);
-        SYS_data : out std_logic_vector(15 downto 0);
+        --Reset Controler
+        RST_busy : in std_logic;
+        RST_enable_cmd : out std_logic;
+        RST_write_read : out std_logic;
+        RST_addr : out std_logic_vector(7 downto 0);
+        RST_data : out std_logic_vector(15 downto 0);
 
         --registers
         REG_busy : in std_logic;
@@ -122,7 +122,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --signal routing
 ------------------------------------------------------------------------------------------------------------
-    Perif_BUSY <=   SYS_busy OR 
+    Perif_BUSY <=   RST_busy OR 
                     ADCSPI_busy OR 
                     REG_busy OR 
                     TRG_busy OR 
@@ -132,7 +132,7 @@ begin
                     GPIO_busy;
     
     --write read
-    SYS_write_read      <= Has_Answer;
+    RST_write_read      <= Has_Answer;
     REG_write_read      <= Has_Answer;
     ADCSPI_write_read   <= Has_Answer;
     TRG_write_read      <= Has_Answer;
@@ -142,8 +142,8 @@ begin
     GPIO_write_read     <= Has_Answer;
 
     --perif data routing
-    SYS_addr    <= cmd_data(23 downto 16);
-    SYS_data    <= cmd_data(15 downto 0);
+    RST_addr    <= cmd_data(23 downto 16);
+    RST_data    <= cmd_data(15 downto 0);
 
     REG_addr    <= cmd_data(23 downto 8);
     REG_data    <= cmd_data(7 downto 0);
@@ -168,7 +168,7 @@ begin
     GPIO_data   <= cmd_data(15 downto 0);
 
     --decoder output routing to enable cmd signals
-    SYS_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_System_Controler);
+    RST_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Reset_Controler);
     REG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_TestRegisters);
     ADCSPI_enable_cmd   <= data_valid_for_decode and decode_vector(PER_NUM_CONST_ADC);
     HMCSPI_enable_cmd   <= data_valid_for_decode and decode_vector(PER_NUM_CONST_HMC);
@@ -436,14 +436,14 @@ begin
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0'; 
 
-                --system controler
-                when CMD_CONST_SET_System_Controler =>
-                    decode_vector(PER_NUM_CONST_System_Controler) <= '1';
+                --reset controler
+                when CMD_CONST_SET_Reset_Controler =>
+                    decode_vector(PER_NUM_CONST_Reset_Controler) <= '1';
                     Has_Answer          <= '0';
                     Not_Decode_Value    <= '0';
 
-                when CMD_CONST_GET_System_Controler =>
-                    decode_vector(PER_NUM_CONST_System_Controler) <= '1';
+                when CMD_CONST_GET_Reset_Controler =>
+                    decode_vector(PER_NUM_CONST_Reset_Controler) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
 

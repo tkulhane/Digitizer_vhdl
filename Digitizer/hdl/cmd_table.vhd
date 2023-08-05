@@ -10,8 +10,8 @@ package cmd_table is
     constant CMD_CONST_Loopback                 : std_logic_vector(7 downto 0) := x"01";
     constant CMD_CONST_FAULT                    : std_logic_vector(7 downto 0) := x"02";
 
-    constant CMD_CONST_SET_System_Controler     : std_logic_vector(7 downto 0) := x"03";
-    constant CMD_CONST_GET_System_Controler     : std_logic_vector(7 downto 0) := x"04";
+    constant CMD_CONST_SET_Reset_Controler     : std_logic_vector(7 downto 0) := x"03";
+    constant CMD_CONST_GET_Reset_Controler     : std_logic_vector(7 downto 0) := x"04";
     
     constant CMD_CONST_SET_TestRegisters        : std_logic_vector(7 downto 0) := x"11";
     constant CMD_CONST_GET_TestRegisters        : std_logic_vector(7 downto 0) := x"12";
@@ -45,7 +45,7 @@ package cmd_table is
 ------------------------------------------------------------------------------------------------------------
     constant PER_NUM_WidthOfPeriferiesVector        : Natural := 8;
 
-    constant PER_NUM_CONST_System_Controler         : Natural := 0;
+    constant PER_NUM_CONST_Reset_Controler          : Natural := 0;
     constant PER_NUM_CONST_TestRegisters            : Natural := 1;
     constant PER_NUM_CONST_ADC                      : Natural := 2;
     constant PER_NUM_CONST_HMC                      : Natural := 3;

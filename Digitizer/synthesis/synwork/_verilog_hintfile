@@ -12,14 +12,14 @@
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\lib\\vhd2008\\unsigned.vhd":1646899198
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Synchronizer.vhd":1675847088
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\ADI_SPI.vhd":1690984233
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\cmd_table.vhd":1690982527
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\cmd_table.vhd":1691265746
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_ANW_MUX.vhd":1677792162
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_CMD_MUX.vhd":1677880130
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\REGISTERS.vhd":1677880048
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Reset_Controler.vhd":1691258384
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\SPI_interface.vhd":1690296630
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\spi_master.vhd":1690296630
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\System_Controler.vhd":1681063132
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\gpio_controler.vhd":1690988210
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\gpio_controler.vhd":1691152671
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\FIFOs_Reader.vhd":1684397237
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Trigger_Unit.vhd":1681221643
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Sample_RAM_Block_Decoder.vhd":1683633429
@@ -33,8 +33,8 @@
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\mko.vhd":1677766592
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\ft601_fifo_interface.vhd":1690916919
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\ftdi_to_fifo_interface.vhd":1690914504
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Answer_Encoder.vhd":1690983174
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Command_Decoder.vhd":1690982593
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Answer_Encoder.vhd":1691266006
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Command_Decoder.vhd":1691265807
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_Builder.vhd":1690561916
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Trigger_Control.vhd":1681052191
 @E8lFkRDCaosHo_CsB0FMs
@@ -92,11 +92,11 @@ HbRk0wFHV_b l04$R
 kk0b0 Rq_NCML_DCORl84M
 HbRk0qL _kR#$4k
 F00bkR_q wpqza)_um1B 1_ 7 BX zRa 4M
-HbRk01_Y1L$k#RF4
-kk0b0YR11M_CNCLD_8OlRF4
-kk0b0YR11s_IH_0Cs8CNRF4
-kk0b0YR118_N8UsR
-0FkbRk01_Y18NN0R
+HbRk0)_1aL$k#RF4
+kk0b01R)aM_CNCLD_8OlRF4
+kk0b01R)as_IH_0Cs8CNRF4
+kk0b01R)a8_N8UsR
+0FkbRk0)_1a8NN0R
 4nHkMb0 R)tk_L#4$R
 0FkbRk0)_ tCLMNDOC_l48R
 0FkbRk0)_ tI0sHCC_sN48R
@@ -145,7 +145,7 @@ M0bkR_B7B_v77NN0R
 cjHkMb07RB_NCML_DCORl84k
 F00bkR_B7L$k#RH4
 M0bkR_B7wpqza)_um1B 1_ 7 BX zRa 4M
-HbRk01_Y1s8G_NR0N4Hn
+HbRk0)_1as8G_NR0N4Hn
 M0bkRt) __sG8NN0RHU
 M0bkRBq71_uQs8G_NR0NUM
 HbRk0]1vBusQ_GN_80UNR
@@ -356,128 +356,138 @@ HbRk0QkMb04#Rnk
 F00bkR0mkb#k0R
 4nFbk0k70RH_NoeHND8
 R4ClM8FD8kCF
-l8CkDR#1$0_ClB0FMsCFDsH
-DLssN$FRIsH	
-M0bkRFBDO4	R
-bHMk)0RC0#C_4hR
-0FkbRk0L$k#RH4
-M0bkRNCML_DCORl84M
-HbRk0I0sHCC_sN48R
-bHMkN0R8_8sVlsNC
-RUHkMb0sRIH_0C8NN0_NVsl4CRnk
-F00bkRNsC8N_80VN_sCNlR
-4nFbk0k10RYv1_N_HM)CC#0R_h4k
-F00bkRN7HoN_eDRH84M
-C88lFk
-DClkF8D#CRblH_NC#0sH
-DLssN$FRIsb	
-NlsNCs0CR08NNC_DMEo0R0HMCsoC
-sbNN0lCC8sRH8PHCHsRMo0CCHs
-M0bkR	ODR
--4HkMb0CRs#_C0M4R-
-bHMkC0RMDNLC4R-
-bHMkO0RbRFD-H4
-M0bkREObN4R-
-bHMkl0RHR#F-F4
-kk0b0OR#D-	R4k
-F00bkR_##M4R-
-0FkbRk0lHF#R
--4Fbk0kL0RkR#$-H4
-M0bkRR0G-F4
-kk0b0GRsR
--4ClM8FD8kCF
-l8CkDRQ1u_0HMCNsVODC
-HNLssI$RF
-s	bNNslCC0s8RN8Is_HE80R0HMCsoC
-sbNN0lCC8sRN_0NI0H8EMRH0CCosM
-HbRk0BODF	4R-
-bHMk)0RC0#C_-hR4k
+l8CkDRH#b_#lN0
+CsDsHLNRs$I	Fs
+sbNN0lCC8sRN_0NDoCM0HERMo0CCbs
+NlsNCs0CRP8HHs8CR0HMCsoC
+bHMkO0RD-	R4M
+HbRk0sCC#0R_M-H4
+M0bkRNCMLRDC-H4
+M0bkRFObD4R-
+bHMkO0RbREN-H4
+M0bkR#lHF4R-
+0FkbRk0#	ODR
+-4Fbk0k#0R#R_M-F4
+kk0b0FRl#-HR4k
 F00bkR#Lk$4R-
-bHMkC0RMDNLCl_O84R-
-bHMkI0RsCH0_NsC84R-
-bHMkN0R8_8sVlsNC4R-
-bHMk00RGN_80VN_sCNlR
--4Fbk0ks0RGN_80VN_sCNlR
--4Fbk0k#0RbCH_MDNLC4R-
-bHMk#0RbLH_kR#$-F4
-kk0b0bR#HG_0R
--4HkMb0bR#HG_sR
--4ClM8FD8kCF
-l8CkDRt) Q 1a)D1
+bHMk00RG4R-
+0FkbRk0s-GR4M
+C88lFk
+DClkF8D1CRuHQ_Ms0CVCNO
+LDHs$NsRsIF	N
+bsCNl0RCsNs88_8IH0HERMo0CCbs
+NlsNCs0CR08NNH_I8R0EHCM0o
+CsHkMb0DRBFRO	-H4
+M0bkR#)CCh0_R
+-4Fbk0kL0RkR#$-H4
+M0bkRNCML_DCORl8-H4
+M0bkRHIs0sC_CRN8-H4
+M0bkR8N8ss_VNRlC-H4
+M0bkR_0G8NN0_NVsl-CR4k
+F00bkR_sG8NN0_NVsl-CR4k
+F00bkRH#b_NCMLRDC-H4
+M0bkRH#b_#Lk$4R-
+0FkbRk0#_bH0-GR4M
+HbRk0#_bHs-GR4M
+C88lFk
+DClkF8D)CRC0#C_MBF0DsFCDs
 HNLssI$RF
 s	HkMb0DRBFRO	4M
 HbRk0)CC#0R_h4k
 F00bkR#Lk$
 R4HkMb0MRCNCLD_8OlRH4
 M0bkRHIs0sC_CRN84M
-HbRk0Ns88_NVsl4CRnM
-HbRk0I0sHCN_80VN_sCNlRFU
-kk0b0CRsN88_N_0NVlsNC
-RUFbk0k70RH_NoeHND8
-R4ClM8FD8kCF
-l8CkDRlBFlHkMOHN0FBM_vv7_zDX
-HNLssI$RF
-s	HkMb0DRBFRO	4M
-HbRk0)CC#0R_h4M
-HbRk01_)B4H_wV)F_C_N87NN0R
-cjFbk0k10R)4B__VwHFC_)N 8_MDNLC
-R4HkMb0)R1B__4wFHV_b l04$R
-bHMk10R).B__VwHFC_)N78_NR0NcFj
-kk0b0)R1B__.wFHV_N)C8M_ NCLDRH4
-M0bkRB1)_w._H_VF 0lb$
-R4HkMb0)R1B__dwFHV_N)C8N_70cNRjk
-F00bkRB1)_wd_H_VF)8CN_N MLRDC4M
-HbRk01_)BdH_wV F_l$b0RF4
-kk0b0vRB7H_wVWF_sCH0_07NNjRc
-0FkbRk0B_v7wFHV_HWs0 C_MDNLC
-R4HkMb0vRB7H_wVwF_kRDD4k
-F00bkRN7HoN_eDRH84M
-C88lFk
-DClkF8DBCRFkllMNHO0MHF_Wqh_Xvz
-LDHs$NsRsIF	M
-HbRk0BODF	
-R4HkMb0CR)#_C0h
-R4Fbk0k70R _1a4H_wVWF_sCH0_07NNjRc
-0FkbRk07a 1_w4_H_VFW0sHCM_ NCLDRH4
-M0bkR17 a__4wFHV_DwkD
-R4Fbk0k70R _1a.H_wVWF_sCH0_07NNjRc
-0FkbRk07a 1_w._H_VFW0sHCM_ NCLDRH4
-M0bkR17 a__.wFHV_DwkD
-R4Fbk0k70R _1adH_wVWF_sCH0_07NNjRc
-0FkbRk07a 1_wd_H_VFW0sHCM_ NCLDRH4
-M0bkR17 a__dwFHV_DwkD
-R4HkMb0hRqWH_wV)F_C_N87NN0R
-cjFbk0kq0RhwW_H_VF)8CN_N MLRDC4M
-HbRk0q_hWwFHV_b l04$R
+HbRk0Ns88_NVslUCR
+bHMkI0RsCH0_08NNs_VNRlC4Fn
+kk0b0CRsN88_N_0NVlsNCnR4
+0FkbRk01_Y1vMNH_#)CCh0_RF4
+kk0b0XR a7_qBC_)#_C0h
+R4Fbk0k 0RX]a_v)B_C0#C_4hR
+0FkbRk0 _Xap4vX_#)CCh0_RF4
+kk0b0XR av_pX)._C0#C_4hR
+0FkbRk0Q_haa0C#)_Co)CC#0R_h4k
+F00bkRaQh_suCHsVCH_C#)CC#0R_h4k
+F00bkRaQh_Oq8wMsF0C_)#_C0h
+R4Fbk0kQ0Rhaa_soHoC)s_C0#C_4hR
+0FkbRk0Q_ha7NN0wFHV_#)CCh0_RF4
+kk0b0hRQaN_70NN)lC_)#_C0h
+R4Fbk0kQ0Rh7a_NA0Nk8HDC)s_C0#C_4hR
 0FkbRk07oHN_DeNH48R
 8CMlkF8DlC
-FD8kC7RqQu_1QH
-DLssN$FRIsb	
-NlsNCs0CR8N8sH_I8R0EHCM0o
-CsbNNslCC0sNR80IN_HE80R0HMCsoC
-sbNN0lCCOsRD8	_H8PHCHsRMo0CCHs
-M0bkRFBDO-	R4M
-HbRk0)CC#0R_h-F4
-kk0b0kRL#-$R4M
-HbRk0CLMNDOC_l-8R4M
-HbRk0I0sHCC_sN-8R4M
-HbRk0Ns88_NVsl-CR4M
-HbRk008G_N_0NVlsNC4R-
-0FkbRk0s8G_N_0NVlsNC4R-
-FHMk#0RORD	-H4
-M0FkR_##M4R-
-FHMk#0R8RHF-C4
+FD8kC R)taQ1 
+)1DsHLNRs$I	Fs
+bHMkB0RD	FORH4
+M0bkR#)CCh0_RF4
+kk0b0kRL#4$R
+bHMkC0RMDNLCl_O8
+R4HkMb0sRIH_0Cs8CNRH4
+M0bkR8N8ss_VNRlC4Hn
+M0bkRHIs08C_N_0NVlsNC
+RUFbk0ks0RC_N88NN0_NVslUCR
+0FkbRk07oHN_DeNH48R
+8CMlkF8DlC
+FD8kCFRBlMlkH0ONH_FMB_v7v
+zXDsHLNRs$I	Fs
+bHMkB0RD	FORH4
+M0bkR#)CCh0_RH4
+M0bkRB1)_w4_H_VF)8CN_07NNjRc
+0FkbRk01_)B4H_wV)F_C_N8 LMND4CR
+bHMk10R)4B__VwHFl_ bR0$4M
+HbRk01_)B.H_wV)F_C_N87NN0R
+cjFbk0k10R).B__VwHFC_)N 8_MDNLC
+R4HkMb0)R1B__.wFHV_b l04$R
+bHMk10R)dB__VwHFC_)N78_NR0NcFj
+kk0b0)R1B__dwFHV_N)C8M_ NCLDRH4
+M0bkRB1)_wd_H_VF 0lb$
+R4Fbk0kB0Rvw7_H_VFW0sHCN_70cNRjk
+F00bkR7Bv_VwHFs_WH_0C LMND4CR
+bHMkB0Rvw7_H_VFwDkDRF4
+kk0b0HR7Neo_N8DHRC4
 MF8l8CkD
-8lFkRDC1O$MEMsFHsxC
-LDHs$NsRsIF	N
-bsCNl0RCsh_klwbDHwbDFR0HMCsoC
-bHMkM0R)R1a-H4
-M0bkRiBpR
--4HkMb0NR70QN_M4R-
-0FkbRk07NN0_0mkR
--4ClM8FD8kC
-
-
+8lFkRDCBlFlkOMHNF0HMh_qWz_vXH
+DLssN$FRIsH	
+M0bkRFBDO4	R
+bHMk)0RC0#C_4hR
+0FkbRk07a 1_w4_H_VFW0sHCN_70cNRjk
+F00bkR17 a__4wFHV_HWs0 C_MDNLC
+R4HkMb0 R714a__VwHFk_wD4DR
+0FkbRk07a 1_w._H_VFW0sHCN_70cNRjk
+F00bkR17 a__.wFHV_HWs0 C_MDNLC
+R4HkMb0 R71.a__VwHFk_wD4DR
+0FkbRk07a 1_wd_H_VFW0sHCN_70cNRjk
+F00bkR17 a__dwFHV_HWs0 C_MDNLC
+R4HkMb0 R71da__VwHFk_wD4DR
+bHMkq0RhwW_H_VF)8CN_07NNjRc
+0FkbRk0q_hWwFHV_N)C8M_ NCLDRH4
+M0bkRWqh_VwHFl_ bR0$4k
+F00bkRN7HoN_eDRH84M
+C88lFk
+DClkF8DqCR71Q_uDQ
+HNLssI$RF
+s	bNNslCC0s8RN8Is_HE80R0HMCsoC
+sbNN0lCC8sRN_0NI0H8EMRH0CCosN
+bsCNl0RCsO_D	8HHP8RCsHCM0o
+CsHkMb0DRBFRO	-H4
+M0bkR#)CCh0_R
+-4Fbk0kL0RkR#$-H4
+M0bkRNCML_DCORl8-H4
+M0bkRHIs0sC_CRN8-H4
+M0bkR8N8ss_VNRlC-H4
+M0bkR_0G8NN0_NVsl-CR4k
+F00bkR_sG8NN0_NVsl-CR4M
+HFRk0#	ODR
+-4HkMF0#R#_-MR4M
+HFRk0#F8HR
+-4ClM8FD8kCF
+l8CkDRM1$OFEsMCHxsH
+DLssN$FRIsb	
+NlsNCs0CRlhk_HwDbFwDbMRH0CCosM
+HbRk0Ma)1R
+-4HkMb0pRBi4R-
+bHMk70RN_0NQ-MR4k
+F00bkR07NNk_m04R-
+8CMlkF8D
+C
 
 
 @ 
