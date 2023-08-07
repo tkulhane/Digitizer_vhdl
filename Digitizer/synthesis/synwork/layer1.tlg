@@ -54,7 +54,7 @@ Finished optimization stage 1 on UART_TX_Protocol (CPU Time 0h:00m:00s, Memory U
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\UART_RX_Protocol.vhd":481:16:481:29|OTHERS clause is not synthesized.
 Post processing for work.uart_rx_protocol.rtl
 Running optimization stage 1 on UART_RX_Protocol .......
-Finished optimization stage 1 on UART_RX_Protocol (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
+Finished optimization stage 1 on UART_RX_Protocol (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
 @N: Setting default value for generic time_period to 330000;
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\mko.vhd":6:7:6:9|Synthesizing work.mko.rtl.
 Post processing for work.mko.rtl
@@ -123,7 +123,7 @@ Running optimization stage 1 on Trigger_Control .......
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":347:8:347:9|Feedback mux created for signal last_Control_Trigger_Out. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":347:8:347:9|Feedback mux created for signal last_Control_Busy_Out. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @W: CL111 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":391:8:391:9|All reachable assignments to Control_Abort are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
-Finished optimization stage 1 on Trigger_Control (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
+Finished optimization stage 1 on Trigger_Control (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_MUX.vhd":6:7:6:26|Synthesizing work.sample_ram_block_mux.rtl.
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_MUX.vhd":91:12:91:25|OTHERS clause is not synthesized.
 Post processing for work.sample_ram_block_mux.rtl
@@ -151,15 +151,12 @@ Post processing for work.trigger_unit.rtl
 Running optimization stage 1 on work_trigger_unit_rtl_8_3_12_1_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length .......
 Finished optimization stage 1 on work_trigger_unit_rtl_8_3_12_1_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 109MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":6:7:6:21|Synthesizing work.reset_controler.rtl.
-@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":78:19:78:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "100000".
-@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":220:12:220:25|OTHERS clause is not synthesized.
-@W: CD638 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":84:11:84:31|Signal internal_write_signal is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":93:11:93:25|Signal clear_pulse_int is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":102:11:102:27|Signal counter_int_pulse is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":68:19:68:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "100000".
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":205:12:205:25|OTHERS clause is not synthesized.
+@W: CD638 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":74:11:74:31|Signal internal_write_signal is undriven. Either assign the signal a value or remove the signal declaration.
 Post processing for work.reset_controler.rtl
 Running optimization stage 1 on Reset_Controler .......
-@W: CL240 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":93:11:93:25|Signal CLEAR_PULSE_INT is floating; a simulation mismatch is possible.
-@W: CL240 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":35:8:35:17|Signal Diag_Valid is floating; a simulation mismatch is possible.
+@W: CL240 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":30:8:30:17|Signal Diag_Valid is floating; a simulation mismatch is possible.
 Finished optimization stage 1 on Reset_Controler (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 110MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\REGISTERS.vhd":6:7:6:15|Synthesizing work.registers.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\REGISTERS.vhd":30:19:30:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "100000".
@@ -177,18 +174,18 @@ Running optimization stage 1 on gpio_controler .......
 @W: CL240 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":22:8:22:17|Signal Diag_Valid is floating; a simulation mismatch is possible.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":200:8:200:9|Feedback mux created for signal REG_RF_Counter_OR_Mask[15:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":389:8:389:9|Feedback mux created for signal TMP_OR_Counter_Input[15:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-Finished optimization stage 1 on gpio_controler (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 110MB)
+Finished optimization stage 1 on gpio_controler (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 110MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_CMD_MUX.vhd":5:7:5:27|Synthesizing work.communication_cmd_mux.rtl.
 @N: CD233 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_CMD_MUX.vhd":39:19:39:20|Using sequential encoding for type fsm_state.
 Post processing for work.communication_cmd_mux.rtl
 Running optimization stage 1 on Communication_CMD_MUX .......
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_CMD_MUX.vhd":128:8:128:9|Feedback mux created for signal Communication_REQ. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-Finished optimization stage 1 on Communication_CMD_MUX (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 110MB)
+Finished optimization stage 1 on Communication_CMD_MUX (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 110MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_ANW_MUX.vhd":5:7:5:27|Synthesizing work.communication_anw_mux.rtl.
 @N: CD233 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_ANW_MUX.vhd":39:19:39:20|Using sequential encoding for type fsm_state.
 Post processing for work.communication_anw_mux.rtl
 Running optimization stage 1 on Communication_ANW_MUX .......
-Finished optimization stage 1 on Communication_ANW_MUX (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 110MB)
+Finished optimization stage 1 on Communication_ANW_MUX (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 110MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":8:7:8:21|Synthesizing work.command_decoder.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":97:19:97:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "1000000000".
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":367:12:367:25|OTHERS clause is not synthesized.
@@ -198,7 +195,7 @@ Running optimization stage 1 on Command_Decoder .......
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":387:8:387:9|Pruning unused register cmd_status_dummy_4(2 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":387:8:387:9|Optimizing register bit cmd_ID(7) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":387:8:387:9|Pruning register bit 7 of cmd_ID(7 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 1 on Command_Decoder (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 110MB)
+Finished optimization stage 1 on Command_Decoder (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 110MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":9:7:9:20|Synthesizing work.answer_encoder.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":58:19:58:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000".
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":186:12:186:25|OTHERS clause is not synthesized.
@@ -222,7 +219,7 @@ Running optimization stage 1 on ADI_SPI .......
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":59:8:59:9|Feedback mux created for signal tx_data_buffer[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":59:8:59:9|Feedback mux created for signal write_read_buffer. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":59:8:59:9|Feedback mux created for signal rx_data_frame[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-Finished optimization stage 1 on ADI_SPI (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 110MB)
+Finished optimization stage 1 on ADI_SPI (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 110MB)
 @N: Setting default value for generic data_length to 24;
 @N: Setting default value for generic divider to 5;
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd":6:7:6:16|Synthesizing work.spi_master.behavioural.
@@ -310,7 +307,7 @@ State machine has 5 reachable states with original encodings of:
    00100
    01000
    10000
-Finished optimization stage 2 on Answer_Encoder (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
+Finished optimization stage 2 on Answer_Encoder (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
 Running optimization stage 2 on Command_Decoder .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":189:8:189:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -325,7 +322,7 @@ State machine has 10 reachable states with original encodings of:
    0010000000
    0100000000
    1000000000
-Finished optimization stage 2 on Command_Decoder (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
+Finished optimization stage 2 on Command_Decoder (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
 Running optimization stage 2 on Communication_ANW_MUX .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_ANW_MUX.vhd":67:8:67:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -334,7 +331,7 @@ State machine has 4 reachable states with original encodings of:
    01
    10
    11
-Finished optimization stage 2 on Communication_ANW_MUX (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
+Finished optimization stage 2 on Communication_ANW_MUX (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
 Running optimization stage 2 on Communication_CMD_MUX .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_CMD_MUX.vhd":61:8:61:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -342,7 +339,7 @@ State machine has 3 reachable states with original encodings of:
    00
    01
    10
-Finished optimization stage 2 on Communication_CMD_MUX (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
+Finished optimization stage 2 on Communication_CMD_MUX (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
 Running optimization stage 2 on gpio_controler .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":100:8:100:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -354,7 +351,7 @@ State machine has 6 reachable states with original encodings of:
    010000
    100000
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":389:8:389:9|Trying to extract state machine for register TMP_OR_Counter_Input.
-Finished optimization stage 2 on gpio_controler (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
+Finished optimization stage 2 on gpio_controler (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
 Running optimization stage 2 on REGISTERS .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\REGISTERS.vhd":50:8:50:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -366,9 +363,9 @@ State machine has 6 reachable states with original encodings of:
    010000
    100000
 @W: CL246 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\REGISTERS.vhd":15:8:15:17|Input port bits 15 to 8 of addr_frame(15 downto 0) are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on REGISTERS (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 110MB)
+Finished optimization stage 2 on REGISTERS (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
 Running optimization stage 2 on Reset_Controler .......
-@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":137:8:137:9|Trying to extract state machine for register state_reg.
+@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":122:8:122:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
 State machine has 6 reachable states with original encodings of:
    000001
@@ -382,11 +379,11 @@ Running optimization stage 2 on work_trigger_unit_rtl_8_3_12_1_g_Num_Of_TRG_Unit
 @N: CL135 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd":78:8:78:9|Found sequential shift Output_Sample_Part with address depth of 3 words and data bit width of 12.
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd":121:8:121:9|Optimizing register bit Output_sID_Part(2) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd":121:8:121:9|Pruning register bit 2 of Output_sID_Part(2 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 2 on work_trigger_unit_rtl_8_3_12_1_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
+Finished optimization stage 2 on work_trigger_unit_rtl_8_3_12_1_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
 Running optimization stage 2 on Sample_RAM_Block_Decoder .......
-Finished optimization stage 2 on Sample_RAM_Block_Decoder (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 110MB)
+Finished optimization stage 2 on Sample_RAM_Block_Decoder (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 110MB)
 Running optimization stage 2 on Sample_RAM_Block_MUX .......
-Finished optimization stage 2 on Sample_RAM_Block_MUX (CPU Time 0h:00m:00s, Memory Used current: 112MB peak: 112MB)
+Finished optimization stage 2 on Sample_RAM_Block_MUX (CPU Time 0h:00m:00s, Memory Used current: 112MB peak: 113MB)
 Running optimization stage 2 on Trigger_Control .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":112:8:112:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -397,14 +394,14 @@ State machine has 6 reachable states with original encodings of:
    001000
    010000
    100000
-Finished optimization stage 2 on Trigger_Control (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 112MB)
+Finished optimization stage 2 on Trigger_Control (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 113MB)
 Running optimization stage 2 on Trigger_Main .......
 @W: CL279 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":84:8:84:9|Pruning register bits 17 to 14 of FIFO_Event_Data(17 downto 4). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL279 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":84:8:84:9|Pruning register bits 10 to 8 of FIFO_Event_Data(17 downto 4). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @N: CL189 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":84:8:84:9|Register bit FIFO_Event_Data(7) is always 0.
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":84:8:84:9|Pruning register bit 7 of FIFO_Event_Data(7 downto 4). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL246 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":21:8:21:31|Input port bits 31 to 20 of control_sample_per_event(31 downto 0) are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on Trigger_Main (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 112MB)
+Finished optimization stage 2 on Trigger_Main (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 113MB)
 Running optimization stage 2 on Communication_Builder .......
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":896:4:896:5|Pruning register bit 31 of Communication_Data_Frame(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL246 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":15:8:15:34|Input port bits 19 to 18 of event_ram_r_data_start_addr(19 downto 0) are unused. Assign logic for all port bits or change the input port size.

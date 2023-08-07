@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sat Aug  5 22:15:01 2023
+// Created by SmartDesign Mon Aug  7 12:59:30 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,6 +8,10 @@
 // Top
 module Top(
     // Inputs
+    BTN_1,
+    BTN_2,
+    BTN_3,
+    BTN_4,
     FTDI_CLK,
     FTDI_nRXF,
     FTDI_nTXE,
@@ -26,6 +30,10 @@ module Top(
     DBGport_5,
     DBGport_6,
     DBGport_7,
+    EXT_ADC_Reset_N,
+    EXT_HMC_Reset_N,
+    EXT_LMX1_Reset_N,
+    EXT_LMX2_Reset_N,
     FTDI_BE,
     FTDI_GPIO_0,
     FTDI_GPIO_1,
@@ -56,6 +64,10 @@ module Top(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input         BTN_1;
+input         BTN_2;
+input         BTN_3;
+input         BTN_4;
 input         FTDI_CLK;
 input         FTDI_nRXF;
 input         FTDI_nTXE;
@@ -76,6 +88,10 @@ output        DBGport_4;
 output        DBGport_5;
 output        DBGport_6;
 output        DBGport_7;
+output        EXT_ADC_Reset_N;
+output        EXT_HMC_Reset_N;
+output        EXT_LMX1_Reset_N;
+output        EXT_LMX2_Reset_N;
 output [3:0]  FTDI_BE;
 output        FTDI_GPIO_0;
 output        FTDI_GPIO_1;
@@ -141,7 +157,9 @@ wire          DBGport_3_net_0;
 wire          DBGport_3_0;
 wire          DBGport_3_1;
 wire          DBGport_4_net_0;
-wire          DBGport_5_net_0;
+wire          DBGport_4_1;
+wire          BTN_1;
+wire          BTN_2;
 wire   [3:0]  FTDI_BE_net_0;
 wire          FTDI_CLK;
 wire   [31:0] FTDI_DATA;
@@ -180,10 +198,7 @@ wire          USB_3_Protocol_0_RX_FIFO_EMPTY;
 wire          USB_3_Protocol_0_TX_FULL;
 wire          DBGport_0_1_net_0;
 wire          DBGport_1_0_net_0;
-wire          HMC_ss_n_net_1;
-wire          DBGport_5_net_1;
-wire          LMX1_sclk_net_1;
-wire          LMX1_mosi_net_1;
+wire          DBGport_4_1_net_0;
 wire          TX_0_net_1;
 wire          DBGport_1_net_1;
 wire          LED_1_net_1;
@@ -201,13 +216,17 @@ wire          FTDI_nRD_net_1;
 wire          ADC_sclk_net_1;
 wire          ADC_ss_n_net_1;
 wire          DBGport_3_0_net_0;
-wire          HMC_ss_n_net_2;
-wire          LMX1_mosi_net_2;
+wire          HMC_ss_n_net_1;
+wire          LMX1_mosi_net_1;
 wire          LMX1_ss_n_net_1;
-wire          LMX1_sclk_net_2;
+wire          LMX1_sclk_net_1;
 wire          LMX2_sclk_net_1;
 wire          LMX2_ss_n_net_1;
 wire          LMX2_mosi_net_1;
+wire          DBGport_0_1_net_1;
+wire          DBGport_1_0_net_1;
+wire          DBGport_2_1_net_1;
+wire          DBGport_3_1_net_1;
 wire   [3:0]  FTDI_BE_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -226,20 +245,20 @@ assign Communication_Data_Frame_const_net_0 = 32'h00000000;
 assign Number_Communication_const_net_1     = 4'h2;
 assign Communication_Number_const_net_0     = 4'h3;
 //--------------------------------------------------------------------
+// TieOff assignments
+//--------------------------------------------------------------------
+assign DBGport_5          = 1'b0;
+assign DBGport_6          = 1'b0;
+assign DBGport_7          = 1'b0;
+//--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
 assign DBGport_0_1_net_0  = DBGport_0_1;
 assign DBGport_0          = DBGport_0_1_net_0;
 assign DBGport_1_0_net_0  = DBGport_1_0;
 assign DBGport_1          = DBGport_1_0_net_0;
-assign HMC_ss_n_net_1     = HMC_ss_n_net_0;
-assign DBGport_4          = HMC_ss_n_net_1;
-assign DBGport_5_net_1    = DBGport_5_net_0;
-assign DBGport_5          = DBGport_5_net_1;
-assign LMX1_sclk_net_1    = LMX1_sclk_net_0;
-assign DBGport_6          = LMX1_sclk_net_1;
-assign LMX1_mosi_net_1    = LMX1_mosi_net_0;
-assign DBGport_7          = LMX1_mosi_net_1;
+assign DBGport_4_1_net_0  = DBGport_4_1;
+assign DBGport_4          = DBGport_4_1_net_0;
 assign TX_0_net_1         = TX_0_net_0;
 assign TX_0               = TX_0_net_1;
 assign DBGport_1_net_1    = DBGport_1_net_0;
@@ -274,41 +293,33 @@ assign ADC_ss_n_net_1     = ADC_ss_n_net_0;
 assign ADC_ss_n           = ADC_ss_n_net_1;
 assign DBGport_3_0_net_0  = DBGport_3_0;
 assign HMC_sclk           = DBGport_3_0_net_0;
-assign HMC_ss_n_net_2     = HMC_ss_n_net_0;
-assign HMC_ss_n           = HMC_ss_n_net_2;
-assign LMX1_mosi_net_2    = LMX1_mosi_net_0;
-assign LMX1_mosi          = LMX1_mosi_net_2;
+assign HMC_ss_n_net_1     = HMC_ss_n_net_0;
+assign HMC_ss_n           = HMC_ss_n_net_1;
+assign LMX1_mosi_net_1    = LMX1_mosi_net_0;
+assign LMX1_mosi          = LMX1_mosi_net_1;
 assign LMX1_ss_n_net_1    = LMX1_ss_n_net_0;
 assign LMX1_ss_n          = LMX1_ss_n_net_1;
-assign LMX1_sclk_net_2    = LMX1_sclk_net_0;
-assign LMX1_sclk          = LMX1_sclk_net_2;
+assign LMX1_sclk_net_1    = LMX1_sclk_net_0;
+assign LMX1_sclk          = LMX1_sclk_net_1;
 assign LMX2_sclk_net_1    = LMX2_sclk_net_0;
 assign LMX2_sclk          = LMX2_sclk_net_1;
 assign LMX2_ss_n_net_1    = LMX2_ss_n_net_0;
 assign LMX2_ss_n          = LMX2_ss_n_net_1;
 assign LMX2_mosi_net_1    = LMX2_mosi_net_0;
 assign LMX2_mosi          = LMX2_mosi_net_1;
+assign DBGport_0_1_net_1  = DBGport_0_1;
+assign EXT_ADC_Reset_N    = DBGport_0_1_net_1;
+assign DBGport_1_0_net_1  = DBGport_1_0;
+assign EXT_HMC_Reset_N    = DBGport_1_0_net_1;
+assign DBGport_2_1_net_1  = DBGport_2_1;
+assign EXT_LMX1_Reset_N   = DBGport_2_1_net_1;
+assign DBGport_3_1_net_1  = DBGport_3_1;
+assign EXT_LMX2_Reset_N   = DBGport_3_1_net_1;
 assign FTDI_BE_net_1      = FTDI_BE_net_0;
 assign FTDI_BE[3:0]       = FTDI_BE_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
-//--------BUFD
-BUFD BUFD_0(
-        // Inputs
-        .A ( HMC_sdio ),
-        // Outputs
-        .Y ( DBGport_5_net_0 ) 
-        );
-
-//--------BUFD
-BUFD BUFD_0_0(
-        // Inputs
-        .A ( ADC_sdio ),
-        // Outputs
-        .Y (  ) 
-        );
-
 //--------Clock_Reset
 Clock_Reset Clock_Reset_0(
         // Inputs
@@ -338,6 +349,8 @@ Controler Controler_0(
         .SRC_2_Fifo_Read_Data     ( UART_Protocol_1_RX_Fifo_Data ),
         .TRG_rx_data              ( Data_Block_0_C_read_data_frame ),
         .SRC_3_Fifo_Read_Data     ( USB_3_Protocol_0_RX_FIFO_Data ),
+        .Input_2                  ( BTN_1 ),
+        .Input_3                  ( BTN_2 ),
         // Outputs
         .ADC_sclk                 ( ADC_sclk_net_0 ),
         .ADC_ss_n                 ( ADC_ss_n_net_0 ),
@@ -367,8 +380,9 @@ Controler Controler_0(
         .DEST_3_Fifo_Write_Data   ( Controler_0_DEST_3_Fifo_Write_Data ),
         .EXT_ADC_Reset_N          ( DBGport_0_1 ),
         .EXT_HMC_Reset_N          ( DBGport_1_0 ),
-        .INT_AdcFront_Reset_N     ( DBGport_2_1 ),
-        .INT_DataBuilder_Reset_N  ( DBGport_3_1 ),
+        .EXT_LMX2_Reset_N         ( DBGport_3_1 ),
+        .EXT_LMX1_Reset_N         ( DBGport_2_1 ),
+        .INT_DataFifo_Reset_N     ( DBGport_4_1 ),
         // Inouts
         .HMC_sdio                 ( HMC_sdio ),
         .ADC_sdio                 ( ADC_sdio ) 
@@ -380,11 +394,12 @@ Data_Block Data_Block_0(
         .C_enable_cmd              ( Controler_0_TRG_enable_cmd ),
         .C_write_read              ( Controler_0_TRG_write_read ),
         .Clock                     ( Clock_Reset_0_Main_CLOCK ),
-        .Reset_N                   ( Clock_Reset_0_Main_RESET_N ),
         .Communication_Data_Full   ( DBGport_3_net_0 ),
         .Communication_DATA_Ack    ( DBGport_4_net_0 ),
+        .Fifo_RESET_N              ( DBGport_4_1 ),
         .C_addr_frame              ( Controler_0_TRG_addr ),
         .C_write_data_frame        ( Controler_0_TRG_data ),
+        .Reset_N                   ( Clock_Reset_0_Main_RESET_N ),
         // Outputs
         .C_busy                    ( Data_Block_0_C_busy ),
         .Communication_Data_Enable ( DBGport_2_0 ),

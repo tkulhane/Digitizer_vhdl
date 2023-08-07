@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Jul 24 20:58:59 2023
+// Created by SmartDesign Mon Aug  7 11:04:22 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -15,6 +15,7 @@ module Data_Block(
     Clock,
     Communication_DATA_Ack,
     Communication_Data_Full,
+    Fifo_RESET_N,
     Reset_N,
     // Outputs
     C_busy,
@@ -38,6 +39,7 @@ input         C_write_read;
 input         Clock;
 input         Communication_DATA_Ack;
 input         Communication_Data_Full;
+input         Fifo_RESET_N;
 input         Reset_N;
 //--------------------------------------------------------------------
 // Output
@@ -80,6 +82,7 @@ wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR;
 wire   [7:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Status;
+wire          Fifo_RESET_N;
 wire          FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
 wire          FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable;
 wire          FIFOs_Reader_0_Event_FIFO_R_Enable;
@@ -269,11 +272,12 @@ FIFOs_Reader FIFOs_Reader_0(
 Input_Data_Part Input_Data_Part_0(
         // Inputs
         .Clock               ( Clock ),
-        .Reset_N             ( Reset_N ),
+        .Reset_N_Trigger     ( Reset_N ),
         .Fifo_WE             ( Trigger_Top_Part_0_ALL_FIFO_Enable ),
         .TRG_First_Is_First  ( Trigger_Top_Part_0_TRG_First_Is_First ),
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
+        .RESET_N_Fifo        ( Fifo_RESET_N ),
         .Input_Data_0        ( Test_Generator_0_Test_Data_0 ),
         .Input_Data_1        ( Test_Generator_0_Test_Data_1 ),
         .Input_Data_2        ( Test_Generator_0_Test_Data_2 ),
@@ -297,11 +301,12 @@ Input_Data_Part Input_Data_Part_0(
 Input_Data_Part Input_Data_Part_1(
         // Inputs
         .Clock               ( Clock ),
-        .Reset_N             ( Reset_N ),
+        .Reset_N_Trigger     ( Reset_N ),
         .Fifo_WE             ( Trigger_Top_Part_0_ALL_FIFO_Enable ),
         .TRG_First_Is_First  ( Trigger_Top_Part_0_TRG_First_Is_First ),
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
+        .RESET_N_Fifo        ( Fifo_RESET_N ),
         .Input_Data_0        ( Test_Generator_0_Test_Data_4 ),
         .Input_Data_1        ( Test_Generator_0_Test_Data_5 ),
         .Input_Data_2        ( Test_Generator_0_Test_Data_6 ),

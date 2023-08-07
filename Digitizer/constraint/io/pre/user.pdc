@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Wed Aug  2 15:58:09 2023 
+# Date generated: Mon Aug  7 12:26:56 2023 
 
 
 # 
@@ -76,6 +76,22 @@ set_io -port_name ADC_ss_n  \
     -fixed true             \
     -io_std LVCMOS33        \
     -DIRECTION OUTPUT
+
+
+set_io -port_name BTN_1  \
+    -pin_name T4         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -RES_PULL None       \
+    -DIRECTION INPUT
+
+
+set_io -port_name BTN_2  \
+    -pin_name Y8         \
+    -fixed true          \
+    -io_std LVCMOS33     \
+    -RES_PULL None       \
+    -DIRECTION INPUT
 
 
 set_io -port_name DBGport_0  \

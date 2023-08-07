@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon May 15 20:43:50 2023
+// Created by SmartDesign Mon Aug  7 10:00:54 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -19,7 +19,8 @@ module Input_Data_Part(
     Order_Of_TRG_Unit_2,
     Order_Of_TRG_Unit_3,
     RE,
-    Reset_N,
+    RESET_N_Fifo,
+    Reset_N_Trigger,
     TRG_Enable_Vector,
     TRG_First_Is_First,
     TRG_Last_Is_Last,
@@ -47,7 +48,8 @@ input  [2:0]  Order_Of_TRG_Unit_1;
 input  [2:0]  Order_Of_TRG_Unit_2;
 input  [2:0]  Order_Of_TRG_Unit_3;
 input         RE;
-input         Reset_N;
+input         RESET_N_Fifo;
+input         Reset_N_Trigger;
 input  [7:0]  TRG_Enable_Vector;
 input         TRG_First_Is_First;
 input         TRG_Last_Is_Last;
@@ -81,7 +83,8 @@ wire   [15:0] Q_1_net_0;
 wire   [15:0] Q_2_net_0;
 wire   [15:0] Q_3_net_0;
 wire          RE;
-wire          Reset_N;
+wire          RESET_N_Fifo;
+wire          Reset_N_Trigger;
 wire   [7:0]  TRG_Detect_Vector;
 wire   [7:0]  TRG_Enable_Vector;
 wire          TRG_First_Is_First;
@@ -113,7 +116,7 @@ assign Q_3[15:0] = Q_3_net_1;
 COREFIFO_C4 COREFIFO_C4_0(
         // Inputs
         .CLK     ( Clock ),
-        .RESET_N ( Reset_N ),
+        .RESET_N ( RESET_N_Fifo ),
         .WE      ( Fifo_WE ),
         .RE      ( RE ),
         .DATA    ( Trigger_Unit_0_Output_Data ),
@@ -128,7 +131,7 @@ COREFIFO_C4 COREFIFO_C4_0(
 COREFIFO_C4 COREFIFO_C4_0_0(
         // Inputs
         .CLK     ( Clock ),
-        .RESET_N ( Reset_N ),
+        .RESET_N ( RESET_N_Fifo ),
         .WE      ( Fifo_WE ),
         .RE      ( RE ),
         .DATA    ( Trigger_Unit_1_Output_Data ),
@@ -143,7 +146,7 @@ COREFIFO_C4 COREFIFO_C4_0_0(
 COREFIFO_C4 COREFIFO_C4_0_1(
         // Inputs
         .CLK     ( Clock ),
-        .RESET_N ( Reset_N ),
+        .RESET_N ( RESET_N_Fifo ),
         .WE      ( Fifo_WE ),
         .RE      ( RE ),
         .DATA    ( Trigger_Unit_2_Output_Data ),
@@ -158,7 +161,7 @@ COREFIFO_C4 COREFIFO_C4_0_1(
 COREFIFO_C4 COREFIFO_C4_0_2(
         // Inputs
         .CLK     ( Clock ),
-        .RESET_N ( Reset_N ),
+        .RESET_N ( RESET_N_Fifo ),
         .WE      ( Fifo_WE ),
         .RE      ( RE ),
         .DATA    ( Trigger_Unit_3_Output_Data ),
@@ -177,7 +180,7 @@ Trigger_Unit #(
 Trigger_Unit_0(
         // Inputs
         .Clock              ( Clock ),
-        .Reset_N            ( Reset_N ),
+        .Reset_N            ( Reset_N_Trigger ),
         .TRG_First_Is_First ( TRG_First_Is_First ),
         .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
         .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_0 ),
@@ -198,7 +201,7 @@ Trigger_Unit #(
 Trigger_Unit_1(
         // Inputs
         .Clock              ( Clock ),
-        .Reset_N            ( Reset_N ),
+        .Reset_N            ( Reset_N_Trigger ),
         .TRG_First_Is_First ( TRG_First_Is_First ),
         .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
         .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_1 ),
@@ -219,7 +222,7 @@ Trigger_Unit #(
 Trigger_Unit_2(
         // Inputs
         .Clock              ( Clock ),
-        .Reset_N            ( Reset_N ),
+        .Reset_N            ( Reset_N_Trigger ),
         .TRG_First_Is_First ( TRG_First_Is_First ),
         .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
         .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_2 ),
@@ -240,7 +243,7 @@ Trigger_Unit #(
 Trigger_Unit_3(
         // Inputs
         .Clock              ( Clock ),
-        .Reset_N            ( Reset_N ),
+        .Reset_N            ( Reset_N_Trigger ),
         .TRG_First_Is_First ( TRG_First_Is_First ),
         .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
         .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_3 ),

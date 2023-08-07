@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Sat Aug  5 22:17:26 2023
+Date: Mon Aug  7 13:01:34 2023
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -30,16 +30,16 @@ Resource Usage
 +---------------------------+-------+--------+------------+
 | Type                      | Used  | Total  | Percentage |
 +---------------------------+-------+--------+------------+
-| 4LUT                      | 38481 | 299544 | 12.85      |
-| DFF                       | 37639 | 299544 | 12.57      |
+| 4LUT                      | 38602 | 299544 | 12.89      |
+| DFF                       | 37681 | 299544 | 12.58      |
 | I/O Register              | 0     | 1536   | 0.00       |
-| User I/O                  | 75    | 512    | 14.65      |
-| -- Single-ended I/O       | 75    | 512    | 14.65      |
+| User I/O                  | 81    | 512    | 15.82      |
+| -- Single-ended I/O       | 81    | 512    | 15.82      |
 | -- Differential I/O Pairs | 0     | 256    | 0.00       |
 | uSRAM                     | 0     | 2772   | 0.00       |
 | LSRAM                     | 889   | 952    | 93.38      |
 | Math                      | 0     | 924    | 0.00       |
-| H-Chip Global             | 7     | 48     | 14.58      |
+| H-Chip Global             | 8     | 48     | 16.67      |
 | PLL                       | 1     | 8      | 12.50      |
 | DLL                       | 0     | 8      | 0.00       |
 | CRN_INT                   | 1     | 24     | 4.17       |
@@ -54,11 +54,11 @@ Detailed Logic Resource Usage
 +-----------------------+-------+-------+
 | Type                  | 4LUT  | DFF   |
 +-----------------------+-------+-------+
-| Fabric Logic          | 6477  | 5635  |
+| Fabric Logic          | 6598  | 5677  |
 | uSRAM Interface Logic | 0     | 0     |
 | LSRAM Interface Logic | 32004 | 32004 |
 | Math Interface Logic  | 0     | 0     |
-| Total Used            | 38481 | 37639 |
+| Total Used            | 38602 | 37681 |
 +-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
@@ -68,13 +68,13 @@ Detailed Carry Chains Resource Usage
 | 8      | 1    |
 | 9      | 15   |
 | 10     | 8    |
-| 11     | 28   |
-| 12     | 22   |
+| 11     | 30   |
+| 12     | 20   |
 | 13     | 8    |
 | 14     | 2    |
 | 15     | 16   |
 | 16     | 29   |
-| 17     | 5    |
+| 17     | 7    |
 | 18     | 1    |
 | 19     | 1    |
 | 20     | 4    |
@@ -83,7 +83,7 @@ Detailed Carry Chains Resource Usage
 | 26     | 2    |
 | 32     | 3    |
 | 33     | 9    |
-| Total  | 160  |
+| Total  | 162  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
@@ -98,8 +98,8 @@ I/O Function
 +-------------------------------+--------------+-------------+-----------------+
 | Type                          | w/o register | w/ register | w/ DDR register |
 +-------------------------------+--------------+-------------+-----------------+
-| Input I/O                     | 7            | 0           | 0               |
-| Output I/O                    | 34           | 0           | 0               |
+| Input I/O                     | 9            | 0           | 0               |
+| Output I/O                    | 38           | 0           | 0               |
 | Bidirectional I/O             | 34           | 0           | 0               |
 | Differential Input I/O Pairs  | 0            | 0           | 0               |
 | Differential Output I/O Pairs | 0            | 0           | 0               |
@@ -109,10 +109,10 @@ Nets assigned to chip global resources
 +--------+---------+-------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                |
 +--------+---------+-------------------------------------------------------------------------------------+
-| 5988   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
+| 6030   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 3861   | INT_NET | Net   : dff_arst                                                                    |
+| 3021   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
 | 1100   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK                                                    |
@@ -120,6 +120,9 @@ Nets assigned to chip global resources
 |        |         | Source: NETLIST                                                                     |
 | 932    | INT_NET | Net   : Chain_arst1                                                                 |
 |        |         | Driver: Clock_Reset_0/Synchronizer_0/Chain_RNI23CB[1]/U0_RGB1                       |
+|        |         | Source: NETLIST                                                                     |
+| 882    | INT_NET | Net   : INT_DataFifo_Reset_N_arst                                                   |
+|        |         | Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2_RNIF7OA/U0_RGB1     |
 |        |         | Source: NETLIST                                                                     |
 | 323    | INT_NET | Net   : NN_1                                                                        |
 |        |         | Driver: I_1/U0_RGB1                                                                 |

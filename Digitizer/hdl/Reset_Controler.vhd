@@ -23,13 +23,8 @@ entity Reset_Controler is
         EXT_LMX1_Reset_N : out std_logic;
         EXT_LMX2_Reset_N : out std_logic;
 
-        INT_TestReg_Reset_N : out std_logic;
-        INT_Periferies_Reset_N : out std_logic;
-        INT_AdcFront_Reset_N : out std_logic;
-        INT_Trigger_Reset_N : out std_logic;
         INT_DataFifo_Reset_N : out std_logic;
-        INT_DataRam_Reset_N : out std_logic;
-        INT_DataBuilder_Reset_N : out std_logic;
+
 
         
         Diag_Valid : out std_logic
@@ -63,13 +58,8 @@ architecture rtl of Reset_Controler is
     constant NUM_RST_EXT_LMX1           : Natural := 2;
     constant NUM_RST_EXT_LMX2           : Natural := 3;
 
-    constant NUM_RST_INT_TestReg        : Natural := 0;
-    constant NUM_RST_INT_Periferies     : Natural := 1;
-    constant NUM_RST_INT_AdcFront       : Natural := 2;
-    constant NUM_RST_INT_Trigger        : Natural := 3;
-    constant NUM_RST_INT_DataFifo       : Natural := 4;
-    constant NUM_RST_INT_DataRam        : Natural := 5;
-    constant NUM_RST_INT_DataBuilder    : Natural := 6;
+    constant NUM_RST_INT_DataFifo       : Natural := 0;
+
     
 
 ------------------------------------------------------------------------------------------------------------
@@ -107,18 +97,13 @@ begin
 --resets output assing
 ------------------------------------------------------------------------------------------------------------
 
-    EXT_ADC_Reset_N         <= not REG_EXT_Resets(NUM_RST_EXT_ADC);
-    EXT_HMC_Reset_N         <= not REG_EXT_Resets(NUM_RST_EXT_HMC);
-    EXT_LMX1_Reset_N        <= not REG_EXT_Resets(NUM_RST_EXT_LMX1);
-    EXT_LMX2_Reset_N        <= not REG_EXT_Resets(NUM_RST_EXT_LMX2);
+    EXT_ADC_Reset_N         <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_ADC));
+    EXT_HMC_Reset_N         <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_HMC));
+    EXT_LMX1_Reset_N        <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_LMX1));
+    EXT_LMX2_Reset_N        <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_LMX2));
 
-    INT_TestReg_Reset_N     <= not REG_INT_Resets(NUM_RST_INT_TestReg);
-    INT_Periferies_Reset_N  <= not REG_INT_Resets(NUM_RST_INT_Periferies);
-    INT_AdcFront_Reset_N    <= not REG_INT_Resets(NUM_RST_INT_AdcFront);
-    INT_Trigger_Reset_N     <= not REG_INT_Resets(NUM_RST_INT_Trigger);
-    INT_DataFifo_Reset_N    <= not REG_INT_Resets(NUM_RST_INT_DataFifo);
-    INT_DataRam_Reset_N     <= not REG_INT_Resets(NUM_RST_INT_DataRam);
-    INT_DataBuilder_Reset_N <= not REG_INT_Resets(NUM_RST_INT_DataBuilder);
+    INT_DataFifo_Reset_N    <= Reset_N and (not REG_INT_Resets(NUM_RST_INT_DataFifo));
+
 
 
 
@@ -383,6 +368,42 @@ begin
             else
                 CLEAR_PULSE_EXT <= '0';
                 Counter_EXT_PULSE <= (others => '0');
+
+            end if;
+
+
+
+
+        end if;
+
+    end process;
+
+------------------------------------------------------------------------------------------------------------
+--counter int pulse
+------------------------------------------------------------------------------------------------------------
+    process(Reset_N, Clock)
+
+    begin
+    
+        if(Reset_N = '0') then 
+            Counter_INT_PULSE <= (others => '0');
+            CLEAR_PULSE_INT <= '0';
+
+        elsif(Clock'event and Clock = '1') then    
+            
+            if(SET_PULSE_INT = '1') then --zapnuti citace generovani pulsu
+
+                if(Counter_INT_PULSE >= PULSE_LENGTH) then --puls dosahl pozadovane delky
+                    CLEAR_PULSE_INT <= '1';                 --nastave clear resetu
+
+                else
+                    Counter_INT_PULSE <= Counter_INT_PULSE + 1;
+
+                end if;                       
+
+            else
+                CLEAR_PULSE_INT <= '0';
+                Counter_INT_PULSE <= (others => '0');
 
             end if;
 

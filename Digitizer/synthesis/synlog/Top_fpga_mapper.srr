@@ -1,4 +1,4 @@
-# Sat Aug  5 22:16:22 2023
+# Mon Aug  7 13:00:29 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -23,7 +23,7 @@ Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 120MB peak: 131MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 131MB)
 
 
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 131MB)
@@ -40,17 +40,17 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 Synthesis running in Multiprocessing mode
 Maximum number of parallel jobs set to 4
-Multiprocessing started at : Sat Aug  5 22:16:23 2023
+Multiprocessing started at : Mon Aug  7 13:00:30 2023
 Mapping Top as a separate process
 Mapping Controler as a separate process
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":9:7:9:16|Old database up-to-date, remapping Compile point view:work.Data_Block(verilog) unnecessary 
 MCP Status: 2 jobs running
 
 @N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Mapping Compile point view:work.Controler(verilog) because 
-		 Interface of Compile Point has changed.
+		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 169MB peak: 169MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 172MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
@@ -68,7 +68,7 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapse
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|ROM decode_vector_10[7:0] (in view: work.Command_Decoder(rtl)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|Found ROM decode_vector_10[7:0] (in view: work.Command_Decoder(rtl)) with 17 words by 8 bits.
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 174MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
 
 Encoding state machine Data_Block_0.Trigger_Top_Part_0.Trigger_Control_0.state_reg[0:5] (in view: work.Top(verilog))
 original code -> new code
@@ -90,7 +90,8 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":367:8:367:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_EXT_PULSE[15:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":388:8:388:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_INT_PULSE[15:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":352:8:352:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_EXT_PULSE[15:0] 
 Encoding state machine state_reg[0:5] (in view: work.REGISTERS(rtl))
 original code -> new code
    000001 -> 000001
@@ -197,60 +198,53 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":59:8:59:9|Found counter in view:work.ADI_SPI_Controler(rtl) instance data_counter[31:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":59:8:59:9|Found counter in view:work.ADI_SPI_Controler(rtl) instance addr_counter[31:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 178MB peak: 178MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 179MB peak: 179MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 198MB peak: 198MB)
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 199MB peak: 199MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 189MB peak: 198MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:03s; Memory used current: 187MB peak: 200MB)
 
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[6] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[10] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[12] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[13] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[6] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[7] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[8] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[9] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[10] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[11] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[12] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[13] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[14] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[15] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[4] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[4] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[5] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":200:8:200:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[6] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":200:8:200:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[10] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":200:8:200:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[12] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":200:8:200:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[13] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":200:8:200:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[4] (in view: work.Controler(verilog)) because it does not drive other instances.
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 189MB peak: 198MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 200MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 189MB peak: 198MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 200MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 189MB peak: 198MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 200MB)
 
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|Found ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) with 17 words by 1 bit.
 
-Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 198MB)
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 188MB peak: 200MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 194MB peak: 198MB)
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 206MB peak: 206MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:03s		    45.71ns		1514 /      1272
+   1		0h:00m:04s		    46.47ns		1625 /      1313
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[0] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[1] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[2] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
@@ -266,17 +260,17 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 194MB peak: 198MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 206MB peak: 207MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 194MB peak: 198MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 207MB peak: 207MB)
 
 
 Finished mapping Controler
 MCP Status: 1 jobs running
 
 @N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Mapping Top level view:work.Top(verilog) because 
-		 Interface of a contained Compile Point has changed.
+		 RTL and/or Constraints changed.
 
 
 Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 186MB peak: 263MB)
@@ -451,7 +445,7 @@ original code -> new code
    010000000000 -> 010000000000
    100000000000 -> 100000000000
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 196MB peak: 263MB)
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 197MB peak: 263MB)
 
 
 Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 204MB peak: 263MB)
@@ -461,26 +455,26 @@ Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 202MB peak: 263MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 204MB peak: 263MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 203MB peak: 263MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 204MB peak: 263MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 203MB peak: 263MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 204MB peak: 263MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 203MB peak: 263MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 204MB peak: 263MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:05s; Memory used current: 204MB peak: 263MB)
+Finished preparing to map (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 205MB peak: 263MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 206MB peak: 263MB)
+Finished technology mapping (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 207MB peak: 263MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:05s		     2.54ns		2624 /      2886
+   1		0h:00m:06s		     2.54ns		2624 /      2887
 
 Added 0 Buffers
 Added 0 Cells via replication
@@ -497,24 +491,24 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 209MB peak: 263MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 210MB peak: 263MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 211MB peak: 263MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 211MB peak: 263MB)
 
 
 Finished mapping Top
-Multiprocessing finished at : Sat Aug  5 22:16:30 2023
-Multiprocessing took 0h:00m:06s realtime, 0h:00m:00s cputime
+Multiprocessing finished at : Mon Aug  7 13:00:38 2023
+Multiprocessing took 0h:00m:07s realtime, 0h:00m:01s cputime
 
 Summary of Compile Points :
 *************************** 
-Name           Status        Reason                                             Start Time                   End Time                     Realtime       CPU Time       Fast Synthesis
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block     Unchanged     -                                                  Wed Aug  2 10:59:02 2023     Wed Aug  2 10:59:29 2023     0h:00m:27s     0h:00m:28s     No            
-Controler      Remapped      Interface of Compile Point changed                 Sat Aug  5 22:16:23 2023     Sat Aug  5 22:16:28 2023     0h:00m:04s     0h:00m:04s     No            
-Top            Remapped      Interface of a contained Compile Point changed     Sat Aug  5 22:16:23 2023     Sat Aug  5 22:16:30 2023     0h:00m:06s     0h:00m:06s     No            
-======================================================================================================================================================================================
+Name           Status        Reason             Start Time                   End Time                     Realtime       CPU Time       Fast Synthesis
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block     Unchanged     -                  Mon Aug  7 11:06:29 2023     Mon Aug  7 11:06:51 2023     0h:00m:21s     0h:00m:22s     No            
+Controler      Remapped      Design changed     Mon Aug  7 13:00:31 2023     Mon Aug  7 13:00:36 2023     0h:00m:05s     0h:00m:05s     No            
+Top            Remapped      Design changed     Mon Aug  7 13:00:31 2023     Mon Aug  7 13:00:38 2023     0h:00m:07s     0h:00m:07s     No            
+======================================================================================================================================================
 Total number of compile points: 3
 ===================================
 
@@ -527,10 +521,10 @@ Links to Compile point Reports:
 ==============================
 
 
-Start loading CP mapped netlist (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:01s; Memory used current: 240MB peak: 241MB)
+Start loading CP mapped netlist (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:01s; Memory used current: 242MB peak: 243MB)
 
 
-Finished loading CP mapped netlist (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:02s; Memory used current: 255MB peak: 255MB)
+Finished loading CP mapped netlist (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:02s; Memory used current: 256MB peak: 256MB)
 
 
 
@@ -541,8 +535,8 @@ Finished loading CP mapped netlist (Real Time elapsed 0h:00m:08s; CPU Time elaps
 
 Clock optimization not enabled
 2 non-gated/non-generated clock tree(s) driving 324 clock pin(s) of sequential element(s)
-3 gated/generated clock tree(s) driving 7090 clock pin(s) of sequential element(s)
-0 instances converted, 7090 sequential instances remain driven by gated/generated clocks
+3 gated/generated clock tree(s) driving 7132 clock pin(s) of sequential element(s)
+0 instances converted, 7132 sequential instances remain driven by gated/generated clocks
 
 ===================================================================== Non-Gated/Non-Generated Clocks =====================================================================
 Clock Tree ID     Driving Element                                     Drive Element Type                   Fanout     Sample Instance                                     
@@ -553,7 +547,7 @@ Clock Tree ID     Driving Element                                     Drive Elem
 ================================================================================================== Gated/Generated Clocks ==================================================================================================
 Clock Tree ID     Driving Element                                      Drive Element Type     Fanout     Sample Instance                                             Explanation                                            
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    5988       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_9     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    6030       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_9     No gated clock conversion method for cell cell:ACG4.SLE
 @K:CKID0002       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    1100       Clock_Reset_0.Synchronizer_0.Chain[0]                       No gated clock conversion method for cell cell:ACG4.SLE
 @K:CKID0003       USB_3_Protocol_0.Synchronizer_0.Chain[1]             SLE                    2          USB_3_Protocol_0.Synchronizer_0.Chain[0]                    No gated clock conversion method for cell cell:ACG4.SLE
 ============================================================================================================================================================================================================================
@@ -562,11 +556,11 @@ Clock Tree ID     Driving Element                                      Drive Ele
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:03s; Memory used current: 144MB peak: 257MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:03s; Memory used current: 145MB peak: 259MB)
 
 Writing Analyst data base C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\Top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:05s; Memory used current: 215MB peak: 257MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:06s; Memory used current: 215MB peak: 259MB)
 
 Writing Verilog Simulation files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
@@ -575,13 +569,13 @@ Writing Verilog Simulation files
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 
-Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:09s; Memory used current: 215MB peak: 257MB)
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:09s; Memory used current: 215MB peak: 259MB)
 
 
-Finished Writing Netlists (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:09s; Memory used current: 215MB peak: 257MB)
+Finished Writing Netlists (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:09s; Memory used current: 215MB peak: 259MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:09s; Memory used current: 218MB peak: 257MB)
+Start final timing analysis (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:10s; Memory used current: 218MB peak: 259MB)
 
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":13:17:13:25|Blackbox OSC_RC160MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_init_monitor_c0\pf_init_monitor_c0_0\pf_init_monitor_c0_pf_init_monitor_c0_0_pf_init_monitor.v":38:53:38:58|Blackbox INIT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
@@ -593,7 +587,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Sat Aug  5 22:16:39 2023
+# Timing report written on Mon Aug  7 13:00:47 2023
 #
 
 
@@ -639,7 +633,7 @@ Clocks                                                                          
 Starting                                                         Ending                                                           |  constraint  slack   |  constraint  slack   |  constraint  slack   |  constraint  slack 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 System                                                           Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            |  100.000     98.729  |  No paths    -       |  No paths    -       |  No paths    -     
-Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            |  100.000     93.328  |  100.000     96.668  |  50.000      46.897  |  50.000      49.664
+Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            |  100.000     93.328  |  100.000     96.673  |  50.000      46.897  |  50.000      49.664
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            Top|FTDI_CLK                                                     |  Diff grp    -       |  No paths    -       |  No paths    -       |  No paths    -     
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            Synchronizer_1|Chain_inferred_clock[1]                           |  Diff grp    -       |  No paths    -       |  No paths    -       |  No paths    -     
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock  |  Diff grp    -       |  No paths    -       |  No paths    -       |  No paths    -     
@@ -695,16 +689,16 @@ Ending Points with Worst Slack
 Instance                                                Reference                                                 Type     Pin     Net                  Time         Slack 
                                                         Clock                                                                                                              
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[5]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[5]     50.000       46.897
 Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[5]     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[5]     50.000       46.897
+Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[5]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[5]     50.000       46.897
 Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[4]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[4]     50.000       46.905
 Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[4]     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[4]     50.000       46.905
-Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[3]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[3]     50.000       46.913
 Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[3]     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[3]     50.000       46.913
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[2]     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[2]     50.000       46.921
+Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[3]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[3]     50.000       46.913
 Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[2]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[2]     50.000       46.921
-Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[1]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[1]     50.000       46.929
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[2]     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[2]     50.000       46.921
 Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[1]     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[1]     50.000       46.929
+Controler_0.SPI_LMX_0.spi_master_0.clk_toggles[1]       Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0     SLE      D       clk_toggles_s[1]     50.000       46.929
 ===========================================================================================================================================================================
 
 
@@ -729,37 +723,37 @@ Path information for path number 1:
     The start point is clocked by            Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [rising] (rise=0.000 fall=50.000 period=100.000) on pin CLK
     The end   point is clocked by            Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 [falling] (rise=0.000 fall=50.000 period=100.000) on pin CLK
 
-Instance / Net                                                                        Pin      Pin               Arrival     No. of    
-Name                                                                         Type     Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable                           SLE      Q        Out     0.218     0.218 r     -         
-SPI_interface_0_spi_enable                                                   Net      -        -       0.594     -           6         
-Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     C        In      -         0.813 r     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     Y        Out     0.148     0.961 r     -         
-receive_transmit_0_sqmuxa                                                    Net      -        -       0.563     -           4         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry_cy[0]                   ARI1     B        In      -         1.524 r     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry_cy[0]                   ARI1     Y        Out     0.207     1.731 f     -         
-clk_toggles_cry_cy_Y_0[0]                                                    Net      -        -       0.594     -           6         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[0]                      ARI1     B        In      -         2.325 f     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[0]                      ARI1     FCO      Out     0.328     2.653 f     -         
-clk_toggles_cry[0]                                                           Net      -        -       0.000     -           1         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[1]                      ARI1     FCI      In      -         2.653 f     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[1]                      ARI1     FCO      Out     0.008     2.661 f     -         
-clk_toggles_cry[1]                                                           Net      -        -       0.000     -           1         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[2]                      ARI1     FCI      In      -         2.661 f     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[2]                      ARI1     FCO      Out     0.008     2.669 f     -         
-clk_toggles_cry[2]                                                           Net      -        -       0.000     -           1         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[3]                      ARI1     FCI      In      -         2.669 f     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[3]                      ARI1     FCO      Out     0.008     2.677 f     -         
-clk_toggles_cry[3]                                                           Net      -        -       0.000     -           1         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[4]                      ARI1     FCI      In      -         2.677 f     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[4]                      ARI1     FCO      Out     0.008     2.685 f     -         
-clk_toggles_cry[4]                                                           Net      -        -       0.000     -           1         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_s[5]                        ARI1     FCI      In      -         2.685 f     -         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_s[5]                        ARI1     S        Out     0.300     2.985 r     -         
-clk_toggles_s[5]                                                             Net      -        -       0.118     -           1         
-Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[5]                          SLE      D        In      -         3.103 r     -         
-=======================================================================================================================================
+Instance / Net                                                                             Pin      Pin               Arrival     No. of    
+Name                                                                              Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------
+Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable                                SLE      Q        Out     0.218     0.218 r     -         
+SPI_interface_0_spi_enable                                                        Net      -        -       0.594     -           6         
+Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3_0_a2     CFG3     C        In      -         0.813 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3_0_a2     CFG3     Y        Out     0.148     0.961 r     -         
+receive_transmit_0_sqmuxa                                                         Net      -        -       0.563     -           4         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry_cy[0]                        ARI1     B        In      -         1.524 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry_cy[0]                        ARI1     Y        Out     0.207     1.731 f     -         
+clk_toggles_cry_cy_Y_0[0]                                                         Net      -        -       0.594     -           6         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[0]                           ARI1     B        In      -         2.325 f     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[0]                           ARI1     FCO      Out     0.328     2.653 f     -         
+clk_toggles_cry[0]                                                                Net      -        -       0.000     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[1]                           ARI1     FCI      In      -         2.653 f     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[1]                           ARI1     FCO      Out     0.008     2.661 f     -         
+clk_toggles_cry[1]                                                                Net      -        -       0.000     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[2]                           ARI1     FCI      In      -         2.661 f     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[2]                           ARI1     FCO      Out     0.008     2.669 f     -         
+clk_toggles_cry[2]                                                                Net      -        -       0.000     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[3]                           ARI1     FCI      In      -         2.669 f     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[3]                           ARI1     FCO      Out     0.008     2.677 f     -         
+clk_toggles_cry[3]                                                                Net      -        -       0.000     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[4]                           ARI1     FCI      In      -         2.677 f     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_cry[4]                           ARI1     FCO      Out     0.008     2.685 f     -         
+clk_toggles_cry[4]                                                                Net      -        -       0.000     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_s[5]                             ARI1     FCI      In      -         2.685 f     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles_s[5]                             ARI1     S        Out     0.300     2.985 r     -         
+clk_toggles_s[5]                                                                  Net      -        -       0.118     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.clk_toggles[5]                               SLE      D        In      -         3.103 r     -         
+============================================================================================================================================
 Total path delay (propagation time + setup) of 3.103 is 1.233(39.7%) logic and 1.870(60.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
@@ -1142,8 +1136,8 @@ Name                                                               Type     Name
 --------------------------------------------------------------------------------------------------------------------------------------
 Clock_Reset_0.PF_INIT_MONITOR_C0_0.PF_INIT_MONITOR_C0_0.I_INIT     INIT     UIC_INIT_DONE     Out     0.000     0.000 f     -         
 PF_INIT_MONITOR_C0_0_DEVICE_INIT_DONE                              Net      -                 -       0.118     -           1         
-Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.un1_D            CFG2     B                 In      -         0.118 f     -         
-Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.un1_D            CFG2     Y                 Out     0.077     0.195 f     -         
+Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.un1_D            CFG3     B                 In      -         0.118 f     -         
+Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.un1_D            CFG3     Y                 Out     0.077     0.195 f     -         
 un1_INTERNAL_RST_i                                                 Net      -                 -       1.056     -           17        
 Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_0            SLE      ALn               In      -         1.251 f     -         
 ======================================================================================================================================
@@ -1156,54 +1150,53 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:10s; Memory used current: 226MB peak: 257MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:11s; Memory used current: 226MB peak: 259MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:10s; Memory used current: 226MB peak: 257MB)
+Finished timing report (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:11s; Memory used current: 226MB peak: 259MB)
 
 ---------------------------------------
 Resource Usage Report for Top 
 
 Mapping to part: mpf300tfcg1152-1
 Cell usage:
-BUFD            1 use
-CLKINT          7 uses
+CLKINT          8 uses
 INIT            1 use
 INV             22 uses
 OR2             2 uses
 OR4             192 uses
 OSC_RC160MHZ    1 use
 PLL             1 use
-CFG1           76 uses
-CFG2           590 uses
-CFG3           1172 uses
-CFG4           1957 uses
+CFG1           70 uses
+CFG2           577 uses
+CFG3           1194 uses
+CFG4           2042 uses
 
 Carry cells:
-ARI1            2342 uses - used for arithmetic functions
+ARI1            2373 uses - used for arithmetic functions
 ARI1            106 uses - used for Wide-Mux implementation
-Total ARI1      2448 uses
+Total ARI1      2479 uses
 
 
 Sequential Cells: 
-SLE            5635 uses
+SLE            5677 uses
 
 DSP Blocks:    0 of 924 (0%)
 
-I/O ports: 75
-I/O primitives: 75
+I/O ports: 83
+I/O primitives: 81
 BIBUF          34 uses
-INBUF          7 uses
-OUTBUF         31 uses
-TRIBUFF        3 uses
+INBUF          9 uses
+OUTBUF         36 uses
+TRIBUFF        2 uses
 
 
-Global Clock Buffers: 7
+Global Clock Buffers: 8
 
 RAM/ROM usage summary
 Total Block RAMs (RAM1K20) : 889 of 952 (93%)
 
-Total LUTs:    6243
+Total LUTs:    6362
 
 Extra resources required for RAM and MACC_PA interface logic during P&R:
 
@@ -1212,14 +1205,14 @@ RAM1K20  Interface Logic : SLEs = 32004; LUTs = 32004;
 MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
 MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
 
-Total number of SLEs after P&R:  5635 + 0 + 32004 + 0 = 37639;
-Total number of LUTs after P&R:  6243 + 0 + 32004 + 0 = 38247;
+Total number of SLEs after P&R:  5677 + 0 + 32004 + 0 = 37681;
+Total number of LUTs after P&R:  6362 + 0 + 32004 + 0 = 38366;
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:10s; Memory used current: 70MB peak: 257MB)
+At Mapper Exit (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:11s; Memory used current: 72MB peak: 259MB)
 
-Process took 0h:00m:17s realtime, 0h:00m:10s cputime
-# Sat Aug  5 22:16:39 2023
+Process took 0h:00m:18s realtime, 0h:00m:11s cputime
+# Mon Aug  7 13:00:48 2023
 
 ###########################################################]
