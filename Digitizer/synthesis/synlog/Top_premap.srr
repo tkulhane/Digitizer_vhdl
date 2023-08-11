@@ -1,4 +1,4 @@
-# Mon Aug  7 13:00:24 2023
+# Wed Aug  9 22:24:38 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -20,27 +20,28 @@ Synopsys Generic Technology Pre-mapping, Version map202109act, Build 055R, Built
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 119MB)
 
 
-Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 130MB peak: 131MB)
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 132MB)
 
 Reading constraint file: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc
 @L: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_scck.rpt 
 See clock summary report "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_scck.rpt"
-@W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":9:0:9:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+@W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+@W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 @N: MF472 |Synthesis running in Automatic Compile Point mode
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 157MB peak: 157MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 163MB peak: 163MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 157MB peak: 158MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 163MB peak: 163MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 159MB peak: 159MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 165MB peak: 165MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 159MB peak: 161MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 165MB peak: 167MB)
 
 @W: FX1183 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|User-specified initial value set for instance Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff cannot be supported due to limitations in architecture. Please remove the initial value set on the instance to avoid the warning. 
 @W: BN114 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_init_monitor_c0\pf_init_monitor_c0_0\pf_init_monitor_c0_pf_init_monitor_c0_0_pf_init_monitor.v":47:8:47:15|Removing instance vcc_inst (in view: work.PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR(verilog)) because it does not drive other instances.
@@ -50,37 +51,43 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|User-specified initial value defined for instance Controler_0.SPI_LMX_0_0.spi_master_0.txBuffer[23:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":555:8:555:9|User-specified initial value defined for instance Controler_0.Command_Decoder_0.counter[31:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":245:8:245:9|User-specified initial value defined for instance Controler_0.ADI_SPI_0.counter[8:0] is being ignored due to limitations in architecture. 
+@W: FX367 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c2\i_xcvr\pf_xcvr_erm_c2_i_xcvr_pf_xcvr.v":1390:12:1390:16|Instance LANE0 parameter type does not match module declaration.
+@W: FX367 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c2\i_xcvr\pf_xcvr_erm_c2_i_xcvr_pf_xcvr.v":1075:12:1075:16|Instance LANE1 parameter type does not match module declaration.
+@W: FX367 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c2\i_xcvr\pf_xcvr_erm_c2_i_xcvr_pf_xcvr.v":760:12:760:16|Instance LANE2 parameter type does not match module declaration.
+@W: FX367 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c2\i_xcvr\pf_xcvr_erm_c2_i_xcvr_pf_xcvr.v":444:12:444:16|Instance LANE3 parameter type does not match module declaration.
+@W: FX367 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c3\i_xcvr\pf_xcvr_erm_c3_i_xcvr_pf_xcvr.v":661:12:661:16|Instance LANE0 parameter type does not match module declaration.
+@W: FX367 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c3\i_xcvr\pf_xcvr_erm_c3_i_xcvr_pf_xcvr.v":347:12:347:16|Instance LANE1 parameter type does not match module declaration.
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":158:8:158:9|User-specified initial value defined for instance Data_Block_0.Trigger_Top_Part_0.Trigger_Main_0.Remaining_Number_Of_Samples[19:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":391:8:391:9|User-specified initial value defined for instance Data_Block_0.Trigger_Top_Part_0.Trigger_Control_0.finite_event_counter[31:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":501:8:501:9|User-specified initial value defined for instance Data_Block_0.FIFOs_Reader_0.Event_RAM_W_Address_Integer[9:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\uart_rx_protocol.vhd":503:8:503:9|User-specified initial value defined for instance UART_Protocol_1.UART_RX_Protocol_0.counter[31:0] is being ignored due to limitations in architecture. 
 
-Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 231MB peak: 231MB)
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 244MB peak: 244MB)
 
 
-Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 231MB peak: 232MB)
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 244MB peak: 245MB)
 
 
-Start optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 232MB peak: 232MB)
+Start optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 245MB peak: 245MB)
 
 NConnInternalConnection caching in on
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_c6_corefifo_c6_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_c6_corefifo_c6_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_c6_corefifo_c6_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_c6_corefifo_c6_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s_0(verilog)) has its enable tied to GND.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft_Z16_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft_Z16_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_sync_scntr_Z15_layer0_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_sync_scntr_Z15_layer0_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft_Z20_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft_Z20_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_sync_scntr_Z19_layer0_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c6\corefifo_c6_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C6_COREFIFO_C6_0_corefifo_sync_scntr_Z19_layer0_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_c0_corefifo_c0_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_c0_corefifo_c0_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_c0_corefifo_c0_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_c0_corefifo_c0_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_1(verilog)) has its enable tied to GND.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z13_layer0_1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z13_layer0_1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Removing sequential instance genblk10\.afull_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z12_layer0_1_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Removing sequential instance genblk10\.wack_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z12_layer0_1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Removing sequential instance genblk10\.aempty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z12_layer0_1_1(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z17_layer0_1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z17_layer0_1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Removing sequential instance genblk10\.afull_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z16_layer0_1_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Removing sequential instance genblk10\.wack_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z16_layer0_1_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Removing sequential instance genblk10\.aempty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z16_layer0_1_1(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\coreuart_c0\coreuart_c0_0\rtl\vlog\core\rx_async.v":206:0:206:5|Removing sequential instance overflow (in view: work.COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\coreuart_c0\coreuart_c0_0\rtl\vlog\core\rx_async.v":447:0:447:5|Removing sequential instance parity_err (in view: work.COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\coreuart_c0\coreuart_c0_0\rtl\vlog\core\rx_async.v":501:0:501:5|Removing sequential instance clear_parity_en (in view: work.COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
@@ -91,51 +98,60 @@ NConnInternalConnection caching in on
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\coreuart_c0\coreuart_c0_0\rtl\vlog\core\rx_async.v":421:0:421:5|Removing sequential instance rx_parity_calc (in view: work.COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_c0_corefifo_c0_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_0(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_0(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_c0_corefifo_c0_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_0(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s_1_0(verilog)) has its enable tied to GND.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z13_layer0_1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z13_layer0_1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Removing sequential instance genblk10\.wack_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z12_layer0_1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Removing sequential instance genblk10\.aempty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z12_layer0_1_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_unit.vhd":78:8:78:9|Sequential instance Data_Block_0.Input_Data_Part_0.Trigger_Unit_0.Input_Data_1_0[0] is reduced to a combinational gate by constant propagation.
-@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_unit.vhd":78:8:78:9|Sequential instance Data_Block_0.Input_Data_Part_0.Trigger_Unit_0.Input_Data_1_0[1] is reduced to a combinational gate by constant propagation.
-@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_unit.vhd":78:8:78:9|Sequential instance Data_Block_0.Input_Data_Part_0.Trigger_Unit_0.Input_Data_1_0[2] is reduced to a combinational gate by constant propagation.
-@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_unit.vhd":78:8:78:9|Sequential instance Data_Block_0.Input_Data_Part_0.Trigger_Unit_0.Output_Sample_Part_2[0] is reduced to a combinational gate by constant propagation.
-@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_unit.vhd":78:8:78:9|Sequential instance Data_Block_0.Input_Data_Part_0.Trigger_Unit_0.Output_Sample_Part_2[1] is reduced to a combinational gate by constant propagation.
-@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_unit.vhd":78:8:78:9|Sequential instance Data_Block_0.Input_Data_Part_0.Trigger_Unit_0.Output_Sample_Part_2[2] is reduced to a combinational gate by constant propagation.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_1(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_2(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_1(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_2(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_3(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_3_4(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z7_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z6_layer0_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z10_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z10_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z9_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z17_layer0_1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z17_layer0_1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Removing sequential instance genblk10\.wack_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z16_layer0_1_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c0\corefifo_c0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Removing sequential instance genblk10\.aempty_r (in view: work.COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z16_layer0_1_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":380:12:380:26|Removing instance COREFIFO_C9_0_0 (in view: work.Data_Block(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":396:12:396:26|Removing instance COREFIFO_C9_0_1 (in view: work.Data_Block(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":412:12:412:26|Removing instance COREFIFO_C9_0_2 (in view: work.Data_Block(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":428:12:428:28|Removing instance COREFIFO_C9_0_2_0 (in view: work.Data_Block(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":444:12:444:28|Removing instance COREFIFO_C9_0_2_1 (in view: work.Data_Block(verilog)) because it does not drive other instances.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_1.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_1.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_2.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_2.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_3.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORELANEMSTR_3.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_CORELANEMSTR_1.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_CORELANEMSTR_1.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator.vhd":66:8:66:9|Removing sequential instance Test_Data_0_1[11:3] (in view: work.Test_Generator(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator.vhd":66:8:66:9|Removing sequential instance Test_Data_1[11:0] (in view: work.Test_Generator(rtl)) of type view:PrimLib.dffpatr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c9\corefifo_c9_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Removing sequential instance genblk10\.afull_r (in view: work.COREFIFO_C9_COREFIFO_C9_0_corefifo_async_Z6_layer0_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c9\corefifo_c9_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Removing sequential instance genblk10\.aempty_r (in view: work.COREFIFO_C9_COREFIFO_C9_0_corefifo_async_Z6_layer0_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_1(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_2(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_1(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_2(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_3(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_3_4(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z9_layer0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":587:9:587:14|Removing sequential instance genblk8\.afull_r (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z8_layer0_0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance reg_valid_r (in view: work.COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z14_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_fwft.v":355:3:355:8|Removing sequential instance empty_r (in view: work.COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z14_layer0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":446:3:446:8|Removing sequential instance genblk6\.almostemptyi (in view: work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z13_layer0(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_lsram_top.v":212:12:212:51|Removing sequential instance COREFIFO_C5_COREFIFO_C5_0_LSRAM_top_R0C2 (in view: work.COREFIFO_C5_COREFIFO_C5_0_LSRAM_top(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_lsram_top.v":387:12:387:51|Removing sequential instance COREFIFO_C5_COREFIFO_C5_0_LSRAM_top_R0C3 (in view: work.COREFIFO_C5_COREFIFO_C5_0_LSRAM_top(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_lsram_top.v":262:12:262:51|Removing sequential instance COREFIFO_C5_COREFIFO_C5_0_LSRAM_top_R0C4 (in view: work.COREFIFO_C5_COREFIFO_C5_0_LSRAM_top(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
@@ -176,18 +192,13 @@ NConnInternalConnection caching in on
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":2247:12:2247:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R3C47 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":2331:12:2331:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R2C28 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":2478:12:2478:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R2C14 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":2775:12:2775:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R2C47 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":3003:12:3003:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R1C45 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":3033:12:3033:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R1C46 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":3090:12:3090:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R3C14 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 
 Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_premap.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
 @N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\usb_3_protocol\usb_3_protocol.v":197:23:197:46|Removing instance ftdi_to_fifo_interface_0 (in view: work.USB_3_Protocol(verilog)) because it does not drive other instances.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance Controler_0.gpio_controler_0.Inputs_Last[5] because it is equivalent to instance Controler_0.gpio_controler_0.Inputs_Last[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 233MB peak: 233MB)
+Finished optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 245MB peak: 245MB)
 
 @N: FP130 |Promoting Net Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_arst on CLKINT  I_2 
 @N: FP130 |Promoting Net Controler_0.Reset_Controler_0.INT_DataFifo_Reset_N_arst on CLKINT  I_2 
@@ -197,7 +208,7 @@ Finished optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time e
 @N: FX1185 |Applying syn_allowed_resources blockrams=1 on compile point Controler 
 @N: FX1184 |Applying syn_allowed_resources blockrams=952 on top level netlist Top 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 245MB peak: 245MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 259MB peak: 259MB)
 
 
 
@@ -207,16 +218,31 @@ Clock Summary
           Start                                                               Requested     Requested     Clock                                                                    Clock                     Clock
 Level     Clock                                                               Frequency     Period        Type                                                                     Group                     Load 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared                                                                 default_clkgroup          1    
-1 .         Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0             10.0 MHz      100.000       generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup          6347 
+0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared                                                                 default_clkgroup          2    
+1 .         Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0             40.0 MHz      25.000        generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup          194  
+1 .         Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1             80.0 MHz      12.500        generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup          182  
+                                                                                                                                                                                                                  
+0 -       Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 250.0 MHz     4.000         declared                                                                 default_clkgroup          73   
+                                                                                                                                                                                                                  
+0 -       Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 250.0 MHz     4.000         declared                                                                 default_clkgroup          5    
+                                                                                                                                                                                                                  
+0 -       Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 250.0 MHz     4.000         declared                                                                 default_clkgroup          5    
+                                                                                                                                                                                                                  
+0 -       Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 250.0 MHz     4.000         declared                                                                 default_clkgroup          5    
+                                                                                                                                                                                                                  
+0 -       Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 250.0 MHz     4.000         declared                                                                 default_clkgroup          5    
+                                                                                                                                                                                                                  
+0 -       Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 250.0 MHz     4.000         declared                                                                 default_clkgroup          5    
                                                                                                                                                                                                                   
 0 -       System                                                              100.0 MHz     10.000        system                                                                   system_clkgroup           0    
                                                                                                                                                                                                                   
-0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_3     1112 
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_3     6442 
+                                                                                                                                                                                                                  
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_4     1112 
                                                                                                                                                                                                                   
 0 -       Top|FTDI_CLK                                                        100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_1     331  
                                                                                                                                                                                                                   
-0 -       Synchronizer_1|Chain_inferred_clock[1]                              100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_2     2    
+0 -       Synchronizer_3|Chain_inferred_clock[1]                              100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_2     2    
 ==================================================================================================================================================================================================================
 
 
@@ -224,30 +250,46 @@ Level     Clock                                                               Fr
 Clock Load Summary
 ***********************
 
-                                                                    Clock     Source                                                                Clock Pin                                                                                                                                  Non-clock Pin                                                    Non-clock Pin                                              
-Clock                                                               Load      Pin                                                                   Seq Example                                                                                                                                Seq Example                                                      Comb Example                                               
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0                                                                                 -                                                                Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
-Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               6347      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C1.B_CLK     -                                                                Controler_0.SPI_LMX_0_0.spi_master_0.un1_clk.I[0](inv)     
-                                                                                                                                                                                                                                                                                                                                                                                                                           
-System                                                              0         -                                                                     -                                                                                                                                          -                                                                -                                                          
-                                                                                                                                                                                                                                                                                                                                                                                                                           
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                                                                                            -                                                                Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
-                                                                                                                                                                                                                                                                                                                                                                                                                           
-Top|FTDI_CLK                                                        331       FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.first_byte.C                                                                                       -                                                                I_1.A(CLKINT)                                              
-                                                                                                                                                                                                                                                                                                                                                                                                                           
-Synchronizer_1|Chain_inferred_clock[1]                              2         USB_3_Protocol_0.Synchronizer_0.Chain[1:0].Q[1](dffr)                 USB_3_Protocol_0.Synchronizer_0.Chain[1:0].C                                                                                               USB_3_Protocol_0.ft601_fifo_interface_0.actual_state[0:11].R     USB_3_Protocol_0.ft601_fifo_interface_0.I_1.I[0](inv)      
-===========================================================================================================================================================================================================================================================================================================================================================================================================================
+                                                                    Clock     Source                                                                Clock Pin                                                                                                                                  Non-clock Pin                                                    Non-clock Pin                                                   
+Clock                                                               Load      Pin                                                                   Seq Example                                                                                                                                Seq Example                                                      Comb Example                                                    
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 2         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0.REF_CLK_0                                                                                 -                                                                Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)     
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               194       Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0.OUT0(PLL)            Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_LANE0_SD_DFN1.CLK                                                                                     -                                                                Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.clkint_0.I(BUFG)          
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               182       Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0.OUT1(PLL)            Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_CORERFD_1.history[1:0].C                                                                              Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE1.RX_REF_CLK            Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.clkint_4.I(BUFG)          
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 73        Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE0.RX_CLK_R(XCVR_8B10B)       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORERFD_0.u_sicr.Xclk_in_rotator.count[1:0].C                                                         -                                                                Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE0_RX_rclkint.A(RCLKINT)
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 5         Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE1.RX_CLK_R(XCVR_8B10B)       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORERFD_1.u_sicr.Xclk_in_rotator.count[1:0].C                                                         -                                                                Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE1_RX_rclkint.A(RCLKINT)
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 5         Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE2.RX_CLK_R(XCVR_8B10B)       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORERFD_2.u_sicr.Xclk_in_rotator.count[1:0].C                                                         -                                                                Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE2_RX_rclkint.A(RCLKINT)
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 5         Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE3.RX_CLK_R(XCVR_8B10B)       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR_CORERFD_3.u_sicr.Xclk_in_rotator.count[1:0].C                                                         -                                                                Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE3_RX_rclkint.A(RCLKINT)
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 5         Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE0.RX_CLK_R(XCVR_8B10B)       Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_CORERFD_0.u_sicr.Xclk_in_rotator.count[1:0].C                                                         -                                                                Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE0_RX_rclkint.A(RCLKINT)
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 5         Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE1.RX_CLK_R(XCVR_8B10B)       Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR_CORERFD_1.u_sicr.Xclk_in_rotator.count[1:0].C                                                         -                                                                Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE1_RX_rclkint.A(RCLKINT)
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+System                                                              0         -                                                                     -                                                                                                                                          -                                                                -                                                               
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6442      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C1.B_CLK     -                                                                OUTBUF_DIFF_0_0_0.D(OUTBUF_DIFF)                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                                                                                            -                                                                Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)          
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Top|FTDI_CLK                                                        331       FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.first_byte.C                                                                                       -                                                                I_1.A(CLKINT)                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                
+Synchronizer_3|Chain_inferred_clock[1]                              2         USB_3_Protocol_0.Synchronizer_0.Chain[1:0].Q[1](dffr)                 USB_3_Protocol_0.Synchronizer_0.Chain[1:0].C                                                                                               USB_3_Protocol_0.ft601_fifo_interface_0.actual_state[0:11].R     USB_3_Protocol_0.ft601_fifo_interface_0.I_1.I[0](inv)           
+================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 @W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_nstagessync.v":71:0:71:5|Found inferred clock Top|FTDI_CLK which controls 331 sequential elements including USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_mem_reg\[1\][10:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock Synchronizer_1|Chain_inferred_clock[1] which controls 2 sequential elements including USB_3_Protocol_0.Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock Synchronizer_3|Chain_inferred_clock[1] which controls 2 sequential elements including USB_3_Protocol_0.Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 6442 sequential elements including Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock which controls 1112 sequential elements including Clock_Reset_0.Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 227MB peak: 246MB)
+Starting constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 239MB peak: 260MB)
 
 Encoding state machine state_reg[0:5] (in view: work.Reset_Controler(rtl))
 original code -> new code
@@ -328,23 +370,6 @@ original code -> new code
    00100 -> 00100
    01000 -> 01000
    10000 -> 10000
-Encoding state machine state_reg[0:5] (in view: work.Trigger_Control(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
-original code -> new code
-   0000001 -> 0000001
-   0000010 -> 0000010
-   0000100 -> 0000100
-   0001000 -> 0001000
-   0010000 -> 0010000
-   0100000 -> 0100000
-   1000000 -> 1000000
 Encoding state machine xmit_state[5:0] (in view: work.COREUART_C0_COREUART_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s_0(verilog))
 original code -> new code
    00000000000000000000000000000000 -> 000001
@@ -479,18 +504,125 @@ original code -> new code
    001000000000 -> 001000000000
    010000000000 -> 010000000000
    100000000000 -> 100000000000
+Encoding state machine rmfsm[4:0] (in view: work.CORELANEMSTRmode2_0(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine rmfsm[4:0] (in view: work.CORELANEMSTRmode2_1(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine rmfsm[4:0] (in view: work.CORELANEMSTRmode2_2(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine rmfsm[4:0] (in view: work.CORELANEMSTRmode2_3(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z10_layer0_3(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   110 -> 010000
+   111 -> 100000
+Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z10_layer0_2(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   110 -> 010000
+   111 -> 100000
+Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z10_layer0_1(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   110 -> 010000
+   111 -> 100000
+Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z10_layer0_0(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   110 -> 010000
+   111 -> 100000
+Encoding state machine rmfsm[4:0] (in view: work.CORELANEMSTRmode2_4(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine rmfsm[4:0] (in view: work.CORELANEMSTRmode2_5(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z10_layer0_5(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   110 -> 010000
+   111 -> 100000
+Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z10_layer0_4(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   110 -> 010000
+   111 -> 100000
+Encoding state machine state_reg[0:5] (in view: work.Trigger_Control(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 234MB peak: 246MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 247MB peak: 260MB)
 
 @W: MF511 |Found issues with constraints. Please check constraint checker report "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_cck.rpt" .
 
-Finished constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 241MB peak: 246MB)
+Finished constraint checker (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 255MB peak: 260MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 149MB peak: 246MB)
+At Mapper Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 156MB peak: 260MB)
 
-Process took 0h:00m:04s realtime, 0h:00m:04s cputime
-# Mon Aug  7 13:00:29 2023
+Process took 0h:00m:05s realtime, 0h:00m:05s cputime
+# Wed Aug  9 22:24:44 2023
 
 ###########################################################]

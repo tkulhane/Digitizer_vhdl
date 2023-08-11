@@ -3,6 +3,8 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C1\PF_CCC_C1_0\PF_CCC_C1_PF_CCC_C1_0_PF_CCC.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C1\PF_CCC_C1.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_OSC_C0\PF_OSC_C0_0\PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v}
@@ -42,6 +44,16 @@ read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\s
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\SPI_LMX\SPI_LMX.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\corefifo_fwft.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\corefifo_sync_scntr.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\corefifo_sync.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\corefifo_NstagesSync.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\corefifo_grayToBinConv.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\corefifo_async.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\COREFIFO_C9_COREFIFO_C9_0_LSRAM_top.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\COREFIFO_C9_COREFIFO_C9_0_ram_wrapper.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9_0\rtl\vlog\core\COREFIFO.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C9\COREFIFO_C9.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7_0\PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7.v}
@@ -61,6 +73,29 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Input_Data_Part\Input_Data_Part.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELCKMGT\2.0.100\rtl\vlog\core\CORELCKMGT.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDgrycnt.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDbincnt.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsmplcnt.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDfrqerrarb.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDplsgen.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDshcnt.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsyncen.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsync.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsicr.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFD.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_XCVR_APBLINK_V\1.1.104\hdl\PF_XCVR_APBLINK_V.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C2\I_XCVR\PF_XCVR_ERM_C2_I_XCVR_PF_XCVR.v}
+ add_include_path  {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode0.v}
+ add_include_path  {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode1.v}
+ add_include_path  {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode2.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTR.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C2\PF_XCVR_ERM_C2.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C3\I_XCVR\PF_XCVR_ERM_C3_I_XCVR_PF_XCVR.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C3\PF_XCVR_ERM_C3.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C5\PF_DPSRAM_C5_0\PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C5\PF_DPSRAM_C5.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_Decoder.vhd}

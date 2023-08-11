@@ -13,7 +13,7 @@ Hostname: DESKTOP-TDPVUTD
 
 Implementation : synthesis
 
-# Written on Mon Aug  7 13:00:29 2023
+# Written on Wed Aug  9 22:24:43 2023
 
 ##### DESIGN INFO #######################################################
 
@@ -25,7 +25,7 @@ Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\design
 
 ##### SUMMARY ############################################################
 
-Found 1 issues in 1 out of 13 constraints
+Found 2 issues in 2 out of 21 constraints
 
 
 ##### DETAILS ############################################################
@@ -37,29 +37,87 @@ Clock Relationships
 
 Starting                                                            Ending                                                              |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                                              Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     100.000          |     No paths         |     No paths         |     No paths                         
-Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     100.000          |     100.000          |     50.000           |     50.000                           
-Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               Top|FTDI_CLK                                                        |     Diff grp         |     No paths         |     No paths         |     No paths                         
-Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               Synchronizer_1|Chain_inferred_clock[1]                              |     Diff grp         |     No paths         |     No paths         |     No paths                         
-Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
-Top|FTDI_CLK                                                        Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     Diff grp         |     No paths         |     No paths         |     No paths                         
+System                                                              System                                                              |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                                              Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               |     25.000           |     No paths         |     No paths         |     No paths                         
+System                                                              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     0.500            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     0.500            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     0.500            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     0.500            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     0.500            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 |     4.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     0.500            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               System                                                              |     25.000           |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               |     25.000           |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     12.500           |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               |     12.500           |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     12.500           |     No paths         |     No paths         |     No paths                         
 Top|FTDI_CLK                                                        Top|FTDI_CLK                                                        |     10.000           |     No paths         |     No paths         |     No paths                         
-Synchronizer_1|Chain_inferred_clock[1]                              Top|FTDI_CLK                                                        |     Diff grp         |     No paths         |     No paths         |     No paths                         
-Synchronizer_1|Chain_inferred_clock[1]                              Synchronizer_1|Chain_inferred_clock[1]                              |     10.000           |     No paths         |     No paths         |     No paths                         
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0               |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Top|FTDI_CLK                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Synchronizer_3|Chain_inferred_clock[1]                              Top|FTDI_CLK                                                        |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Synchronizer_3|Chain_inferred_clock[1]                              Synchronizer_3|Chain_inferred_clock[1]                              |     10.000           |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     Top|FTDI_CLK                                                        |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     Synchronizer_3|Chain_inferred_clock[1]                              |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     10.000           |     10.000           |     5.000            |     5.000                            
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
 ===================================================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
 
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":8:0:8:0|Paths from clock (Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R:r) to clock (Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1:r) are overconstrained because the required time of 0.50 ns is too small. 
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":9:0:9:0|Paths from clock (Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R:r) to clock (Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1:r) are overconstrained because the required time of 0.50 ns is too small. 
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":10:0:10:0|Paths from clock (Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R:r) to clock (Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1:r) are overconstrained because the required time of 0.50 ns is too small. 
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":11:0:11:0|Paths from clock (Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R:r) to clock (Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1:r) are overconstrained because the required time of 0.50 ns is too small. 
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":12:0:12:0|Paths from clock (Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R:r) to clock (Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1:r) are overconstrained because the required time of 0.50 ns is too small. 
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":13:0:13:0|Paths from clock (Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R:r) to clock (Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1:r) are overconstrained because the required time of 0.50 ns is too small. 
+
+
 Unconstrained Start/End Points
 ******************************
 
+p:ADC_FD
+p:ADC_GPIO_0
+p:ADC_GPIO_1
+p:ADC_GPIO_2
+p:ADC_GPIO_3
+p:ADC_GPIO_4
+p:ADC_LDO_PWR_GOOD
+p:ADC_PWDN
+p:ADC_PWR_RUN
 p:ADC_sclk
 p:ADC_sdio (bidir end point)
 p:ADC_sdio (bidir start point)
 p:ADC_ss_n
+p:BOARD_PWR_RUN
 p:BTN_1
 p:BTN_2
 p:BTN_3
@@ -151,10 +209,30 @@ p:FTDI_nRD
 p:FTDI_nRXF
 p:FTDI_nTXE
 p:FTDI_nWR
+p:GPIO_0
+p:GPIO_1
+p:HMC_GPIO_0
+p:HMC_GPIO_1
+p:HMC_GPIO_2
+p:HMC_GPIO_3
+p:HMC_SYNC
 p:HMC_sclk
 p:HMC_sdio (bidir end point)
 p:HMC_sdio (bidir start point)
 p:HMC_ss_n
+p:LANE0_RXD_N
+p:LANE0_RXD_P
+p:LANE1_RXD_N
+p:LANE1_RXD_P
+p:LANE2_RXD_N
+p:LANE2_RXD_P
+p:LANE3_RXD_N
+p:LANE3_RXD_P
+p:LANE4_RXD_N
+p:LANE4_RXD_P
+p:LANE5_RXD_N
+p:LANE5_RXD_P
+p:LDO_PWR_GOOD
 p:LED_1
 p:LED_2
 p:LED_3
@@ -169,6 +247,15 @@ p:LMX2_sclk
 p:LMX2_ss_n
 p:RX_0
 p:RX_1
+p:SMPS_PWR_GOOD
+p:SYNCINB_N
+p:SYNCINB_P
+p:SYNC_IN_N
+p:SYNC_IN_P
+p:SYNC_OUT_1_N
+p:SYNC_OUT_1_P
+p:SYNC_OUT_2_N
+p:SYNC_OUT_2_P
 p:TX_0
 p:TX_1
 
@@ -176,8 +263,10 @@ p:TX_1
 Inapplicable constraints
 ************************
 
-create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 -multiply_by 11 -divide_by 320 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1 }]
-	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":9:0:9:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 -multiply_by 5 -divide_by 4 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0 }]
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 -multiply_by 15 -divide_by 436 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1 }]
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 
 Applicable constraints with issues
 **********************************
@@ -189,7 +278,7 @@ Constraints with matching wildcard expressions
 **********************************************
 
 set_false_path -to [get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":12:0:12:0|expression "[get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":20:0:20:0|expression "[get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -213,7 +302,7 @@ set_false_path -to [get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.ge
 		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":10:0:10:0|expression "[get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":18:0:18:0|expression "[get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -237,7 +326,7 @@ set_false_path -to [get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0
 		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":13:0:13:0|expression "[get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":21:0:21:0|expression "[get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -261,7 +350,7 @@ set_false_path -to [get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.ge
 		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":11:0:11:0|expression "[get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":19:0:19:0|expression "[get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -285,7 +374,7 @@ set_false_path -to [get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":22:0:22:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
 		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
 		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]
@@ -309,7 +398,7 @@ set_false_path -to [get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.gen
 		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":23:0:23:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
 		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
 		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]

@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Mon Aug  7 12:26:56 2023 
+# Date generated: Wed Aug  9 21:23:44 2023 
 
 
 # 
@@ -57,6 +57,69 @@ set_iobank -bank_name Bank7  \
 # User Locked I/O settings
 # 
 
+set_io -port_name ADC_FD  \
+    -pin_name G11         \
+    -fixed true           \
+    -io_std LVCMOS33      \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_0  \
+    -pin_name G14             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_1  \
+    -pin_name K6              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_2  \
+    -pin_name D9              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_3  \
+    -pin_name G12             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_4  \
+    -pin_name H14             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_LDO_PWR_GOOD  \
+    -pin_name E11                   \
+    -fixed true                     \
+    -io_std LVCMOS33                \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_PWDN  \
+    -pin_name A5            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_PWR_RUN  \
+    -pin_name A8               \
+    -fixed true                \
+    -io_std LVCMOS33           \
+    -DIRECTION OUTPUT
+
+
 set_io -port_name ADC_sclk  \
     -pin_name B5            \
     -fixed true             \
@@ -78,6 +141,13 @@ set_io -port_name ADC_ss_n  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name BOARD_PWR_RUN  \
+    -pin_name A7                 \
+    -fixed true                  \
+    -io_std LVCMOS33             \
+    -DIRECTION OUTPUT
+
+
 set_io -port_name BTN_1  \
     -pin_name T4         \
     -fixed true          \
@@ -86,12 +156,18 @@ set_io -port_name BTN_1  \
     -DIRECTION INPUT
 
 
-set_io -port_name BTN_2  \
-    -pin_name Y8         \
-    -fixed true          \
-    -io_std LVCMOS33     \
-    -RES_PULL None       \
-    -DIRECTION INPUT
+set_io -port_name CLK_OUT_N  \
+    -pin_name A10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name CLK_OUT_P  \
+    -pin_name B10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
 
 
 set_io -port_name DBGport_0  \
@@ -147,6 +223,34 @@ set_io -port_name DBGport_7  \
     -pin_name V4             \
     -fixed true              \
     -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name EXT_ADC_Reset_N  \
+    -pin_name G9                   \
+    -fixed true                    \
+    -io_std LVCMOS33               \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name EXT_HMC_Reset_N  \
+    -pin_name J14                  \
+    -fixed true                    \
+    -io_std LVCMOS33               \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name EXT_LMX1_Reset_N  \
+    -pin_name J19                   \
+    -fixed true                     \
+    -io_std LVCMOS33                \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name EXT_LMX2_Reset_N  \
+    -pin_name K7                    \
+    -fixed true                     \
+    -io_std LVCMOS33                \
     -DIRECTION OUTPUT
 
 
@@ -466,6 +570,55 @@ set_io -port_name FTDI_nWR  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name GPIO_0  \
+    -pin_name L19         \
+    -fixed true           \
+    -io_std LVCMOS33      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name GPIO_1  \
+    -pin_name L18         \
+    -fixed true           \
+    -io_std LVCMOS33      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HMC_GPIO_0  \
+    -pin_name H12             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name HMC_GPIO_1  \
+    -pin_name H13             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name HMC_GPIO_2  \
+    -pin_name G16             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name HMC_GPIO_3  \
+    -pin_name G15             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name HMC_SYNC  \
+    -pin_name J13           \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
 set_io -port_name HMC_sclk  \
     -pin_name J6            \
     -fixed true             \
@@ -486,6 +639,13 @@ set_io -port_name HMC_ss_n  \
     -fixed true             \
     -io_std LVCMOS33        \
     -DIRECTION OUTPUT
+
+
+set_io -port_name LDO_PWR_GOOD  \
+    -pin_name E10               \
+    -fixed true                 \
+    -io_std LVCMOS33            \
+    -DIRECTION INPUT
 
 
 set_io -port_name LED_1  \
@@ -586,6 +746,69 @@ set_io -port_name RX_1  \
     -DIRECTION INPUT
 
 
+set_io -port_name SMPS_PWR_GOOD  \
+    -pin_name H2                 \
+    -fixed true                  \
+    -io_std LVCMOS33             \
+    -DIRECTION INPUT
+
+
+set_io -port_name SYNCINB_N  \
+    -pin_name F10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNCINB_P  \
+    -pin_name G10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_IN_N  \
+    -pin_name E12            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION INPUT
+
+
+set_io -port_name SYNC_IN_P  \
+    -pin_name F12            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION INPUT
+
+
+set_io -port_name SYNC_OUT_1_N  \
+    -pin_name M17               \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_OUT_1_P  \
+    -pin_name L17               \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_OUT_2_N  \
+    -pin_name M7                \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_OUT_2_P  \
+    -pin_name N8                \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION OUTPUT
+
+
 set_io -port_name TX_0  \
     -pin_name V9        \
     -fixed true         \
@@ -617,4 +840,76 @@ set_io -port_name TX_1  \
 #Ports using Dedicated Pins
 
 #
+
+set_io -port_name LANE0_RXD_N  \
+    -pin_name M30              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE0_RXD_P  \
+    -pin_name M29              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE1_RXD_N  \
+    -pin_name P30              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE1_RXD_P  \
+    -pin_name P29              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE2_RXD_N  \
+    -pin_name R32              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE2_RXD_P  \
+    -pin_name R31              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE3_RXD_N  \
+    -pin_name T30              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE3_RXD_P  \
+    -pin_name T29              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE4_RXD_N  \
+    -pin_name G32              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE4_RXD_P  \
+    -pin_name G31              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE5_RXD_N  \
+    -pin_name J32              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE5_RXD_P  \
+    -pin_name J31              \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
 

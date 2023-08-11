@@ -15,10 +15,11 @@ Incremental              : OFF
 Inter-clock optimization : ON
 
 INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\io\user.pdc. 0 error(s) and 0 warning(s)
+INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\fp\user.pdc. 0 error(s) and 0 warning(s)
 
  Running Timing based Global Demotion. 
-        Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
-        Moved 52 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+        Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
+        Moved 56 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
    - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
@@ -26,7 +27,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Timing based Global Demotion completed successfully. 
 
 Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 77 fixed I/O macros, 4 unfixed I/O macros
+Info:  I/O Bank and Globals Assigner identified 104 fixed I/O macros, 0 unfixed I/O macros
 Info:  I/O Bank and Globals Assigner identified bank 'Bank0' as being fixed at VCCI:1.35V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank1' as being fixed at VCCI:1.80V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank2' as being fixed at VCCI:3.30V VCCR:n/a
@@ -37,10 +38,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 4 seconds
+Total time spent in I/O Bank and Globals Assigner: 5 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Mon Aug  7 13:03:42 2023
+Design: Top                             Started: Wed Aug  9 22:28:54 2023
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -48,53 +49,53 @@ Placing ...
 Improving placement ...
 
 CDC Report:
-    Total number of CDC synchronizer driver/sink pairs     : 264
+    Total number of CDC synchronizer driver/sink pairs     : 308
     Maximum distance between CDC synchronizer driver & sink:   1 cluster(s)
 
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 9 seconds
-Placement                : 46 seconds
-Improvement              : 25 seconds
+Clustering (1 pass)      : 7 seconds
+Placement                : 41 seconds
+Improvement              : 35 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Mon Aug  7 13:05:51 2023
-Total CPU Time:     00:02:46            Total Elapsed Time: 00:02:09
-Total Memory Usage: 1719.3 Mbytes
+Finished: Wed Aug  9 22:31:03 2023
+Total CPU Time:     00:02:45            Total Elapsed Time: 00:02:09
+Total Memory Usage: 1763.4 Mbytes
                         o - o - o - o - o - o
 
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Mon Aug  7 13:06:14 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Aug  9 22:31:25 2023
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Mon Aug  7 13:07:25 2023
-Total CPU Time:     00:02:07            Total Elapsed Time: 00:01:11
-Total Memory Usage: 5371.2 Mbytes
+Finished: Wed Aug  9 22:32:26 2023
+Total CPU Time:     00:02:15            Total Elapsed Time: 00:01:01
+Total Memory Usage: 5391.1 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 38601 | 299544 | 12.89      |
-| DFF           | 37682 | 299544 | 12.58      |
+| 4LUT          | 40335 | 299544 | 13.47      |
+| DFF           | 38585 | 299544 | 12.88      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 39749 | 299544 | 13.27      |
+| Logic Element | 41645 | 299544 | 13.90      |
 +---------------+-------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+
 | Type   | Count | Percentage |
 +--------+-------+------------+
-| Locked |  77   | 95.06%     |
-| Placed |  4    | 4.94%      |
+| Locked |  109  | 100.00%    |
+| Placed |  0    | 0.00%      |
 +--------+-------+------------+
 
 Completed writing pin report files.

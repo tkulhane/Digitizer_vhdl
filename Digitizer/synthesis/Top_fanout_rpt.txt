@@ -5,13 +5,22 @@ CLOCK GLOBAL THRESHOLD - 2
 ASYNC GLOBAL THRESHOLD - 800
 GLOBAL THRESHOLD - 5000
 
-NET NAME                      CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0_Main_CLOCK      6030            0                   0              6030             YES                  
-Clock_Reset_0_UART_CLOCK      1100            0                   0              1100             YES                  
-FTDI_CLK                      323             0                   0              323              YES                  
-FTDI_RESET_N_c                2               0                   1              3                YES                  
-dff_arst                      0               3021                0              3021             YES                  
-Chain_arst1                   0               932                 0              932              YES                  
-INT_DataFifo_Reset_N_arst     0               882                 0              882              YES                  
-=======================================================================================================================
+NET NAME                                         CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
+------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0_Main_CLOCK                         6158            0                   1              6159             YES                  
+Clock_Reset_0_UART_CLOCK                         1100            0                   0              1100             YES                  
+FTDI_CLK                                         323             0                   0              323              YES                  
+Clock_Reset_0_XCVR_CTRL_Clock                    194             0                   8              202              YES                  
+Clock_Reset_0_XCVR_REF_Clock                     182             0                   6              188              YES                  
+Data_Block_0.PF_XCVR_ERM_C2_0_LANE0_RX_CLK_R     73              0                   0              73               YES                  
+Data_Block_0.PF_XCVR_ERM_C2_0.LANE3_RX_CLK_R     5               0                   0              5                YES                  
+Data_Block_0.PF_XCVR_ERM_C3_0.LANE1_RX_CLK_R     5               0                   0              5                YES                  
+Data_Block_0.PF_XCVR_ERM_C3_0.LANE0_RX_CLK_R     5               0                   0              5                YES                  
+Data_Block_0.PF_XCVR_ERM_C2_0.LANE2_RX_CLK_R     5               0                   0              5                YES                  
+Data_Block_0.PF_XCVR_ERM_C2_0.LANE1_RX_CLK_R     5               0                   0              5                YES                  
+FTDI_RESET_N_c                                   2               0                   1              3                YES                  
+Clock_Reset_0.PF_OSC_C0_0_RCOSC_160MHZ_GL        2               0                   0              2                YES                  
+dff_arst                                         0               3146                0              3146             YES                  
+Chain_arst1                                      0               932                 0              932              YES                  
+INT_DataFifo_Reset_N_arst                        0               882                 0              882              YES                  
+==========================================================================================================================================
