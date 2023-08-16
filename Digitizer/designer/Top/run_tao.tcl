@@ -148,22 +148,22 @@ read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\U
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\UART_TX_Protocol.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\mko.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\UART_Protocol\UART_Protocol.v}
-read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_fwft.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_sync_scntr.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_sync.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_NstagesSync.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_grayToBinConv.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_async.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_fwft.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_LSRAM_top.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7.v}
-read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_fwft.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_sync_scntr.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_sync.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_NstagesSync.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_grayToBinConv.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_async.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_fwft.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO_C8_COREFIFO_C8_0_LSRAM_top.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO_C8_COREFIFO_C8_0_ram_wrapper.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO.v}
@@ -175,5 +175,6 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 set_top_level {Top}
 map_netlist
 read_sdc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.sdc}
+read_sdc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\user1.sdc}
 check_constraints {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\synthesis_sdc_errors.log}
 write_fdc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc}

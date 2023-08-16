@@ -1,7 +1,8 @@
 # Microsemi Corp.
-# Date: 2023-Aug-09 22:24:01
+# Date: 2023-Aug-16 14:41:44
 # This file was generated based on the following SDC source files:
 #   C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/constraint/Top_derived_constraints.sdc
+#   C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/constraint/user1.sdc
 #
 
 create_clock -name {Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK} -period 6.25 [ get_pins { Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK } ]
@@ -11,6 +12,7 @@ create_clock -name {Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R} -period
 create_clock -name {Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R} -period 4 [ get_pins { Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE3.RX_CLK_R } ]
 create_clock -name {Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R} -period 4 [ get_pins { Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE0.RX_CLK_R } ]
 create_clock -name {Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R} -period 4 [ get_pins { Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE1.RX_CLK_R } ]
+create_clock -name {FTDI_CLK} -period 10 -waveform {0 5 } [ get_ports { FTDI_CLK } ]
 create_generated_clock -name {Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0} -multiply_by 5 -divide_by 4 -source [ get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 } ] [ get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0 } ]
 create_generated_clock -name {Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1} -multiply_by 15 -divide_by 436 -source [ get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 } ] [ get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1 } ]
 create_generated_clock -name {Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0} -divide_by 4 -source [ get_pins { Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0.REF_CLK_0 } ] [ get_pins { Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0.OUT0 } ]

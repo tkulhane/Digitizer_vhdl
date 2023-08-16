@@ -27,7 +27,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Timing based Global Demotion completed successfully. 
 
 Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 104 fixed I/O macros, 0 unfixed I/O macros
+Info:  I/O Bank and Globals Assigner identified 65 fixed I/O macros, 43 unfixed I/O macros
 Info:  I/O Bank and Globals Assigner identified bank 'Bank0' as being fixed at VCCI:1.35V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank1' as being fixed at VCCI:1.80V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank2' as being fixed at VCCI:3.30V VCCR:n/a
@@ -38,10 +38,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 5 seconds
+Total time spent in I/O Bank and Globals Assigner: 4 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Wed Aug  9 22:28:54 2023
+Design: Top                             Started: Wed Aug 16 14:53:09 2023
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -55,47 +55,47 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 7 seconds
-Placement                : 41 seconds
-Improvement              : 35 seconds
+Clustering (1 pass)      : 6 seconds
+Placement                : 43 seconds
+Improvement              : 36 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Wed Aug  9 22:31:03 2023
-Total CPU Time:     00:02:45            Total Elapsed Time: 00:02:09
-Total Memory Usage: 1763.4 Mbytes
+Finished: Wed Aug 16 14:55:22 2023
+Total CPU Time:     00:02:51            Total Elapsed Time: 00:02:13
+Total Memory Usage: 1765.3 Mbytes
                         o - o - o - o - o - o
 
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Aug  9 22:31:25 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Aug 16 14:55:47 2023
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Wed Aug  9 22:32:26 2023
-Total CPU Time:     00:02:15            Total Elapsed Time: 00:01:01
-Total Memory Usage: 5391.1 Mbytes
+Finished: Wed Aug 16 14:56:48 2023
+Total CPU Time:     00:02:16            Total Elapsed Time: 00:01:01
+Total Memory Usage: 5392.4 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 40335 | 299544 | 13.47      |
-| DFF           | 38585 | 299544 | 12.88      |
+| 4LUT          | 40543 | 299544 | 13.53      |
+| DFF           | 38832 | 299544 | 12.96      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 41645 | 299544 | 13.90      |
+| Logic Element | 41877 | 299544 | 13.98      |
 +---------------+-------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+
 | Type   | Count | Percentage |
 +--------+-------+------------+
-| Locked |  109  | 100.00%    |
-| Placed |  0    | 0.00%      |
+| Locked |  65   | 57.52%     |
+| Placed |  48   | 42.48%     |
 +--------+-------+------------+
 
 Completed writing pin report files.

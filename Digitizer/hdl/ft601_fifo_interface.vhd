@@ -9,14 +9,14 @@ entity ft601_fifo_interface is
 	-- System Signals
 		nRESET			:in	std_logic;
 	-- FTDI-FPGA interface
-		FTDI_CLK		:in	std_logic;		-- 60MHz v Synchronim rezimu
+		FTDI_CLK		:in	std_logic;		-- 100MHz v Synchronim rezimu
 		FTDI_nRXF		:in	std_logic;		-- '0'-data ve FIFO (pro vycteni z FTDI)
 		FTDI_DATA		:inout	std_logic_vector(31 downto 0);
 		FTDI_nOE		:out	std_logic;		-- polarita datove brany '1'-write, '0'-read
 		FTDI_nRD		:out	std_logic;		-- '0'-synchroni vycteni 1Byte z FIFO
 		FTDI_nTXE		:in	std_logic;		-- '0'-vystupni FIFO nezaplneno (pro zapis do FTDI)
 		FTDI_nWR		:out	std_logic;		-- '0'-synchroni zapsani 1Byte do FIFO
-		FTDI_BE			:out	std_logic_vector(3 downto 0);
+		FTDI_BE			:inout	std_logic_vector(3 downto 0);
 	-- inter FPGA signals
 		-- read signals (FTDI -> rest of Architecture)
 		CH_FA_DATA		:out	std_logic_vector(31 downto 0);
@@ -66,10 +66,13 @@ begin
 			data_buf	<= (others => '0');
 			data_buf_b	<= (others => '0');
 			--signaly FTDI
-			FTDI_nOE 	<= '0'; --prepnuti portu FTDI na vstupni
+			--FTDI_nOE 	<= '0'; --prepnuti portu FTDI na vstupni
+			FTDI_nOE 	<= '1'; --XXX
+
 			FTDI_nRD	<= '1';
 			FTDI_nWR	<= '1';
 			FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+			FTDI_BE 	<= (others => 'Z');
 			--fifo do zakladniho stavu
 			CH_FA_DATA	<= (others => '0');
 			CH_FA_WREN	<= '0'; --nezapisovat
@@ -83,6 +86,7 @@ begin
 						FTDI_nRD	<= '0';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0';
 						CH_AF_RDEN	<= '0'; --necist
@@ -94,6 +98,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --nezapisovat
 						CH_AF_RDEN	<= '0'; --necist
@@ -108,6 +113,7 @@ begin
 						FTDI_nRD	<= '0';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '1'; --ulozit
 						CH_AF_RDEN	<= '0'; --necist
@@ -119,6 +125,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --nezapisovat --protoze jiz nejsou data platna
 						CH_AF_RDEN	<= '0'; --necist
@@ -130,6 +137,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '1'; --zapsat posledni byte vycteny z ftdi
 						CH_AF_RDEN	<= '0'; --necist
@@ -143,6 +151,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '0';
 						FTDI_DATA	<= data_buf; --zapsani zbyvajiciho bytu
+						FTDI_BE 	<= (others => '1');
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --vycist
@@ -154,6 +163,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						data_val_buf	<= '1'; --posledni byte se nepodarilo opet odeslat
 						
@@ -168,6 +178,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						if(FTDI_nTXE = '0')then
 							data_val_buf	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
@@ -187,6 +198,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '0';
 						FTDI_DATA	<= data_buf_b; --zapsani zbyvajiciho bytu
+						FTDI_BE 	<= (others => '1');
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --vycist
@@ -198,6 +210,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						data_val_buf	<= '1'; --posledni byte se nepodarilo opet odeslat
 						
@@ -212,6 +225,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						if(FTDI_nTXE = '0')then
 							data_val_buf_b	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
@@ -232,6 +246,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '0';
 						FTDI_DATA	<= CH_AF_DATA; --zapsani platneho bytu na vystupu z fifa
+						FTDI_BE 	<= (others => '1');
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --vycist
@@ -243,6 +258,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						data_val_fifo	<= '1'; --posledni byte se nepodarilo opet odeslat
 						
@@ -256,6 +272,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						if(FTDI_nTXE = '0')then
 							data_val_fifo	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
@@ -272,6 +289,7 @@ begin
 					FTDI_nOE 	<= '1';
 					FTDI_nRD	<= '1';
 					FTDI_DATA	<= CH_AF_DATA;
+					FTDI_BE 	<= (others => '1');
 											
 					CH_AF_RDEN	<= '1';
 					CH_FA_WREN	<= '0';
@@ -290,6 +308,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '0';
 						FTDI_DATA	<= CH_AF_DATA;
+						FTDI_BE 	<= (others => '1');
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '1'; --vycist
@@ -301,6 +320,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '0';
 						FTDI_DATA	<= CH_AF_DATA;
+						FTDI_BE 	<= (others => '1');
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --necist
@@ -312,6 +332,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z');--CH_AF_DATA;
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --vycist
@@ -335,6 +356,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z');--CH_AF_DATA;
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --vycist
@@ -361,6 +383,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						if(FTDI_nTXE = '0')then
 							data_val_buf	<= '0'; 
@@ -384,6 +407,7 @@ begin
 						FTDI_nRD	<= '1';--'0';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0';--neukladat '1'; --ulozit
 						CH_AF_RDEN	<= '0'; --necist
@@ -395,6 +419,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --nezapisovat
 						CH_AF_RDEN	<= '0'; --necist
@@ -405,6 +430,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --nezapisovat
 						CH_AF_RDEN	<= '0'; --necist
@@ -416,6 +442,7 @@ begin
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --nezapisovat
 						CH_AF_RDEN	<= '0'; --necist
@@ -426,6 +453,7 @@ begin
 						FTDI_nOE 	<= '1';
 						FTDI_nRD	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						FTDI_nWR	<= '1';
 									
 						actual_state	<= transmition_a;
@@ -435,10 +463,13 @@ begin
 						
 					--pokud zustava v klidovem stavu
 					else
-						FTDI_nOE 	<= '0';
+						--FTDI_nOE 	<= '0';
+						FTDI_nOE 	<= '1'; --XXX
+
 						FTDI_nRD	<= '1';
 						FTDI_nWR	<= '1';
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
+						FTDI_BE 	<= (others => 'Z');
 						
 						CH_FA_WREN	<= '0'; --nezapisovat
 						CH_AF_RDEN	<= '0'; --necist

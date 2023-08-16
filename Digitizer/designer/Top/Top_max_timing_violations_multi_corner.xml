@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml-stylesheet href="rptstyle.xsl" type="text/xsl" ?>
+<doc>
+<title>Timing Violation Multi Corner Report Max Delay Analysis
+</title>
+<text>SmartTime Version 2022.1.0.10</text>
+<text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)</text>
+<text>Date: Wed Aug 16 15:59:06 2023
+</text>
+<table>
+<header>
+</header>
+<row>
+ <cell>Design</cell>
+ <cell>Top</cell>
+</row>
+<row>
+ <cell>Family</cell>
+ <cell>PolarFire</cell>
+</row>
+<row>
+ <cell>Die</cell>
+ <cell>MPF300TS_ES</cell>
+</row>
+<row>
+ <cell>Package</cell>
+ <cell>FCG1152</cell>
+</row>
+<row>
+ <cell>Temperature Range</cell>
+ <cell>0 - 100 C</cell>
+</row>
+<row>
+ <cell>Voltage Range</cell>
+ <cell>0.97 - 1.03 V</cell>
+</row>
+<row>
+ <cell>Speed Grade</cell>
+ <cell>-1</cell>
+</row>
+<row>
+ <cell>Design State</cell>
+ <cell>Post-Layout</cell>
+</row>
+<row>
+ <cell>Data source</cell>
+ <cell>Production</cell>
+</row>
+<row>
+ <cell>Multi Corner Report Operating Conditions</cell>
+ <cell>slow_lv_ht, slow_lv_lt, fast_hv_lt</cell>
+</row>
+</table>
+<text></text>
+<table>
+<header>
+ <cell/>
+ <cell>From</cell>
+ <cell>To</cell>
+ <cell>Delay (ns)</cell>
+ <cell>Slack (ns)</cell>
+ <cell>Arrival (ns)</cell>
+ <cell>Required (ns)</cell>
+ <cell>Operating Conditions</cell>
+</header>
+<row>
+ <cell>Path 1</cell>
+ <cell>Clock_Reset_0/Synchronizer_0_0/Chain[1]:CLK</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR_CORERFD_0/u_sicr/Xrst_Sync_clk_in/syncTemp[0]:ALn</cell>
+ <cell>2.385</cell>
+ <cell>-7.008</cell>
+ <cell>9.101</cell>
+ <cell>2.093</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 2</cell>
+ <cell>Clock_Reset_0/Synchronizer_0_0/Chain[1]:CLK</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR_CORERFD_0/u_sicr/Xrst_Sync_clk_in/syncOutput[0]:ALn</cell>
+ <cell>2.385</cell>
+ <cell>-7.008</cell>
+ <cell>9.101</cell>
+ <cell>2.093</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 3</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_0/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C1/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>2.149</cell>
+ <cell>-6.919</cell>
+ <cell>8.877</cell>
+ <cell>1.958</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 4</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_1/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C1/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>2.109</cell>
+ <cell>-6.879</cell>
+ <cell>8.837</cell>
+ <cell>1.958</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 5</cell>
+ <cell>Clock_Reset_0/Synchronizer_0_0/Chain[1]:CLK</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORERFD_2/u_sicr/Xrst_Sync_clk_in/syncTemp[0]:ALn</cell>
+ <cell>2.143</cell>
+ <cell>-6.839</cell>
+ <cell>8.859</cell>
+ <cell>2.020</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 6</cell>
+ <cell>Clock_Reset_0/Synchronizer_0_0/Chain[1]:CLK</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORERFD_2/u_sicr/Xrst_Sync_clk_in/syncOutput[0]:ALn</cell>
+ <cell>2.143</cell>
+ <cell>-6.839</cell>
+ <cell>8.859</cell>
+ <cell>2.020</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 7</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_3/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C1/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>2.037</cell>
+ <cell>-6.801</cell>
+ <cell>8.759</cell>
+ <cell>1.958</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 8</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR_CORELANEMSTR_1/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C1/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>2.029</cell>
+ <cell>-6.793</cell>
+ <cell>8.751</cell>
+ <cell>1.958</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 9</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_2/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C1/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.989</cell>
+ <cell>-6.759</cell>
+ <cell>8.717</cell>
+ <cell>1.958</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 10</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_0/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C0/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.973</cell>
+ <cell>-6.744</cell>
+ <cell>8.701</cell>
+ <cell>1.957</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 11</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR_CORELANEMSTR_0/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C1/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.971</cell>
+ <cell>-6.741</cell>
+ <cell>8.699</cell>
+ <cell>1.958</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 12</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_1/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C0/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.933</cell>
+ <cell>-6.704</cell>
+ <cell>8.661</cell>
+ <cell>1.957</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 13</cell>
+ <cell>Data_Block_0/Communication_Builder_0/Sample_RAM_R_Address_Unsigned[0]:CLK</cell>
+ <cell>Data_Block_0/Sample_RAM_Block_0/PF_DPSRAM_C5_0/PF_DPSRAM_C5_0/PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C8/INST_RAM1K20_IP:B_ADDR[0]</cell>
+ <cell>10.767</cell>
+ <cell>-6.673</cell>
+ <cell>16.988</cell>
+ <cell>10.315</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 14</cell>
+ <cell>Data_Block_0/Communication_Builder_0/Sample_RAM_R_Address_Unsigned[0]:CLK</cell>
+ <cell>Data_Block_0/Sample_RAM_Block_0/PF_DPSRAM_C5_0_1_0/PF_DPSRAM_C5_0/PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R3C8/INST_RAM1K20_IP:B_ADDR[0]</cell>
+ <cell>10.722</cell>
+ <cell>-6.639</cell>
+ <cell>16.943</cell>
+ <cell>10.304</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+<row>
+ <cell>Path 15</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_3/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C0/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.861</cell>
+ <cell>-6.626</cell>
+ <cell>8.583</cell>
+ <cell>1.957</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 16</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR_CORELANEMSTR_1/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C0/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.853</cell>
+ <cell>-6.618</cell>
+ <cell>8.575</cell>
+ <cell>1.957</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 17</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_2/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C0/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.813</cell>
+ <cell>-6.584</cell>
+ <cell>8.541</cell>
+ <cell>1.957</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 18</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR_CORELANEMSTR_0/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C9_COREFIFO_C9_0_LSRAM_top_R0C0/INST_RAM1K20_IP:B_BLK_EN[2]</cell>
+ <cell>1.795</cell>
+ <cell>-6.566</cell>
+ <cell>8.523</cell>
+ <cell>1.957</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 19</cell>
+ <cell>Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR_CORELANEMSTR_0/g_mode2.u_mstr/rqCode[1]:CLK</cell>
+ <cell>Data_Block_0/COREFIFO_C9_0/COREFIFO_C9_0/genblk16.U_corefifo_async/genblk10.full_r:D</cell>
+ <cell>2.090</cell>
+ <cell>-6.506</cell>
+ <cell>8.818</cell>
+ <cell>2.312</cell>
+ <cell>slow_lv_lt</cell>
+</row>
+<row>
+ <cell>Path 20</cell>
+ <cell>Data_Block_0/Communication_Builder_0/Sample_RAM_R_Address_Unsigned[0]:CLK</cell>
+ <cell>Data_Block_0/Sample_RAM_Block_0/PF_DPSRAM_C5_0_1/PF_DPSRAM_C5_0/PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R2C22/INST_RAM1K20_IP:B_ADDR[0]</cell>
+ <cell>10.585</cell>
+ <cell>-6.502</cell>
+ <cell>16.806</cell>
+ <cell>10.304</cell>
+ <cell>slow_lv_ht</cell>
+</row>
+</table>
+<text></text>
+</doc>

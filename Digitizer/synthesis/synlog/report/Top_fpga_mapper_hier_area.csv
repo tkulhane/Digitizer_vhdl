@@ -1,6 +1,6 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
-. Top, 6263, 4415, 2687, 0, 0, 891, 0, 16, 104
+. Top, 6510, 4577, 2734, 0, 0, 891, 0, 15, 108
 .	. Clock_Reset, 23, 1, 0, 0, 0, 0, 0, 7, 0
 .	.	. CORERESET_PF_C0, 17, 1, 0, 0, 0, 0, 0, 1, 0
 .	.	.	. CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF, 17, 1, 0, 0, 0, 0, 0, 1, 0
@@ -307,24 +307,26 @@
 .	.	. UART_RX_Protocol_0, 100, 56, 32, 0, 0, 0, 0, 0, 0
 .	.	. UART_TX_Protocol_Top, 60, 95, 0, 0, 0, 0, 0, 0, 0
 .	.	. work_mko_rtl_330000_1_Time_Period_Top, 27, 12, 26, 0, 0, 0, 0, 0, 0
-.	. USB_3_Protocol, 497, 297, 136, 0, 0, 4, 0, 1, 0
-.	.	. COREFIFO_C7, 177, 100, 68, 0, 0, 2, 0, 0, 0
-.	.	.	. COREFIFO_C7_COREFIFO_C7_0_COREFIFO_Z21_layer0, 177, 100, 68, 0, 0, 2, 0, 0, 0
-.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z22_layer0, 133, 57, 68, 0, 0, 0, 0, 0, 0
+.	. USB_3_Protocol, 744, 459, 183, 0, 0, 4, 0, 0, 0
+.	.	. COREFIFO_C7, 312, 188, 91, 0, 0, 2, 0, 0, 0
+.	.	.	. COREFIFO_C7_COREFIFO_C7_0_COREFIFO_Z21_layer0, 312, 188, 91, 0, 0, 2, 0, 0, 0
+.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z22_layer0, 145, 60, 91, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_NstagesSync_2s_10_0, 22, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_NstagesSync_2s_10_1, 22, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_grayToBinConv_10_Top, 0, 10, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_grayToBinConv_10_Top_0, 0, 10, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_fwft_Z23_layer0, 84, 46, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_LSRAM_top, 0, 0, 0, 0, 0, 2, 0, 0, 0
-.	.	. COREFIFO_C8, 168, 86, 68, 0, 0, 2, 0, 0, 0
-.	.	.	. COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z23_layer0, 168, 86, 68, 0, 0, 2, 0, 0, 0
-.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z24_layer0, 132, 51, 68, 0, 0, 0, 0, 0, 0
+.	.	. COREFIFO_C8, 279, 160, 92, 0, 0, 2, 0, 0, 0
+.	.	.	. COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z24_layer0, 279, 160, 92, 0, 0, 2, 0, 0, 0
+.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z25_layer0, 144, 56, 92, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_10_0, 22, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_10_1, 22, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_10_Top, 0, 10, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_10_Top_0, 0, 10, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_fwft_Z26_layer0, 68, 38, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_LSRAM_top, 0, 0, 0, 0, 0, 2, 0, 0, 0
-.	.	. Synchronizer_3, 2, 0, 0, 0, 0, 0, 0, 1, 0
-.	.	. ft601_fifo_interface, 150, 111, 0, 0, 0, 0, 0, 0, 0
+.	.	. Synchronizer_3, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. ft601_fifo_interface, 151, 111, 0, 0, 0, 0, 0, 0, 0

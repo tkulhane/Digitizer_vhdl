@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Aug  1 20:33:14 2023
+// Created by SmartDesign Wed Aug 16 13:52:54 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -27,7 +27,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "NUM_STAGES:2"  \
 "OVERFLOW_EN:false"  \
 "PIPE:1"  \
-"PREFETCH:false"  \
+"PREFETCH:true"  \
 "RAM_OPT:0"  \
 "RDCNT_EN:false"  \
 "RDEPTH:1024"  \
@@ -96,11 +96,11 @@ wire          RRESET_N;
 wire          WCLOCK;
 wire          WE;
 wire          WRESET_N;
-wire   [39:0] Q_net_1;
 wire          FULL_net_1;
 wire          EMPTY_net_1;
 wire          AFULL_net_1;
 wire          AEMPTY_net_1;
+wire   [39:0] Q_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -114,8 +114,6 @@ assign MEMRD_const_net_0 = 40'h0000000000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign Q_net_1      = Q_net_0;
-assign Q[39:0]      = Q_net_1;
 assign FULL_net_1   = FULL_net_0;
 assign FULL         = FULL_net_1;
 assign EMPTY_net_1  = EMPTY_net_0;
@@ -124,6 +122,8 @@ assign AFULL_net_1  = AFULL_net_0;
 assign AFULL        = AFULL_net_1;
 assign AEMPTY_net_1 = AEMPTY_net_0;
 assign AEMPTY       = AEMPTY_net_1;
+assign Q_net_1      = Q_net_0;
+assign Q[39:0]      = Q_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -143,7 +143,7 @@ COREFIFO_C8_COREFIFO_C8_0_COREFIFO #(
         .NUM_STAGES   ( 2 ),
         .OVERFLOW_EN  ( 0 ),
         .PIPE         ( 1 ),
-        .PREFETCH     ( 0 ),
+        .PREFETCH     ( 1 ),
         .RAM_OPT      ( 0 ),
         .RDCNT_EN     ( 0 ),
         .RDEPTH       ( 1024 ),
@@ -166,12 +166,11 @@ COREFIFO_C8_0(
         .RESET_N    ( GND_net ), // tied to 1'b0 from definition
         .WRESET_N   ( WRESET_N ),
         .RRESET_N   ( RRESET_N ),
-        .DATA       ( DATA ),
         .WE         ( WE ),
         .RE         ( RE ),
+        .DATA       ( DATA ),
         .MEMRD      ( MEMRD_const_net_0 ), // tied to 40'h0000000000 from definition
         // Outputs
-        .Q          ( Q_net_0 ),
         .FULL       ( FULL_net_0 ),
         .EMPTY      ( EMPTY_net_0 ),
         .AFULL      ( AFULL_net_0 ),
@@ -180,15 +179,16 @@ COREFIFO_C8_0(
         .UNDERFLOW  (  ),
         .WACK       (  ),
         .DVLD       (  ),
-        .WRCNT      (  ),
-        .RDCNT      (  ),
         .MEMWE      (  ),
         .MEMRE      (  ),
+        .SB_CORRECT (  ),
+        .DB_DETECT  (  ),
+        .Q          ( Q_net_0 ),
+        .WRCNT      (  ),
+        .RDCNT      (  ),
         .MEMWADDR   (  ),
         .MEMRADDR   (  ),
-        .MEMWD      (  ),
-        .SB_CORRECT (  ),
-        .DB_DETECT  (  ) 
+        .MEMWD      (  ) 
         );
 
 
