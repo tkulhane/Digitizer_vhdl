@@ -1302,5 +1302,3 @@ Implementation;Synthesis||MT116||@W:Paths from clock (Data_Block_0/PF_XCVR_ERM_C
 Implementation;Synthesis||MT116||@W:Paths from clock (Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R:r) to clock (Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1:r) are overconstrained because the required time of 0.50 ns is too small.  ||Top.srr(4758);liberoaction://cross_probe/hdl/file/'<project>\synthesis\Top.srr'/linenumber/4758||null;null
 Implementation;Place and Route;RootName:Top
 Implementation;Place and Route||(null)||Please refer to the log file for details about 14 Info(s)||Top_layout_log.log;liberoaction://open_report/file/Top_layout_log.log||(null);(null)
-Implementation;Generate Bitstream;RootName:Top
-Implementation;Generate Bitstream||(null)||Please refer to the log file for details about 1 Info(s)||Top_generateBitstream.log;liberoaction://open_report/file/Top_generateBitstream.log||(null);(null)

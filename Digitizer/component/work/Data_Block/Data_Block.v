@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug  9 21:26:18 2023
+// Created by SmartDesign Wed Aug 16 20:21:10 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -108,8 +108,6 @@ wire           Communication_Data_Enable_net_0;
 wire   [31:0]  Communication_Data_Frame_net_0;
 wire           Communication_Data_Full;
 wire           Communication_Data_Req_net_0;
-wire   [11:0]  COREFIFO_C9_0_Q11to0;
-wire   [27:16] COREFIFO_C9_0_Q27to16;
 wire           CTRL_ARST_N;
 wire           CTRL_CLK;
 wire           Diag_0_net_0;
@@ -180,6 +178,8 @@ wire           REF_Clock;
 wire           REF_Reset_N;
 wire           Reset_N;
 wire   [63:0]  Sample_RAM_Block_0_B_Output_Data;
+wire   [11:0]  Test_Generator_0_Test_Data_0;
+wire   [11:0]  Test_Generator_0_Test_Data_1;
 wire   [11:0]  Test_Generator_0_Test_Data_2;
 wire   [11:0]  Test_Generator_0_Test_Data_3;
 wire   [11:0]  Test_Generator_0_Test_Data_4;
@@ -201,31 +201,33 @@ wire           Diag_0_net_1;
 wire           Diag_1_net_1;
 wire           Diag_2_net_1;
 wire           Diag_3_net_1;
+wire           LANE0_RX_VAL_net_1;
 wire   [15:0]  C_read_data_frame_net_1;
 wire   [31:0]  Communication_Data_Frame_net_1;
-wire           LANE0_RX_VAL_net_1;
-wire   [15:12] Q_slice_0;
-wire   [31:28] Q_slice_1;
-wire   [11:0]  Q_slice_2;
-wire   [15:12] Q_slice_3;
-wire   [27:16] Q_slice_4;
-wire   [31:28] Q_slice_5;
-wire   [11:0]  Q_slice_6;
-wire   [15:12] Q_slice_7;
-wire   [27:16] Q_slice_8;
-wire   [31:28] Q_slice_9;
-wire   [11:0]  Q_slice_10;
-wire   [15:12] Q_slice_11;
-wire   [27:16] Q_slice_12;
-wire   [31:28] Q_slice_13;
-wire   [11:0]  Q_slice_14;
-wire   [15:12] Q_slice_15;
-wire   [27:16] Q_slice_16;
-wire   [31:28] Q_slice_17;
-wire   [11:0]  Q_slice_18;
-wire   [15:12] Q_slice_19;
-wire   [27:16] Q_slice_20;
-wire   [31:28] Q_slice_21;
+wire   [11:0]  Q_slice_0;
+wire   [15:12] Q_slice_1;
+wire   [27:16] Q_slice_2;
+wire   [31:28] Q_slice_3;
+wire   [11:0]  Q_slice_4;
+wire   [15:12] Q_slice_5;
+wire   [27:16] Q_slice_6;
+wire   [31:28] Q_slice_7;
+wire   [11:0]  Q_slice_8;
+wire   [15:12] Q_slice_9;
+wire   [27:16] Q_slice_10;
+wire   [31:28] Q_slice_11;
+wire   [11:0]  Q_slice_12;
+wire   [15:12] Q_slice_13;
+wire   [27:16] Q_slice_14;
+wire   [31:28] Q_slice_15;
+wire   [11:0]  Q_slice_16;
+wire   [15:12] Q_slice_17;
+wire   [27:16] Q_slice_18;
+wire   [31:28] Q_slice_19;
+wire   [11:0]  Q_slice_20;
+wire   [15:12] Q_slice_21;
+wire   [27:16] Q_slice_22;
+wire   [31:28] Q_slice_23;
 wire   [31:0]  Q_net_0;
 wire   [31:0]  Q_net_1;
 wire   [31:0]  Q_net_2;
@@ -275,39 +277,39 @@ assign Diag_2_net_1                    = Diag_2_net_0;
 assign Diag_2                          = Diag_2_net_1;
 assign Diag_3_net_1                    = Diag_3_net_0;
 assign Diag_3                          = Diag_3_net_1;
+assign LANE0_RX_VAL_net_1              = LANE0_RX_VAL_net_0;
+assign LANE0_RX_VAL                    = LANE0_RX_VAL_net_1;
 assign C_read_data_frame_net_1         = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]         = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1  = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0]  = Communication_Data_Frame_net_1;
-assign LANE0_RX_VAL_net_1              = LANE0_RX_VAL_net_0;
-assign LANE0_RX_VAL                    = LANE0_RX_VAL_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
-assign COREFIFO_C9_0_Q11to0  = Q_net_0[11:0];
-assign COREFIFO_C9_0_Q27to16 = Q_net_0[27:16];
-assign Q_slice_0             = Q_net_0[15:12];
-assign Q_slice_1             = Q_net_0[31:28];
-assign Q_slice_2             = Q_net_1[11:0];
-assign Q_slice_3             = Q_net_1[15:12];
-assign Q_slice_4             = Q_net_1[27:16];
-assign Q_slice_5             = Q_net_1[31:28];
-assign Q_slice_6             = Q_net_2[11:0];
-assign Q_slice_7             = Q_net_2[15:12];
-assign Q_slice_8             = Q_net_2[27:16];
-assign Q_slice_9             = Q_net_2[31:28];
-assign Q_slice_10            = Q_net_3[11:0];
-assign Q_slice_11            = Q_net_3[15:12];
-assign Q_slice_12            = Q_net_3[27:16];
-assign Q_slice_13            = Q_net_3[31:28];
-assign Q_slice_14            = Q_net_4[11:0];
-assign Q_slice_15            = Q_net_4[15:12];
-assign Q_slice_16            = Q_net_4[27:16];
-assign Q_slice_17            = Q_net_4[31:28];
-assign Q_slice_18            = Q_net_5[11:0];
-assign Q_slice_19            = Q_net_5[15:12];
-assign Q_slice_20            = Q_net_5[27:16];
-assign Q_slice_21            = Q_net_5[31:28];
+assign Q_slice_0  = Q_net_0[11:0];
+assign Q_slice_1  = Q_net_0[15:12];
+assign Q_slice_2  = Q_net_0[27:16];
+assign Q_slice_3  = Q_net_0[31:28];
+assign Q_slice_4  = Q_net_1[11:0];
+assign Q_slice_5  = Q_net_1[15:12];
+assign Q_slice_6  = Q_net_1[27:16];
+assign Q_slice_7  = Q_net_1[31:28];
+assign Q_slice_8  = Q_net_2[11:0];
+assign Q_slice_9  = Q_net_2[15:12];
+assign Q_slice_10 = Q_net_2[27:16];
+assign Q_slice_11 = Q_net_2[31:28];
+assign Q_slice_12 = Q_net_3[11:0];
+assign Q_slice_13 = Q_net_3[15:12];
+assign Q_slice_14 = Q_net_3[27:16];
+assign Q_slice_15 = Q_net_3[31:28];
+assign Q_slice_16 = Q_net_4[11:0];
+assign Q_slice_17 = Q_net_4[15:12];
+assign Q_slice_18 = Q_net_4[27:16];
+assign Q_slice_19 = Q_net_4[31:28];
+assign Q_slice_20 = Q_net_5[11:0];
+assign Q_slice_21 = Q_net_5[15:12];
+assign Q_slice_22 = Q_net_5[27:16];
+assign Q_slice_23 = Q_net_5[31:28];
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -367,13 +369,13 @@ COREFIFO_C9 COREFIFO_C9_0(
         .RCLOCK   ( Clock ),
         .WRESET_N ( CTRL_ARST_N ),
         .RRESET_N ( Reset_N ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE0_RX_DATA ),
         .WE       ( LANE0_RX_VAL_net_0 ),
         .RE       ( VCC_net ),
+        .DATA     ( PF_XCVR_ERM_C2_0_LANE0_RX_DATA ),
         // Outputs
-        .Q        ( Q_net_0 ),
         .FULL     (  ),
-        .EMPTY    (  ) 
+        .EMPTY    (  ),
+        .Q        ( Q_net_0 ) 
         );
 
 //--------COREFIFO_C9
@@ -383,13 +385,13 @@ COREFIFO_C9 COREFIFO_C9_0_0(
         .RCLOCK   ( Clock ),
         .WRESET_N ( CTRL_ARST_N ),
         .RRESET_N ( Reset_N ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE1_RX_DATA ),
         .WE       ( LANE0_RX_VAL_net_0 ),
         .RE       ( VCC_net ),
+        .DATA     ( PF_XCVR_ERM_C2_0_LANE1_RX_DATA ),
         // Outputs
-        .Q        ( Q_net_1 ),
         .FULL     (  ),
-        .EMPTY    (  ) 
+        .EMPTY    (  ),
+        .Q        ( Q_net_1 ) 
         );
 
 //--------COREFIFO_C9
@@ -399,13 +401,13 @@ COREFIFO_C9 COREFIFO_C9_0_1(
         .RCLOCK   ( Clock ),
         .WRESET_N ( CTRL_ARST_N ),
         .RRESET_N ( Reset_N ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE2_RX_DATA ),
         .WE       ( LANE0_RX_VAL_net_0 ),
         .RE       ( VCC_net ),
+        .DATA     ( PF_XCVR_ERM_C2_0_LANE2_RX_DATA ),
         // Outputs
-        .Q        ( Q_net_2 ),
         .FULL     (  ),
-        .EMPTY    (  ) 
+        .EMPTY    (  ),
+        .Q        ( Q_net_2 ) 
         );
 
 //--------COREFIFO_C9
@@ -415,13 +417,13 @@ COREFIFO_C9 COREFIFO_C9_0_2(
         .RCLOCK   ( Clock ),
         .WRESET_N ( CTRL_ARST_N ),
         .RRESET_N ( Reset_N ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE3_RX_DATA ),
         .WE       ( LANE0_RX_VAL_net_0 ),
         .RE       ( VCC_net ),
+        .DATA     ( PF_XCVR_ERM_C2_0_LANE3_RX_DATA ),
         // Outputs
-        .Q        ( Q_net_3 ),
         .FULL     (  ),
-        .EMPTY    (  ) 
+        .EMPTY    (  ),
+        .Q        ( Q_net_3 ) 
         );
 
 //--------COREFIFO_C9
@@ -431,13 +433,13 @@ COREFIFO_C9 COREFIFO_C9_0_2_0(
         .RCLOCK   ( Clock ),
         .WRESET_N ( CTRL_ARST_N ),
         .RRESET_N ( Reset_N ),
-        .DATA     ( PF_XCVR_ERM_C3_0_LANE0_RX_DATA ),
         .WE       ( LANE0_RX_VAL_net_0 ),
         .RE       ( VCC_net ),
+        .DATA     ( PF_XCVR_ERM_C3_0_LANE0_RX_DATA ),
         // Outputs
-        .Q        ( Q_net_4 ),
         .FULL     (  ),
-        .EMPTY    (  ) 
+        .EMPTY    (  ),
+        .Q        ( Q_net_4 ) 
         );
 
 //--------COREFIFO_C9
@@ -447,13 +449,13 @@ COREFIFO_C9 COREFIFO_C9_0_2_1(
         .RCLOCK   ( Clock ),
         .WRESET_N ( CTRL_ARST_N ),
         .RRESET_N ( Reset_N ),
-        .DATA     ( PF_XCVR_ERM_C3_0_LANE1_RX_DATA ),
         .WE       ( LANE0_RX_VAL_net_0 ),
         .RE       ( VCC_net ),
+        .DATA     ( PF_XCVR_ERM_C3_0_LANE1_RX_DATA ),
         // Outputs
-        .Q        ( Q_net_5 ),
         .FULL     (  ),
-        .EMPTY    (  ) 
+        .EMPTY    (  ),
+        .Q        ( Q_net_5 ) 
         );
 
 //--------Event_Info_RAM_Block
@@ -526,8 +528,8 @@ Input_Data_Part Input_Data_Part_0(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( COREFIFO_C9_0_Q11to0 ),
-        .Input_Data_1        ( COREFIFO_C9_0_Q27to16 ),
+        .Input_Data_0        ( Test_Generator_0_Test_Data_0 ),
+        .Input_Data_1        ( Test_Generator_0_Test_Data_1 ),
         .Input_Data_2        ( Test_Generator_0_Test_Data_2 ),
         .Input_Data_3        ( Test_Generator_0_Test_Data_3 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
@@ -608,38 +610,22 @@ PF_XCVR_ERM_C2 PF_XCVR_ERM_C2_0(
         .LANE3_LOS                ( GND_net ),
         .LANE3_CLK_REF            ( REF_Clock ),
         // Outputs
-        .LANE0_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE0_RX_DATA ),
         .LANE0_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE0_RX_CLK_R ),
         .LANE0_RX_READY_CDR       (  ),
         .LANE0_RX_VAL_CDR         (  ),
         .LANE0_RX_IDLE            (  ),
-        .LANE0_RX_CODE_VIOLATION  (  ),
-        .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         (  ),
-        .LANE1_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE1_RX_DATA ),
         .LANE1_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE1_RX_CLK_R ),
         .LANE1_RX_READY_CDR       (  ),
         .LANE1_RX_VAL_CDR         (  ),
         .LANE1_RX_IDLE            (  ),
-        .LANE1_RX_CODE_VIOLATION  (  ),
-        .LANE1_RX_DISPARITY_ERROR (  ),
-        .LANE1_8B10B_RX_K         (  ),
-        .LANE2_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE2_RX_DATA ),
         .LANE2_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE2_RX_CLK_R ),
         .LANE2_RX_READY_CDR       (  ),
         .LANE2_RX_VAL_CDR         (  ),
         .LANE2_RX_IDLE            (  ),
-        .LANE2_RX_CODE_VIOLATION  (  ),
-        .LANE2_RX_DISPARITY_ERROR (  ),
-        .LANE2_8B10B_RX_K         (  ),
-        .LANE3_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE3_RX_DATA ),
         .LANE3_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE3_RX_CLK_R_0 ),
         .LANE3_RX_READY_CDR       (  ),
         .LANE3_RX_VAL_CDR         (  ),
         .LANE3_RX_IDLE            (  ),
-        .LANE3_RX_CODE_VIOLATION  (  ),
-        .LANE3_RX_DISPARITY_ERROR (  ),
-        .LANE3_8B10B_RX_K         (  ),
         .LANE0_RX_READY           (  ),
         .LANE0_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE0_RX_VAL ),
         .LANE1_RX_READY           (  ),
@@ -647,7 +633,23 @@ PF_XCVR_ERM_C2 PF_XCVR_ERM_C2_0(
         .LANE2_RX_READY           (  ),
         .LANE2_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE2_RX_VAL ),
         .LANE3_RX_READY           (  ),
-        .LANE3_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE3_RX_VAL ) 
+        .LANE3_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE3_RX_VAL ),
+        .LANE0_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE0_RX_DATA ),
+        .LANE0_RX_CODE_VIOLATION  (  ),
+        .LANE0_RX_DISPARITY_ERROR (  ),
+        .LANE0_8B10B_RX_K         (  ),
+        .LANE1_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE1_RX_DATA ),
+        .LANE1_RX_CODE_VIOLATION  (  ),
+        .LANE1_RX_DISPARITY_ERROR (  ),
+        .LANE1_8B10B_RX_K         (  ),
+        .LANE2_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE2_RX_DATA ),
+        .LANE2_RX_CODE_VIOLATION  (  ),
+        .LANE2_RX_DISPARITY_ERROR (  ),
+        .LANE2_8B10B_RX_K         (  ),
+        .LANE3_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE3_RX_DATA ),
+        .LANE3_RX_CODE_VIOLATION  (  ),
+        .LANE3_RX_DISPARITY_ERROR (  ),
+        .LANE3_8B10B_RX_K         (  ) 
         );
 
 //--------PF_XCVR_ERM_C3
@@ -670,26 +672,26 @@ PF_XCVR_ERM_C3 PF_XCVR_ERM_C3_0(
         .LANE1_LOS                ( GND_net ),
         .LANE1_CLK_REF            ( REF_Clock ),
         // Outputs
-        .LANE0_RX_DATA            ( PF_XCVR_ERM_C3_0_LANE0_RX_DATA ),
         .LANE0_RX_CLK_R           (  ),
         .LANE0_RX_READY_CDR       (  ),
         .LANE0_RX_VAL_CDR         (  ),
         .LANE0_RX_IDLE            (  ),
-        .LANE0_RX_CODE_VIOLATION  (  ),
-        .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         (  ),
-        .LANE1_RX_DATA            ( PF_XCVR_ERM_C3_0_LANE1_RX_DATA ),
         .LANE1_RX_CLK_R           (  ),
         .LANE1_RX_READY_CDR       (  ),
         .LANE1_RX_VAL_CDR         (  ),
         .LANE1_RX_IDLE            (  ),
-        .LANE1_RX_CODE_VIOLATION  (  ),
-        .LANE1_RX_DISPARITY_ERROR (  ),
-        .LANE1_8B10B_RX_K         (  ),
         .LANE0_RX_READY           (  ),
         .LANE0_RX_VAL             ( PF_XCVR_ERM_C3_0_LANE0_RX_VAL ),
         .LANE1_RX_READY           (  ),
-        .LANE1_RX_VAL             ( PF_XCVR_ERM_C3_0_LANE1_RX_VAL ) 
+        .LANE1_RX_VAL             ( PF_XCVR_ERM_C3_0_LANE1_RX_VAL ),
+        .LANE0_RX_DATA            ( PF_XCVR_ERM_C3_0_LANE0_RX_DATA ),
+        .LANE0_RX_CODE_VIOLATION  (  ),
+        .LANE0_RX_DISPARITY_ERROR (  ),
+        .LANE0_8B10B_RX_K         (  ),
+        .LANE1_RX_DATA            ( PF_XCVR_ERM_C3_0_LANE1_RX_DATA ),
+        .LANE1_RX_CODE_VIOLATION  (  ),
+        .LANE1_RX_DISPARITY_ERROR (  ),
+        .LANE1_8B10B_RX_K         (  ) 
         );
 
 //--------Sample_RAM_Block
@@ -713,8 +715,8 @@ Test_Generator Test_Generator_0(
         .Reset_N     ( Reset_N ),
         .Test_Enable ( Trigger_Top_Part_0_Control_Test_Generator_Enable ),
         // Outputs
-        .Test_Data_0 (  ),
-        .Test_Data_1 (  ),
+        .Test_Data_0 ( Test_Generator_0_Test_Data_0 ),
+        .Test_Data_1 ( Test_Generator_0_Test_Data_1 ),
         .Test_Data_2 ( Test_Generator_0_Test_Data_2 ),
         .Test_Data_3 ( Test_Generator_0_Test_Data_3 ),
         .Test_Data_4 ( Test_Generator_0_Test_Data_4 ),
