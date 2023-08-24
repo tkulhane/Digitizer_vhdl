@@ -19,9 +19,11 @@ set_defvar -name {RTG4_MITIGATION_ON} -value {0}
 set_defvar -name {USE_CONSTRAINT_FLOW} -value True
 set_defvar -name {FHB_AUTO_INSTANTIATION} -value {0}
 
-set_partition_info -name "/Top" -timestamp "1692189749"
-set_partition_info -name "/Top/Data_Block_0" -timestamp "1692009468"
-set_partition_info -name "/Top/Controler_0" -timestamp "1692174490"
+set_partition_info -name "/Top" -timestamp "1692819071"
+set_partition_info -name "/Top/UART_Protocol_1" -timestamp "1692797285"
+set_partition_info -name "/Top/UART_Protocol_0" -timestamp "1692797285"
+set_partition_info -name "/Top/Data_Block_0" -timestamp "1692797285"
+set_partition_info -name "/Top/Controler_0" -timestamp "1692797285"
 set_compile_info \
     -category {"Device Selection"} \
     -name {"Family"} \
@@ -65,7 +67,7 @@ set_compile_info \
 set_compile_info \
     -category {"Source Files"} \
     -name {"Source"} \
-    -value {"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.vm"}
+    -value {"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.vm"}
 set_compile_info \
     -category {"Options"} \
     -name {"Limit the number of high fanout nets to display to"} \

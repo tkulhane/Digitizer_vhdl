@@ -1,0 +1,144 @@
+
+                               Synplify Pro (R) 
+
+                  Version S-2021.09M for win64 - Feb 23, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin64\mbin\synplify.exe
+Install:     C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+Hostname:    DESKTOP-TDPVUTD
+Date:        Wed Aug 23 15:26:20 2023
+Version:     S-2021.09M
+
+Arguments:   -product synplify_pro Top_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+
+
+auto_infer_blackbox is not supported in current product.
+auto_infer_blackbox is not supported in current product.
+TCL script complete: "Top_syn.tcl"
+log file: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.srr"
+Running: synthesis in foreground
+
+Running Top_syn|synthesis
+
+Running Flow: compile (Compile) on Top_syn|synthesis
+# Wed Aug 23 15:26:31 2023
+
+Running Flow: compile_flow (Compile Process) on Top_syn|synthesis
+# Wed Aug 23 15:26:31 2023
+
+Running: compiler (Compile Input) on Top_syn|synthesis
+# Wed Aug 23 15:26:31 2023
+
+Job: "compiler" terminated with errors. Return status: 0
+See log file: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_compiler.srr"
+# Wed Aug 23 15:26:49 2023
+
+Return Code: 0
+Run Time:00h:00m:18s
+Job Canceled: "compiler"
+Job flow canceled: "compile_flow"
+Job flow canceled: "compile"
+Job flow canceled: "synthesis"
+Job flow canceled: "synthesis"
+Job Flow canceled: "synthesis"
+0log file: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srr"
+Running: identify_debug in foreground
+
+Running Top_syn|identify_debug
+
+Running Flow: compile (Compile) on Top_syn|identify_debug
+# Wed Aug 23 15:26:53 2023
+
+Running Flow: compile_flow (Compile Process) on Top_syn|identify_debug
+# Wed Aug 23 15:26:53 2023
+
+Running: identify_db_generator (Identify Database Generator) on Top_syn|identify_debug
+# Wed Aug 23 15:26:53 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synlog\Top_identify_db_generator.srr to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\identify.srr
+
+identify_db_generator completed
+# Wed Aug 23 15:27:06 2023
+
+Return Code: 0
+Run Time:00h:00m:13s
+
+Running: identify_compile (Identify Compile) on Top_syn|identify_debug
+# Wed Aug 23 15:27:06 2023
+
+identify_compile completed
+# Wed Aug 23 15:27:09 2023
+
+Return Code: 0
+Run Time:00h:00m:03s
+
+Running: compiler (Compile Input) on Top_syn|identify_debug
+# Wed Aug 23 15:27:09 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_comp.srs to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srs
+
+compiler completed
+# Wed Aug 23 15:27:46 2023
+
+Return Code: 0
+Run Time:00h:00m:37s
+
+Running: multi_srs_gen (Multi-srs Generator) on Top_syn|identify_debug
+# Wed Aug 23 15:27:46 2023
+
+multi_srs_gen completed
+# Wed Aug 23 15:27:47 2023
+
+Return Code: 0
+Run Time:00h:00m:01s
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_mult.srs to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srs
+Complete: Compile Process on Top_syn|identify_debug
+
+Running: premap (Premap) on Top_syn|identify_debug
+# Wed Aug 23 15:27:47 2023
+
+premap completed with warnings
+# Wed Aug 23 15:28:05 2023
+
+Return Code: 1
+Run Time:00h:00m:18s
+Complete: Compile on Top_syn|identify_debug
+
+Running Flow: map (Map) on Top_syn|identify_debug
+# Wed Aug 23 15:28:05 2023
+License granted for 4 parallel jobs
+
+Running: fpga_mapper (Map & Optimize) on Top_syn|identify_debug
+# Wed Aug 23 15:28:05 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_m.srm to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srm
+
+fpga_mapper completed with warnings
+# Wed Aug 23 15:28:43 2023
+
+Return Code: 1
+Run Time:00h:00m:38s
+Complete: Map on Top_syn|identify_debug
+Complete: Logic Synthesis on Top_syn|identify_debug
+0exit status=0
+License checkin: synplifypro_actel

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug 16 13:52:54 2023
+// Created by SmartDesign Mon Aug 21 11:46:56 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,7 +17,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "AE_STATIC_EN:true"  \
 "AEVAL:6"  \
 "AF_STATIC_EN:true"  \
-"AFVAL:1018"  \
+"AFVAL:1020"  \
 "CTRL_TYPE:2"  \
 "DIE_SIZE:15"  \
 "ECC:0"  \
@@ -27,7 +27,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "NUM_STAGES:2"  \
 "OVERFLOW_EN:false"  \
 "PIPE:1"  \
-"PREFETCH:true"  \
+"PREFETCH:false"  \
 "RAM_OPT:0"  \
 "RDCNT_EN:false"  \
 "RDEPTH:1024"  \
@@ -132,7 +132,7 @@ COREFIFO_C8_COREFIFO_C8_0_COREFIFO #(
         .AE_STATIC_EN ( 1 ),
         .AEVAL        ( 6 ),
         .AF_STATIC_EN ( 1 ),
-        .AFVAL        ( 1018 ),
+        .AFVAL        ( 1020 ),
         .CTRL_TYPE    ( 2 ),
         .DIE_SIZE     ( 15 ),
         .ECC          ( 0 ),
@@ -143,7 +143,7 @@ COREFIFO_C8_COREFIFO_C8_0_COREFIFO #(
         .NUM_STAGES   ( 2 ),
         .OVERFLOW_EN  ( 0 ),
         .PIPE         ( 1 ),
-        .PREFETCH     ( 1 ),
+        .PREFETCH     ( 0 ),
         .RAM_OPT      ( 0 ),
         .RDCNT_EN     ( 0 ),
         .RDEPTH       ( 1024 ),

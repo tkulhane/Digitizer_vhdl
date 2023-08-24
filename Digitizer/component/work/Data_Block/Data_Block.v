@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug 16 20:21:10 2023
+// Created by SmartDesign Sat Aug 19 10:03:38 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,249 +8,146 @@
 // Data_Block
 module Data_Block(
     // Inputs
-    CTRL_ARST_N,
-    CTRL_CLK,
     C_addr_frame,
     C_enable_cmd,
     C_write_data_frame,
     C_write_read,
     Clock,
-    Communication_DATA_Ack,
-    Communication_Data_Full,
+    Communication_Builder_RUN,
+    Communication_Read,
     Fifo_RESET_N,
-    LANE0_RXD_N,
-    LANE0_RXD_P,
-    LANE1_RXD_N,
-    LANE1_RXD_P,
-    LANE2_RXD_N,
-    LANE2_RXD_P,
-    LANE3_RXD_N,
-    LANE3_RXD_P,
-    LANE4_RXD_N,
-    LANE4_RXD_P,
-    LANE5_RXD_N,
-    LANE5_RXD_P,
-    REF_Clock,
-    REF_Reset_N,
     Reset_N,
     // Outputs
     C_busy,
     C_read_data_frame,
-    Communication_Data_Enable,
     Communication_Data_Frame,
     Communication_Data_Req,
+    Communication_Empty,
     Diag_0,
     Diag_1,
     Diag_2,
-    Diag_3,
-    LANE0_RX_VAL
+    Diag_3
 );
 
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
-input         CTRL_ARST_N;
-input         CTRL_CLK;
 input  [7:0]  C_addr_frame;
 input         C_enable_cmd;
 input  [15:0] C_write_data_frame;
 input         C_write_read;
 input         Clock;
-input         Communication_DATA_Ack;
-input         Communication_Data_Full;
+input         Communication_Builder_RUN;
+input         Communication_Read;
 input         Fifo_RESET_N;
-input         LANE0_RXD_N;
-input         LANE0_RXD_P;
-input         LANE1_RXD_N;
-input         LANE1_RXD_P;
-input         LANE2_RXD_N;
-input         LANE2_RXD_P;
-input         LANE3_RXD_N;
-input         LANE3_RXD_P;
-input         LANE4_RXD_N;
-input         LANE4_RXD_P;
-input         LANE5_RXD_N;
-input         LANE5_RXD_P;
-input         REF_Clock;
-input         REF_Reset_N;
 input         Reset_N;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
 output        C_busy;
 output [15:0] C_read_data_frame;
-output        Communication_Data_Enable;
 output [31:0] Communication_Data_Frame;
 output        Communication_Data_Req;
+output        Communication_Empty;
 output        Diag_0;
 output        Diag_1;
 output        Diag_2;
 output        Diag_3;
-output        LANE0_RX_VAL;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire           AND4_0_Y;
-wire   [7:0]   C_addr_frame;
-wire           C_busy_net_0;
-wire           C_enable_cmd;
-wire   [15:0]  C_read_data_frame_net_0;
-wire   [15:0]  C_write_data_frame;
-wire           C_write_read;
-wire           Clock;
-wire   [9:0]   Communication_Builder_0_Event_RAM_R_Address;
-wire   [7:0]   Communication_Builder_0_Event_RAM_W_Data_Status;
-wire           Communication_Builder_0_Event_RAM_W_Enable_Status;
-wire   [15:0]  Communication_Builder_0_Sample_RAM_R_Address;
-wire   [3:0]   Communication_Builder_0_Sample_RAM_R_Block_Address;
-wire           Communication_DATA_Ack;
-wire           Communication_Data_Enable_net_0;
-wire   [31:0]  Communication_Data_Frame_net_0;
-wire           Communication_Data_Full;
-wire           Communication_Data_Req_net_0;
-wire           CTRL_ARST_N;
-wire           CTRL_CLK;
-wire           Diag_0_net_0;
-wire           Diag_1_net_0;
-wire           Diag_2_net_0;
-wire           Diag_3_net_0;
-wire   [7:0]   Event_Info_RAM_Block_0_A_DOUT_Event_Status;
-wire   [19:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Number;
-wire   [19:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Size;
-wire   [19:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR;
-wire   [7:0]   Event_Info_RAM_Block_0_B_DOUT_Event_Status;
-wire           Fifo_RESET_N;
-wire           FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
-wire           FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable;
-wire           FIFOs_Reader_0_Event_FIFO_R_Enable;
-wire   [9:0]   FIFOs_Reader_0_Event_RAM_W_Address;
-wire   [19:0]  FIFOs_Reader_0_Event_RAM_W_Data_Number;
-wire   [19:0]  FIFOs_Reader_0_Event_RAM_W_Data_Size;
-wire   [19:0]  FIFOs_Reader_0_Event_RAM_W_Data_Start_ADDR;
-wire   [7:0]   FIFOs_Reader_0_Event_RAM_W_Data_Status;
-wire           FIFOs_Reader_0_Event_RAM_W_Enable_Number;
-wire           FIFOs_Reader_0_Event_RAM_W_Enable_Size;
-wire           FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR;
-wire           FIFOs_Reader_0_Event_RAM_W_Enable_Status;
-wire   [15:0]  FIFOs_Reader_0_Sample_RAM_W_Address;
-wire   [3:0]   FIFOs_Reader_0_Sample_RAM_W_Block_Address;
-wire   [63:0]  FIFOs_Reader_0_Sample_RAM_W_Data;
-wire           FIFOs_Reader_0_Sample_RAM_W_Enable;
-wire   [15:0]  Input_Data_Part_0_Q_0;
-wire   [15:0]  Input_Data_Part_0_Q_1;
-wire   [15:0]  Input_Data_Part_0_Q_2;
-wire   [15:0]  Input_Data_Part_0_Q_3;
-wire   [7:0]   Input_Data_Part_0_TRG_Detect_Vector;
-wire   [15:0]  Input_Data_Part_1_Q_0;
-wire   [15:0]  Input_Data_Part_1_Q_1;
-wire   [15:0]  Input_Data_Part_1_Q_2;
-wire   [15:0]  Input_Data_Part_1_Q_3;
-wire           LANE0_RX_VAL_net_0;
-wire           LANE0_RXD_N;
-wire           LANE0_RXD_P;
-wire           LANE1_RXD_N;
-wire           LANE1_RXD_P;
-wire           LANE2_RXD_N;
-wire           LANE2_RXD_P;
-wire           LANE3_RXD_N;
-wire           LANE3_RXD_P;
-wire           LANE4_RXD_N;
-wire           LANE4_RXD_P;
-wire           LANE5_RXD_N;
-wire           LANE5_RXD_P;
-wire           PF_XCVR_ERM_C2_0_LANE0_RX_CLK_R;
-wire   [31:0]  PF_XCVR_ERM_C2_0_LANE0_RX_DATA;
-wire           PF_XCVR_ERM_C2_0_LANE0_RX_VAL;
-wire           PF_XCVR_ERM_C2_0_LANE1_RX_CLK_R;
-wire   [31:0]  PF_XCVR_ERM_C2_0_LANE1_RX_DATA;
-wire           PF_XCVR_ERM_C2_0_LANE1_RX_VAL;
-wire           PF_XCVR_ERM_C2_0_LANE2_RX_CLK_R;
-wire   [31:0]  PF_XCVR_ERM_C2_0_LANE2_RX_DATA;
-wire           PF_XCVR_ERM_C2_0_LANE2_RX_VAL;
-wire           PF_XCVR_ERM_C2_0_LANE3_RX_CLK_R_0;
-wire   [31:0]  PF_XCVR_ERM_C2_0_LANE3_RX_DATA;
-wire           PF_XCVR_ERM_C2_0_LANE3_RX_VAL;
-wire   [31:0]  PF_XCVR_ERM_C3_0_LANE0_RX_DATA;
-wire           PF_XCVR_ERM_C3_0_LANE0_RX_VAL;
-wire   [31:0]  PF_XCVR_ERM_C3_0_LANE1_RX_DATA;
-wire           PF_XCVR_ERM_C3_0_LANE1_RX_VAL;
-wire           REF_Clock;
-wire           REF_Reset_N;
-wire           Reset_N;
-wire   [63:0]  Sample_RAM_Block_0_B_Output_Data;
-wire   [11:0]  Test_Generator_0_Test_Data_0;
-wire   [11:0]  Test_Generator_0_Test_Data_1;
-wire   [11:0]  Test_Generator_0_Test_Data_2;
-wire   [11:0]  Test_Generator_0_Test_Data_3;
-wire   [11:0]  Test_Generator_0_Test_Data_4;
-wire   [11:0]  Test_Generator_0_Test_Data_5;
-wire   [11:0]  Test_Generator_0_Test_Data_6;
-wire   [11:0]  Test_Generator_0_Test_Data_7;
-wire           Trigger_Top_Part_0_ALL_FIFO_Enable;
-wire           Trigger_Top_Part_0_Control_Test_Generator_Enable;
-wire           Trigger_Top_Part_0_EMPTY;
-wire   [17:0]  Trigger_Top_Part_0_Q;
-wire   [7:0]   Trigger_Top_Part_0_TRG_Enable_Vector;
-wire           Trigger_Top_Part_0_TRG_First_Is_First;
-wire           Trigger_Top_Part_0_TRG_Last_Is_Last;
-wire   [11:0]  Trigger_Top_Part_0_TRG_Threshold;
-wire           C_busy_net_1;
-wire           Communication_Data_Enable_net_1;
-wire           Communication_Data_Req_net_1;
-wire           Diag_0_net_1;
-wire           Diag_1_net_1;
-wire           Diag_2_net_1;
-wire           Diag_3_net_1;
-wire           LANE0_RX_VAL_net_1;
-wire   [15:0]  C_read_data_frame_net_1;
-wire   [31:0]  Communication_Data_Frame_net_1;
-wire   [11:0]  Q_slice_0;
-wire   [15:12] Q_slice_1;
-wire   [27:16] Q_slice_2;
-wire   [31:28] Q_slice_3;
-wire   [11:0]  Q_slice_4;
-wire   [15:12] Q_slice_5;
-wire   [27:16] Q_slice_6;
-wire   [31:28] Q_slice_7;
-wire   [11:0]  Q_slice_8;
-wire   [15:12] Q_slice_9;
-wire   [27:16] Q_slice_10;
-wire   [31:28] Q_slice_11;
-wire   [11:0]  Q_slice_12;
-wire   [15:12] Q_slice_13;
-wire   [27:16] Q_slice_14;
-wire   [31:28] Q_slice_15;
-wire   [11:0]  Q_slice_16;
-wire   [15:12] Q_slice_17;
-wire   [27:16] Q_slice_18;
-wire   [31:28] Q_slice_19;
-wire   [11:0]  Q_slice_20;
-wire   [15:12] Q_slice_21;
-wire   [27:16] Q_slice_22;
-wire   [31:28] Q_slice_23;
-wire   [31:0]  Q_net_0;
-wire   [31:0]  Q_net_1;
-wire   [31:0]  Q_net_2;
-wire   [31:0]  Q_net_3;
-wire   [31:0]  Q_net_4;
-wire   [31:0]  Q_net_5;
+wire   [7:0]  C_addr_frame;
+wire          C_busy_net_0;
+wire          C_enable_cmd;
+wire   [15:0] C_read_data_frame_net_0;
+wire   [15:0] C_write_data_frame;
+wire          C_write_read;
+wire          Clock;
+wire   [31:0] Communication_Builder_0_Communication_Data_Frame;
+wire   [9:0]  Communication_Builder_0_Event_RAM_R_Address;
+wire   [7:0]  Communication_Builder_0_Event_RAM_W_Data_Status;
+wire          Communication_Builder_0_Event_RAM_W_Enable_Status;
+wire   [15:0] Communication_Builder_0_Sample_RAM_R_Address;
+wire   [3:0]  Communication_Builder_0_Sample_RAM_R_Block_Address;
+wire          Communication_Builder_RUN;
+wire   [31:0] Communication_Data_Frame_net_0;
+wire          Communication_Data_Req_net_0;
+wire          Communication_Empty_net_0;
+wire          Communication_Read;
+wire          Diag_0_net_0;
+wire          Diag_1_net_0;
+wire   [7:0]  Event_Info_RAM_Block_0_A_DOUT_Event_Status;
+wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
+wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
+wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR;
+wire   [7:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Status;
+wire          Fifo_RESET_N;
+wire          FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
+wire          FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable;
+wire          FIFOs_Reader_0_Event_FIFO_R_Enable;
+wire   [9:0]  FIFOs_Reader_0_Event_RAM_W_Address;
+wire   [19:0] FIFOs_Reader_0_Event_RAM_W_Data_Number;
+wire   [19:0] FIFOs_Reader_0_Event_RAM_W_Data_Size;
+wire   [19:0] FIFOs_Reader_0_Event_RAM_W_Data_Start_ADDR;
+wire   [7:0]  FIFOs_Reader_0_Event_RAM_W_Data_Status;
+wire          FIFOs_Reader_0_Event_RAM_W_Enable_Number;
+wire          FIFOs_Reader_0_Event_RAM_W_Enable_Size;
+wire          FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR;
+wire          FIFOs_Reader_0_Event_RAM_W_Enable_Status;
+wire   [15:0] FIFOs_Reader_0_Sample_RAM_W_Address;
+wire   [3:0]  FIFOs_Reader_0_Sample_RAM_W_Block_Address;
+wire   [63:0] FIFOs_Reader_0_Sample_RAM_W_Data;
+wire          FIFOs_Reader_0_Sample_RAM_W_Enable;
+wire   [15:0] Input_Data_Part_0_Q_0;
+wire   [15:0] Input_Data_Part_0_Q_1;
+wire   [15:0] Input_Data_Part_0_Q_2;
+wire   [15:0] Input_Data_Part_0_Q_3;
+wire   [7:0]  Input_Data_Part_0_TRG_Detect_Vector;
+wire   [15:0] Input_Data_Part_1_Q_0;
+wire   [15:0] Input_Data_Part_1_Q_1;
+wire   [15:0] Input_Data_Part_1_Q_2;
+wire   [15:0] Input_Data_Part_1_Q_3;
+wire          Reset_N;
+wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
+wire   [11:0] Test_Generator_0_Test_Data_0;
+wire   [11:0] Test_Generator_0_Test_Data_1;
+wire   [11:0] Test_Generator_0_Test_Data_2;
+wire   [11:0] Test_Generator_0_Test_Data_3;
+wire   [11:0] Test_Generator_0_Test_Data_4;
+wire   [11:0] Test_Generator_0_Test_Data_5;
+wire   [11:0] Test_Generator_0_Test_Data_6;
+wire   [11:0] Test_Generator_0_Test_Data_7;
+wire          Trigger_Top_Part_0_ALL_FIFO_Enable;
+wire          Trigger_Top_Part_0_Control_Test_Generator_Enable;
+wire          Trigger_Top_Part_0_EMPTY;
+wire   [17:0] Trigger_Top_Part_0_Q;
+wire   [7:0]  Trigger_Top_Part_0_TRG_Enable_Vector;
+wire          Trigger_Top_Part_0_TRG_First_Is_First;
+wire          Trigger_Top_Part_0_TRG_Last_Is_Last;
+wire   [11:0] Trigger_Top_Part_0_TRG_Threshold;
+wire          C_busy_net_1;
+wire          Communication_Empty_net_1;
+wire          Diag_0_net_1;
+wire          Diag_1_net_1;
+wire          Communication_Data_Req_net_1;
+wire   [15:0] C_read_data_frame_net_1;
+wire   [31:0] Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire           VCC_net;
-wire   [2:0]   Order_Of_TRG_Unit_0_const_net_0;
-wire   [2:0]   Order_Of_TRG_Unit_1_const_net_0;
-wire   [2:0]   Order_Of_TRG_Unit_3_const_net_0;
-wire   [2:0]   Order_Of_TRG_Unit_2_const_net_0;
-wire   [2:0]   Order_Of_TRG_Unit_0_const_net_1;
-wire   [2:0]   Order_Of_TRG_Unit_1_const_net_1;
-wire   [2:0]   Order_Of_TRG_Unit_3_const_net_1;
-wire   [2:0]   Order_Of_TRG_Unit_2_const_net_1;
-wire           GND_net;
+wire          GND_net;
+wire   [2:0]  Order_Of_TRG_Unit_0_const_net_0;
+wire   [2:0]  Order_Of_TRG_Unit_1_const_net_0;
+wire   [2:0]  Order_Of_TRG_Unit_3_const_net_0;
+wire   [2:0]  Order_Of_TRG_Unit_2_const_net_0;
+wire   [2:0]  Order_Of_TRG_Unit_0_const_net_1;
+wire   [2:0]  Order_Of_TRG_Unit_1_const_net_1;
+wire   [2:0]  Order_Of_TRG_Unit_3_const_net_1;
+wire   [2:0]  Order_Of_TRG_Unit_2_const_net_1;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign VCC_net                         = 1'b1;
+assign GND_net                         = 1'b0;
 assign Order_Of_TRG_Unit_0_const_net_0 = 3'h0;
 assign Order_Of_TRG_Unit_1_const_net_0 = 3'h1;
 assign Order_Of_TRG_Unit_3_const_net_0 = 3'h3;
@@ -259,89 +156,38 @@ assign Order_Of_TRG_Unit_0_const_net_1 = 3'h4;
 assign Order_Of_TRG_Unit_1_const_net_1 = 3'h5;
 assign Order_Of_TRG_Unit_3_const_net_1 = 3'h7;
 assign Order_Of_TRG_Unit_2_const_net_1 = 3'h6;
-assign GND_net                         = 1'b0;
+//--------------------------------------------------------------------
+// TieOff assignments
+//--------------------------------------------------------------------
+assign Diag_2                         = 1'b0;
+assign Diag_3                         = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign C_busy_net_1                    = C_busy_net_0;
-assign C_busy                          = C_busy_net_1;
-assign Communication_Data_Enable_net_1 = Communication_Data_Enable_net_0;
-assign Communication_Data_Enable       = Communication_Data_Enable_net_1;
-assign Communication_Data_Req_net_1    = Communication_Data_Req_net_0;
-assign Communication_Data_Req          = Communication_Data_Req_net_1;
-assign Diag_0_net_1                    = Diag_0_net_0;
-assign Diag_0                          = Diag_0_net_1;
-assign Diag_1_net_1                    = Diag_1_net_0;
-assign Diag_1                          = Diag_1_net_1;
-assign Diag_2_net_1                    = Diag_2_net_0;
-assign Diag_2                          = Diag_2_net_1;
-assign Diag_3_net_1                    = Diag_3_net_0;
-assign Diag_3                          = Diag_3_net_1;
-assign LANE0_RX_VAL_net_1              = LANE0_RX_VAL_net_0;
-assign LANE0_RX_VAL                    = LANE0_RX_VAL_net_1;
-assign C_read_data_frame_net_1         = C_read_data_frame_net_0;
-assign C_read_data_frame[15:0]         = C_read_data_frame_net_1;
-assign Communication_Data_Frame_net_1  = Communication_Data_Frame_net_0;
-assign Communication_Data_Frame[31:0]  = Communication_Data_Frame_net_1;
-//--------------------------------------------------------------------
-// Slices assignments
-//--------------------------------------------------------------------
-assign Q_slice_0  = Q_net_0[11:0];
-assign Q_slice_1  = Q_net_0[15:12];
-assign Q_slice_2  = Q_net_0[27:16];
-assign Q_slice_3  = Q_net_0[31:28];
-assign Q_slice_4  = Q_net_1[11:0];
-assign Q_slice_5  = Q_net_1[15:12];
-assign Q_slice_6  = Q_net_1[27:16];
-assign Q_slice_7  = Q_net_1[31:28];
-assign Q_slice_8  = Q_net_2[11:0];
-assign Q_slice_9  = Q_net_2[15:12];
-assign Q_slice_10 = Q_net_2[27:16];
-assign Q_slice_11 = Q_net_2[31:28];
-assign Q_slice_12 = Q_net_3[11:0];
-assign Q_slice_13 = Q_net_3[15:12];
-assign Q_slice_14 = Q_net_3[27:16];
-assign Q_slice_15 = Q_net_3[31:28];
-assign Q_slice_16 = Q_net_4[11:0];
-assign Q_slice_17 = Q_net_4[15:12];
-assign Q_slice_18 = Q_net_4[27:16];
-assign Q_slice_19 = Q_net_4[31:28];
-assign Q_slice_20 = Q_net_5[11:0];
-assign Q_slice_21 = Q_net_5[15:12];
-assign Q_slice_22 = Q_net_5[27:16];
-assign Q_slice_23 = Q_net_5[31:28];
+assign C_busy_net_1                   = C_busy_net_0;
+assign C_busy                         = C_busy_net_1;
+assign Communication_Empty_net_1      = Communication_Empty_net_0;
+assign Communication_Empty            = Communication_Empty_net_1;
+assign Diag_0_net_1                   = Diag_0_net_0;
+assign Diag_0                         = Diag_0_net_1;
+assign Diag_1_net_1                   = Diag_1_net_0;
+assign Diag_1                         = Diag_1_net_1;
+assign Communication_Data_Req_net_1   = Communication_Data_Req_net_0;
+assign Communication_Data_Req         = Communication_Data_Req_net_1;
+assign C_read_data_frame_net_1        = C_read_data_frame_net_0;
+assign C_read_data_frame[15:0]        = C_read_data_frame_net_1;
+assign Communication_Data_Frame_net_1 = Communication_Data_Frame_net_0;
+assign Communication_Data_Frame[31:0] = Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
-//--------AND4
-AND4 AND4_0(
-        // Inputs
-        .A ( PF_XCVR_ERM_C2_0_LANE0_RX_VAL ),
-        .B ( PF_XCVR_ERM_C2_0_LANE1_RX_VAL ),
-        .C ( PF_XCVR_ERM_C2_0_LANE2_RX_VAL ),
-        .D ( PF_XCVR_ERM_C2_0_LANE3_RX_VAL ),
-        // Outputs
-        .Y ( AND4_0_Y ) 
-        );
-
-//--------AND4
-AND4 AND4_0_0(
-        // Inputs
-        .A ( PF_XCVR_ERM_C3_0_LANE0_RX_VAL ),
-        .B ( PF_XCVR_ERM_C3_0_LANE1_RX_VAL ),
-        .C ( AND4_0_Y ),
-        .D ( VCC_net ),
-        // Outputs
-        .Y ( LANE0_RX_VAL_net_0 ) 
-        );
-
 //--------Communication_Builder
 Communication_Builder Communication_Builder_0(
         // Inputs
         .Clock                       ( Clock ),
         .Reset_N                     ( Reset_N ),
-        .Communication_Data_Full     ( Communication_Data_Full ),
-        .Communication_DATA_Ack      ( Communication_DATA_Ack ),
+        .Communication_Data_Full     ( Diag_1_net_0 ),
+        .Communication_DATA_Ack      ( Communication_Builder_RUN ),
         .Event_RAM_R_Data_Start_ADDR ( Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR ),
         .Event_RAM_R_Data_Number     ( Event_Info_RAM_Block_0_B_DOUT_Event_Number ),
         .Event_RAM_R_Data_Size       ( Event_Info_RAM_Block_0_B_DOUT_Event_Size ),
@@ -349,113 +195,34 @@ Communication_Builder Communication_Builder_0(
         .Sample_RAM_R_Data           ( Sample_RAM_Block_0_B_Output_Data ),
         // Outputs
         .Event_RAM_W_Enable_Status   ( Communication_Builder_0_Event_RAM_W_Enable_Status ),
-        .Communication_Data_Enable   ( Communication_Data_Enable_net_0 ),
+        .Communication_Data_Enable   ( Diag_0_net_0 ),
         .Communication_Data_Req      ( Communication_Data_Req_net_0 ),
-        .Diag_0                      ( Diag_0_net_0 ),
-        .Diag_1                      ( Diag_1_net_0 ),
-        .Diag_2                      ( Diag_2_net_0 ),
-        .Diag_3                      ( Diag_3_net_0 ),
+        .Diag_0                      (  ),
+        .Diag_1                      (  ),
+        .Diag_2                      (  ),
+        .Diag_3                      (  ),
         .Event_RAM_R_Address         ( Communication_Builder_0_Event_RAM_R_Address ),
         .Event_RAM_W_Data_Status     ( Communication_Builder_0_Event_RAM_W_Data_Status ),
         .Sample_RAM_R_Address        ( Communication_Builder_0_Sample_RAM_R_Address ),
         .Sample_RAM_R_Block_Address  ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
-        .Communication_Data_Frame    ( Communication_Data_Frame_net_0 ) 
+        .Communication_Data_Frame    ( Communication_Builder_0_Communication_Data_Frame ) 
         );
 
-//--------COREFIFO_C9
-COREFIFO_C9 COREFIFO_C9_0(
+//--------COREFIFO_C10
+COREFIFO_C10 COREFIFO_C10_0(
         // Inputs
-        .WCLOCK   ( PF_XCVR_ERM_C2_0_LANE0_RX_CLK_R ),
+        .WCLOCK   ( Clock ),
         .RCLOCK   ( Clock ),
-        .WRESET_N ( CTRL_ARST_N ),
+        .WRESET_N ( Reset_N ),
         .RRESET_N ( Reset_N ),
-        .WE       ( LANE0_RX_VAL_net_0 ),
-        .RE       ( VCC_net ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE0_RX_DATA ),
+        .WE       ( Diag_0_net_0 ),
+        .RE       ( Communication_Read ),
+        .DATA     ( Communication_Builder_0_Communication_Data_Frame ),
         // Outputs
         .FULL     (  ),
-        .EMPTY    (  ),
-        .Q        ( Q_net_0 ) 
-        );
-
-//--------COREFIFO_C9
-COREFIFO_C9 COREFIFO_C9_0_0(
-        // Inputs
-        .WCLOCK   ( PF_XCVR_ERM_C2_0_LANE1_RX_CLK_R ),
-        .RCLOCK   ( Clock ),
-        .WRESET_N ( CTRL_ARST_N ),
-        .RRESET_N ( Reset_N ),
-        .WE       ( LANE0_RX_VAL_net_0 ),
-        .RE       ( VCC_net ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE1_RX_DATA ),
-        // Outputs
-        .FULL     (  ),
-        .EMPTY    (  ),
-        .Q        ( Q_net_1 ) 
-        );
-
-//--------COREFIFO_C9
-COREFIFO_C9 COREFIFO_C9_0_1(
-        // Inputs
-        .WCLOCK   ( PF_XCVR_ERM_C2_0_LANE2_RX_CLK_R ),
-        .RCLOCK   ( Clock ),
-        .WRESET_N ( CTRL_ARST_N ),
-        .RRESET_N ( Reset_N ),
-        .WE       ( LANE0_RX_VAL_net_0 ),
-        .RE       ( VCC_net ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE2_RX_DATA ),
-        // Outputs
-        .FULL     (  ),
-        .EMPTY    (  ),
-        .Q        ( Q_net_2 ) 
-        );
-
-//--------COREFIFO_C9
-COREFIFO_C9 COREFIFO_C9_0_2(
-        // Inputs
-        .WCLOCK   ( PF_XCVR_ERM_C2_0_LANE3_RX_CLK_R_0 ),
-        .RCLOCK   ( Clock ),
-        .WRESET_N ( CTRL_ARST_N ),
-        .RRESET_N ( Reset_N ),
-        .WE       ( LANE0_RX_VAL_net_0 ),
-        .RE       ( VCC_net ),
-        .DATA     ( PF_XCVR_ERM_C2_0_LANE3_RX_DATA ),
-        // Outputs
-        .FULL     (  ),
-        .EMPTY    (  ),
-        .Q        ( Q_net_3 ) 
-        );
-
-//--------COREFIFO_C9
-COREFIFO_C9 COREFIFO_C9_0_2_0(
-        // Inputs
-        .WCLOCK   ( PF_XCVR_ERM_C2_0_LANE3_RX_CLK_R_0 ),
-        .RCLOCK   ( Clock ),
-        .WRESET_N ( CTRL_ARST_N ),
-        .RRESET_N ( Reset_N ),
-        .WE       ( LANE0_RX_VAL_net_0 ),
-        .RE       ( VCC_net ),
-        .DATA     ( PF_XCVR_ERM_C3_0_LANE0_RX_DATA ),
-        // Outputs
-        .FULL     (  ),
-        .EMPTY    (  ),
-        .Q        ( Q_net_4 ) 
-        );
-
-//--------COREFIFO_C9
-COREFIFO_C9 COREFIFO_C9_0_2_1(
-        // Inputs
-        .WCLOCK   ( PF_XCVR_ERM_C2_0_LANE3_RX_CLK_R_0 ),
-        .RCLOCK   ( Clock ),
-        .WRESET_N ( CTRL_ARST_N ),
-        .RRESET_N ( Reset_N ),
-        .WE       ( LANE0_RX_VAL_net_0 ),
-        .RE       ( VCC_net ),
-        .DATA     ( PF_XCVR_ERM_C3_0_LANE1_RX_DATA ),
-        // Outputs
-        .FULL     (  ),
-        .EMPTY    (  ),
-        .Q        ( Q_net_5 ) 
+        .EMPTY    ( Communication_Empty_net_0 ),
+        .AFULL    ( Diag_1_net_0 ),
+        .Q        ( Communication_Data_Frame_net_0 ) 
         );
 
 //--------Event_Info_RAM_Block
@@ -574,124 +341,6 @@ Input_Data_Part Input_Data_Part_1(
         .Q_3                 ( Input_Data_Part_1_Q_3 ),
         // Inouts
         .TRG_Detect_Vector   ( Input_Data_Part_0_TRG_Detect_Vector ) 
-        );
-
-//--------PF_XCVR_ERM_C2
-PF_XCVR_ERM_C2 PF_XCVR_ERM_C2_0(
-        // Inputs
-        .LANE0_RXD_P              ( LANE0_RXD_P ),
-        .LANE0_RXD_N              ( LANE0_RXD_N ),
-        .LANE1_RXD_P              ( LANE1_RXD_P ),
-        .LANE1_RXD_N              ( LANE1_RXD_N ),
-        .LANE2_RXD_P              ( LANE2_RXD_P ),
-        .LANE2_RXD_N              ( LANE2_RXD_N ),
-        .LANE3_RXD_P              ( LANE3_RXD_P ),
-        .LANE3_RXD_N              ( LANE3_RXD_N ),
-        .LANE0_CDR_REF_CLK_FAB    ( REF_Clock ),
-        .LANE0_PCS_ARST_N         ( REF_Reset_N ),
-        .LANE0_PMA_ARST_N         ( REF_Reset_N ),
-        .LANE1_CDR_REF_CLK_FAB    ( REF_Clock ),
-        .LANE1_PCS_ARST_N         ( REF_Reset_N ),
-        .LANE1_PMA_ARST_N         ( REF_Reset_N ),
-        .LANE2_CDR_REF_CLK_FAB    ( REF_Clock ),
-        .LANE2_PCS_ARST_N         ( REF_Reset_N ),
-        .LANE2_PMA_ARST_N         ( REF_Reset_N ),
-        .LANE3_CDR_REF_CLK_FAB    ( REF_Clock ),
-        .LANE3_PCS_ARST_N         ( REF_Reset_N ),
-        .LANE3_PMA_ARST_N         ( REF_Reset_N ),
-        .CTRL_CLK                 ( CTRL_CLK ),
-        .CTRL_ARST_N              ( CTRL_ARST_N ),
-        .LANE0_LOS                ( GND_net ),
-        .LANE0_CLK_REF            ( REF_Clock ),
-        .LANE1_LOS                ( GND_net ),
-        .LANE1_CLK_REF            ( REF_Clock ),
-        .LANE2_LOS                ( GND_net ),
-        .LANE2_CLK_REF            ( REF_Clock ),
-        .LANE3_LOS                ( GND_net ),
-        .LANE3_CLK_REF            ( REF_Clock ),
-        // Outputs
-        .LANE0_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE0_RX_CLK_R ),
-        .LANE0_RX_READY_CDR       (  ),
-        .LANE0_RX_VAL_CDR         (  ),
-        .LANE0_RX_IDLE            (  ),
-        .LANE1_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE1_RX_CLK_R ),
-        .LANE1_RX_READY_CDR       (  ),
-        .LANE1_RX_VAL_CDR         (  ),
-        .LANE1_RX_IDLE            (  ),
-        .LANE2_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE2_RX_CLK_R ),
-        .LANE2_RX_READY_CDR       (  ),
-        .LANE2_RX_VAL_CDR         (  ),
-        .LANE2_RX_IDLE            (  ),
-        .LANE3_RX_CLK_R           ( PF_XCVR_ERM_C2_0_LANE3_RX_CLK_R_0 ),
-        .LANE3_RX_READY_CDR       (  ),
-        .LANE3_RX_VAL_CDR         (  ),
-        .LANE3_RX_IDLE            (  ),
-        .LANE0_RX_READY           (  ),
-        .LANE0_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE0_RX_VAL ),
-        .LANE1_RX_READY           (  ),
-        .LANE1_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE1_RX_VAL ),
-        .LANE2_RX_READY           (  ),
-        .LANE2_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE2_RX_VAL ),
-        .LANE3_RX_READY           (  ),
-        .LANE3_RX_VAL             ( PF_XCVR_ERM_C2_0_LANE3_RX_VAL ),
-        .LANE0_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE0_RX_DATA ),
-        .LANE0_RX_CODE_VIOLATION  (  ),
-        .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         (  ),
-        .LANE1_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE1_RX_DATA ),
-        .LANE1_RX_CODE_VIOLATION  (  ),
-        .LANE1_RX_DISPARITY_ERROR (  ),
-        .LANE1_8B10B_RX_K         (  ),
-        .LANE2_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE2_RX_DATA ),
-        .LANE2_RX_CODE_VIOLATION  (  ),
-        .LANE2_RX_DISPARITY_ERROR (  ),
-        .LANE2_8B10B_RX_K         (  ),
-        .LANE3_RX_DATA            ( PF_XCVR_ERM_C2_0_LANE3_RX_DATA ),
-        .LANE3_RX_CODE_VIOLATION  (  ),
-        .LANE3_RX_DISPARITY_ERROR (  ),
-        .LANE3_8B10B_RX_K         (  ) 
-        );
-
-//--------PF_XCVR_ERM_C3
-PF_XCVR_ERM_C3 PF_XCVR_ERM_C3_0(
-        // Inputs
-        .LANE0_RXD_P              ( LANE4_RXD_P ),
-        .LANE0_RXD_N              ( LANE4_RXD_N ),
-        .LANE1_RXD_P              ( LANE5_RXD_P ),
-        .LANE1_RXD_N              ( LANE5_RXD_N ),
-        .LANE0_CDR_REF_CLK_FAB    ( REF_Clock ),
-        .LANE0_PCS_ARST_N         ( REF_Reset_N ),
-        .LANE0_PMA_ARST_N         ( REF_Reset_N ),
-        .LANE1_CDR_REF_CLK_FAB    ( REF_Clock ),
-        .LANE1_PCS_ARST_N         ( REF_Reset_N ),
-        .LANE1_PMA_ARST_N         ( REF_Reset_N ),
-        .CTRL_CLK                 ( CTRL_CLK ),
-        .CTRL_ARST_N              ( CTRL_ARST_N ),
-        .LANE0_LOS                ( GND_net ),
-        .LANE0_CLK_REF            ( REF_Clock ),
-        .LANE1_LOS                ( GND_net ),
-        .LANE1_CLK_REF            ( REF_Clock ),
-        // Outputs
-        .LANE0_RX_CLK_R           (  ),
-        .LANE0_RX_READY_CDR       (  ),
-        .LANE0_RX_VAL_CDR         (  ),
-        .LANE0_RX_IDLE            (  ),
-        .LANE1_RX_CLK_R           (  ),
-        .LANE1_RX_READY_CDR       (  ),
-        .LANE1_RX_VAL_CDR         (  ),
-        .LANE1_RX_IDLE            (  ),
-        .LANE0_RX_READY           (  ),
-        .LANE0_RX_VAL             ( PF_XCVR_ERM_C3_0_LANE0_RX_VAL ),
-        .LANE1_RX_READY           (  ),
-        .LANE1_RX_VAL             ( PF_XCVR_ERM_C3_0_LANE1_RX_VAL ),
-        .LANE0_RX_DATA            ( PF_XCVR_ERM_C3_0_LANE0_RX_DATA ),
-        .LANE0_RX_CODE_VIOLATION  (  ),
-        .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         (  ),
-        .LANE1_RX_DATA            ( PF_XCVR_ERM_C3_0_LANE1_RX_DATA ),
-        .LANE1_RX_CODE_VIOLATION  (  ),
-        .LANE1_RX_DISPARITY_ERROR (  ),
-        .LANE1_8B10B_RX_K         (  ) 
         );
 
 //--------Sample_RAM_Block

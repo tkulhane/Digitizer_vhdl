@@ -1,0 +1,94 @@
+Running in restricted mode: identify_job
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Identify (R) Instrumentor
+Build: S-2021.09M
+Install: C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DESKTOP-TDPVUTD
+
+Implementation : identify_debug
+
+Arguments:   -product identify_instrumentor -srs_gen_hw C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\instr_sources\syn_dics.v -prj C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\scratchproject.prs -idb C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\identify.db -isrs C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_mult.srs -curimpl identify_debug -write_fdc -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\identify.log -tsl NdrKKjof -fidc C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\identify.idc
+ProductType: identify_instrumentor
+
+
+
+
+*** Integrated Instrumentor ***
+Added instrumentation 'identify_debug' to the project
+. has been added to search path.
+Loading instrumentation 'identify_debug'
+Source IDC file C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/synthesis/identify_debug/identify.idc
+Setting IICE sampler (data compression) to 1 for IICE named 'FTDI'
+Setting IICE sampler (sampledepth) to 512 for IICE named 'FTDI'
+Setting IICE sample clock to '/USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_clk' for IICE named 'FTDI'
+Setting IICE sampler (data compression) to 1 for IICE named 'IICE'
+Setting IICE sampler (sampledepth) to 512 for IICE named 'IICE'
+Setting IICE sample clock to '/USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_clk' for IICE named 'IICE'
+Generating SRS instrumentation file: C:VHDL_tempDigitizerDigitizer_vhdlDigitizersynthesisidentify_debuginstr_sourcessyn_dics.v
+Checking netlist 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_mult.srs'
+Checking netlist 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_mult.srs'
+The design does not contain a UJTAG_WRAPPER instance.
+OK, the design does not contain a UJTAG instance.
+ Generating IICE 'FTDI'for the following settings:
+      Design settings:
+          Device family          PolarFire
+          Communication port     builtin
+          Skew-resistant logic   off
+          Export Trigger         no
+          Import Trigger         0
+          Language               verilog
+      Sample Buffer:
+          Type                   behavioral
+          Depth                  512
+          Width                  44 bits
+          RAM type               BRAM
+          Qualified sampling     off
+          Always armed sampling  off
+          Data compression       on
+      Trigger controller:
+          Preconfigured          no
+          Type                   Simple Triggering
+          Total-trigger Delay    1 cycles
+ 
+ Generating IICE 'IICE'for the following settings:
+      Design settings:
+          Device family          PolarFire
+          Communication port     builtin
+          Skew-resistant logic   off
+          Export Trigger         no
+          Import Trigger         0
+          Language               verilog
+      Sample Buffer:
+          Type                   behavioral
+          Depth                  512
+          Width                  186 bits
+          RAM type               BRAM
+          Qualified sampling     off
+          Always armed sampling  off
+          Data compression       on
+      Trigger controller:
+          Preconfigured          no
+          Type                   Simple Triggering
+          Total-trigger Delay    2 cycles
+ 
+Current instrumentation information: 	IICE=FTDI 
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 32, Trigger Only 0, Sample and trigger 12
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 32, Sample and trigger 12
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+	IICE=IICE 
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 12, Trigger Only 0, Sample and trigger 174
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 12, Sample and trigger 174
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+exit status=0
+Unloading current instrumentation 'identify_debug'

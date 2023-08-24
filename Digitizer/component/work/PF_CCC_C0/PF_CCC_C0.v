@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Aug  9 21:37:34 2023
+// Created by SmartDesign Mon Aug 21 16:12:36 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -50,7 +50,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.100} -component_na
 "GL0_0_BYPASS:0"  \
 "GL0_0_BYPASS_EN:false"  \
 "GL0_0_DEDICATED_USED:false"  \
-"GL0_0_DIV:4"  \
+"GL0_0_DIV:11"  \
 "GL0_0_DIVSTART:0"  \
 "GL0_0_DYNAMIC_PH:false"  \
 "GL0_0_EXPOSE_EN:false"  \
@@ -81,7 +81,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.100} -component_na
 "GL1_0_BYPASS:0"  \
 "GL1_0_BYPASS_EN:false"  \
 "GL1_0_DEDICATED_USED:false"  \
-"GL1_0_DIV:109"  \
+"GL1_0_DIV:80"  \
 "GL1_0_DIVSTART:0"  \
 "GL1_0_DYNAMIC_PH:false"  \
 "GL1_0_EXPOSE_EN:false"  \

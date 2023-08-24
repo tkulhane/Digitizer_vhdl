@@ -24,7 +24,7 @@ entity Reset_Controler is
         EXT_LMX2_Reset_N : out std_logic;
 
         INT_DataFifo_Reset_N : out std_logic;
-
+        INT_FtdiReset_N : out std_logic;
 
         
         Diag_Valid : out std_logic
@@ -59,6 +59,7 @@ architecture rtl of Reset_Controler is
     constant NUM_RST_EXT_LMX2           : Natural := 3;
 
     constant NUM_RST_INT_DataFifo       : Natural := 0;
+    constant NUM_RST_INT_Ftdi           : Natural := 1;
 
     
 
@@ -103,7 +104,7 @@ begin
     EXT_LMX2_Reset_N        <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_LMX2));
 
     INT_DataFifo_Reset_N    <= Reset_N and (not REG_INT_Resets(NUM_RST_INT_DataFifo));
-
+    INT_FtdiReset_N         <= not REG_INT_Resets(NUM_RST_INT_Ftdi);
 
 
 

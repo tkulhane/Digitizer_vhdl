@@ -1,0 +1,628 @@
+# Wed Aug 23 21:31:13 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09M
+Install: C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DESKTOP-TDPVUTD
+
+Implementation : identify_debug
+Synopsys Generic Technology Mapper, Version map202109act, Build 055R, Built Feb 23 2022 09:52:10, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 121MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 134MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 134MB)
+
+
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Found compile point of type hard on View view:work.Controler(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":9:7:9:16|Found compile point of type hard on View view:work.Data_Block(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_0(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_1(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Top level view:work.Top(verilog) 
+
+Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 202MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 203MB peak: 281MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Mapping Top level view:work.Top(verilog) because 
+		 RTL and/or Constraints changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 203MB peak: 281MB)
+
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5323:7:5323:20|Tristate driver b10_PbTt39_Y2x (in view: VhdlGenLib.FTDI_x(verilog)) on net b10_PbTt39_Y2x (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5484:22:5484:37|Tristate driver b12_ocsGfWYY_Lyh (in view: VhdlGenLib.FTDI_x(verilog)) on net b12_ocsGfWYY_Lyh (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[0] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[0] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[1] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[1] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[2] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[2] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[3] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[3] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[4] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[4] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[5] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[5] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[6] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[6] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+@N: MO111 :|Tristate driver dummy_t[7] (in view: VhdlGenLib.FTDI_x(verilog)) on net dummy[7] (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
+Dissolving instances under view:VhdlGenLib.b11_OFWNT9s_8tZ_Z7_x(verilog) (flattening)
+
+Dissolving instances under view:VhdlGenLib.b11_OFWNT9s_8tZ_Z3_x(verilog) (flattening)
+
+
+Making connections to hyper_source modules
+
+#### START OF SSF LOG MESSAGES ####
+
+#### END OF SSF LOG MESSAGES ####
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 209MB peak: 281MB)
+
+Encoding state machine Communication_CMD_MUX_0.state_reg[0:2] (in view: work.Controler(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine Communication_ANW_MUX_0.state_reg[0:3] (in view: work.Controler(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_anw_mux.vhd":67:8:67:9|There are no possible illegal states for state machine Communication_ANW_MUX_0.state_reg[0:3] (in view: work.Controler(verilog)); safe FSM implementation is not required.
+Encoding state machine Trigger_Top_Part_0.Trigger_Control_0.state_reg[0:5] (in view: work.Data_Block(verilog))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine Communication_TX_Arbiter2_0.state_reg[0:5] (in view: work.UART_Protocol_UART_Protocol_0(verilog))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine Communication_TX_Arbiter2_0.state_reg[0:5] (in view: work.UART_Protocol_UART_Protocol_1(verilog))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:5] (in view: work.Communication_Switch(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_switch.vhd":194:8:194:9|Removing instance Communication_Switch_0.read_data_frame_1[3] because it is equivalent to instance Communication_Switch_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+Encoding state machine b13_nAzGfFM_sLsv3[13:0] (in view: VhdlGenLib.b7_OCByLXC_Z1_x(verilog))
+original code -> new code
+   0000 -> 00000000000000
+   0001 -> 00000000000011
+   0010 -> 00000000000101
+   0011 -> 00000000001001
+   0100 -> 00000000010001
+   0101 -> 00000000100001
+   0110 -> 00000001000001
+   0111 -> 00000010000001
+   1000 -> 00000100000001
+   1001 -> 00001000000001
+   1010 -> 00010000000001
+   1011 -> 00100000000001
+   1100 -> 01000000000001
+   1101 -> 10000000000001
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4781:3:4781:8|Found counter in view:VhdlGenLib.b7_OCByLXC_Z1_x(verilog) instance genblk4\.b7_nYhI39s[8:0] 
+@N: FX493 |Applying initial value "0" on instance iclksync_status.b5_uU_cL.
+@N: FX493 |Applying initial value "0" on instance iclksync_current_state.b5_uU_cL.
+@N: FX493 |Applying initial value "0" on instance b13_nAzGfFM_sLsv3_i[0].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[0].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[1].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[2].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[3].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[4].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[5].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[6].
+@N: FX493 |Applying initial value "1" on instance cntrl_chain.genblk2\.b3_nUT[7].
+@N: FX493 |Applying initial value "0" on instance cntrl_chain.genblk2\.b3_nUT[8].
+@N: FX493 |Applying initial value "0" on instance cntrl_chain.genblk1\.b3_nfs[0].
+@N: FX493 |Applying initial value "0" on instance cntrl_chain.genblk1\.b3_nfs[1].
+@N: FX493 |Applying initial value "0" on instance cntrl_chain.genblk1\.b3_nfs[2].
+@N: FX493 |Applying initial value "0" on instance cntrl_chain.genblk1\.b3_nfs[3].
+@N: FX493 |Applying initial value "0" on instance cntrl_chain.genblk1\.b3_nfs[4].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[0].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[1].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[2].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[3].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[4].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[5].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[6].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[7].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[8].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[9].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[10].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[11].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[12].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[13].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[14].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[15].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[16].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[17].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[18].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[19].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[20].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[21].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[22].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[23].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[24].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[25].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[26].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[27].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[28].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[29].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[30].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[31].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[32].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[33].
+@N: FX493 |Applying initial value "1" on instance b5_PbrtL.b6_OKctIF[34].
+@N: FX493 |Applying initial value "0" on instance b5_PbrtL.b6_OKctIF[35].
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":3049:6:3049:11|Removing sequential instance genblk4\.b11_oGA_BXsO_OS.genblk2\.b8_nczQ_DYg[2:0] (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z3_x(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@W: FX107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":2744:4:2744:9|RAM b3_SoW.b3_SoW[49:0] (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z3_x(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: FX493 |Applying initial value "1" on instance genblk4\.b11_oGA_BXsO_OS.genblk2\.b8_nczQ_DYg[5].
+@N: FX493 |Applying initial value "0" on instance genblk4\.b11_oGA_BXsO_OS.genblk2\.b8_nczQ_DYg[7].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[0].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[1].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[2].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[3].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[4].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[5].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[6].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[7].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[8].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[9].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[10].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[11].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[12].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[13].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[14].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[15].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[16].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[17].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[18].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[19].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[20].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[21].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[22].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[23].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[24].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[25].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[26].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[27].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[28].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[29].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[30].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[31].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[32].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[33].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[34].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[35].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[36].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[37].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[38].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[39].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[40].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[41].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[42].
+@N: FX493 |Applying initial value "1" on instance genblk5\.b11_oGA_BXsO_OT.genblk2\.b8_nczQ_DYg[43].
+Encoding state machine b13_nAzGfFM_sLsv3[13:0] (in view: VhdlGenLib.b7_OCByLXC_Z5_x(verilog))
+original code -> new code
+   0000 -> 00000000000000
+   0001 -> 00000000000011
+   0010 -> 00000000000101
+   0011 -> 00000000001001
+   0100 -> 00000000010001
+   0101 -> 00000000100001
+   0110 -> 00000001000001
+   0111 -> 00000010000001
+   1000 -> 00000100000001
+   1001 -> 00001000000001
+   1010 -> 00010000000001
+   1011 -> 00100000000001
+   1100 -> 01000000000001
+   1101 -> 10000000000001
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4781:3:4781:8|Found counter in view:VhdlGenLib.b7_OCByLXC_Z5_x(verilog) instance genblk4\.b7_nYhI39s[8:0] 
+@N: FX493 |Applying initial value "0" on instance iclksync_status.b5_uU_cL.
+
+Only the first 100 messages of id 'FX493' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top\Top.srr -id FX493' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {FX493} -count unlimited' in the Tcl shell.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":3049:6:3049:11|Removing sequential instance genblk4\.b11_oGA_BXsO_OS.genblk2\.b8_nczQ_DYg[2:0] (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z7_x(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
+@W: FX107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":2744:4:2744:9|RAM b3_SoW.b3_SoW[191:0] (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z7_x(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.wptr[10:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memwaddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memwaddr_r[9:0] 
+Encoding state machine state_reg[0:5] (in view: work.Communication_TX_Arbiter2(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine actual_state[0:11] (in view: work.ft601_fifo_interface(rtl_ft601_fifo_interface))
+original code -> new code
+   000000000001 -> 000000000001
+   000000000010 -> 000000000010
+   000000000100 -> 000000000100
+   000000001000 -> 000000001000
+   000000010000 -> 000000010000
+   000000100000 -> 000000100000
+   000001000000 -> 000001000000
+   000010000000 -> 000010000000
+   000100000000 -> 000100000000
+   001000000000 -> 001000000000
+   010000000000 -> 010000000000
+   100000000000 -> 100000000000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.rptr[10:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memwaddr_r[9:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 217MB peak: 281MB)
+
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4827:2:4827:7|Removing sequential instance b5_nUTGT.b13_xYTFKCkrt_FH9 (in view: VhdlGenLib.FTDI_x(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4827:2:4827:7|Removing sequential instance b5_nUTGT.b13_xYTFKCkrt_FH9 (in view: VhdlGenLib.IICE_x(verilog)) because it does not drive other instances.
+
+Finished factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 230MB peak: 281MB)
+
+
+Available hyper_sources - for debug and ip models
+HyperSrc tag ident_coreinst.FTDI_INST.ident_ihs_IICE_master_clock
+HyperSrc tag ident_coreinst.IICE_INST.ident_ihs_IICE_master_clock
+HyperSrc tag ident_coreinst.FTDI_INST.Identify_FTDI_trigger_ext
+HyperSrc tag ident_coreinst.FTDI_INST.b3_SoW.identify_sampler_ready
+HyperSrc tag ident_coreinst.IICE_INST.b3_SoW.identify_sampler_ready
+HyperSrc tag ident_coreinst.IICE_INST.Identify_IICE_trigger_ext
+HyperSrc tag ident_coreinst.comm_block_INST.jtagi.ujtag_wrapper_uireg
+HyperSrc tag ident_coreinst.comm_block_INST.jtagi.ujtag_wrapper_urstb
+HyperSrc tag ident_coreinst.comm_block_INST.jtagi.ujtag_wrapper_udrupd
+HyperSrc tag ident_coreinst.comm_block_INST.jtagi.ujtag_wrapper_udrck
+HyperSrc tag ident_coreinst.comm_block_INST.jtagi.ujtag_wrapper_udrcap
+HyperSrc tag ident_coreinst.comm_block_INST.jtagi.ujtag_wrapper_udrsh
+HyperSrc tag ident_coreinst.comm_block_INST.jtagi.ujtag_wrapper_utdi
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ch_af_data
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ch_af_empty
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ch_af_rden
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ch_fa_almost_full
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ch_fa_data
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ch_fa_wren
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_be
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_clk
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_data
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_noe
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_nrd
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_nrxf
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_ntxe
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_ftdi_nwr
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_actual_state
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_data_buf
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_data_buf_b
+HyperSrc tag USB_3_Protocol_0.ft601_fifo_interface_0.ident_ihs_nreset
+
+Making connections to hyper_source modules
+@W: BN401 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":212:20:212:44|Missing syn_hyper_source with tag ujtag_wrapper_utdo. Connecting to default value '0'
+Deleting unused hyper source sample_clock_hs (in view: VhdlGenLib.IICE_x(verilog))
+Deleting unused hyper source sample_clock_hs (in view: VhdlGenLib.FTDI_x(verilog))
+Deleting unused hyper source trigger_hs (in view: VhdlGenLib.FTDI_x(verilog))
+Deleting unused hyper source hypers_sampler_ready (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z7_x(verilog))
+Deleting unused hyper source hypers_sampler_ready (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z3_x(verilog))
+Deleting unused hyper source trigger_hs (in view: VhdlGenLib.IICE_x(verilog))
+Deleting unused hyper source hypers_ujtag_wrapper_uireg (in view: VhdlGenLib.jtag_interface_x(verilog))
+Deleting unused hyper source hypers_ujtag_wrapper_urstb (in view: VhdlGenLib.jtag_interface_x(verilog))
+Deleting unused hyper source hypers_ujtag_wrapper_udrupd (in view: VhdlGenLib.jtag_interface_x(verilog))
+Deleting unused hyper source hypers_ujtag_wrapper_udrck (in view: VhdlGenLib.jtag_interface_x(verilog))
+Deleting unused hyper source hypers_ujtag_wrapper_udrcap (in view: VhdlGenLib.jtag_interface_x(verilog))
+Deleting unused hyper source hypers_ujtag_wrapper_udrsh (in view: VhdlGenLib.jtag_interface_x(verilog))
+Deleting unused hyper source hypers_ujtag_wrapper_utdi (in view: VhdlGenLib.jtag_interface_x(verilog))
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":7089:2:7089:7|Removing sequential instance ident_coreinst.IICE_INST.b13_PSyil9s_FMZ_L (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5428:2:5428:7|Removing sequential instance ident_coreinst.FTDI_INST.b13_PSyil9s_FMZ_L (in view: work.Top(verilog)) because it does not drive other instances.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGJV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGJd.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGJn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGJm.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAe.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGA5.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAp.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[8]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAl.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAd.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[12]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGAm.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[13]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[15]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUe.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[16]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGU5.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[17]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUp.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[18]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUl.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[19]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[20]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUd.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[21]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[22]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGUm.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[23]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQq0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[24]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQS0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[25]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQe0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[26]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQ50.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[27]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQp0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[28]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQl0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[29]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQV0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[30]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQd0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[31]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQn0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[32]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGQm0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[33]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[34]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[35]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqe.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[36]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGq5.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[37]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqp.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[38]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGql.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[39]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[40]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqd.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[41]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[42]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGqm.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[43]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[44]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[45]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIe.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[46]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGI5.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[47]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIp.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[48]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIl.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[49]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[50]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGId.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[51]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[52]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGIm.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[53]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[54]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[55]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSe.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[56]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGS5.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[57]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSp.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[58]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSl.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[59]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[60]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSd.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[61]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[62]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGSm.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[63]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[64]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[65]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRe.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[66]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGR5.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[67]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRp.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[68]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRl.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[69]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[70]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRd.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[71]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[72]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b9_1LbcgKGRm.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[73]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[74]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[75]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJJ.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[76]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJA.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[77]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJU.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[78]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJQ0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[79]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[80]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJI.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[81]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[82]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKJR.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[83]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[84]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[85]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbJ.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[86]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbA.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[87]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbU.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[88]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbQ0.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[89]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbq.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[90]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbI.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[91]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbS.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[92]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKbR.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[93]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKxV.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[94]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKxn.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[95]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKxJ.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[96]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKxA.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[97]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5575:2:5575:7|Removing instance ident_coreinst.IICE_INST.b4_PfFz.b7_PbTtl9G.b8_1LbcgKxU.b11_uUG_C9CrTXy because it is equivalent to instance ident_coreinst.IICE_INST.b3_SoW.b6_SoWyQD.genblk2.b5_oRB_C[98]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Only the first 100 messages of id 'BN132' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top\Top.srr -id BN132' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN132} -count unlimited' in the Tcl shell.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4489:3:4489:8|Removing sequential instance ident_coreinst.FTDI_INST.b5_nUTGT.iclksync_status.b8_uUT_CqMr[4] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4489:3:4489:8|Removing sequential instance ident_coreinst.IICE_INST.b5_nUTGT.iclksync_status.b8_uUT_CqMr[4] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4517:3:4517:8|Removing sequential instance ident_coreinst.IICE_INST.b5_nUTGT.iclksync_status.b4_oYh0[4] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4517:3:4517:8|Removing sequential instance ident_coreinst.FTDI_INST.b5_nUTGT.iclksync_status.b4_oYh0[4] (in view: work.Top(verilog)) because it does not drive other instances.
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 242MB peak: 281MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 243MB peak: 281MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 244MB peak: 281MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 245MB peak: 281MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 245MB peak: 281MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 285MB peak: 285MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:09s		    -0.14ns		4323 /      4334
+   2		0h:00m:10s		    -0.14ns		3575 /      4334
+@N: FX271 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":7115:2:7115:7|Replicating instance ident_coreinst.IICE_INST.b20_i2WM2X_F8tsl_Ae1cdJ4 (in view: work.Top(verilog)) with 21 loads 1 time to improve timing.
+Timing driven replication report
+Added 1 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
+
+   3		0h:00m:11s		    -0.03ns		3576 /      4335
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[0] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[1] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[2] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[3] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[4] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[5] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[6] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[7] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[8] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[9] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[10] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[11] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[12] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[13] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[14] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[15] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[16] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[17] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[18] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[19] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[20] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[21] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[22] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[23] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[24] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[25] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[26] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[27] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[28] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[29] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[30] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[31] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[0] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[1] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[2] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[3] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[4] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[5] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[6] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[7] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[8] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[9] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[10] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[11] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[12] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[13] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[14] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[15] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[16] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[17] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[18] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[19] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[20] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[21] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[22] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[23] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[24] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[25] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[26] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[27] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[28] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[29] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[30] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[31] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[32] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[33] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[34] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[35] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[36] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[37] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[38] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_3_OLDA[39] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[0] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[1] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[2] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[3] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[4] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[5] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[6] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[7] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[8] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[9] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[10] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[11] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[12] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[13] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[14] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[15] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[16] (in view: work.Top(verilog)) because it does not drive other instances.
+@N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_2_OLDA[17] (in view: work.Top(verilog)) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top\Top.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 289MB peak: 289MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 290MB peak: 291MB)
+
+
+End compile point sub-process log
+
+Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name     Status       Reason        
+------------------------------------
+Top      Remapped     Design changed
+====================================
+
+Process took 0h:00m:12s realtime, 0h:00m:12s cputime
+# Wed Aug 23 21:31:26 2023
+
+###########################################################]

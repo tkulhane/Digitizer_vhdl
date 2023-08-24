@@ -6,29 +6,21 @@
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
 Clock optimization not enabled
-8 non-gated/non-generated clock tree(s) driving 537 clock pin(s) of sequential element(s)
-4 gated/generated clock tree(s) driving 7769 clock pin(s) of sequential element(s)
-0 instances converted, 7769 sequential instances remain driven by gated/generated clocks
+2 non-gated/non-generated clock tree(s) driving 327 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 7632 clock pin(s) of sequential element(s)
+0 instances converted, 7632 sequential instances remain driven by gated/generated clocks
 
 ====================================================================== Non-Gated/Non-Generated Clocks ======================================================================
 Clock Tree ID     Driving Element                                     Drive Element Type                   Fanout     Sample Instance                                       
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0005       FTDI_CLK                                            clock definition on port             437        USB_3_Protocol_0.ft601_fifo_interface_0.data_buf_b[17]
-@K:CKID0006       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE0          clock definition on XCVR_8B10B       73         Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE0            
-@K:CKID0007       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE1          clock definition on XCVR_8B10B       5          Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE1            
-@K:CKID0008       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE2          clock definition on XCVR_8B10B       5          Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE2            
-@K:CKID0009       Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE3          clock definition on XCVR_8B10B       5          Data_Block_0.PF_XCVR_ERM_C2_0.I_XCVR.LANE3            
-@K:CKID0010       Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE0          clock definition on XCVR_8B10B       5          Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE0            
-@K:CKID0011       Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE1          clock definition on XCVR_8B10B       5          Data_Block_0.PF_XCVR_ERM_C3_0.I_XCVR.LANE1            
-@K:CKID0012       Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160     clock definition on OSC_RC160MHZ     2          Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0      
+@K:CKID0003       FTDI_CLK                                            clock definition on port             326        USB_3_Protocol_0.ft601_fifo_interface_0.data_buf_b[19]
+@K:CKID0004       Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160     clock definition on OSC_RC160MHZ     1          Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0      
 ============================================================================================================================================================================
 ================================================================================================== Gated/Generated Clocks ==================================================================================================
 Clock Tree ID     Driving Element                                      Drive Element Type     Fanout     Sample Instance                                             Explanation                                            
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    6293       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_5     No gated clock conversion method for cell cell:ACG4.SLE
-@K:CKID0002       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    1100       Clock_Reset_0.Synchronizer_0.Chain[0]                       No gated clock conversion method for cell cell:ACG4.SLE
-@K:CKID0003       Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0     PLL                    194        Clock_Reset_0.Synchronizer_0_0.Chain[0]                     No gated clock conversion method for cell cell:ACG4.SLE
-@K:CKID0004       Clock_Reset_0.PF_CCC_C1_0.PF_CCC_C1_0.pll_inst_0     PLL                    182        Clock_Reset_0.Synchronizer_0_0_0.Chain[0]                   No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    6531       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_4     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0002       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    1101       Clock_Reset_0.Synchronizer_0.Chain[0]                       No gated clock conversion method for cell cell:ACG4.SLE
 ============================================================================================================================================================================================================================
 
 

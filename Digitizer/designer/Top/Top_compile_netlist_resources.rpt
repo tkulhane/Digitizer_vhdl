@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Wed Aug 16 14:43:38 2023
+Date: Wed Aug 23 21:32:27 2023
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -15,11 +15,11 @@ Device Selection
 +--------------------------------------------+-------------+
 
 Source Files
-+---------+------------------------------------------------------------------+
-| Topcell | Top                                                              |
-| Format  | Verilog                                                          |
-| Source  | C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.vm |
-+---------+------------------------------------------------------------------+
++---------+---------------------------------------------------------------------------------+
+| Topcell | Top                                                                             |
+| Format  | Verilog                                                                         |
+| Source  | C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.vm |
++---------+---------------------------------------------------------------------------------+
 
 Options
 +----------------------------------------------------+----+
@@ -30,52 +30,52 @@ Resource Usage
 +---------------------------+-------+--------+------------+
 | Type                      | Used  | Total  | Percentage |
 +---------------------------+-------+--------+------------+
-| 4LUT                      | 39658 | 299544 | 13.24      |
-| DFF                       | 38608 | 299544 | 12.89      |
+| 4LUT                      | 42298 | 299544 | 14.12      |
+| DFF                       | 41665 | 299544 | 13.91      |
 | I/O Register              | 0     | 1536   | 0.00       |
-| User I/O                  | 113   | 512    | 22.07      |
-| -- Single-ended I/O       | 103   | 512    | 20.12      |
+| User I/O                  | 112   | 512    | 21.88      |
+| -- Single-ended I/O       | 102   | 512    | 19.92      |
 | -- Differential I/O Pairs | 5     | 256    | 1.95       |
 | uSRAM                     | 0     | 2772   | 0.00       |
-| LSRAM                     | 891   | 952    | 93.59      |
+| LSRAM                     | 907   | 952    | 95.27      |
 | Math                      | 0     | 924    | 0.00       |
-| H-Chip Global             | 9     | 48     | 18.75      |
-| Local Global              | 6     | 1008   | 0.60       |
-| PLL                       | 2     | 8      | 25.00      |
+| H-Chip Global             | 10    | 48     | 20.83      |
+| PLL                       | 1     | 8      | 12.50      |
 | DLL                       | 0     | 8      | 0.00       |
-| CRN_INT                   | 2     | 24     | 8.33       |
+| CRN_INT                   | 1     | 24     | 4.17       |
+| UJTAG                     | 1     | 1      | 100.00     |
 | INIT                      | 1     | 1      | 100.00     |
 | OSC_RC160MHZ              | 1     | 1      | 100.00     |
-| Transceiver Lanes         | 6     | 16     | 37.50      |
+| Transceiver Lanes         | 0     | 16     | 0.00       |
 | Transceiver PCIe          | 0     | 2      | 0.00       |
-| ICB_CLKINT                | 5     | 72     | 6.94       |
+| ICB_CLKINT                | 4     | 72     | 5.56       |
 +---------------------------+-------+--------+------------+
 
 Detailed Logic Resource Usage
 +-----------------------+-------+-------+
 | Type                  | 4LUT  | DFF   |
 +-----------------------+-------+-------+
-| Fabric Logic          | 7582  | 6532  |
+| Fabric Logic          | 9646  | 9013  |
 | uSRAM Interface Logic | 0     | 0     |
-| LSRAM Interface Logic | 32076 | 32076 |
+| LSRAM Interface Logic | 32652 | 32652 |
 | Math Interface Logic  | 0     | 0     |
-| Total Used            | 39658 | 38608 |
+| Total Used            | 42298 | 41665 |
 +-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
 +--------+------+
 | Length | Used |
-| 6      | 8    |
+| 6      | 2    |
 | 7      | 1    |
-| 8      | 9    |
-| 9      | 12   |
-| 10     | 8    |
-| 11     | 41   |
-| 12     | 26   |
+| 8      | 2    |
+| 9      | 16   |
+| 10     | 12   |
+| 11     | 33   |
+| 12     | 31   |
 | 13     | 8    |
 | 14     | 2    |
-| 15     | 17   |
-| 16     | 28   |
+| 15     | 16   |
+| 16     | 29   |
 | 17     | 7    |
 | 18     | 1    |
 | 19     | 1    |
@@ -85,7 +85,7 @@ Detailed Carry Chains Resource Usage
 | 26     | 2    |
 | 32     | 3    |
 | 33     | 9    |
-| Total  | 190  |
+| Total  | 182  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
@@ -101,7 +101,7 @@ I/O Function
 | Type                          | w/o register | w/ register | w/ DDR register |
 +-------------------------------+--------------+-------------+-----------------+
 | Input I/O                     | 21           | 0           | 0               |
-| Output I/O                    | 48           | 0           | 0               |
+| Output I/O                    | 47           | 0           | 0               |
 | Bidirectional I/O             | 34           | 0           | 0               |
 | Differential Input I/O Pairs  | 1            | 0           | 0               |
 | Differential Output I/O Pairs | 4            | 0           | 0               |
@@ -111,58 +111,43 @@ Nets assigned to chip global resources
 +--------+---------+-------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                |
 +--------+---------+-------------------------------------------------------------------------------------+
-| 6294   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK                                                    |
+| 6532   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK_0                                                  |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 3281   | INT_NET | Net   : dff_arst                                                                    |
+| 3510   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
-| 1100   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK                                                    |
+| 1669   | INT_NET | Net   : ident_coreinst/FTDI_comm2iice[11]                                           |
+|        |         | Driver: ident_coreinst/comm_block_INST/jtagi/jtag_clkint_prim/U0_RGB1               |
+|        |         | Source: NETLIST                                                                     |
+| 1254   | INT_NET | Net   : NN_1                                                                        |
+|        |         | Driver: I_1/U0_RGB1                                                                 |
+|        |         | Source: NETLIST                                                                     |
+| 1100   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK_0                                                  |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
 | 932    | INT_NET | Net   : Chain_arst1                                                                 |
-|        |         | Driver: Clock_Reset_0/Synchronizer_0/Chain_RNI23CB[1]/U0_RGB1                       |
+|        |         | Driver: Clock_Reset_0/Synchronizer_0/Chain_rep_RNI8C36[1]/U0_RGB1                   |
 |        |         | Source: NETLIST                                                                     |
 | 882    | INT_NET | Net   : INT_DataFifo_Reset_N_arst                                                   |
 |        |         | Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNIEAL5/U0_RGB1          |
 |        |         | Source: NETLIST                                                                     |
-| 437    | INT_NET | Net   : NN_1                                                                        |
-|        |         | Driver: I_1/U0_RGB1                                                                 |
+| 264    | INT_NET | Net   : ident_coreinst/FTDI_comm2iice[8]                                            |
+|        |         | Driver: ident_coreinst/comm_block_INST/jtagi/b9_nv_oQwfYF_RNIVIS3/U0_RGB1           |
 |        |         | Source: NETLIST                                                                     |
-| 210    | INT_NET | Net   : Clock_Reset_0_XCVR_CTRL_Clock                                               |
-|        |         | Driver: Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/clkint_0/U0_RGB1                      |
+| 9      | INT_NET | Net   : ident_coreinst/comm_block_INST/hcr_update                                   |
+|        |         | Driver: ident_coreinst/comm_block_INST/jtagi/b10_8Kz_rKlrtX_RNIBCIE/U0_RGB1         |
 |        |         | Source: NETLIST                                                                     |
-| 188    | INT_NET | Net   : Clock_Reset_0_XCVR_REF_Clock                                                |
-|        |         | Driver: Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/clkint_4/U0_RGB1                      |
-|        |         | Source: NETLIST                                                                     |
-| 2      | INT_NET | Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL                                   |
+| 1      | INT_NET | Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL                                   |
 |        |         | Driver: Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT/U0_RGB1                 |
 |        |         | Source: NETLIST                                                                     |
 +--------+---------+-------------------------------------------------------------------------------------+
 
 Nets assigned to row global resources
-+--------+---------+---------------------------------------------------------------+
-| Fanout | Type    | Name                                                          |
-+--------+---------+---------------------------------------------------------------+
-| 73     | INT_NET | Net   : Data_Block_0/PF_XCVR_ERM_C2_0_LANE0_RX_CLK_R          |
-|        |         | Driver: Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0_RX_rclkint |
-|        |         | Source: NETLIST                                               |
-| 5      | INT_NET | Net   : Data_Block_0/PF_XCVR_ERM_C3_0/LANE1_RX_CLK_R          |
-|        |         | Driver: Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1_RX_rclkint |
-|        |         | Source: NETLIST                                               |
-| 5      | INT_NET | Net   : Data_Block_0/PF_XCVR_ERM_C3_0/LANE0_RX_CLK_R          |
-|        |         | Driver: Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0_RX_rclkint |
-|        |         | Source: NETLIST                                               |
-| 5      | INT_NET | Net   : Data_Block_0/PF_XCVR_ERM_C2_0/LANE3_RX_CLK_R          |
-|        |         | Driver: Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3_RX_rclkint |
-|        |         | Source: NETLIST                                               |
-| 5      | INT_NET | Net   : Data_Block_0/PF_XCVR_ERM_C2_0/LANE2_RX_CLK_R          |
-|        |         | Driver: Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2_RX_rclkint |
-|        |         | Source: NETLIST                                               |
-| 5      | INT_NET | Net   : Data_Block_0/PF_XCVR_ERM_C2_0/LANE1_RX_CLK_R          |
-|        |         | Driver: Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1_RX_rclkint |
-|        |         | Source: NETLIST                                               |
-+--------+---------+---------------------------------------------------------------+
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
 
 High fanout nets
 +--------+---------+-----------------------------------------------------------------------+

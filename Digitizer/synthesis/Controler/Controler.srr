@@ -1,4 +1,4 @@
-# Wed Aug 16 10:28:12 2023
+# Mon Aug 21 16:14:13 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -40,16 +40,16 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 @N: MF105 |Performing bottom-up mapping of Compile point view:work.Controler(verilog) 
 
-Begin environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 174MB)
+Begin environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
 
 
-Finished environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 175MB)
+Finished environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
 
 
-Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 175MB)
+Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 172MB)
 
 
-Finished loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 175MB)
+Finished loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 172MB)
 
 
 Begin compile point sub-process log
@@ -58,7 +58,7 @@ Begin compile point sub-process log
 		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 174MB peak: 175MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 172MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
@@ -72,13 +72,21 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 #### START OF SSF LOG MESSAGES ####
 
 #### END OF SSF LOG MESSAGES ####
-@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|ROM decode_vector_10[7:0] (in view: work.Command_Decoder(rtl)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
-@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|ROM decode_vector_10[7:0] (in view: work.Command_Decoder(rtl)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
-@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|Found ROM decode_vector_10[7:0] (in view: work.Command_Decoder(rtl)) with 17 words by 8 bits.
+@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":445:12:445:15|ROM decode_vector_12[8:0] (in view: work.Command_Decoder(rtl)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":445:12:445:15|ROM decode_vector_12[8:0] (in view: work.Command_Decoder(rtl)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":445:12:445:15|Found ROM decode_vector_12[8:0] (in view: work.Command_Decoder(rtl)) with 19 words by 9 bits.
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 178MB peak: 178MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
 
 Encoding state machine Data_Block_0.Trigger_Top_Part_0.Trigger_Control_0.state_reg[0:5] (in view: work.Top(verilog))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine Communication_Switch_0.state_reg[0:5] (in view: work.Top(verilog))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -98,8 +106,8 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":388:8:388:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_INT_PULSE[15:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":352:8:352:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_EXT_PULSE[15:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":389:8:389:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_INT_PULSE[15:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":353:8:353:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_EXT_PULSE[15:0] 
 Encoding state machine state_reg[0:5] (in view: work.REGISTERS(rtl))
 original code -> new code
    000001 -> 000001
@@ -144,40 +152,40 @@ original code -> new code
    0010000000 -> 0010000000
    0100000000 -> 0100000000
    1000000000 -> 1000000000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":555:8:555:9|Found counter in view:work.Command_Decoder(rtl) instance counter[31:0] 
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[6] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[30]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[15] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[15]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[16] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[16]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[17] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[17]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[18] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[18]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[19] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[19]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[20] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[20]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[1] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[25]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[2] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[26]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[3] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[27]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[4] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[28]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[5] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[29]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[0] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[1] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[2] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[3] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[4] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[5] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[6] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[7] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[8] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[8]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[9] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[10] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[11] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[12] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[12]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[13] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[13]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[14] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[31] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_CDb. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[39] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_status_err. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[21] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_data[21]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[22] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_data[22]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[23] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_data[23]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":387:8:387:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[24] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_ID[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":579:8:579:9|Found counter in view:work.Command_Decoder(rtl) instance counter[31:0] 
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[0] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[1] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[2] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[3] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[4] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[5] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[6] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[6]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[7] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[8] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[8]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[9] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[10] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[31] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_CDb. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[13] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_data[13]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[14] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_data[14]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[15] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_data[15]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[16] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_data[16]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[2] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[26]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[3] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[27]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[4] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[28]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[5] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[29]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[6] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[30]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[11] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[12] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[12]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[17] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[17]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[18] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[18]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[19] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[19]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[20] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[20]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[21] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[21]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[22] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[22]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_data[23] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[23]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[0] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[24]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.cmd_ID[1] because it is equivalent to instance Controler_0.Command_Decoder_0.AE_CMD_Data[25]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":400:8:400:9|Removing instance Controler_0.Command_Decoder_0.AE_CMD_Data[39] because it is equivalent to instance Controler_0.Command_Decoder_0.cmd_status_err. To keep the instance, apply constraint syn_preserve=1 on the instance.
 Encoding state machine state_reg[0:4] (in view: work.Answer_Encoder(rtl))
 original code -> new code
    00001 -> 00001
@@ -201,7 +209,7 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":59:8:59:9|Found counter in view:work.ADI_SPI_Controler(rtl) instance data_counter[31:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":59:8:59:9|Found counter in view:work.ADI_SPI_Controler(rtl) instance addr_counter[31:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 181MB peak: 181MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 179MB peak: 179MB)
 
 
 Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 190MB peak: 190MB)
@@ -211,28 +219,31 @@ Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 185MB peak: 193MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 187MB peak: 190MB)
+
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[15] (in view: work.Controler(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":294:8:294:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[15] (in view: work.Controler(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":200:8:200:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[15] (in view: work.Controler(verilog)) because it does not drive other instances.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 190MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 186MB peak: 193MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 190MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 186MB peak: 193MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 190MB)
+
+@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":445:12:445:15|ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
+@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":445:12:445:15|Found ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) with 19 words by 1 bit.
+
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 188MB peak: 190MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 186MB peak: 193MB)
-
-@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
-@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":432:12:432:15|Found ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) with 17 words by 1 bit.
-
-Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 187MB peak: 193MB)
-
-
-Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 199MB peak: 199MB)
+Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 194MB peak: 194MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:04s		     2.36ns		1686 /      1394
+   1		0h:00m:03s		     2.36ns		1709 /      1394
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[0] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[1] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[2] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
@@ -248,35 +259,26 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 201MB peak: 201MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 195MB peak: 195MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 201MB peak: 201MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 195MB peak: 195MB)
 
 
 End compile point sub-process log
 
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":13:17:13:25|Blackbox OSC_RC160MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @N: MT615 |Found clock Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK with period 6.25ns 
-@N: MT615 |Found clock Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R with period 4.00ns 
-@N: MT615 |Found clock Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R with period 4.00ns 
-@N: MT615 |Found clock Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R with period 4.00ns 
-@N: MT615 |Found clock Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R with period 4.00ns 
-@N: MT615 |Found clock Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R with period 4.00ns 
-@N: MT615 |Found clock Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R with period 4.00ns 
-@N: MT615 |Found clock FTDI_CLK with period 10.00ns 
-@N: MT615 |Found clock Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0 with period 25.00ns 
-@N: MT615 |Found clock Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1 with period 12.50ns 
 @W: MT420 |Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0_clkint_0.
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Wed Aug 16 10:28:17 2023
+# Timing report written on Mon Aug 21 16:14:17 2023
 #
 
 
 Top view:               Top
-Requested Frequency:    40.0 MHz
+Requested Frequency:    100.0 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc
@@ -293,22 +295,14 @@ Performance Summary
 
 Worst slack in design: 2.461
 
-                                                                    Requested     Estimated      Requested     Estimated               Clock                                                                    Clock                
-Starting Clock                                                      Frequency     Frequency      Period        Period        Slack     Type                                                                     Group                
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0               40.0 MHz      NA             25.000        NA            NA        generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
-Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT1               80.0 MHz      NA             12.500        NA            NA        generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     NA             6.250         NA            NA        declared                                                                 default_clkgroup     
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R                 250.0 MHz     NA             4.000         NA            NA        declared                                                                 default_clkgroup     
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R                 250.0 MHz     NA             4.000         NA            NA        declared                                                                 default_clkgroup     
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R                 250.0 MHz     NA             4.000         NA            NA        declared                                                                 default_clkgroup     
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R                 250.0 MHz     NA             4.000         NA            NA        declared                                                                 default_clkgroup     
-Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R                 250.0 MHz     NA             4.000         NA            NA        declared                                                                 default_clkgroup     
-Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R                 250.0 MHz     NA             4.000         NA            NA        declared                                                                 default_clkgroup     
-FTDI_CLK                                                            100.0 MHz     NA             10.000        NA            NA        declared                                                                 default_clkgroup     
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     183.9 MHz      10.000        5.439         2.461     inferred                                                                 Inferred_clkgroup_0_3
-System                                                              100.0 MHz     2922.3 MHz     10.000        0.342         9.658     system                                                                   system_clkgroup      
-=====================================================================================================================================================================================================================================
+                                                                    Requested     Estimated     Requested     Estimated               Clock        Clock                
+Starting Clock                                                      Frequency     Frequency     Period        Period        Slack     Type         Group                
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     NA            6.250         NA            NA        declared     default_clkgroup     
+FTDI_CLK                                                            100.0 MHz     NA            10.000        NA            NA        declared     default_clkgroup     
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     188.1 MHz     10.000        5.316         2.461     inferred     Inferred_clkgroup_0_1
+System                                                              100.0 MHz     NA            10.000        NA            NA        system       system_clkgroup      
+========================================================================================================================================================================
 Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
 
 
@@ -322,17 +316,8 @@ Clocks                                                                          
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Starting                                                         Ending                                                           |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                                           System                                                           |  10.000      9.658  |  No paths    -      |  No paths    -      |  No paths    -    
-System                                                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  10.000      7.658  |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE0/RX_CLK_R              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE1/RX_CLK_R              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE2/RX_CLK_R              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/PF_XCVR_ERM_C2_0/I_XCVR/LANE3/RX_CLK_R              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE0/RX_CLK_R              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/PF_XCVR_ERM_C3_0/I_XCVR/LANE1/RX_CLK_R              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
-Clock_Reset_0/PF_CCC_C1_0/PF_CCC_C1_0/pll_inst_0/OUT0            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  System                                                           |  10.000      4.923  |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  10.000      4.561  |  10.000      6.818  |  5.000       2.461  |  5.000       4.664
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  10.000      4.684  |  10.000      6.818  |  5.000       2.461  |  5.000       4.664
 ========================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -359,8 +344,8 @@ Starting Points with Worst Slack
 Instance                                                     Reference                                                           Type     Pin     Net                                                       Time        Slack
                                                              Clock                                                                                                                                                           
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable             PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_enable                                0.218       2.461
 Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_enable                                0.218       2.461
+Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable             PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_enable                                0.218       2.461
 Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff     0.218       2.595
 Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_tx[1]            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_tx[1]                                 0.218       4.398
 Controler_0.SPI_LMX_0.SPI_interface_0.spi_tx[1]              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_tx[1]                                 0.218       4.398
@@ -379,16 +364,16 @@ Ending Points with Worst Slack
 Instance                                              Reference                                                           Type     Pin     Net          Time         Slack
                                                       Clock                                                                                                               
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_760_i      5.000        2.461
 Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[2]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_19_i       5.000        2.461
-Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_790_i      5.000        2.461
-Controler_0.SPI_LMX_0_0.spi_master_0.INT_ss_n         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0.spi_master_0.INT_ss_n           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
+Controler_0.SPI_LMX_0_0.spi_master_0.INT_ss_n         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0_0.spi_master_0.busy             PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0.spi_master_0.busy               PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
-Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[0]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[0]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
-Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[1]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
+Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[0]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[1]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[1]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 ==========================================================================================================================================================================
 
 
@@ -408,115 +393,28 @@ Path information for path number 1:
     = Slack (critical) :                     2.461
 
     Number of logic level(s):                3
-    Starting point:                          Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable / Q
-    Ending point:                            Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[2] / D
+    Starting point:                          Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable / Q
+    Ending point:                            Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2] / D
     The start point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
     The end   point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [falling] (rise=0.000 fall=5.000 period=10.000) on pin CLK
 
-Instance / Net                                                                      Pin      Pin               Arrival     No. of    
-Name                                                                       Type     Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable                           SLE      Q        Out     0.218     0.218 r     -         
-SPI_interface_0_spi_enable                                                 Net      -        -       0.609     -           7         
-Controler_0.SPI_LMX_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     C        In      -         0.827 r     -         
-Controler_0.SPI_LMX_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     Y        Out     0.148     0.975 r     -         
-receive_transmit_0_sqmuxa                                                  Net      -        -       0.637     -           9         
-Controler_0.SPI_LMX_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     A        In      -         1.612 r     -         
-Controler_0.SPI_LMX_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     Y        Out     0.051     1.662 r     -         
-un1_receive_transmit_0_sqmuxa_0_0                                          Net      -        -       0.547     -           3         
-Controler_0.SPI_LMX_0.spi_master_0.fsm_timer_RNO[2]                        CFG4     D        In      -         2.209 r     -         
-Controler_0.SPI_LMX_0.spi_master_0.fsm_timer_RNO[2]                        CFG4     Y        Out     0.212     2.421 f     -         
-N_19_i                                                                     Net      -        -       0.118     -           1         
-Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[2]                            SLE      D        In      -         2.539 f     -         
-=====================================================================================================================================
+Instance / Net                                                                        Pin      Pin               Arrival     No. of    
+Name                                                                         Type     Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------
+Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable                           SLE      Q        Out     0.218     0.218 r     -         
+SPI_interface_0_spi_enable                                                   Net      -        -       0.609     -           7         
+Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     C        In      -         0.827 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     Y        Out     0.148     0.975 r     -         
+receive_transmit_0_sqmuxa                                                    Net      -        -       0.637     -           9         
+Controler_0.SPI_LMX_0_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     A        In      -         1.612 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     Y        Out     0.051     1.662 r     -         
+un1_receive_transmit_0_sqmuxa_0_0_0                                          Net      -        -       0.547     -           3         
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer_RNO[2]                        CFG4     D        In      -         2.209 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer_RNO[2]                        CFG4     Y        Out     0.212     2.421 f     -         
+N_760_i                                                                      Net      -        -       0.118     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]                            SLE      D        In      -         2.539 f     -         
+=======================================================================================================================================
 Total path delay (propagation time + setup) of 2.539 is 0.629(24.8%) logic and 1.910(75.2%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-
-
-====================================
-Detailed Report for Clock: System
-====================================
-
-
-
-Starting Points with Worst Slack
-********************************
-
-                                                             Starting                                                                                    Arrival          
-Instance                                                     Reference     Type     Pin     Net                                                          Time        Slack
-                                                             Clock                                                                                                        
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[0]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[0]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[1]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[1]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[2]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[2]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[3]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[3]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[4]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[4]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[5]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[5]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[6]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[6]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[7]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[7]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[8]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[8]     0.201       7.658
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[9]     System        SLE      Q       USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[9]     0.201       7.658
-==========================================================================================================================================================================
-
-
-Ending Points with Worst Slack
-******************************
-
-                                                                                                                               Starting                                                                                  Required          
-Instance                                                                                                                       Reference     Type        Pin          Net                                                Time         Slack
-                                                                                                                               Clock                                                                                                       
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[0]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[0]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[1]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[1]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[2]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[2]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[3]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[3]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[4]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[4]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[5]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[5]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[6]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[6]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[7]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[7]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[8]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[8]     9.197        7.658
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     System        RAM1K20     B_DIN[9]     Communication_CMD_MUX_0_CMD_Fifo_Write_Data[9]     9.197        7.658
-===========================================================================================================================================================================================================================================
-
-
-
-Worst Path Information
-***********************
-
-
-Path information for path number 1: 
-      Requested Period:                      10.000
-    - Setup time:                            0.803
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         9.197
-
-    - Propagation time:                      1.540
-    - Clock delay at starting point:         0.000 (ideal)
-    - Estimated clock delay at start point:  -0.000
-    = Slack (non-critical) :                 7.658
-
-    Number of logic level(s):                2
-    Starting point:                          USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[0] / Q
-    Ending point:                            Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0 / B_DIN[0]
-    The start point is clocked by            System [rising] on pin CLK
-    The end   point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin B_CLK
-
-Instance / Net                                                                                                                             Pin          Pin               Arrival     No. of    
-Name                                                                                                                           Type        Name         Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[0]                                                                       SLE         Q            Out     0.201     0.201 f     -         
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.fwft_Q_r[0]                                                                       Net         -            -       0.118     -           1         
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.Q[0]                                                                              CFG3        C            In      -         0.319 f     -         
-USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.Q[0]                                                                              CFG3        Y            Out     0.145     0.464 f     -         
-USB_3_Protocol_0_RX_FIFO_Data[0]                                                                                               Net         -            -       0.118     -           1         
-Controler_0.Communication_CMD_MUX_0.CMD_Fifo_Write_Data[0]                                                                     CFG4        C            In      -         0.582 f     -         
-Controler_0.Communication_CMD_MUX_0.CMD_Fifo_Write_Data[0]                                                                     CFG4        Y            Out     0.145     0.728 f     -         
-Communication_CMD_MUX_0_CMD_Fifo_Write_Data[0]                                                                                 Net         -            -       0.812     -           1         
-Controler_0.COREFIFO_C1_0.COREFIFO_C1_0.genblk22\.UI_ram_wrapper_1.L3_syncnonpipe.COREFIFO_C1_COREFIFO_C1_0_LSRAM_top_R0C0     RAM1K20     B_DIN[0]     In      -         1.540 f     -         
-================================================================================================================================================================================================
-Total path delay (propagation time + setup) of 2.342 is 1.294(55.3%) logic and 1.048(44.7%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -524,11 +422,13 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 ##### END OF TIMING REPORT #####]
 
 Timing exceptions that could not be applied
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":20:0:20:0|Timing constraint (to [get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":21:0:21:0|Timing constraint (to [get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":22:0:22:0|Timing constraint (to [get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":23:0:23:0|Timing constraint (to [get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":24:0:24:0|Timing constraint (to [get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":12:0:12:0|Timing constraint (to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":13:0:13:0|Timing constraint (to [get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|Timing constraint (to [get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|Timing constraint (to [get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":16:0:16:0|Timing constraint (to [get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":17:0:17:0|Timing constraint (to [get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":18:0:18:0|Timing constraint (to [get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
 None
 Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Controler\cpprop
 
@@ -539,7 +439,7 @@ Name          Status       Reason
 Controler     Remapped     Design changed
 =========================================
 
-Process took 0h:00m:05s realtime, 0h:00m:05s cputime
-# Wed Aug 16 10:28:17 2023
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Mon Aug 21 16:14:17 2023
 
 ###########################################################]

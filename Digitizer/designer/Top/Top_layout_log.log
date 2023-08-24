@@ -19,7 +19,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
 
  Running Timing based Global Demotion. 
         Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
-        Moved 56 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+        Moved 52 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
    - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
@@ -27,7 +27,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Timing based Global Demotion completed successfully. 
 
 Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 65 fixed I/O macros, 43 unfixed I/O macros
+Info:  I/O Bank and Globals Assigner identified 65 fixed I/O macros, 42 unfixed I/O macros
 Info:  I/O Bank and Globals Assigner identified bank 'Bank0' as being fixed at VCCI:1.35V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank1' as being fixed at VCCI:1.80V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank2' as being fixed at VCCI:3.30V VCCR:n/a
@@ -41,7 +41,7 @@ I/O Bank and Globals Assigner completed successfully.
 Total time spent in I/O Bank and Globals Assigner: 4 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Wed Aug 16 14:53:09 2023
+Design: Top                             Started: Wed Aug 23 21:37:59 2023
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -57,45 +57,45 @@ End of placement.
 Placer Runtime Summary   :
 Clustering (1 pass)      : 6 seconds
 Placement                : 43 seconds
-Improvement              : 36 seconds
+Improvement              : 43 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Wed Aug 16 14:55:22 2023
-Total CPU Time:     00:02:51            Total Elapsed Time: 00:02:13
-Total Memory Usage: 1765.3 Mbytes
+Finished: Wed Aug 23 21:40:16 2023
+Total CPU Time:     00:02:53            Total Elapsed Time: 00:02:17
+Total Memory Usage: 1807.5 Mbytes
                         o - o - o - o - o - o
 
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Aug 16 14:55:47 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Aug 23 21:40:39 2023
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Wed Aug 16 14:56:48 2023
-Total CPU Time:     00:02:16            Total Elapsed Time: 00:01:01
-Total Memory Usage: 5392.4 Mbytes
+Finished: Wed Aug 23 21:41:50 2023
+Total CPU Time:     00:02:55            Total Elapsed Time: 00:01:11
+Total Memory Usage: 5393.3 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 40543 | 299544 | 13.53      |
-| DFF           | 38832 | 299544 | 12.96      |
+| 4LUT          | 42297 | 299544 | 14.12      |
+| DFF           | 41666 | 299544 | 13.91      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 41877 | 299544 | 13.98      |
+| Logic Element | 44550 | 299544 | 14.87      |
 +---------------+-------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+
 | Type   | Count | Percentage |
 +--------+-------+------------+
-| Locked |  65   | 57.52%     |
-| Placed |  48   | 42.48%     |
+| Locked |  65   | 58.04%     |
+| Placed |  47   | 41.96%     |
 +--------+-------+------------+
 
 Completed writing pin report files.

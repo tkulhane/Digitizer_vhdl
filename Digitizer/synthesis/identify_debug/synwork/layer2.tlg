@@ -1,0 +1,364 @@
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Clock_gen.v":38:7:38:41|Synthesizing module COREUART_C0_COREUART_C0_0_Clock_gen in library work.
+
+	BAUD_VAL_FRCTN_EN=32'b00000000000000000000000000000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+   Generated name = COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s
+Running optimization stage 1 on COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s .......
+Finished optimization stage 1 on COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":31:7:31:40|Synthesizing module COREUART_C0_COREUART_C0_0_Tx_async in library work.
+
+	SYNC_RESET=32'b00000000000000000000000000000000
+	TX_FIFO=32'b00000000000000000000000000000000
+	tx_idle=32'b00000000000000000000000000000000
+	tx_load=32'b00000000000000000000000000000001
+	start_bit=32'b00000000000000000000000000000010
+	tx_data_bits=32'b00000000000000000000000000000011
+	parity_bit=32'b00000000000000000000000000000100
+	tx_stop_bit=32'b00000000000000000000000000000101
+	delay_state=32'b00000000000000000000000000000110
+   Generated name = COREUART_C0_COREUART_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s
+@W: CG1340 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":268:0:268:5|Index into variable tx_byte could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":268:0:268:5|Index into variable tx_byte could be out of range ; a simulation mismatch is possible.
+@N: CG179 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":356:21:356:29|Removing redundant assignment.
+Running optimization stage 1 on COREUART_C0_COREUART_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s .......
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Optimizing register bit fifo_read_en0 to a constant 1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Pruning unused register fifo_read_en0. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on COREUART_C0_COREUART_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Rx_async.v":30:7:30:40|Synthesizing module COREUART_C0_COREUART_C0_0_Rx_async in library work.
+
+	SYNC_RESET=32'b00000000000000000000000000000000
+	RX_FIFO=32'b00000000000000000000000000000000
+	receive_states_rx_idle=32'b00000000000000000000000000000000
+	receive_states_rx_data_bits=32'b00000000000000000000000000000001
+	receive_states_rx_stop_bit=32'b00000000000000000000000000000010
+	receive_states_rx_wait_state=32'b00000000000000000000000000000011
+   Generated name = COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s
+@N: CG179 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Rx_async.v":254:23:254:35|Removing redundant assignment.
+@N: CG179 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Rx_async.v":280:18:280:25|Removing redundant assignment.
+Running optimization stage 1 on COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s .......
+@W: CL177 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Rx_async.v":501:0:501:5|Sharing sequential element clear_framing_error_en and merging clear_parity_en. Add a syn_preserve attribute to the element to prevent sharing.
+Finished optimization stage 1 on COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":31:7:31:40|Synthesizing module COREUART_C0_COREUART_C0_0_COREUART in library work.
+
+	TX_FIFO=32'b00000000000000000000000000000000
+	RX_FIFO=32'b00000000000000000000000000000000
+	RX_LEGACY_MODE=32'b00000000000000000000000000000000
+	FAMILY=32'b00000000000000000000000000001000
+	BAUD_VAL_FRCTN_EN=32'b00000000000000000000000000000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+   Generated name = COREUART_C0_COREUART_C0_0_COREUART_0s_0s_0s_8s_0s_0s
+@N: CG179 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":390:22:390:33|Removing redundant assignment.
+@W: CG133 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":136:8:136:17|Object data_ready is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on COREUART_C0_COREUART_C0_0_COREUART_0s_0s_0s_8s_0s_0s .......
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":376:0:376:5|Pruning unused register overflow_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":341:0:341:5|Pruning unused register rx_dout_reg_empty. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":341:0:341:5|Pruning unused register rx_dout_reg_empty_q. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":326:0:326:5|Pruning unused register rx_dout_reg[7:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":293:0:293:5|Pruning unused register rx_state[1:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":278:0:278:5|Pruning unused register clear_framing_error_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":278:0:278:5|Pruning unused register clear_framing_error_reg0. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":263:0:263:5|Pruning unused register clear_parity_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":263:0:263:5|Pruning unused register clear_parity_reg0. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\CoreUART.v":159:0:159:5|Pruning unused register fifo_write_tx. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on COREUART_C0_COREUART_C0_0_COREUART_0s_0s_0s_8s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0.v":26:7:26:17|Synthesizing module COREUART_C0 in library work.
+Running optimization stage 1 on COREUART_C0 .......
+Finished optimization stage 1 on COREUART_C0 (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":29:7:29:40|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_COREFIFO in library work.
+
+	FAMILY=32'b00000000000000000000000000011010
+	SYNC=32'b00000000000000000000000000000000
+	RE_POLARITY=32'b00000000000000000000000000000000
+	WE_POLARITY=32'b00000000000000000000000000000000
+	RWIDTH=32'b00000000000000000000000000101000
+	WWIDTH=32'b00000000000000000000000000101000
+	RDEPTH=32'b00000000000000000000010000000000
+	WDEPTH=32'b00000000000000000000010000000000
+	READ_DVALID=32'b00000000000000000000000000000000
+	WRITE_ACK=32'b00000000000000000000000000000000
+	CTRL_TYPE=32'b00000000000000000000000000000010
+	ESTOP=32'b00000000000000000000000000000001
+	FSTOP=32'b00000000000000000000000000000001
+	AE_STATIC_EN=32'b00000000000000000000000000000000
+	AF_STATIC_EN=32'b00000000000000000000000000000000
+	AEVAL=32'b00000000000000000000000000000100
+	AFVAL=32'b00000000000000000000001111111100
+	PIPE=32'b00000000000000000000000000000001
+	PREFETCH=32'b00000000000000000000000000000000
+	FWFT=32'b00000000000000000000000000000001
+	ECC=32'b00000000000000000000000000000000
+	OVERFLOW_EN=32'b00000000000000000000000000000000
+	UNDERFLOW_EN=32'b00000000000000000000000000000000
+	WRCNT_EN=32'b00000000000000000000000000000000
+	RDCNT_EN=32'b00000000000000000000000000000000
+	NUM_STAGES=32'b00000000000000000000000000000010
+	SYNC_RESET=32'b00000000000000000000000000000000
+	RAM_OPT=32'b00000000000000000000000000000000
+	DIE_SIZE=32'b00000000000000000000000000001111
+	WMSB_DEPTH=32'b00000000000000000000000000001010
+	RMSB_DEPTH=32'b00000000000000000000000000001010
+	WDEPTH_CAL=32'b00000000000000000000000000001001
+	RDEPTH_CAL=32'b00000000000000000000000000001001
+	RESET_POLARITY=32'b00000000000000000000000000000000
+	RCLK_EDGE=32'b00000000000000000000000000000001
+	WCLK_EDGE=32'b00000000000000000000000000000001
+   Generated name = COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z1_layer2
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_NstagesSync.v":29:7:29:52|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync in library work.
+
+	NUM_STAGES=32'b00000000000000000000000000000010
+	ADDRWIDTH=32'b00000000000000000000000000001010
+   Generated name = COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10
+Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 .......
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_grayToBinConv.v":29:7:29:54|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv in library work.
+
+	ADDRWIDTH=32'b00000000000000000000000000001010
+   Generated name = COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10
+Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 .......
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":28:7:28:46|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_corefifo_async in library work.
+
+	WRITE_WIDTH=32'b00000000000000000000000000101000
+	WRITE_DEPTH=32'b00000000000000000000000000001010
+	FULL_WRITE_DEPTH=32'b00000000000000000000010000000000
+	READ_WIDTH=32'b00000000000000000000000000101000
+	READ_DEPTH=32'b00000000000000000000000000001010
+	VAR_ASPECT_WRDEPTH=32'b00000000000000000000000000001010
+	VAR_ASPECT_RDDEPTH=32'b00000000000000000000000000001010
+	FULL_READ_DEPTH=32'b00000000000000000000010000000000
+	PREFETCH=32'b00000000000000000000000000000000
+	FWFT=32'b00000000000000000000000000000001
+	WCLK_HIGH=32'b00000000000000000000000000000001
+	RCLK_HIGH=32'b00000000000000000000000000000001
+	RESET_LOW=32'b00000000000000000000000000000000
+	WRITE_LOW=32'b00000000000000000000000000000000
+	READ_LOW=32'b00000000000000000000000000000000
+	AF_FLAG_STATIC=32'b00000000000000000000000000000000
+	AE_FLAG_STATIC=32'b00000000000000000000000000000000
+	AFULL_VAL=32'b00000000000000000000001111111100
+	AEMPTY_VAL=32'b00000000000000000000000000000100
+	ESTOP=32'b00000000000000000000000000000001
+	FSTOP=32'b00000000000000000000000000000001
+	PIPE=32'b00000000000000000000000000000001
+	REGISTER_RADDR=32'b00000000000000000000000000000001
+	READ_DVALID=32'b00000000000000000000000000000000
+	WRITE_ACK=32'b00000000000000000000000000000000
+	OVERFLOW_EN=32'b00000000000000000000000000000000
+	UNDERFLOW_EN=32'b00000000000000000000000000000000
+	WRCNT_EN=32'b00000000000000000000000000000000
+	RDCNT_EN=32'b00000000000000000000000000000000
+	NUM_STAGES=32'b00000000000000000000000000000010
+	SYNC_RESET=32'b00000000000000000000000000000000
+	WDEPTH_CAL=32'b00000000000000000000000000001001
+	RDEPTH_CAL=32'b00000000000000000000000000001001
+	HIGH_FREQUENCY=32'b00000000000000000000000000000000
+   Generated name = COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z2_layer2
+@N: CG179 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":761:35:761:41|Removing redundant assignment.
+@N: CG179 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":803:35:803:41|Removing redundant assignment.
+@W: CG133 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":148:34:148:42|Object wptr_fwft is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":214:34:214:40|Removing wire aresetn, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":215:34:215:40|Removing wire sresetn, as there is no assignment to it.
+@W: CG133 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":655:10:655:10|Object k is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z2_layer2 .......
+@W: CL168 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":490:19:490:43|Removing instance Rd_corefifo_grayToBinConv because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":475:16:475:38|Removing instance Rd_corefifo_NstagesSync because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Pruning unused register genblk10.aempty_r_fwft. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Pruning unused register genblk10.rptr_gray[10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":633:4:633:9|Pruning unused register full_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":633:4:633:9|Pruning unused register we_p_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":617:4:617:9|Pruning unused register dvld_r2. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":617:4:617:9|Pruning unused register empty_reg. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":617:4:617:9|Pruning unused register re_p_d1. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":617:4:617:9|Pruning unused register re_p_d2. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":528:3:528:8|Pruning unused register rptr_bin_sync2[10:0]. Make sure that there are no unused intermediate registers.
+@W: CL207 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|All reachable assignments to genblk10.wack_r assign 0, register removed by optimization.
+@W: CL207 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|All reachable assignments to genblk10.overflow_r assign 0, register removed by optimization.
+@W: CL207 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|All reachable assignments to genblk10.underflow_r assign 0, register removed by optimization.
+@W: CL207 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|All reachable assignments to genblk10.dvld_r assign 0, register removed by optimization.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[0] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[1] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Optimizing register bit genblk10.rdcnt_r[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[0] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[1] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[2] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[3] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[4] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[8] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[9] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Pruning unused register genblk10.rdcnt_r[10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Pruning unused register genblk10.wrcnt_r[10:0]. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z2_layer2 (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":28:7:28:45|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft in library work.
+
+	RDEPTH=32'b00000000000000000000000000001010
+	WWIDTH=32'b00000000000000000000000000101000
+	RWIDTH=32'b00000000000000000000000000101000
+	WCLK_HIGH=32'b00000000000000000000000000000001
+	RCLK_HIGH=32'b00000000000000000000000000000001
+	RESET_LOW=32'b00000000000000000000000000000000
+	WRITE_LOW=32'b00000000000000000000000000000000
+	READ_LOW=32'b00000000000000000000000000000000
+	PREFETCH=32'b00000000000000000000000000000000
+	FWFT=32'b00000000000000000000000000000001
+	SYNC=32'b00000000000000000000000000000000
+	SYNC_RESET=32'b00000000000000000000000000000000
+	RDEPTH_CAL=32'b00000000000000000000000000001001
+   Generated name = COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z3_layer2
+@N: CG179 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":262:38:262:55|Removing redundant assignment.
+@W: CG133 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":127:27:127:32|Object wr_p_r is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":133:27:133:33|Removing wire aresetn, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":140:27:140:32|Removing wire empty1, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":148:8:148:17|Removing wire reset_wclk, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":149:8:149:17|Removing wire reset_rclk, as there is no assignment to it.
+Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z3_layer2 .......
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":366:3:366:8|Pruning unused register we_p_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":252:3:252:8|Pruning unused register fifo_empty_pulse_d. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":241:4:241:9|Pruning unused register re_p_d. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":222:3:222:8|Pruning unused register fifo_empty_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":222:3:222:8|Pruning unused register update_dout_r. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z3_layer2 (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+@N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":578:7:578:13|Synthesizing module RAM1K20 in library work.
+Running optimization stage 1 on RAM1K20 .......
+Finished optimization stage 1 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+@N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":500:7:500:9|Synthesizing module GND in library work.
+Running optimization stage 1 on GND .......
+Finished optimization stage 1 on GND (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+@N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":504:7:504:9|Synthesizing module VCC in library work.
+Running optimization stage 1 on VCC .......
+Finished optimization stage 1 on VCC (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_LSRAM_top.v":5:7:5:41|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_LSRAM_top in library work.
+Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_LSRAM_top .......
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v":4:7:4:43|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_ram_wrapper in library work.
+
+	RWIDTH=32'b00000000000000000000000000101000
+	WWIDTH=32'b00000000000000000000000000101000
+	RDEPTH=32'b00000000000000000000000000001010
+	WDEPTH=32'b00000000000000000000000000001010
+	SYNC=32'b00000000000000000000000000000000
+	PIPE=32'b00000000000000000000000000000001
+	CTRL_TYPE=32'b00000000000000000000000000000010
+	SYNC_RESET=32'b00000000000000000000000000000000
+	RAM_OPT=32'b00000000000000000000000000000000
+   Generated name = COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s
+Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s .......
+@W: CL318 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v":46:26:46:37|*Output A_SB_CORRECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v":47:26:47:37|*Output B_SB_CORRECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v":48:26:48:36|*Output A_DB_DETECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v":49:26:49:36|*Output B_DB_DETECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":221:36:221:46|Removing wire pf_MEMRADDR, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":227:36:227:39|Removing wire pf_Q, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":244:36:244:42|Removing wire aresetn, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":245:36:245:42|Removing wire sresetn, as there is no assignment to it.
+@W: CG184 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":247:36:247:45|Removing wire DVLD_scntr, as it has the load but no drivers.
+@W: CG184 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":248:36:248:44|Removing wire DVLD_sync, as it has the load but no drivers.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":251:36:251:42|Removing wire pf_dvld, as there is no assignment to it.
+@W: CG133 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":260:36:260:44|Object reg_valid is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG133 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":274:36:274:41|Object reg_RD is declared but not assigned. Either assign a value or remove the declaration.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":293:8:293:17|Removing wire reset_rclk, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":294:8:294:17|Removing wire reset_wclk, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":295:8:295:19|Removing wire reset_sync_r, as there is no assignment to it.
+@W: CG360 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":296:8:296:19|Removing wire reset_sync_w, as there is no assignment to it.
+Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z1_layer2 .......
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1185:3:1185:8|Pruning unused register RDATA_ext_r1[39:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1175:3:1175:8|Pruning unused register RDATA_ext_r[39:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1110:3:1110:8|Pruning unused register REN_d2. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1110:3:1110:8|Pruning unused register REN_d3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1110:3:1110:8|Pruning unused register RE_d2. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1110:3:1110:8|Pruning unused register RE_d3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1110:3:1110:8|Pruning unused register re_pulse_d1. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1110:3:1110:8|Pruning unused register re_pulse_d2. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1110:3:1110:8|Pruning unused register re_pulse_d3. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1098:3:1098:8|Pruning unused register RDATA_r2[39:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1088:3:1088:8|Pruning unused register RDATA_r1[39:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1078:3:1078:8|Pruning unused register RDATA_r_pre[39:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":1068:3:1068:8|Pruning unused register fwft_Q_r[39:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":513:3:513:8|Pruning unused register DVLD_async_ecc. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":513:3:513:8|Pruning unused register DVLD_sync_ecc. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":513:3:513:8|Pruning unused register DVLD_scntr_ecc. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":500:3:500:8|Pruning unused register AEMPTY1_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":500:3:500:8|Pruning unused register AEMPTY1_r1. Make sure that there are no unused intermediate registers.
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z1_layer2 (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+@N: CG364 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0.v":49:7:49:17|Synthesizing module COREFIFO_C0 in library work.
+Running optimization stage 1 on COREFIFO_C0 .......
+Finished optimization stage 1 on COREFIFO_C0 (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+Running optimization stage 2 on COREFIFO_C0 .......
+Finished optimization stage 2 on COREFIFO_C0 (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s .......
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO_C0_COREFIFO_C0_0_ram_wrapper.v":50:25:50:29|Input CLOCK is unused.
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_LSRAM_top .......
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Running optimization stage 2 on VCC .......
+Finished optimization stage 2 on VCC (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+Running optimization stage 2 on GND .......
+Finished optimization stage 2 on GND (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+Running optimization stage 2 on RAM1K20 .......
+Finished optimization stage 2 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z3_layer2 .......
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":81:26:81:31|Input wr_clk is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":83:26:83:28|Input clk is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":96:14:96:25|Input aresetn_wclk is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":98:14:98:25|Input sresetn_wclk is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":86:26:86:30|Input wr_en is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":92:26:92:28|Input din is unused.
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z3_layer2 (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 107MB)
+Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z2_layer2 .......
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z2_layer2 (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 108MB)
+Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 .......
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 108MB)
+Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 .......
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 108MB)
+Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z1_layer2 .......
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":174:36:174:42|Input RESET_N is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z1_layer2 (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 108MB)
+Running optimization stage 2 on COREUART_C0 .......
+Finished optimization stage 2 on COREUART_C0 (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 108MB)
+Running optimization stage 2 on COREUART_C0_COREUART_C0_0_COREUART_0s_0s_0s_8s_0s_0s .......
+Finished optimization stage 2 on COREUART_C0_COREUART_C0_0_COREUART_0s_0s_0s_8s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 108MB)
+Running optimization stage 2 on COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s .......
+@N: CL201 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Rx_async.v":286:0:286:5|Trying to extract state machine for register rx_state.
+Extracted state machine for register rx_state
+State machine has 4 reachable states with original encodings of:
+   00
+   01
+   10
+   11
+Finished optimization stage 2 on COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 108MB)
+Running optimization stage 2 on COREUART_C0_COREUART_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s .......
+@N: CL201 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":119:0:119:5|Trying to extract state machine for register xmit_state.
+Extracted state machine for register xmit_state
+State machine has 6 reachable states with original encodings of:
+   00000000000000000000000000000000
+   00000000000000000000000000000001
+   00000000000000000000000000000010
+   00000000000000000000000000000011
+   00000000000000000000000000000100
+   00000000000000000000000000000101
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":44:11:44:21|Input tx_dout_reg is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":45:6:45:15|Input fifo_empty is unused.
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":46:6:46:14|Input fifo_full is unused.
+Finished optimization stage 2 on COREUART_C0_COREUART_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 108MB)
+Running optimization stage 2 on COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s .......
+@N: CL159 :"C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Clock_gen.v":51:15:51:31|Input BAUD_VAL_FRACTION is unused.
+Finished optimization stage 2 on COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 108MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\VHDL\Digitizer\Digitizer_ver1\Digitizer\synthesis\synwork\layer2.rt.csv
+

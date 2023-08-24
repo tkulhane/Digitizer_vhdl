@@ -1,0 +1,427 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09M
+Install: C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DESKTOP-TDPVUTD
+
+Implementation : identify_debug
+
+# Written on Wed Aug 23 21:31:11 2023
+
+##### DESIGN INFO #######################################################
+
+Top View:                "Top"
+Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc"
+                         "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\instr_sources\syn_dics.sdc"
+                         "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top_fsm.sdc"
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 3 issues in 3 out of 19 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                                            Ending                                                              |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                              System                                                              |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                                              FTDI_CLK                                                            |     10.000           |     No paths         |     10.000           |     No paths                         
+System                                                              ident_coreinst.comm_block_INST.dr2_tck                              |     1000.000         |     No paths         |     No paths         |     No paths                         
+System                                                              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                                              jtag_interface_x|identify_clk_int_inferred_clock                    |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                                              jtag_interface_x|b10_8Kz_rKlrtX                                     |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                                              jtag_interface_x|b9_nv_oQwfYF                                       |     10.000           |     No paths         |     No paths         |     No paths                         
+FTDI_CLK                                                            System                                                              |     10.000           |     No paths         |     No paths         |     No paths                         
+FTDI_CLK                                                            FTDI_CLK                                                            |     10.000           |     10.000           |     5.000            |     5.000                            
+FTDI_CLK                                                            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+FTDI_CLK                                                            jtag_interface_x|identify_clk_int_inferred_clock                    |     Diff grp         |     No paths         |     No paths         |     Diff grp                         
+ident_coreinst.comm_block_INST.dr2_tck                              System                                                              |     1000.000         |     No paths         |     No paths         |     No paths                         
+ident_coreinst.comm_block_INST.dr2_tck                              ident_coreinst.comm_block_INST.dr2_tck                              |     1000.000         |     No paths         |     No paths         |     No paths                         
+ident_coreinst.comm_block_INST.dr2_tck                              jtag_interface_x|b10_8Kz_rKlrtX                                     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     FTDI_CLK                                                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     10.000           |     10.000           |     5.000            |     5.000                            
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|identify_clk_int_inferred_clock                    System                                                              |     10.000           |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|identify_clk_int_inferred_clock                    FTDI_CLK                                                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|identify_clk_int_inferred_clock                    jtag_interface_x|identify_clk_int_inferred_clock                    |     10.000           |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|identify_clk_int_inferred_clock                    jtag_interface_x|b9_nv_oQwfYF                                       |     Diff grp         |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|b10_8Kz_rKlrtX                                     System                                                              |     10.000           |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|b10_8Kz_rKlrtX                                     FTDI_CLK                                                            |     Diff grp         |     No paths         |     Diff grp         |     No paths                         
+jtag_interface_x|b10_8Kz_rKlrtX                                     jtag_interface_x|identify_clk_int_inferred_clock                    |     Diff grp         |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|b10_8Kz_rKlrtX                                     jtag_interface_x|b9_nv_oQwfYF                                       |     Diff grp         |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|b9_nv_oQwfYF                                       FTDI_CLK                                                            |     Diff grp         |     No paths         |     Diff grp         |     No paths                         
+jtag_interface_x|b9_nv_oQwfYF                                       jtag_interface_x|identify_clk_int_inferred_clock                    |     Diff grp         |     No paths         |     No paths         |     No paths                         
+jtag_interface_x|b9_nv_oQwfYF                                       jtag_interface_x|b9_nv_oQwfYF                                       |     10.000           |     No paths         |     No paths         |     No paths                         
+===================================================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:ADC_FD
+p:ADC_GPIO_0
+p:ADC_GPIO_1
+p:ADC_GPIO_2
+p:ADC_GPIO_3
+p:ADC_GPIO_4
+p:ADC_LDO_PWR_GOOD
+p:ADC_PWDN
+p:ADC_PWR_RUN
+p:ADC_sclk
+p:ADC_sdio (bidir end point)
+p:ADC_sdio (bidir start point)
+p:ADC_ss_n
+p:BOARD_PWR_RUN
+p:BTN_1
+p:BTN_2
+p:BTN_3
+p:BTN_4
+p:DBGport_0
+p:DBGport_1
+p:DBGport_2
+p:DBGport_3
+p:DBGport_4
+p:DBGport_5
+p:DBGport_6
+p:DBGport_7
+p:DBGport_8
+p:DBGport_9
+p:EXT_ADC_Reset_N
+p:EXT_HMC_Reset_N
+p:EXT_LMX1_Reset_N
+p:EXT_LMX2_Reset_N
+p:FTDI_BE[0] (bidir end point)
+p:FTDI_BE[0] (bidir start point)
+p:FTDI_BE[1] (bidir end point)
+p:FTDI_BE[1] (bidir start point)
+p:FTDI_BE[2] (bidir end point)
+p:FTDI_BE[2] (bidir start point)
+p:FTDI_BE[3] (bidir end point)
+p:FTDI_BE[3] (bidir start point)
+p:FTDI_DATA[0] (bidir end point)
+p:FTDI_DATA[0] (bidir start point)
+p:FTDI_DATA[1] (bidir end point)
+p:FTDI_DATA[1] (bidir start point)
+p:FTDI_DATA[2] (bidir end point)
+p:FTDI_DATA[2] (bidir start point)
+p:FTDI_DATA[3] (bidir end point)
+p:FTDI_DATA[3] (bidir start point)
+p:FTDI_DATA[4] (bidir end point)
+p:FTDI_DATA[4] (bidir start point)
+p:FTDI_DATA[5] (bidir end point)
+p:FTDI_DATA[5] (bidir start point)
+p:FTDI_DATA[6] (bidir end point)
+p:FTDI_DATA[6] (bidir start point)
+p:FTDI_DATA[7] (bidir end point)
+p:FTDI_DATA[7] (bidir start point)
+p:FTDI_DATA[8] (bidir end point)
+p:FTDI_DATA[8] (bidir start point)
+p:FTDI_DATA[9] (bidir end point)
+p:FTDI_DATA[9] (bidir start point)
+p:FTDI_DATA[10] (bidir end point)
+p:FTDI_DATA[10] (bidir start point)
+p:FTDI_DATA[11] (bidir end point)
+p:FTDI_DATA[11] (bidir start point)
+p:FTDI_DATA[12] (bidir end point)
+p:FTDI_DATA[12] (bidir start point)
+p:FTDI_DATA[13] (bidir end point)
+p:FTDI_DATA[13] (bidir start point)
+p:FTDI_DATA[14] (bidir end point)
+p:FTDI_DATA[14] (bidir start point)
+p:FTDI_DATA[15] (bidir end point)
+p:FTDI_DATA[15] (bidir start point)
+p:FTDI_DATA[16] (bidir end point)
+p:FTDI_DATA[16] (bidir start point)
+p:FTDI_DATA[17] (bidir end point)
+p:FTDI_DATA[17] (bidir start point)
+p:FTDI_DATA[18] (bidir end point)
+p:FTDI_DATA[18] (bidir start point)
+p:FTDI_DATA[19] (bidir end point)
+p:FTDI_DATA[19] (bidir start point)
+p:FTDI_DATA[20] (bidir end point)
+p:FTDI_DATA[20] (bidir start point)
+p:FTDI_DATA[21] (bidir end point)
+p:FTDI_DATA[21] (bidir start point)
+p:FTDI_DATA[22] (bidir end point)
+p:FTDI_DATA[22] (bidir start point)
+p:FTDI_DATA[23] (bidir end point)
+p:FTDI_DATA[23] (bidir start point)
+p:FTDI_DATA[24] (bidir end point)
+p:FTDI_DATA[24] (bidir start point)
+p:FTDI_DATA[25] (bidir end point)
+p:FTDI_DATA[25] (bidir start point)
+p:FTDI_DATA[26] (bidir end point)
+p:FTDI_DATA[26] (bidir start point)
+p:FTDI_DATA[27] (bidir end point)
+p:FTDI_DATA[27] (bidir start point)
+p:FTDI_DATA[28] (bidir end point)
+p:FTDI_DATA[28] (bidir start point)
+p:FTDI_DATA[29] (bidir end point)
+p:FTDI_DATA[29] (bidir start point)
+p:FTDI_DATA[30] (bidir end point)
+p:FTDI_DATA[30] (bidir start point)
+p:FTDI_DATA[31] (bidir end point)
+p:FTDI_DATA[31] (bidir start point)
+p:FTDI_GPIO_0
+p:FTDI_GPIO_1
+p:FTDI_RESET_N
+p:FTDI_nOE
+p:FTDI_nRD
+p:FTDI_nRXF
+p:FTDI_nTXE
+p:FTDI_nWR
+p:GPIO_0
+p:GPIO_1
+p:HMC_GPIO_0
+p:HMC_GPIO_1
+p:HMC_GPIO_2
+p:HMC_GPIO_3
+p:HMC_SYNC
+p:HMC_sclk
+p:HMC_sdio (bidir end point)
+p:HMC_sdio (bidir start point)
+p:HMC_ss_n
+p:LDO_PWR_GOOD
+p:LED_1
+p:LED_2
+p:LED_3
+p:LED_4
+p:LMX1_miso
+p:LMX1_mosi
+p:LMX1_sclk
+p:LMX1_ss_n
+p:LMX2_miso
+p:LMX2_mosi
+p:LMX2_sclk
+p:LMX2_ss_n
+p:RX_0
+p:RX_1
+p:SIWU_N
+p:SMPS_PWR_GOOD
+p:SYNCINB_N
+p:SYNCINB_P
+p:SYNC_IN_N
+p:SYNC_IN_P
+p:SYNC_OUT_1_N
+p:SYNC_OUT_1_P
+p:SYNC_OUT_2_N
+p:SYNC_OUT_2_P
+p:TX_0
+p:TX_1
+p:atck
+p:atdi
+p:atdo
+p:atms
+p:atrstb
+
+
+Inapplicable constraints
+************************
+
+create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 -multiply_by 5 -divide_by 4 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0 }]
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":10:0:10:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 -multiply_by 15 -divide_by 436 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1 }]
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":11:0:11:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+
+Applicable constraints with issues
+**********************************
+
+create_clock -name ident_coreinst.comm_block_INST.dr2_tck n:ident_coreinst.comm_block_INST.dr2_tck -period 1000.0 -waveform {0 500.0}
+	@W::"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/synthesis/identify_debug/instr_sources/syn_dics.fdc":2:0:2:0|Source for clock ident_coreinst.comm_block_INST.dr2_tck should be moved to net ident_coreinst.comm_block_INST.jtagi.b7_oSD_3vW connected to driving cell pin ident_coreinst.comm_block_INST.jtagi.jtag_clkint_prim.O
+
+Constraints with matching wildcard expressions
+**********************************************
+
+set_false_path -to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":12:0:12:0|expression "[get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[6]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[7]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[8]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[9]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[10]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|expression "[get_cells { UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[7]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[8]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[9]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[10]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":13:0:13:0|expression "[get_cells { UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[7]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[8]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[9]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[10]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":16:0:16:0|expression "[get_cells { UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[7]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[8]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[9]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[10]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|expression "[get_cells { UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[7]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[8]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[9]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[10]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":17:0:17:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[10]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+set_false_path -to [get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":18:0:18:0|expression "[get_cells { USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[10]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[7]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[8]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
+		USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report
