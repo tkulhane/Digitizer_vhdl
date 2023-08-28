@@ -1,6 +1,6 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
-. Top, 9014, 6694, 2698, 0, 0, 900, 0, 10, 107
+. Top, 9018, 6679, 2719, 0, 0, 914, 0, 10, 107
 .	. Clock_Reset, 20, 1, 0, 0, 0, 0, 0, 5, 0
 .	.	. CORERESET_PF_C0, 17, 1, 0, 0, 0, 0, 0, 1, 0
 .	.	.	. CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF, 17, 1, 0, 0, 0, 0, 0, 1, 0
@@ -210,11 +210,11 @@
 .	.	. UART_RX_Protocol_1, 100, 56, 32, 0, 0, 0, 0, 0, 0
 .	.	. UART_TX_Protocol_UART_Protocol_UART_Protocol_1, 60, 95, 0, 0, 0, 0, 0, 0, 0
 .	.	. work_mko_rtl_330000_1_Time_Period_UART_Protocol_UART_Protocol_1, 27, 12, 26, 0, 0, 0, 0, 0, 0
-.	. USB_3_Protocol, 853, 580, 228, 0, 0, 6, 0, 0, 0
-.	.	. COREFIFO_C11, 213, 108, 58, 0, 0, 2, 0, 0, 0
-.	.	.	. COREFIFO_C11_COREFIFO_C11_0_COREFIFO_Z24_layer0, 213, 108, 58, 0, 0, 2, 0, 0, 0
-.	.	.	.	. COREFIFO_C11_COREFIFO_C11_0_corefifo_fwft_Z26_layer0, 84, 47, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0, 46, 19, 58, 0, 0, 0, 0, 0, 0
+.	. USB_3_Protocol, 857, 571, 249, 0, 0, 20, 0, 0, 0
+.	.	. COREFIFO_C11, 181, 92, 58, 0, 0, 2, 0, 0, 0
+.	.	.	. COREFIFO_C11_COREFIFO_C11_0_COREFIFO_Z24_layer0, 181, 92, 58, 0, 0, 2, 0, 0, 0
+.	.	.	.	. COREFIFO_C11_COREFIFO_C11_0_corefifo_fwft_Z26_layer0, 68, 38, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0, 46, 18, 58, 0, 0, 0, 0, 0, 0
 .	.	.	.	. COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C11_COREFIFO_C11_0_LSRAM_top, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	. COREFIFO_C7, 312, 188, 91, 0, 0, 2, 0, 0, 0
@@ -227,30 +227,30 @@
 .	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_corefifo_fwft_Z21_layer0, 84, 46, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C7_COREFIFO_C7_0_LSRAM_top, 0, 0, 0, 0, 0, 2, 0, 0, 0
-.	.	. COREFIFO_C8, 169, 92, 79, 0, 0, 2, 0, 0, 0
-.	.	.	. COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z22_layer0, 169, 92, 79, 0, 0, 2, 0, 0, 0
-.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0, 133, 57, 79, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_10_0, 22, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_10_1, 22, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_10_Top, 0, 10, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_10_Top_0, 0, 10, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 2, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_LSRAM_top, 0, 0, 0, 0, 0, 2, 0, 0, 0
-.	.	. Communication_TX_Arbiter2, 6, 84, 0, 0, 0, 0, 0, 0, 0
+.	.	. COREFIFO_C8, 205, 108, 100, 0, 0, 16, 0, 0, 0
+.	.	.	. COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z22_layer0, 205, 108, 100, 0, 0, 16, 0, 0, 0
+.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0, 169, 73, 100, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13_0, 28, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13_1, 28, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13_Top, 0, 13, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13_Top_0, 0, 13, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 16, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C8_COREFIFO_C8_0_LSRAM_top, 0, 0, 0, 0, 0, 16, 0, 0, 0
+.	.	. Communication_TX_Arbiter2_1_1, 6, 75, 0, 0, 0, 0, 0, 0, 0
 .	.	. Synchronizer_1, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	. ft601_fifo_interface, 151, 108, 0, 0, 0, 0, 0, 0, 0
-.	. syn_identify_core0_0, 2842, 2294, 58, 0, 0, 7, 0, 3, 0
-.	.	. FTDI_x_0, 650, 454, 29, 0, 0, 2, 0, 0, 0
-.	.	.	. b11_OFWNT9s_8tZ_Z3_x_0, 392, 220, 20, 0, 0, 2, 0, 0, 0
-.	.	.	.	. b11_SoWyP0zEFKY_Z2_x_0, 104, 81, 1, 0, 0, 0, 0, 0, 0
+.	. syn_identify_core0_0, 2842, 2288, 58, 0, 0, 7, 0, 3, 0
+.	.	. FTDI_x_0, 650, 443, 29, 0, 0, 2, 0, 0, 0
+.	.	.	. b11_OFWNT9s_8tZ_Z3_x_0, 392, 213, 20, 0, 0, 2, 0, 0, 0
+.	.	.	.	. b11_SoWyP0zEFKY_Z2_x_0, 104, 82, 1, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b13_vFW_xNywD_EdR_50s_9s_512s_0s_x_0, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	.	.	. b18_nczQ_DYg_rbYq_Amnd_44s_1s_0s_Z4_x_0, 88, 2, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b18_nczQ_DYg_rbYq_Amnd_8s_1s_0s_39s_x_0_0, 5, 3, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b19_nczQ_DYg_YFaRM_oUoP_22s_1s_x_0_0, 22, 22, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. b19_nczQ_DYg_YFaRM_oUoP_32s_1s_x_0_0, 32, 13, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. b3_uKr_x_0_0, 0, 15, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. b7_OCByLXC_Z1_x_0, 177, 142, 9, 0, 0, 0, 0, 0, 0
-.	.	.	.	. b16_n2FydH_ab_FH9_K4_4s_x_0_0, 13, 9, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	. b19_nczQ_DYg_YFaRM_oUoP_32s_1s_x_0_0, 32, 2, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. b3_uKr_x_0_0, 0, 14, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. b7_OCByLXC_Z1_x_0, 177, 139, 9, 0, 0, 0, 0, 0, 0
+.	.	.	.	. b16_n2FydH_ab_FH9_K4_4s_x_0_0, 13, 10, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b16_n2FydH_ab_FH9_K4_5s_x_0_0, 13, 7, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b8_nR_ymqrG_9s_5s_0_0s_0s_0_255s_x_0, 30, 5, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. b8_PfFzrNYI_x_0, 36, 77, 0, 0, 0, 0, 0, 0, 0
@@ -270,16 +270,16 @@
 .	.	.	.	.	. b8_1LbcQDr1_1_0_1_5_6_7_x_8_0, 0, 6, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. b8_1LbcQDr1_1_0_1_5_6_7_x_9_0, 0, 6, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b5_nvmFL_36s_x_0, 36, 1, 0, 0, 0, 0, 0, 0, 0
-.	.	. IICE_x_0, 2142, 1818, 29, 0, 0, 5, 0, 0, 0
-.	.	.	. b11_OFWNT9s_8tZ_Z7_x_0, 1244, 551, 20, 0, 0, 5, 0, 0, 0
-.	.	.	.	. b11_SoWyP0zEFKY_Z6_x_0, 388, 307, 2, 0, 0, 0, 0, 0, 0
+.	.	. IICE_x_0, 2142, 1823, 29, 0, 0, 5, 0, 0, 0
+.	.	.	. b11_OFWNT9s_8tZ_Z7_x_0, 1244, 552, 20, 0, 0, 5, 0, 0, 0
+.	.	.	.	. b11_SoWyP0zEFKY_Z6_x_0, 388, 309, 2, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b13_vFW_xNywD_EdR_192s_9s_512s_0s_x_0, 0, 0, 0, 0, 0, 5, 0, 0, 0
 .	.	.	.	. b18_nczQ_DYg_rbYq_Amnd_186s_1s_0s_Z8_x_0, 372, 1, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b18_nczQ_DYg_rbYq_Amnd_8s_1s_0s_39s_x_1_0, 5, 2, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b19_nczQ_DYg_YFaRM_oUoP_22s_1s_x_1_0, 22, 22, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. b19_nczQ_DYg_YFaRM_oUoP_32s_1s_x_1_0, 32, 3, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. b3_uKr_x_1_0, 0, 13, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. b7_OCByLXC_Z5_x_0, 177, 149, 9, 0, 0, 0, 0, 0, 0
+.	.	.	.	. b19_nczQ_DYg_YFaRM_oUoP_32s_1s_x_1_0, 32, 1, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. b3_uKr_x_1_0, 0, 18, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. b7_OCByLXC_Z5_x_0, 177, 148, 9, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b16_n2FydH_ab_FH9_K4_4s_x_1_0, 13, 14, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b16_n2FydH_ab_FH9_K4_5s_x_1_0, 13, 11, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. b8_nR_ymqrG_9s_5s_0_0s_0s_0_254s_x_0, 30, 5, 0, 0, 0, 0, 0, 0, 0
@@ -475,5 +475,5 @@
 .	.	.	.	. b5_nvmFL_0_522s_x_0, 522, 1, 0, 0, 0, 0, 0, 0, 0
 .	.	. comm_block_x_0, 50, 22, 0, 0, 0, 0, 0, 3, 0
 .	.	.	. b16_Rcmi_qlx9_yHpm7y_6s_2s_0s_0s_9s_0s_1s_2s_7s_8s_x_0, 18, 3, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. b9_ORbIwXaEF_32s_2490054927_0s_x_0, 32, 3, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. jtag_interface_x_0, 0, 9, 0, 0, 0, 0, 0, 3, 0
+.	.	.	. b9_ORbIwXaEF_32s_2490054927_0s_x_0, 32, 2, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. jtag_interface_x_0, 0, 10, 0, 0, 0, 0, 0, 3, 0

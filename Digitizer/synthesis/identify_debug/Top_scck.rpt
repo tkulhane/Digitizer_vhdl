@@ -13,7 +13,7 @@ Hostname: DESKTOP-TDPVUTD
 
 Implementation : identify_debug
 
-# Written on Wed Aug 23 21:30:52 2023
+# Written on Fri Aug 25 08:26:02 2023
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc"
@@ -35,7 +35,7 @@ Clock Summary
           Start                                                               Requested     Requested     Clock        Clock                     Clock
 Level     Clock                                                               Frequency     Period        Type         Group                     Load 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
-0 -       FTDI_CLK                                                            100.0 MHz     10.000        declared     default_clkgroup          1681 
+0 -       FTDI_CLK                                                            100.0 MHz     10.000        declared     default_clkgroup          1705 
                                                                                                                                                       
 0 -       ident_coreinst.comm_block_INST.dr2_tck                              1.0 MHz       1000.000      declared     identify_jtag_group1      9    
                                                                                                                                                       
@@ -43,7 +43,7 @@ Level     Clock                                                               Fr
                                                                                                                                                       
 0 -       System                                                              100.0 MHz     10.000        system       system_clkgroup           0    
                                                                                                                                                       
-0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6823 
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6847 
                                                                                                                                                       
 0 -       jtag_interface_x|identify_clk_int_inferred_clock                    100.0 MHz     10.000        inferred     Inferred_clkgroup_0_3     1900 
                                                                                                                                                       
@@ -61,7 +61,7 @@ Clock Load Summary
                                                                     Clock     Source                                                                Clock Pin                                                                                  Non-clock Pin                                     Non-clock Pin                                                
 Clock                                                               Load      Pin                                                                   Seq Example                                                                                Seq Example                                       Comb Example                                                 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-FTDI_CLK                                                            1681      FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.FTDI_BE_1[0].C                                     -                                                 I_1.A(CLKINT)                                                
+FTDI_CLK                                                            1705      FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.FTDI_BE_1[0].C                                     -                                                 I_1.A(CLKINT)                                                
                                                                                                                                                                                                                                                                                                                                                               
 ident_coreinst.comm_block_INST.dr2_tck                              9         ident_coreinst.comm_block_INST.jtagi.jtag_clkint_prim.O(BUFG)         ident_coreinst.comm_block_INST.b7_Rcmi_ql.b9_OvyH3_saL[8:0].C                              -                                                 -                                                            
                                                                                                                                                                                                                                                                                                                                                               
@@ -69,7 +69,7 @@ Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Cl
                                                                                                                                                                                                                                                                                                                                                               
 System                                                              0         -                                                                     -                                                                                          -                                                 -                                                            
                                                                                                                                                                                                                                                                                                                                                               
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6823      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:5].C                              -                                                 OUTBUF_DIFF_0_0_0.D(OUTBUF_DIFF)                             
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6847      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:5].C                              -                                                 OUTBUF_DIFF_0_0_0.D(OUTBUF_DIFF)                             
                                                                                                                                                                                                                                                                                                                                                               
 jtag_interface_x|identify_clk_int_inferred_clock                    1900      ident_coreinst.comm_block_INST.jtagi.b9_Rcmi_KsDw.UDRCK(UJTAG)        ident_coreinst.comm_block_INST.b9_ORb_xNywD.b3_ORb[32:1].C                                 -                                                 ident_coreinst.comm_block_INST.jtagi.jtag_clkint_prim.I(BUFG)
                                                                                                                                                                                                                                                                                                                                                               

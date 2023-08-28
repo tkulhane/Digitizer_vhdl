@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Aug 22 11:24:55 2023
+// Created by SmartDesign Fri Aug 25 08:24:23 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -232,7 +232,6 @@ wire          Controler_0_TRG_write_read;
 wire          Data_Block_0_C_busy;
 wire   [15:0] Data_Block_0_C_read_data_frame;
 wire   [31:0] Data_Block_0_Communication_Data_Frame;
-wire          DBGport_0_net_0;
 wire          DBGport_0_0;
 wire          DBGport_0_1;
 wire          DBGport_0_3;
@@ -262,9 +261,7 @@ wire          DBGport_5_3;
 wire          DBGport_5_4;
 wire          BTN_2;
 wire          DBGport_6_1;
-wire          DBGport_6_4;
 wire          DBGport_7_net_0;
-wire          DBGport_7_1;
 wire   [3:0]  FTDI_BE;
 wire          FTDI_CLK;
 wire   [31:0] FTDI_DATA;
@@ -621,11 +618,11 @@ Data_Block Data_Block_0(
         // Outputs
         .C_busy                    ( Data_Block_0_C_busy ),
         .Communication_Empty       ( DBGport_2_0 ),
-        .Diag_0                    ( DBGport_6_4 ),
-        .Diag_1                    ( DBGport_7_1 ),
+        .Diag_0                    (  ),
+        .Diag_1                    (  ),
         .Diag_2                    (  ),
         .Diag_3                    (  ),
-        .Communication_Data_Req    ( DBGport_0_net_0 ),
+        .Communication_Data_Req    (  ),
         .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
         .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ) 
         );

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Aug 21 11:46:56 2023
+// Created by SmartDesign Fri Aug 25 08:24:06 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -30,14 +30,14 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "PREFETCH:false"  \
 "RAM_OPT:0"  \
 "RDCNT_EN:false"  \
-"RDEPTH:1024"  \
+"RDEPTH:8192"  \
 "RE_POLARITY:0"  \
 "READ_DVALID:false"  \
 "RWIDTH:40"  \
 "SYNC:0"  \
 "SYNC_RESET:0"  \
 "UNDERFLOW_EN:false"  \
-"WDEPTH:1024"  \
+"WDEPTH:8192"  \
 "WE_POLARITY:0"  \
 "WRCNT_EN:false"  \
 "WRITE_ACK:false"  \
@@ -146,14 +146,14 @@ COREFIFO_C8_COREFIFO_C8_0_COREFIFO #(
         .PREFETCH     ( 0 ),
         .RAM_OPT      ( 0 ),
         .RDCNT_EN     ( 0 ),
-        .RDEPTH       ( 1024 ),
+        .RDEPTH       ( 8192 ),
         .RE_POLARITY  ( 0 ),
         .READ_DVALID  ( 0 ),
         .RWIDTH       ( 40 ),
         .SYNC         ( 0 ),
         .SYNC_RESET   ( 0 ),
         .UNDERFLOW_EN ( 0 ),
-        .WDEPTH       ( 1024 ),
+        .WDEPTH       ( 8192 ),
         .WE_POLARITY  ( 0 ),
         .WRCNT_EN     ( 0 ),
         .WRITE_ACK    ( 0 ),

@@ -1,6 +1,6 @@
 Device Selection
 Report Version,Date,Product,Release,Version,Design Name,Family,Die,Package
-0.1,Wed Aug 23 21:42:05 2023,Designer,v2022.1,2022.1.0.10,Top,PolarFire,MPF300TS_ES,FCG1152
+0.1,Fri Aug 25 08:34:49 2023,Designer,v2022.1,2022.1.0.10,Top,PolarFire,MPF300TS_ES,FCG1152
 Pin Report
 Pin,Port,Function,Bank,State,I/O Std,Direction,Used I/O Reg,User I/O Lock Down,Clamp Diode,Resistor Pull,Schmitt Trigger,Vcm Input Range,On Die Termination,Odt Value (Ohm),Input Delay,Slew,Output Drive (mA),Impedance (ohm),Output Load (pF),Source Termination (Ohm),Output Delay,Board Layout
 A2,FTDI_DATA[22],GPIO251PB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[22]
@@ -615,7 +615,7 @@ E1,---,GPIO245PB2/CCC_SW_CLKIN_S_1,Bank2,Unassigned,---,---,---,---,---,---,---,
 E2,---,GPIO246NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 E3,---,GPIO247NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 E4,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
-E5,---,GPIO249NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+E5,LMX1_sclk,GPIO249NB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX1_sclk
 E6,FTDI_DATA[10],GPIO13PB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[10]
 E7,FTDI_DATA[7],GPIO15PB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[7]
 E8,FTDI_DATA[5],GPIO15NB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[5]
@@ -679,8 +679,8 @@ F31,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---
 F32,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 F33,---,XCVR_3_TX0_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 F34,---,XCVR_3_TX0_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
-G1,EXT_HMC_Reset_N,GPIO243NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_HMC_Reset_N
-G2,ADC_sclk,GPIO243PB5/CLKIN_W_0/CCC_SW_CLKIN_W_0,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_sclk
+G1,LMX2_ss_n,GPIO243NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX2_ss_n
+G2,LMX2_sclk,GPIO243PB5/CLKIN_W_0/CCC_SW_CLKIN_W_0,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX2_sclk
 G3,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 G4,FTDI_CLK,GPIO244PB2/CCC_SW_CLKIN_S_0,Bank2,Fixed,LVCMOS33,Input,None,No,ON,None,OFF,---,---,---,OFF,---,---,---,---,---,---,FTDI_CLK
 G5,FTDI_DATA[3],GPIO11PB2/CLKIN_S_7,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[3]
@@ -692,9 +692,9 @@ G10,---,GPIO21PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,-
 G11,FTDI_BE[2],GPIO18NB2,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,FTDI_BE[2]
 G12,FTDI_BE[3],GPIO18PB2,Bank2,Fixed,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,FTDI_BE[3]
 G13,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-G14,EXT_LMX1_Reset_N,GPIO3NB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_LMX1_Reset_N
-G15,ADC_ss_n,GPIO5PB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_ss_n
-G16,LMX2_ss_n,GPIO5NB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX2_ss_n
+G14,---,GPIO3NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G15,---,GPIO5PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+G16,---,GPIO5NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 G17,---,HSIO37NB6,Bank6,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 G18,---,VDDI6,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.35v
 G19,---,HSIO39NB6,Bank6,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
@@ -713,10 +713,10 @@ G31,---,XCVR_3_RX0_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,--
 G32,---,XCVR_3_RX0_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
 G33,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 G34,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-H1,HMC_sdio,GPIO240NB5,Bank5,Assigned,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,HMC_sdio
-H2,GPIO_1,GPIO240PB5/CLKIN_W_1/CCC_SW_CLKIN_W_1,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,GPIO_1
-H3,EXT_ADC_Reset_N,GPIO242NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_ADC_Reset_N
-H4,LMX1_ss_n,GPIO242PB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX1_ss_n
+H1,LMX1_mosi,GPIO240NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX1_mosi
+H2,EXT_LMX2_Reset_N,GPIO240PB5/CLKIN_W_1/CCC_SW_CLKIN_W_1,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_LMX2_Reset_N
+H3,LMX2_mosi,GPIO242NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX2_mosi
+H4,LMX2_miso,GPIO242PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,LMX2_miso
 H5,---,VDDI5,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
 H6,---,GPIO10PB2/LPRB_A,Bank2,User Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Probe A
 H7,FTDI_DATA[19],GPIO8PB2/DQS,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[19]
@@ -724,9 +724,9 @@ H8,FTDI_DATA[12],GPIO7NB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---
 H9,FTDI_DATA[14],GPIO7PB2/CLKIN_S_5,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[14]
 H10,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 H11,FTDI_DATA[16],GPIO4NB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[16]
-H12,LMX2_mosi,GPIO1NB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX2_mosi
-H13,LMX1_sclk,GPIO1PB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX1_sclk
-H14,LMX2_sclk,GPIO3PB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX2_sclk
+H12,---,GPIO1NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H13,---,GPIO1PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+H14,---,GPIO3PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 H15,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
 H16,---,GPIO32PB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 H17,---,GPIO32NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -747,21 +747,21 @@ H31,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---
 H32,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,Must connect VDDA to 1.0v/1.05v or to VSS through resistor (10K ohm)
 H33,---,XCVR_3_TX1_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 H34,---,XCVR_3_TX1_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
-J1,LMX2_miso,GPIO239PB5/CLKIN_W_2/CCC_SW_CLKIN_W_2/CCC_SW_PLL0_OUT0,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,LMX2_miso
+J1,ADC_sclk,GPIO239PB5/CLKIN_W_2/CCC_SW_CLKIN_W_2/CCC_SW_PLL0_OUT0,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_sclk
 J2,---,VDDI5,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
-J3,HMC_sclk,GPIO241NB5/DQS,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,HMC_sclk
-J4,HMC_ss_n,GPIO241PB5/DQS/CCC_SW_PLL0_OUT0,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,HMC_ss_n
-J5,ADC_GPIO_2,GPIO235NB5/DQS,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_2
-J6,LDO_PWR_GOOD,GPIO235PB5/DQS,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,LDO_PWR_GOOD
+J3,LMX1_ss_n,GPIO241NB5/DQS,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX1_ss_n
+J4,EXT_ADC_Reset_N,GPIO241PB5/DQS/CCC_SW_PLL0_OUT0,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_ADC_Reset_N
+J5,ADC_PWR_RUN,GPIO235NB5/DQS,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_PWR_RUN
+J6,ADC_ss_n,GPIO235PB5/DQS,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_ss_n
 J7,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-J8,ADC_GPIO_4,GPIO237PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_4
+J8,GPIO_0,GPIO237PB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,GPIO_0
 J9,atms,TMS,---,Dedicated,---,Input,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,atms
 J10,atck,TCK,---,Dedicated,---,Input,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,atck
 J11,FTDI_DATA[18],GPIO4PB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,FTDI_DATA[18]
 J12,---,VDDI2,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
-J13,HMC_GPIO_2,GPIO2NB2/DQS,Bank2,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_2
-J14,LMX1_miso,GPIO2PB2/DQS,Bank2,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,LMX1_miso
-J15,LMX1_mosi,GPIO0NB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,LMX1_mosi
+J13,---,GPIO2NB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J14,---,GPIO2PB2/DQS,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+J15,EXT_LMX1_Reset_N,GPIO0NB2,Bank2,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_LMX1_Reset_N
 J16,---,GPIO31PB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 J17,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 J18,---,GPIO33PB2/CCC_SE_CLKIN_S_10,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -781,21 +781,21 @@ J31,---,XCVR_3_RX1_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,--
 J32,---,XCVR_3_RX1_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity"
 J33,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 J34,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-K1,EXT_LMX2_Reset_N,GPIO239NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_LMX2_Reset_N
-K2,BOARD_PWR_RUN,GPIO238PB5/CCC_SW_PLL0_OUT1,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,BOARD_PWR_RUN
-K3,ADC_GPIO_1,GPIO238NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_1
+K1,HMC_ss_n,GPIO239NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,HMC_ss_n
+K2,EXT_HMC_Reset_N,GPIO238PB5/CCC_SW_PLL0_OUT1,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,EXT_HMC_Reset_N
+K3,HMC_sclk,GPIO238NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,HMC_sclk
 K4,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-K5,ADC_FD,GPIO232PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_FD
-K6,HMC_GPIO_1,GPIO233NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_1
-K7,HMC_GPIO_3,GPIO233PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_3
-K8,GPIO_0,GPIO237NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,GPIO_0
+K5,HMC_GPIO_2,GPIO232PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_2
+K6,HMC_GPIO_0,GPIO233NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_0
+K7,ADC_LDO_PWR_GOOD,GPIO233PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_LDO_PWR_GOOD
+K8,ADC_PWDN,GPIO237NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_PWDN
 K9,atdo,TDO,---,Dedicated,---,Output,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,atdo
 K10,---,SDO,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC,CLAMP=OFF"
 K11,atdi,TDI,---,Dedicated,---,Input,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,atdi
 K12,---,SDI,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"Must connect to VDDI3 through resistor (10K ohm),CLAMP=OFF"
 K13,---,RESERVED,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC,CLAMP=OFF"
 K14,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-K15,ADC_sdio,GPIO0PB2,Bank2,Assigned,LVCMOS33,Inout,None,No,ON,Up,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,ADC_sdio
+K15,LMX1_miso,GPIO0PB2,Bank2,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,LMX1_miso
 K16,---,GPIO31NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 K17,---,GPIO35NB2,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 K18,---,GPIO35PB2/CCC_SE_CLKIN_S_11,Bank2,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -818,11 +818,11 @@ K34,---,XCVR_3_TX2_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,--
 L1,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 L2,---,GPIO223NB5/DQS,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 L3,---,GPIO223PB5/DQS,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-L4,---,GPIO225PB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-L5,---,GPIO232NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+L4,SMPS_PWR_GOOD,GPIO225PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,SMPS_PWR_GOOD
+L5,ADC_GPIO_3,GPIO232NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_3
 L6,---,VDDI5,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
-L7,ADC_PWDN,GPIO236NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_PWDN
-L8,SMPS_PWR_GOOD,GPIO236PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,SMPS_PWR_GOOD
+L7,HMC_sdio,GPIO236NB5,Bank5,Assigned,LVCMOS33,Inout,None,No,ON,None,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,HMC_sdio
+L8,ADC_sdio,GPIO236PB5,Bank5,Assigned,LVCMOS33,Inout,None,No,ON,Up,OFF,---,---,---,OFF,OFF,8,---,5,---,OFF,ADC_sdio
 L9,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 L10,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 L11,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
@@ -853,9 +853,9 @@ M1,---,GPIO221NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,-
 M2,---,GPIO221PB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 M3,---,VDDI5,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
 M4,---,GPIO225NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-M5,HMC_SYNC,GPIO234NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,HMC_SYNC
-M6,ADC_LDO_PWR_GOOD,GPIO234PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_LDO_PWR_GOOD
-M7,ADC_PWR_RUN,GPIO231NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,ADC_PWR_RUN
+M5,LDO_PWR_GOOD,GPIO234NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,LDO_PWR_GOOD
+M6,BOARD_PWR_RUN,GPIO234PB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,BOARD_PWR_RUN
+M7,HMC_SYNC,GPIO231NB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,HMC_SYNC
 M8,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 M9,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 M10,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -885,12 +885,12 @@ M33,---,XCVR_3_TX3_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,--
 M34,---,XCVR_3_TX3_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined"
 N1,SYNCINB_N,GPIO220NB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNCINB_N
 N2,SYNCINB_P,GPIO220PB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNCINB_P
-N3,---,GPIO224NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-N4,---,GPIO224PB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+N3,SYNC_OUT_1_N,GPIO224NB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNC_OUT_1_N
+N4,SYNC_OUT_1_P,GPIO224PB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNC_OUT_1_P
 N5,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-N6,---,GPIO228NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-N7,---,GPIO228PB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-N8,ADC_GPIO_0,GPIO231PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_0
+N6,HMC_GPIO_1,GPIO228NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_1
+N7,ADC_GPIO_4,GPIO228PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_4
+N8,ADC_GPIO_2,GPIO231PB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_2
 N9,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 N10,---,VDDI5,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
 N11,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
@@ -921,11 +921,11 @@ P1,---,GPIO211PB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,-
 P2,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 P3,SYNC_OUT_2_N,GPIO222NB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNC_OUT_2_N
 P4,SYNC_OUT_2_P,GPIO222PB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNC_OUT_2_P
-P5,ADC_GPIO_3,GPIO229NB5/DQS,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_3
-P6,HMC_GPIO_0,GPIO229PB5/DQS,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_0
+P5,ADC_GPIO_1,GPIO229NB5/DQS,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_1
+P6,ADC_FD,GPIO229PB5/DQS,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_FD
 P7,---,VDDI5,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
-P8,SYNC_IN_N,GPIO230NB5,Bank5,Assigned,LVDS33,Input,None,No,ON,None,OFF,MID,ON,100,OFF,---,---,---,---,---,---,SYNC_IN_N
-P9,SYNC_IN_P,GPIO230PB5,Bank5,Assigned,LVDS33,Input,None,No,ON,None,OFF,MID,ON,100,OFF,---,---,---,---,---,---,SYNC_IN_P
+P8,ADC_GPIO_0,GPIO230NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,ADC_GPIO_0
+P9,GPIO_1,GPIO230PB5,Bank5,Assigned,LVCMOS33,Output,None,No,ON,None,---,---,---,---,---,OFF,8,---,5,---,OFF,GPIO_1
 P10,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 P11,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 P12,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
@@ -955,10 +955,10 @@ R1,---,GPIO211NB4/DQS,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,-
 R2,---,GPIO213NB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 R3,---,GPIO213PB4,Bank4,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 R4,---,VDDI4,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,3.3v
-R5,SYNC_OUT_1_P,GPIO227PB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNC_OUT_1_P
-R6,SYNC_OUT_1_N,GPIO227NB5,Bank5,Assigned,LVDS33,Output,None,No,ON,None,---,---,---,100,---,OFF,6,---,5,OFF,OFF,SYNC_OUT_1_N
+R5,SYNC_IN_P,GPIO227PB5,Bank5,Assigned,LVDS33,Input,None,No,ON,None,OFF,MID,ON,100,OFF,---,---,---,---,---,---,SYNC_IN_P
+R6,SYNC_IN_N,GPIO227NB5,Bank5,Assigned,LVDS33,Input,None,No,ON,None,OFF,MID,ON,100,OFF,---,---,---,---,---,---,SYNC_IN_N
 R7,---,GPIO226PB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
-R8,---,GPIO226NB5,Bank5,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
+R8,HMC_GPIO_3,GPIO226NB5,Bank5,Assigned,LVCMOS33,Input,None,No,ON,Up,OFF,---,---,---,OFF,---,---,---,---,---,---,HMC_GPIO_3
 R9,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 R10,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"
 R11,---,NC,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=OFF"

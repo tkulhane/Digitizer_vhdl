@@ -1,4 +1,4 @@
-# Wed Aug 23 21:31:13 2023
+# Fri Aug 25 08:26:24 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -29,7 +29,7 @@ Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 134MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 134MB)
 
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 134MB)
@@ -43,10 +43,10 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 @N: MF105 |Performing bottom-up mapping of Top level view:work.Top(verilog) 
 
-Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 202MB)
+Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 203MB peak: 203MB)
 
 
-Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 203MB peak: 281MB)
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 204MB peak: 281MB)
 
 
 Begin compile point sub-process log
@@ -55,7 +55,7 @@ Begin compile point sub-process log
 		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 203MB peak: 281MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 204MB peak: 281MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5323:7:5323:20|Tristate driver b10_PbTt39_Y2x (in view: VhdlGenLib.FTDI_x(verilog)) on net b10_PbTt39_Y2x (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":5484:22:5484:37|Tristate driver b12_ocsGfWYY_Lyh (in view: VhdlGenLib.FTDI_x(verilog)) on net b12_ocsGfWYY_Lyh (in view: VhdlGenLib.FTDI_x(verilog)) has its enable tied to GND.
@@ -78,7 +78,7 @@ Making connections to hyper_source modules
 
 #### END OF SSF LOG MESSAGES ####
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 209MB peak: 281MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 210MB peak: 281MB)
 
 Encoding state machine Communication_CMD_MUX_0.state_reg[0:2] (in view: work.Controler(verilog))
 original code -> new code
@@ -265,12 +265,12 @@ original code -> new code
 Only the first 100 messages of id 'FX493' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top\Top.srr -id FX493' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {FX493} -count unlimited' in the Tcl shell.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":3049:6:3049:11|Removing sequential instance genblk4\.b11_oGA_BXsO_OS.genblk2\.b8_nczQ_DYg[2:0] (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z7_x(verilog)) of type view:PrimLib.dff(prim) because it does not drive other instances.
 @W: FX107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":2744:4:2744:9|RAM b3_SoW.b3_SoW[191:0] (in view: VhdlGenLib.b11_OFWNT9s_8tZ_Z7_x(verilog)) does not have a read/write conflict check. Possible simulation mismatch. To resolve a read/write conflict, either set syn_ramstyle = rw_check, or enable the "Read Write Check on RAM" Implementation Option. For more information, search for "read/write conflict check" in Online Help.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.wptr[10:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memwaddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.wptr[13:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memraddr_r[12:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memwaddr_r[12:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memraddr_r[9:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memwaddr_r[9:0] 
-Encoding state machine state_reg[0:5] (in view: work.Communication_TX_Arbiter2(rtl))
+Encoding state machine state_reg[0:5] (in view: work.Communication_TX_Arbiter2_1_1(rtl))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -296,12 +296,12 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memwaddr_r[9:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 217MB peak: 281MB)
+Starting factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 218MB peak: 281MB)
 
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4827:2:4827:7|Removing sequential instance b5_nUTGT.b13_xYTFKCkrt_FH9 (in view: VhdlGenLib.FTDI_x(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4827:2:4827:7|Removing sequential instance b5_nUTGT.b13_xYTFKCkrt_FH9 (in view: VhdlGenLib.IICE_x(verilog)) because it does not drive other instances.
 
-Finished factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 230MB peak: 281MB)
+Finished factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 230MB peak: 281MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -460,33 +460,34 @@ Only the first 100 messages of id 'BN132' are reported. To see all messages use 
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4517:3:4517:8|Removing sequential instance ident_coreinst.IICE_INST.b5_nUTGT.iclksync_status.b4_oYh0[4] (in view: work.Top(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":4517:3:4517:8|Removing sequential instance ident_coreinst.FTDI_INST.b5_nUTGT.iclksync_status.b4_oYh0[4] (in view: work.Top(verilog)) because it does not drive other instances.
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 242MB peak: 281MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 243MB peak: 281MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 243MB peak: 281MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 244MB peak: 281MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 244MB peak: 281MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 245MB peak: 281MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 245MB peak: 281MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 245MB peak: 281MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 245MB peak: 281MB)
+Finished preparing to map (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 246MB peak: 281MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 285MB peak: 285MB)
+Finished technology mapping (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 284MB peak: 284MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:09s		    -0.14ns		4323 /      4334
-   2		0h:00m:10s		    -0.14ns		3575 /      4334
-@N: FX271 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":7115:2:7115:7|Replicating instance ident_coreinst.IICE_INST.b20_i2WM2X_F8tsl_Ae1cdJ4 (in view: work.Top(verilog)) with 21 loads 1 time to improve timing.
+   1		0h:00m:10s		    -0.15ns		4338 /      4338
+   2		0h:00m:10s		    -0.15ns		3583 /      4338
+@N: FX271 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\instr_sources\syn_dics.v":7115:2:7115:7|Replicating instance ident_coreinst.IICE_INST.b20_i2WM2X_F8tsl_Ae1cdJ4 (in view: work.Top(verilog)) with 20 loads 1 time to improve timing.
 Timing driven replication report
 Added 1 Registers via timing driven replication
 Added 1 LUTs via timing driven replication
 
-   3		0h:00m:11s		    -0.03ns		3576 /      4335
+   3		0h:00m:11s		    -0.04ns		3585 /      4339
+   4		0h:00m:11s		     0.56ns		3586 /      4339
 @N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[0] (in view: work.Top(verilog)) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[1] (in view: work.Top(verilog)) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance ident_coreinst.IICE_INST.b3_SoW.b3_SoW.b3_SoW_b3_SoW_0_4_OLDA[2] (in view: work.Top(verilog)) because it does not drive other instances.
@@ -608,7 +609,7 @@ Added 0 Cells via replication
 Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 289MB peak: 289MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 290MB peak: 291MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 289MB peak: 290MB)
 
 
 End compile point sub-process log
@@ -622,7 +623,7 @@ Name     Status       Reason
 Top      Remapped     Design changed
 ====================================
 
-Process took 0h:00m:12s realtime, 0h:00m:12s cputime
-# Wed Aug 23 21:31:26 2023
+Process took 0h:00m:13s realtime, 0h:00m:13s cputime
+# Fri Aug 25 08:26:37 2023
 
 ###########################################################]

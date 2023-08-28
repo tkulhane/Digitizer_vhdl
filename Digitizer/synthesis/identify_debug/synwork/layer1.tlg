@@ -126,7 +126,7 @@ Finished optimization stage 1 on Communication_TX_Arbiter2 (CPU Time 0h:00m:00s,
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator.vhd":6:7:6:20|Synthesizing work.test_generator.rtl.
 Post processing for work.test_generator.rtl
 Running optimization stage 1 on Test_Generator .......
-Finished optimization stage 1 on Test_Generator (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+Finished optimization stage 1 on Test_Generator (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":6:7:6:18|Synthesizing work.fifos_reader.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":67:19:67:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "1000000".
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":372:12:372:25|OTHERS clause is not synthesized.
@@ -300,10 +300,10 @@ Post processing for work.synchronizer.arch
 Running optimization stage 1 on Synchronizer .......
 Finished optimization stage 1 on Synchronizer (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 112MB)
 Running optimization stage 2 on Synchronizer .......
-Finished optimization stage 2 on Synchronizer (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 112MB)
+Finished optimization stage 2 on Synchronizer (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 112MB)
 Running optimization stage 2 on work_spi_interface_rtl_7_16_1_addr_widthdata_width .......
 @W: CL246 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SPI_interface.vhd":29:8:29:13|Input port bits 23 to 16 of spi_rx(23 downto 0) are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on work_spi_interface_rtl_7_16_1_addr_widthdata_width (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 112MB)
+Finished optimization stage 2 on work_spi_interface_rtl_7_16_1_addr_widthdata_width (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 112MB)
 Running optimization stage 2 on work_spi_master_behavioural_24_5_1_data_lengthdivider .......
 @N: CL189 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd":49:4:49:5|Register bit last_bit(5) is always 1.
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd":49:4:49:5|Optimizing register bit fsm_timer(3) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -343,7 +343,7 @@ State machine has 3 reachable states with original encodings of:
    01
    10
 @W: CL279 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd":49:4:49:5|Pruning register bits 3 to 1 of last_bit(4 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 2 on work_spi_master_behavioural_24_5_1_data_lengthdivider (CPU Time 0h:00m:00s, Memory Used current: 107MB peak: 112MB)
+Finished optimization stage 2 on work_spi_master_behavioural_24_5_1_data_lengthdivider (CPU Time 0h:00m:00s, Memory Used current: 108MB peak: 112MB)
 Running optimization stage 2 on ADI_SPI .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":59:8:59:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -430,7 +430,7 @@ State machine has 6 reachable states with original encodings of:
    001000
    010000
    100000
-Finished optimization stage 2 on Reset_Controler (CPU Time 0h:00m:00s, Memory Used current: 109MB peak: 112MB)
+Finished optimization stage 2 on Reset_Controler (CPU Time 0h:00m:00s, Memory Used current: 110MB peak: 112MB)
 Running optimization stage 2 on work_trigger_unit_rtl_8_3_12_1_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length .......
 @N: CL135 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd":78:8:78:9|Found sequential shift Output_Sample_Part with address depth of 3 words and data bit width of 12.
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd":121:8:121:9|Optimizing register bit Output_sID_Part(2) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -645,10 +645,10 @@ State machine has 12 reachable states with original encodings of:
    001000000000
    010000000000
    100000000000
-Finished optimization stage 2 on ft601_fifo_interface (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 125MB)
+Finished optimization stage 2 on ft601_fifo_interface (CPU Time 0h:00m:00s, Memory Used current: 115MB peak: 125MB)
 Running optimization stage 2 on ftdi_to_fifo_interface .......
 @W: CL246 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ftdi_to_fifo_interface.vhd":13:8:13:14|Input port bits 39 to 32 of fifo_af(39 downto 0) are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on ftdi_to_fifo_interface (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 125MB)
+Finished optimization stage 2 on ftdi_to_fifo_interface (CPU Time 0h:00m:00s, Memory Used current: 115MB peak: 125MB)
 Running optimization stage 2 on Communication_Switch .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Switch.vhd":91:8:91:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -661,7 +661,7 @@ State machine has 6 reachable states with original encodings of:
    100000
 @W: CL279 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Switch.vhd":194:8:194:9|Pruning register bits 9 to 7 of read_data_frame(9 downto 6). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL246 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Switch.vhd":16:8:16:23|Input port bits 15 to 3 of write_data_frame(15 downto 0) are unused. Assign logic for all port bits or change the input port size.
-Finished optimization stage 2 on Communication_Switch (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 125MB)
+Finished optimization stage 2 on Communication_Switch (CPU Time 0h:00m:00s, Memory Used current: 115MB peak: 125MB)
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================

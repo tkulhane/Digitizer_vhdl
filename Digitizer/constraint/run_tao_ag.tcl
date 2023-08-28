@@ -178,6 +178,7 @@ read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\w
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C1\I_XCVR\PF_XCVR_ERM_C1_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C2\I_XCVR\PF_XCVR_ERM_C2_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C3\I_XCVR\PF_XCVR_ERM_C3_I_XCVR_PF_XCVR.sdc}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C4\I_XCVR\PF_XCVR_ERM_C4_I_XCVR_PF_XCVR.sdc}
 derive_constraints
 write_sdc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.sdc}
 write_ndc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.ndc}
