@@ -174,11 +174,15 @@ read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\w
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_Ctest\COREFIFO_Ctest_0\COREFIFO_Ctest_COREFIFO_Ctest_0_COREFIFO.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C1\PF_CCC_C1_0\PF_CCC_C1_PF_CCC_C1_0_PF_CCC.sdc}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C2\PF_CCC_C2_0\PF_CCC_C2_PF_CCC_C2_0_PF_CCC.sdc}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C0\PF_CLK_DIV_C0_0\PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.sdc}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_TX_PLL_C0\PF_TX_PLL_C0_0\PF_TX_PLL_C0_PF_TX_PLL_C0_0_PF_TX_PLL.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C0\I_XCVR\PF_XCVR_ERM_C0_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C1\I_XCVR\PF_XCVR_ERM_C1_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C2\I_XCVR\PF_XCVR_ERM_C2_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C3\I_XCVR\PF_XCVR_ERM_C3_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C4\I_XCVR\PF_XCVR_ERM_C4_I_XCVR_PF_XCVR.sdc}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C5\I_XCVR\PF_XCVR_ERM_C5_I_XCVR_PF_XCVR.sdc}
 derive_constraints
 write_sdc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.sdc}
 write_ndc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.ndc}

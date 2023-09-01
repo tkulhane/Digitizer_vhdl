@@ -7,25 +7,23 @@ module PF_TX_PLL_C0_PF_TX_PLL_C0_0_PF_TX_PLL(
        PLL_LOCK,
        LOCK,
        BIT_CLK,
-       CLK_125,
        REF_CLK_TO_LANE
     );
 input  REF_CLK;
 output PLL_LOCK;
 output LOCK;
 output BIT_CLK;
-output CLK_125;
 output REF_CLK_TO_LANE;
 
     wire gnd_net, vcc_net;
     
     VCC vcc_inst (.Y(vcc_net));
-    TX_PLL #( .DATA_RATE(5000.0), .CTRL_FOUTAUXDIV2_SEL(1'b1), .SERDES_SSMOD_SSMOD_DISABLE_SSCG(1'b1)
+    TX_PLL #( .DATA_RATE(10000.0), .CTRL_FOUTAUXDIV2_SEL(1'b1), .SERDES_SSMOD_SSMOD_DISABLE_SSCG(1'b1)
         , .CTRL_BWSEL(1'b0), .CTRL_VBGREF_SEL(1'b0), .CTRL_FBDIV_SEL(2'b0)
         , .CTRL_DSMPD(1'b1), .CLK_SEL_REFCLK_SEL_HM(2'b11), .CLK_SEL_REFCLK_SEL_SM(3'b001)
-        , .DIV_1_AUXDIV(12'b000000001010), .DIV_1_FBDIV(12'b000000100000)
+        , .DIV_1_AUXDIV(12'b000000010100), .DIV_1_FBDIV(12'b000001000000)
         , .DIV_2_FRAC(24'b000000000000000000000000), .DIV_2_REFDIV(6'b000010)
-         )  txpll_isnt_0 (.FAB_LOCK(PLL_LOCK), .DIV_CLK(CLK_125), 
+         )  txpll_isnt_0 (.FAB_LOCK(PLL_LOCK), .DIV_CLK(), 
         .FAB_REF_CLK(gnd_net), .REF_CLK_P(REF_CLK), .REF_CLK_N(gnd_net)
         , .BIT_CLK(BIT_CLK), .JA_REF_CLK(gnd_net), .LOCK(LOCK), 
         .REF_CLK_TO_LANE(REF_CLK_TO_LANE), .DRI_CLK(gnd_net), 

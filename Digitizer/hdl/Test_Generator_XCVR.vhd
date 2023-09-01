@@ -120,6 +120,11 @@ begin
                 TX_Byte_6 <= X"BC";
                 TX_Byte_7 <= X"BC";
 
+            when SEND_ILAS =>
+
+
+
+
             when SEND_D =>
                 Test_Enable <= '1';
                 TX_K_Char <= X"00"; 
@@ -190,6 +195,49 @@ begin
 
         end if;  
 
-    end process;   
+    end process;
+    
+
+
+
+    
+    
+    ILAS_GENERATOR: process(Clock,Reset_N)
+
+    begin
+
+        if(Reset_N = '0') then
+
+            --Enable_Waiting_Counter <= '0';
+
+            Test_Data_Reset : for i in 0 to (Num_Of_Outputs - 1) loop          
+                Test_Data(i) <= to_unsigned(i, g_Data_Length);
+            end loop Test_Data_Reset;
+
+        elsif(Clock'event and Clock = '1') then
+
+            if(Test_Enable = '1') then
+
+                            
+                Test_Data_Count : for i in 0 to (Num_Of_Outputs - 1) loop
+                    Test_Data(i) <= Test_Data(i) + Num_Of_Outputs;
+                end loop Test_Data_Count;
+    
+            else 
+            
+                Test_Data_Reset_E : for i in 0 to (Num_Of_Outputs - 1) loop          
+                    Test_Data(i) <= to_unsigned(i, g_Data_Length);
+                end loop Test_Data_Reset_E;
+
+            end if;
+
+            --if((Test_Data(0) + Num_Of_Outputs >= 230 ) and Not_Waiting = '0') then
+            --    Enable_Waiting_Counter <= '1';
+
+            --end if;
+
+        end if;  
+
+    end process;
 
 end rtl;

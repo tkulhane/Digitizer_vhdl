@@ -52,8 +52,8 @@ vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Test_Generator_XCVR.vhd
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/Transceiver/Transceiver.v"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/cmd_table.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/cmd_table_trigger.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/TB_Transceiver.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/TB_Transceiver_4.vhd"
 
-vsim -L PolarFire -L presynth -L CORESPI_LIB  -t 1ps -pli C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll -gSIM_PA5M300T=0 presynth.TB_Transceiver
-add wave /TB_Transceiver/*
+vsim -L PolarFire -L presynth -L CORESPI_LIB  -t 1ps -pli C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll -gSIM_PA5M300T=0 presynth.TB_Transceiver_4
+add wave /TB_Transceiver_4/*
 run 1000ns

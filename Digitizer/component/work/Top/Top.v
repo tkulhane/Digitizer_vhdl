@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Aug 25 08:24:23 2023
+// Created by SmartDesign Fri Sep  1 12:47:37 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -746,8 +746,8 @@ USB_3_Protocol USB_3_Protocol_0(
         .DBG_FIFO_RD          ( DBGport_3_2 ),
         .DBG_EMPTY            ( DBGport_2_4 ),
         .MD_Fifo_RE           ( DBGport_3_net_0 ),
-        .RX_FIFO_Data         ( USB_3_Protocol_0_RX_FIFO_Data ),
         .DBG_FIFO_AFULL       ( DBGport_0_3 ),
+        .RX_FIFO_Data         ( USB_3_Protocol_0_RX_FIFO_Data ),
         // Inouts
         .FTDI_DATA            ( FTDI_DATA ),
         .FTDI_BE              ( FTDI_BE ) 

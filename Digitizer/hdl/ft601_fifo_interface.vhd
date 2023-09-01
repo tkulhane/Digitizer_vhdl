@@ -180,11 +180,12 @@ begin
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
 						FTDI_BE 	<= (others => 'Z');
 						
-						if(FTDI_nTXE = '0')then
+						--xxx
+						--if(FTDI_nTXE = '0')then
 							data_val_buf	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
-						else
-							data_val_buf	<= '1';
-						end if;
+						--else
+						--	data_val_buf	<= '1';
+						--end if;
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --necist
@@ -227,11 +228,12 @@ begin
 						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
 						FTDI_BE 	<= (others => 'Z');
 						
-						if(FTDI_nTXE = '0')then
+						--xxx
+						--if(FTDI_nTXE = '0')then
 							data_val_buf_b	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
-						else
-							data_val_buf_b	<= '1';
-						end if;
+						--else
+						--	data_val_buf_b	<= '1';
+						--end if;
 						
 						CH_FA_WREN	<= '0'; --neukladat
 						CH_AF_RDEN	<= '0'; --necist

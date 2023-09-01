@@ -13,7 +13,7 @@ Hostname: DESKTOP-TDPVUTD
 
 Implementation : identify_debug
 
-# Written on Fri Aug 25 08:26:21 2023
+# Written on Fri Sep  1 13:16:38 2023
 
 ##### DESIGN INFO #######################################################
 
@@ -237,9 +237,9 @@ p:atrstb
 Inapplicable constraints
 ************************
 
-create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 -multiply_by 5 -divide_by 4 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0 }]
+create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 -multiply_by 25 -divide_by 32 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0 }]
 	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":10:0:10:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
-create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 -multiply_by 15 -divide_by 436 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1 }]
+create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 -multiply_by 125 -divide_by 3616 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1 }]
 	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":11:0:11:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 
 Applicable constraints with issues

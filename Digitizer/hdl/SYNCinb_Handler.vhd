@@ -11,6 +11,9 @@ entity SYNCinb_Handler is
 
         Lane_Rx_K   : in std_logic_vector(7 downto 0);
         Lane_Rx_Data : in std_logic_vector(63 downto 0);
+
+        LANE_RX_READY_CDR : in std_logic;
+        LANE_RX_VAL_CDR : in std_logic;
         
         Sync_Req : in std_logic;
 
@@ -90,7 +93,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, All_Rx_K, Comparator_Data_K, Sync_Req, fsm_timer)
+    process(next_state, state_reg, fsm_timer, All_Rx_K, Comparator_Data_K, Sync_Req, LANE_RX_READY_CDR, LANE_RX_VAL_CDR)
     begin
 
         next_state <= state_reg;
@@ -98,12 +101,12 @@ begin
         case state_reg is
         
             when WAIT_FOR_SYNC =>
-                if(All_Rx_K = '1' and Comparator_Data_K = '1') then
+                if(All_Rx_K = '1' and Comparator_Data_K = '1' and LANE_RX_READY_CDR = '1' and LANE_RX_VAL_CDR = '1') then
                     next_state <= WAIT_FOR_xK;        
                 end if;
                 
             when WAIT_FOR_xK =>
-                if(All_Rx_K = '0' or Comparator_Data_K = '0') then
+                if(All_Rx_K = '0' or Comparator_Data_K = '0' or LANE_RX_READY_CDR = '0' or LANE_RX_VAL_CDR = '0') then
                     next_state <= WAIT_FOR_SYNC;
                 elsif(fsm_timer >= 100 -1) then
                     next_state <= IN_SYNC;         
