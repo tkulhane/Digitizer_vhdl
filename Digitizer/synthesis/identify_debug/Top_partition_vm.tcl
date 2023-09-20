@@ -1,5 +1,0 @@
-set_partition_info -name "/Top" -timestamp "1693566998"
-set_partition_info -name "/Top/UART_Protocol_1" -timestamp "1692797285"
-set_partition_info -name "/Top/UART_Protocol_0" -timestamp "1692797285"
-set_partition_info -name "/Top/Data_Block_0" -timestamp "1692797285"
-set_partition_info -name "/Top/Controler_0" -timestamp "1692797285"

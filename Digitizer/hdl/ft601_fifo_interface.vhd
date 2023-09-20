@@ -2,488 +2,298 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+--my new interface
+
 
 entity ft601_fifo_interface is
 	port 
 	(
 	-- System Signals
-		nRESET			:in	std_logic;
+		Reset_N			:in	std_logic;
 	-- FTDI-FPGA interface
-		FTDI_CLK		:in	std_logic;		-- 100MHz v Synchronim rezimu
-		FTDI_nRXF		:in	std_logic;		-- '0'-data ve FIFO (pro vycteni z FTDI)
-		FTDI_DATA		:inout	std_logic_vector(31 downto 0);
-		FTDI_nOE		:out	std_logic;		-- polarita datove brany '1'-write, '0'-read
-		FTDI_nRD		:out	std_logic;		-- '0'-synchroni vycteni 1Byte z FIFO
-		FTDI_nTXE		:in	std_logic;		-- '0'-vystupni FIFO nezaplneno (pro zapis do FTDI)
-		FTDI_nWR		:out	std_logic;		-- '0'-synchroni zapsani 1Byte do FIFO
-		FTDI_BE			:inout	std_logic_vector(3 downto 0);
+		FTDI_CLK	: in	std_logic;		-- 100MHz v Synchronim rezimu
+		FTDI_nRXF	: in	std_logic;		-- '0' v FTDI jsou data pro vycteni
+		FTDI_nTXE	: in	std_logic;		-- '0' v FTDI je misto pro data k odeslani
+		FTDI_nRD	: out	std_logic;		-- '0'-synchroni vycteni 1 slova z FTDI
+		FTDI_nWR	: out	std_logic;		-- '0'-synchroni zapsani 1 slova do FTDI
+		FTDI_nOE	: out	std_logic;		-- polarita datove brany '1'-write, '0'-read
+		FTDI_DATA	: inout	std_logic_vector(31 downto 0); -- data
+		FTDI_BE		: inout	std_logic_vector(3 downto 0); -- byte enable
 	-- inter FPGA signals
-		-- read signals (FTDI -> rest of Architecture)
-		CH_FA_DATA		:out	std_logic_vector(31 downto 0);
-		CH_FA_ALMOST_FULL	:in	std_logic;
-		CH_FA_WREN		:out	std_logic;
-		-- write signals (rest of Architecture -> FTDI)
-		CH_AF_DATA		:in	std_logic_vector(31 downto 0);
-		--CH_AF_ALMOST_EMPTY	:in	std_logic;		
-		CH_AF_EMPTY		:in	std_logic;
-		CH_AF_RDEN		:out	std_logic
+		-- read signals (FTDI -> Architecture)
+		CH_FA_DATA			: out	std_logic_vector(31 downto 0);
+		CH_FA_ALMOST_FULL	: in	std_logic;
+		CH_FA_WREN			: out	std_logic;
+		-- write signals (Architecture -> FTDI)
+		CH_AF_DATA		: in	std_logic_vector(31 downto 0);	
+		CH_AF_EMPTY		: in	std_logic;
+		CH_AF_RDEN		: out	std_logic
 	);	
-end ft601_fifo_interface;
+	end ft601_fifo_interface;
 
 architecture rtl_ft601_fifo_interface OF ft601_fifo_interface is
 
-	type	states	is (wait_0, reception_a, reception_0, transmition_f_0, transmition_f_1, transmition_0, transmition_1, transmition_a, transmition_buf_0, transmition_buf_1, transmition_buf_b_0, transmition_buf_b_1);
-	signal	actual_state	:states;
-	signal	data_val_fifo	:std_logic;
-	signal	data_val_buf	:std_logic;
-	signal	data_val_buf_b	:std_logic;
-	
-	--"01" --na vystupu z fifa zustala platna data
-	--"10" --platna data
-	
-	signal	data_buf	:std_logic_vector(31 downto 0); --zachyceni neodeslane hodnoty
-	signal	data_buf_b	:std_logic_vector(31 downto 0); --zachyceni neodeslane hodnoty
-	
-	signal	first_byte	:std_logic;
-	
-	signal clk_int	:std_logic;
+    type FSM_state is (IDLE, RECEIVE_PREPARE, RECEIVE, TRANSMIT_PREPARE, TRANSMIT, TRANSMIT_ABORT, TRANSMIT_BUFFER, BUFFER_CLEAR );
+    signal state_reg, next_state : FSM_state;
+
+	--data buffer signals
+	signal AF_DATA_Buffer_SET : std_logic;
+	signal AF_DATA_Buffer_CLR : std_logic;
+	signal AF_DATA_Buffer_Valid : std_logic;
+	signal AF_DATA_Buffer : std_logic_vector(31 downto 0);
 
 	
 begin
-	clk_int	<= FTDI_CLK;
-	
-	process(clk_int,nRESET, data_val_fifo, data_val_buf, FTDI_nRXF, FTDI_nTXE, CH_FA_ALMOST_FULL, CH_AF_EMPTY, actual_state, FTDI_DATA)
-	begin
-		if(nRESET = '0')then
-			data_val_fifo	<= '0';
-			data_val_buf	<= '0';
-			data_val_buf_b	<= '0';
-			
-			first_byte	<= '0';
-			
-			actual_state	<= wait_0;
-			
-			data_buf	<= (others => '0');
-			data_buf_b	<= (others => '0');
-			--signaly FTDI
-			--FTDI_nOE 	<= '0'; --prepnuti portu FTDI na vstupni
-			FTDI_nOE 	<= '1'; --XXX
 
-			FTDI_nRD	<= '1';
-			FTDI_nWR	<= '1';
-			FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-			FTDI_BE 	<= (others => 'Z');
-			--fifo do zakladniho stavu
-			CH_FA_DATA	<= (others => '0');
-			CH_FA_WREN	<= '0'; --nezapisovat
-			CH_AF_RDEN	<= '0'; --necist
-		elsif(clk_int = '1' and clk_int'event)then
-			case actual_state is
-				--cekam jeden takt na aktivovani
-				when reception_a =>
-						if(FTDI_nRXF = '0' and CH_FA_ALMOST_FULL = '0')then --stale je mozne prijimat data
-						FTDI_nOE 	<= '0'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '0';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0';
-						CH_AF_RDEN	<= '0'; --necist
-						CH_FA_DATA	<= FTDI_DATA;
-						
-						actual_state <= reception_0;
-					else --jiz neni kam davat data
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --nezapisovat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state <= wait_0;
-					end if;
-				
-				--prijem dat z FTDI
-				when reception_0 =>
-					if(FTDI_nRXF = '0' and CH_FA_ALMOST_FULL = '0')then --stale je mozne prijimat data
-						FTDI_nOE 	<= '0'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '0';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '1'; --ulozit
-						CH_AF_RDEN	<= '0'; --necist
-						CH_FA_DATA	<= FTDI_DATA;
-						
-						actual_state <= reception_0;
-					elsif(FTDI_nRXF = '1')then --jiz neni odkud data brat
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --nezapisovat --protoze jiz nejsou data platna
-						CH_AF_RDEN	<= '0'; --necist
-						CH_FA_DATA	<= FTDI_DATA;
-						
-						actual_state <= wait_0;
-					else --jiz neni kam davat data
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '1'; --zapsat posledni byte vycteny z ftdi
-						CH_AF_RDEN	<= '0'; --necist
-						CH_FA_DATA	<= FTDI_DATA;
-						actual_state <= wait_0;
-					end if;
-				--odeslani bytu ulozeneho v bufferu
-				when transmition_buf_0 =>
-					if(FTDI_nTXE = '0')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '0';
-						FTDI_DATA	<= data_buf; --zapsani zbyvajiciho bytu
-						FTDI_BE 	<= (others => '1');
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --vycist
-						
-						actual_state	<= transmition_buf_1;
-					else
-						--ftdi neni pripravene prijimat
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						data_val_buf	<= '1'; --posledni byte se nepodarilo opet odeslat
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state	<= wait_0;
-					end if;
-				--rozhodnuti, zda-li se podarilo dato odeslat
-				when transmition_buf_1 =>
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						--xxx
-						--if(FTDI_nTXE = '0')then
-							data_val_buf	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
-						--else
-						--	data_val_buf	<= '1';
-						--end if;
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state	<= wait_0;
-						
-				--odeslani bytu ulozeneho v bufferu
-				when transmition_buf_b_0 =>
-					if(FTDI_nTXE = '0')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '0';
-						FTDI_DATA	<= data_buf_b; --zapsani zbyvajiciho bytu
-						FTDI_BE 	<= (others => '1');
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --vycist
-						
-						actual_state	<= transmition_buf_b_1;
-					else
-						--ftdi neni pripravene prijimat
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						data_val_buf	<= '1'; --posledni byte se nepodarilo opet odeslat
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state	<= wait_0;
-					end if;
-				--rozhodnuti, zda-li se podarilo dato odeslat
-				when transmition_buf_b_1 =>
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						--xxx
-						--if(FTDI_nTXE = '0')then
-							data_val_buf_b	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
-						--else
-						--	data_val_buf_b	<= '1';
-						--end if;
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state	<= wait_0;
-						
-				
-				--odeslani jednoho zbyvajiciho bytu vycteneho z fifa
-				when transmition_f_0 =>
-					if(FTDI_nTXE = '0')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '0';
-						FTDI_DATA	<= CH_AF_DATA; --zapsani platneho bytu na vystupu z fifa
-						FTDI_BE 	<= (others => '1');
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --vycist
-						
-						actual_state	<= transmition_f_1;
-					else
-						--ftdi neni pripravene prijimat
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						data_val_fifo	<= '1'; --posledni byte se nepodarilo opet odeslat
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state	<= wait_0;
-					end if;
-				when transmition_f_1 =>
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						if(FTDI_nTXE = '0')then
-							data_val_fifo	<= '0'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
-						else
-							data_val_fifo	<= '1';
-						end if;
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state	<= wait_0;
-				--cekani pred zahajenim odesilani, nez zacnou z fifa vypadavat data
-				when transmition_a =>
-					FTDI_nOE 	<= '1';
-					FTDI_nRD	<= '1';
-					FTDI_DATA	<= CH_AF_DATA;
-					FTDI_BE 	<= (others => '1');
-											
-					CH_AF_RDEN	<= '1';
-					CH_FA_WREN	<= '0';
---					data_val	<= '0';
-					actual_state	<= transmition_0;
-					
-					first_byte	<= '1';	
-				
-				--odesilani dat z fifa
-				when transmition_0 =>
-					first_byte	<= '0';
-					
-					--vysilani pokud je k dispozici dostatek dat
-					if(FTDI_nTXE = '0' and CH_AF_EMPTY = '0')then--porad dost dat  dispozici;
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '0';
-						FTDI_DATA	<= CH_AF_DATA;
-						FTDI_BE 	<= (others => '1');
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '1'; --vycist
-						
-						actual_state <= transmition_0;
-					--jiz doslo na posledni byte
-					elsif(FTDI_nTXE = '0' and CH_AF_EMPTY = '1')then --odeslani posledniho bytu vypadleho z fifa
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '0';
-						FTDI_DATA	<= CH_AF_DATA;
-						FTDI_BE 	<= (others => '1');
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						actual_state	<= transmition_1;
-					
-					--ftdi jiz dale neprijima data, ale fifo jeste vyda dalsi dato na vystup
-					elsif(FTDI_nTXE = '1' and CH_AF_EMPTY = '0')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z');--CH_AF_DATA;
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --vycist
-						
-						data_val_fifo	<= '1';
-						data_val_buf_b	<= '1';
---						data_val_buf	<= '1';
-						if(first_byte = '1')then
-							data_val_buf	<= '0'; --kdyz se jeste nestihlo presunout data na ftdi branu, tak by doslo k odeslani falesnych dat
-						else
-							data_val_buf	<= '1';
-						end if;
-						
-						data_buf	<= FTDI_DATA;
-						data_buf_b	<= CH_AF_DATA;
-						
-						actual_state <= wait_0;
-					--ftdi jiz dale neprijima data, ale jedna se jiz o posledni byte vycteny z fifa
-					elsif(FTDI_nTXE = '1' and CH_AF_EMPTY = '1')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z');--CH_AF_DATA;
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --vycist
-						
-						--rozhodnuti jestli se ma ulozit byte na brane ftdi
-						if(first_byte = '1')then
-							data_val_buf <= '0';
-						else
-							data_val_buf <= '1';
-							data_buf	<= FTDI_DATA;
-						end if;
-						--ulozeni bytu vycteneho z fifa abych o nej neprisel
-						data_val_buf_b	<= '1';
-						data_buf_b	<= CH_AF_DATA;
-						--ve fifu nebudou spravna data 
-						data_val_fifo	<= '0';
-	
-						actual_state <= wait_0;
-					end if;
-					
-				--ukonceni procesu odesilani
-				when transmition_1 =>
-						FTDI_nOE 	<= '1'; --prepnuti portu FTDI na vystupni
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						if(FTDI_nTXE = '0')then
-							data_val_buf	<= '0'; 
-						else
-							data_val_buf	<= '1'; --abych neprisel o dato vyctene z fifa, ktere nebylo mozne odeslat
-							data_buf	<= FTDI_DATA;
-						end if;
-						
-						data_val_fifo	<= '0';
-							
-						
-						CH_FA_WREN	<= '0'; --neukladat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state	<= wait_0;
-				
-				when wait_0 =>
-					--prijem dat ma nejvyssi prioritu 
-					if(FTDI_nRXF = '0' and CH_FA_ALMOST_FULL = '0')then -- pokud je kam prijimat, zacnu prijimat data
-						FTDI_nOE 	<= '0';
-						FTDI_nRD	<= '1';--'0';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0';--neukladat '1'; --ulozit
-						CH_AF_RDEN	<= '0'; --necist
-						CH_FA_DATA	<= FTDI_DATA;
-						
-						actual_state <= reception_a;
-					elsif(FTDI_nTXE = '0' and data_val_buf = '1')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --nezapisovat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state <= transmition_buf_0;
-					elsif(FTDI_nTXE = '0' and data_val_buf_b = '1')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --nezapisovat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state <= transmition_buf_b_0;
-						
-					elsif(FTDI_nTXE = '0' and data_val_fifo = '1')then --na sbernici zbyl byte dat, ktery zbyl vlivem preruseni odesilani
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --nezapisovat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						actual_state <= transmition_f_0;
-					--odesilani dat vyctenych z fifa
-					elsif(FTDI_nTXE = '0' and CH_AF_EMPTY = '0')then
-						FTDI_nOE 	<= '1';
-						FTDI_nRD	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						FTDI_nWR	<= '1';
-									
-						actual_state	<= transmition_a;
-						
-						CH_FA_WREN	<= '0'; --nezapisovat
-						CH_AF_RDEN	<= '1'; --vycist
-						
-					--pokud zustava v klidovem stavu
-					else
-						--FTDI_nOE 	<= '0';
-						FTDI_nOE 	<= '1'; --XXX
 
-						FTDI_nRD	<= '1';
-						FTDI_nWR	<= '1';
-						FTDI_DATA	<= (others => 'Z'); --kdyz se cte, brana uvedena v hiZ stavu
-						FTDI_BE 	<= (others => 'Z');
-						
-						CH_FA_WREN	<= '0'; --nezapisovat
-						CH_AF_RDEN	<= '0'; --necist
-						
-						CH_FA_DATA	<= (others => '1');
-						actual_state <= wait_0;
-					end if;
-					
-				when others => 
-					actual_state <= wait_0;
-			end case;
-		end if;
-	end process;
+------------------------------------------------------------------------------------------------------------
+--FSM ride
+------------------------------------------------------------------------------------------------------------
+    --state memory and reset
+    process(Reset_N,FTDI_CLK)
+    begin
+
+        if(Reset_N = '0') then
+            state_reg <= IDLE;
+        
+        elsif(FTDI_CLK'event and FTDI_CLK = '1') then
+            state_reg <= next_state;
+
+        end if;
+    end process;
+
+    --translation function
+    process(next_state, state_reg, FTDI_nRXF, FTDI_nTXE, CH_FA_ALMOST_FULL, CH_AF_EMPTY, AF_DATA_Buffer_Valid)
+    begin
+
+        next_state <= state_reg;
+
+        case state_reg is
+        
+            when IDLE =>
+                if(FTDI_nRXF = '0' and CH_FA_ALMOST_FULL = '0') then	--prijem dat
+                    next_state <= RECEIVE_PREPARE;
+				elsif(FTDI_nTXE = '0' and AF_DATA_Buffer_Valid = '1') then --odeslani bufferu
+					next_state <= TRANSMIT_BUFFER;
+				elsif(FTDI_nTXE = '0' and CH_AF_EMPTY = '0') then 	--odesilani dat z fifo
+					next_state <= TRANSMIT_PREPARE;
+                end if;
+
+			when RECEIVE_PREPARE =>
+				next_state <= RECEIVE; 			
+
+			when RECEIVE =>
+				if(FTDI_nRXF = '1' or CH_FA_ALMOST_FULL = '1') then
+					next_state <= IDLE;
+				end if;
+
+			when TRANSMIT_PREPARE =>
+				next_state <= TRANSMIT;
+
+			when TRANSMIT =>
+				if(FTDI_nTXE = '1') then 
+					next_state <= TRANSMIT_ABORT;
+				elsif(CH_AF_EMPTY = '1') then
+					next_state <= IDLE;
+				end if;
+
+			when TRANSMIT_ABORT =>
+				next_state <= IDLE;
+
+			when TRANSMIT_BUFFER =>
+				next_state <= BUFFER_CLEAR;
+
+			when BUFFER_CLEAR =>
+				next_state <= IDLE;
+
+            when others =>
+                null; 
+
+        end case;
+    end process;
+
+    --output function
+    process(state_reg, CH_AF_DATA, AF_DATA_Buffer, FTDI_DATA, FTDI_nTXE)
+    begin
+
+        case state_reg is
+        
+            when IDLE =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= '1';
+				FTDI_nOE	<= '1';
+				FTDI_DATA	<= (others => 'Z');
+				FTDI_BE		<= (others => 'Z');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= (others => '0');
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '0';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '0';
+
+			when RECEIVE_PREPARE =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= '1';
+				FTDI_nOE	<= '0'; --datova brana na cteni z ftdi - vystup aktivovan
+				FTDI_DATA	<= (others => 'Z');
+				FTDI_BE		<= (others => 'Z');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= FTDI_DATA; --data z ftdi smerovana do fifo
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '0';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '0';
+			
+			when RECEIVE =>
+				--ftdi signals
+				FTDI_nRD	<= '0'; -- aktivace cteni z ftdi
+				FTDI_nWR	<= '1';
+				FTDI_nOE	<= '0';
+				FTDI_DATA	<= (others => 'Z');
+				FTDI_BE		<= (others => 'Z');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= FTDI_DATA; --data z ftdi smerovana do fifo
+				CH_FA_WREN	<= '1'; --zapisuji do fifo
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '0';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '0';
+			
+			when TRANSMIT_PREPARE =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= '1';
+				FTDI_nOE	<= '1'; --brana zustava vypnuta
+				FTDI_DATA	<= CH_AF_DATA; --na ftdi jsou smerovana data z fifo
+				FTDI_BE		<= (others => '1');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= (others => '0');
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '1'; --aktivace cteni z fifo - data jsou platna dalsi takt
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '0';
+
+			when TRANSMIT =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= FTDI_nTXE;--'0'; --aktivace zapisu do ftdi
+				FTDI_nOE	<= '1';
+				FTDI_DATA	<= CH_AF_DATA; --na ftdi jsou smerovana data z fifo
+				FTDI_BE		<= (others => '1');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= (others => '0');
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= not FTDI_nTXE;--'1';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '0';
+
+			when TRANSMIT_ABORT =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= '1';
+				FTDI_nOE	<= '1';
+				FTDI_DATA	<= (others => 'Z');
+				FTDI_BE		<= (others => 'Z');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= (others => '0');
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '0';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '1';
+				AF_DATA_Buffer_CLR <= '0';
+
+			when TRANSMIT_BUFFER =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= '0';
+				FTDI_nOE	<= '1';
+				FTDI_DATA	<= AF_DATA_Buffer; --odeslani bufferu
+				FTDI_BE		<= (others => '1');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= (others => '0');
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '0';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '0';
+
+			when BUFFER_CLEAR =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= '1';
+				FTDI_nOE	<= '1';
+				FTDI_DATA	<= AF_DATA_Buffer;
+				FTDI_BE		<= (others => '1');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= (others => '0');
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '0';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '1';
+
+   
+            when others =>
+				--ftdi signals
+				FTDI_nRD	<= '1';
+				FTDI_nWR	<= '1';
+				FTDI_nOE	<= '1';
+				FTDI_DATA	<= (others => 'Z');
+				FTDI_BE		<= (others => 'Z');
+				--fifo signals - from ftdi to arch
+				CH_FA_DATA 	<= (others => '0');
+				CH_FA_WREN	<= '0';
+				--fifo signal  - from arch to ftdi
+				CH_AF_RDEN	<= '0';
+				--data buffer - from arch to ftdi
+				AF_DATA_Buffer_SET <= '0';
+				AF_DATA_Buffer_CLR <= '0';
+
+        end case;
+
+    end process;
+
+
+------------------------------------------------------------------------------------------------------------
+--buffer for fifo data from arch to ftdi
+------------------------------------------------------------------------------------------------------------
+	process(Reset_N,FTDI_CLK)
+    begin
+
+        if(Reset_N = '0') then
+			AF_DATA_Buffer_Valid <= '0';
+			AF_DATA_Buffer <= (others => '0');
+            
+        
+        elsif(FTDI_CLK'event and FTDI_CLK = '1') then
+            
+			if(AF_DATA_Buffer_CLR = '1') then
+				AF_DATA_Buffer_Valid <= '0';
+				AF_DATA_Buffer <= (others => '0');
+
+			elsif(AF_DATA_Buffer_SET = '1') then
+				AF_DATA_Buffer_Valid <= '1';
+				AF_DATA_Buffer <= CH_AF_DATA;
+
+			end if;
+
+        end if;
+    end process;
+
+	
 end architecture;
 

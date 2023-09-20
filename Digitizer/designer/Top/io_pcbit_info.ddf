@@ -1,5 +1,5 @@
 ;--------------------------------------------------------------------------------
-; Date:    Fri Sep  1 13:23:47 2023
+; Date:    Wed Sep 20 08:01:25 2023
 ; version: 2022.1 2022.1.0.10
 ; Design:  Top
 ; Family:  PolarFire
@@ -31,13 +31,13 @@ Module  ICBMUXINGPC_SW_0                      584  1        714  1    ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'h5800000100"         U. 
+        CLKSTOP_SOURCE_SEL                    "60'hC"                  U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFFFFFFFFF4FFFE1" U. 
+        NMUX_SEL                              "72'hFFFFFFFFFFE1FFFFFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
-        STOP_SEL                              "24'hFF3FF3"             U. 
+        STOP_SEL                              "24'hFFFFFC"             U. 
 End_Module.
 
 Module  PLL_SW_0                              0    5        15   13   PLL             .
@@ -143,13 +143,13 @@ Module  ICBMUXINGPC_W_0                       8    163      9    626  ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'h3012"               U. 
+        CLKSTOP_SOURCE_SEL                    "60'h18000140"           U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFFF07FFC0FFFFFF" U. 
+        NMUX_SEL                              "72'hFFFFFFFFFFC1FC0FFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
-        STOP_SEL                              "24'hFFFFCC"             U. 
+        STOP_SEL                              "24'hFFF3F3"             U. 
 End_Module.
 
 ; -------------------------------------

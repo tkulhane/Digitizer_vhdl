@@ -22,7 +22,7 @@
 Starting:    C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin64\mbin\synplify.exe
 Install:     C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
 Hostname:    DESKTOP-TDPVUTD
-Date:        Wed Aug 23 15:25:14 2023
+Date:        Wed Aug 23 16:01:23 2023
 Version:     S-2021.09M
 
 Arguments:   -product synplify_pro Top_syn.tcl
@@ -38,5 +38,305 @@ License Option: actel_oem
 auto_infer_blackbox is not supported in current product.
 auto_infer_blackbox is not supported in current product.
 TCL script complete: "Top_syn.tcl"
-exit status=0
+Note: Opening integrated instrumentor
+@N: Check out instrumentor license 'identinstrumentor_actel'
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srr to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\backup\Top.srr
+Running: identify_ui_flow in background
+
+Running Flow: identify_ui_flow
+# Wed Aug 23 16:02:11 2023
+
+Running: identify_db_generator (Identify Database Generator)
+# Wed Aug 23 16:02:11 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synlog\Top_identify_db_generator.srr to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\identify.srr
+
+identify_db_generator completed
+# Wed Aug 23 16:02:25 2023
+
+Return Code: 0
+Run Time:00h:00m:14s
+Instrumentor%
+*** Integrated Instrumentor ***
+Added instrumentation 'synthesis' to the project
+Added instrumentation 'identify_debug' to the project
+. has been added to search path.
+Loading instrumentation 'identify_debug'
+Source IDC file C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/synthesis/identify_debug/identify.idc
+Setting IICE sampler (data compression) to 1 for IICE named 'FTDI'
+Setting IICE sampler (sampledepth) to 512 for IICE named 'FTDI'
+Setting IICE sample clock to '/USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_clk' for IICE named 'FTDI'
+Setting IICE sampler (data compression) to 1 for IICE named 'IICE'
+Setting IICE sampler (sampledepth) to 512 for IICE named 'IICE'
+Setting IICE sample clock to '/USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_clk' for IICE named 'IICE'
+Complete: identify_ui_flow
+Loaded XDM (Hierarchy) data base - elapsed time 0:0 Blocks=161
+@N Implementation 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_syn.prj|synthesis' design hierarchy loaded from database
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/nreset for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 45
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 45
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_nrxf for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 46
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 46
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_noe for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 47
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 47
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_nrd for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 48
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 48
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_ntxe for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 49
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 49
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_nwr for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 50
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 50
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_be for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 54
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 54
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ch_fa_data for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 86
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 86
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ch_fa_almost_full for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 87
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 87
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ch_fa_wren for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 88
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 88
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ch_af_data for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 120
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 120
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ch_af_empty for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 121
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 121
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/ch_af_rden for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 0, Trigger Only 0, Sample and trigger 122
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 0, Sample and trigger 122
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 12, Trigger Only 0, Sample and trigger 110
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 12, Sample and trigger 110
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/rtl_ft601_fifo_interface/data_val_fifo for sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 13, Trigger Only 0, Sample and trigger 110
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 13, Sample and trigger 110
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/rtl_ft601_fifo_interface/data_val_buf for trigger in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 13, Trigger Only 1, Sample and trigger 110
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 13, Sample and trigger 110
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 13, Trigger Only 0, Sample and trigger 110
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 13, Sample and trigger 110
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 12, Trigger Only 0, Sample and trigger 110
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 12, Sample and trigger 110
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/rtl_ft601_fifo_interface/data_buf for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 12, Trigger Only 0, Sample and trigger 142
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 12, Sample and trigger 142
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrument Signal /USB_3_Protocol_0/ft601_fifo_interface_0/rtl_ft601_fifo_interface/data_buf_b for trigger and sample in IICE
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 12, Trigger Only 0, Sample and trigger 174
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 12, Sample and trigger 174
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrumenting design `Top' in directory C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug
+Current instrumentation information: 	IICE=FTDI 
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 32, Trigger Only 0, Sample and trigger 12
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 32, Sample and trigger 12
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+	IICE=IICE 
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 12, Trigger Only 0, Sample and trigger 174
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 12, Sample and trigger 174
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+Instrumenting design `Top' in directory C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug
+Current instrumentation information: 	IICE=FTDI 
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 32, Trigger Only 0, Sample and trigger 12
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 32, Sample and trigger 12
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+	IICE=IICE 
+		FPGA=regular 
+		Total instrumentation in bits: Sample Only 12, Trigger Only 0, Sample and trigger 174
+		Group wise instrumentation in bits: 
+					Group NM:Sample Only 12, Sample and trigger 174
+		Maximum sample clock frequency is same as maximum user clock frequency (as reported by P&R)
+License checkin: identinstrumentor_actel
+@N: Check in instrumentor license 'identinstrumentor_actel'
+Unloading current instrumentation 'identify_debug'
+Note: Opening integrated instrumentor
+@N: Check out instrumentor license 'identinstrumentor_actel'
+Running: identify_ui_flow in background
+
+Running Flow: identify_ui_flow
+# Wed Aug 23 16:04:42 2023
+
+Running: identify_db_generator (Identify Database Generator)
+# Wed Aug 23 16:04:42 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synlog\Top_identify_db_generator.srr to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\identify.srr
+
+identify_db_generator completed
+# Wed Aug 23 16:04:43 2023
+
+Return Code: 0
+Run Time:00h:00m:01s
+Instrumentor%
+*** Integrated Instrumentor ***
+Added instrumentation 'synthesis' to the project
+Added instrumentation 'identify_debug' to the project
+Loading instrumentation 'identify_debug'
+Source IDC file C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/synthesis/identify_debug/identify.idc
+Setting IICE sampler (data compression) to 1 for IICE named 'FTDI'
+Setting IICE sampler (sampledepth) to 512 for IICE named 'FTDI'
+Setting IICE sample clock to '/USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_clk' for IICE named 'FTDI'
+Setting IICE sampler (data compression) to 1 for IICE named 'IICE'
+Setting IICE sampler (sampledepth) to 512 for IICE named 'IICE'
+Setting IICE sample clock to '/USB_3_Protocol_0/ft601_fifo_interface_0/ftdi_clk' for IICE named 'IICE'
+Complete: identify_ui_flow
+License checkin: identinstrumentor_actel
+@N: Check in instrumentor license 'identinstrumentor_actel'
+Unloading current instrumentation 'identify_debug'
+log file: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srr"
+Running: identify_debug in foreground
+
+Running Top_syn|identify_debug
+
+Running Flow: compile (Compile) on Top_syn|identify_debug
+# Wed Aug 23 16:05:15 2023
+
+Running Flow: compile_flow (Compile Process) on Top_syn|identify_debug
+# Wed Aug 23 16:05:15 2023
+
+Running: identify_db_generator (Identify Database Generator) on Top_syn|identify_debug
+# Wed Aug 23 16:05:15 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synlog\Top_identify_db_generator.srr to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\identify.srr
+
+identify_db_generator completed
+# Wed Aug 23 16:05:15 2023
+
+Return Code: 0
+Run Time:00h:00m:00s
+
+Running: identify_compile (Identify Compile) on Top_syn|identify_debug
+# Wed Aug 23 16:05:15 2023
+
+identify_compile completed
+# Wed Aug 23 16:05:17 2023
+
+Return Code: 0
+Run Time:00h:00m:02s
+
+Running: compiler (Compile Input) on Top_syn|identify_debug
+# Wed Aug 23 16:05:17 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_comp.srs to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srs
+
+compiler completed
+# Wed Aug 23 16:06:00 2023
+
+Return Code: 0
+Run Time:00h:00m:43s
+
+Running: multi_srs_gen (Multi-srs Generator) on Top_syn|identify_debug
+# Wed Aug 23 16:06:01 2023
+Warning: The design file c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\synthesis\identify_debug\top.srs has been modified.
+As a result the open design d:0 is out of date.
+Continued use can yield inconsistent results.
+
+
+multi_srs_gen completed
+# Wed Aug 23 16:06:28 2023
+
+Return Code: 0
+Run Time:00h:00m:27s
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_mult.srs to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srs
+Complete: Compile Process on Top_syn|identify_debug
+Running FSM Explorer...
+
+fsm_explorer_job completed
+# Wed Aug 23 16:07:03 2023
+
+Return Code: 0
+Run Time:00h:00m:35s
+using FSM Exploration result file: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top_fsm.sdc"
+
+Running: premap (Premap) on Top_syn|identify_debug
+# Wed Aug 23 16:07:03 2023
+
+premap completed with warnings
+# Wed Aug 23 16:07:25 2023
+
+Return Code: 1
+Run Time:00h:00m:22s
+Complete: Compile on Top_syn|identify_debug
+
+Running Flow: map (Map) on Top_syn|identify_debug
+# Wed Aug 23 16:07:25 2023
+License granted for 4 parallel jobs
+using FSM Exploration result file: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top_fsm.sdc"
+
+Running: fpga_mapper (Map & Optimize) on Top_syn|identify_debug
+# Wed Aug 23 16:07:25 2023
+Copied C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\synwork\Top_m.srm to C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.srm
+
+fpga_mapper completed with warnings
+# Wed Aug 23 16:07:53 2023
+
+Return Code: 1
+Run Time:00h:00m:28s
+Complete: Map on Top_syn|identify_debug
+Complete: Logic Synthesis on Top_syn|identify_debug
+0exit status=0
 License checkin: synplifypro_actel

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Aug 22 10:03:22 2023
+// Created by SmartDesign Wed Sep 20 00:49:39 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -125,8 +125,8 @@ wire          DBG_FIFO_WR_0_net_0;
 wire          DBG_FIFO_RD_net_1;
 wire          DBG_EMPTY_0_net_0;
 wire          MD_Fifo_RE_net_1;
-wire   [39:0] RX_FIFO_Data_net_1;
 wire          DBG_FIFO_AFULL_net_1;
+wire   [39:0] RX_FIFO_Data_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -166,10 +166,10 @@ assign DBG_EMPTY_0_net_0    = DBG_EMPTY_0;
 assign DBG_EMPTY            = DBG_EMPTY_0_net_0;
 assign MD_Fifo_RE_net_1     = MD_Fifo_RE_net_0;
 assign MD_Fifo_RE           = MD_Fifo_RE_net_1;
-assign RX_FIFO_Data_net_1   = RX_FIFO_Data_net_0;
-assign RX_FIFO_Data[39:0]   = RX_FIFO_Data_net_1;
 assign DBG_FIFO_AFULL_net_1 = DBG_FIFO_AFULL_net_0;
 assign DBG_FIFO_AFULL       = DBG_FIFO_AFULL_net_1;
+assign RX_FIFO_Data_net_1   = RX_FIFO_Data_net_0;
+assign RX_FIFO_Data[39:0]   = RX_FIFO_Data_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -222,7 +222,8 @@ COREFIFO_C8 COREFIFO_C8_0(
         .EMPTY    ( DBG_EMPTY_0 ),
         .AFULL    ( DBG_FIFO_AFULL_net_0 ),
         .AEMPTY   (  ),
-        .Q        ( COREFIFO_C8_0_Q ) 
+        .Q        ( COREFIFO_C8_0_Q ),
+        .WRCNT    (  ) 
         );
 
 //--------COREFIFO_C11
@@ -242,7 +243,7 @@ COREFIFO_C11 COREFIFO_C11_0(
 //--------ft601_fifo_interface
 ft601_fifo_interface ft601_fifo_interface_0(
         // Inputs
-        .nRESET            ( Synchronizer_0_Data_Out ),
+        .Reset_N           ( Synchronizer_0_Data_Out ),
         .FTDI_CLK          ( FTDI_CLK ),
         .FTDI_nRXF         ( FTDI_nRXF ),
         .FTDI_nTXE         ( FTDI_nTXE ),
@@ -250,9 +251,9 @@ ft601_fifo_interface ft601_fifo_interface_0(
         .CH_AF_EMPTY       ( DBG_EMPTY_0 ),
         .CH_AF_DATA        ( ftdi_to_fifo_interface_0_FTDI_AF ),
         // Outputs
-        .FTDI_nOE          ( FTDI_nOE_net_0 ),
         .FTDI_nRD          ( FTDI_nRD_net_0 ),
         .FTDI_nWR          ( FTDI_nWR_net_0 ),
+        .FTDI_nOE          ( FTDI_nOE_net_0 ),
         .CH_FA_WREN        ( DBG_FIFO_WR_net_0 ),
         .CH_AF_RDEN        ( DBG_FIFO_RD_net_0 ),
         .CH_FA_DATA        ( ft601_fifo_interface_0_CH_FA_DATA ),

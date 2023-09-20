@@ -31,7 +31,7 @@ end Communication_TX_Arbiter2;
 architecture rtl of Communication_TX_Arbiter2 is
 
 
-    type FSM_state is (IDLE, WAIT_CMD_DATA, READ_CMD_DATA, WAIT_MD_DATA, READ_MD_DATA, SWITCH_TO_CMD);
+    type FSM_state is (IDLE, WAIT_CMD_DATA, READ_CMD_DATA, WAIT_MD_DATA, READ_MD_DATA, READ_MD_DATA_ABORT, SWITCH_TO_CMD);
     signal state_reg, next_state : FSM_state;
 
 begin
@@ -82,24 +82,33 @@ begin
                 next_state <= READ_CMD_DATA;
 
             when READ_CMD_DATA =>
-                if(Control_Fifo_Empty = '1' or TX_Fifo_Full = '1') then
+                --if(Control_Fifo_Empty = '1' or TX_Fifo_Full = '1') then
                     next_state <= IDLE;  
-                end if;
+                --end if;
 
             when WAIT_MD_DATA =>
                 next_state <= READ_MD_DATA;  
 
             when READ_MD_DATA =>
-                if(MD_Fifo_Empty = '1' or TX_Fifo_Full = '1') then
-                    next_state <= IDLE;  
+                if(TX_Fifo_Full = '1') then
+                    next_state <= READ_MD_DATA_ABORT;
+                elsif(MD_Fifo_Empty = '1') then
+                     next_state <= IDLE;
                 elsif(Control_Fifo_Empty = '0') then 
                     next_state <= SWITCH_TO_CMD;
                 end if;
 
-            when SWITCH_TO_CMD =>
-                next_state <= WAIT_CMD_DATA;  
-                
+            when READ_MD_DATA_ABORT =>
+                next_state <= IDLE; 
 
+            when SWITCH_TO_CMD =>
+                if(Control_Fifo_Empty = '1' or TX_Fifo_Full = '1') then
+                    next_state <= IDLE;
+                else  
+                    next_state <= WAIT_CMD_DATA; 
+                end if;
+                
+                 
             when others =>
                 null; 
 
@@ -139,6 +148,12 @@ begin
             when READ_MD_DATA =>
                 Control_Fifo_RE <= '0';
                 MD_Fifo_RE      <= '1';
+                TX_Fifo_WE      <= '1';
+                TX_Fifo_Data    <= x"00" & MD_Fifo_Data;
+
+            when READ_MD_DATA_ABORT =>
+                Control_Fifo_RE <= '0';
+                MD_Fifo_RE      <= '0';
                 TX_Fifo_WE      <= '1';
                 TX_Fifo_Data    <= x"00" & MD_Fifo_Data;
 

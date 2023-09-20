@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)</text>
-<text>Date: Fri Sep  1 13:17:55 2023
+<text>Date: Wed Sep 20 07:55:53 2023
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -56,7 +56,7 @@
 </row>
 <row>
  <cell>Source</cell>
- <cell>C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\identify_debug\Top.vm</cell>
+ <cell>C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.vm</cell>
 </row>
 </table>
 <section><name>Options</name></section>
@@ -78,15 +78,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>42811</cell>
+ <cell>40479</cell>
  <cell>299544</cell>
- <cell>14.29</cell>
+ <cell>13.51</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>42173</cell>
+ <cell>39257</cell>
  <cell>299544</cell>
- <cell>14.08</cell>
+ <cell>13.11</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -132,9 +132,9 @@
 </row>
 <row>
  <cell>H-Chip Global</cell>
- <cell>10</cell>
+ <cell>7</cell>
  <cell>48</cell>
- <cell>20.83</cell>
+ <cell>14.58</cell>
 </row>
 <row>
  <cell>PLL</cell>
@@ -153,12 +153,6 @@
  <cell>1</cell>
  <cell>24</cell>
  <cell>4.17</cell>
-</row>
-<row>
- <cell>UJTAG</cell>
- <cell>1</cell>
- <cell>1</cell>
- <cell>100.00</cell>
 </row>
 <row>
  <cell>INIT</cell>
@@ -186,9 +180,9 @@
 </row>
 <row>
  <cell>ICB_CLKINT</cell>
- <cell>4</cell>
+ <cell>3</cell>
  <cell>72</cell>
- <cell>5.56</cell>
+ <cell>4.17</cell>
 </row>
 </table>
 <section><name>Detailed Logic Resource Usage</name></section>
@@ -200,8 +194,8 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>9655</cell>
- <cell>9017</cell>
+ <cell>7323</cell>
+ <cell>6101</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
@@ -220,8 +214,8 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>42811</cell>
- <cell>42173</cell>
+ <cell>40479</cell>
+ <cell>39257</cell>
 </row>
 </table>
 <section><name>Detailed Carry Chains Resource Usage</name></section>
@@ -246,19 +240,19 @@
 </row>
 <row>
  <cell>9</cell>
- <cell>16</cell>
+ <cell>14</cell>
 </row>
 <row>
  <cell>10</cell>
- <cell>12</cell>
+ <cell>8</cell>
 </row>
 <row>
  <cell>11</cell>
- <cell>28</cell>
+ <cell>26</cell>
 </row>
 <row>
  <cell>12</cell>
- <cell>29</cell>
+ <cell>25</cell>
 </row>
 <row>
  <cell>13</cell>
@@ -266,15 +260,15 @@
 </row>
 <row>
  <cell>14</cell>
- <cell>7</cell>
+ <cell>8</cell>
 </row>
 <row>
  <cell>15</cell>
- <cell>18</cell>
+ <cell>24</cell>
 </row>
 <row>
  <cell>16</cell>
- <cell>29</cell>
+ <cell>28</cell>
 </row>
 <row>
  <cell>17</cell>
@@ -314,7 +308,7 @@
 </row>
 <row>
  <cell>Total</cell>
- <cell>182</cell>
+ <cell>176</cell>
 </row>
 </table>
 <section><name>Detailed 4LUT Groups Resource Usage</name></section>
@@ -385,7 +379,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>6532</cell>
+ <cell>6596</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Main_CLOCK_0</cell>
 </row>
@@ -400,7 +394,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>3496</cell>
+ <cell>3532</cell>
  <cell>INT_NET</cell>
  <cell>Net   : dff_arst</cell>
 </row>
@@ -408,36 +402,6 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Source: NETLIST</cell>
-</row>
-<row>
- <cell>1669</cell>
- <cell>INT_NET</cell>
- <cell>Net   : ident_coreinst/FTDI_comm2iice[11]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: ident_coreinst/comm_block_INST/jtagi/jtag_clkint_prim/U0_RGB1</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Source: NETLIST</cell>
-</row>
-<row>
- <cell>1286</cell>
- <cell>INT_NET</cell>
- <cell>Net   : NN_1</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: I_1/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -490,29 +454,14 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>264</cell>
+ <cell>248</cell>
  <cell>INT_NET</cell>
- <cell>Net   : ident_coreinst/FTDI_comm2iice[8]</cell>
+ <cell>Net   : BUFD_0_Y</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: ident_coreinst/comm_block_INST/jtagi/b9_nv_oQwfYF_RNIVIS3/U0_RGB1</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Source: NETLIST</cell>
-</row>
-<row>
- <cell>9</cell>
- <cell>INT_NET</cell>
- <cell>Net   : ident_coreinst/comm_block_INST/hcr_update</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: ident_coreinst/comm_block_INST/jtagi/b10_8Kz_rKlrtX_RNIBCIE/U0_RGB1</cell>
+ <cell>Driver: I_1/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>

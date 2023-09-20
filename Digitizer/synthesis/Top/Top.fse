@@ -39,35 +39,39 @@ fsm_registers {36112811210} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {sta
 
 fsm_encoding {275285212} onehot
 
-fsm_state_encoding {275285212} idle {000001}
+fsm_state_encoding {275285212} idle {0000001}
 
-fsm_state_encoding {275285212} wait_cmd_data {000010}
+fsm_state_encoding {275285212} wait_cmd_data {0000010}
 
-fsm_state_encoding {275285212} read_cmd_data {000100}
+fsm_state_encoding {275285212} read_cmd_data {0000100}
 
-fsm_state_encoding {275285212} wait_md_data {001000}
+fsm_state_encoding {275285212} wait_md_data {0001000}
 
-fsm_state_encoding {275285212} read_md_data {010000}
+fsm_state_encoding {275285212} read_md_data {0010000}
 
-fsm_state_encoding {275285212} switch_to_cmd {100000}
+fsm_state_encoding {275285212} read_md_data_abort {0100000}
 
-fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
+fsm_state_encoding {275285212} switch_to_cmd {1000000}
+
+fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]} 
 
 fsm_encoding {275285212} onehot
 
-fsm_state_encoding {275285212} idle {000001}
+fsm_state_encoding {275285212} idle {0000001}
 
-fsm_state_encoding {275285212} wait_cmd_data {000010}
+fsm_state_encoding {275285212} wait_cmd_data {0000010}
 
-fsm_state_encoding {275285212} read_cmd_data {000100}
+fsm_state_encoding {275285212} read_cmd_data {0000100}
 
-fsm_state_encoding {275285212} wait_md_data {001000}
+fsm_state_encoding {275285212} wait_md_data {0001000}
 
-fsm_state_encoding {275285212} read_md_data {010000}
+fsm_state_encoding {275285212} read_md_data {0010000}
 
-fsm_state_encoding {275285212} switch_to_cmd {100000}
+fsm_state_encoding {275285212} read_md_data_abort {0100000}
 
-fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
+fsm_state_encoding {275285212} switch_to_cmd {1000000}
+
+fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]} 
 
 fsm_encoding {109189117} onehot
 
@@ -87,44 +91,38 @@ fsm_registers {109189117} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state
 
 fsm_encoding {275285212} onehot
 
-fsm_state_encoding {275285212} idle {000001}
+fsm_state_encoding {275285212} idle {0000001}
 
-fsm_state_encoding {275285212} wait_cmd_data {000010}
+fsm_state_encoding {275285212} wait_cmd_data {0000010}
 
-fsm_state_encoding {275285212} read_cmd_data {000100}
+fsm_state_encoding {275285212} read_cmd_data {0000100}
 
-fsm_state_encoding {275285212} wait_md_data {001000}
+fsm_state_encoding {275285212} wait_md_data {0001000}
 
-fsm_state_encoding {275285212} read_md_data {010000}
+fsm_state_encoding {275285212} read_md_data {0010000}
 
-fsm_state_encoding {275285212} switch_to_cmd {100000}
+fsm_state_encoding {275285212} read_md_data_abort {0100000}
 
-fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
+fsm_state_encoding {275285212} switch_to_cmd {1000000}
 
-fsm_encoding {315725716} onehot
+fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]} 
 
-fsm_state_encoding {315725716} wait_0 {000000000001}
+fsm_encoding {315685616} onehot
 
-fsm_state_encoding {315725716} reception_a {000000000010}
+fsm_state_encoding {315685616} idle {00000001}
 
-fsm_state_encoding {315725716} reception_0 {000000000100}
+fsm_state_encoding {315685616} receive_prepare {00000010}
 
-fsm_state_encoding {315725716} transmition_f_0 {000000001000}
+fsm_state_encoding {315685616} receive {00000100}
 
-fsm_state_encoding {315725716} transmition_f_1 {000000010000}
+fsm_state_encoding {315685616} transmit_prepare {00001000}
 
-fsm_state_encoding {315725716} transmition_0 {000000100000}
+fsm_state_encoding {315685616} transmit {00010000}
 
-fsm_state_encoding {315725716} transmition_1 {000001000000}
+fsm_state_encoding {315685616} transmit_abort {00100000}
 
-fsm_state_encoding {315725716} transmition_a {000010000000}
+fsm_state_encoding {315685616} transmit_buffer {01000000}
 
-fsm_state_encoding {315725716} transmition_buf_0 {000100000000}
+fsm_state_encoding {315685616} buffer_clear {10000000}
 
-fsm_state_encoding {315725716} transmition_buf_1 {001000000000}
-
-fsm_state_encoding {315725716} transmition_buf_b_0 {010000000000}
-
-fsm_state_encoding {315725716} transmition_buf_b_1 {100000000000}
-
-fsm_registers {315725716} {actual_state[0]}  {actual_state[1]}  {actual_state[2]}  {actual_state[3]}  {actual_state[4]}  {actual_state[5]}  {actual_state[6]}  {actual_state[7]}  {actual_state[8]}  {actual_state[9]}  {actual_state[10]}  {actual_state[11]} 
+fsm_registers {315685616} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]}  {state_reg[7]} 

@@ -1,4 +1,4 @@
-# Wed Aug 23 15:10:53 2023
+# Wed Sep 20 07:54:44 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -20,7 +20,7 @@ Synopsys Generic Technology Pre-mapping, Version map202109act, Build 055R, Built
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 119MB)
 
 
-Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 131MB)
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 132MB peak: 132MB)
 
 Reading constraint file: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc
 @L: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_scck.rpt 
@@ -35,7 +35,7 @@ See clock summary report "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthe
 Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 162MB peak: 162MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 162MB peak: 162MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 162MB peak: 163MB)
 
 
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 164MB peak: 164MB)
@@ -59,13 +59,13 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_switch.vhd":194:8:194:9|Removing sequential instance Communication_Switch_0.read_data_frame_1[13] because it is equivalent to instance Communication_Switch_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_switch.vhd":194:8:194:9|Removing sequential instance Communication_Switch_0.read_data_frame_1[6] because it is equivalent to instance Communication_Switch_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 235MB peak: 235MB)
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 237MB peak: 237MB)
 
 
-Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 235MB peak: 236MB)
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 237MB peak: 238MB)
 
 
-Start optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 236MB peak: 236MB)
+Start optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 238MB peak: 238MB)
 
 NConnInternalConnection caching in on
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_unit.vhd":78:8:78:9|Sequential instance Data_Block_0.Input_Data_Part_0.Trigger_Unit_0.Input_Data_1_0[0] is reduced to a combinational gate by constant propagation.
@@ -186,20 +186,20 @@ NConnInternalConnection caching in on
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":5187:12:5187:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R2C29 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 
 Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_premap.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\usb_3_protocol\usb_3_protocol.v":265:23:265:46|Removing instance ftdi_to_fifo_interface_0 (in view: work.USB_3_Protocol(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\usb_3_protocol\usb_3_protocol.v":266:23:266:46|Removing instance ftdi_to_fifo_interface_0 (in view: work.USB_3_Protocol(verilog)) because it does not drive other instances.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
 
-Finished optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 236MB peak: 237MB)
+Finished optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 238MB peak: 238MB)
 
 @N: FP130 |Promoting Net Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_arst on CLKINT  I_2 
 @N: FP130 |Promoting Net Controler_0.Reset_Controler_0.INT_DataFifo_Reset_N_arst on CLKINT  I_2 
 @N: FP130 |Promoting Net Clock_Reset_0.Synchronizer_0.Chain_arst[1] on CLKINT  I_2 
-@N: FP130 |Promoting Net FTDI_CLK on CLKINT  I_1 
+@N: FP130 |Promoting Net BUFD_0_Y on CLKINT  I_1 
 @N: FX1185 |Applying syn_allowed_resources blockrams=1 on compile point Controler 
 @N: FX1184 |Applying syn_allowed_resources blockrams=952 on top level netlist Top 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 249MB peak: 249MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 251MB peak: 251MB)
 
 
 
@@ -209,13 +209,13 @@ Clock Summary
           Start                                                               Requested     Requested     Clock        Clock                     Clock
 Level     Clock                                                               Frequency     Period        Type         Group                     Load 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
-0 -       FTDI_CLK                                                            100.0 MHz     10.000        declared     default_clkgroup          334  
+0 -       FTDI_CLK                                                            100.0 MHz     10.000        declared     default_clkgroup          248  
                                                                                                                                                       
 0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared     default_clkgroup          1    
                                                                                                                                                       
 0 -       System                                                              100.0 MHz     10.000        system       system_clkgroup           0    
                                                                                                                                                       
-0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6823 
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6914 
                                                                                                                                                       
 0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_2     1112 
 ======================================================================================================================================================
@@ -225,28 +225,28 @@ Level     Clock                                                               Fr
 Clock Load Summary
 ***********************
 
-                                                                    Clock     Source                                                                Clock Pin                                                         Non-clock Pin     Non-clock Pin                                              
-Clock                                                               Load      Pin                                                                   Seq Example                                                       Seq Example       Comb Example                                               
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-FTDI_CLK                                                            334       FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.FTDI_BE_1[0].C            -                 I_1.A(CLKINT)                                              
-                                                                                                                                                                                                                                                                                                   
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0        -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
-                                                                                                                                                                                                                                                                                                   
-System                                                              0         -                                                                     -                                                                 -                 -                                                          
-                                                                                                                                                                                                                                                                                                   
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6823      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:5].C     -                 OUTBUF_DIFF_0_0_0.D(OUTBUF_DIFF)                           
-                                                                                                                                                                                                                                                                                                   
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                   -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
-===================================================================================================================================================================================================================================================================================================
+                                                                    Clock     Source                                                                Clock Pin                                                          Non-clock Pin     Non-clock Pin                                              
+Clock                                                               Load      Pin                                                                   Seq Example                                                        Seq Example       Comb Example                                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FTDI_CLK                                                            248       FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.AF_DATA_Buffer_Valid.C     -                 BUFD_0.A(BUFD)                                             
+                                                                                                                                                                                                                                                                                                    
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0         -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
+                                                                                                                                                                                                                                                                                                    
+System                                                              0         -                                                                     -                                                                  -                 -                                                          
+                                                                                                                                                                                                                                                                                                    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6914      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6].C      -                 OUTBUF_DIFF_0_0_0.D(OUTBUF_DIFF)                           
+                                                                                                                                                                                                                                                                                                    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                    -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
+====================================================================================================================================================================================================================================================================================================
 
-@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 6823 sequential elements including Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 6914 sequential elements including Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock which controls 1112 sequential elements including Clock_Reset_0.Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 230MB peak: 250MB)
+Starting constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 232MB peak: 252MB)
 
 Encoding state machine state_reg[0:5] (in view: work.Reset_Controler(rtl))
 original code -> new code
@@ -397,14 +397,15 @@ original code -> new code
    10 -> 10
    11 -> 11
 @N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\uart_rx_protocol.vhd":422:8:422:9|There are no possible illegal states for state machine Detect_state_reg[0:3] (in view: work.UART_RX_Protocol_0(rtl)); safe FSM implementation is not required.
-Encoding state machine state_reg[0:5] (in view: work.Communication_TX_Arbiter2_UART_Protocol_UART_Protocol_0(rtl))
+Encoding state machine state_reg[0:6] (in view: work.Communication_TX_Arbiter2_UART_Protocol_UART_Protocol_0(rtl))
 original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
 Encoding state machine xmit_state[5:0] (in view: work.COREUART_C0_COREUART_C0_0_Tx_async_0s_0s_0s_1s_2s_3s_4s_5s_6s_UART_Protocol_UART_Protocol_1(verilog))
 original code -> new code
    00000000000000000000000000000000 -> 000001
@@ -458,14 +459,15 @@ original code -> new code
    10 -> 10
    11 -> 11
 @N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\uart_rx_protocol.vhd":422:8:422:9|There are no possible illegal states for state machine Detect_state_reg[0:3] (in view: work.UART_RX_Protocol_1(rtl)); safe FSM implementation is not required.
-Encoding state machine state_reg[0:5] (in view: work.Communication_TX_Arbiter2_UART_Protocol_UART_Protocol_1(rtl))
+Encoding state machine state_reg[0:6] (in view: work.Communication_TX_Arbiter2_UART_Protocol_UART_Protocol_1(rtl))
 original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
 Encoding state machine state_reg[0:5] (in view: work.Communication_Switch(rtl))
 original code -> new code
    000001 -> 000001
@@ -474,40 +476,37 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-Encoding state machine state_reg[0:5] (in view: work.Communication_TX_Arbiter2(rtl))
+Encoding state machine state_reg[0:6] (in view: work.Communication_TX_Arbiter2_1_1(rtl))
 original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-Encoding state machine actual_state[0:11] (in view: work.ft601_fifo_interface(rtl_ft601_fifo_interface))
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine state_reg[0:7] (in view: work.ft601_fifo_interface(rtl_ft601_fifo_interface))
 original code -> new code
-   000000000001 -> 000000000001
-   000000000010 -> 000000000010
-   000000000100 -> 000000000100
-   000000001000 -> 000000001000
-   000000010000 -> 000000010000
-   000000100000 -> 000000100000
-   000001000000 -> 000001000000
-   000010000000 -> 000010000000
-   000100000000 -> 000100000000
-   001000000000 -> 001000000000
-   010000000000 -> 010000000000
-   100000000000 -> 100000000000
+   00000001 -> 00000001
+   00000010 -> 00000010
+   00000100 -> 00000100
+   00001000 -> 00001000
+   00010000 -> 00010000
+   00100000 -> 00100000
+   01000000 -> 01000000
+   10000000 -> 10000000
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:05s; Memory used current: 238MB peak: 250MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 241MB peak: 252MB)
 
 @W: MF511 |Found issues with constraints. Please check constraint checker report "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_cck.rpt" .
 
-Finished constraint checker (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 246MB peak: 250MB)
+Finished constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 248MB peak: 252MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 154MB peak: 250MB)
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 156MB peak: 252MB)
 
-Process took 0h:00m:05s realtime, 0h:00m:05s cputime
-# Wed Aug 23 15:10:58 2023
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Wed Sep 20 07:54:48 2023
 
 ###########################################################]

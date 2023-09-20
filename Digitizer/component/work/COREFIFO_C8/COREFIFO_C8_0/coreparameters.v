@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Fri Aug 25 08:24:06 2023
+// Created by Microsemi SmartDesign Tue Sep 19 21:55:17 2023
 // Parameters for COREFIFO
 //--------------------------------------------------------------------
 
@@ -7,7 +7,7 @@
 parameter AE_STATIC_EN = 1;
 parameter AEVAL = 6;
 parameter AF_STATIC_EN = 1;
-parameter AFVAL = 1020;
+parameter AFVAL = 8180;
 parameter CTRL_TYPE = 2;
 parameter DIE_SIZE = 15;
 parameter ECC = 0;
@@ -32,6 +32,6 @@ parameter testbench = "User";
 parameter UNDERFLOW_EN = 0;
 parameter WDEPTH = 8192;
 parameter WE_POLARITY = 0;
-parameter WRCNT_EN = 0;
+parameter WRCNT_EN = 1;
 parameter WRITE_ACK = 0;
 parameter WWIDTH = 40;

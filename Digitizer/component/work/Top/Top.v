@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Sep  1 12:47:37 2023
+// Created by SmartDesign Wed Sep 20 07:53:41 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -200,6 +200,7 @@ wire          ADC_sdio;
 wire          ADC_ss_n_net_0;
 wire          BOARD_PWR_RUN_net_0;
 wire          BTN_1;
+wire          BUFD_0_Y;
 wire          CLK_OUT_N_net_0;
 wire          CLK_OUT_P_net_0;
 wire          Clock_Reset_0_Main_CLOCK_0;
@@ -479,6 +480,14 @@ assign SIWU_N              = SIWU_N_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
+//--------BUFD
+BUFD BUFD_0(
+        // Inputs
+        .A ( FTDI_CLK ),
+        // Outputs
+        .Y ( BUFD_0_Y ) 
+        );
+
 //--------Clock_Reset
 Clock_Reset Clock_Reset_0(
         // Inputs
@@ -721,7 +730,7 @@ UART_Protocol UART_Protocol_1(
 //--------USB_3_Protocol
 USB_3_Protocol USB_3_Protocol_0(
         // Inputs
-        .FTDI_CLK             ( FTDI_CLK ),
+        .FTDI_CLK             ( BUFD_0_Y ),
         .FTDI_nRXF            ( FTDI_nRXF ),
         .FTDI_nTXE            ( FTDI_nTXE ),
         .Main_CLK             ( Clock_Reset_0_Main_CLOCK_0 ),

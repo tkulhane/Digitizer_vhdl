@@ -125,16 +125,18 @@ fsm_registers {28422842213} {Detect_state_reg[1]}  {Detect_state_reg[0]}
 
 fsm_encoding {275285212} onehot
 
-fsm_state_encoding {275285212} idle {000001}
+fsm_state_encoding {275285212} idle {0000001}
 
-fsm_state_encoding {275285212} wait_cmd_data {000010}
+fsm_state_encoding {275285212} wait_cmd_data {0000010}
 
-fsm_state_encoding {275285212} read_cmd_data {000100}
+fsm_state_encoding {275285212} read_cmd_data {0000100}
 
-fsm_state_encoding {275285212} wait_md_data {001000}
+fsm_state_encoding {275285212} wait_md_data {0001000}
 
-fsm_state_encoding {275285212} read_md_data {010000}
+fsm_state_encoding {275285212} read_md_data {0010000}
 
-fsm_state_encoding {275285212} switch_to_cmd {100000}
+fsm_state_encoding {275285212} read_md_data_abort {0100000}
 
-fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
+fsm_state_encoding {275285212} switch_to_cmd {1000000}
+
+fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]} 

@@ -28,9 +28,9 @@ end TB_DataBlockWithFifo_USB_3_0;
 
 architecture behavioral of TB_DataBlockWithFifo_USB_3_0 is
 
-    constant SYSCLK_PERIOD : time := 5 ns; -- 200MHZ
-    constant FTDICLK_PERIOD : time := 10 ns; -- 100MHZ
-    constant READCLK_PERIOD : time := 20 ns; -- 100MHZ
+    constant SYSCLK_PERIOD : time := 5 ns; 
+    constant FTDICLK_PERIOD : time := 10 ns; 
+    constant READCLK_PERIOD : time := 30 ns; 
     
 
     signal SYSCLK : std_logic := '0';

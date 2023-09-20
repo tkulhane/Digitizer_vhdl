@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Aug 25 08:24:06 2023
+// Created by SmartDesign Tue Sep 19 21:55:17 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,7 +17,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "AE_STATIC_EN:true"  \
 "AEVAL:6"  \
 "AF_STATIC_EN:true"  \
-"AFVAL:1020"  \
+"AFVAL:8180"  \
 "CTRL_TYPE:2"  \
 "DIE_SIZE:15"  \
 "ECC:0"  \
@@ -39,7 +39,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "UNDERFLOW_EN:false"  \
 "WDEPTH:8192"  \
 "WE_POLARITY:0"  \
-"WRCNT_EN:false"  \
+"WRCNT_EN:true"  \
 "WRITE_ACK:false"  \
 "WWIDTH:40"   }
 # Exporting Component Description of COREFIFO_C8 to TCL done
@@ -60,7 +60,8 @@ module COREFIFO_C8(
     AFULL,
     EMPTY,
     FULL,
-    Q
+    Q,
+    WRCNT
 );
 
 //--------------------------------------------------------------------
@@ -81,6 +82,7 @@ output        AFULL;
 output        EMPTY;
 output        FULL;
 output [39:0] Q;
+output [13:0] WRCNT;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -95,12 +97,14 @@ wire          RE;
 wire          RRESET_N;
 wire          WCLOCK;
 wire          WE;
+wire   [13:0] WRCNT_net_0;
 wire          WRESET_N;
 wire          FULL_net_1;
 wire          EMPTY_net_1;
 wire          AFULL_net_1;
 wire          AEMPTY_net_1;
 wire   [39:0] Q_net_1;
+wire   [13:0] WRCNT_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -124,6 +128,8 @@ assign AEMPTY_net_1 = AEMPTY_net_0;
 assign AEMPTY       = AEMPTY_net_1;
 assign Q_net_1      = Q_net_0;
 assign Q[39:0]      = Q_net_1;
+assign WRCNT_net_1  = WRCNT_net_0;
+assign WRCNT[13:0]  = WRCNT_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -132,7 +138,7 @@ COREFIFO_C8_COREFIFO_C8_0_COREFIFO #(
         .AE_STATIC_EN ( 1 ),
         .AEVAL        ( 6 ),
         .AF_STATIC_EN ( 1 ),
-        .AFVAL        ( 1020 ),
+        .AFVAL        ( 8180 ),
         .CTRL_TYPE    ( 2 ),
         .DIE_SIZE     ( 15 ),
         .ECC          ( 0 ),
@@ -155,7 +161,7 @@ COREFIFO_C8_COREFIFO_C8_0_COREFIFO #(
         .UNDERFLOW_EN ( 0 ),
         .WDEPTH       ( 8192 ),
         .WE_POLARITY  ( 0 ),
-        .WRCNT_EN     ( 0 ),
+        .WRCNT_EN     ( 1 ),
         .WRITE_ACK    ( 0 ),
         .WWIDTH       ( 40 ) )
 COREFIFO_C8_0(
@@ -184,7 +190,7 @@ COREFIFO_C8_0(
         .SB_CORRECT (  ),
         .DB_DETECT  (  ),
         .Q          ( Q_net_0 ),
-        .WRCNT      (  ),
+        .WRCNT      ( WRCNT_net_0 ),
         .RDCNT      (  ),
         .MEMWADDR   (  ),
         .MEMRADDR   (  ),
