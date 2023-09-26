@@ -1,4 +1,4 @@
-set_partition_info -name "/Top" -timestamp "1695189289"
+set_partition_info -name "/Top" -timestamp "1695490889"
 set_partition_info -name "/Top/UART_Protocol_1" -timestamp "1695189289"
 set_partition_info -name "/Top/UART_Protocol_0" -timestamp "1695189289"
 set_partition_info -name "/Top/Data_Block_0" -timestamp "1695141554"

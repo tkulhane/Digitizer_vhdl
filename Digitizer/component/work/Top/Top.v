@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Sep 20 07:53:41 2023
+// Created by SmartDesign Sat Sep 23 19:40:22 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -200,7 +200,6 @@ wire          ADC_sdio;
 wire          ADC_ss_n_net_0;
 wire          BOARD_PWR_RUN_net_0;
 wire          BTN_1;
-wire          BUFD_0_Y;
 wire          CLK_OUT_N_net_0;
 wire          CLK_OUT_P_net_0;
 wire          Clock_Reset_0_Main_CLOCK_0;
@@ -244,7 +243,6 @@ wire          DBGport_2_net_0;
 wire          DBGport_2_0;
 wire          DBGport_2_1;
 wire          DBGport_2_2;
-wire          FTDI_nRXF;
 wire          DBGport_2_4;
 wire          DBGport_3_net_0;
 wire          DBGport_3_0;
@@ -263,11 +261,13 @@ wire          DBGport_5_4;
 wire          BTN_2;
 wire          DBGport_6_1;
 wire          DBGport_7_net_0;
+wire          DBGport_7_0;
 wire   [3:0]  FTDI_BE;
 wire          FTDI_CLK;
 wire   [31:0] FTDI_DATA;
 wire          FTDI_GPIO_0_net_0;
 wire          FTDI_GPIO_1_net_0;
+wire          FTDI_nRXF;
 wire          FTDI_RESET_N_net_0;
 wire          GPIO_0_net_0;
 wire          GPIO_1_net_0;
@@ -316,6 +316,8 @@ wire          DBGport_0_3_net_0;
 wire          DBGport_1_3_net_0;
 wire          DBGport_4_4_net_0;
 wire          DBGport_5_4_net_0;
+wire          FTDI_nRXF_net_0;
+wire          DBGport_7_0_net_0;
 wire          TX_0_net_1;
 wire          TX_1_net_1;
 wire          LED_1_net_1;
@@ -376,8 +378,6 @@ assign Communication_Number_const_net_0 = 4'h3;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
-assign DBGport_6           = 1'b0;
-assign DBGport_7           = 1'b0;
 assign DBGport_8           = 1'b0;
 assign DBGport_9           = 1'b0;
 //--------------------------------------------------------------------
@@ -391,6 +391,10 @@ assign DBGport_4_4_net_0   = FTDI_nTXE;
 assign DBGport_4           = DBGport_4_4_net_0;
 assign DBGport_5_4_net_0   = DBGport_5_4;
 assign DBGport_5           = DBGport_5_4_net_0;
+assign FTDI_nRXF_net_0     = FTDI_nRXF;
+assign DBGport_6           = FTDI_nRXF_net_0;
+assign DBGport_7_0_net_0   = DBGport_7_0;
+assign DBGport_7           = DBGport_7_0_net_0;
 assign TX_0_net_1          = TX_0_net_0;
 assign TX_0                = TX_0_net_1;
 assign TX_1_net_1          = TX_1_net_0;
@@ -485,7 +489,7 @@ BUFD BUFD_0(
         // Inputs
         .A ( FTDI_CLK ),
         // Outputs
-        .Y ( BUFD_0_Y ) 
+        .Y ( DBGport_7_0 ) 
         );
 
 //--------Clock_Reset
@@ -730,7 +734,7 @@ UART_Protocol UART_Protocol_1(
 //--------USB_3_Protocol
 USB_3_Protocol USB_3_Protocol_0(
         // Inputs
-        .FTDI_CLK             ( BUFD_0_Y ),
+        .FTDI_CLK             ( DBGport_7_0 ),
         .FTDI_nRXF            ( FTDI_nRXF ),
         .FTDI_nTXE            ( FTDI_nTXE ),
         .Main_CLK             ( Clock_Reset_0_Main_CLOCK_0 ),
