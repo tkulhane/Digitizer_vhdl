@@ -21,33 +21,33 @@ fsm_state_encoding {14618616} data_write {10}
 
 fsm_registers {14618616} {state_reg[1]}  {state_reg[0]} 
 
-fsm_encoding {10011901192} onehot
+fsm_encoding {10211901192} onehot
 
-fsm_state_encoding {10011901192} tx_idle {000001}
+fsm_state_encoding {10211901192} tx_idle {000001}
 
-fsm_state_encoding {10011901192} tx_load {000010}
+fsm_state_encoding {10211901192} tx_load {000010}
 
-fsm_state_encoding {10011901192} start_bit {000100}
+fsm_state_encoding {10211901192} start_bit {000100}
 
-fsm_state_encoding {10011901192} tx_data_bits {001000}
+fsm_state_encoding {10211901192} tx_data_bits {001000}
 
-fsm_state_encoding {10011901192} parity_bit {010000}
+fsm_state_encoding {10211901192} parity_bit {010000}
 
-fsm_state_encoding {10011901192} tx_stop_bit {100000}
+fsm_state_encoding {10211901192} tx_stop_bit {100000}
 
-fsm_registers {10011901192} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
+fsm_registers {10211901192} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
 
-fsm_encoding {9928602861} sequential
+fsm_encoding {10128602861} sequential
 
-fsm_state_encoding {9928602861} 00 {00}
+fsm_state_encoding {10128602861} 00 {00}
 
-fsm_state_encoding {9928602861} 01 {01}
+fsm_state_encoding {10128602861} 01 {01}
 
-fsm_state_encoding {9928602861} 10 {10}
+fsm_state_encoding {10128602861} 10 {10}
 
-fsm_state_encoding {9928602861} 11 {11}
+fsm_state_encoding {10128602861} 11 {11}
 
-fsm_registers {9928602861} {rx_state[1]}  {rx_state[0]} 
+fsm_registers {10128602861} {rx_state[1]}  {rx_state[0]} 
 
 fsm_encoding {295885815} onehot
 

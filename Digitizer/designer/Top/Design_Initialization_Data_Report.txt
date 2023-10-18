@@ -3,7 +3,7 @@ Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.
 Family: PolarFire
 Die: MPF300TS_ES
 Package: FCG1152
-Date: Sat Sep 23 19:51:16 2023
+Date: Wed Oct 11 21:46:43 2023
 
 Report path: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Design_Initialization_Data_Report.txt
 
@@ -2544,6 +2544,27 @@ PLL_SW_0   (Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0)
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
+PLL_NW_0   (Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0)
++---------------+-----------+-----------------------+------------------+----------+---------------+
+| Register Name | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
++---------------+-----------+-----------------------+------------------+----------+---------------+
+| SOFT_RESET    | 0x8100000 | 0x00000000            | 0x00000000       | No       | N/A           |
+| PLL_CTRL      | 0x8100004 | 0x0000107C            | 0x00001087       | Yes      | N/A           |
+| PLL_REF_FB    | 0x8100008 | 0x00000000            | 0x00001900       | Yes      | N/A           |
+| PLL_FRACN     | 0x810000C | 0x00000000            | 0x00000000       | No       | N/A           |
+| PLL_DIV_0_1   | 0x8100010 | 0x00000000            | 0x01000A00       | Yes      | N/A           |
+| PLL_DIV_2_3   | 0x8100014 | 0x00000000            | 0x01000100       | Yes      | N/A           |
+| PLL_CTRL2     | 0x8100018 | 0x00001006            | 0x00001014       | Yes      | N/A           |
+| PLL_CAL       | 0x810001C | 0x00000000            | 0x0000000E       | Yes      | N/A           |
+| PLL_PHADJ     | 0x8100020 | 0x00004001            | 0x00004000       | Yes      | N/A           |
+| SSCG_REG_0    | 0x8100024 | 0x00000000            | 0x00000001       | Yes      | N/A           |
+| SSCG_REG_1    | 0x8100028 | 0x00000000            | 0x0000000A       | Yes      | N/A           |
+| SSCG_REG_2    | 0x810002C | 0x00000000            | 0x00000300       | Yes      | N/A           |
+| SSCG_REG_3    | 0x8100030 | 0x00000000            | 0x00000001       | Yes      | N/A           |
++---------------+-----------+-----------------------+------------------+----------+---------------+
+
+Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
+
 Q2_TXPLL0   (Unused)
 +----------------+-----------+-----------------------+------------------+----------+---------------+
 | Register Name  | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
@@ -2715,7 +2736,7 @@ Block-Level Control For Locking Peripheral Blocks.
 +------------------------------------+----------------------------+--------------------------------------------------+---------------+
 | CCC PLL                            | PLL_NE_0_LOCK              | N/A                                              | 1             |
 | CCC PLL                            | PLL_NE_1_LOCK              | N/A                                              | 1             |
-| CCC PLL                            | PLL_NW_0_LOCK              | N/A                                              | 1             |
+| CCC PLL                            | PLL_NW_0_LOCK              | Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0 | 1             |
 | CCC PLL                            | PLL_NW_1_LOCK              | N/A                                              | 1             |
 | CCC PLL                            | PLL_SE_0_LOCK              | N/A                                              | 1             |
 | CCC PLL                            | PLL_SE_1_LOCK              | N/A                                              | 1             |

@@ -14,11 +14,11 @@ entity ft601_fifo_interface is
 		FTDI_CLK	: in	std_logic;		-- 100MHz v Synchronim rezimu
 		FTDI_nRXF	: in	std_logic;		-- '0' v FTDI jsou data pro vycteni
 		FTDI_nTXE	: in	std_logic;		-- '0' v FTDI je misto pro data k odeslani
-		FTDI_nRD	: out	std_logic;		-- '0'-synchroni vycteni 1 slova z FTDI
-		FTDI_nWR	: out	std_logic;		-- '0'-synchroni zapsani 1 slova do FTDI
-		FTDI_nOE	: out	std_logic;		-- polarita datove brany '1'-write, '0'-read
-		FTDI_DATA	: inout	std_logic_vector(31 downto 0); -- data
-		FTDI_BE		: inout	std_logic_vector(3 downto 0); -- byte enable
+		FTDI_nRD_o	: out	std_logic;		-- '0'-synchroni vycteni 1 slova z FTDI
+		FTDI_nWR_o	: out	std_logic;		-- '0'-synchroni zapsani 1 slova do FTDI
+		FTDI_nOE_o	: out	std_logic;		-- polarita datove brany '1'-write, '0'-read
+		FTDI_DATA_o	: inout	std_logic_vector(31 downto 0); -- data
+		FTDI_BE_o		: inout	std_logic_vector(3 downto 0); -- byte enable
 	-- inter FPGA signals
 		-- read signals (FTDI -> Architecture)
 		CH_FA_DATA			: out	std_logic_vector(31 downto 0);
@@ -36,6 +36,12 @@ architecture rtl_ft601_fifo_interface OF ft601_fifo_interface is
     type FSM_state is (IDLE, RECEIVE_PREPARE, RECEIVE, TRANSMIT_PREPARE, TRANSMIT, TRANSMIT_ABORT, TRANSMIT_BUFFER, BUFFER_CLEAR );
     signal state_reg, next_state : FSM_state;
 
+	signal FTDI_nRD : std_logic;
+	signal FTDI_nWR : std_logic;
+	signal FTDI_nOE : std_logic;
+	signal FTDI_DATA : std_logic_vector(31 downto 0);
+	signal FTDI_BE : std_logic_vector(3 downto 0);
+
 	--data buffer signals
 	signal AF_DATA_Buffer_SET : std_logic;
 	signal AF_DATA_Buffer_CLR : std_logic;
@@ -44,6 +50,36 @@ architecture rtl_ft601_fifo_interface OF ft601_fifo_interface is
 
 	
 begin
+
+            FTDI_nRD_o <= FTDI_nRD;
+			FTDI_nWR_o <= FTDI_nWR;
+			FTDI_nOE_o <= FTDI_nOE;
+			FTDI_DATA_o <= FTDI_DATA;
+			FTDI_BE_o <= FTDI_BE;
+
+
+------------------------------------------------------------------------------------------------------------
+--ftdi signal buffer
+------------------------------------------------------------------------------------------------------------
+	--process(Reset_N,FTDI_CLK)
+    --begin
+
+        --if(Reset_N = '0') then
+			--FTDI_nRD_o <= '1';
+			--FTDI_nWR_o <= '1';
+			--FTDI_nOE_o <= '1';
+			--FTDI_DATA_o <= (others => 'Z');
+			--FTDI_BE_o <= (others => 'Z');
+        
+        --elsif(FTDI_CLK'event and FTDI_CLK = '1') then
+            --FTDI_nRD_o <= FTDI_nRD;
+			--FTDI_nWR_o <= FTDI_nWR;
+			--FTDI_nOE_o <= FTDI_nOE;
+			--FTDI_DATA_o <= FTDI_DATA;
+			--FTDI_BE_o <= FTDI_BE;
+
+        --end if;
+    --end process;
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -113,7 +149,7 @@ begin
     end process;
 
     --output function
-    process(state_reg, CH_AF_DATA, AF_DATA_Buffer, FTDI_DATA, FTDI_nTXE)
+    process(state_reg, CH_AF_DATA, AF_DATA_Buffer, FTDI_DATA_o, FTDI_nTXE)
     begin
 
         case state_reg is
@@ -142,7 +178,7 @@ begin
 				FTDI_DATA	<= (others => 'Z');
 				FTDI_BE		<= (others => 'Z');
 				--fifo signals - from ftdi to arch
-				CH_FA_DATA 	<= FTDI_DATA; --data z ftdi smerovana do fifo
+				CH_FA_DATA 	<= FTDI_DATA_o;--FTDI_DATA; --data z ftdi smerovana do fifo
 				CH_FA_WREN	<= '0';
 				--fifo signal  - from arch to ftdi
 				CH_AF_RDEN	<= '0';
@@ -158,7 +194,7 @@ begin
 				FTDI_DATA	<= (others => 'Z');
 				FTDI_BE		<= (others => 'Z');
 				--fifo signals - from ftdi to arch
-				CH_FA_DATA 	<= FTDI_DATA; --data z ftdi smerovana do fifo
+				CH_FA_DATA 	<= FTDI_DATA_o;--FTDI_DATA; --data z ftdi smerovana do fifo
 				CH_FA_WREN	<= '1'; --zapisuji do fifo
 				--fifo signal  - from arch to ftdi
 				CH_AF_RDEN	<= '0';
@@ -293,6 +329,9 @@ begin
 
         end if;
     end process;
+
+
+
 
 	
 end architecture;

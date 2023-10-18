@@ -1,4 +1,4 @@
-# Sat Sep 23 19:41:31 2023
+# Wed Oct 11 21:35:05 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -120,7 +120,6 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_switch.vhd":194:8:194:9|Removing instance Communication_Switch_0.read_data_frame_1[3] because it is equivalent to instance Communication_Switch_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memraddr_r[9:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memwaddr_r[9:0] 
 Encoding state machine state_reg[0:6] (in view: work.Communication_TX_Arbiter2_1_1(rtl))
@@ -150,38 +149,38 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memwaddr_r[9:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 199MB peak: 270MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 198MB peak: 270MB)
 
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing instance USB_3_Protocol_0.COREFIFO_C11_0.COREFIFO_C11_0.RE_d1 because it is equivalent to instance USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 200MB peak: 270MB)
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 200MB peak: 270MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 201MB peak: 270MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 200MB peak: 270MB)
 
 
 Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 201MB peak: 270MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 201MB peak: 270MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 270MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 201MB peak: 270MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 270MB)
 
 
 Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 270MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 202MB peak: 270MB)
+Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 270MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:03s		     0.38ns		1246 /      1153
-   2		0h:00m:03s		     0.38ns		1243 /      1153
+   1		0h:00m:04s		     0.38ns		1247 /      1157
+   2		0h:00m:04s		     0.38ns		1244 /      1157
 
 Added 0 Buffers
 Added 0 Cells via replication
@@ -208,7 +207,7 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 202MB peak: 270MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 202MB peak: 270MB)
 
 
 Finished restoring hierarchy (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 202MB peak: 270MB)
@@ -226,6 +225,6 @@ Top      Remapped     Design changed
 ====================================
 
 Process took 0h:00m:04s realtime, 0h:00m:04s cputime
-# Sat Sep 23 19:41:35 2023
+# Wed Oct 11 21:35:10 2023
 
 ###########################################################]

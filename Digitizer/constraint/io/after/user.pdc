@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Wed Aug  9 16:23:50 2023 
+# Date generated: Wed Oct 11 21:38:53 2023 
 
 
 # 
@@ -286,7 +286,7 @@ set_io -port_name FTDI_CLK  \
     -pin_name H1            \
     -fixed true             \
     -io_std LVCMOS33        \
-    -RES_PULL Down          \
+    -RES_PULL None          \
     -DIRECTION INPUT
 
 
@@ -546,6 +546,7 @@ set_io -port_name FTDI_nRD  \
     -pin_name L5            \
     -fixed true             \
     -io_std LVCMOS33        \
+    -OUT_DRIVE 16           \
     -DIRECTION OUTPUT
 
 
@@ -553,6 +554,7 @@ set_io -port_name FTDI_nRXF  \
     -pin_name H7             \
     -fixed true              \
     -io_std LVCMOS33         \
+    -RES_PULL None           \
     -DIRECTION INPUT
 
 
@@ -560,6 +562,7 @@ set_io -port_name FTDI_nTXE  \
     -pin_name G7             \
     -fixed true              \
     -io_std LVCMOS33         \
+    -RES_PULL None           \
     -DIRECTION INPUT
 
 
@@ -567,6 +570,7 @@ set_io -port_name FTDI_nWR  \
     -pin_name R5            \
     -fixed true             \
     -io_std LVCMOS33        \
+    -OUT_DRIVE 16           \
     -DIRECTION OUTPUT
 
 
@@ -588,6 +592,7 @@ set_io -port_name HMC_GPIO_0  \
     -pin_name H12             \
     -fixed true               \
     -io_std LVCMOS33          \
+    -RES_PULL Down            \
     -DIRECTION INPUT
 
 
@@ -595,6 +600,7 @@ set_io -port_name HMC_GPIO_1  \
     -pin_name H13             \
     -fixed true               \
     -io_std LVCMOS33          \
+    -RES_PULL Down            \
     -DIRECTION INPUT
 
 
@@ -602,14 +608,16 @@ set_io -port_name HMC_GPIO_2  \
     -pin_name G16             \
     -fixed true               \
     -io_std LVCMOS33          \
-    -DIRECTION INPUT
+    -RES_PULL Down            \
+    -DIRECTION OUTPUT
 
 
 set_io -port_name HMC_GPIO_3  \
     -pin_name G15             \
     -fixed true               \
     -io_std LVCMOS33          \
-    -DIRECTION INPUT
+    -RES_PULL Down            \
+    -DIRECTION OUTPUT
 
 
 set_io -port_name HMC_SYNC  \
@@ -620,7 +628,7 @@ set_io -port_name HMC_SYNC  \
 
 
 set_io -port_name HMC_sclk  \
-    -pin_name J6            \
+    -pin_name J16           \
     -fixed true             \
     -io_std LVCMOS33        \
     -DIRECTION OUTPUT
@@ -630,7 +638,7 @@ set_io -port_name HMC_sdio  \
     -pin_name H17           \
     -fixed true             \
     -io_std LVCMOS33        \
-    -RES_PULL None          \
+    -RES_PULL Down          \
     -DIRECTION INOUT
 
 
@@ -840,70 +848,4 @@ set_io -port_name TX_1  \
 #Ports using Dedicated Pins
 
 #
-
-set_io -port_name LANE0_RXD_N  \
-    -pin_name M30           \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-
-set_io -port_name LANE0_RXD_P  \
-    -pin_name M29             \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-    
-    
-set_io -port_name LANE1_RXD_N  \
-    -pin_name P30           \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-
-set_io -port_name LANE1_RXD_P  \
-    -pin_name P29             \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-    
-    
-set_io -port_name LANE2_RXD_N  \
-    -pin_name R32         \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-
-set_io -port_name LANE2_RXD_P  \
-    -pin_name R31             \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-    
-    
-set_io -port_name LANE3_RXD_N  \
-    -pin_name T30          \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-
-set_io -port_name LANE3_RXD_P  \
-    -pin_name T29             \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-    
-
-set_io -port_name LANE4_RXD_N  \
-    -pin_name G32          \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-
-set_io -port_name LANE4_RXD_P  \
-    -pin_name G31             \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-    
-    
-set_io -port_name LANE5_RXD_N  \
-    -pin_name J32          \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-
-set_io -port_name LANE5_RXD_P  \
-    -pin_name J31            \
-    -RX_TERMINATION 100        \
-    -DIRECTION INPUT
-
 

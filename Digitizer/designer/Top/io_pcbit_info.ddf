@@ -1,5 +1,5 @@
 ;--------------------------------------------------------------------------------
-; Date:    Sat Sep 23 19:48:43 2023
+; Date:    Wed Oct 11 21:44:10 2023
 ; version: 2022.1 2022.1.0.10
 ; Design:  Top
 ; Family:  PolarFire
@@ -31,13 +31,13 @@ Module  ICBMUXINGPC_SW_0                      584  1        714  1    ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'hC"                  U. 
+        CLKSTOP_SOURCE_SEL                    "60'h28000000"           U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFFFFFFFE1FFFFFF" U. 
+        NMUX_SEL                              "72'hFFF87FFFFFFFFFFFFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
-        STOP_SEL                              "24'hFFFFFC"             U. 
+        STOP_SEL                              "24'hFFF3FF"             U. 
 End_Module.
 
 Module  PLL_SW_0                              0    5        15   13   PLL             .
@@ -143,13 +143,110 @@ Module  ICBMUXINGPC_W_0                       8    163      9    626  ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'h18000140"           U. 
+        CLKSTOP_SOURCE_SEL                    "60'h1200198"            U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFFFFFFFC1FC0FFF" U. 
+        NMUX_SEL                              "72'hFC0FFF43FFC1FFFFFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
-        STOP_SEL                              "24'hFFF3F3"             U. 
+        STOP_SEL                              "24'hFFFCF0"             U. 
+End_Module.
+
+Module  PLL_NW_0                              0    377      18   1489 PLL             .
+        BW_INT_CTRL                           "2'h0"                   U. 
+        BW_PROP_CTRL                          "2'h1"                   U. 
+        BYPASS_CLK_SEL                        "4'h0"                   U. 
+        BYPASS_GO_EN_N                        "1'h1"                   U. 
+        BYPASS_OUT_DIVIDER                    "4'h0"                   U. 
+        BYPASS_PLL                            "4'h0"                   U. 
+        CDELAY0_EN                            "1'h0"                   U. 
+        CDELAY0_SEL                           "8'h0"                   U. 
+        CDMUX0_SEL                            "2'h0"                   U. 
+        CDMUX1_SEL                            "1'h1"                   U. 
+        CDMUX2_SEL                            "1'h0"                   U. 
+        DESKEW_CAL_BYPASS                     "1'h0"                   U. 
+        DESKEW_CAL_CNT                        "3'h6"                   U. 
+        DESKEW_CAL_EN                         "1'h1"                   U. 
+        DIV0_RST_DELAY                        "3'h0"                   U. 
+        DIV0_VAL                              "7'hA"                   U. 
+        DIV1_RST_DELAY                        "3'h0"                   U. 
+        DIV1_VAL                              "7'h1"                   U. 
+        DIV2_RST_DELAY                        "3'h0"                   U. 
+        DIV2_VAL                              "7'h1"                   U. 
+        DIV3_CLK_SEL                          "1'h0"                   U. 
+        DIV3_RST_DELAY                        "3'h0"                   U. 
+        DIV3_VAL                              "7'h1"                   U. 
+        DRI_EN                                "1'h1"                   U. 
+        FB_CLK_SEL_0                          "2'h0"                   U. 
+        FB_CLK_SEL_1                          "1'h0"                   U. 
+        FB_FRAC_VAL                           "24'h0"                  U. 
+        FB_INT_VAL                            "12'h300"                U. 
+        FF_REQUIRES_LOCK                      "1'h0"                   U. 
+        FRAC_DAC_EN                           "1'h0"                   U. 
+        FRAC_EN                               "1'h0"                   U. 
+        FSE_N                                 "1'h0"                   U. 
+        IREF_EN                               "1'h1"                   U. 
+        IREF_TOGGLE                           "1'h0"                   U. 
+        LOCK_CNT                              "4'h8"                   U. 
+        OUT0_DIV_EN                           "1'h1"                   U. 
+        OUT0_PHASE_SEL                        "3'h0"                   U. 
+        OUT1_DIV_EN                           "1'h0"                   U. 
+        OUT1_PHASE_SEL                        "3'h0"                   U. 
+        OUT2_DIV_EN                           "1'h0"                   U. 
+        OUT2_PHASE_SEL                        "3'h0"                   U. 
+        OUT3_DIV_EN                           "1'h0"                   U. 
+        OUT3_PHASE_SEL                        "3'h0"                   U. 
+        RESET_ON_LOCK                         "1'h1"                   U. 
+        RFDIV                                 "6'h19"                  U. 
+        RFDIV_EN                              "1'h1"                   U. 
+        SOFTRESET                             "1'h0"                   U. 
+        SOFT_LOAD_PHASE_N                     "1'h1"                   U. 
+        SOFT_POWERDOWN_N                      "1'h1"                   U. 
+        SOFT_REF_CLK_SEL                      "1'h0"                   U. 
+        SSM_DIV_VAL                           "6'h1"                   U. 
+        SSM_EN_N                              "1'h1"                   U. 
+        SSM_EXT_WAVE_EN                       "2'h0"                   U. 
+        SSM_EXT_WAVE_MAX_ADDR                 "8'h0"                   U. 
+        SSM_MODULATION                        "5'h5"                   U. 
+        SSM_RANDOM_EN                         "1'h0"                   U. 
+        SSM_RANDOM_PATTERN_SEL                "2'h0"                   U. 
+        SSM_SPREAD_MODE                       "1'h0"                   U. 
+        SYNC_REF_DIV_EN                       "1'h0"                   U. 
+        SYNC_REF_DIV_EN_2                     "1'h0"                   U. 
+End_Module.
+
+Module  CRNCOMMON_NW                          6    377      30   1495 CRNCOMMON       .
+        PC_CDMUX6_SEL                         "1'h0"                   D. 
+        PC_CIMUX_GEN0_SEL                     "4'h0"                   D. 
+        PC_CIMUX_GEN1_SEL                     "4'h0"                   D. 
+        PC_CIMUX_GEN2_SEL                     "4'h0"                   D. 
+        PC_CIMUX_GEN3_SEL                     "4'h0"                   D. 
+        PC_CIMUX_GEN4_SEL                     "2'h0"                   D. 
+        PC_CIMUX_GEN5_SEL                     "2'h0"                   D. 
+        PC_CIMUX_REF0_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF1_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF2_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF3_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF4_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF5_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF6_SEL                     "4'h0"                   U. 
+        PC_CIMUX_REF7_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF8_SEL                     "4'h0"                   D. 
+        PC_CIMUX_REF9_SEL                     "4'h0"                   D. 
+        PC_COMUX0_SEL                         "4'h0"                   D. 
+        PC_COMUX1_SEL                         "4'h0"                   D. 
+        PC_COMUX2_SEL                         "4'h0"                   D. 
+        PC_COMUX3_SEL                         "4'h0"                   D. 
+        PC_COMUX4_SEL                         "4'h0"                   D. 
+        PC_COMUX5_SEL                         "4'h0"                   D. 
+        PC_COMUX6_SEL                         "4'h0"                   D. 
+        PC_COMUX7_SEL                         "4'h0"                   D. 
+        PC_CRNFDR_HORZ_EN                     "8'h0"                   D. 
+        PC_CRNFR_VERT_EN                      "8'h1"                   U. 
+        PC_DYN_EN                             "1'h1"                   D. 
+        PC_SOFTRESET                          "1'h0"                   D. 
+        PC_SRMUX0_SEL                         "3'h0"                   D. 
+        PC_SRMUX1_SEL                         "3'h0"                   D. 
 End_Module.
 
 ; -------------------------------------
@@ -3842,69 +3939,6 @@ Module  TXPLL_EXTPLL24_0                      2460 374      2439 1477 TXPLL     
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
 End_Module.
 
-Module  PLL_NW_0                              0    377      18   1489 PLL             .
-        BW_INT_CTRL                           "2'h2"                   D. 
-        BW_PROP_CTRL                          "2'h1"                   D. 
-        BYPASS_CLK_SEL                        "4'h0"                   D. 
-        BYPASS_GO_EN_N                        "1'h1"                   D. 
-        BYPASS_OUT_DIVIDER                    "4'h0"                   D. 
-        BYPASS_PLL                            "4'h0"                   D. 
-        CDELAY0_EN                            "1'h0"                   D. 
-        CDELAY0_SEL                           "8'h0"                   D. 
-        CDMUX0_SEL                            "2'h0"                   D. 
-        CDMUX1_SEL                            "1'h0"                   D. 
-        CDMUX2_SEL                            "1'h0"                   D. 
-        DESKEW_CAL_BYPASS                     "1'h0"                   D. 
-        DESKEW_CAL_CNT                        "3'h0"                   D. 
-        DESKEW_CAL_EN                         "1'h0"                   D. 
-        DIV0_RST_DELAY                        "3'h0"                   D. 
-        DIV0_VAL                              "7'h0"                   D. 
-        DIV1_RST_DELAY                        "3'h0"                   D. 
-        DIV1_VAL                              "7'h0"                   D. 
-        DIV2_RST_DELAY                        "3'h0"                   D. 
-        DIV2_VAL                              "7'h0"                   D. 
-        DIV3_CLK_SEL                          "1'h0"                   D. 
-        DIV3_RST_DELAY                        "3'h0"                   D. 
-        DIV3_VAL                              "7'h0"                   D. 
-        DRI_EN                                "1'h1"                   D. 
-        FB_CLK_SEL_0                          "2'h0"                   D. 
-        FB_CLK_SEL_1                          "1'h0"                   D. 
-        FB_FRAC_VAL                           "24'h0"                  D. 
-        FB_INT_VAL                            "12'h0"                  D. 
-        FF_REQUIRES_LOCK                      "1'h0"                   D. 
-        FRAC_DAC_EN                           "1'h0"                   D. 
-        FRAC_EN                               "1'h0"                   D. 
-        FSE_N                                 "1'h0"                   D. 
-        IREF_EN                               "1'h0"                   D. 
-        IREF_TOGGLE                           "1'h0"                   D. 
-        LOCK_CNT                              "4'h8"                   D. 
-        OUT0_DIV_EN                           "1'h1"                   D. 
-        OUT0_PHASE_SEL                        "3'h0"                   D. 
-        OUT1_DIV_EN                           "1'h1"                   D. 
-        OUT1_PHASE_SEL                        "3'h0"                   D. 
-        OUT2_DIV_EN                           "1'h1"                   D. 
-        OUT2_PHASE_SEL                        "3'h0"                   D. 
-        OUT3_DIV_EN                           "1'h1"                   D. 
-        OUT3_PHASE_SEL                        "3'h0"                   D. 
-        RESET_ON_LOCK                         "1'h0"                   D. 
-        RFDIV                                 "6'h0"                   D. 
-        RFDIV_EN                              "1'h0"                   D. 
-        SOFTRESET                             "1'h0"                   D. 
-        SOFT_LOAD_PHASE_N                     "1'h1"                   D. 
-        SOFT_POWERDOWN_N                      "1'h0"                   D. 
-        SOFT_REF_CLK_SEL                      "1'h1"                   D. 
-        SSM_DIV_VAL                           "6'h0"                   D. 
-        SSM_EN_N                              "1'h0"                   D. 
-        SSM_EXT_WAVE_EN                       "2'h0"                   D. 
-        SSM_EXT_WAVE_MAX_ADDR                 "8'h0"                   D. 
-        SSM_MODULATION                        "5'h0"                   D. 
-        SSM_RANDOM_EN                         "1'h0"                   D. 
-        SSM_RANDOM_PATTERN_SEL                "2'h0"                   D. 
-        SSM_SPREAD_MODE                       "1'h0"                   D. 
-        SYNC_REF_DIV_EN                       "1'h1"                   D. 
-        SYNC_REF_DIV_EN_2                     "1'h0"                   D. 
-End_Module.
-
 Module  PLL_NW_1                              1    377      12   1490 PLL             .
         BW_INT_CTRL                           "2'h2"                   D. 
         BW_PROP_CTRL                          "2'h1"                   D. 
@@ -4038,40 +4072,6 @@ Module  DLL_NW_1                              3    377      7    1489 DLL       
         SOFT_PHASE_LOAD                       "1'h0"                   D. 
         SOFT_PHASE_MOVE_CLK                   "1'h0"                   D. 
         TEST_RING                             "1'h0"                   D. 
-End_Module.
-
-Module  CRNCOMMON_NW                          6    377      30   1495 CRNCOMMON       .
-        PC_CDMUX6_SEL                         "1'h0"                   D. 
-        PC_CIMUX_GEN0_SEL                     "4'h0"                   D. 
-        PC_CIMUX_GEN1_SEL                     "4'h0"                   D. 
-        PC_CIMUX_GEN2_SEL                     "4'h0"                   D. 
-        PC_CIMUX_GEN3_SEL                     "4'h0"                   D. 
-        PC_CIMUX_GEN4_SEL                     "2'h0"                   D. 
-        PC_CIMUX_GEN5_SEL                     "2'h0"                   D. 
-        PC_CIMUX_REF0_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF1_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF2_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF3_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF4_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF5_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF6_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF7_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF8_SEL                     "4'h0"                   D. 
-        PC_CIMUX_REF9_SEL                     "4'h0"                   D. 
-        PC_COMUX0_SEL                         "4'h0"                   D. 
-        PC_COMUX1_SEL                         "4'h0"                   D. 
-        PC_COMUX2_SEL                         "4'h0"                   D. 
-        PC_COMUX3_SEL                         "4'h0"                   D. 
-        PC_COMUX4_SEL                         "4'h0"                   D. 
-        PC_COMUX5_SEL                         "4'h0"                   D. 
-        PC_COMUX6_SEL                         "4'h0"                   D. 
-        PC_COMUX7_SEL                         "4'h0"                   D. 
-        PC_CRNFDR_HORZ_EN                     "8'h0"                   D. 
-        PC_CRNFR_VERT_EN                      "8'h0"                   D. 
-        PC_DYN_EN                             "1'h1"                   D. 
-        PC_SOFTRESET                          "1'h0"                   D. 
-        PC_SRMUX0_SEL                         "3'h0"                   D. 
-        PC_SRMUX1_SEL                         "3'h0"                   D. 
 End_Module.
 
 Module  VREFBANKDYNPC_NW_V                    11   377      0    1491 VREFBANKDYN     .

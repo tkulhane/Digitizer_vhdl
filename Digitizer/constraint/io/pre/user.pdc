@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Thu Sep 14 18:27:31 2023 
+# Date generated: Wed Oct 11 21:38:53 2023 
 
 
 # 
@@ -57,12 +57,117 @@ set_iobank -bank_name Bank7  \
 # User Locked I/O settings
 # 
 
+set_io -port_name ADC_FD  \
+    -pin_name G11         \
+    -fixed true           \
+    -io_std LVCMOS33      \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_0  \
+    -pin_name G14             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_1  \
+    -pin_name K6              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_2  \
+    -pin_name D9              \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_3  \
+    -pin_name G12             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_GPIO_4  \
+    -pin_name H14             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_LDO_PWR_GOOD  \
+    -pin_name E11                   \
+    -fixed true                     \
+    -io_std LVCMOS33                \
+    -DIRECTION INPUT
+
+
+set_io -port_name ADC_PWDN  \
+    -pin_name A5            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_PWR_RUN  \
+    -pin_name A8               \
+    -fixed true                \
+    -io_std LVCMOS33           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_sclk  \
+    -pin_name B5            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name ADC_sdio  \
+    -pin_name F7            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION INOUT
+
+
+set_io -port_name ADC_ss_n  \
+    -pin_name F9            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name BOARD_PWR_RUN  \
+    -pin_name A7                 \
+    -fixed true                  \
+    -io_std LVCMOS33             \
+    -DIRECTION OUTPUT
+
+
 set_io -port_name BTN_1  \
     -pin_name T4         \
     -fixed true          \
     -io_std LVCMOS33     \
     -RES_PULL None       \
     -DIRECTION INPUT
+
+
+set_io -port_name CLK_OUT_N  \
+    -pin_name A10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name CLK_OUT_P  \
+    -pin_name B10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
 
 
 set_io -port_name DBGport_0  \
@@ -121,48 +226,64 @@ set_io -port_name DBGport_7  \
     -DIRECTION OUTPUT
 
 
-set_io -port_name DBGport_8  \
-    -pin_name AL25           \
-    -fixed true              \
+set_io -port_name EXT_ADC_Reset_N  \
+    -pin_name G9                   \
+    -fixed true                    \
+    -io_std LVCMOS33               \
     -DIRECTION OUTPUT
 
 
-set_io -port_name DBGport_9  \
-    -pin_name AH22           \
-    -fixed true              \
+set_io -port_name EXT_HMC_Reset_N  \
+    -pin_name J14                  \
+    -fixed true                    \
+    -io_std LVCMOS33               \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name EXT_LMX1_Reset_N  \
+    -pin_name J19                   \
+    -fixed true                     \
+    -io_std LVCMOS33                \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name EXT_LMX2_Reset_N  \
+    -pin_name K7                    \
+    -fixed true                     \
+    -io_std LVCMOS33                \
     -DIRECTION OUTPUT
 
 
 set_io -port_name {FTDI_BE[0]}  \
-    -pin_name A8                \
+    -pin_name P5                \
     -fixed true                 \
     -io_std LVCMOS33            \
     -DIRECTION OUTPUT
 
 
 set_io -port_name {FTDI_BE[1]}  \
-    -pin_name A7                \
+    -pin_name P6                \
     -fixed true                 \
     -io_std LVCMOS33            \
     -DIRECTION OUTPUT
 
 
 set_io -port_name {FTDI_BE[2]}  \
-    -pin_name G11               \
+    -pin_name L2                \
     -fixed true                 \
     -io_std LVCMOS33            \
     -DIRECTION OUTPUT
 
 
 set_io -port_name {FTDI_BE[3]}  \
-    -pin_name G12               \
+    -pin_name L3                \
     -fixed true                 \
     -io_std LVCMOS33            \
     -DIRECTION OUTPUT
 
 
 set_io -port_name FTDI_CLK  \
-    -pin_name G4            \
+    -pin_name H1            \
     -fixed true             \
     -io_std LVCMOS33        \
     -RES_PULL None          \
@@ -173,23 +294,20 @@ set_io -port_name {FTDI_DATA[0]}  \
     -pin_name B1                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[1]}  \
-    -pin_name F5                  \
+    -pin_name C1                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[2]}  \
-    -pin_name C1                  \
+    -pin_name F5                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
@@ -197,7 +315,6 @@ set_io -port_name {FTDI_DATA[3]}  \
     -pin_name G5                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
@@ -205,23 +322,20 @@ set_io -port_name {FTDI_DATA[4]}  \
     -pin_name B2                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[5]}  \
-    -pin_name E8                  \
+    -pin_name C2                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[6]}  \
-    -pin_name C2                  \
+    -pin_name E8                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
@@ -229,239 +343,215 @@ set_io -port_name {FTDI_DATA[7]}  \
     -pin_name E7                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[8]}  \
-    -pin_name D6                  \
+    -pin_name T8                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[9]}  \
-    -pin_name C8                  \
+    -pin_name T7                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -RES_PULL None                \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[10]}  \
-    -pin_name E6                   \
+    -pin_name D6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[11]}  \
-    -pin_name D8                   \
+    -pin_name E6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[12]}  \
-    -pin_name H8                   \
+    -pin_name P3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[13]}  \
-    -pin_name C4                   \
+    -pin_name P4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[14]}  \
-    -pin_name H9                   \
+    -pin_name M5                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[15]}  \
-    -pin_name C3                   \
+    -pin_name M6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[16]}  \
-    -pin_name H11                  \
+    -pin_name C8                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[17]}  \
-    -pin_name G7                   \
+    -pin_name D8                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[18]}  \
-    -pin_name J11                  \
+    -pin_name H8                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[19]}  \
-    -pin_name H7                   \
+    -pin_name H9                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[20]}  \
-    -pin_name A3                   \
+    -pin_name N6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[21]}  \
-    -pin_name A4                   \
+    -pin_name N7                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[22]}  \
-    -pin_name A2                   \
+    -pin_name M1                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[23]}  \
-    -pin_name B4                   \
+    -pin_name M2                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[24]}  \
-    -pin_name A5                   \
+    -pin_name C4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[25]}  \
-    -pin_name B5                   \
+    -pin_name C3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[26]}  \
-    -pin_name B6                   \
+    -pin_name H3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[27]}  \
-    -pin_name C6                   \
+    -pin_name H4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[28]}  \
-    -pin_name B7                   \
+    -pin_name A3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[29]}  \
-    -pin_name C7                   \
+    -pin_name A2                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[30]}  \
-    -pin_name F7                   \
+    -pin_name M4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name {FTDI_DATA[31]}  \
-    -pin_name F8                   \
+    -pin_name L4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -RES_PULL None                 \
     -DIRECTION INOUT
 
 
 set_io -port_name FTDI_GPIO_0  \
-    -pin_name B9               \
+    -pin_name N3               \
     -fixed true                \
     -io_std LVCMOS33           \
     -DIRECTION OUTPUT
 
 
 set_io -port_name FTDI_GPIO_1  \
-    -pin_name A9               \
+    -pin_name N4               \
     -fixed true                \
     -io_std LVCMOS33           \
     -DIRECTION OUTPUT
 
 
 set_io -port_name FTDI_RESET_N  \
-    -pin_name F10               \
+    -pin_name N1                \
     -fixed true                 \
     -io_std LVCMOS33            \
     -DIRECTION OUTPUT
 
 
 set_io -port_name FTDI_nOE  \
-    -pin_name C11           \
+    -pin_name K5            \
     -fixed true             \
     -io_std LVCMOS33        \
     -DIRECTION OUTPUT
 
 
 set_io -port_name FTDI_nRD  \
-    -pin_name B11           \
+    -pin_name L5            \
     -fixed true             \
     -io_std LVCMOS33        \
+    -OUT_DRIVE 16           \
     -DIRECTION OUTPUT
 
 
 set_io -port_name FTDI_nRXF  \
-    -pin_name E10            \
+    -pin_name H7             \
     -fixed true              \
     -io_std LVCMOS33         \
     -RES_PULL None           \
@@ -469,7 +559,7 @@ set_io -port_name FTDI_nRXF  \
 
 
 set_io -port_name FTDI_nTXE  \
-    -pin_name E11            \
+    -pin_name G7             \
     -fixed true              \
     -io_std LVCMOS33         \
     -RES_PULL None           \
@@ -477,10 +567,93 @@ set_io -port_name FTDI_nTXE  \
 
 
 set_io -port_name FTDI_nWR  \
-    -pin_name F13           \
+    -pin_name R5            \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -OUT_DRIVE 16           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name GPIO_0  \
+    -pin_name L19         \
+    -fixed true           \
+    -io_std LVCMOS33      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name GPIO_1  \
+    -pin_name L18         \
+    -fixed true           \
+    -io_std LVCMOS33      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HMC_GPIO_0  \
+    -pin_name H12             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -RES_PULL Down            \
+    -DIRECTION INPUT
+
+
+set_io -port_name HMC_GPIO_1  \
+    -pin_name H13             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -RES_PULL Down            \
+    -DIRECTION INPUT
+
+
+set_io -port_name HMC_GPIO_2  \
+    -pin_name G16             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -RES_PULL Down            \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HMC_GPIO_3  \
+    -pin_name G15             \
+    -fixed true               \
+    -io_std LVCMOS33          \
+    -RES_PULL Down            \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HMC_SYNC  \
+    -pin_name J13           \
     -fixed true             \
     -io_std LVCMOS33        \
     -DIRECTION OUTPUT
+
+
+set_io -port_name HMC_sclk  \
+    -pin_name J16           \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name HMC_sdio  \
+    -pin_name H17           \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -RES_PULL Down          \
+    -DIRECTION INOUT
+
+
+set_io -port_name HMC_ss_n  \
+    -pin_name K16           \
+    -fixed true             \
+    -io_std LVCMOS33        \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LDO_PWR_GOOD  \
+    -pin_name E10               \
+    -fixed true                 \
+    -io_std LVCMOS33            \
+    -DIRECTION INPUT
 
 
 set_io -port_name LED_1  \
@@ -511,6 +684,62 @@ set_io -port_name LED_4  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name LMX1_miso  \
+    -pin_name J18            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INPUT
+
+
+set_io -port_name LMX1_mosi  \
+    -pin_name K18            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LMX1_sclk  \
+    -pin_name K17            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LMX1_ss_n  \
+    -pin_name H16            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LMX2_miso  \
+    -pin_name J8             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INPUT
+
+
+set_io -port_name LMX2_mosi  \
+    -pin_name R7             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LMX2_sclk  \
+    -pin_name R8             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LMX2_ss_n  \
+    -pin_name K8             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
 set_io -port_name RX_0  \
     -pin_name U7        \
     -fixed true         \
@@ -525,10 +754,66 @@ set_io -port_name RX_1  \
     -DIRECTION INPUT
 
 
-set_io -port_name SIWU_N  \
-    -pin_name E13         \
-    -fixed true           \
-    -io_std LVCMOS33      \
+set_io -port_name SMPS_PWR_GOOD  \
+    -pin_name H2                 \
+    -fixed true                  \
+    -io_std LVCMOS33             \
+    -DIRECTION INPUT
+
+
+set_io -port_name SYNCINB_N  \
+    -pin_name F10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNCINB_P  \
+    -pin_name G10            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_IN_N  \
+    -pin_name E12            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION INPUT
+
+
+set_io -port_name SYNC_IN_P  \
+    -pin_name F12            \
+    -fixed true              \
+    -io_std LVDS33           \
+    -DIRECTION INPUT
+
+
+set_io -port_name SYNC_OUT_1_N  \
+    -pin_name M17               \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_OUT_1_P  \
+    -pin_name L17               \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_OUT_2_N  \
+    -pin_name M7                \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name SYNC_OUT_2_P  \
+    -pin_name N8                \
+    -fixed true                 \
+    -io_std LVDS33              \
     -DIRECTION OUTPUT
 
 
@@ -557,242 +842,6 @@ set_io -port_name TX_1  \
 # The I/Os in this section are unplaced or placed but are not locked
 # the other listed attributes have been applied
 # 
-
-set_io -port_name ADC_FD  \
-    -io_std LVCMOS33      \
-    -DIRECTION INPUT
-
-
-set_io -port_name ADC_GPIO_0  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name ADC_GPIO_1  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name ADC_GPIO_2  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name ADC_GPIO_3  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name ADC_GPIO_4  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name ADC_LDO_PWR_GOOD  \
-    -io_std LVCMOS33                \
-    -DIRECTION INPUT
-
-
-set_io -port_name ADC_PWDN  \
-    -io_std LVCMOS33        \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name ADC_PWR_RUN  \
-    -io_std LVCMOS33           \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name ADC_sclk  \
-    -io_std LVCMOS33        \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name ADC_sdio  \
-    -io_std LVCMOS33        \
-    -DIRECTION INOUT
-
-
-set_io -port_name ADC_ss_n  \
-    -io_std LVCMOS33        \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name BOARD_PWR_RUN  \
-    -io_std LVCMOS33             \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name CLK_OUT_N  \
-    -io_std LVDS33           \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name CLK_OUT_P  \
-    -io_std LVDS33           \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name EXT_ADC_Reset_N  \
-    -io_std LVCMOS33               \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name EXT_HMC_Reset_N  \
-    -io_std LVCMOS33               \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name EXT_LMX1_Reset_N  \
-    -io_std LVCMOS33                \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name EXT_LMX2_Reset_N  \
-    -io_std LVCMOS33                \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name GPIO_0  \
-    -io_std LVCMOS33      \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name GPIO_1  \
-    -io_std LVCMOS33      \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HMC_GPIO_0  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name HMC_GPIO_1  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name HMC_GPIO_2  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name HMC_GPIO_3  \
-    -io_std LVCMOS33          \
-    -DIRECTION INPUT
-
-
-set_io -port_name HMC_SYNC  \
-    -io_std LVCMOS33        \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HMC_sclk  \
-    -io_std LVCMOS33        \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name HMC_sdio  \
-    -io_std LVCMOS33        \
-    -RES_PULL None          \
-    -DIRECTION INOUT
-
-
-set_io -port_name HMC_ss_n  \
-    -io_std LVCMOS33        \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LDO_PWR_GOOD  \
-    -io_std LVCMOS33            \
-    -DIRECTION INPUT
-
-
-set_io -port_name LMX1_miso  \
-    -io_std LVCMOS33         \
-    -DIRECTION INPUT
-
-
-set_io -port_name LMX1_mosi  \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LMX1_sclk  \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LMX1_ss_n  \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LMX2_miso  \
-    -io_std LVCMOS33         \
-    -DIRECTION INPUT
-
-
-set_io -port_name LMX2_mosi  \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LMX2_sclk  \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LMX2_ss_n  \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name SMPS_PWR_GOOD  \
-    -io_std LVCMOS33             \
-    -DIRECTION INPUT
-
-
-set_io -port_name SYNCINB_N  \
-    -io_std LVDS33           \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name SYNCINB_P  \
-    -io_std LVDS33           \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name SYNC_IN_N  \
-    -io_std LVDS33           \
-    -DIRECTION INPUT
-
-
-set_io -port_name SYNC_IN_P  \
-    -io_std LVDS33           \
-    -DIRECTION INPUT
-
-
-set_io -port_name SYNC_OUT_1_N  \
-    -io_std LVDS33              \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name SYNC_OUT_1_P  \
-    -io_std LVDS33              \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name SYNC_OUT_2_N  \
-    -io_std LVDS33              \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name SYNC_OUT_2_P  \
-    -io_std LVDS33              \
-    -DIRECTION OUTPUT
-
 
 
 #

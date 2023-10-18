@@ -15,6 +15,7 @@ entity Communication_Switch is
         addr_frame : in std_logic_vector(7 downto 0);
         write_data_frame : in std_logic_vector(15 downto 0);
         read_data_frame : out std_logic_vector(15 downto 0);
+        comm_number : in std_logic_vector(3 downto 0);
         
         --communication builder and fifo
         Builder_Enable : out std_logic;
@@ -221,7 +222,7 @@ begin
                         read_data_frame <=  x"000" & '0' & Communication_vote_vector;
 
                     when CMD_COMSW_CMD_COM_SOURCE =>
-                        read_data_frame <= x"ABCD";
+                        read_data_frame <= x"000" & comm_number;
 
                     when others =>
                         read_data_frame <= (others => '0');

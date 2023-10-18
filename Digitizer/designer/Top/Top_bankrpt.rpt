@@ -1,5 +1,5 @@
 ********************************************************************
-I/O Bank Report - Date: Sat Sep 23 19:48:23 2023
+I/O Bank Report - Date: Wed Oct 11 21:43:49 2023
 Product: Designer
 Release: v2022.1
 Version: 2022.1.0.10
@@ -14,8 +14,8 @@ I/O Function:
 
     Type                                  | w/o register  | w/ register  | w/ DDR register
     --------------------------------------|---------------|--------------|----------------
-    Input I/O                             | 21            | 0            | 0
-    Output I/O                            | 47            | 0            | 0
+    Input I/O                             | 19            | 0            | 0
+    Output I/O                            | 49            | 0            | 0
     Bidirectional I/O                     | 34            | 0            | 0
     Differential Input I/O Pairs          | 1             | 0            | 0
     Differential Output I/O Pairs         | 4             | 0            | 0
@@ -26,8 +26,8 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vddi  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVCMOS18                        | 1.80v | N/A   | 0     | 2      | 0            
-    LVCMOS33                        | 3.30v | N/A   | 21    | 45     | 34           
+    LVCMOS18                        | 1.80v | N/A   | 0     | 3      | 0            
+    LVCMOS33                        | 3.30v | N/A   | 19    | 46     | 34           
     LVDS33                          | 3.30v | N/A   | 2     | 8      | 0            
 
 I/O Bank Resource Usage:
@@ -37,11 +37,11 @@ I/O Bank Resource Usage:
           | Vddi  | Vref  | Used | Total | Used  | Total  | Used | Total | Vref Pins|         
     ------|-------|-------|------|-------|-------|--------|------|-------|----------|---------
     Bank0 | 1.35v | N/A   | 0    | 72    | 0     | 36     | N/A  | N/A   | N/A      | HSIO    
-    Bank1 | 1.80v | N/A   | 2    | 60    | 0     | 30     | N/A  | N/A   | N/A      | HSIO    
-    Bank2 | 3.30v | N/A   | 51   | 96    | 1     | 48     | N/A  | N/A   | N/A      | GPIO    
+    Bank1 | 1.80v | N/A   | 3    | 60    | 0     | 30     | N/A  | N/A   | N/A      | HSIO    
+    Bank2 | 3.30v | N/A   | 50   | 96    | 4     | 48     | N/A  | N/A   | N/A      | GPIO    
     Bank3 | 1.80v | N/A   | 0    | 0     | 0     | 0      | N/A  | N/A   | N/A      | JTAG    
-    Bank4 | 3.30v | N/A   | 17   | 92    | 2     | 46     | N/A  | N/A   | N/A      | GPIO    
-    Bank5 | 3.30v | N/A   | 32   | 48    | 2     | 24     | N/A  | N/A   | N/A      | GPIO    
+    Bank4 | 3.30v | N/A   | 19   | 92    | 0     | 46     | N/A  | N/A   | N/A      | GPIO    
+    Bank5 | 3.30v | N/A   | 30   | 48    | 1     | 24     | N/A  | N/A   | N/A      | GPIO    
     Bank6 | 1.35v | N/A   | 0    | 72    | 0     | 36     | N/A  | N/A   | N/A      | HSIO    
     Bank7 | 1.35v | N/A   | 0    | 72    | 0     | 36     | N/A  | N/A   | N/A      | HSIO    
 
@@ -52,6 +52,6 @@ I/O Voltage Usage:
      Vddi  | Vref  | Used | Total 
     -------|-------|------|-------
      1.35v | N/A   | 0    | 216   
-     1.80v | N/A   | 2    | 60    
-     3.30v | N/A   | 110  | 236   
+     1.80v | N/A   | 3    | 60    
+     3.30v | N/A   | 109  | 236   
 

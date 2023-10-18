@@ -1,4 +1,4 @@
-# Sat Sep 23 19:41:24 2023
+# Wed Oct 11 21:34:57 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -27,6 +27,7 @@ Reading constraint file: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designe
 See clock summary report "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_scck.rpt"
 @W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":10:0:10:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 @W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":11:0:11:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+@W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":12:0:12:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 @N: MF472 |Synthesis running in Automatic Compile Point mode
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
@@ -49,20 +50,17 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @W: BN114 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":15:8:15:15|Removing instance gnd_inst (in view: work.PF_OSC_C0_PF_OSC_C0_0_PF_OSC(verilog)) because it does not drive other instances.
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|User-specified initial value defined for instance Controler_0.SPI_LMX_0_0.spi_master_0.rxBuffer[23:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|User-specified initial value defined for instance Controler_0.SPI_LMX_0_0.spi_master_0.txBuffer[23:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":579:8:579:9|User-specified initial value defined for instance Controler_0.Command_Decoder_0.counter[31:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":581:8:581:9|User-specified initial value defined for instance Controler_0.Command_Decoder_0.counter[31:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":245:8:245:9|User-specified initial value defined for instance Controler_0.ADI_SPI_0.counter[8:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":158:8:158:9|User-specified initial value defined for instance Data_Block_0.Trigger_Top_Part_0.Trigger_Main_0.Remaining_Number_Of_Samples[19:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":391:8:391:9|User-specified initial value defined for instance Data_Block_0.Trigger_Top_Part_0.Trigger_Control_0.finite_event_counter[31:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":501:8:501:9|User-specified initial value defined for instance Data_Block_0.FIFOs_Reader_0.Event_RAM_W_Address_Integer[9:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\uart_rx_protocol.vhd":503:8:503:9|User-specified initial value defined for instance UART_Protocol_1.UART_RX_Protocol_0.counter[31:0] is being ignored due to limitations in architecture. 
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_switch.vhd":194:8:194:9|Removing sequential instance Communication_Switch_0.read_data_frame_1[15] because it is equivalent to instance Communication_Switch_0.read_data_frame_1[13]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_switch.vhd":194:8:194:9|Removing sequential instance Communication_Switch_0.read_data_frame_1[13] because it is equivalent to instance Communication_Switch_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_switch.vhd":194:8:194:9|Removing sequential instance Communication_Switch_0.read_data_frame_1[6] because it is equivalent to instance Communication_Switch_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
 Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 237MB peak: 237MB)
 
 
-Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 237MB peak: 237MB)
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 237MB peak: 238MB)
 
 
 Start optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 238MB peak: 238MB)
@@ -190,7 +188,7 @@ Only the first 100 messages of id 'BN362' are reported. To see all messages use 
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
 
-Finished optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 238MB peak: 238MB)
+Finished optimization across hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 238MB peak: 239MB)
 
 @N: FP130 |Promoting Net Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_arst on CLKINT  I_2 
 @N: FP130 |Promoting Net Controler_0.Reset_Controler_0.INT_DataFifo_Reset_N_arst on CLKINT  I_2 
@@ -211,11 +209,11 @@ Level     Clock                                                               Fr
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 0 -       FTDI_CLK                                                            100.0 MHz     10.000        declared     default_clkgroup          248  
                                                                                                                                                       
-0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared     default_clkgroup          1    
+0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared     default_clkgroup          2    
                                                                                                                                                       
 0 -       System                                                              100.0 MHz     10.000        system       system_clkgroup           0    
                                                                                                                                                       
-0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6914 
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6913 
                                                                                                                                                       
 0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_2     1112 
 ======================================================================================================================================================
@@ -230,23 +228,23 @@ Clock                                                               Load      Pi
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 FTDI_CLK                                                            248       FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.AF_DATA_Buffer_Valid.C     -                 BUFD_0.A(BUFD)                                             
                                                                                                                                                                                                                                                                                                     
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0         -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 2         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C3_0.PF_CCC_C3_0.pll_inst_0.REF_CLK_0         -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
                                                                                                                                                                                                                                                                                                     
 System                                                              0         -                                                                     -                                                                  -                 -                                                          
                                                                                                                                                                                                                                                                                                     
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6914      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6].C      -                 OUTBUF_DIFF_0_0_0.D(OUTBUF_DIFF)                           
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6913      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6].C      -                 Controler_0.SPI_LMX_0_0.spi_master_0.un1_clk.I[0](inv)     
                                                                                                                                                                                                                                                                                                     
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                    -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
 ====================================================================================================================================================================================================================================================================================================
 
-@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 6914 sequential elements including Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 6913 sequential elements including Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock which controls 1112 sequential elements including Clock_Reset_0.Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 232MB peak: 252MB)
+Starting constraint checker (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 232MB peak: 252MB)
 
 Encoding state machine state_reg[0:5] (in view: work.Reset_Controler(rtl))
 original code -> new code
@@ -506,7 +504,7 @@ Pre-mapping successful!
 
 At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 156MB peak: 252MB)
 
-Process took 0h:00m:04s realtime, 0h:00m:04s cputime
-# Sat Sep 23 19:41:28 2023
+Process took 0h:00m:05s realtime, 0h:00m:05s cputime
+# Wed Oct 11 21:35:03 2023
 
 ###########################################################]

@@ -3,6 +3,8 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3_0\PF_CCC_C3_PF_CCC_C3_0_PF_CCC.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_OSC_C0\PF_OSC_C0_0\PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v}

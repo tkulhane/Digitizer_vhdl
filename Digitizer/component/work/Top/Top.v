@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sat Sep 23 19:40:22 2023
+// Created by SmartDesign Wed Oct 11 21:33:51 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -24,8 +24,6 @@ module Top(
     FTDI_nTXE,
     HMC_GPIO_0,
     HMC_GPIO_1,
-    HMC_GPIO_2,
-    HMC_GPIO_3,
     LDO_PWR_GOOD,
     LMX1_miso,
     LMX2_miso,
@@ -64,6 +62,8 @@ module Top(
     FTDI_nWR,
     GPIO_0,
     GPIO_1,
+    HMC_GPIO_2,
+    HMC_GPIO_3,
     HMC_SYNC,
     HMC_sclk,
     HMC_ss_n,
@@ -112,8 +112,6 @@ input         FTDI_nRXF;
 input         FTDI_nTXE;
 input         HMC_GPIO_0;
 input         HMC_GPIO_1;
-input         HMC_GPIO_2;
-input         HMC_GPIO_3;
 input         LDO_PWR_GOOD;
 input         LMX1_miso;
 input         LMX2_miso;
@@ -154,6 +152,8 @@ output        FTDI_nRD;
 output        FTDI_nWR;
 output        GPIO_0;
 output        GPIO_1;
+output        HMC_GPIO_2;
+output        HMC_GPIO_3;
 output        HMC_SYNC;
 output        HMC_sclk;
 output        HMC_ss_n;
@@ -202,6 +202,7 @@ wire          BOARD_PWR_RUN_net_0;
 wire          BTN_1;
 wire          CLK_OUT_N_net_0;
 wire          CLK_OUT_P_net_0;
+wire          Clock_Reset_0_HMC_CLK;
 wire          Clock_Reset_0_Main_CLOCK_0;
 wire          Clock_Reset_0_Main_RESET_N_0;
 wire          Clock_Reset_0_UART_CLOCK_0;
@@ -213,6 +214,7 @@ wire          Communication_Switch_0_DEST_2_Fifo_Empty;
 wire   [31:0] Communication_Switch_0_DEST_3_Fifo_Data;
 wire   [15:0] Communication_Switch_0_read_data_frame;
 wire   [7:0]  Controler_0_COMSW_addr;
+wire   [3:0]  Controler_0_COMSW_comm_number;
 wire   [15:0] Controler_0_COMSW_data;
 wire          Controler_0_COMSW_enable_cmd;
 wire          Controler_0_COMSW_write_read;
@@ -255,7 +257,6 @@ wire          DBGport_4_3;
 wire          FTDI_nTXE;
 wire          DBGport_5_net_0;
 wire          DBGport_5_0;
-wire          DBGport_5_1;
 wire          DBGport_5_3;
 wire          DBGport_5_4;
 wire          BTN_2;
@@ -267,14 +268,15 @@ wire          FTDI_CLK;
 wire   [31:0] FTDI_DATA;
 wire          FTDI_GPIO_0_net_0;
 wire          FTDI_GPIO_1_net_0;
+wire          FTDI_nRD_net_0;
 wire          FTDI_nRXF;
 wire          FTDI_RESET_N_net_0;
 wire          GPIO_0_net_0;
 wire          GPIO_1_net_0;
 wire          HMC_GPIO_0;
 wire          HMC_GPIO_1;
-wire          HMC_GPIO_2;
-wire          HMC_GPIO_3;
+wire          HMC_GPIO_2_net_0;
+wire          HMC_GPIO_3_net_0;
 wire          HMC_sdio;
 wire          HMC_ss_n_net_0;
 wire          HMC_SYNC_net_0;
@@ -315,8 +317,8 @@ wire   [39:0] USB_3_Protocol_0_RX_FIFO_Data;
 wire          DBGport_0_3_net_0;
 wire          DBGport_1_3_net_0;
 wire          DBGport_4_4_net_0;
-wire          DBGport_5_4_net_0;
 wire          FTDI_nRXF_net_0;
+wire          FTDI_nRD_net_1;
 wire          DBGport_7_0_net_0;
 wire          TX_0_net_1;
 wire          TX_1_net_1;
@@ -326,12 +328,12 @@ wire          LED_3_net_1;
 wire          LED_4_net_1;
 wire          DBGport_2_4_net_0;
 wire          DBGport_3_2_net_0;
-wire          DBGport_5_4_net_1;
+wire          DBGport_5_4_net_0;
 wire          FTDI_GPIO_1_net_1;
 wire          FTDI_GPIO_0_net_1;
 wire          FTDI_RESET_N_net_1;
 wire          DBGport_4_3_net_0;
-wire          DBGport_5_1_net_0;
+wire          FTDI_nRD_net_2;
 wire          ADC_sclk_net_1;
 wire          ADC_ss_n_net_1;
 wire          DBGport_3_0_net_0;
@@ -361,6 +363,8 @@ wire          CLK_OUT_N_net_1;
 wire          SYNCINB_P_net_1;
 wire          SYNCINB_N_net_1;
 wire          SIWU_N_net_1;
+wire          HMC_GPIO_2_net_1;
+wire          HMC_GPIO_3_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -389,10 +393,10 @@ assign DBGport_1_3_net_0   = DBGport_1_3;
 assign DBGport_1           = DBGport_1_3_net_0;
 assign DBGport_4_4_net_0   = FTDI_nTXE;
 assign DBGport_4           = DBGport_4_4_net_0;
-assign DBGport_5_4_net_0   = DBGport_5_4;
-assign DBGport_5           = DBGport_5_4_net_0;
 assign FTDI_nRXF_net_0     = FTDI_nRXF;
-assign DBGport_6           = FTDI_nRXF_net_0;
+assign DBGport_5           = FTDI_nRXF_net_0;
+assign FTDI_nRD_net_1      = FTDI_nRD_net_0;
+assign DBGport_6           = FTDI_nRD_net_1;
 assign DBGport_7_0_net_0   = DBGport_7_0;
 assign DBGport_7           = DBGport_7_0_net_0;
 assign TX_0_net_1          = TX_0_net_0;
@@ -411,8 +415,8 @@ assign DBGport_2_4_net_0   = DBGport_2_4;
 assign DBGport_2           = DBGport_2_4_net_0;
 assign DBGport_3_2_net_0   = DBGport_3_2;
 assign DBGport_3           = DBGport_3_2_net_0;
-assign DBGport_5_4_net_1   = DBGport_5_4;
-assign FTDI_nWR            = DBGport_5_4_net_1;
+assign DBGport_5_4_net_0   = DBGport_5_4;
+assign FTDI_nWR            = DBGport_5_4_net_0;
 assign FTDI_GPIO_1_net_1   = FTDI_GPIO_1_net_0;
 assign FTDI_GPIO_1         = FTDI_GPIO_1_net_1;
 assign FTDI_GPIO_0_net_1   = FTDI_GPIO_0_net_0;
@@ -421,8 +425,8 @@ assign FTDI_RESET_N_net_1  = FTDI_RESET_N_net_0;
 assign FTDI_RESET_N        = FTDI_RESET_N_net_1;
 assign DBGport_4_3_net_0   = DBGport_4_3;
 assign FTDI_nOE            = DBGport_4_3_net_0;
-assign DBGport_5_1_net_0   = DBGport_5_1;
-assign FTDI_nRD            = DBGport_5_1_net_0;
+assign FTDI_nRD_net_2      = FTDI_nRD_net_0;
+assign FTDI_nRD            = FTDI_nRD_net_2;
 assign ADC_sclk_net_1      = ADC_sclk_net_0;
 assign ADC_sclk            = ADC_sclk_net_1;
 assign ADC_ss_n_net_1      = ADC_ss_n_net_0;
@@ -481,6 +485,10 @@ assign SYNCINB_N_net_1     = SYNCINB_N_net_0;
 assign SYNCINB_N           = SYNCINB_N_net_1;
 assign SIWU_N_net_1        = SIWU_N_net_0;
 assign SIWU_N              = SIWU_N_net_1;
+assign HMC_GPIO_2_net_1    = HMC_GPIO_2_net_0;
+assign HMC_GPIO_2          = HMC_GPIO_2_net_1;
+assign HMC_GPIO_3_net_1    = HMC_GPIO_3_net_0;
+assign HMC_GPIO_3          = HMC_GPIO_3_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -500,7 +508,8 @@ Clock_Reset Clock_Reset_0(
         .Main_CLOCK   ( Clock_Reset_0_Main_CLOCK_0 ),
         .Main_RESET_N ( Clock_Reset_0_Main_RESET_N_0 ),
         .UART_CLOCK   ( Clock_Reset_0_UART_CLOCK_0 ),
-        .UART_RESER_N ( Clock_Reset_0_UART_RESER_N_0 ) 
+        .UART_RESER_N ( Clock_Reset_0_UART_RESER_N_0 ),
+        .HMC_CLK      ( Clock_Reset_0_HMC_CLK ) 
         );
 
 //--------Communication_Switch
@@ -510,24 +519,25 @@ Communication_Switch Communication_Switch_0(
         .Reset_N           ( Clock_Reset_0_Main_RESET_N_0 ),
         .enable_cmd        ( Controler_0_COMSW_enable_cmd ),
         .write_read        ( Controler_0_COMSW_write_read ),
+        .addr_frame        ( Controler_0_COMSW_addr ),
+        .write_data_frame  ( Controler_0_COMSW_data ),
+        .comm_number       ( Controler_0_COMSW_comm_number ),
         .DataFifo_Empty    ( DBGport_2_0 ),
+        .DafaFifo_Data     ( Data_Block_0_Communication_Data_Frame ),
         .DEST_1_Fifo_Read  ( DBGport_5_3 ),
         .DEST_2_Fifo_Read  ( UART_Protocol_1_MD_Fifo_RE ),
         .DEST_3_Fifo_Read  ( DBGport_3_net_0 ),
-        .addr_frame        ( Controler_0_COMSW_addr ),
-        .write_data_frame  ( Controler_0_COMSW_data ),
-        .DafaFifo_Data     ( Data_Block_0_Communication_Data_Frame ),
         // Outputs
         .busy              ( Communication_Switch_0_busy ),
+        .read_data_frame   ( Communication_Switch_0_read_data_frame ),
         .Builder_Enable    ( DBGport_1_net_0 ),
         .DataFifo_RD       ( DBGport_7_net_0 ),
-        .DEST_1_Fifo_Empty ( DBGport_4_2 ),
-        .DEST_2_Fifo_Empty ( Communication_Switch_0_DEST_2_Fifo_Empty ),
-        .DEST_3_Fifo_Empty ( DBGport_2_2 ),
-        .read_data_frame   ( Communication_Switch_0_read_data_frame ),
         .DEST_1_Fifo_Data  ( Communication_Switch_0_DEST_1_Fifo_Data ),
+        .DEST_1_Fifo_Empty ( DBGport_4_2 ),
         .DEST_2_Fifo_Data  ( Communication_Switch_0_DEST_2_Fifo_Data ),
-        .DEST_3_Fifo_Data  ( Communication_Switch_0_DEST_3_Fifo_Data ) 
+        .DEST_2_Fifo_Empty ( Communication_Switch_0_DEST_2_Fifo_Empty ),
+        .DEST_3_Fifo_Data  ( Communication_Switch_0_DEST_3_Fifo_Data ),
+        .DEST_3_Fifo_Empty ( DBGport_2_2 ) 
         );
 
 //--------Controler
@@ -550,10 +560,8 @@ Controler Controler_0(
         .ADC_GPIO_2               ( ADC_GPIO_2 ),
         .ADC_GPIO_3               ( ADC_GPIO_3 ),
         .ADC_GPIO_4               ( ADC_GPIO_4 ),
-        .HMC_GPIO_2               ( HMC_GPIO_2 ),
         .HMC_GPIO_0               ( HMC_GPIO_0 ),
         .HMC_GPIO_1               ( HMC_GPIO_1 ),
-        .HMC_GPIO_3               ( HMC_GPIO_3 ),
         .SMPS_PWR_GOOD            ( SMPS_PWR_GOOD ),
         .LDO_PWR_GOOD             ( LDO_PWR_GOOD ),
         .ADC_LDO_PWR_GOOD         ( ADC_LDO_PWR_GOOD ),
@@ -611,6 +619,9 @@ Controler Controler_0(
         .DEST_3_Fifo_Write_Data   ( Controler_0_DEST_3_Fifo_Write_Data ),
         .COMSW_addr               ( Controler_0_COMSW_addr ),
         .COMSW_data               ( Controler_0_COMSW_data ),
+        .COMSW_comm_number        ( Controler_0_COMSW_comm_number ),
+        .HMC_GPIO_3               ( HMC_GPIO_3_net_0 ),
+        .HMC_GPIO_2               ( HMC_GPIO_2_net_0 ),
         // Inouts
         .HMC_sdio                 ( HMC_sdio ),
         .ADC_sdio                 ( ADC_sdio ) 
@@ -670,7 +681,7 @@ OUTBUF_DIFF OUTBUF_DIFF_0_0(
 //--------OUTBUF_DIFF
 OUTBUF_DIFF OUTBUF_DIFF_0_0_0(
         // Inputs
-        .D    ( Clock_Reset_0_Main_CLOCK_0 ),
+        .D    ( Clock_Reset_0_HMC_CLK ),
         // Outputs
         .PADP ( CLK_OUT_P_net_0 ),
         .PADN ( CLK_OUT_N_net_0 ) 
@@ -748,7 +759,7 @@ USB_3_Protocol USB_3_Protocol_0(
         // Outputs
         .FTDI_nWR             ( DBGport_5_4 ),
         .FTDI_nOE             ( DBGport_4_3 ),
-        .FTDI_nRD             ( DBGport_5_1 ),
+        .FTDI_nRD             ( FTDI_nRD_net_0 ),
         .FTDI_RESET_N         (  ),
         .FTDI_GPIO_0          ( FTDI_GPIO_0_net_0 ),
         .FTDI_GPIO_1          ( FTDI_GPIO_1_net_0 ),

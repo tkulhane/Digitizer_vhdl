@@ -13,7 +13,7 @@ Hostname: DESKTOP-TDPVUTD
 
 Implementation : synthesis
 
-# Written on Sat Sep 23 19:41:24 2023
+# Written on Wed Oct 11 21:34:58 2023
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc"
@@ -35,11 +35,11 @@ Level     Clock                                                               Fr
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 0 -       FTDI_CLK                                                            100.0 MHz     10.000        declared     default_clkgroup          248  
                                                                                                                                                       
-0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared     default_clkgroup          1    
+0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     6.250         declared     default_clkgroup          2    
                                                                                                                                                       
 0 -       System                                                              100.0 MHz     10.000        system       system_clkgroup           0    
                                                                                                                                                       
-0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6914 
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_1     6913 
                                                                                                                                                       
 0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0_2     1112 
 ======================================================================================================================================================
@@ -53,11 +53,11 @@ Clock                                                               Load      Pi
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 FTDI_CLK                                                            248       FTDI_CLK(port)                                                        USB_3_Protocol_0.ft601_fifo_interface_0.AF_DATA_Buffer_Valid.C     -                 BUFD_0.A(BUFD)                                             
                                                                                                                                                                                                                                                                                                     
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 1         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0         -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 2         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)     Clock_Reset_0.PF_CCC_C3_0.PF_CCC_C3_0.pll_inst_0.REF_CLK_0         -                 Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)
                                                                                                                                                                                                                                                                                                     
 System                                                              0         -                                                                     -                                                                  -                 -                                                          
                                                                                                                                                                                                                                                                                                     
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6914      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6].C      -                 OUTBUF_DIFF_0_0_0.D(OUTBUF_DIFF)                           
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     6913      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)            USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6].C      -                 Controler_0.SPI_LMX_0_0.spi_master_0.un1_clk.I[0](inv)     
                                                                                                                                                                                                                                                                                                     
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     1112      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)            UART_Protocol_1.mko_0.MKO_OUT.C                                    -                 Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)     
 ====================================================================================================================================================================================================================================================================================================

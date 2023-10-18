@@ -84,6 +84,7 @@ entity Command_Decoder is
         COMSW_write_read : out std_logic;
         COMSW_addr : out std_logic_vector(7 downto 0);
         COMSW_data : out std_logic_vector(15 downto 0);
+        COMSW_comm_number : out std_logic_vector(3 downto 0);
         
 
         Diag_Valid : out std_logic
@@ -178,6 +179,7 @@ begin
 
     COMSW_addr <= cmd_data(23 downto 16);
     COMSW_data <= cmd_data(15 downto 0);
+    COMSW_comm_number <= cmd_status_comm;
 
     --decoder output routing to enable cmd signals
     RST_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Reset_Controler);

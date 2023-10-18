@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Aug 21 09:02:37 2023
+// Created by SmartDesign Mon Oct  9 10:22:29 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -10,6 +10,7 @@ module Clock_Reset(
     // Inputs
     EXT_RST_N,
     // Outputs
+    HMC_CLK,
     Main_CLOCK,
     Main_RESET_N,
     UART_CLOCK,
@@ -23,6 +24,7 @@ input  EXT_RST_N;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output HMC_CLK;
 output Main_CLOCK;
 output Main_RESET_N;
 output UART_CLOCK;
@@ -32,6 +34,7 @@ output UART_RESER_N;
 //--------------------------------------------------------------------
 wire   CORERESET_PF_C0_0_PLL_POWERDOWN_B;
 wire   EXT_RST_N;
+wire   HMC_CLK_net_0;
 wire   Main_CLOCK_net_0;
 wire   Main_RESET_N_net_0;
 wire   PF_CCC_C0_0_PLL_LOCK_0;
@@ -44,6 +47,7 @@ wire   Main_CLOCK_net_1;
 wire   Main_RESET_N_net_1;
 wire   UART_CLOCK_net_1;
 wire   UART_RESER_N_net_1;
+wire   HMC_CLK_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -65,6 +69,8 @@ assign UART_CLOCK_net_1   = UART_CLOCK_net_0;
 assign UART_CLOCK         = UART_CLOCK_net_1;
 assign UART_RESER_N_net_1 = UART_RESER_N_net_0;
 assign UART_RESER_N       = UART_RESER_N_net_1;
+assign HMC_CLK_net_1      = HMC_CLK_net_0;
+assign HMC_CLK            = HMC_CLK_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -94,6 +100,16 @@ PF_CCC_C0 PF_CCC_C0_0(
         .OUT0_FABCLK_0     ( Main_CLOCK_net_0 ),
         .OUT1_FABCLK_0     ( UART_CLOCK_net_0 ),
         .PLL_LOCK_0        ( PF_CCC_C0_0_PLL_LOCK_0 ) 
+        );
+
+//--------PF_CCC_C3
+PF_CCC_C3 PF_CCC_C3_0(
+        // Inputs
+        .REF_CLK_0         ( PF_OSC_C0_0_RCOSC_160MHZ_GL ),
+        .PLL_POWERDOWN_N_0 ( CORERESET_PF_C0_0_PLL_POWERDOWN_B ),
+        // Outputs
+        .OUT0_FABCLK_0     ( HMC_CLK_net_0 ),
+        .PLL_LOCK_0        (  ) 
         );
 
 //--------PF_INIT_MONITOR_C0

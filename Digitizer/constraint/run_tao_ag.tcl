@@ -3,6 +3,8 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3_0\PF_CCC_C3_PF_CCC_C3_0_PF_CCC.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_OSC_C0\PF_OSC_C0_0\PF_OSC_C0_PF_OSC_C0_0_PF_OSC.v}
@@ -175,6 +177,7 @@ read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\w
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C1\PF_CCC_C1_0\PF_CCC_C1_PF_CCC_C1_0_PF_CCC.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C2\PF_CCC_C2_0\PF_CCC_C2_PF_CCC_C2_0_PF_CCC.sdc}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3_0\PF_CCC_C3_PF_CCC_C3_0_PF_CCC.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C0\PF_CLK_DIV_C0_0\PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_TX_PLL_C0\PF_TX_PLL_C0_0\PF_TX_PLL_C0_PF_TX_PLL_C0_0_PF_TX_PLL.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C0\I_XCVR\PF_XCVR_ERM_C0_I_XCVR_PF_XCVR.sdc}

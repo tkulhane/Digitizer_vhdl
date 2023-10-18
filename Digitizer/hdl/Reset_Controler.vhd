@@ -99,7 +99,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 
     EXT_ADC_Reset_N         <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_ADC));
-    EXT_HMC_Reset_N         <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_HMC));
+    EXT_HMC_Reset_N         <= Reset_N and (REG_EXT_Resets(NUM_RST_EXT_HMC));
     EXT_LMX1_Reset_N        <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_LMX1));
     EXT_LMX2_Reset_N        <= Reset_N and (not REG_EXT_Resets(NUM_RST_EXT_LMX2));
 

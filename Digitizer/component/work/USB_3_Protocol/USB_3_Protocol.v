@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Sep 20 00:49:39 2023
+// Created by SmartDesign Wed Sep 27 14:19:40 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -248,18 +248,18 @@ ft601_fifo_interface ft601_fifo_interface_0(
         .FTDI_nRXF         ( FTDI_nRXF ),
         .FTDI_nTXE         ( FTDI_nTXE ),
         .CH_FA_ALMOST_FULL ( COREFIFO_C7_0_AFULL ),
-        .CH_AF_EMPTY       ( DBG_EMPTY_0 ),
         .CH_AF_DATA        ( ftdi_to_fifo_interface_0_FTDI_AF ),
+        .CH_AF_EMPTY       ( DBG_EMPTY_0 ),
         // Outputs
-        .FTDI_nRD          ( FTDI_nRD_net_0 ),
-        .FTDI_nWR          ( FTDI_nWR_net_0 ),
-        .FTDI_nOE          ( FTDI_nOE_net_0 ),
+        .FTDI_nRD_o        ( FTDI_nRD_net_0 ),
+        .FTDI_nWR_o        ( FTDI_nWR_net_0 ),
+        .FTDI_nOE_o        ( FTDI_nOE_net_0 ),
+        .CH_FA_DATA        ( ft601_fifo_interface_0_CH_FA_DATA ),
         .CH_FA_WREN        ( DBG_FIFO_WR_net_0 ),
         .CH_AF_RDEN        ( DBG_FIFO_RD_net_0 ),
-        .CH_FA_DATA        ( ft601_fifo_interface_0_CH_FA_DATA ),
         // Inouts
-        .FTDI_DATA         ( FTDI_DATA ),
-        .FTDI_BE           ( FTDI_BE ) 
+        .FTDI_DATA_o       ( FTDI_DATA ),
+        .FTDI_BE_o         ( FTDI_BE ) 
         );
 
 //--------ftdi_to_fifo_interface

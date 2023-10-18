@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)</text>
-<text>Date: Sat Sep 23 19:42:31 2023
+<text>Date: Wed Oct 11 21:36:06 2023
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -78,15 +78,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>40479</cell>
+ <cell>40426</cell>
  <cell>299544</cell>
- <cell>13.51</cell>
+ <cell>13.50</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>39257</cell>
+ <cell>39245</cell>
  <cell>299544</cell>
- <cell>13.11</cell>
+ <cell>13.10</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -132,15 +132,15 @@
 </row>
 <row>
  <cell>H-Chip Global</cell>
- <cell>7</cell>
+ <cell>8</cell>
  <cell>48</cell>
- <cell>14.58</cell>
+ <cell>16.67</cell>
 </row>
 <row>
  <cell>PLL</cell>
- <cell>1</cell>
+ <cell>2</cell>
  <cell>8</cell>
- <cell>12.50</cell>
+ <cell>25.00</cell>
 </row>
 <row>
  <cell>DLL</cell>
@@ -150,9 +150,9 @@
 </row>
 <row>
  <cell>CRN_INT</cell>
- <cell>1</cell>
+ <cell>2</cell>
  <cell>24</cell>
- <cell>4.17</cell>
+ <cell>8.33</cell>
 </row>
 <row>
  <cell>INIT</cell>
@@ -180,9 +180,9 @@
 </row>
 <row>
  <cell>ICB_CLKINT</cell>
- <cell>3</cell>
+ <cell>4</cell>
  <cell>72</cell>
- <cell>4.17</cell>
+ <cell>5.56</cell>
 </row>
 </table>
 <section><name>Detailed Logic Resource Usage</name></section>
@@ -194,8 +194,8 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>7323</cell>
- <cell>6101</cell>
+ <cell>7270</cell>
+ <cell>6089</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
@@ -214,8 +214,8 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>40479</cell>
- <cell>39257</cell>
+ <cell>40426</cell>
+ <cell>39245</cell>
 </row>
 </table>
 <section><name>Detailed Carry Chains Resource Usage</name></section>
@@ -321,7 +321,7 @@
 </row>
 <row>
  <cell>2</cell>
- <cell>48</cell>
+ <cell>52</cell>
 </row>
 <row>
  <cell>5</cell>
@@ -329,7 +329,7 @@
 </row>
 <row>
  <cell>Total</cell>
- <cell>50</cell>
+ <cell>54</cell>
 </row>
 </table>
 <section><name>I/O Function</name></section>
@@ -342,13 +342,13 @@
 </header>
 <row>
  <cell>Input I/O</cell>
- <cell>21</cell>
+ <cell>19</cell>
  <cell>0</cell>
  <cell>0</cell>
 </row>
 <row>
  <cell>Output I/O</cell>
- <cell>47</cell>
+ <cell>49</cell>
  <cell>0</cell>
  <cell>0</cell>
 </row>
@@ -379,7 +379,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>6596</cell>
+ <cell>6583</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Main_CLOCK_0</cell>
 </row>
@@ -394,7 +394,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>3532</cell>
+ <cell>3522</cell>
  <cell>INT_NET</cell>
  <cell>Net   : dff_arst</cell>
 </row>
@@ -446,7 +446,7 @@
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNIEAL5/U0_RGB1</cell>
+ <cell>Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2_RNIF7OA/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -469,7 +469,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>1</cell>
+ <cell>2</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL</cell>
 </row>
@@ -477,6 +477,21 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT/U0_RGB1</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Source: NETLIST</cell>
+</row>
+<row>
+ <cell>1</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Clock_Reset_0_HMC_CLK</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/clkint_0/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
