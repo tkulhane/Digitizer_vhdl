@@ -31,6 +31,9 @@ architecture rtl of gpio_controler is
     constant CMD_GPIO_OUTPUT_TOOGLE     : std_logic_vector(7 downto 0) := x"12";
     constant CMD_GPIO_OUTPUT_SET        : std_logic_vector(7 downto 0) := x"13";
     constant CMD_GPIO_OUTPUT_CLEAR      : std_logic_vector(7 downto 0) := x"14";
+    constant CMD_GPIO_OUTPUT_PULSE      : std_logic_vector(7 downto 0) := x"15";
+    constant CMD_GPIO_PULSE_LENGTH_L    : std_logic_vector(7 downto 0) := x"1A";
+    constant CMD_GPIO_PULSE_LENGTH_M    : std_logic_vector(7 downto 0) := x"1B";
     
     constant CMD_GPIO_INPUT_STATE                       : std_logic_vector(7 downto 0) := x"21";
     constant CMD_GPIO_INPUT_RISING                      : std_logic_vector(7 downto 0) := x"22";
@@ -79,7 +82,11 @@ architecture rtl of gpio_controler is
 
     signal CLEAR_REG_RF_MASK : std_logic_vector(15 downto 0);
 
-
+    signal SET_PULSE : std_logic;
+    signal CLEAR_PULSE : std_logic;
+    signal PULSE_MASK : std_logic_vector(15 downto 0);
+    signal PULSE_LENGTH : unsigned (31 downto 0);
+    signal Counter_PULSE : unsigned (31 downto 0);
 
 begin
 
@@ -207,6 +214,10 @@ begin
             CLEAR_REG_INPUTs_FALLING_COUNTER <= '0';
             CLEAR_REG_RF_MASK <= (others => '0');
 
+            SET_PULSE <= '0';
+            PULSE_MASK <= (others => '0');
+            PULSE_LENGTH <= x"00000064";
+
 
         elsif(Clock'event and Clock = '1') then    
             
@@ -215,6 +226,13 @@ begin
             CLEAR_REG_INPUTs_RISING_COUNTER <= '0';
             CLEAR_REG_INPUTs_FALLING_COUNTER <= '0';
             CLEAR_REG_RF_MASK <= (others => '0');
+
+
+            if(CLEAR_PULSE = '1') then
+                Outputs <= Outputs AND  (not PULSE_Mask);
+                SET_PULSE <= '0';
+            end if;            
+
 
             if(write_signal = '1') then
                 
@@ -247,6 +265,19 @@ begin
                 elsif(address = CMD_GPIO_INPUT_COUNTERs_OR_MASK) then 
                     REG_RF_Counter_OR_Mask <= write_data_frame;
 
+                elsif(address = CMD_GPIO_OUTPUT_PULSE) then
+                    --if(SET_PULSE = '0') then
+                        Outputs <= Outputs OR write_data_frame;
+                        PULSE_MASK <= write_data_frame;
+                        SET_PULSE <= '1';    
+                    --end if;
+
+                elsif(address = CMD_GPIO_PULSE_LENGTH_L) then
+                    PULSE_LENGTH(15 downto 0) <= unsigned(write_data_frame); 
+
+                elsif(address = CMD_GPIO_PULSE_LENGTH_M) then
+                    PULSE_LENGTH(31 downto 16) <= unsigned(write_data_frame); 
+
                 end if;
 
 
@@ -269,7 +300,13 @@ begin
 
                 elsif(address = CMD_GPIO_INPUT_FALLING_COUNTER) then
                     read_data_frame <= std_logic_vector(REG_INPUTs_FALLING_COUNTER);
-                       
+
+                elsif(address = CMD_GPIO_PULSE_LENGTH_L) then
+                    read_data_frame <= std_logic_vector(PULSE_LENGTH(15 downto 0));
+            
+                elsif(address = CMD_GPIO_PULSE_LENGTH_M) then
+                    read_data_frame <= std_logic_vector(PULSE_LENGTH(31 downto 16));  
+
                 else
                     read_data_frame <= (others => '0');
 
@@ -407,6 +444,43 @@ begin
     end process;
 
 
+
+------------------------------------------------------------------------------------------------------------
+--counter pulse
+------------------------------------------------------------------------------------------------------------
+    process(Reset_N, Clock)
+
+    begin
+    
+        if(Reset_N = '0') then 
+            Counter_PULSE <= (others => '0');
+            CLEAR_PULSE <= '0';
+
+        elsif(Clock'event and Clock = '1') then    
+            
+            if(SET_PULSE = '1') then --zapnuti citace generovani pulsu
+
+                if(Counter_PULSE >= PULSE_LENGTH) then --puls dosahl pozadovane delky
+                    CLEAR_PULSE <= '1';                 --nastave clear resetu
+
+                else
+                    Counter_PULSE <= Counter_PULSE + 1;
+                    CLEAR_PULSE <= '0';
+
+                end if;                       
+
+            else
+                CLEAR_PULSE <= '0';
+                Counter_PULSE <= (others => '0');
+
+            end if;
+
+
+
+
+        end if;
+
+    end process;
 
 
 

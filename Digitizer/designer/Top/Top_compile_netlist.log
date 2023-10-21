@@ -31,7 +31,7 @@ Info: Global design data:
 Info: List of globals that cannot be demoted: 
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
-    6583   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
+    6665   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
     1100   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4' 
     0      0      2      'Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT' 
     0      0      1      'Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/clkint_0' 
@@ -39,10 +39,10 @@ Info: List of globals that cannot be demoted:
 Info: List of globals considered for demotion: 
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
-    248    0      1      'I_1' 
-    0      3522   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
+    248    0      0      'I_1' 
+    0      3604   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
     0      932    0      'Clock_Reset_0/Synchronizer_0/Chain_rep_RNI8C36[1]' 
-    0      882    0      'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2_RNIF7OA' 
+    0      882    0      'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNIEAL5' 
 
 Info: Demotion information: 
 Info: [127205381]:  CMPPF_302: Added 0 row global instances.
@@ -55,8 +55,8 @@ Info: Device 'MPF300TS_ES' requires fabric generated global resources driven fro
     Row globals:                   0 
     Number of AND2 gates inserted: 4 
 Info: Chip global resources driven by the following fabric instances were gated by the 'INIT:FABRIC_POR_N' signal: 
+    Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N
     Clock_Reset_0/Synchronizer_0/Chain_rep[1]
-    Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2
     BUFD_0
     Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep
 Info: The following net is being driven by 'INIT:FABRIC_POR_N'.  Your design may encounter a race condition in case this cone of logic belongs to a clock domain that is also gated by 'INIT:FABRIC_POR_N'.  If so, Microsemi recommends that the net be driven by 'INIT:GPIO_ACTIVE' or 'INIT:HSIO_ACTIVE' instead.

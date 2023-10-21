@@ -149,7 +149,7 @@ begin
     end process;
 
     --output function
-    process(state_reg, CH_AF_DATA, AF_DATA_Buffer, FTDI_DATA_o, FTDI_nTXE)
+    process(state_reg, CH_AF_DATA, AF_DATA_Buffer, FTDI_DATA_o, FTDI_nTXE, FTDI_nRXF)
     begin
 
         case state_reg is
@@ -188,14 +188,14 @@ begin
 			
 			when RECEIVE =>
 				--ftdi signals
-				FTDI_nRD	<= '0'; -- aktivace cteni z ftdi
+				FTDI_nRD	<= FTDI_nRXF;--'0'; -- aktivace cteni z ftdi
 				FTDI_nWR	<= '1';
 				FTDI_nOE	<= '0';
 				FTDI_DATA	<= (others => 'Z');
 				FTDI_BE		<= (others => 'Z');
 				--fifo signals - from ftdi to arch
 				CH_FA_DATA 	<= FTDI_DATA_o;--FTDI_DATA; --data z ftdi smerovana do fifo
-				CH_FA_WREN	<= '1'; --zapisuji do fifo
+				CH_FA_WREN	<=  not FTDI_nRXF;--'1'; --zapisuji do fifo
 				--fifo signal  - from arch to ftdi
 				CH_AF_RDEN	<= '0';
 				--data buffer - from arch to ftdi

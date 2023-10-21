@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Wed Oct 11 21:36:06 2023
+Date: Fri Oct 20 21:09:20 2023
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -30,8 +30,8 @@ Resource Usage
 +---------------------------+-------+--------+------------+
 | Type                      | Used  | Total  | Percentage |
 +---------------------------+-------+--------+------------+
-| 4LUT                      | 40426 | 299544 | 13.50      |
-| DFF                       | 39245 | 299544 | 13.10      |
+| 4LUT                      | 40499 | 299544 | 13.52      |
+| DFF                       | 39327 | 299544 | 13.13      |
 | I/O Register              | 0     | 1536   | 0.00       |
 | User I/O                  | 112   | 512    | 21.88      |
 | -- Single-ended I/O       | 102   | 512    | 19.92      |
@@ -54,11 +54,11 @@ Detailed Logic Resource Usage
 +-----------------------+-------+-------+
 | Type                  | 4LUT  | DFF   |
 +-----------------------+-------+-------+
-| Fabric Logic          | 7270  | 6089  |
+| Fabric Logic          | 7343  | 6171  |
 | uSRAM Interface Logic | 0     | 0     |
 | LSRAM Interface Logic | 33156 | 33156 |
 | Math Interface Logic  | 0     | 0     |
-| Total Used            | 40426 | 39245 |
+| Total Used            | 40499 | 39327 |
 +-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
@@ -83,16 +83,16 @@ Detailed Carry Chains Resource Usage
 | 24     | 1    |
 | 26     | 2    |
 | 32     | 3    |
-| 33     | 9    |
-| Total  | 176  |
+| 33     | 11   |
+| Total  | 178  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
 +--------+------+
 | Length | Used |
-| 2      | 52   |
+| 2      | 48   |
 | 5      | 2    |
-| Total  | 54   |
+| Total  | 50   |
 +--------+------+
 
 I/O Function
@@ -110,10 +110,10 @@ Nets assigned to chip global resources
 +--------+---------+-------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                |
 +--------+---------+-------------------------------------------------------------------------------------+
-| 6583   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK_0                                                  |
+| 6665   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK_0                                                  |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 3522   | INT_NET | Net   : dff_arst                                                                    |
+| 3604   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
 | 1100   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK_0                                                  |
@@ -123,9 +123,9 @@ Nets assigned to chip global resources
 |        |         | Driver: Clock_Reset_0/Synchronizer_0/Chain_rep_RNI8C36[1]/U0_RGB1                   |
 |        |         | Source: NETLIST                                                                     |
 | 882    | INT_NET | Net   : INT_DataFifo_Reset_N_arst                                                   |
-|        |         | Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2_RNIF7OA/U0_RGB1     |
+|        |         | Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNIEAL5/U0_RGB1          |
 |        |         | Source: NETLIST                                                                     |
-| 249    | INT_NET | Net   : DBGport_7_c                                                                 |
+| 248    | INT_NET | Net   : DBGport_7_0                                                                 |
 |        |         | Driver: I_1/U0_RGB1                                                                 |
 |        |         | Source: NETLIST                                                                     |
 | 2      | INT_NET | Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL                                   |

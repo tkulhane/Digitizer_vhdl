@@ -19,7 +19,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
 INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\fp\user.pdc. 0 error(s) and 0 warning(s)
 
  Running Timing based Global Demotion. 
-        Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
+        Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
         Moved 54 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
@@ -42,7 +42,7 @@ I/O Bank and Globals Assigner completed successfully.
 Total time spent in I/O Bank and Globals Assigner: 4 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Wed Oct 11 21:40:06 2023
+Design: Top                             Started: Fri Oct 20 21:11:06 2023
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -57,39 +57,38 @@ End of placement.
 
 Placer Runtime Summary   :
 Clustering (1 pass)      : 5 seconds
-Placement                : 40 seconds
-Improvement              : 34 seconds
+Placement                : 44 seconds
+Improvement              : 35 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Wed Oct 11 21:42:11 2023
-Total CPU Time:     00:02:38            Total Elapsed Time: 00:02:05
-Total Memory Usage: 1761.6 Mbytes
+Finished: Fri Oct 20 21:13:19 2023
+Total CPU Time:     00:02:50            Total Elapsed Time: 00:02:13
+Total Memory Usage: 1765.2 Mbytes
                         o - o - o - o - o - o
 
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Oct 11 21:42:33 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Fri Oct 20 21:13:42 2023
 
-@9 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Wed Oct 11 21:43:35 2023
-Total CPU Time:     00:02:19            Total Elapsed Time: 00:01:02
-Total Memory Usage: 5385.4 Mbytes
+Finished: Fri Oct 20 21:14:54 2023
+Total CPU Time:     00:02:14            Total Elapsed Time: 00:01:12
+Total Memory Usage: 5396.7 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 40425 | 299544 | 13.50      |
-| DFF           | 39246 | 299544 | 13.10      |
+| 4LUT          | 40498 | 299544 | 13.52      |
+| DFF           | 39328 | 299544 | 13.13      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 41590 | 299544 | 13.88      |
+| Logic Element | 41726 | 299544 | 13.93      |
 +---------------+-------+--------+------------+
 
 I/O Placement
