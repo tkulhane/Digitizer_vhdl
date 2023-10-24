@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Oct 20 20:26:27 2023
+// Created by SmartDesign Mon Oct 23 11:53:08 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -22,6 +22,8 @@ module Top(
     FTDI_CLK,
     FTDI_nRXF,
     FTDI_nTXE,
+    HMC_CLK_IN_N,
+    HMC_CLK_IN_P,
     HMC_GPIO_0,
     HMC_GPIO_1,
     LDO_PWR_GOOD,
@@ -110,6 +112,8 @@ input         BTN_4;
 input         FTDI_CLK;
 input         FTDI_nRXF;
 input         FTDI_nTXE;
+input         HMC_CLK_IN_N;
+input         HMC_CLK_IN_P;
 input         HMC_GPIO_0;
 input         HMC_GPIO_1;
 input         LDO_PWR_GOOD;
@@ -204,7 +208,7 @@ wire          CLK_OUT_N_net_0;
 wire          CLK_OUT_P_net_0;
 wire          Clock_Reset_0_HMC_CLK;
 wire          Clock_Reset_0_Main_CLOCK_0;
-wire          Clock_Reset_0_Main_RESET_N_0;
+wire          Clock_Reset_0_Main_RESET_N_1;
 wire          Clock_Reset_0_UART_CLOCK_0;
 wire          Clock_Reset_0_UART_RESER_N_0;
 wire          Communication_Switch_0_busy;
@@ -223,10 +227,9 @@ wire          Controler_0_DEST_1_Fifo_Write_Enable;
 wire   [39:0] Controler_0_DEST_2_Fifo_Write_Data;
 wire          Controler_0_DEST_2_Fifo_Write_Enable;
 wire   [39:0] Controler_0_DEST_3_Fifo_Write_Data;
+wire          Controler_0_LMX_Sync;
 wire          Controler_0_SRC_1_Fifo_Read_Enable;
 wire          Controler_0_SRC_2_Fifo_Read_Enable;
-wire          Controler_0_SYNC_OUT_1;
-wire          Controler_0_SYNC_OUT_2;
 wire   [7:0]  Controler_0_TRG_addr;
 wire   [15:0] Controler_0_TRG_data;
 wire          Controler_0_TRG_enable_cmd;
@@ -273,6 +276,8 @@ wire          FTDI_GPIO_1_net_0;
 wire          FTDI_nRD_net_0;
 wire          FTDI_nRXF;
 wire          FTDI_RESET_N_net_0;
+wire          HMC_CLK_IN_N;
+wire          HMC_CLK_IN_P;
 wire          HMC_GPIO_0;
 wire          HMC_GPIO_1;
 wire          HMC_GPIO_2_net_0;
@@ -280,6 +285,7 @@ wire          HMC_GPIO_3_net_0;
 wire          HMC_sdio;
 wire          HMC_ss_n_net_0;
 wire          HMC_SYNC_net_0;
+wire          INBUF_DIFF_0_0_Y;
 wire          INBUF_DIFF_0_Y;
 wire          LDO_PWR_GOOD;
 wire          LED_1_net_0;
@@ -304,6 +310,7 @@ wire          SYNC_OUT_1_N_net_0;
 wire          SYNC_OUT_1_P_net_0;
 wire          SYNC_OUT_2_N_net_0;
 wire          SYNC_OUT_2_P_net_0;
+wire          Synchronizer_0_Data_Out;
 wire          SYNCINB_N_net_0;
 wire          SYNCINB_P_net_0;
 wire          TX_0_net_0;
@@ -506,7 +513,7 @@ Clock_Reset Clock_Reset_0(
         .EXT_RST_N    ( DBGport_2_net_0 ),
         // Outputs
         .Main_CLOCK   ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Main_RESET_N ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Main_RESET_N ( Clock_Reset_0_Main_RESET_N_1 ),
         .UART_CLOCK   ( Clock_Reset_0_UART_CLOCK_0 ),
         .UART_RESER_N ( Clock_Reset_0_UART_RESER_N_0 ),
         .HMC_CLK      ( Clock_Reset_0_HMC_CLK ) 
@@ -516,7 +523,7 @@ Clock_Reset Clock_Reset_0(
 Communication_Switch Communication_Switch_0(
         // Inputs
         .Clock             ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Reset_N           ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Reset_N           ( Clock_Reset_0_Main_RESET_N_1 ),
         .enable_cmd        ( Controler_0_COMSW_enable_cmd ),
         .write_read        ( Controler_0_COMSW_write_read ),
         .DataFifo_Empty    ( DBGport_2_0 ),
@@ -544,7 +551,7 @@ Communication_Switch Communication_Switch_0(
 Controler Controler_0(
         // Inputs
         .Clock                    ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Reset_N                  ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Reset_N                  ( Clock_Reset_0_Main_RESET_N_1 ),
         .SRC_1_Fifo_Empty         ( DBGport_5_0 ),
         .DEST_1_Fifo_Full         ( UART_Protocol_0_TX_FIFO_FULL ),
         .DEST_2_Fifo_Full         ( UART_Protocol_1_TX_FIFO_FULL ),
@@ -607,8 +614,6 @@ Controler Controler_0(
         .LED_3                    ( LED_3_net_0 ),
         .GPIO_0                   ( DBGport_6_2 ),
         .GPIO_1                   ( DBGport_7_1 ),
-        .SYNC_OUT_1               ( Controler_0_SYNC_OUT_1 ),
-        .SYNC_OUT_2               ( Controler_0_SYNC_OUT_2 ),
         .COMSW_enable_cmd         ( Controler_0_COMSW_enable_cmd ),
         .COMSW_write_read         ( Controler_0_COMSW_write_read ),
         .INT_FtdiReset_N          ( FTDI_RESET_N_net_0 ),
@@ -622,6 +627,7 @@ Controler Controler_0(
         .COMSW_addr               ( Controler_0_COMSW_addr ),
         .COMSW_data               ( Controler_0_COMSW_data ),
         .COMSW_comm_number        ( Controler_0_COMSW_comm_number ),
+        .LMX_Sync                 ( Controler_0_LMX_Sync ),
         // Inouts
         .HMC_sdio                 ( HMC_sdio ),
         .ADC_sdio                 ( ADC_sdio ) 
@@ -636,7 +642,7 @@ Data_Block Data_Block_0(
         .Communication_Read        ( DBGport_7_net_0 ),
         .Communication_Builder_RUN ( DBGport_1_net_0 ),
         .Fifo_RESET_N              ( DBGport_4_1 ),
-        .Reset_N                   ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Reset_N                   ( Clock_Reset_0_Main_RESET_N_1 ),
         .C_addr_frame              ( Controler_0_TRG_addr ),
         .C_write_data_frame        ( Controler_0_TRG_data ),
         // Outputs
@@ -660,10 +666,19 @@ INBUF_DIFF INBUF_DIFF_0(
         .Y    ( INBUF_DIFF_0_Y ) 
         );
 
+//--------INBUF_DIFF
+INBUF_DIFF INBUF_DIFF_0_0(
+        // Inputs
+        .PADP ( HMC_CLK_IN_P ),
+        .PADN ( HMC_CLK_IN_N ),
+        // Outputs
+        .Y    ( INBUF_DIFF_0_0_Y ) 
+        );
+
 //--------OUTBUF_DIFF
 OUTBUF_DIFF OUTBUF_DIFF_0(
         // Inputs
-        .D    ( Controler_0_SYNC_OUT_1 ),
+        .D    ( Synchronizer_0_Data_Out ),
         // Outputs
         .PADP ( SYNC_OUT_1_P_net_0 ),
         .PADN ( SYNC_OUT_1_N_net_0 ) 
@@ -672,7 +687,7 @@ OUTBUF_DIFF OUTBUF_DIFF_0(
 //--------OUTBUF_DIFF
 OUTBUF_DIFF OUTBUF_DIFF_0_0(
         // Inputs
-        .D    ( Controler_0_SYNC_OUT_2 ),
+        .D    ( Synchronizer_0_Data_Out ),
         // Outputs
         .PADP ( SYNC_OUT_2_P_net_0 ),
         .PADN ( SYNC_OUT_2_N_net_0 ) 
@@ -696,6 +711,16 @@ OUTBUF_DIFF OUTBUF_DIFF_0_0_1(
         .PADN ( SYNCINB_N_net_0 ) 
         );
 
+//--------Synchronizer
+Synchronizer Synchronizer_0(
+        // Inputs
+        .nRST     ( Clock_Reset_0_Main_RESET_N_1 ),
+        .CLK      ( INBUF_DIFF_0_0_Y ),
+        .Data_In  ( Controler_0_LMX_Sync ),
+        // Outputs
+        .Data_Out ( Synchronizer_0_Data_Out ) 
+        );
+
 //--------UART_Protocol
 UART_Protocol UART_Protocol_0(
         // Inputs
@@ -703,7 +728,7 @@ UART_Protocol UART_Protocol_0(
         .UART_Clock           ( Clock_Reset_0_UART_CLOCK_0 ),
         .UART_RESET_N         ( Clock_Reset_0_UART_RESER_N_0 ),
         .Logic_Clock          ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Logic_RESET_N        ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Logic_RESET_N        ( Clock_Reset_0_Main_RESET_N_1 ),
         .RX_FIFO_RE           ( Controler_0_SRC_1_Fifo_Read_Enable ),
         .TX_FIFO_WE           ( Controler_0_DEST_1_Fifo_Write_Enable ),
         .MD_Fifo_Empty        ( DBGport_4_2 ),
@@ -726,7 +751,7 @@ UART_Protocol UART_Protocol_1(
         .UART_Clock           ( Clock_Reset_0_UART_CLOCK_0 ),
         .UART_RESET_N         ( Clock_Reset_0_UART_RESER_N_0 ),
         .Logic_Clock          ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Logic_RESET_N        ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Logic_RESET_N        ( Clock_Reset_0_Main_RESET_N_1 ),
         .RX_FIFO_RE           ( Controler_0_SRC_2_Fifo_Read_Enable ),
         .TX_FIFO_WE           ( Controler_0_DEST_2_Fifo_Write_Enable ),
         .MD_Fifo_Empty        ( Communication_Switch_0_DEST_2_Fifo_Empty ),
@@ -749,7 +774,7 @@ USB_3_Protocol USB_3_Protocol_0(
         .FTDI_nRXF            ( FTDI_nRXF ),
         .FTDI_nTXE            ( FTDI_nTXE ),
         .Main_CLK             ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Main_RESET_N         ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Main_RESET_N         ( Clock_Reset_0_Main_RESET_N_1 ),
         .RX_FIFO_RE           ( DBGport_1_2 ),
         .TX_FIFO_WE           ( DBGport_5_net_0 ),
         .MD_Fifo_Empty        ( DBGport_2_2 ),

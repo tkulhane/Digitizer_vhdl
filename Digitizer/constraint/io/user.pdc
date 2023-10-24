@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Thu Oct 19 13:20:27 2023 
+# Date generated: Mon Oct 23 12:57:19 2023 
 
 
 # 
@@ -655,6 +655,20 @@ set_io -port_name GPIO_1  \
     -fixed true           \
     -io_std LVCMOS33      \
     -DIRECTION OUTPUT
+
+
+set_io -port_name HMC_CLK_IN_N  \
+    -pin_name E2                \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION INPUT
+
+
+set_io -port_name HMC_CLK_IN_P  \
+    -pin_name F2                \
+    -fixed true                 \
+    -io_std LVDS33              \
+    -DIRECTION INPUT
 
 
 set_io -port_name HMC_GPIO_0  \

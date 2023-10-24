@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Fri Oct 20 21:09:20 2023
+Date: Mon Oct 23 11:56:19 2023
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -30,16 +30,16 @@ Resource Usage
 +---------------------------+-------+--------+------------+
 | Type                      | Used  | Total  | Percentage |
 +---------------------------+-------+--------+------------+
-| 4LUT                      | 40499 | 299544 | 13.52      |
-| DFF                       | 39327 | 299544 | 13.13      |
+| 4LUT                      | 40508 | 299544 | 13.52      |
+| DFF                       | 39329 | 299544 | 13.13      |
 | I/O Register              | 0     | 1536   | 0.00       |
-| User I/O                  | 112   | 512    | 21.88      |
+| User I/O                  | 114   | 512    | 22.27      |
 | -- Single-ended I/O       | 102   | 512    | 19.92      |
-| -- Differential I/O Pairs | 5     | 256    | 1.95       |
+| -- Differential I/O Pairs | 6     | 256    | 2.34       |
 | uSRAM                     | 0     | 2772   | 0.00       |
 | LSRAM                     | 921   | 952    | 96.74      |
 | Math                      | 0     | 924    | 0.00       |
-| H-Chip Global             | 8     | 48     | 16.67      |
+| H-Chip Global             | 9     | 48     | 18.75      |
 | PLL                       | 2     | 8      | 25.00      |
 | DLL                       | 0     | 8      | 0.00       |
 | CRN_INT                   | 2     | 24     | 8.33       |
@@ -54,11 +54,11 @@ Detailed Logic Resource Usage
 +-----------------------+-------+-------+
 | Type                  | 4LUT  | DFF   |
 +-----------------------+-------+-------+
-| Fabric Logic          | 7343  | 6171  |
+| Fabric Logic          | 7352  | 6173  |
 | uSRAM Interface Logic | 0     | 0     |
 | LSRAM Interface Logic | 33156 | 33156 |
 | Math Interface Logic  | 0     | 0     |
-| Total Used            | 40499 | 39327 |
+| Total Used            | 40508 | 39329 |
 +-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
@@ -102,7 +102,7 @@ I/O Function
 | Input I/O                     | 19           | 0           | 0               |
 | Output I/O                    | 49           | 0           | 0               |
 | Bidirectional I/O             | 34           | 0           | 0               |
-| Differential Input I/O Pairs  | 1            | 0           | 0               |
+| Differential Input I/O Pairs  | 2            | 0           | 0               |
 | Differential Output I/O Pairs | 4            | 0           | 0               |
 +-------------------------------+--------------+-------------+-----------------+
 
@@ -113,7 +113,7 @@ Nets assigned to chip global resources
 | 6665   | INT_NET | Net   : Clock_Reset_0_Main_CLOCK_0                                                  |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 3604   | INT_NET | Net   : dff_arst                                                                    |
+| 3606   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
 | 1100   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK_0                                                  |
@@ -130,6 +130,9 @@ Nets assigned to chip global resources
 |        |         | Source: NETLIST                                                                     |
 | 2      | INT_NET | Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL                                   |
 |        |         | Driver: Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT/U0_RGB1                 |
+|        |         | Source: NETLIST                                                                     |
+| 2      | INT_NET | Net   : INBUF_DIFF_0_0_Y                                                            |
+|        |         | Driver: I_2/U0_RGB1                                                                 |
 |        |         | Source: NETLIST                                                                     |
 | 1      | INT_NET | Net   : Clock_Reset_0_HMC_CLK                                                       |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/clkint_0/U0_RGB1                      |

@@ -1,5 +1,5 @@
 ----------------------------------------------------------------
--Pin Report - Date: Fri Oct 20 21:15:09 2023 Pinchecksum: NOT-AVAILABLE
+-Pin Report - Date: Mon Oct 23 13:02:34 2023 Pinchecksum: NOT-AVAILABLE
 -Product: Designer
 -Release: v2022.1
 -Version: 2022.1.0.10
@@ -133,7 +133,7 @@ AC19                      VDD18                                                 
 AC20                      VDDI7                                                    Reserved       
 AC21                      VDD18                                                    Reserved       
 AC22                      VDDI1                                                    Reserved       
-AC23                      HSIO89NB1                                                Unassigned     
+AC23    DBGport_8         HSIO89NB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
 AC24                      VDD18                                                    Reserved       
 AC25                      VSS                                                      Reserved       
 AC26                      VSS                                                      Reserved       
@@ -305,7 +305,7 @@ AH21                      HSIO100NB1                                            
 AH22                      HSIO99PB1/DQS                                            Unassigned     
 AH23                      HSIO79PB1/CCC_NE_PLL1_OUT1                               Unassigned     
 AH24                      HSIO80PB1/CLKIN_N_8/CCC_NE_CLKIN_N_8/CCC_NE_PLL1_OUT0    Unassigned     
-AH25                      HSIO80NB1                                                Unassigned     
+AH25    DBGport_9         HSIO80NB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
 AH26                      VSS                                                      Reserved       
 AH27                      VDDA                                                     Reserved       
 AH28                      VSS                                                      Reserved       
@@ -373,7 +373,7 @@ AK21                      HSIO97PB1                                             
 AK22                      HSIO97NB1                                                Unassigned     
 AK23                      HSIO82PB1                                                Unassigned     
 AK24                      VSS                                                      Reserved       
-AK25    SIWU_N            HSIO77PB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
+AK25                      HSIO77PB1                                                Unassigned     
 AK26                      VSS                                                      Reserved       
 AK27                      VSS                                                      Reserved       
 AK28                      VSS                                                      Reserved       
@@ -402,14 +402,14 @@ AL16                      VDDI7                                                 
 AL17                      HSIO103PB7                                               Unassigned     
 AL18                      HSIO105PB7/DQS                                           Unassigned     
 AL19                      HSIO105NB7/DQS                                           Unassigned     
-AL20    DBGport_9         HSIO101PB1                                               Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
+AL20                      HSIO101PB1                                               Unassigned     
 AL21                      VSS                                                      Reserved       
 AL22                      HSIO82NB1                                                Unassigned     
 AL23                      HSIO83PB1                                                Unassigned     
 AL24                      HSIO83NB1                                                Unassigned     
 AL25                      HSIO77NB1                                                Unassigned     
 AL26                      HSIO72PB1/CCC_NE_CLKIN_N_11                              Unassigned     
-AL27    DBGport_8         HSIO72NB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
+AL27                      HSIO72NB1                                                Unassigned     
 AL28                      VSS                                                      Reserved       
 AL29                      VDDA                                                     Reserved       
 AL30                      VSS                                                      Reserved       
@@ -508,7 +508,7 @@ AP21                      HSIO92NB1                                             
 AP22                      VSS                                                      Reserved       
 AP23                      HSIO93PB1/DQS                                            Unassigned     
 AP24                      HSIO93NB1/DQS                                            Unassigned     
-AP25                      HSIO76PB1                                                Unassigned     
+AP25    SIWU_N            HSIO76PB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
 AP26                      HSIO75PB1/DQS/CCC_NE_PLL0_OUT0                           Unassigned     
 AP27                      HSIO75NB1/DQS                                            Unassigned     
 AP28                      VSS                                                      Reserved       
@@ -620,7 +620,7 @@ D32                       VDDA                                                  
 D33                       NC                                                       Reserved       
 D34                       NC                                                       Reserved       
 E1                        GPIO245PB2/CCC_SW_CLKIN_S_1                              Unassigned     
-E2                        GPIO246NB2/DQS                                           Unassigned     
+E2      HMC_CLK_IN_N      GPIO246NB2/DQS                                           Fixed          LVDS33    Input      None          No                  ON           None           OFF              MID              ON                  100              OFF          ---   ---                ---              ---               ---                       ---           
 E3                        GPIO247NB2                                               Unassigned     
 E4                        VDDI2                                                    Reserved       
 E5                        GPIO249NB2                                               Unassigned     
@@ -654,7 +654,7 @@ E32                       NC                                                    
 E33                       VSS                                                      Reserved       
 E34                       VSS                                                      Reserved       
 F1                        VDDI2                                                    Reserved       
-F2                        GPIO246PB2/DQS/CCC_SW_PLL1_OUT0                          Unassigned     
+F2      HMC_CLK_IN_P      GPIO246PB2/DQS/CCC_SW_PLL1_OUT0                          Fixed          LVDS33    Input      None          No                  ON           None           OFF              MID              ON                  100              OFF          ---   ---                ---              ---               ---                       ---           
 F3                        GPIO247PB2/CLKIN_S_2/CCC_SW_CLKIN_S_2/CCC_SW_PLL1_OUT0   Unassigned     
 F4                        GPIO244NB2                                               Unassigned     
 F5      FTDI_DATA[2]      GPIO11NB2                                                Fixed          LVCMOS33  Inout      None          No                  ON           Down           OFF              ---              ---                 ---              OFF          OFF   20                 ---              5                 ---                       OFF           

@@ -23,9 +23,9 @@ Warning: [127205465]:  CMPPF_007: Top level port BTN_4 is not connected to any I
 ===============================================================================.
 
 Info: Global design data: 
-      Total globals:                       8 
+      Total globals:                       9 
       Globals that cannot be demoted:      4 
-      Globals considered for demotion:     4 
+      Globals considered for demotion:     5 
 
 
 Info: List of globals that cannot be demoted: 
@@ -40,7 +40,8 @@ Info: List of globals considered for demotion:
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
     248    0      0      'I_1' 
-    0      3604   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
+    2      0      0      'I_2' 
+    0      3606   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
     0      932    0      'Clock_Reset_0/Synchronizer_0/Chain_rep_RNI8C36[1]' 
     0      882    0      'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNIEAL5' 
 
@@ -51,14 +52,15 @@ Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
 ===============================================================================.
 
 Info: Device 'MPF300TS_ES' requires fabric generated global resources driven from the fabric to be gated by the 'INIT:FABRIC_POR_N' signal 
-    Chip globals:                  4 
+    Chip globals:                  5 
     Row globals:                   0 
-    Number of AND2 gates inserted: 4 
+    Number of AND2 gates inserted: 5 
 Info: Chip global resources driven by the following fabric instances were gated by the 'INIT:FABRIC_POR_N' signal: 
     Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N
     Clock_Reset_0/Synchronizer_0/Chain_rep[1]
     BUFD_0
     Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep
+    INBUF_DIFF_0_0/U_IOP
 Info: The following net is being driven by 'INIT:FABRIC_POR_N'.  Your design may encounter a race condition in case this cone of logic belongs to a clock domain that is also gated by 'INIT:FABRIC_POR_N'.  If so, Microsemi recommends that the net be driven by 'INIT:GPIO_ACTIVE' or 'INIT:HSIO_ACTIVE' instead.
     Clock_Reset_0/CORERESET_PF_C0_0_PLL_POWERDOWN_B
 Info: read prtition file C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/designer/Top/Top.nmatinit.pdc.

@@ -1,4 +1,4 @@
-# Fri Oct 20 21:08:11 2023
+# Mon Oct 23 11:55:08 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -29,7 +29,7 @@ Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 131MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 122MB peak: 131MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 131MB)
 
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 131MB)
@@ -42,20 +42,20 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 Synthesis running in Multiprocessing mode
 Maximum number of parallel jobs set to 4
-Multiprocessing started at : Fri Oct 20 21:08:12 2023
+Multiprocessing started at : Mon Oct 23 11:55:09 2023
 @W: BN114 :|Removing instance CP_fanout_cell_Top_verilog_inst (in view: work.Controler_acp(verilog)) because it does not drive other instances.
 Mapping Controler as a separate process
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":9:7:9:16|Old database up-to-date, remapping Compile point view:work.Data_Block(verilog) unnecessary 
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Old database up-to-date, remapping Compile point view:work.UART_Protocol_UART_Protocol_0(verilog) unnecessary 
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Old database up-to-date, remapping Compile point view:work.UART_Protocol_UART_Protocol_1(verilog) unnecessary 
-@N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Old database up-to-date, remapping Compile point view:work.Top(verilog) unnecessary 
-MCP Status: 1 jobs running
+Mapping Top as a separate process
+MCP Status: 2 jobs running
 
 @N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Mapping Compile point view:work.Controler(verilog) because 
-		 RTL and/or Constraints changed.
+		 Interface of Compile Point has changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 172MB peak: 172MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 172MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
@@ -214,14 +214,14 @@ original code -> new code
 Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 180MB peak: 180MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 190MB peak: 190MB)
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 191MB peak: 191MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 195MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 186MB peak: 194MB)
 
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[15] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[15] (in view: work.Controler(verilog)) because it does not drive other instances.
@@ -233,25 +233,25 @@ Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CP
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":207:8:207:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[9] (in view: work.Controler(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":207:8:207:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[10] (in view: work.Controler(verilog)) because it does not drive other instances.
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:03s; Memory used current: 194MB peak: 195MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 188MB peak: 194MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 194MB peak: 195MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 188MB peak: 194MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 194MB peak: 195MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 188MB peak: 194MB)
 
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":447:12:447:15|ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":447:12:447:15|Found ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) with 19 words by 1 bit.
 
-Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 191MB peak: 195MB)
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 189MB peak: 194MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 196MB peak: 196MB)
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 198MB peak: 198MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:04s		     2.36ns		1749 /      1463
+   1		0h:00m:04s		     2.36ns		1776 /      1463
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[0] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[1] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
 @N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[2] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
@@ -267,33 +267,198 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 197MB peak: 197MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 199MB peak: 199MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 197MB peak: 198MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 199MB peak: 200MB)
 
 
 Finished mapping Controler
-Multiprocessing finished at : Fri Oct 20 21:08:18 2023
-Multiprocessing took 0h:00m:05s realtime, 0h:00m:01s cputime
+MCP Status: 1 jobs running
+
+@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Mapping Top level view:work.Top(verilog) because 
+		 Interface of Compile Point has changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 192MB peak: 270MB)
+
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_c11_corefifo_c11_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_c11_corefifo_c11_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_c11_corefifo_c11_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_c11_corefifo_c11_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_c8_corefifo_c8_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_c8_corefifo_c8_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_c8_corefifo_c8_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_c8_corefifo_c8_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_c7_corefifo_c7_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_c7_corefifo_c7_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+
+#### START OF SSF LOG MESSAGES ####
+
+#### END OF SSF LOG MESSAGES ####
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 195MB peak: 270MB)
+
+Encoding state machine Communication_CMD_MUX_0.state_reg[0:2] (in view: work.Controler(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine Communication_ANW_MUX_0.state_reg[0:3] (in view: work.Controler(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_anw_mux.vhd":67:8:67:9|There are no possible illegal states for state machine Communication_ANW_MUX_0.state_reg[0:3] (in view: work.Controler(verilog)); safe FSM implementation is not required.
+Encoding state machine Trigger_Top_Part_0.Trigger_Control_0.state_reg[0:5] (in view: work.Data_Block(verilog))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine Communication_TX_Arbiter2_0.state_reg[0:6] (in view: work.UART_Protocol_UART_Protocol_0(verilog))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine Communication_TX_Arbiter2_0.state_reg[0:6] (in view: work.UART_Protocol_UART_Protocol_1(verilog))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine state_reg[0:5] (in view: work.Communication_Switch(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memwaddr_r[9:0] 
+Encoding state machine state_reg[0:6] (in view: work.Communication_TX_Arbiter2_1_1(rtl))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine state_reg[0:7] (in view: work.ft601_fifo_interface(rtl_ft601_fifo_interface))
+original code -> new code
+   00000001 -> 00000001
+   00000010 -> 00000010
+   00000100 -> 00000100
+   00001000 -> 00001000
+   00010000 -> 00010000
+   00100000 -> 00100000
+   01000000 -> 01000000
+   10000000 -> 10000000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.wptr[13:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.rptr[13:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memraddr_r[12:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z23_layer0(verilog) instance genblk10\.memwaddr_r[12:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.rptr[10:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memwaddr_r[9:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 197MB peak: 270MB)
+
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing instance USB_3_Protocol_0.COREFIFO_C11_0.COREFIFO_C11_0.RE_d1 because it is equivalent to instance USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:03s; Memory used current: 199MB peak: 270MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 199MB peak: 270MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 199MB peak: 270MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 199MB peak: 270MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 199MB peak: 270MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 199MB peak: 270MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 200MB peak: 270MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:05s		     0.41ns		1244 /      1159
+   2		0h:00m:05s		     0.41ns		1241 /      1159
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 201MB peak: 270MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 201MB peak: 270MB)
+
+
+Finished mapping Top
+Multiprocessing finished at : Mon Oct 23 11:55:17 2023
+Multiprocessing took 0h:00m:07s realtime, 0h:00m:01s cputime
 
 Summary of Compile Points :
 *************************** 
-Name                              Status        Reason             Start Time                   End Time                     Realtime       CPU Time       Fast Synthesis
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block                        Unchanged     -                  Mon Oct  9 10:24:05 2023     Mon Oct  9 10:24:31 2023     0h:00m:25s     0h:00m:26s     No            
-UART_Protocol_UART_Protocol_0     Unchanged     -                  Mon Oct  9 10:24:06 2023     Mon Oct  9 10:24:11 2023     0h:00m:05s     0h:00m:05s     No            
-UART_Protocol_UART_Protocol_1     Unchanged     -                  Mon Oct  9 10:24:06 2023     Mon Oct  9 10:24:11 2023     0h:00m:05s     0h:00m:05s     No            
-Controler                         Remapped      Design changed     Fri Oct 20 21:08:12 2023     Fri Oct 20 21:08:17 2023     0h:00m:05s     0h:00m:05s     No            
-Top                               Unchanged     -                  Fri Oct 20 20:35:14 2023     Fri Oct 20 20:35:19 2023     0h:00m:04s     0h:00m:05s     No            
-=========================================================================================================================================================================
+Name                              Status        Reason                                 Start Time                   End Time                     Realtime       CPU Time       Fast Synthesis
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block                        Unchanged     -                                      Mon Oct  9 10:24:05 2023     Mon Oct  9 10:24:31 2023     0h:00m:25s     0h:00m:26s     No            
+UART_Protocol_UART_Protocol_0     Unchanged     -                                      Mon Oct  9 10:24:06 2023     Mon Oct  9 10:24:11 2023     0h:00m:05s     0h:00m:05s     No            
+UART_Protocol_UART_Protocol_1     Unchanged     -                                      Mon Oct  9 10:24:06 2023     Mon Oct  9 10:24:11 2023     0h:00m:05s     0h:00m:05s     No            
+Controler                         Remapped      Interface of Compile Point changed     Mon Oct 23 11:55:10 2023     Mon Oct 23 11:55:15 2023     0h:00m:05s     0h:00m:05s     No            
+Top                               Remapped      Interface of Compile Point changed     Mon Oct 23 11:55:11 2023     Mon Oct 23 11:55:17 2023     0h:00m:05s     0h:00m:06s     No            
+=============================================================================================================================================================================================
 Total number of compile points: 5
 ===================================
 
 Links to Compile point Reports:
 ******************************
-@L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Controler\Controler.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top\Top.srr"
+@L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Controler\Controler.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\UART_Protocol_UART_Protocol_1\UART_Protocol_UART_Protocol_1.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\UART_Protocol_UART_Protocol_0\UART_Protocol_UART_Protocol_0.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Data_Block\Data_Block.srr"
@@ -301,10 +466,10 @@ Links to Compile point Reports:
 ==============================
 
 
-Start loading CP mapped netlist (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:02s; Memory used current: 252MB peak: 253MB)
+Start loading CP mapped netlist (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:02s; Memory used current: 252MB peak: 253MB)
 
 
-Finished loading CP mapped netlist (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:03s; Memory used current: 267MB peak: 267MB)
+Finished loading CP mapped netlist (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:03s; Memory used current: 267MB peak: 267MB)
 
 
 
@@ -314,20 +479,21 @@ Finished loading CP mapped netlist (Real Time elapsed 0h:00m:07s; CPU Time elaps
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
 Clock optimization not enabled
-2 non-gated/non-generated clock tree(s) driving 250 clock pin(s) of sequential element(s)
+3 non-gated/non-generated clock tree(s) driving 252 clock pin(s) of sequential element(s)
 2 gated/generated clock tree(s) driving 7766 clock pin(s) of sequential element(s)
 0 instances converted, 7766 sequential instances remain driven by gated/generated clocks
 
 ======================================================================== Non-Gated/Non-Generated Clocks ========================================================================
 Clock Tree ID     Driving Element                                     Drive Element Type                   Fanout     Sample Instance                                           
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0003       FTDI_CLK                                            clock definition on port             248        USB_3_Protocol_0.ft601_fifo_interface_0.AF_DATA_Buffer[18]
-@K:CKID0004       Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160     clock definition on OSC_RC160MHZ     2          Clock_Reset_0.PF_CCC_C3_0.PF_CCC_C3_0.pll_inst_0          
+@K:CKID0003       INBUF_DIFF_0_0                                      INBUF_DIFF                           2          Synchronizer_0.Chain[0]                                   
+@K:CKID0004       FTDI_CLK                                            clock definition on port             248        USB_3_Protocol_0.ft601_fifo_interface_0.AF_DATA_Buffer[18]
+@K:CKID0005       Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160     clock definition on OSC_RC160MHZ     2          Clock_Reset_0.PF_CCC_C3_0.PF_CCC_C3_0.pll_inst_0          
 ================================================================================================================================================================================
 ================================================================================================== Gated/Generated Clocks ==================================================================================================
 Clock Tree ID     Driving Element                                      Drive Element Type     Fanout     Sample Instance                                             Explanation                                            
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    6665       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_3     No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    6665       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_2     No gated clock conversion method for cell cell:ACG4.SLE
 @K:CKID0002       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0     PLL                    1101       Clock_Reset_0.Synchronizer_0.Chain[0]                       No gated clock conversion method for cell cell:ACG4.SLE
 ============================================================================================================================================================================================================================
 
@@ -335,25 +501,26 @@ Clock Tree ID     Driving Element                                      Drive Ele
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:04s; Memory used current: 146MB peak: 270MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:04s; Memory used current: 146MB peak: 269MB)
 
 Writing Analyst data base C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\Top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:07s; Memory used current: 219MB peak: 270MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:06s; Memory used current: 220MB peak: 269MB)
 
 Writing Verilog Simulation files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
+@W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 
-Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:11s; Memory used current: 219MB peak: 270MB)
-
-
-Finished Writing Netlists (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:11s; Memory used current: 219MB peak: 270MB)
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:10s; Memory used current: 219MB peak: 269MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:12s; Memory used current: 223MB peak: 270MB)
+Finished Writing Netlists (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:10s; Memory used current: 219MB peak: 269MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:11s; Memory used current: 223MB peak: 269MB)
 
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":13:17:13:25|Blackbox OSC_RC160MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_init_monitor_c0\pf_init_monitor_c0_0\pf_init_monitor_c0_pf_init_monitor_c0_0_pf_init_monitor.v":38:53:38:58|Blackbox INIT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
@@ -361,10 +528,11 @@ Start final timing analysis (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:0
 @N: MT615 |Found clock FTDI_CLK with period 10.00ns 
 @W: MT420 |Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0_clkint_0.
 @W: MT420 |Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0_clkint_4.
+@W: MT420 |Found inferred clock Top|N_6_inferred_clock with period 10.00ns. Please declare a user-defined clock on net N_6.
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Fri Oct 20 21:08:28 2023
+# Timing report written on Mon Oct 23 11:55:27 2023
 #
 
 
@@ -386,15 +554,16 @@ Performance Summary
 
 Worst slack in design: 2.461
 
-                                                                    Requested     Estimated     Requested     Estimated               Clock        Clock                
-Starting Clock                                                      Frequency     Frequency     Period        Period        Slack     Type         Group                
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     NA            6.250         NA            NA        declared     default_clkgroup     
-FTDI_CLK                                                            100.0 MHz     225.6 MHz     10.000        4.433         5.567     declared     default_clkgroup     
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     177.3 MHz     10.000        5.641         2.461     inferred     Inferred_clkgroup_0_1
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     172.8 MHz     10.000        5.786         4.214     inferred     Inferred_clkgroup_0_2
-System                                                              100.0 MHz     786.7 MHz     10.000        1.271         8.729     system       system_clkgroup      
-========================================================================================================================================================================
+                                                                    Requested     Estimated      Requested     Estimated               Clock        Clock                
+Starting Clock                                                      Frequency     Frequency      Period        Period        Slack     Type         Group                
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     NA             6.250         NA            NA        declared     default_clkgroup     
+FTDI_CLK                                                            100.0 MHz     225.6 MHz      10.000        4.433         5.567     declared     default_clkgroup     
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     177.3 MHz      10.000        5.641         2.461     inferred     Inferred_clkgroup_0_1
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     172.8 MHz      10.000        5.786         4.214     inferred     Inferred_clkgroup_0_2
+Top|N_6_inferred_clock                                              100.0 MHz     2974.4 MHz     10.000        0.336         9.664     inferred     Inferred_clkgroup_0_3
+System                                                              100.0 MHz     786.7 MHz      10.000        1.271         8.729     system       system_clkgroup      
+=========================================================================================================================================================================
 Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
 
 
@@ -414,8 +583,10 @@ FTDI_CLK                                                         PF_CCC_C0_PF_CC
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  FTDI_CLK                                                         |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  10.000      4.359  |  10.000      6.818  |  5.000       2.461  |  5.000       4.664
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  Top|N_6_inferred_clock                                           |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock  |  10.000      4.214  |  No paths    -      |  No paths    -      |  No paths    -    
+Top|N_6_inferred_clock                                           Top|N_6_inferred_clock                                           |  10.000      9.664  |  No paths    -      |  No paths    -      |  No paths    -    
 ========================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -591,7 +762,7 @@ Instance                                              Reference                 
                                                       Clock                                                                                                               
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[2]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_19_i       5.000        2.461
-Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_762_i      5.000        2.461
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_769_i      5.000        2.461
 Controler_0.SPI_LMX_0_0.spi_master_0.INT_ss_n         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0.spi_master_0.INT_ss_n           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0_0.spi_master_0.busy             PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
@@ -637,7 +808,7 @@ Controler_0.SPI_LMX_0_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG
 un1_receive_transmit_0_sqmuxa_0_0_0                                          Net      -        -       0.547     -           3         
 Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer_RNO[2]                        CFG4     D        In      -         2.209 r     -         
 Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer_RNO[2]                        CFG4     Y        Out     0.212     2.421 f     -         
-N_762_i                                                                      Net      -        -       0.118     -           1         
+N_769_i                                                                      Net      -        -       0.118     -           1         
 Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]                            SLE      D        In      -         2.539 f     -         
 =======================================================================================================================================
 Total path delay (propagation time + setup) of 2.539 is 0.629(24.8%) logic and 1.910(75.2%) route.
@@ -811,6 +982,68 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 
 ====================================
+Detailed Report for Clock: Top|N_6_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                            Starting                                                 Arrival          
+Instance                    Reference                  Type     Pin     Net          Time        Slack
+                            Clock                                                                     
+------------------------------------------------------------------------------------------------------
+Synchronizer_0.Chain[0]     Top|N_6_inferred_clock     SLE      Q       Chain[0]     0.218       9.664
+======================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                            Starting                                                 Required          
+Instance                    Reference                  Type     Pin     Net          Time         Slack
+                            Clock                                                                      
+-------------------------------------------------------------------------------------------------------
+Synchronizer_0.Chain[1]     Top|N_6_inferred_clock     SLE      D       Chain[0]     10.000       9.664
+=======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      0.336
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 9.664
+
+    Number of logic level(s):                0
+    Starting point:                          Synchronizer_0.Chain[0] / Q
+    Ending point:                            Synchronizer_0.Chain[1] / D
+    The start point is clocked by            Top|N_6_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            Top|N_6_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                       Pin      Pin               Arrival     No. of    
+Name                        Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------
+Synchronizer_0.Chain[0]     SLE      Q        Out     0.218     0.218 r     -         
+Chain[0]                    Net      -        -       0.118     -           1         
+Synchronizer_0.Chain[1]     SLE      D        In      -         0.336 r     -         
+======================================================================================
+Total path delay (propagation time + setup) of 0.336 is 0.218(64.9%) logic and 0.118(35.1%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
 Detailed Report for Clock: System
 ====================================
 
@@ -888,10 +1121,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:13s; Memory used current: 232MB peak: 270MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:12s; Memory used current: 232MB peak: 269MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:13s; Memory used current: 232MB peak: 270MB)
+Finished timing report (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:12s; Memory used current: 232MB peak: 269MB)
 
 ---------------------------------------
 Resource Usage Report for Top 
@@ -899,7 +1132,7 @@ Resource Usage Report for Top
 Mapping to part: mpf300tfcg1152-1
 Cell usage:
 BUFD            1 use
-CLKINT          8 uses
+CLKINT          9 uses
 INIT            1 use
 INV             18 uses
 OR2             2 uses
@@ -907,9 +1140,9 @@ OR4             192 uses
 OSC_RC160MHZ    1 use
 PLL             2 uses
 CFG1           82 uses
-CFG2           734 uses
+CFG2           741 uses
 CFG3           1200 uses
-CFG4           2351 uses
+CFG4           2352 uses
 
 Carry cells:
 ARI1            2638 uses - used for arithmetic functions
@@ -918,26 +1151,26 @@ Total ARI1      2744 uses
 
 
 Sequential Cells: 
-SLE            6172 uses
+SLE            6174 uses
 
 DSP Blocks:    0 of 924 (0%)
 
-I/O ports: 115
-I/O primitives: 107
+I/O ports: 117
+I/O primitives: 108
 BIBUF          34 uses
 INBUF          19 uses
-INBUF_DIFF     1 use
+INBUF_DIFF     2 uses
 OUTBUF         43 uses
 OUTBUF_DIFF    4 uses
 TRIBUFF        6 uses
 
 
-Global Clock Buffers: 8
+Global Clock Buffers: 9
 
 RAM/ROM usage summary
 Total Block RAMs (RAM1K20) : 921 of 952 (96%)
 
-Total LUTs:    7111
+Total LUTs:    7119
 
 Extra resources required for RAM and MACC_PA interface logic during P&R:
 
@@ -946,14 +1179,14 @@ RAM1K20  Interface Logic : SLEs = 33156; LUTs = 33156;
 MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
 MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
 
-Total number of SLEs after P&R:  6172 + 0 + 33156 + 0 = 39328;
-Total number of LUTs after P&R:  7111 + 0 + 33156 + 0 = 40267;
+Total number of SLEs after P&R:  6174 + 0 + 33156 + 0 = 39330;
+Total number of LUTs after P&R:  7119 + 0 + 33156 + 0 = 40275;
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:13s; Memory used current: 70MB peak: 270MB)
+At Mapper Exit (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:12s; Memory used current: 70MB peak: 269MB)
 
-Process took 0h:00m:18s realtime, 0h:00m:13s cputime
-# Fri Oct 20 21:08:29 2023
+Process took 0h:00m:19s realtime, 0h:00m:12s cputime
+# Mon Oct 23 11:55:28 2023
 
 ###########################################################]
