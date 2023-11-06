@@ -2,13 +2,20 @@ work.PLL
 work.INIT
 work.OSC_RC160MHZ
 Synchronizer
+Communication_TX_Arbiter2
+|mko|parameter Time_Period 330000;|
+UART_RX_Protocol
+UART_TX_Protocol
+ft601_fifo_interface
+ftdi_to_fifo_interface
+Communication_ANW_MUX
+Communication_CMD_MUX
+Communication_Switch
 |SPI_interface|parameter addr_width 7;,parameter data_width 16;|
 |spi_master|parameter data_length 24;,parameter divider 5;|
 ADI_SPI
 Answer_Encoder
 Command_Decoder
-Communication_ANW_MUX
-Communication_CMD_MUX
 gpio_controler
 REGISTERS
 Reset_Controler
@@ -20,10 +27,3 @@ Trigger_Main
 Communication_Builder
 FIFOs_Reader
 Test_Generator
-Communication_TX_Arbiter2
-|mko|parameter Time_Period 330000;|
-UART_RX_Protocol
-UART_TX_Protocol
-ft601_fifo_interface
-ftdi_to_fifo_interface
-Communication_Switch

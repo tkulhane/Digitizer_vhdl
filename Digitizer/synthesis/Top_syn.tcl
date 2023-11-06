@@ -1,3 +1,3 @@
-project -load "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/synthesis/Top_syn.prj"
+project -load "//mac/Home/Documents/_temp_VHDL/Digitizer_vhdl/Digitizer/synthesis/Top_syn.prj"
 project -run
 project -save

@@ -79,12 +79,12 @@ entity Command_Decoder is
         GPIO_data : out std_logic_vector(15 downto 0);
 
         --Communiacion Switch
-        COMSW_busy : in std_logic;
-        COMSW_enable_cmd : out std_logic;
-        COMSW_write_read : out std_logic;
-        COMSW_addr : out std_logic_vector(7 downto 0);
-        COMSW_data : out std_logic_vector(15 downto 0);
-        COMSW_comm_number : out std_logic_vector(3 downto 0);
+        COMM_busy : in std_logic;
+        COMM_enable_cmd : out std_logic;
+        COMM_write_read : out std_logic;
+        COMM_addr : out std_logic_vector(7 downto 0);
+        COMM_data : out std_logic_vector(15 downto 0);
+        COMM_comm_number : out std_logic_vector(3 downto 0);
         
 
         Diag_Valid : out std_logic
@@ -138,7 +138,7 @@ begin
                     LMX1SPI_busy OR
                     LMX2SPI_busy OR
                     GPIO_busy OR
-                    COMSW_busy;
+                    COMM_busy;
     
     --write read
     RST_write_read      <= Has_Answer;
@@ -149,7 +149,7 @@ begin
     LMX1SPI_write_read  <= Has_Answer;
     LMX2SPI_write_read  <= Has_Answer;
     GPIO_write_read     <= Has_Answer;
-    COMSW_write_read    <= Has_Answer;
+    COMM_write_read    <= Has_Answer;
 
     --perif data routing
     RST_addr    <= cmd_data(23 downto 16);
@@ -177,9 +177,9 @@ begin
     GPIO_addr   <= cmd_data(23 downto 16);
     GPIO_data   <= cmd_data(15 downto 0);
 
-    COMSW_addr <= cmd_data(23 downto 16);
-    COMSW_data <= cmd_data(15 downto 0);
-    COMSW_comm_number <= cmd_status_comm;
+    COMM_addr <= cmd_data(23 downto 16);
+    COMM_data <= cmd_data(15 downto 0);
+    COMM_comm_number <= cmd_status_comm;
 
     --decoder output routing to enable cmd signals
     RST_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Reset_Controler);
@@ -192,7 +192,7 @@ begin
 
     TRG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Trigger);
     GPIO_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_GPIO);
-    COMSW_enable_cmd    <= data_valid_for_decode and decode_vector(PER_NUM_CONST_COMSW);
+    COMM_enable_cmd    <= data_valid_for_decode and decode_vector(PER_NUM_CONST_COMSW);
 
 ------------------------------------------------------------------------------------------------------------
 --FSM decoder ride

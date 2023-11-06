@@ -48,7 +48,7 @@ entity Answer_Encoder is
         GPIO_rx_data : in std_logic_vector(15 downto 0);
 
         --Communiacion Switch
-        COMSW_rx_data : in std_logic_vector(15 downto 0);
+        COMM_rx_data : in std_logic_vector(15 downto 0);
 
 
         Diag_Valid : out std_logic                                     
@@ -332,7 +332,7 @@ begin
                 periph_data <= (others => '0');
 
             when CMD_CONST_GET_CommunicationSwitch=>
-                periph_data <= CMD_DATA_Part_2 & COMSW_rx_data; 
+                periph_data <= CMD_DATA_Part_2 & COMM_rx_data; 
 
 
             when others =>
