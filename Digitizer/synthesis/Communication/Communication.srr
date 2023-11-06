@@ -1,0 +1,539 @@
+# Mon Nov  6 21:43:42 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09M
+Install: C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DESKTOP-TDPVUTD
+
+Implementation : synthesis
+Synopsys Generic Technology Mapper, Version map202109act, Build 055R, Built Feb 23 2022 09:52:10, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 126MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 138MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 138MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 138MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 138MB)
+
+
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_0(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_1(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\communication\communication.v":9:7:9:19|Found compile point of type hard on View view:work.Communication(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.Communication(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 182MB peak: 183MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 182MB peak: 183MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 179MB peak: 184MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\communication\communication.v":9:7:9:19|Mapping Compile point view:work.Communication(verilog) because 
+		 no database from previous run found.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 179MB peak: 184MB)
+
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_c1_corefifo_c1_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c3\corefifo_c3_0\rtl\vlog\core\corefifo_c3_corefifo_c3_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c3\corefifo_c3_0\rtl\vlog\core\corefifo_c3_corefifo_c3_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c3\corefifo_c3_0\rtl\vlog\core\corefifo_c3_corefifo_c3_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c3\corefifo_c3_0\rtl\vlog\core\corefifo_c3_corefifo_c3_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_c11_corefifo_c11_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_c11_corefifo_c11_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C11_COREFIFO_C11_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+
+#### START OF SSF LOG MESSAGES ####
+
+#### END OF SSF LOG MESSAGES ####
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 183MB peak: 184MB)
+
+Encoding state machine Controler_0.Command_Decoder_0.state_reg[0:9] (in view: work.Top(verilog))
+original code -> new code
+   0000000001 -> 0000000001
+   0000000010 -> 0000000010
+   0000000100 -> 0000000100
+   0000001000 -> 0000001000
+   0000010000 -> 0000010000
+   0000100000 -> 0000100000
+   0001000000 -> 0001000000
+   0010000000 -> 0010000000
+   0100000000 -> 0100000000
+   1000000000 -> 1000000000
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":204:8:204:9|Removing sequential instance Controler_0.Command_Decoder_0.state_reg[0] (in view: work.Top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":204:8:204:9|Removing sequential instance Controler_0.Command_Decoder_0.state_reg[1] (in view: work.Top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+Encoding state machine Controler_0.Answer_Encoder_0.state_reg[0:4] (in view: work.Top(verilog))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing sequential instance Clock_Reset_0.Synchronizer_0.Chain[0] (in view: work.Top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c3\corefifo_c3_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.Communication(verilog) instance COREFIFO_C3_0.COREFIFO_C3_0.genblk16\.fifo_corefifo_sync_scntr.memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c3\corefifo_c3_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.Communication(verilog) instance COREFIFO_C3_0.COREFIFO_C3_0.genblk16\.fifo_corefifo_sync_scntr.memwaddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.Communication(verilog) instance COREFIFO_C1_0.COREFIFO_C1_0.genblk16\.fifo_corefifo_sync_scntr.memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c1\corefifo_c1_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.Communication(verilog) instance COREFIFO_C1_0.COREFIFO_C1_0.genblk16\.fifo_corefifo_sync_scntr.memwaddr_r[9:0] 
+Encoding state machine Communication_TX_Arbiter2_0.state_reg[0:6] (in view: work.UART_Protocol_UART_Protocol_0(verilog))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine Communication_TX_Arbiter2_0.state_reg[0:6] (in view: work.UART_Protocol_UART_Protocol_1(verilog))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine state_reg[0:5] (in view: work.Communication_Switch(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:2] (in view: work.Communication_CMD_MUX(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state_reg[0:3] (in view: work.Communication_ANW_MUX(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_anw_mux.vhd":67:8:67:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Communication_ANW_MUX(rtl)); safe FSM implementation is not required.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z17_layer0(verilog) instance memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z17_layer0(verilog) instance memwaddr_r[9:0] 
+Encoding state machine state_reg[0:6] (in view: work.Communication_TX_Arbiter2_1_1(rtl))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine state_reg[0:7] (in view: work.ft601_fifo_interface(rtl_ft601_fifo_interface))
+original code -> new code
+   00000001 -> 00000001
+   00000010 -> 00000010
+   00000100 -> 00000100
+   00001000 -> 00001000
+   00010000 -> 00010000
+   00100000 -> 00100000
+   01000000 -> 01000000
+   10000000 -> 10000000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z15_layer0(verilog) instance genblk10\.rptr[13:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z15_layer0(verilog) instance genblk10\.memraddr_r[12:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c8\corefifo_c8_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z15_layer0(verilog) instance genblk10\.memwaddr_r[12:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z12_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c7\corefifo_c7_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z12_layer0(verilog) instance genblk10\.memwaddr_r[9:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 186MB peak: 186MB)
+
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c11\corefifo_c11_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing instance Communication_0.USB_3_Protocol_0.COREFIFO_C11_0.COREFIFO_C11_0.RE_d1 because it is equivalent to instance Communication_0.USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[4]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 188MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 189MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 190MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 190MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 189MB peak: 190MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 189MB peak: 190MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 191MB peak: 191MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:04s		    -0.82ns		1359 /      1264
+   2		0h:00m:04s		    -0.82ns		1356 /      1264
+@N: FX271 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ft601_fifo_interface.vhd":92:8:92:9|Replicating instance USB_3_Protocol_0.ft601_fifo_interface_0.state_reg[5] (in view: work.Communication(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ft601_fifo_interface.vhd":92:8:92:9|Replicating instance USB_3_Protocol_0.ft601_fifo_interface_0.state_reg[7] (in view: work.Communication(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ft601_fifo_interface.vhd":92:8:92:9|Replicating instance USB_3_Protocol_0.ft601_fifo_interface_0.state_reg[6] (in view: work.Communication(verilog)) with 5 loads 1 time to improve timing.
+Timing driven replication report
+Added 3 Registers via timing driven replication
+Added 3 LUTs via timing driven replication
+
+   3		0h:00m:05s		    -0.79ns		1359 /      1267
+
+
+   4		0h:00m:05s		    -0.79ns		1359 /      1267
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 191MB peak: 191MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 191MB peak: 192MB)
+
+
+End compile point sub-process log
+
+@W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":13:17:13:25|Blackbox OSC_RC160MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@N: MT615 |Found clock Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK with period 6.25ns 
+@N: MT615 |Found clock FTDI_CLK with period 10.00ns 
+@W: MT420 |Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0_clkint_0.
+@W: MT420 |Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0_clkint_4.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Mon Nov  6 21:43:48 2023
+#
+
+
+Top view:               Top
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 3.062
+
+                                                                    Requested     Estimated     Requested     Estimated               Clock        Clock                
+Starting Clock                                                      Frequency     Frequency     Period        Period        Slack     Type         Group                
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     NA            6.250         NA            NA        declared     default_clkgroup     
+FTDI_CLK                                                            100.0 MHz     262.8 MHz     10.000        3.806         6.194     declared     default_clkgroup     
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     144.1 MHz     10.000        6.938         3.062     inferred     Inferred_clkgroup_0_1
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     100.0 MHz     NA            10.000        NA            NA        inferred     Inferred_clkgroup_0_2
+========================================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                                            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                         Ending                                                           |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FTDI_CLK                                                         FTDI_CLK                                                         |  10.000      6.194  |  No paths    -      |  No paths    -      |  No paths    -    
+FTDI_CLK                                                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  FTDI_CLK                                                         |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  10.000      3.062  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: FTDI_CLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                                     Starting                                             Arrival          
+Instance                                                                                                             Reference     Type     Pin     Net                   Time        Slack
+                                                                                                                     Clock                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[1]      FTDI_CLK      SLE      Q       fifo_MEMRADDR[1]      0.201       6.194
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[0]      FTDI_CLK      SLE      Q       fifo_MEMRADDR[0]      0.201       6.211
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[2]      FTDI_CLK      SLE      Q       fifo_MEMRADDR[2]      0.218       6.221
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[3]      FTDI_CLK      SLE      Q       fifo_MEMRADDR[3]      0.218       6.286
+Communication_0.USB_3_Protocol_0.ft601_fifo_interface_0.state_reg[3]                                                 FTDI_CLK      SLE      Q       state_reg[3]          0.218       6.288
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[9]      FTDI_CLK      SLE      Q       fifo_MEMRADDR[9]      0.218       6.293
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[4]      FTDI_CLK      SLE      Q       fifo_MEMRADDR[4]      0.218       6.318
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[10]     FTDI_CLK      SLE      Q       fifo_MEMRADDR[10]     0.218       6.337
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[11]     FTDI_CLK      SLE      Q       fifo_MEMRADDR[11]     0.218       6.379
+Communication_0.USB_3_Protocol_0.ft601_fifo_interface_0.state_reg[4]                                                 FTDI_CLK      SLE      Q       state_reg[4]          0.218       6.397
+===========================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                                                     Starting                                            Required          
+Instance                                                                                                             Reference     Type     Pin     Net                  Time         Slack
+                                                                                                                     Clock                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[12]     FTDI_CLK      SLE      D       memraddr_r_s[12]     10.000       6.194
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[11]     FTDI_CLK      SLE      D       memraddr_r_s[11]     10.000       6.202
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[10]     FTDI_CLK      SLE      D       memraddr_r_s[10]     10.000       6.210
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[9]      FTDI_CLK      SLE      D       memraddr_r_s[9]      10.000       6.218
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[8]      FTDI_CLK      SLE      D       memraddr_r_s[8]      10.000       6.226
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[7]      FTDI_CLK      SLE      D       memraddr_r_s[7]      10.000       6.234
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[6]      FTDI_CLK      SLE      D       memraddr_r_s[6]      10.000       6.242
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[5]      FTDI_CLK      SLE      D       memraddr_r_s[5]      10.000       6.250
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[4]      FTDI_CLK      SLE      D       memraddr_r_s[4]      10.000       6.258
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[3]      FTDI_CLK      SLE      D       memraddr_r_s[3]      10.000       6.266
+===========================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      3.806
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 6.194
+
+    Number of logic level(s):                15
+    Starting point:                          Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[1] / Q
+    Ending point:                            Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[12] / D
+    The start point is clocked by            FTDI_CLK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            FTDI_CLK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                                                                            Pin      Pin               Arrival     No. of    
+Name                                                                                                                             Type     Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[1]                  SLE      Q        Out     0.201     0.201 f     -         
+fifo_MEMRADDR[1]                                                                                                                 Net      -        -       1.347     -           18        
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry_cy_RNO_0[0]     CFG4     D        In      -         1.548 f     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry_cy_RNO_0[0]     CFG4     Y        Out     0.192     1.739 f     -         
+memraddr_r_0_sqmuxa_0_50_a2_0_a2_7                                                                                               Net      -        -       0.118     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry_cy[0]           ARI1     D        In      -         1.857 f     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry_cy[0]           ARI1     Y        Out     0.363     2.220 r     -         
+memraddr_r_cry_cy_Y[0]                                                                                                           Net      -        -       0.686     -           13        
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[0]              ARI1     C        In      -         2.906 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[0]              ARI1     FCO      Out     0.393     3.300 r     -         
+memraddr_r_cry[0]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[1]              ARI1     FCI      In      -         3.300 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[1]              ARI1     FCO      Out     0.008     3.308 r     -         
+memraddr_r_cry[1]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[2]              ARI1     FCI      In      -         3.308 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[2]              ARI1     FCO      Out     0.008     3.316 r     -         
+memraddr_r_cry[2]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[3]              ARI1     FCI      In      -         3.316 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[3]              ARI1     FCO      Out     0.008     3.324 r     -         
+memraddr_r_cry[3]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[4]              ARI1     FCI      In      -         3.324 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[4]              ARI1     FCO      Out     0.008     3.332 r     -         
+memraddr_r_cry[4]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[5]              ARI1     FCI      In      -         3.332 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[5]              ARI1     FCO      Out     0.008     3.340 r     -         
+memraddr_r_cry[5]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[6]              ARI1     FCI      In      -         3.340 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[6]              ARI1     FCO      Out     0.008     3.348 r     -         
+memraddr_r_cry[6]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[7]              ARI1     FCI      In      -         3.348 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[7]              ARI1     FCO      Out     0.008     3.356 r     -         
+memraddr_r_cry[7]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[8]              ARI1     FCI      In      -         3.356 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[8]              ARI1     FCO      Out     0.008     3.364 r     -         
+memraddr_r_cry[8]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[9]              ARI1     FCI      In      -         3.364 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[9]              ARI1     FCO      Out     0.008     3.372 r     -         
+memraddr_r_cry[9]                                                                                                                Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[10]             ARI1     FCI      In      -         3.372 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[10]             ARI1     FCO      Out     0.008     3.380 r     -         
+memraddr_r_cry[10]                                                                                                               Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[11]             ARI1     FCI      In      -         3.380 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_cry[11]             ARI1     FCO      Out     0.008     3.388 r     -         
+memraddr_r_cry[11]                                                                                                               Net      -        -       0.000     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_s[12]               ARI1     FCI      In      -         3.388 r     -         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r_s[12]               ARI1     S        Out     0.300     3.688 r     -         
+memraddr_r_s[12]                                                                                                                 Net      -        -       0.118     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.genblk10\.memraddr_r[12]                 SLE      D        In      -         3.806 r     -         
+===========================================================================================================================================================================================
+Total path delay (propagation time + setup) of 3.806 is 1.537(40.4%) logic and 2.269(59.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                                                     Starting                                                                                                                                                  Arrival          
+Instance                                                                                                                             Reference                                                           Type        Pin           Net                                                         Time        Slack
+                                                                                                                                     Clock                                                                                                                                                                      
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[0]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[0]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[1]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[1]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C1     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[0]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[2]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C1     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[1]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[3]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C2     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[0]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[4]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C2     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[1]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[5]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C3     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[0]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[6]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C3     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[1]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[7]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C4     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[0]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[8]     3.018       3.062
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C4     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DOUT[1]     Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[9]     3.018       3.062
+================================================================================================================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                                                                                     Starting                                                                                                                                     Required          
+Instance                                                                                                                                             Reference                                                           Type        Pin          Net                                             Time         Slack
+                                                                                                                                                     Clock                                                                                                                                                          
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[0]     Communication_TX_Arbiter2_0_TX_Fifo_Data[0]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[1]     Communication_TX_Arbiter2_0_TX_Fifo_Data[1]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C1     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[0]     Communication_TX_Arbiter2_0_TX_Fifo_Data[2]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C1     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[1]     Communication_TX_Arbiter2_0_TX_Fifo_Data[3]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C2     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[0]     Communication_TX_Arbiter2_0_TX_Fifo_Data[4]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C2     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[1]     Communication_TX_Arbiter2_0_TX_Fifo_Data[5]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C3     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[0]     Communication_TX_Arbiter2_0_TX_Fifo_Data[6]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C3     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[1]     Communication_TX_Arbiter2_0_TX_Fifo_Data[7]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C4     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[0]     Communication_TX_Arbiter2_0_TX_Fifo_Data[8]     9.197        3.062
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C4     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[1]     Communication_TX_Arbiter2_0_TX_Fifo_Data[9]     9.197        3.062
+====================================================================================================================================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.803
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.197
+
+    - Propagation time:                      6.136
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     3.062
+
+    Number of logic level(s):                2
+    Starting point:                          Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C0 / A_DOUT[0]
+    Ending point:                            Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C0 / B_DIN[0]
+    The start point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin A_CLK
+    The end   point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin B_CLK
+
+Instance / Net                                                                                                                                                   Pin           Pin               Arrival     No. of    
+Name                                                                                                                                                 Type        Name          Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C10_COREFIFO_C10_0_LSRAM_top_R0C0                     RAM1K20     A_DOUT[0]     Out     3.018     3.018 f     -         
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.RDATA_int[0]                                                                                              Net         -             -       0.948     -           2         
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.Q[0]                                                                                                      CFG4        D             In      -         3.966 f     -         
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.Q[0]                                                                                                      CFG4        Y             Out     0.192     4.158 f     -         
+Data_Block_0_Communication_Data_Frame[0]                                                                                                             Net         -             -       0.974     -           3         
+Communication_0.USB_3_Protocol_0.Communication_TX_Arbiter2_0.TX_Fifo_Data[0]                                                                         CFG4        D             In      -         5.132 f     -         
+Communication_0.USB_3_Protocol_0.Communication_TX_Arbiter2_0.TX_Fifo_Data[0]                                                                         CFG4        Y             Out     0.192     5.324 f     -         
+Communication_TX_Arbiter2_0_TX_Fifo_Data[0]                                                                                                          Net         -             -       0.812     -           1         
+Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C8_COREFIFO_C8_0_LSRAM_top_R0C0     RAM1K20     B_DIN[0]      In      -         6.136 f     -         
+=======================================================================================================================================================================================================================
+Total path delay (propagation time + setup) of 6.938 is 4.204(60.6%) logic and 2.734(39.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":13:0:13:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":16:0:16:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":19:0:19:0|Timing constraint (to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+None
+Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Communication\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name              Status     Reason     
+----------------------------------------
+Communication     Mapped     No database
+========================================
+
+Process took 0h:00m:05s realtime, 0h:00m:05s cputime
+# Mon Nov  6 21:43:48 2023
+
+###########################################################]

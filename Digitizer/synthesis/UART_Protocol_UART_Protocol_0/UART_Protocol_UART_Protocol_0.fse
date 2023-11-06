@@ -1,142 +1,142 @@
 
-fsm_encoding {13678675} sequential
+fsm_encoding {10678676} sequential
 
-fsm_state_encoding {13678675} idle {00}
+fsm_state_encoding {10678676} idle {00}
 
-fsm_state_encoding {13678675} data_read {01}
+fsm_state_encoding {10678676} data_read {01}
 
-fsm_state_encoding {13678675} wait_for_fifo {10}
+fsm_state_encoding {10678676} wait_for_fifo {10}
 
-fsm_state_encoding {13678675} data_write {11}
+fsm_state_encoding {10678676} data_write {11}
 
-fsm_registers {13678675} {state_reg[1]}  {state_reg[0]} 
+fsm_registers {10678676} {state_reg[1]}  {state_reg[0]} 
 
-fsm_encoding {14618616} sequential
+fsm_encoding {11618617} sequential
 
-fsm_state_encoding {14618616} idle {00}
+fsm_state_encoding {11618617} idle {00}
 
-fsm_state_encoding {14618616} data_read {01}
+fsm_state_encoding {11618617} data_read {01}
 
-fsm_state_encoding {14618616} data_write {10}
+fsm_state_encoding {11618617} data_write {10}
 
-fsm_registers {14618616} {state_reg[1]}  {state_reg[0]} 
+fsm_registers {11618617} {state_reg[1]}  {state_reg[0]} 
 
-fsm_encoding {10211901192} onehot
+fsm_encoding {5911901192} onehot
 
-fsm_state_encoding {10211901192} tx_idle {000001}
+fsm_state_encoding {5911901192} tx_idle {000001}
 
-fsm_state_encoding {10211901192} tx_load {000010}
+fsm_state_encoding {5911901192} tx_load {000010}
 
-fsm_state_encoding {10211901192} start_bit {000100}
+fsm_state_encoding {5911901192} start_bit {000100}
 
-fsm_state_encoding {10211901192} tx_data_bits {001000}
+fsm_state_encoding {5911901192} tx_data_bits {001000}
 
-fsm_state_encoding {10211901192} parity_bit {010000}
+fsm_state_encoding {5911901192} parity_bit {010000}
 
-fsm_state_encoding {10211901192} tx_stop_bit {100000}
+fsm_state_encoding {5911901192} tx_stop_bit {100000}
 
-fsm_registers {10211901192} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
+fsm_registers {5911901192} {xmit_state[5]}  {xmit_state[4]}  {xmit_state[3]}  {xmit_state[2]}  {xmit_state[1]}  {xmit_state[0]} 
 
-fsm_encoding {10128602861} sequential
+fsm_encoding {5828602861} sequential
 
-fsm_state_encoding {10128602861} 00 {00}
+fsm_state_encoding {5828602861} 00 {00}
 
-fsm_state_encoding {10128602861} 01 {01}
+fsm_state_encoding {5828602861} 01 {01}
 
-fsm_state_encoding {10128602861} 10 {10}
+fsm_state_encoding {5828602861} 10 {10}
 
-fsm_state_encoding {10128602861} 11 {11}
+fsm_state_encoding {5828602861} 11 {11}
 
-fsm_registers {10128602861} {rx_state[1]}  {rx_state[0]} 
+fsm_registers {5828602861} {rx_state[1]}  {rx_state[0]} 
 
-fsm_encoding {295885815} onehot
+fsm_encoding {15588584} onehot
 
-fsm_state_encoding {295885815} idle {0000000000001}
+fsm_state_encoding {15588584} idle {0000000000001}
 
-fsm_state_encoding {295885815} read_from_fifo {0000000000010}
+fsm_state_encoding {15588584} read_from_fifo {0000000000010}
 
-fsm_state_encoding {295885815} wait_stx {0000000000100}
+fsm_state_encoding {15588584} wait_stx {0000000000100}
 
-fsm_state_encoding {295885815} send_stx {0000000001000}
+fsm_state_encoding {15588584} send_stx {0000000001000}
 
-fsm_state_encoding {295885815} generate_byte {0000000010000}
+fsm_state_encoding {15588584} generate_byte {0000000010000}
 
-fsm_state_encoding {295885815} wait_generate {0000000100000}
+fsm_state_encoding {15588584} wait_generate {0000000100000}
 
-fsm_state_encoding {295885815} wait_first {0000001000000}
+fsm_state_encoding {15588584} wait_first {0000001000000}
 
-fsm_state_encoding {295885815} send_first {0000010000000}
+fsm_state_encoding {15588584} send_first {0000010000000}
 
-fsm_state_encoding {295885815} wait_second {0000100000000}
+fsm_state_encoding {15588584} wait_second {0000100000000}
 
-fsm_state_encoding {295885815} send_second {0001000000000}
+fsm_state_encoding {15588584} send_second {0001000000000}
 
-fsm_state_encoding {295885815} next_or_end {0010000000000}
+fsm_state_encoding {15588584} next_or_end {0010000000000}
 
-fsm_state_encoding {295885815} wait_etx {0100000000000}
+fsm_state_encoding {15588584} wait_etx {0100000000000}
 
-fsm_state_encoding {295885815} send_etx {1000000000000}
+fsm_state_encoding {15588584} send_etx {1000000000000}
 
-fsm_registers {295885815} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]}  {state_reg[7]}  {state_reg[8]}  {state_reg[9]}  {state_reg[10]}  {state_reg[11]}  {state_reg[12]} 
+fsm_registers {15588584} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]}  {state_reg[7]}  {state_reg[8]}  {state_reg[9]}  {state_reg[10]}  {state_reg[11]}  {state_reg[12]} 
 
-fsm_encoding {288688614} onehot
+fsm_encoding {14868863} onehot
 
-fsm_state_encoding {288688614} idle {00000000000001}
+fsm_state_encoding {14868863} idle {00000000000001}
 
-fsm_state_encoding {288688614} stx_clear {00000000000010}
+fsm_state_encoding {14868863} stx_clear {00000000000010}
 
-fsm_state_encoding {288688614} wait_for_first {00000000000100}
+fsm_state_encoding {14868863} wait_for_first {00000000000100}
 
-fsm_state_encoding {288688614} first_nibble {00000000001000}
+fsm_state_encoding {14868863} first_nibble {00000000001000}
 
-fsm_state_encoding {288688614} clear_first {00000000010000}
+fsm_state_encoding {14868863} clear_first {00000000010000}
 
-fsm_state_encoding {288688614} wait_for_second {00000000100000}
+fsm_state_encoding {14868863} wait_for_second {00000000100000}
 
-fsm_state_encoding {288688614} second_nibble {00000001000000}
+fsm_state_encoding {14868863} second_nibble {00000001000000}
 
-fsm_state_encoding {288688614} clear_second {00000010000000}
+fsm_state_encoding {14868863} clear_second {00000010000000}
 
-fsm_state_encoding {288688614} validate_nibbles {00000100000000}
+fsm_state_encoding {14868863} validate_nibbles {00000100000000}
 
-fsm_state_encoding {288688614} store_byte {00001000000000}
+fsm_state_encoding {14868863} store_byte {00001000000000}
 
-fsm_state_encoding {288688614} etx_clear {00010000000000}
+fsm_state_encoding {14868863} etx_clear {00010000000000}
 
-fsm_state_encoding {288688614} wait_for_fifo {00100000000000}
+fsm_state_encoding {14868863} wait_for_fifo {00100000000000}
 
-fsm_state_encoding {288688614} write_to_fifo {01000000000000}
+fsm_state_encoding {14868863} write_to_fifo {01000000000000}
 
-fsm_state_encoding {288688614} fault {10000000000000}
+fsm_state_encoding {14868863} fault {10000000000000}
 
-fsm_registers {288688614} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]}  {state_reg[7]}  {state_reg[8]}  {state_reg[9]}  {state_reg[10]}  {state_reg[11]}  {state_reg[12]}  {state_reg[13]} 
+fsm_registers {14868863} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]}  {state_reg[7]}  {state_reg[8]}  {state_reg[9]}  {state_reg[10]}  {state_reg[11]}  {state_reg[12]}  {state_reg[13]} 
 
-fsm_encoding {28422842213} sequential
+fsm_encoding {1442284222} sequential
 
-fsm_state_encoding {28422842213} idle {00}
+fsm_state_encoding {1442284222} idle {00}
 
-fsm_state_encoding {28422842213} detect {01}
+fsm_state_encoding {1442284222} detect {01}
 
-fsm_state_encoding {28422842213} wait_for_clear_read {10}
+fsm_state_encoding {1442284222} wait_for_clear_read {10}
 
-fsm_state_encoding {28422842213} wait_1 {11}
+fsm_state_encoding {1442284222} wait_1 {11}
 
-fsm_registers {28422842213} {Detect_state_reg[1]}  {Detect_state_reg[0]} 
+fsm_registers {1442284222} {Detect_state_reg[1]}  {Detect_state_reg[0]} 
 
-fsm_encoding {275285212} onehot
+fsm_encoding {13528521} onehot
 
-fsm_state_encoding {275285212} idle {0000001}
+fsm_state_encoding {13528521} idle {0000001}
 
-fsm_state_encoding {275285212} wait_cmd_data {0000010}
+fsm_state_encoding {13528521} wait_cmd_data {0000010}
 
-fsm_state_encoding {275285212} read_cmd_data {0000100}
+fsm_state_encoding {13528521} read_cmd_data {0000100}
 
-fsm_state_encoding {275285212} wait_md_data {0001000}
+fsm_state_encoding {13528521} wait_md_data {0001000}
 
-fsm_state_encoding {275285212} read_md_data {0010000}
+fsm_state_encoding {13528521} read_md_data {0010000}
 
-fsm_state_encoding {275285212} read_md_data_abort {0100000}
+fsm_state_encoding {13528521} read_md_data_abort {0100000}
 
-fsm_state_encoding {275285212} switch_to_cmd {1000000}
+fsm_state_encoding {13528521} switch_to_cmd {1000000}
 
-fsm_registers {275285212} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]} 
+fsm_registers {13528521} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]}  {state_reg[6]} 
