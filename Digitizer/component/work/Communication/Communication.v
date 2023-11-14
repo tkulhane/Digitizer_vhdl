@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Nov  6 21:05:22 2023
+// Created by SmartDesign Tue Nov 14 16:46:03 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -118,6 +118,7 @@ wire          Communication_CMD_MUX_0_CMD_Fifo_Write_Enable;
 wire          Communication_CMD_MUX_0_SRC_1_Fifo_Read_Enable;
 wire          Communication_CMD_MUX_0_SRC_2_Fifo_Read_Enable;
 wire          Communication_CMD_MUX_0_SRC_3_Fifo_Read_Enable;
+wire   [2:0]  Communication_Controler_0_Cummunication_Switch_Vote_Vector;
 wire   [31:0] Communication_Switch_0_DEST_1_Fifo_Data;
 wire          Communication_Switch_0_DEST_1_Fifo_Empty;
 wire   [31:0] Communication_Switch_0_DEST_2_Fifo_Data;
@@ -165,12 +166,10 @@ wire          USB_3_Protocol_0_RX_FIFO_EMPTY;
 wire          USB_3_Protocol_0_TX_FULL;
 wire   [15:0] write_data_frame;
 wire          write_read;
-wire   [15:0] read_data_frame_net_1;
 wire          busy_net_1;
 wire          DataFifo_RD_net_1;
 wire          Builder_Enable_net_1;
 wire          CMD_EMPTY_net_1;
-wire   [39:0] CMD_Q_net_1;
 wire          ANW_FULL_net_1;
 wire          TX_0_net_1;
 wire          TX_1_net_1;
@@ -180,6 +179,8 @@ wire          FTDI_nRD_net_1;
 wire          FTDI_nOE_net_1;
 wire          FTDI_GPIO_0_net_1;
 wire          FTDI_GPIO_1_net_1;
+wire   [15:0] read_data_frame_net_1;
+wire   [39:0] CMD_Q_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -195,8 +196,6 @@ assign Communication_Number_const_net_0 = 4'h3;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign read_data_frame_net_1 = read_data_frame_net_0;
-assign read_data_frame[15:0] = read_data_frame_net_1;
 assign busy_net_1            = busy_net_0;
 assign busy                  = busy_net_1;
 assign DataFifo_RD_net_1     = DataFifo_RD_net_0;
@@ -205,8 +204,6 @@ assign Builder_Enable_net_1  = Builder_Enable_net_0;
 assign Builder_Enable        = Builder_Enable_net_1;
 assign CMD_EMPTY_net_1       = CMD_EMPTY_net_0;
 assign CMD_EMPTY             = CMD_EMPTY_net_1;
-assign CMD_Q_net_1           = CMD_Q_net_0;
-assign CMD_Q[39:0]           = CMD_Q_net_1;
 assign ANW_FULL_net_1        = ANW_FULL_net_0;
 assign ANW_FULL              = ANW_FULL_net_1;
 assign TX_0_net_1            = TX_0_net_0;
@@ -225,6 +222,10 @@ assign FTDI_GPIO_0_net_1     = FTDI_GPIO_0_net_0;
 assign FTDI_GPIO_0           = FTDI_GPIO_0_net_1;
 assign FTDI_GPIO_1_net_1     = FTDI_GPIO_1_net_0;
 assign FTDI_GPIO_1           = FTDI_GPIO_1_net_1;
+assign read_data_frame_net_1 = read_data_frame_net_0;
+assign read_data_frame[15:0] = read_data_frame_net_1;
+assign CMD_Q_net_1           = CMD_Q_net_0;
+assign CMD_Q[39:0]           = CMD_Q_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -270,32 +271,42 @@ Communication_CMD_MUX Communication_CMD_MUX_0(
         .CMD_Fifo_Write_Data    ( Communication_CMD_MUX_0_CMD_Fifo_Write_Data ) 
         );
 
+//--------Communication_Controler
+Communication_Controler Communication_Controler_0(
+        // Inputs
+        .Clock                            ( Logic_Clock ),
+        .Reset_N                          ( Logic_RESET_N ),
+        .enable_cmd                       ( enable_cmd ),
+        .write_read                       ( write_read ),
+        .addr_frame                       ( addr_frame ),
+        .write_data_frame                 ( write_data_frame ),
+        .comm_number                      ( comm_number ),
+        // Outputs
+        .busy                             ( busy_net_0 ),
+        .read_data_frame                  ( read_data_frame_net_0 ),
+        .Cummunication_Switch_Vote_Vector ( Communication_Controler_0_Cummunication_Switch_Vote_Vector ) 
+        );
+
 //--------Communication_Switch
 Communication_Switch Communication_Switch_0(
         // Inputs
-        .Clock             ( Logic_Clock ),
-        .Reset_N           ( Logic_RESET_N ),
-        .enable_cmd        ( enable_cmd ),
-        .write_read        ( write_read ),
-        .DataFifo_Empty    ( DataFifo_Empty ),
-        .DEST_1_Fifo_Read  ( UART_Protocol_0_MD_Fifo_RE ),
-        .DEST_2_Fifo_Read  ( UART_Protocol_1_MD_Fifo_RE ),
-        .DEST_3_Fifo_Read  ( USB_3_Protocol_0_MD_Fifo_RE ),
-        .addr_frame        ( addr_frame ),
-        .write_data_frame  ( write_data_frame ),
-        .comm_number       ( comm_number ),
-        .DafaFifo_Data     ( DafaFifo_Data ),
+        .Clock                     ( Logic_Clock ),
+        .Reset_N                   ( Logic_RESET_N ),
+        .Communication_vote_vector ( Communication_Controler_0_Cummunication_Switch_Vote_Vector ),
+        .DataFifo_Empty            ( DataFifo_Empty ),
+        .DafaFifo_Data             ( DafaFifo_Data ),
+        .DEST_1_Fifo_Read          ( UART_Protocol_0_MD_Fifo_RE ),
+        .DEST_2_Fifo_Read          ( UART_Protocol_1_MD_Fifo_RE ),
+        .DEST_3_Fifo_Read          ( USB_3_Protocol_0_MD_Fifo_RE ),
         // Outputs
-        .busy              ( busy_net_0 ),
-        .Builder_Enable    ( Builder_Enable_net_0 ),
-        .DataFifo_RD       ( DataFifo_RD_net_0 ),
-        .DEST_1_Fifo_Empty ( Communication_Switch_0_DEST_1_Fifo_Empty ),
-        .DEST_2_Fifo_Empty ( Communication_Switch_0_DEST_2_Fifo_Empty ),
-        .DEST_3_Fifo_Empty ( Communication_Switch_0_DEST_3_Fifo_Empty ),
-        .read_data_frame   ( read_data_frame_net_0 ),
-        .DEST_1_Fifo_Data  ( Communication_Switch_0_DEST_1_Fifo_Data ),
-        .DEST_2_Fifo_Data  ( Communication_Switch_0_DEST_2_Fifo_Data ),
-        .DEST_3_Fifo_Data  ( Communication_Switch_0_DEST_3_Fifo_Data ) 
+        .Builder_Enable            ( Builder_Enable_net_0 ),
+        .DataFifo_RD               ( DataFifo_RD_net_0 ),
+        .DEST_1_Fifo_Data          ( Communication_Switch_0_DEST_1_Fifo_Data ),
+        .DEST_1_Fifo_Empty         ( Communication_Switch_0_DEST_1_Fifo_Empty ),
+        .DEST_2_Fifo_Data          ( Communication_Switch_0_DEST_2_Fifo_Data ),
+        .DEST_2_Fifo_Empty         ( Communication_Switch_0_DEST_2_Fifo_Empty ),
+        .DEST_3_Fifo_Data          ( Communication_Switch_0_DEST_3_Fifo_Data ),
+        .DEST_3_Fifo_Empty         ( Communication_Switch_0_DEST_3_Fifo_Empty ) 
         );
 
 //--------COREFIFO_C1

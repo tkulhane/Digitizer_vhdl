@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Nov  6 21:37:08 2023
+// Created by SmartDesign Tue Nov 14 16:47:32 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -477,28 +477,26 @@ Communication Communication_0(
         .UART_RESET_N     ( Clock_Reset_0_UART_RESER_N_1 ),
         .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_1 ),
         .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_0 ),
-        .write_data_frame ( Controler_0_COMM_data ),
-        .addr_frame       ( Controler_0_COMM_addr ),
         .write_read       ( Controler_0_COMM_write_read ),
         .enable_cmd       ( Controler_0_COMM_enable_cmd ),
-        .comm_number      ( Controler_0_COMM_comm_number ),
-        .DafaFifo_Data    ( Data_Block_0_Communication_Data_Frame ),
         .DataFifo_Empty   ( Data_Block_0_Communication_Empty ),
         .CMD_RE           ( Controler_0_CMD_Fifo_Read_Enable ),
         .ANW_WE           ( Controler_0_ANW_Fifo_Write_Enable ),
-        .ANW_DATA         ( Controler_0_ANW_Fifo_Write_Data ),
         .RX_0             ( RX_0 ),
         .RX_1             ( RX_1 ),
         .FTDI_nTXE        ( FTDI_nTXE ),
         .FTDI_nRXF        ( FTDI_nRXF ),
         .FTDI_CLK         ( BUFD_0_Y ),
+        .write_data_frame ( Controler_0_COMM_data ),
+        .addr_frame       ( Controler_0_COMM_addr ),
+        .comm_number      ( Controler_0_COMM_comm_number ),
+        .DafaFifo_Data    ( Data_Block_0_Communication_Data_Frame ),
+        .ANW_DATA         ( Controler_0_ANW_Fifo_Write_Data ),
         // Outputs
-        .read_data_frame  ( Communication_0_read_data_frame ),
         .busy             ( Communication_0_busy ),
         .DataFifo_RD      ( Communication_0_DataFifo_RD ),
         .Builder_Enable   ( Communication_0_Builder_Enable ),
         .CMD_EMPTY        ( Communication_0_CMD_EMPTY ),
-        .CMD_Q            ( Communication_0_CMD_Q ),
         .ANW_FULL         ( Communication_0_ANW_FULL ),
         .TX_0             ( TX_0_net_0 ),
         .TX_1             ( TX_1_net_0 ),
@@ -508,6 +506,8 @@ Communication Communication_0(
         .FTDI_nOE         ( FTDI_nOE_net_0 ),
         .FTDI_GPIO_0      ( FTDI_GPIO_0_net_0 ),
         .FTDI_GPIO_1      ( FTDI_GPIO_1_net_0 ),
+        .read_data_frame  ( Communication_0_read_data_frame ),
+        .CMD_Q            ( Communication_0_CMD_Q ),
         // Inouts
         .FTDI_BE          ( FTDI_BE ),
         .FTDI_DATA        ( FTDI_DATA ) 
@@ -535,11 +535,11 @@ Controler Controler_0(
         .SYNC_Input            ( INBUF_DIFF_0_Y ),
         .BTN                   ( BTN_1 ),
         .LANE_VAL              ( GND_net ),
-        .TRG_rx_data           ( Data_Block_0_C_read_data_frame ),
         .CMD_Fifo_Empty        ( Communication_0_CMD_EMPTY ),
-        .CMD_Fifo_Read_Data    ( Communication_0_CMD_Q ),
         .ANW_Fifo_Full         ( Communication_0_ANW_FULL ),
         .COMM_busy             ( Communication_0_busy ),
+        .TRG_rx_data           ( Data_Block_0_C_read_data_frame ),
+        .CMD_Fifo_Read_Data    ( Communication_0_CMD_Q ),
         .COMM_rx_data          ( Communication_0_read_data_frame ),
         // Outputs
         .ADC_sclk              ( ADC_sclk_net_0 ),
@@ -572,16 +572,16 @@ Controler Controler_0(
         .HMC_GPIO_3            ( HMC_GPIO_3_net_0 ),
         .HMC_GPIO_2            ( HMC_GPIO_2_net_0 ),
         .LMX_Sync              ( Controler_0_LMX_Sync ),
-        .TRG_addr              ( Controler_0_TRG_addr ),
-        .TRG_data              ( Controler_0_TRG_data ),
         .CMD_Fifo_Read_Enable  ( Controler_0_CMD_Fifo_Read_Enable ),
         .ANW_Fifo_Write_Enable ( Controler_0_ANW_Fifo_Write_Enable ),
-        .ANW_Fifo_Write_Data   ( Controler_0_ANW_Fifo_Write_Data ),
         .COMM_write_read       ( Controler_0_COMM_write_read ),
+        .COMM_enable_cmd       ( Controler_0_COMM_enable_cmd ),
+        .TRG_addr              ( Controler_0_TRG_addr ),
+        .TRG_data              ( Controler_0_TRG_data ),
+        .ANW_Fifo_Write_Data   ( Controler_0_ANW_Fifo_Write_Data ),
         .COMM_addr             ( Controler_0_COMM_addr ),
         .COMM_comm_number      ( Controler_0_COMM_comm_number ),
         .COMM_data             ( Controler_0_COMM_data ),
-        .COMM_enable_cmd       ( Controler_0_COMM_enable_cmd ),
         // Inouts
         .HMC_sdio              ( HMC_sdio ),
         .ADC_sdio              ( ADC_sdio ) 

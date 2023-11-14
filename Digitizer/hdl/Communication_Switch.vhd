@@ -9,13 +9,7 @@ entity Communication_Switch is
         Clock : in std_logic;                                           --system clock
         Reset_N : in std_logic;                                         --system reset
 
-        busy : out std_logic;
-        enable_cmd : in std_logic;
-        write_read : in std_logic;
-        addr_frame : in std_logic_vector(7 downto 0);
-        write_data_frame : in std_logic_vector(15 downto 0);
-        read_data_frame : out std_logic_vector(15 downto 0);
-        comm_number : in std_logic_vector(3 downto 0);
+        Communication_vote_vector : in std_logic_vector(2 downto 0);
         
         --communication builder and fifo
         Builder_Enable : out std_logic;
@@ -56,7 +50,7 @@ architecture rtl of Communication_Switch is
     signal read_signal : std_logic;
     signal address : std_logic_vector(7 downto 0);
 
-    signal Communication_vote_vector : std_logic_vector(2 downto 0);
+    --signal Communication_vote_vector : std_logic_vector(2 downto 0);
     signal Data_Valid : std_logic;
 
 begin
@@ -65,7 +59,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --signal routing
 ------------------------------------------------------------------------------------------------------------   
-    address <= addr_frame;
+
 
 
     DEST_1_Fifo_Data <= DafaFifo_Data;
@@ -78,169 +72,6 @@ begin
     --DEST_1_Fifo_Empty <= (not DataFifo_Empty) and Communication_vote_vector(0);
     --DEST_2_Fifo_Empty <= (not DataFifo_Empty) and Communication_vote_vector(1);
     --DEST_3_Fifo_Empty <= (not DataFifo_Empty) and Communication_vote_vector(2);
-
-
-
-
-------------------------------------------------------------------------------------------------------------
---FSM memory ride
-------------------------------------------------------------------------------------------------------------
-    --state memory and reset
-    process(Reset_N,Clock)
-    begin
-
-        if(Reset_N = '0') then
-            state_reg <= IDLE;
-        
-        elsif(Clock'event and Clock = '1') then
-            state_reg <= next_state;
-
-        end if;
-    end process;
-
-    --translation function
-    process(next_state, state_reg, enable_cmd,write_read)
-    begin
-
-        next_state <= state_reg;
-
-        case state_reg is
-        
-            when IDLE =>
-                if(enable_cmd = '1') then
-                    next_state <= WAIT_STATE_1;
-                end if;
-                
-            when WAIT_STATE_1 =>
-                next_state <= PREPARATION;
-
-            when PREPARATION =>
-                if(write_read = '1') then
-                    next_state <= READ_DATA;
-                else 
-                    next_state <= WRITE_DATA;
-                end if;
-
-            when READ_DATA =>
-                next_state <= WAIT_STATE_2;
-
-            when WRITE_DATA =>
-                next_state <= WAIT_STATE_2;
-                
-            when WAIT_STATE_2 =>
-                next_state <= IDLE;
-
-            when others =>
-                null; 
-
-        end case;
-    end process;
-
-    --output function
-    process(state_reg)
-    begin
-
-        case state_reg is
-        
-            when IDLE =>
-                busy            <= '0';
-                write_signal    <= '0';
-                read_signal     <= '0';
-                
-            when WAIT_STATE_1 =>
-                busy            <= '1';
-                write_signal    <= '0';
-                read_signal     <= '0'; 
-
-            when PREPARATION =>
-                busy            <= '1';
-                write_signal    <= '0';
-                read_signal     <= '0';            
-
-            when READ_DATA =>
-                busy            <= '1';
-                write_signal    <= '0';
-                read_signal     <= '1';            
-
-            when WRITE_DATA =>
-                busy            <= '1';
-                write_signal    <= '1';
-                read_signal     <= '0';
-    
-            when WAIT_STATE_2 =>
-                busy            <= '1';
-                write_signal    <= '0';
-                read_signal     <= '0';     
-
-            when others =>
-                busy            <= '0';
-                write_signal    <= '0';
-                read_signal     <= '0';
-
-        end case;
-
-    end process;
-
-
-
-
-------------------------------------------------------------------------------------------------------------
---reads and write registers
-------------------------------------------------------------------------------------------------------------
-
-    process(Reset_N, Clock)
-
-    begin
-    
-        if(Reset_N = '0') then 
-            read_data_frame <= (others => '0');
-            Communication_vote_vector <= (others => '0');
-
-
-        elsif(Clock'event and Clock = '1') then    
-            
-
-            if(write_signal = '1') then
-                
-                case address is
-
-                    when CMD_COMSW_DATA_DESTINATION =>
-                        Communication_vote_vector <= write_data_frame(2 downto 0);
-
-                    when others =>
-                        null;
-
-                end case;
-                
-
-
-            elsif(read_signal = '1') then
-
-                case address is
-
-                    when CMD_COMSW_DATA_DESTINATION =>
-                        read_data_frame <=  x"000" & '0' & Communication_vote_vector;
-
-                    when CMD_COMSW_CMD_COM_SOURCE =>
-                        read_data_frame <= x"000" & comm_number;
-
-                    when others =>
-                        read_data_frame <= (others => '0');
-
-                end case;
-                
-                
-                
-                
-            end if;
-
-
-        end if;
-
-    end process;
-
-
-
 
 
 

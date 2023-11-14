@@ -597,24 +597,24 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Communication\Communication.cxf,actgen_cxf"
 STATE="utd"
-TIME="1699303283"
-SIZE="8866"
+TIME="1699976764"
+SIZE="8992"
 ENDFILE
 VALUE "<project>\component\work\Communication\Communication.v,hdl"
 STATE="utd"
-TIME="1699303283"
-SIZE="16785"
+TIME="1699976763"
+SIZE="17554"
 PARENT="<project>\component\work\Communication\Communication.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Controler\Controler.cxf,actgen_cxf"
 STATE="utd"
-TIME="1699303283"
+TIME="1699976892"
 SIZE="12805"
 ENDFILE
 VALUE "<project>\component\work\Controler\Controler.v,hdl"
 STATE="utd"
-TIME="1699303283"
+TIME="1699976891"
 SIZE="26995"
 PARENT="<project>\component\work\Controler\Controler.cxf"
 IS_READONLY="TRUE"
@@ -3171,12 +3171,12 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1699303283"
+TIME="1699976853"
 SIZE="15946"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.v,hdl"
 STATE="utd"
-TIME="1699303283"
+TIME="1699976852"
 SIZE="23707"
 PARENT="<project>\component\work\Top\Top.cxf"
 IS_READONLY="TRUE"
@@ -3253,8 +3253,8 @@ SIZE="19399"
 ENDFILE
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 STATE="utd"
-TIME="1699303283"
-SIZE="3857"
+TIME="1699978705"
+SIZE="3632"
 ENDFILE
 VALUE "<project>\constraint\user1.sdc,sdc"
 STATE="utd"
@@ -3302,10 +3302,20 @@ STATE="utd"
 TIME="1677880130"
 SIZE="7020"
 ENDFILE
-VALUE "<project>\hdl\Communication_Switch.vhd,hdl"
+VALUE "<project>\hdl\Communication_Controler.vhd,hdl"
+STATE="utd"
+TIME="1699980048"
+SIZE="7098"
+ENDFILE
+VALUE "<project>\hdl\Communication_Switch - kopie.vhd,hdl"
 STATE="utd"
 TIME="1696186038"
 SIZE="10103"
+ENDFILE
+VALUE "<project>\hdl\Communication_Switch.vhd,hdl"
+STATE="utd"
+TIME="1699976979"
+SIZE="5554"
 ENDFILE
 VALUE "<project>\hdl\Communication_TX_Arbiter.vhd,hdl"
 STATE="utd"
@@ -3552,23 +3562,23 @@ SIZE="159"
 ENDFILE
 VALUE "<project>\synthesis\Top.so,so"
 STATE="utd"
-TIME="1698054927"
+TIME="1699303454"
 SIZE="228"
 ENDFILE
 VALUE "<project>\synthesis\Top.vm,syn_vm"
-STATE="ood"
-TIME="1698054924"
-SIZE="5371630"
+STATE="utd"
+TIME="1699303452"
+SIZE="5337742"
 ENDFILE
 VALUE "<project>\synthesis\Top_syn.prj,prj"
 STATE="utd"
-TIME="1699303283"
-SIZE="25204"
+TIME="1699303455"
+SIZE="24256"
 ENDFILE
 VALUE "<project>\synthesis\Top_vm.sdc,syn_sdc"
 STATE="utd"
-TIME="1698054925"
-SIZE="20529"
+TIME="1699303452"
+SIZE="22737"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -3941,7 +3951,28 @@ VALUE "<project>\constraint\user1.sdc,sdc"
 VALUE "<project>\constraint\io\user.pdc,io_pdc"
 ENDLIST
 LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 LIST Impl3
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3965,6 +3996,7 @@ VALUE "<project>\synthesis\Top.v,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 LIST Impl4
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -3983,6 +4015,7 @@ VALUE "<project>\synthesis\Top.v,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 LIST Impl5
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -4324,8 +4357,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -4402,7 +4435,28 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 LIST "Top::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 LIST Impl3
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -4426,6 +4480,7 @@ VALUE "<project>\synthesis\Top.v,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 LIST Impl4
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -4444,6 +4499,7 @@ VALUE "<project>\synthesis\Top.v,syn_hdl"
 ENDUsed_File_List
 ENDLIST
 LIST Impl5
+ideSYNTHESIS(<project>\synthesis\Top.vm,syn_vm)=StateSuccess
 LIST FlowOptions
 UsePhySynth=FALSE
 UseSynth=TRUE
@@ -4475,8 +4531,14 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+Reports;Reports;0
+ReportsCurrentItem;Run Programming Action:Top_PROGRAM.log
+SmartDesign;Controler;0
+SmartDesign;Communication;0
+Constraint Manager;Constraint Manager;0
+HDL;hdl\Communication_Switch.vhd;0
+SmartDesign;Top;0
+ACTIVEVIEW;Communication
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -4502,6 +4564,7 @@ SUBBLOCK "COREFIFO_C1::work","component\work\COREFIFO_C1\COREFIFO_C1.v","TRUE","
 SUBBLOCK "COREFIFO_C3::work","component\work\COREFIFO_C3\COREFIFO_C3.v","TRUE","FALSE"
 SUBBLOCK "Communication_ANW_MUX::work","hdl\Communication_ANW_MUX.vhd","FALSE","FALSE"
 SUBBLOCK "Communication_CMD_MUX::work","hdl\Communication_CMD_MUX.vhd","FALSE","FALSE"
+SUBBLOCK "Communication_Controler::work","hdl\Communication_Controler.vhd","FALSE","FALSE"
 SUBBLOCK "Communication_Switch::work","hdl\Communication_Switch.vhd","FALSE","FALSE"
 SUBBLOCK "UART_Protocol::work","component\work\UART_Protocol\UART_Protocol.v","TRUE","FALSE"
 SUBBLOCK "USB_3_Protocol::work","component\work\USB_3_Protocol\USB_3_Protocol.v","TRUE","FALSE"
@@ -4511,6 +4574,8 @@ ENDLIST
 LIST "Communication_Builder::work","hdl\Communication_Builder.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Communication_CMD_MUX::work","hdl\Communication_CMD_MUX.vhd","FALSE","FALSE"
+ENDLIST
+LIST "Communication_Controler::work","hdl\Communication_Controler.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Communication_Switch::work","hdl\Communication_Switch.vhd","FALSE","FALSE"
 ENDLIST

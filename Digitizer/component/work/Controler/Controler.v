@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Nov  6 20:55:08 2023
+// Created by SmartDesign Tue Nov 14 16:48:11 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -301,16 +301,16 @@ wire           INT_FtdiReset_N_net_1;
 wire           HMC_GPIO_3_net_1;
 wire           HMC_GPIO_2_net_1;
 wire           LMX_Sync_net_1;
-wire   [7:0]   TRG_addr_net_1;
-wire   [15:0]  TRG_data_net_1;
 wire           CMD_Fifo_Read_Enable_net_1;
 wire           ANW_Fifo_Write_Enable_net_1;
-wire   [39:0]  ANW_Fifo_Write_Data_net_1;
 wire           COMM_write_read_net_1;
+wire           COMM_enable_cmd_net_1;
+wire   [7:0]   TRG_addr_net_1;
+wire   [15:0]  TRG_data_net_1;
+wire   [39:0]  ANW_Fifo_Write_Data_net_1;
 wire   [7:0]   COMM_addr_net_1;
 wire   [3:0]   COMM_comm_number_net_1;
 wire   [15:0]  COMM_data_net_1;
-wire           COMM_enable_cmd_net_1;
 wire   [10:10] Outputs_slice_0;
 wire   [11:11] Outputs_slice_1;
 wire   [3:3]   Outputs_slice_2;
@@ -389,26 +389,26 @@ assign HMC_GPIO_2_net_1            = HMC_GPIO_2_net_0[4];
 assign HMC_GPIO_2                  = HMC_GPIO_2_net_1;
 assign LMX_Sync_net_1              = LMX_Sync_net_0[2];
 assign LMX_Sync                    = LMX_Sync_net_1;
-assign TRG_addr_net_1              = TRG_addr_net_0;
-assign TRG_addr[7:0]               = TRG_addr_net_1;
-assign TRG_data_net_1              = TRG_data_net_0;
-assign TRG_data[15:0]              = TRG_data_net_1;
 assign CMD_Fifo_Read_Enable_net_1  = CMD_Fifo_Read_Enable_net_0;
 assign CMD_Fifo_Read_Enable        = CMD_Fifo_Read_Enable_net_1;
 assign ANW_Fifo_Write_Enable_net_1 = ANW_Fifo_Write_Enable_net_0;
 assign ANW_Fifo_Write_Enable       = ANW_Fifo_Write_Enable_net_1;
-assign ANW_Fifo_Write_Data_net_1   = ANW_Fifo_Write_Data_net_0;
-assign ANW_Fifo_Write_Data[39:0]   = ANW_Fifo_Write_Data_net_1;
 assign COMM_write_read_net_1       = COMM_write_read_net_0;
 assign COMM_write_read             = COMM_write_read_net_1;
+assign COMM_enable_cmd_net_1       = COMM_enable_cmd_net_0;
+assign COMM_enable_cmd             = COMM_enable_cmd_net_1;
+assign TRG_addr_net_1              = TRG_addr_net_0;
+assign TRG_addr[7:0]               = TRG_addr_net_1;
+assign TRG_data_net_1              = TRG_data_net_0;
+assign TRG_data[15:0]              = TRG_data_net_1;
+assign ANW_Fifo_Write_Data_net_1   = ANW_Fifo_Write_Data_net_0;
+assign ANW_Fifo_Write_Data[39:0]   = ANW_Fifo_Write_Data_net_1;
 assign COMM_addr_net_1             = COMM_addr_net_0;
 assign COMM_addr[7:0]              = COMM_addr_net_1;
 assign COMM_comm_number_net_1      = COMM_comm_number_net_0;
 assign COMM_comm_number[3:0]       = COMM_comm_number_net_1;
 assign COMM_data_net_1             = COMM_data_net_0;
 assign COMM_data[15:0]             = COMM_data_net_1;
-assign COMM_enable_cmd_net_1       = COMM_enable_cmd_net_0;
-assign COMM_enable_cmd             = COMM_enable_cmd_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -477,9 +477,9 @@ Answer_Encoder Answer_Encoder_0(
         .Clock                      ( Clock ),
         .Reset_N                    ( Reset_N ),
         .Fifo_Full                  ( ANW_Fifo_Full ),
-        .CD_CMD_Data                ( Command_Decoder_0_AE_CMD_Data ),
         .CD_enable_cmd              ( Command_Decoder_0_AE_enable_cmd ),
         .CD_FAULT_PROCESSED_EXECUTE ( Command_Decoder_0_AE_FAULT_PROCESSED_EXECUTE ),
+        .CD_CMD_Data                ( Command_Decoder_0_AE_CMD_Data ),
         .RST_rx_data                ( Reset_Controler_0_read_data_frame ),
         .REG_rx_data                ( REGISTERS_0_read_data_frame ),
         .ADCSPI_rx_data             ( ADI_SPI_0_rx_data_frame ),
@@ -490,10 +490,10 @@ Answer_Encoder Answer_Encoder_0(
         .GPIO_rx_data               ( gpio_controler_0_read_data_frame ),
         .COMM_rx_data               ( COMM_rx_data ),
         // Outputs
-        .Fifo_Write_Data            ( ANW_Fifo_Write_Data_net_0 ),
         .Fifo_Write_Enable          ( ANW_Fifo_Write_Enable_net_0 ),
         .CD_busy                    ( Answer_Encoder_0_CD_busy ),
-        .Diag_Valid                 (  ) 
+        .Diag_Valid                 (  ),
+        .Fifo_Write_Data            ( ANW_Fifo_Write_Data_net_0 ) 
         );
 
 //--------Command_Decoder
@@ -501,7 +501,6 @@ Command_Decoder Command_Decoder_0(
         // Inputs
         .Clock                      ( Clock ),
         .Reset_N                    ( Reset_N ),
-        .Fifo_Read_Data             ( CMD_Fifo_Read_Data ),
         .Fifo_Empty                 ( CMD_Fifo_Empty ),
         .AE_busy                    ( Answer_Encoder_0_CD_busy ),
         .RST_busy                   ( Reset_Controler_0_busy ),
@@ -513,49 +512,50 @@ Command_Decoder Command_Decoder_0(
         .TRG_busy                   ( TRG_busy ),
         .GPIO_busy                  ( gpio_controler_0_busy ),
         .COMM_busy                  ( COMM_busy ),
+        .Fifo_Read_Data             ( CMD_Fifo_Read_Data ),
         // Outputs
         .Fifo_Read_Enable           ( CMD_Fifo_Read_Enable_net_0 ),
-        .AE_CMD_Data                ( Command_Decoder_0_AE_CMD_Data ),
         .AE_enable_cmd              ( Command_Decoder_0_AE_enable_cmd ),
         .AE_FAULT_PROCESSED_EXECUTE ( Command_Decoder_0_AE_FAULT_PROCESSED_EXECUTE ),
         .RST_enable_cmd             ( Command_Decoder_0_RST_enable_cmd ),
         .RST_write_read             ( Command_Decoder_0_RST_write_read ),
-        .RST_addr                   ( Command_Decoder_0_RST_addr ),
-        .RST_data                   ( Command_Decoder_0_RST_data ),
         .REG_enable_cmd             ( CMD ),
         .REG_write_read             ( RW ),
-        .REG_addr                   ( Command_Decoder_0_REG_addr ),
-        .REG_data                   ( Command_Decoder_0_REG_data ),
         .ADCSPI_enable_cmd          ( Command_Decoder_0_ADCSPI_enable_cmd ),
         .ADCSPI_write_read          ( Command_Decoder_0_ADCSPI_write_read ),
-        .ADCSPI_addr_frame          ( Command_Decoder_0_ADCSPI_addr_frame ),
-        .ADCSPI_tx_data_frame       ( Command_Decoder_0_ADCSPI_tx_data_frame ),
         .HMCSPI_enable_cmd          ( Command_Decoder_0_HMCSPI_enable_cmd ),
         .HMCSPI_write_read          ( Command_Decoder_0_HMCSPI_write_read ),
-        .HMCSPI_addr_frame          ( Command_Decoder_0_HMCSPI_addr_frame ),
-        .HMCSPI_tx_data_frame       ( Command_Decoder_0_HMCSPI_tx_data_frame ),
         .LMX1SPI_enable_cmd         ( Command_Decoder_0_LMX1SPI_enable_cmd ),
         .LMX1SPI_write_read         ( Command_Decoder_0_LMX1SPI_write_read ),
-        .LMX1SPI_addr_frame         ( Command_Decoder_0_LMX1SPI_addr_frame ),
-        .LMX1SPI_tx_data_frame      ( Command_Decoder_0_LMX1SPI_tx_data_frame ),
         .LMX2SPI_enable_cmd         ( Command_Decoder_0_LMX2SPI_enable_cmd ),
         .LMX2SPI_write_read         ( Command_Decoder_0_LMX2SPI_write_read ),
-        .LMX2SPI_addr_frame         ( Command_Decoder_0_LMX2SPI_addr_frame ),
-        .LMX2SPI_tx_data_frame      ( Command_Decoder_0_LMX2SPI_tx_data_frame ),
         .TRG_enable_cmd             ( TRG_enable_cmd_net_0 ),
         .TRG_write_read             ( TRG_write_read_net_0 ),
-        .TRG_addr                   ( TRG_addr_net_0 ),
-        .TRG_data                   ( TRG_data_net_0 ),
         .GPIO_enable_cmd            ( Command_Decoder_0_GPIO_enable_cmd ),
         .GPIO_write_read            ( Command_Decoder_0_GPIO_write_read ),
-        .GPIO_addr                  ( Command_Decoder_0_GPIO_addr ),
-        .GPIO_data                  ( Command_Decoder_0_GPIO_data ),
         .COMM_enable_cmd            ( COMM_enable_cmd_net_0 ),
         .COMM_write_read            ( COMM_write_read_net_0 ),
+        .Diag_Valid                 (  ),
+        .AE_CMD_Data                ( Command_Decoder_0_AE_CMD_Data ),
+        .RST_addr                   ( Command_Decoder_0_RST_addr ),
+        .RST_data                   ( Command_Decoder_0_RST_data ),
+        .REG_addr                   ( Command_Decoder_0_REG_addr ),
+        .REG_data                   ( Command_Decoder_0_REG_data ),
+        .ADCSPI_addr_frame          ( Command_Decoder_0_ADCSPI_addr_frame ),
+        .ADCSPI_tx_data_frame       ( Command_Decoder_0_ADCSPI_tx_data_frame ),
+        .HMCSPI_addr_frame          ( Command_Decoder_0_HMCSPI_addr_frame ),
+        .HMCSPI_tx_data_frame       ( Command_Decoder_0_HMCSPI_tx_data_frame ),
+        .LMX1SPI_addr_frame         ( Command_Decoder_0_LMX1SPI_addr_frame ),
+        .LMX1SPI_tx_data_frame      ( Command_Decoder_0_LMX1SPI_tx_data_frame ),
+        .LMX2SPI_addr_frame         ( Command_Decoder_0_LMX2SPI_addr_frame ),
+        .LMX2SPI_tx_data_frame      ( Command_Decoder_0_LMX2SPI_tx_data_frame ),
+        .TRG_addr                   ( TRG_addr_net_0 ),
+        .TRG_data                   ( TRG_data_net_0 ),
+        .GPIO_addr                  ( Command_Decoder_0_GPIO_addr ),
+        .GPIO_data                  ( Command_Decoder_0_GPIO_data ),
         .COMM_addr                  ( COMM_addr_net_0 ),
         .COMM_data                  ( COMM_data_net_0 ),
-        .COMM_comm_number           ( COMM_comm_number_net_0 ),
-        .Diag_Valid                 (  ) 
+        .COMM_comm_number           ( COMM_comm_number_net_0 ) 
         );
 
 //--------gpio_controler

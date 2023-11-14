@@ -6,47 +6,7 @@
 @N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_0(verilog) 
 @N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_1(verilog) 
 @N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\communication\communication.v":9:7:9:19|Found compile point of type hard on View view:work.Communication(verilog) 
-**** Begin Compile Point : Controler ****
-@N: MF916 |Option synthesis_strategy=base is enabled. 
-@N: MF248 |Running in 64-bit mode.
-@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Found compile point of type hard on View view:work.Controler(verilog) 
-@N: MF105 |Performing bottom-up mapping of Compile point view:work.Controler(verilog) 
-@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Mapping Compile point view:work.Controler(verilog) because 
-@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":447:12:447:15|Found ROM decode_vector_12[8:0] (in view: work.Command_Decoder(rtl)) with 19 words by 9 bits.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":392:8:392:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_INT_PULSE[15:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\reset_controler.vhd":356:8:356:9|Found counter in view:work.Reset_Controler(rtl) instance Counter_EXT_PULSE[15:0] 
-@N: FX403 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\registers.vhd":28:11:28:16|Property "block_ram" or "no_rw_check" found for RAM memory[7:0] with specified coding style. Inferring block RAM.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":455:8:455:9|Found counter in view:work.gpio_controler(rtl) instance Counter_PULSE[31:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":387:8:387:9|Found counter in view:work.gpio_controler(rtl) instance REG_INPUTs_RISING_COUNTER[15:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":387:8:387:9|Found counter in view:work.gpio_controler(rtl) instance REG_INPUTs_FALLING_COUNTER[15:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":581:8:581:9|Found counter in view:work.Command_Decoder(rtl) instance counter[31:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Found counter in view:work.work_spi_master_behavioural_24_5_1_data_lengthdivider_Controler(behavioural) instance clk_toggles[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":59:8:59:9|Found counter in view:work.ADI_SPI_Controler(rtl) instance data_counter[31:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":59:8:59:9|Found counter in view:work.ADI_SPI_Controler(rtl) instance addr_counter[31:0] 
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[15] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[15] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[9] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_RISING[10] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[9] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":331:8:331:9|Removing sequential instance gpio_controler_0.REG_INPUTs_FALLING[10] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":207:8:207:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[15] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":207:8:207:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[9] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\gpio_controler.vhd":207:8:207:9|Removing sequential instance gpio_controler_0.CLEAR_REG_RF_MASK[10] (in view: work.Controler(verilog)) because it does not drive other instances.
-@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":447:12:447:15|Found ROM Command_Decoder_0.Has_Answer_2_0 (in view: work.Controler(verilog)) with 19 words by 1 bit.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[0] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[1] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[2] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[3] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[4] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[5] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[6] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_OLDA[7] (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: BN362 :|Removing sequential instance REGISTERS_0.memory_memory_0_0_en (in view: work.Controler(verilog)) of type view:ACG4.SLE(PRIM) because it does not drive other instances.
-@N: MT615 |Found clock Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK with period 6.25ns 
-@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
-@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
-**** End Compile Point : Controler ****
+@N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Old database up-to-date, remapping Compile point view:work.Controler(verilog) unnecessary 
 **** Begin Compile Point : UART_Protocol_UART_Protocol_0 ****
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
@@ -121,18 +81,6 @@
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 @N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
 **** End Compile Point : UART_Protocol_UART_Protocol_1 ****
-**** Begin Compile Point : Top ****
-@N: MF916 |Option synthesis_strategy=base is enabled. 
-@N: MF248 |Running in 64-bit mode.
-@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Found compile point of type hard on View view:work.Controler(verilog) 
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":9:7:9:16|Found compile point of type hard on View view:work.Data_Block(verilog) 
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_0(verilog) 
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_1(verilog) 
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\communication\communication.v":9:7:9:19|Found compile point of type hard on View view:work.Communication(verilog) 
-@N: MF105 |Performing bottom-up mapping of Top level view:work.Top(verilog) 
-@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Mapping Top level view:work.Top(verilog) because 
-**** End Compile Point : Top ****
 **** Begin Compile Point : Communication ****
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
@@ -175,6 +123,18 @@
 @N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
 @N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
 **** End Compile Point : Communication ****
+**** Begin Compile Point : Top ****
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Found compile point of type hard on View view:work.Controler(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":9:7:9:16|Found compile point of type hard on View view:work.Data_Block(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_0(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Found compile point of type hard on View view:work.UART_Protocol_UART_Protocol_1(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\communication\communication.v":9:7:9:19|Found compile point of type hard on View view:work.Communication(verilog) 
+@N: MF105 |Performing bottom-up mapping of Top level view:work.Top(verilog) 
+@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Mapping Top level view:work.Top(verilog) because 
+**** End Compile Point : Top ****
 **** Begin Compile Point : Data_Block ****
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.

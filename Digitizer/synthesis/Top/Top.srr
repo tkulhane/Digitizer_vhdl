@@ -1,4 +1,4 @@
-# Mon Nov  6 21:43:43 2023
+# Tue Nov 14 17:42:13 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -53,7 +53,7 @@ Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s
 Begin compile point sub-process log
 
 @N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Mapping Top level view:work.Top(verilog) because 
-		 Interface of a contained Compile Point has changed.
+		 RTL and/or Constraints changed.
 
 
 Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 195MB peak: 275MB)
@@ -63,7 +63,7 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 
 #### END OF SSF LOG MESSAGES ####
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 196MB peak: 275MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 192MB peak: 275MB)
 
 Encoding state machine Command_Decoder_0.state_reg[0:9] (in view: work.Controler(verilog))
 original code -> new code
@@ -92,7 +92,7 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-Encoding state machine Communication_Switch_0.state_reg[0:5] (in view: work.Communication(verilog))
+Encoding state machine Communication_Controler_0.state_reg[0:5] (in view: work.Communication(verilog))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -138,47 +138,42 @@ original code -> new code
    0100000 -> 0100000
    1000000 -> 1000000
 
-Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 275MB)
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 193MB peak: 275MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 275MB)
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 275MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 275MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 275MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 275MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 275MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 275MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 275MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 275MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 275MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 196MB peak: 275MB)
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 193MB peak: 275MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 197MB peak: 275MB)
+Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 196MB peak: 275MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:03s		    -0.31ns		 406 /       395
-   2		0h:00m:03s		    -0.31ns		 404 /       395
+   1		0h:00m:03s		    -0.31ns		 405 /       394
+   2		0h:00m:03s		    -0.31ns		 405 /       394
 
-   3		0h:00m:03s		    -0.31ns		 404 /       395
+   3		0h:00m:03s		    -0.31ns		 405 /       394
 
 
-   4		0h:00m:03s		    -0.31ns		 404 /       395
-
-Added 0 Buffers
-Added 0 Cells via replication
-	Added 0 Sequential Cells via replication
-	Added 0 Combinational Cells via replication
+   4		0h:00m:03s		    -0.31ns		 405 /       394
 
 Added 0 Buffers
 Added 0 Cells via replication
@@ -195,10 +190,15 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 198MB peak: 275MB)
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 196MB peak: 275MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 198MB peak: 275MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 196MB peak: 275MB)
 
 
 End compile point sub-process log
@@ -207,12 +207,12 @@ Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitize
 
 Summary of Compile Points :
 *************************** 
-Name     Status       Reason                                        
---------------------------------------------------------------------
-Top      Remapped     Interface of a contained Compile Point changed
-====================================================================
+Name     Status       Reason        
+------------------------------------
+Top      Remapped     Design changed
+====================================
 
-Process took 0h:00m:04s realtime, 0h:00m:04s cputime
-# Mon Nov  6 21:43:47 2023
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+# Tue Nov 14 17:42:16 2023
 
 ###########################################################]
