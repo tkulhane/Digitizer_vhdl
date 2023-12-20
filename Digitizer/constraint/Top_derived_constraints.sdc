@@ -1,5 +1,5 @@
 # Microsemi Corp.
-# Date: 2023-Nov-14 17:18:08
+# Date: 2023-Dec-05 20:02:30
 # This file was generated based on the following SDC source files:
 #   C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.sdc
 #   C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/PF_CCC_C3/PF_CCC_C3_0/PF_CCC_C3_PF_CCC_C3_0_PF_CCC.sdc
@@ -26,4 +26,4 @@ set_false_path -to [ get_cells { Communication_0/UART_Protocol_0/COREFIFO_C0_0_0
 set_false_path -to [ get_cells { Communication_0/UART_Protocol_1/COREFIFO_C0_0_0/COREFIFO_C0_0/genblk*.U_corefifo_async/*/shift_reg* } ]
 set_false_path -to [ get_cells { Communication_0/USB_3_Protocol_0/COREFIFO_C7_0/COREFIFO_C7_0/genblk*.U_corefifo_async/*/shift_reg* } ]
 set_false_path -to [ get_cells { Communication_0/USB_3_Protocol_0/COREFIFO_C8_0/COREFIFO_C8_0/genblk*.U_corefifo_async/*/shift_reg* } ]
-
+set_false_path -to [ get_cells { Data_Block_0/COREFIFO_C10_0/COREFIFO_C10_0/genblk*.U_corefifo_async/*/shift_reg* } ]

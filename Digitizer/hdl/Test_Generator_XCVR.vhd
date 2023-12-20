@@ -120,7 +120,7 @@ begin
                 TX_Byte_6 <= X"BC";
                 TX_Byte_7 <= X"BC";
 
-            when SEND_ILAS =>
+            --when SEND_ILAS =>
 
 
 

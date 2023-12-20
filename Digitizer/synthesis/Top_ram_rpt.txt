@@ -1,31 +1,4 @@
 
-#####  START OF RAM REPORT FOR COMPILE POINT: Controler  #####
-
-#####  LSRAM REPORT  #####
-
-INSTANTIATED     RTL_INSTANCE                            PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE                               DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)           COMMENTS                                                          
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-NO               Controler_0.REGISTERS_0.memory[7:0]     RAM                DEFAULT            Controler_0.REGISTERS_0.memory_memory_0_0     1KX20_1KX20            0                  0       0(0/0/0)                          0(0/0/0)                          (NO_CHANGE/NO_CHANGE)     RAM instance meets the required threshold for mapping using LSRAM.
-===============================================================================================================================================================================================================================================================================================================================================================
-
-#####  URAM REPORT  #####
-
-INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-================================================================================================================================================================================================================
-
-#####  REG/LOGIC REPORT  #####
-
-RTL_INSTANCE                                            PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS                                                                            
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.Command_Decoder_0.decode_vector_12[8:0]     ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
-                                                                                                                                                                                  
-Controler_0.Command_Decoder_0.Has_Answer_2              ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
-==================================================================================================================================================================================
-
-#####  END OF RAM REPORT FOR COMPILE POINT: Controler  #####
-
-
 #####  START OF RAM REPORT FOR COMPILE POINT: UART_Protocol_UART_Protocol_0  #####
 
 #####  LSRAM REPORT  #####
@@ -88,6 +61,56 @@ RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS
 ===============================================================
 
 #####  END OF RAM REPORT FOR COMPILE POINT: UART_Protocol_UART_Protocol_1  #####
+
+
+#####  START OF RAM REPORT FOR COMPILE POINT: Controler  #####
+
+#####  LSRAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE                            PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE                               DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)           COMMENTS                                                          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+NO               Controler_0.REGISTERS_0.memory[7:0]     RAM                DEFAULT            Controler_0.REGISTERS_0.memory_memory_0_0     1KX20_1KX20            0                  0       0(0/0/0)                          0(0/0/0)                          (NO_CHANGE/NO_CHANGE)     RAM instance meets the required threshold for mapping using LSRAM.
+===============================================================================================================================================================================================================================================================================================================================================================
+
+#####  URAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+================================================================================================================================================================================================================
+
+#####  REG/LOGIC REPORT  #####
+
+RTL_INSTANCE                                            PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS                                                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Controler_0.Command_Decoder_0.decode_vector_12[8:0]     ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+                                                                                                                                                                                  
+Controler_0.Command_Decoder_0.Has_Answer_2              ROM                NA                 Mapping ROM instance using logic since value for switch "rom_map_logic" is set to 1.
+==================================================================================================================================================================================
+
+#####  END OF RAM REPORT FOR COMPILE POINT: Controler  #####
+
+
+#####  START OF RAM REPORT FOR COMPILE POINT: Top  #####
+
+#####  LSRAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================================================================================================================
+
+#####  URAM REPORT  #####
+
+INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+================================================================================================================================================================================================================
+
+#####  REG/LOGIC REPORT  #####
+
+RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS
+---------------------------------------------------------------
+===============================================================
+
+#####  END OF RAM REPORT FOR COMPILE POINT: Top  #####
 
 
 #####  START OF RAM REPORT FOR COMPILE POINT: Communication  #####
@@ -158,29 +181,6 @@ RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS
 ===============================================================
 
 #####  END OF RAM REPORT FOR COMPILE POINT: Communication  #####
-
-
-#####  START OF RAM REPORT FOR COMPILE POINT: Top  #####
-
-#####  LSRAM REPORT  #####
-
-INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH(A/B)     LOW-POWER_MODE     ECC     A_DOUT_PIPE_REG(EN/ARST/SRST)     B_DOUT_PIPE_REG(EN/ARST/SRST)     WRITE_MODE(A/B)     COMMENTS
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-==============================================================================================================================================================================================================================================
-
-#####  URAM REPORT  #####
-
-INSTANTIATED     RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     MAPPED_INSTANCE     DEPTH_X_WIDTH     LOW-POWER_MODE     ECC     R_ADDR_REG(EN/ARST/SRST)     R_DATA_PIPE_REG(EN/ARST/SRST)     COMMENTS
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-================================================================================================================================================================================================================
-
-#####  REG/LOGIC REPORT  #####
-
-RTL_INSTANCE     PRIMITIVE_TYPE     USER_ATTRIBUTE     COMMENTS
----------------------------------------------------------------
-===============================================================
-
-#####  END OF RAM REPORT FOR COMPILE POINT: Top  #####
 
 
 #####  START OF RAM REPORT FOR COMPILE POINT: Data_Block  #####

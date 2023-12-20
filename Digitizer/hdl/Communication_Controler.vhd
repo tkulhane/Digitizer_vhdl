@@ -29,6 +29,10 @@ architecture rtl of Communication_Controler is
     constant CMD_COMSW_DATA_DESTINATION             : std_logic_vector(7 downto 0) := x"11";
     constant CMD_COMSW_DATA_DESTINATION_CMD_SOURCE  : std_logic_vector(7 downto 0) := x"12";
     constant CMD_COMSW_CMD_COM_SOURCE               : std_logic_vector(7 downto 0) := x"31";
+    constant CMD_COMSW_ACTIVITY_MSG                 : std_logic_vector(7 downto 0) := x"A1";
+    constant CMD_COMSW_CONNECTED_COM                : std_logic_vector(7 downto 0) := x"A5";
+    
+    
 
     type FSM_state is (IDLE, WAIT_STATE_1, PREPARATION, READ_DATA, WRITE_DATA, WAIT_STATE_2);
     signal state_reg, next_state : FSM_state;
@@ -196,6 +200,9 @@ begin
 
                     when CMD_COMSW_CMD_COM_SOURCE =>
                         read_data_frame <= x"000" & comm_number;
+                        
+                    when CMD_COMSW_ACTIVITY_MSG =>
+                        read_data_frame <= write_data_frame;
 
                     when others =>
                         read_data_frame <= (others => '0');

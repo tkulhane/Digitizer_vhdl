@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Aug 29 18:15:52 2023
+// Created by SmartDesign Fri Dec  8 09:44:12 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -148,16 +148,16 @@ wire   [7:0]  Test_Generator_XCVR_0_TX_K_Char;
 wire          LANE0_TXD_P_net_1;
 wire          LANE0_TXD_N_net_1;
 wire          SYNC_OK_2_net_0;
-wire   [63:0] LANE0_RX_DATA_net_1;
 wire          LANE1_TXD_P_net_1;
 wire          LANE1_TXD_N_net_1;
-wire   [7:0]  LANE0_8B10B_RX_K_net_1;
-wire   [7:0]  LANE1_8B10B_RX_K_net_1;
-wire   [63:0] LANE1_RX_DATA_net_1;
 wire          LANE2_TXD_P_net_1;
 wire          LANE2_TXD_N_net_1;
 wire          LANE3_TXD_P_net_1;
 wire          LANE3_TXD_N_net_1;
+wire   [63:0] LANE0_RX_DATA_net_1;
+wire   [7:0]  LANE0_8B10B_RX_K_net_1;
+wire   [7:0]  LANE1_8B10B_RX_K_net_1;
+wire   [63:0] LANE1_RX_DATA_net_1;
 wire   [7:0]  LANE2_8B10B_RX_K_net_1;
 wire   [7:0]  LANE3_8B10B_RX_K_net_1;
 wire   [63:0] LANE2_RX_DATA_net_1;
@@ -189,18 +189,10 @@ assign LANE0_TXD_N_net_1      = LANE0_TXD_N_net_0;
 assign LANE0_TXD_N            = LANE0_TXD_N_net_1;
 assign SYNC_OK_2_net_0        = SYNC_OK_2;
 assign SYNC_OK                = SYNC_OK_2_net_0;
-assign LANE0_RX_DATA_net_1    = LANE0_RX_DATA_net_0;
-assign LANE0_RX_DATA[63:0]    = LANE0_RX_DATA_net_1;
 assign LANE1_TXD_P_net_1      = LANE1_TXD_P_net_0;
 assign LANE1_TXD_P            = LANE1_TXD_P_net_1;
 assign LANE1_TXD_N_net_1      = LANE1_TXD_N_net_0;
 assign LANE1_TXD_N            = LANE1_TXD_N_net_1;
-assign LANE0_8B10B_RX_K_net_1 = LANE0_8B10B_RX_K_net_0;
-assign LANE0_8B10B_RX_K[7:0]  = LANE0_8B10B_RX_K_net_1;
-assign LANE1_8B10B_RX_K_net_1 = LANE1_8B10B_RX_K_net_0;
-assign LANE1_8B10B_RX_K[7:0]  = LANE1_8B10B_RX_K_net_1;
-assign LANE1_RX_DATA_net_1    = LANE1_RX_DATA_net_0;
-assign LANE1_RX_DATA[63:0]    = LANE1_RX_DATA_net_1;
 assign LANE2_TXD_P_net_1      = LANE2_TXD_P_net_0;
 assign LANE2_TXD_P            = LANE2_TXD_P_net_1;
 assign LANE2_TXD_N_net_1      = LANE2_TXD_N_net_0;
@@ -209,6 +201,14 @@ assign LANE3_TXD_P_net_1      = LANE3_TXD_P_net_0;
 assign LANE3_TXD_P            = LANE3_TXD_P_net_1;
 assign LANE3_TXD_N_net_1      = LANE3_TXD_N_net_0;
 assign LANE3_TXD_N            = LANE3_TXD_N_net_1;
+assign LANE0_RX_DATA_net_1    = LANE0_RX_DATA_net_0;
+assign LANE0_RX_DATA[63:0]    = LANE0_RX_DATA_net_1;
+assign LANE0_8B10B_RX_K_net_1 = LANE0_8B10B_RX_K_net_0;
+assign LANE0_8B10B_RX_K[7:0]  = LANE0_8B10B_RX_K_net_1;
+assign LANE1_8B10B_RX_K_net_1 = LANE1_8B10B_RX_K_net_0;
+assign LANE1_8B10B_RX_K[7:0]  = LANE1_8B10B_RX_K_net_1;
+assign LANE1_RX_DATA_net_1    = LANE1_RX_DATA_net_0;
+assign LANE1_RX_DATA[63:0]    = LANE1_RX_DATA_net_1;
 assign LANE2_8B10B_RX_K_net_1 = LANE2_8B10B_RX_K_net_0;
 assign LANE2_8B10B_RX_K[7:0]  = LANE2_8B10B_RX_K_net_1;
 assign LANE3_8B10B_RX_K_net_1 = LANE3_8B10B_RX_K_net_0;
@@ -369,18 +369,12 @@ PF_XCVR_ERM_C5 PF_XCVR_ERM_C5_0(
         .LANE0_RXD_N              ( LANE0_RXD_N ),
         .LANE1_RXD_P              ( LANE1_RXD_P ),
         .LANE1_RXD_N              ( LANE1_RXD_N ),
-        .LANE0_TX_DATA            ( Test_Generator_XCVR_0_TX_Data ),
         .LANE0_CDR_REF_CLK_0      ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
         .LANE0_PCS_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
         .LANE0_PMA_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_0 ),
-        .LANE0_8B10B_TX_K         ( Test_Generator_XCVR_0_TX_K_Char ),
-        .LANE1_TX_DATA            ( Test_Generator_XCVR_0_0_TX_Data ),
         .LANE1_CDR_REF_CLK_0      ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
         .LANE1_PCS_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
         .LANE1_PMA_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .LANE1_TX_DISPFNC         ( LANE1_TX_DISPFNC_const_net_0 ),
-        .LANE1_8B10B_TX_K         ( Test_Generator_XCVR_0_0_TX_K_Char ),
         .TX_PLL_LOCK_0            ( PF_TX_PLL_C0_0_CLKS_TO_XCVR_LOCK ),
         .TX_BIT_CLK_0             ( PF_TX_PLL_C0_0_CLKS_TO_XCVR_BIT_CLK ),
         .TX_PLL_REF_CLK_0         ( PF_TX_PLL_C0_0_CLKS_TO_XCVR_REF_CLK_TO_LANE ),
@@ -390,35 +384,41 @@ PF_XCVR_ERM_C5 PF_XCVR_ERM_C5_0(
         .LANE0_CLK_REF            ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
         .LANE1_LOS                ( GND_net ),
         .LANE1_CLK_REF            ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
+        .LANE0_TX_DATA            ( Test_Generator_XCVR_0_TX_Data ),
+        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_0 ),
+        .LANE0_8B10B_TX_K         ( Test_Generator_XCVR_0_TX_K_Char ),
+        .LANE1_TX_DATA            ( Test_Generator_XCVR_0_0_TX_Data ),
+        .LANE1_TX_DISPFNC         ( LANE1_TX_DISPFNC_const_net_0 ),
+        .LANE1_8B10B_TX_K         ( Test_Generator_XCVR_0_0_TX_K_Char ),
         // Outputs
         .LANE0_TXD_P              ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N              ( LANE0_TXD_N_net_0 ),
         .LANE1_TXD_P              ( LANE1_TXD_P_net_0 ),
         .LANE1_TXD_N              ( LANE1_TXD_N_net_0 ),
-        .LANE0_RX_DATA            ( LANE0_RX_DATA_net_0 ),
         .LANE0_TX_CLK_R           ( PF_XCVR_ERM_C5_0_LANE0_TX_CLK_R ),
         .LANE0_RX_CLK_R           ( LANE0_RX_CLK_R ),
         .LANE0_RX_READY_CDR       ( LANE0_RX_READY_CDR ),
         .LANE0_RX_VAL_CDR         ( LANE0_RX_VAL_CDR ),
         .LANE0_RX_IDLE            (  ),
         .LANE0_TX_CLK_STABLE      ( LANE0_TX_CLK_STABLE ),
-        .LANE0_RX_CODE_VIOLATION  (  ),
-        .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         ( LANE0_8B10B_RX_K_net_0 ),
-        .LANE1_RX_DATA            ( LANE1_RX_DATA_net_0 ),
         .LANE1_TX_CLK_R           ( PF_XCVR_ERM_C5_0_LANE1_TX_CLK_R ),
         .LANE1_RX_CLK_R           ( PF_XCVR_ERM_C5_0_LANE1_RX_CLK_R ),
         .LANE1_RX_READY_CDR       ( PF_XCVR_ERM_C5_0_LANE1_RX_READY_CDR ),
         .LANE1_RX_VAL_CDR         ( PF_XCVR_ERM_C5_0_LANE1_RX_VAL_CDR ),
         .LANE1_RX_IDLE            (  ),
         .LANE1_TX_CLK_STABLE      ( PF_XCVR_ERM_C5_0_LANE1_TX_CLK_STABLE ),
-        .LANE1_RX_CODE_VIOLATION  (  ),
-        .LANE1_RX_DISPARITY_ERROR (  ),
-        .LANE1_8B10B_RX_K         ( LANE1_8B10B_RX_K_net_0 ),
         .LANE0_RX_READY           (  ),
         .LANE0_RX_VAL             (  ),
         .LANE1_RX_READY           (  ),
-        .LANE1_RX_VAL             (  ) 
+        .LANE1_RX_VAL             (  ),
+        .LANE0_RX_DATA            ( LANE0_RX_DATA_net_0 ),
+        .LANE0_RX_CODE_VIOLATION  (  ),
+        .LANE0_RX_DISPARITY_ERROR (  ),
+        .LANE0_8B10B_RX_K         ( LANE0_8B10B_RX_K_net_0 ),
+        .LANE1_RX_DATA            ( LANE1_RX_DATA_net_0 ),
+        .LANE1_RX_CODE_VIOLATION  (  ),
+        .LANE1_RX_DISPARITY_ERROR (  ),
+        .LANE1_8B10B_RX_K         ( LANE1_8B10B_RX_K_net_0 ) 
         );
 
 //--------PF_XCVR_ERM_C5
@@ -428,18 +428,12 @@ PF_XCVR_ERM_C5 PF_XCVR_ERM_C5_0_0(
         .LANE0_RXD_N              ( LANE2_RXD_N ),
         .LANE1_RXD_P              ( LANE3_RXD_P ),
         .LANE1_RXD_N              ( LANE3_RXD_N ),
-        .LANE0_TX_DATA            ( Test_Generator_XCVR_0_1_TX_Data ),
         .LANE0_CDR_REF_CLK_0      ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
         .LANE0_PCS_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
         .LANE0_PMA_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_1 ),
-        .LANE0_8B10B_TX_K         ( Test_Generator_XCVR_0_1_TX_K_Char ),
-        .LANE1_TX_DATA            ( Test_Generator_XCVR_0_1_0_TX_Data ),
         .LANE1_CDR_REF_CLK_0      ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
         .LANE1_PCS_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
         .LANE1_PMA_ARST_N         ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .LANE1_TX_DISPFNC         ( LANE1_TX_DISPFNC_const_net_1 ),
-        .LANE1_8B10B_TX_K         ( Test_Generator_XCVR_0_1_0_TX_K_Char ),
         .TX_PLL_LOCK_0            ( PF_TX_PLL_C0_0_0_CLKS_TO_XCVR_LOCK ),
         .TX_BIT_CLK_0             ( PF_TX_PLL_C0_0_0_CLKS_TO_XCVR_BIT_CLK ),
         .TX_PLL_REF_CLK_0         ( PF_TX_PLL_C0_0_0_CLKS_TO_XCVR_REF_CLK_TO_LANE ),
@@ -449,35 +443,41 @@ PF_XCVR_ERM_C5 PF_XCVR_ERM_C5_0_0(
         .LANE0_CLK_REF            ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
         .LANE1_LOS                ( GND_net ),
         .LANE1_CLK_REF            ( PF_CCC_C2_0_OUT0_FABCLK_0 ),
+        .LANE0_TX_DATA            ( Test_Generator_XCVR_0_1_TX_Data ),
+        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_1 ),
+        .LANE0_8B10B_TX_K         ( Test_Generator_XCVR_0_1_TX_K_Char ),
+        .LANE1_TX_DATA            ( Test_Generator_XCVR_0_1_0_TX_Data ),
+        .LANE1_TX_DISPFNC         ( LANE1_TX_DISPFNC_const_net_1 ),
+        .LANE1_8B10B_TX_K         ( Test_Generator_XCVR_0_1_0_TX_K_Char ),
         // Outputs
         .LANE0_TXD_P              ( LANE2_TXD_P_net_0 ),
         .LANE0_TXD_N              ( LANE2_TXD_N_net_0 ),
         .LANE1_TXD_P              ( LANE3_TXD_P_net_0 ),
         .LANE1_TXD_N              ( LANE3_TXD_N_net_0 ),
-        .LANE0_RX_DATA            ( LANE2_RX_DATA_net_0 ),
         .LANE0_TX_CLK_R           ( PF_XCVR_ERM_C5_0_0_LANE0_TX_CLK_R ),
         .LANE0_RX_CLK_R           ( PF_XCVR_ERM_C5_0_0_LANE0_RX_CLK_R ),
         .LANE0_RX_READY_CDR       ( PF_XCVR_ERM_C5_0_0_LANE0_RX_READY_CDR ),
         .LANE0_RX_VAL_CDR         ( PF_XCVR_ERM_C5_0_0_LANE0_RX_VAL_CDR ),
         .LANE0_RX_IDLE            (  ),
         .LANE0_TX_CLK_STABLE      ( PF_XCVR_ERM_C5_0_0_LANE0_TX_CLK_STABLE ),
-        .LANE0_RX_CODE_VIOLATION  (  ),
-        .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         ( LANE2_8B10B_RX_K_net_0 ),
-        .LANE1_RX_DATA            ( LANE3_RX_DATA_net_0 ),
         .LANE1_TX_CLK_R           ( PF_XCVR_ERM_C5_0_0_LANE1_TX_CLK_R ),
         .LANE1_RX_CLK_R           ( PF_XCVR_ERM_C5_0_0_LANE1_RX_CLK_R ),
         .LANE1_RX_READY_CDR       ( PF_XCVR_ERM_C5_0_0_LANE1_RX_READY_CDR ),
         .LANE1_RX_VAL_CDR         ( PF_XCVR_ERM_C5_0_0_LANE1_RX_VAL_CDR ),
         .LANE1_RX_IDLE            (  ),
         .LANE1_TX_CLK_STABLE      ( PF_XCVR_ERM_C5_0_0_LANE1_TX_CLK_STABLE ),
-        .LANE1_RX_CODE_VIOLATION  (  ),
-        .LANE1_RX_DISPARITY_ERROR (  ),
-        .LANE1_8B10B_RX_K         ( LANE3_8B10B_RX_K_net_0 ),
         .LANE0_RX_READY           (  ),
         .LANE0_RX_VAL             (  ),
         .LANE1_RX_READY           (  ),
-        .LANE1_RX_VAL             (  ) 
+        .LANE1_RX_VAL             (  ),
+        .LANE0_RX_DATA            ( LANE2_RX_DATA_net_0 ),
+        .LANE0_RX_CODE_VIOLATION  (  ),
+        .LANE0_RX_DISPARITY_ERROR (  ),
+        .LANE0_8B10B_RX_K         ( LANE2_8B10B_RX_K_net_0 ),
+        .LANE1_RX_DATA            ( LANE3_RX_DATA_net_0 ),
+        .LANE1_RX_CODE_VIOLATION  (  ),
+        .LANE1_RX_DISPARITY_ERROR (  ),
+        .LANE1_8B10B_RX_K         ( LANE3_8B10B_RX_K_net_0 ) 
         );
 
 //--------SYNCinb_Handler
@@ -485,11 +485,11 @@ SYNCinb_Handler SYNCinb_Handler_0(
         // Inputs
         .Clock             ( LANE0_RX_CLK_R ),
         .Reset_N           ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .Lane_Rx_K         ( LANE0_8B10B_RX_K_net_0 ),
-        .Lane_Rx_Data      ( LANE0_RX_DATA_net_0 ),
         .LANE_RX_READY_CDR ( LANE0_RX_READY_CDR ),
         .LANE_RX_VAL_CDR   ( LANE0_RX_VAL_CDR ),
         .Sync_Req          ( GND_net ),
+        .Lane_Rx_K         ( LANE0_8B10B_RX_K_net_0 ),
+        .Lane_Rx_Data      ( LANE0_RX_DATA_net_0 ),
         // Outputs
         .SYNC_OK           ( SYNCinb_Handler_0_SYNC_OK ) 
         );
@@ -499,11 +499,11 @@ SYNCinb_Handler SYNCinb_Handler_0_0(
         // Inputs
         .Clock             ( PF_XCVR_ERM_C5_0_LANE1_RX_CLK_R ),
         .Reset_N           ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .Lane_Rx_K         ( LANE1_8B10B_RX_K_net_0 ),
-        .Lane_Rx_Data      ( LANE1_RX_DATA_net_0 ),
         .LANE_RX_READY_CDR ( PF_XCVR_ERM_C5_0_LANE1_RX_READY_CDR ),
         .LANE_RX_VAL_CDR   ( PF_XCVR_ERM_C5_0_LANE1_RX_VAL_CDR ),
         .Sync_Req          ( GND_net ),
+        .Lane_Rx_K         ( LANE1_8B10B_RX_K_net_0 ),
+        .Lane_Rx_Data      ( LANE1_RX_DATA_net_0 ),
         // Outputs
         .SYNC_OK           ( SYNCinb_Handler_0_0_SYNC_OK ) 
         );
@@ -513,11 +513,11 @@ SYNCinb_Handler SYNCinb_Handler_0_1(
         // Inputs
         .Clock             ( PF_XCVR_ERM_C5_0_0_LANE0_RX_CLK_R ),
         .Reset_N           ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .Lane_Rx_K         ( LANE2_8B10B_RX_K_net_0 ),
-        .Lane_Rx_Data      ( LANE2_RX_DATA_net_0 ),
         .LANE_RX_READY_CDR ( PF_XCVR_ERM_C5_0_0_LANE0_RX_READY_CDR ),
         .LANE_RX_VAL_CDR   ( PF_XCVR_ERM_C5_0_0_LANE0_RX_VAL_CDR ),
         .Sync_Req          ( GND_net ),
+        .Lane_Rx_K         ( LANE2_8B10B_RX_K_net_0 ),
+        .Lane_Rx_Data      ( LANE2_RX_DATA_net_0 ),
         // Outputs
         .SYNC_OK           ( SYNCinb_Handler_0_1_SYNC_OK ) 
         );
@@ -527,11 +527,11 @@ SYNCinb_Handler SYNCinb_Handler_0_2(
         // Inputs
         .Clock             ( PF_XCVR_ERM_C5_0_0_LANE1_RX_CLK_R ),
         .Reset_N           ( CORERESET_PF_C2_0_FABRIC_RESET_N_1 ),
-        .Lane_Rx_K         ( LANE3_8B10B_RX_K_net_0 ),
-        .Lane_Rx_Data      ( LANE3_RX_DATA_net_0 ),
         .LANE_RX_READY_CDR ( PF_XCVR_ERM_C5_0_0_LANE1_RX_READY_CDR ),
         .LANE_RX_VAL_CDR   ( PF_XCVR_ERM_C5_0_0_LANE1_RX_VAL_CDR ),
         .Sync_Req          ( GND_net ),
+        .Lane_Rx_K         ( LANE3_8B10B_RX_K_net_0 ),
+        .Lane_Rx_Data      ( LANE3_RX_DATA_net_0 ),
         // Outputs
         .SYNC_OK           ( SYNCinb_Handler_0_2_SYNC_OK ) 
         );
