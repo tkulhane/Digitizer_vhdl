@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
-entity LANE_Control is
+entity RxLaneControl is
   port 
   (
     Clock : in std_logic;
@@ -37,9 +37,9 @@ entity LANE_Control is
     CTRL_Fault_ILAS : out std_logic
     
   );
-end LANE_Control;
+end RxLaneControl;
  
-architecture rtl of LANE_Control is
+architecture rtl of RxLaneControl is
 
 ------------------------------------------------------------------------------------------------------------
 --constant

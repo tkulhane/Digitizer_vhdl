@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
-entity MAIN_Link_Controller is
+entity TxMainLinkController is
   generic 
   (
     g_NumOfLanes : natural := 2
@@ -13,20 +13,16 @@ entity MAIN_Link_Controller is
     Clock : in std_logic;
     Reset_N : in std_logic;
  
-    LANE_Synced : in std_logic_vector(g_NumOfLanes - 1 downto 0);
-    LANE_ILAS_Go : in std_logic_vector(g_NumOfLanes - 1 downto 0);
-    LANE_Data_Go : in std_logic_vector(g_NumOfLanes - 1 downto 0);
+    SYNCINB : in std_logic;
+    Lanes_DataGo : in std_logic_vector(g_NumOfLanes - 1 downto 0); 
 
-    LANE_Alignment_Fifo_Empty : in std_logic_vector(g_NumOfLanes - 1 downto 0);
-
-    SYNCINB : out std_logic;
-    Alignment_Fifo_Read : out std_logic
-
-    
-  );
-end MAIN_Link_Controller;
+    SYNC_OK : out std_logic; 
+    Data_Read : out std_logic
  
-architecture rtl of MAIN_Link_Controller is
+  );
+end TxMainLinkController;
+ 
+architecture rtl of TxMainLinkController is
 
 ------------------------------------------------------------------------------------------------------------
 --constant
@@ -37,16 +33,13 @@ architecture rtl of MAIN_Link_Controller is
 --Signals declaration
 ------------------------------------------------------------------------------------------------------------ 
 
-  type FSM_state is (WAIT_FOR_SYNC, WAIT_FOR_ILAS, FIRST_ILAS_START, LAST_ILAS_START, DATA_GO);
-  signal state_reg, next_state : FSM_state;
-  signal fsm_timer : unsigned(9 downto 0);
+    type FSM_state is (WAIT_FOR_SYNC, WAIT_FOR_DATA, DATA_GO);
+    signal state_reg, next_state : FSM_state;
+    signal fsm_timer : unsigned(9 downto 0);
+
+    signal And_Lanes_DataGo : std_logic;
 
 
-  signal And_LANE_Synced : std_logic;
-  signal And_LANE_ILAS_Go : std_logic;
-  signal Or_LANE_ILAS_Go : std_logic;
-  signal And_LANE_Data_Go : std_logic;
-  signal Or_LANE_Alignment_Fifo_Empty : std_logic;
 
 ------------------------------------------------------------------------------------------------------------
 --Other Signals declaration
@@ -97,7 +90,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, fsm_timer, And_LANE_Synced, And_LANE_ILAS_Go, Or_LANE_ILAS_Go, And_LANE_Data_Go, Or_LANE_Alignment_Fifo_Empty)
+    process(next_state, state_reg, fsm_timer, SYNCINB, And_Lanes_DataGo)
     begin
 
         next_state <= state_reg;
@@ -105,27 +98,21 @@ begin
         case state_reg is
         
             when WAIT_FOR_SYNC =>
-                if(And_LANE_Synced = '1') then
-                    next_state <= WAIT_FOR_ILAS;    
+                if(SYNCINB = '1') then
+                    next_state <= WAIT_FOR_DATA;    
                 end if;
 
-            when WAIT_FOR_ILAS =>
-                if(Or_LANE_ILAS_Go = '1') then
-                    next_state <= FIRST_ILAS_START;    
-                end if;
-
-            when FIRST_ILAS_START => 
-                if(And_LANE_ILAS_Go = '1') then
-                    next_state <= LAST_ILAS_START;    
-                end if;
-
-            when LAST_ILAS_START =>
-                if(And_LANE_Data_Go = '1' and Or_LANE_Alignment_Fifo_Empty = '0' and fsm_timer >= 5 -1) then
-                    next_state <= DATA_GO;    
+            when WAIT_FOR_DATA =>
+                if(SYNCINB = '0') then
+                    next_state <= WAIT_FOR_SYNC; 
+                elsif (And_Lanes_DataGo = '1') then
+                    next_state <= DATA_GO;   
                 end if;
 
             when DATA_GO =>
-              null;  
+                if(SYNCINB = '0') then
+                    next_state <= WAIT_FOR_SYNC;    
+                end if;
 
             when others =>
                 null; 
@@ -140,28 +127,20 @@ begin
         case state_reg is
         
             when WAIT_FOR_SYNC =>
-                SYNCINB <= '0';
-                Alignment_Fifo_Read <= '0';
+                SYNC_OK <= '0';
+                Data_Read <= '0';
 
-            when WAIT_FOR_ILAS =>
-                SYNCINB <= '1';
-                Alignment_Fifo_Read <= '0';
-
-            when FIRST_ILAS_START =>
-                SYNCINB <= '1';
-                Alignment_Fifo_Read <= '0';
-
-            when LAST_ILAS_START =>
-                SYNCINB <= '1';
-                Alignment_Fifo_Read <= '0';
+            when WAIT_FOR_DATA =>
+                SYNC_OK <= '1';
+                Data_Read <= '0';
 
             when DATA_GO =>
-                SYNCINB <= '1';
-                Alignment_Fifo_Read <= '1';
+                SYNC_OK <= '1';
+                Data_Read <= '1';
 
             when others =>
-                SYNCINB <= '0';
-                Alignment_Fifo_Read <= '0'; 
+                SYNC_OK <= '0';
+                Data_Read <= '0';
 
 
         end case;
@@ -173,12 +152,8 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --make and, or
 ------------------------------------------------------------------------------------------------------------
-  And_LANE_Synced <= and LANE_Synced;
-  And_LANE_ILAS_Go <= and LANE_ILAS_Go;
-  Or_LANE_ILAS_Go <= or LANE_ILAS_Go;
-  And_LANE_Data_Go <= and LANE_Data_Go;
 
-  Or_LANE_Alignment_Fifo_Empty <= or LANE_Alignment_Fifo_Empty;
+    And_Lanes_DataGo <= and Lanes_DataGo;
   
 
 

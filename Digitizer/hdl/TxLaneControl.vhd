@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 
-entity JESD_DataGenerator is
+entity TxLaneControl is
   generic 
   (
     g_Delay : natural := 0
@@ -34,9 +34,9 @@ entity JESD_DataGenerator is
     SYNC_OK : in std_logic
 
   );
-end JESD_DataGenerator;
+end TxLaneControl;
  
-architecture rtl of JESD_DataGenerator is
+architecture rtl of TxLaneControl is
 
 ------------------------------------------------------------------------------------------------------------
 --constant
@@ -223,7 +223,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --Output data MUX
 ------------------------------------------------------------------------------------------------------------
-process(state_reg,IlasRawCounter)
+process(state_reg,IlasRawCounter,Data_DataVector)
 
 begin
 
@@ -295,7 +295,7 @@ begin
 
             end loop MUX_OUTS_ILAS_Last;
 
-            Input_MainData_Read <= '0';
+            Input_MainData_Read <= '1';
 
 
         when SEND_D =>
