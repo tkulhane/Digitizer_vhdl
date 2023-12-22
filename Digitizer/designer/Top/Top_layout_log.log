@@ -42,7 +42,7 @@ I/O Bank and Globals Assigner completed successfully.
 Total time spent in I/O Bank and Globals Assigner: 4 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Tue Dec  5 20:06:31 2023
+Design: Top                             Started: Fri Dec 22 22:29:01 2023
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -56,39 +56,47 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 5 seconds
-Placement                : 42 seconds
-Improvement              : 31 seconds
+Clustering (1 pass)      : 6 seconds
+Placement                : 48 seconds
+Improvement              : 37 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Tue Dec  5 20:08:36 2023
-Total CPU Time:     00:02:39            Total Elapsed Time: 00:02:05
-Total Memory Usage: 1762.9 Mbytes
+Finished: Fri Dec 22 22:31:22 2023
+Total CPU Time:     00:03:04            Total Elapsed Time: 00:02:21
+Total Memory Usage: 1831.2 Mbytes
                         o - o - o - o - o - o
 
+
+Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
+    Driver: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0/un1_WR_INDEX_3_2_1.m72:Y
+       Net: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0/N_73_0
+Clock pins: 1
+    Driver: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0_0/un1_WR_INDEX_3_2_1.m72:Y
+       Net: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0_0/N_73_0
+Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Tue Dec  5 20:08:57 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Fri Dec 22 22:31:45 2023
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Tue Dec  5 20:10:05 2023
-Total CPU Time:     00:02:44            Total Elapsed Time: 00:01:08
-Total Memory Usage: 5389.7 Mbytes
+Finished: Fri Dec 22 22:32:49 2023
+Total CPU Time:     00:02:01            Total Elapsed Time: 00:01:04
+Total Memory Usage: 5402.9 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 40453 | 299544 | 13.50      |
-| DFF           | 39290 | 299544 | 13.12      |
+| 4LUT          | 44703 | 299544 | 14.92      |
+| DFF           | 40244 | 299544 | 13.44      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 41646 | 299544 | 13.90      |
+| Logic Element | 45857 | 299544 | 15.31      |
 +---------------+-------+--------+------------+
 
 I/O Placement

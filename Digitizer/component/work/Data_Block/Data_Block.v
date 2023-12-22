@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Sep 19 18:37:19 2023
+// Created by SmartDesign Fri Dec 22 20:34:39 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -74,6 +74,14 @@ wire   [31:0] Communication_Data_Frame_net_0;
 wire          Communication_Data_Req_net_0;
 wire          Communication_Empty_net_0;
 wire          Communication_Read;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_1;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_1;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_2_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_2_1;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_3_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_3_1;
 wire          Diag_0_net_0;
 wire          Diag_1_net_0;
 wire   [7:0]  Event_Info_RAM_Block_0_A_DOUT_Event_Status;
@@ -109,14 +117,6 @@ wire   [15:0] Input_Data_Part_1_Q_2;
 wire   [15:0] Input_Data_Part_1_Q_3;
 wire          Reset_N;
 wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
-wire   [11:0] Test_Generator_0_Test_Data_0;
-wire   [11:0] Test_Generator_0_Test_Data_1;
-wire   [11:0] Test_Generator_0_Test_Data_2;
-wire   [11:0] Test_Generator_0_Test_Data_3;
-wire   [11:0] Test_Generator_0_Test_Data_4;
-wire   [11:0] Test_Generator_0_Test_Data_5;
-wire   [11:0] Test_Generator_0_Test_Data_6;
-wire   [11:0] Test_Generator_0_Test_Data_7;
 wire          Trigger_Top_Part_0_ALL_FIFO_Enable;
 wire          Trigger_Top_Part_0_Control_Test_Generator_Enable;
 wire          Trigger_Top_Part_0_EMPTY;
@@ -225,6 +225,24 @@ COREFIFO_C10 COREFIFO_C10_0(
         .Q        ( Communication_Data_Frame_net_0 ) 
         );
 
+//--------DataSource_Transcievers
+DataSource_Transcievers DataSource_Transcievers_0(
+        // Inputs
+        .Gen_Enable      ( Trigger_Top_Part_0_Control_Test_Generator_Enable ),
+        .Clock           ( Clock ),
+        .Reset_N         ( Reset_N ),
+        // Outputs
+        .Output_Data_3_1 ( DataSource_Transcievers_0_Output_Data_3_1 ),
+        .Output_Data_0_1 ( DataSource_Transcievers_0_Output_Data_0_1 ),
+        .Output_Data_1_1 ( DataSource_Transcievers_0_Output_Data_1_1 ),
+        .Output_Data_2_1 ( DataSource_Transcievers_0_Output_Data_2_1 ),
+        .Output_Data_0_0 ( DataSource_Transcievers_0_Output_Data_0_0 ),
+        .Output_Data_1_0 ( DataSource_Transcievers_0_Output_Data_1_0 ),
+        .Output_Data_2_0 ( DataSource_Transcievers_0_Output_Data_2_0 ),
+        .Output_Data_3_0 ( DataSource_Transcievers_0_Output_Data_3_0 ),
+        .DataValid       (  ) 
+        );
+
 //--------Event_Info_RAM_Block
 Event_Info_RAM_Block Event_Info_RAM_Block_0(
         // Inputs
@@ -295,10 +313,10 @@ Input_Data_Part Input_Data_Part_0(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( Test_Generator_0_Test_Data_0 ),
-        .Input_Data_1        ( Test_Generator_0_Test_Data_1 ),
-        .Input_Data_2        ( Test_Generator_0_Test_Data_2 ),
-        .Input_Data_3        ( Test_Generator_0_Test_Data_3 ),
+        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_0_0 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_1_0 ),
+        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_0_1 ),
+        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_1_1 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
         .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_0 ),
@@ -324,10 +342,10 @@ Input_Data_Part Input_Data_Part_1(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( Test_Generator_0_Test_Data_4 ),
-        .Input_Data_1        ( Test_Generator_0_Test_Data_5 ),
-        .Input_Data_2        ( Test_Generator_0_Test_Data_6 ),
-        .Input_Data_3        ( Test_Generator_0_Test_Data_7 ),
+        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_2_0 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_3_0 ),
+        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_2_1 ),
+        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_3_1 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
         .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_1 ),
@@ -355,23 +373,6 @@ Sample_RAM_Block Sample_RAM_Block_0(
         .B_Block_Address_vector ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
         // Outputs
         .B_Output_Data          ( Sample_RAM_Block_0_B_Output_Data ) 
-        );
-
-//--------Test_Generator
-Test_Generator Test_Generator_0(
-        // Inputs
-        .Clock       ( Clock ),
-        .Reset_N     ( Reset_N ),
-        .Test_Enable ( Trigger_Top_Part_0_Control_Test_Generator_Enable ),
-        // Outputs
-        .Test_Data_0 ( Test_Generator_0_Test_Data_0 ),
-        .Test_Data_1 ( Test_Generator_0_Test_Data_1 ),
-        .Test_Data_2 ( Test_Generator_0_Test_Data_2 ),
-        .Test_Data_3 ( Test_Generator_0_Test_Data_3 ),
-        .Test_Data_4 ( Test_Generator_0_Test_Data_4 ),
-        .Test_Data_5 ( Test_Generator_0_Test_Data_5 ),
-        .Test_Data_6 ( Test_Generator_0_Test_Data_6 ),
-        .Test_Data_7 ( Test_Generator_0_Test_Data_7 ) 
         );
 
 //--------Trigger_Top_Part

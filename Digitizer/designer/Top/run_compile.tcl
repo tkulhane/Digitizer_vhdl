@@ -23,7 +23,8 @@ set_partition_info -name "/Top" -timestamp "1701803021"
 set_partition_info -name "/Top/Communication_0/UART_Protocol_1" -timestamp "1699980124"
 set_partition_info -name "/Top/Communication_0/UART_Protocol_0" -timestamp "1699980124"
 set_partition_info -name "/Top/Communication_0" -timestamp "1701803021"
-set_partition_info -name "/Top/Data_Block_0" -timestamp "1701803021"
+set_partition_info -name "/Top/Data_Block_0/DataSource_Transcievers_0" -timestamp "1703280349"
+set_partition_info -name "/Top/Data_Block_0" -timestamp "1703280349"
 set_partition_info -name "/Top/Controler_0" -timestamp "1701803021"
 set_compile_info \
     -category {"Device Selection"} \

@@ -1,6 +1,6 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
-. Top, 6134, 4390, 2678, 0, 0, 921, 0, 9, 108
+. Top, 7088, 7038, 4279, 0, 0, 921, 0, 9, 108
 .	. Clock_Reset, 20, 1, 0, 0, 0, 0, 0, 6, 0
 .	.	. CORERESET_PF_C0, 17, 1, 0, 0, 0, 0, 0, 1, 0
 .	.	.	. CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF, 17, 1, 0, 0, 0, 0, 0, 1, 0
@@ -141,7 +141,7 @@
 .	.	.	. work_spi_interface_rtl_7_16_1_addr_widthdata_width_0, 42, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_master_behavioural_24_5_1_data_lengthdivider_1_0, 73, 61, 6, 0, 0, 0, 0, 0, 0
 .	.	. gpio_controler, 252, 260, 99, 0, 0, 0, 0, 0, 0
-.	. Data_Block, 2071, 1166, 1451, 0, 0, 886, 0, 0, 0
+.	. Data_Block, 3025, 3814, 3052, 0, 0, 886, 0, 0, 0
 .	.	. COREFIFO_C10, 205, 113, 88, 0, 0, 16, 0, 0, 0
 .	.	.	. COREFIFO_C10_COREFIFO_C10_0_COREFIFO_Z19_layer0, 205, 113, 88, 0, 0, 16, 0, 0, 0
 .	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0, 169, 78, 88, 0, 0, 0, 0, 0, 0
@@ -152,6 +152,16 @@
 .	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_13_13_0s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 16, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_LSRAM_top, 0, 0, 0, 0, 0, 16, 0, 0, 0
 .	.	. Communication_Builder, 277, 156, 136, 0, 0, 0, 0, 0, 0
+.	.	. DataSource_Transcievers, 1078, 2658, 1673, 0, 0, 0, 0, 0, 0
+.	.	.	. Alignment_Fifo_DataSource_Transcievers_1, 344, 1106, 719, 0, 0, 0, 0, 0, 0
+.	.	.	. Alignment_Fifo_DataSource_Transcievers_1_0, 344, 1101, 719, 0, 0, 0, 0, 0, 0
+.	.	.	. RxLaneControl_DataSource_Transcievers, 105, 59, 20, 0, 0, 0, 0, 0, 0
+.	.	.	. RxLaneControl_DataSource_Transcievers_0, 105, 52, 20, 0, 0, 0, 0, 0, 0
+.	.	.	. RxMainLinkController, 15, 13, 11, 0, 0, 0, 0, 0, 0
+.	.	.	. Test_Generator_for_Lanes, 47, 43, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. TxLaneControl_0, 58, 148, 92, 0, 0, 0, 0, 0, 0
+.	.	.	. TxLaneControl_1, 58, 132, 92, 0, 0, 0, 0, 0, 0
+.	.	.	. TxMainLinkController, 2, 4, 0, 0, 0, 0, 0, 0, 0
 .	.	. Event_Info_RAM_Block, 0, 0, 0, 0, 0, 4, 0, 0, 0
 .	.	.	. PF_DPSRAM_C7, 0, 0, 0, 0, 0, 1, 0, 0, 0
 .	.	.	.	. PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM, 0, 0, 0, 0, 0, 1, 0, 0, 0
@@ -162,64 +172,64 @@
 .	.	.	. PF_DPSRAM_C8_Event_Status, 0, 0, 0, 0, 0, 1, 0, 0, 0
 .	.	.	.	. PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM, 0, 0, 0, 0, 0, 1, 0, 0, 0
 .	.	. FIFOs_Reader, 78, 176, 68, 0, 0, 0, 0, 0, 0
-.	.	. Input_Data_Part_0, 541, 228, 356, 0, 0, 48, 0, 0, 0
-.	.	.	. COREFIFO_C4_2, 105, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_2, 105, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_3, 28, 18, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_3, 62, 24, 77, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_2, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_2, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	. COREFIFO_C4_3, 104, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_3, 104, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_4, 28, 19, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_4, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	. Input_Data_Part_0, 517, 228, 356, 0, 0, 48, 0, 0, 0
+.	.	.	. COREFIFO_C4_3, 105, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_3, 105, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_3, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_3, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_3, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_3, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	. COREFIFO_C4_4, 104, 56, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_4, 104, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_5, 28, 19, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_5, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_4, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_4, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_4, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_4, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	. COREFIFO_C4_5, 104, 56, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_5, 104, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_6, 28, 19, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_6, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_5, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_5, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_5, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_5, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_1, 31, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_2, 31, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_3, 31, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_4, 31, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	. Input_Data_Part_1, 586, 228, 356, 0, 0, 48, 0, 0, 0
-.	.	.	. COREFIFO_C4, 116, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0, 116, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_0, 28, 19, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_0, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	.	. COREFIFO_C4_6, 104, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_6, 104, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_6, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_6, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_6, 0, 0, 0, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_6, 0, 0, 0, 0, 0, 12, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_1, 25, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_2, 25, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_3, 25, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_4, 25, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	. Input_Data_Part_1, 565, 228, 356, 0, 0, 48, 0, 0, 0
+.	.	.	. COREFIFO_C4, 117, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0, 117, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	. COREFIFO_C4_0, 116, 56, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_0, 116, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_1, 28, 19, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_1, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_0, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_0, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_0, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_0, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	. COREFIFO_C4_1, 116, 56, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_1, 116, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_2, 28, 19, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_2, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_1, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_1, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_1, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_1, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	. COREFIFO_C4_3_0, 117, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_3_0, 117, 56, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0, 28, 18, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block, 62, 24, 77, 0, 0, 0, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_3_0, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_3_0, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_0, 28, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_1, 31, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_2, 31, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_0, 31, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. COREFIFO_C4_2, 116, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_2, 116, 56, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_2, 28, 19, 0, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block_2, 62, 23, 77, 0, 0, 0, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_2, 0, 0, 0, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_2, 0, 0, 0, 0, 0, 12, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_0, 25, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_1, 25, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_2, 25, 1, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_0, 25, 1, 12, 0, 0, 0, 0, 0, 0
 .	.	. Sample_RAM_Block, 0, 4, 96, 0, 0, 768, 0, 0, 0
 .	.	.	. PF_DPSRAM_C5, 0, 0, 0, 0, 0, 192, 0, 0, 0
 .	.	.	.	. PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM, 0, 0, 0, 0, 0, 192, 0, 0, 0
@@ -231,14 +241,13 @@
 .	.	.	.	. PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_2, 0, 0, 0, 0, 0, 192, 0, 0, 0
 .	.	.	. Sample_RAM_Block_Decoder, 0, 4, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. Sample_RAM_Block_MUX, 0, 0, 24, 0, 0, 0, 0, 0, 0
-.	.	. Test_Generator, 79, 2, 72, 0, 0, 0, 0, 0, 0
-.	.	. Trigger_Top_Part, 305, 259, 279, 0, 0, 2, 0, 0, 0
+.	.	. Trigger_Top_Part, 305, 251, 279, 0, 0, 2, 0, 0, 0
 .	.	.	. COREFIFO_C5, 76, 45, 78, 0, 0, 2, 0, 0, 0
 .	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_COREFIFO_Z24_layer0, 76, 45, 78, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z26_layer0, 8, 8, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0, 63, 32, 78, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_LSRAM_top, 0, 0, 0, 0, 0, 2, 0, 0, 0
-.	.	.	. Trigger_Control, 201, 152, 164, 0, 0, 0, 0, 0, 0
+.	.	.	. Trigger_Control, 201, 144, 164, 0, 0, 0, 0, 0, 0
 .	.	.	. Trigger_Main, 28, 62, 37, 0, 0, 0, 0, 0, 0
 .	. Synchronizer_2, 2, 0, 0, 0, 0, 0, 0, 0, 0

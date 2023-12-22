@@ -1,0 +1,365 @@
+# Fri Dec 22 22:25:51 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: S-2021.09M
+Install: C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro
+OS: Windows 6.2
+
+Hostname: DESKTOP-TDPVUTD
+
+Implementation : synthesis
+Synopsys Generic Technology Mapper, Version map202109act, Build 055R, Built Feb 23 2022 09:52:10, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 121MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 134MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 134MB)
+
+
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\datasource_transcievers\datasource_transcievers.v":9:7:9:29|Found compile point of type hard on View view:work.DataSource_Transcievers(verilog) 
+
+
+@N: MF105 |Performing bottom-up mapping of Compile point view:work.DataSource_Transcievers(verilog) 
+
+Begin environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 165MB peak: 165MB)
+
+
+Finished environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 165MB peak: 166MB)
+
+
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 165MB peak: 166MB)
+
+
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 166MB peak: 166MB)
+
+
+Begin compile point sub-process log
+
+@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\datasource_transcievers\datasource_transcievers.v":9:7:9:29|Mapping Compile point view:work.DataSource_Transcievers(verilog) because 
+		 RTL and/or Constraints changed.
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 166MB peak: 166MB)
+
+
+#### START OF SSF LOG MESSAGES ####
+
+#### END OF SSF LOG MESSAGES ####
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+
+Encoding state machine state_reg[0:2] (in view: work.TxMainLinkController(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state_reg[0:4] (in view: work.TxLaneControl_1(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\txlanecontrol.vhd":382:8:382:9|Found counter in view:work.TxLaneControl_1(rtl) instance Counter_IlasSequence[7:0] 
+Encoding state machine state_reg[0:4] (in view: work.TxLaneControl_0(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\txlanecontrol.vhd":382:8:382:9|Found counter in view:work.TxLaneControl_0(rtl) instance Counter_IlasSequence[7:0] 
+Encoding state machine state_reg[0:4] (in view: work.RxMainLinkController(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxmainlinkcontroller.vhd":86:8:86:9|Found counter in view:work.RxMainLinkController(rtl) instance fsm_timer[9:0] 
+Encoding state machine state_reg[0:4] (in view: work.RxLaneControl_DataSource_Transcievers(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":151:8:151:9|Found counter in view:work.RxLaneControl_DataSource_Transcievers(rtl) instance fsm_timer[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":357:4:357:5|Found counter in view:work.RxLaneControl_DataSource_Transcievers(rtl) instance Counter_IlasSequence[7:0] 
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":348:4:348:5|Removing instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_3[0] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":348:4:348:5|Removing instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_2[0] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_0[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 188MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":318:6:318:7|Sequential instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.RD_Enable_Vector_Encoded is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":318:6:318:7|Sequential instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.RD_Enable_Vector_Encoded is reduced to a combinational gate by constant propagation.
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 194MB peak: 216MB)
+
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_5[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_5[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_3[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_3[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_2[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_2[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_6[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_6[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_4[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_4[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_1[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_1[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_1[1] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_3[2] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_2[0] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_5[1] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_4[0] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_6[0] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 197MB peak: 216MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 197MB peak: 216MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:04s; Memory used current: 197MB peak: 216MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 198MB peak: 216MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 248MB peak: 248MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:05s		     2.59ns		4442 /      1150
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 249MB peak: 249MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 249MB peak: 250MB)
+
+
+End compile point sub-process log
+
+@W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":13:17:13:25|Blackbox OSC_RC160MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@N: MT615 |Found clock Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK with period 6.25ns 
+@W: MT420 |Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0_clkint_0.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Fri Dec 22 22:25:57 2023
+#
+
+
+Top view:               Top
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\synthesis.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 5.677
+
+                                                                    Requested     Estimated     Requested     Estimated               Clock        Clock                
+Starting Clock                                                      Frequency     Frequency     Period        Period        Slack     Type         Group                
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                 160.0 MHz     NA            6.250         NA            NA        declared     default_clkgroup     
+FTDI_CLK                                                            100.0 MHz     NA            10.000        NA            NA        declared     default_clkgroup     
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     100.0 MHz     231.3 MHz     10.000        4.323         5.677     inferred     Inferred_clkgroup_0_1
+========================================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                                            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                         Ending                                                           |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock  |  10.000      5.677  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                                                 Starting                                                                                                        Arrival          
+Instance                                                                                         Reference                                                           Type     Pin     Net                        Time        Slack
+                                                                                                 Clock                                                                                                                            
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[2]                          PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFO_COUNT[2]              0.201       5.677
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.FIFO_COUNT[2]                            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFO_COUNT[2]              0.201       5.693
+Data_Block_0.DataSource_Transcievers_0.TxLaneControl_0_0.state_reg[2]                            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       state_reg[2]               0.218       5.722
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[3]                          PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFO_COUNT[3]              0.218       5.765
+Data_Block_0.DataSource_Transcievers_0.TxLaneControl_0.state_reg[2]                              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       state_reg_0[2]             0.218       5.773
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.FIFO_COUNT[3]                            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFO_COUNT[3]              0.218       5.782
+Data_Block_0.DataSource_Transcievers_0.TxLaneControl_0.ILAS_GENERATOR\.IlasRawCounter_3[0]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       un1_ilas_enable            0.218       5.793
+Data_Block_0.DataSource_Transcievers_0.TxLaneControl_0_0.ILAS_GENERATOR\.IlasRawCounter_3[3]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       un26_ilas_enable_axb_3     0.218       5.809
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[4]                          PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFO_COUNT[4]              0.218       5.809
+Data_Block_0.DataSource_Transcievers_0.TxLaneControl_0_0.ILAS_GENERATOR\.IlasRawCounter_3[8]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       un26_ilas_enable_axb_8     0.201       5.814
+==================================================================================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                                 Starting                                                                                                     Required          
+Instance                                                                         Reference                                                           Type     Pin     Net                     Time         Slack
+                                                                                 Clock                                                                                                                          
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[6]          PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[6]     10.000       5.677
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[5]          PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[5]     10.000       5.685
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[4]          PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[4]     10.000       5.693
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.FIFO_COUNT[6]            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[6]     10.000       5.693
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[3]          PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[3]     10.000       5.701
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.FIFO_COUNT[5]            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[5]     10.000       5.701
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.FIFO_COUNT[4]            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[4]     10.000       5.709
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.FIFO_COUNT[3]            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un1_FIFO_COUNT_1[3]     10.000       5.717
+Data_Block_0.DataSource_Transcievers_0.RxLaneControl_0_0.ComparatorData_R[3]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un60_input_k_array      10.000       5.722
+Data_Block_0.DataSource_Transcievers_0.RxLaneControl_0.ComparatorData_A[1]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       un36_input_k_array      10.000       5.773
+================================================================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.000
+
+    - Propagation time:                      4.323
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     5.677
+
+    Number of logic level(s):                10
+    Starting point:                          Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[2] / Q
+    Ending point:                            Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[6] / D
+    The start point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+    The end   point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
+
+Instance / Net                                                                                                                             Pin      Pin               Arrival     No. of    
+Name                                                                                                                              Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[2]                                                           SLE      Q        Out     0.201     0.201 f     -         
+FIFO_COUNT[2]                                                                                                                     Net      -        -       0.547     -           3         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.Read_Data_Empty_Signal_GEN\.3\.un26_read_data_empty_signallto6_i_a3     CFG4     D        In      -         0.748 f     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.Read_Data_Empty_Signal_GEN\.3\.un26_read_data_empty_signallto6_i_a3     CFG4     Y        Out     0.232     0.979 r     -         
+N_151                                                                                                                             Net      -        -       0.563     -           4         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_WR_INDEX_3_2_1.m45                                                  CFG4     C        In      -         1.543 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_WR_INDEX_3_2_1.m45                                                  CFG4     Y        Out     0.148     1.691 r     -         
+N_46_0                                                                                                                            Net      -        -       0.948     -           4         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_WR_INDEX_3_2_1.m52                                                  CFG3     B        In      -         2.639 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_WR_INDEX_3_2_1.m52                                                  CFG3     Y        Out     0.088     2.726 f     -         
+N_53_0                                                                                                                            Net      -        -       0.124     -           2         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_0_cry_1                                                  ARI1     B        In      -         2.850 f     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_0_cry_1                                                  ARI1     FCO      Out     0.328     3.178 r     -         
+un1_FIFO_COUNT_0_cry_1                                                                                                            Net      -        -       0.000     -           1         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_0_cry_2                                                  ARI1     FCI      In      -         3.178 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_0_cry_2                                                  ARI1     S        Out     0.300     3.478 r     -         
+un1_FIFO_COUNT_0[2]                                                                                                               Net      -        -       0.118     -           1         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_2                                                    ARI1     A        In      -         3.596 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_2                                                    ARI1     FCO      Out     0.285     3.881 r     -         
+un1_FIFO_COUNT_cry_2                                                                                                              Net      -        -       0.000     -           1         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_3_0                                                  ARI1     FCI      In      -         3.881 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_3_0                                                  ARI1     FCO      Out     0.008     3.889 r     -         
+un1_FIFO_COUNT_cry_3                                                                                                              Net      -        -       0.000     -           1         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_4_0                                                  ARI1     FCI      In      -         3.889 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_4_0                                                  ARI1     FCO      Out     0.008     3.897 r     -         
+un1_FIFO_COUNT_cry_4                                                                                                              Net      -        -       0.000     -           1         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_5_0                                                  ARI1     FCI      In      -         3.897 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_cry_5_0                                                  ARI1     FCO      Out     0.008     3.905 r     -         
+un1_FIFO_COUNT_cry_5                                                                                                              Net      -        -       0.000     -           1         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_s_6                                                      ARI1     FCI      In      -         3.905 r     -         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_FIFO_COUNT_s_6                                                      ARI1     S        Out     0.300     4.205 r     -         
+un1_FIFO_COUNT_1[6]                                                                                                               Net      -        -       0.118     -           1         
+Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.FIFO_COUNT[6]                                                           SLE      D        In      -         4.323 r     -         
+============================================================================================================================================================================================
+Total path delay (propagation time + setup) of 4.323 is 1.905(44.1%) logic and 2.418(55.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":13:0:13:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":16:0:16:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":17:0:17:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":18:0:18:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":19:0:19:0|Timing constraint (to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+None
+Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\DataSource_Transcievers\cpprop
+
+Summary of Compile Points :
+*************************** 
+Name                        Status       Reason        
+-------------------------------------------------------
+DataSource_Transcievers     Remapped     Design changed
+=======================================================
+
+Process took 0h:00m:06s realtime, 0h:00m:06s cputime
+# Fri Dec 22 22:25:57 2023
+
+###########################################################]
