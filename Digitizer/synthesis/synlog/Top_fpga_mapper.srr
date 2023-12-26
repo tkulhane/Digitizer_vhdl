@@ -1,4 +1,4 @@
-# Fri Dec 22 22:25:49 2023
+# Tue Dec 26 14:34:47 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -44,30 +44,57 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 Synthesis running in Multiprocessing mode
 Maximum number of parallel jobs set to 4
-Multiprocessing started at : Fri Dec 22 22:25:50 2023
+Multiprocessing started at : Tue Dec 26 14:34:48 2023
 @W: BN114 :|Removing instance CP_fanout_cell_Top_verilog_inst (in view: work.DataSource_Transcievers_acp(verilog)) because it does not drive other instances.
 Mapping DataSource_Transcievers as a separate process
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\controler\controler.v":9:7:9:15|Old database up-to-date, remapping Compile point view:work.Controler(verilog) unnecessary 
-Mapping Data_Block as a separate process
+@N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":9:7:9:16|Old database up-to-date, remapping Compile point view:work.Data_Block(verilog) unnecessary 
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Old database up-to-date, remapping Compile point view:work.UART_Protocol_UART_Protocol_0(verilog) unnecessary 
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\uart_protocol\uart_protocol.v":9:7:9:19|Old database up-to-date, remapping Compile point view:work.UART_Protocol_UART_Protocol_1(verilog) unnecessary 
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\communication\communication.v":9:7:9:19|Old database up-to-date, remapping Compile point view:work.Communication(verilog) unnecessary 
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\top\top.v":9:7:9:9|Old database up-to-date, remapping Compile point view:work.Top(verilog) unnecessary 
-MCP Status: 2 jobs running
+MCP Status: 1 jobs running
 
 @N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\datasource_transcievers\datasource_transcievers.v":9:7:9:29|Mapping Compile point view:work.DataSource_Transcievers(verilog) because 
 		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 166MB peak: 166MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 168MB peak: 168MB)
 
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_32s_32s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_c13_corefifo_c13_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_c13_corefifo_c13_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_c13_corefifo_c13_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_c13_corefifo_c13_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C13_COREFIFO_C13_0_ram_wrapper_4s_4s_6_6_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1_0.COREFIFO_C12_0.RE_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1.COREFIFO_C12_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1.COREFIFO_C12_0.RE_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_0.COREFIFO_C12_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_0.COREFIFO_C12_0.RE_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
 #### START OF SSF LOG MESSAGES ####
 
 #### END OF SSF LOG MESSAGES ####
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
 
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":793:24:793:39|Removing user instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_0.COREFIFO_C12_0.genblk16.U_corefifo_async because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16.U_corefifo_async. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":793:24:793:39|Removing user instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1_0.COREFIFO_C12_0.genblk16.U_corefifo_async because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16.U_corefifo_async. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_0.COREFIFO_C12_0.REN_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.REN_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1_0.COREFIFO_C12_0.REN_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1.COREFIFO_C12_0.REN_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1040:3:1040:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_0.COREFIFO_C12_0.re_set because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.re_set. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_0.COREFIFO_C12_0.re_pulse_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.re_pulse_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1040:3:1040:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1_0.COREFIFO_C12_0.re_set because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1.COREFIFO_C12_0.re_set. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1_0.COREFIFO_C12_0.re_pulse_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0_1.COREFIFO_C12_0.re_pulse_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_DataSource_Transcievers(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_DataSource_Transcievers(verilog) instance genblk10\.memwaddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_DataSource_Transcievers_0(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_DataSource_Transcievers_0(verilog) instance genblk10\.memwaddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z24_layer0_DataSource_Transcievers(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z24_layer0_DataSource_Transcievers(verilog) instance genblk10\.memwaddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z24_layer0_DataSource_Transcievers_0(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z24_layer0_DataSource_Transcievers_0(verilog) instance genblk10\.memwaddr_r[5:0] 
 Encoding state machine state_reg[0:2] (in view: work.TxMainLinkController(rtl))
 original code -> new code
    00 -> 00
@@ -108,11 +135,15 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":357:4:357:5|Found counter in view:work.RxLaneControl_DataSource_Transcievers(rtl) instance Counter_IlasSequence[7:0] 
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":348:4:348:5|Removing instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_3[0] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 178MB peak: 178MB)
 
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":348:4:348:5|Removing instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_2[0] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.read_index_control.RD_INDEX_0[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C13_0_2.COREFIFO_C13_0.RE_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C13_0_1.COREFIFO_C13_0.RE_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C13_0_0.COREFIFO_C13_0.RE_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C13_0.COREFIFO_C13_0.RE_d1 because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.COREFIFO_C12_0.COREFIFO_C12_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 188MB peak: 188MB)
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 187MB peak: 187MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -121,16 +152,16 @@ Available hyper_sources - for debug and ip models
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":318:6:318:7|Sequential instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.RD_Enable_Vector_Encoded is reduced to a combinational gate by constant propagation.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":318:6:318:7|Sequential instance Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.RD_Enable_Vector_Encoded is reduced to a combinational gate by constant propagation.
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 194MB peak: 216MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 208MB)
 
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_5[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_5[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_3[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_3[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_2[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_2[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_6[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_6[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_4[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_4[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_1[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_1[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_2[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_2[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_5[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_5[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_3[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_3[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_6[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_6[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[2] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[1] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.Test_Generator_for_Lanes_0.Test_Data_7[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_1[1] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_3[2] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_2[0] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
@@ -138,254 +169,49 @@ Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:03s; CP
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_4[0] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing sequential instance Test_Generator_for_Lanes_0.Test_Data_6[0] (in view: work.DataSource_Transcievers(verilog)) because it does not drive other instances.
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 197MB peak: 216MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 198MB peak: 208MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 197MB peak: 216MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 198MB peak: 208MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:04s; Memory used current: 197MB peak: 216MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 198MB peak: 208MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 198MB peak: 216MB)
+Finished preparing to map (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 198MB peak: 208MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 248MB peak: 248MB)
+Finished technology mapping (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 255MB peak: 255MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:05s		     2.59ns		4442 /      1150
+   1		0h:00m:05s		     2.59ns		5043 /      1817
 
 Added 0 Buffers
 Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 249MB peak: 249MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 257MB peak: 257MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 249MB peak: 250MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 258MB peak: 258MB)
 
 
 Finished mapping DataSource_Transcievers
-MCP Status: 1 jobs running
-
-@N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\data_block\data_block.v":9:7:9:16|Mapping Compile point view:work.Data_Block(verilog) because 
-		 RTL and/or Constraints changed.
-
-
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 182MB peak: 182MB)
-
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_ram_wrapper.v":47:26:47:37|Tristate driver B_SB_CORRECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) on net B_SB_CORRECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_ram_wrapper.v":46:26:46:37|Tristate driver A_SB_CORRECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) on net A_SB_CORRECT (in view: work.COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_c10_corefifo_c10_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_13_13_0s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_13_13_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_c10_corefifo_c10_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_13_13_0s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_13_13_0s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.Input_Data_Part_0.COREFIFO_C4_0_2.COREFIFO_C4_0.RE_d1 because it is equivalent to instance Data_Block_0.Input_Data_Part_0.COREFIFO_C4_0_1.COREFIFO_C4_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.Input_Data_Part_0.COREFIFO_C4_0_1.COREFIFO_C4_0.RE_d1 because it is equivalent to instance Data_Block_0.Input_Data_Part_0.COREFIFO_C4_0_0.COREFIFO_C4_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.Input_Data_Part_0.COREFIFO_C4_0_0.COREFIFO_C4_0.RE_d1 because it is equivalent to instance Data_Block_0.Input_Data_Part_0.COREFIFO_C4_0.COREFIFO_C4_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.RE_d1 because it is equivalent to instance Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.RE_d1 because it is equivalent to instance Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1110:3:1110:8|Removing sequential instance Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.RE_d1 because it is equivalent to instance Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.RE_d1. To keep the instance, apply constraint syn_preserve=1 on the instance.
-
-#### START OF SSF LOG MESSAGES ####
-
-#### END OF SSF LOG MESSAGES ####
-@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
-@W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
-@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|Found ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) with 4 words by 16 bits.
-
-Finished RTL optimizations (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 204MB peak: 213MB)
-
-Encoding state machine Communication_0.USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6] (in view: work.Top(verilog))
-original code -> new code
-   0000001 -> 0000001
-   0000010 -> 0000010
-   0000100 -> 0000100
-   0001000 -> 0001000
-   0010000 -> 0010000
-   0100000 -> 0100000
-   1000000 -> 1000000
-Encoding state machine Communication_0.UART_Protocol_1.Communication_TX_Arbiter2_0.state_reg[0:6] (in view: work.Top(verilog))
-original code -> new code
-   0000001 -> 0000001
-   0000010 -> 0000010
-   0000100 -> 0000100
-   0001000 -> 0001000
-   0010000 -> 0010000
-   0100000 -> 0100000
-   1000000 -> 1000000
-Encoding state machine Communication_0.UART_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6] (in view: work.Top(verilog))
-original code -> new code
-   0000001 -> 0000001
-   0000010 -> 0000010
-   0000100 -> 0000100
-   0001000 -> 0001000
-   0010000 -> 0010000
-   0100000 -> 0100000
-   1000000 -> 1000000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog) instance memraddr_r[13:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog) instance memwaddr_r[13:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memraddr_r[13:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memwaddr_r[13:0] 
-Encoding state machine state_reg[0:5] (in view: work.Trigger_Control(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":347:8:347:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Processed_Events[31:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":347:8:347:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Incoming_Events[31:0] 
-Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
-original code -> new code
-   0000001 -> 0000001
-   0000010 -> 0000010
-   0000100 -> 0000100
-   0001000 -> 0001000
-   0010000 -> 0010000
-   0100000 -> 0100000
-   1000000 -> 1000000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":527:8:527:9|Found counter in view:work.FIFOs_Reader(rtl) instance Event_Size_Counter[19:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":478:8:478:9|Found counter in view:work.FIFOs_Reader(rtl) instance Sample_RAM_W_Address_Unsigned[17:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":548:8:548:9|Found counter in view:work.FIFOs_Reader(rtl) instance Event_Number_Counter[19:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":501:8:501:9|Found counter in view:work.FIFOs_Reader(rtl) instance Event_RAM_W_Address_Integer[9:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":189:8:189:9|Found counter in view:work.Communication_Builder(rtl) instance fsm_timer[7:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":831:8:831:9|Found counter in view:work.Communication_Builder(rtl) instance Frame_Counter[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":760:8:760:9|Found counter in view:work.Communication_Builder(rtl) instance Sample_RAM_R_Order_Unsigned[19:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":760:8:760:9|Found counter in view:work.Communication_Builder(rtl) instance Sample_RAM_R_Address_Unsigned[17:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":872:4:872:5|Found counter in view:work.Communication_Builder(rtl) instance Packet_Counter[23:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":734:8:734:9|Found counter in view:work.Communication_Builder(rtl) instance Event_RAM_R_Address_Integer[9:0] 
-@N: MF179 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":193:15:193:37|Found 14 by 14 bit equality operator ('==') un1_state_reg_3 (in view: work.Communication_Builder(rtl))
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.rptr[13:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memraddr_r[12:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memwaddr_r[12:0] 
-
-Starting factoring (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 211MB peak: 213MB)
-
-Auto Dissolve of COREFIFO_C4_0_2.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-Auto Dissolve of COREFIFO_C4_0_1.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-Auto Dissolve of COREFIFO_C4_0_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-Auto Dissolve of COREFIFO_C4_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-Auto Dissolve of COREFIFO_C4_0_2.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-Auto Dissolve of COREFIFO_C4_0_1.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-Auto Dissolve of COREFIFO_C4_0_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-Auto Dissolve of COREFIFO_C4_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Data_Block(verilog))
-
-Finished factoring (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 217MB peak: 217MB)
-
-
-Available hyper_sources - for debug and ip models
-	None Found
-
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Trigger_Top_Part_0.COREFIFO_C5_0.COREFIFO_C5_0.fwft_Q_r[0] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[0] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[1] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[2] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[3] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[4] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[5] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[6] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[7] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[8] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[9] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[10] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.fwft_Q_r[11] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[0] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[1] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[2] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[3] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[4] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[5] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[6] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[7] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[8] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[9] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[10] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_1.COREFIFO_C4_0.fwft_Q_r[11] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[0] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[1] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[2] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[3] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[4] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[5] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[6] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[7] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[8] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[9] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[10] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0_0.COREFIFO_C4_0.fwft_Q_r[11] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[0] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[1] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[2] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[3] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[4] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[5] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[6] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[7] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[8] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[9] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[10] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Input_Data_Part_1.COREFIFO_C4_0.COREFIFO_C4_0.fwft_Q_r[11] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo.v":1068:3:1068:8|Removing sequential instance Trigger_Top_Part_0.COREFIFO_C5_0.COREFIFO_C5_0.fwft_Q_r[1] (in view: work.Data_Block(verilog)) because it does not drive other instances.
-
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:12s; CPU Time elapsed 0h:00m:12s; Memory used current: 228MB peak: 241MB)
-
-
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:14s; Memory used current: 228MB peak: 241MB)
-
-
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:16s; Memory used current: 228MB peak: 241MB)
-
-
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:16s; Memory used current: 228MB peak: 241MB)
-
-
-Finished preparing to map (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:19s; Memory used current: 225MB peak: 241MB)
-
-
-Finished technology mapping (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:20s; Memory used current: 256MB peak: 258MB)
-
-Pass		 CPU time		Worst Slack		Luts / Registers
-------------------------------------------------------------
-   1		0h:00m:21s		     3.14ns		4165 /      2534
-
-Added 0 Buffers
-Added 0 Cells via replication
-	Added 0 Sequential Cells via replication
-	Added 0 Combinational Cells via replication
-
-Added 0 Buffers
-Added 0 Cells via replication
-	Added 0 Sequential Cells via replication
-	Added 0 Combinational Cells via replication
-
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:23s; Memory used current: 253MB peak: 263MB)
-
-
-Finished restoring hierarchy (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:24s; Memory used current: 260MB peak: 263MB)
-
-
-Finished mapping Data_Block
-Multiprocessing finished at : Fri Dec 22 22:26:17 2023
-Multiprocessing took 0h:00m:26s realtime, 0h:00m:01s cputime
+Multiprocessing finished at : Tue Dec 26 14:34:55 2023
+Multiprocessing took 0h:00m:06s realtime, 0h:00m:01s cputime
 
 Summary of Compile Points :
 *************************** 
 Name                              Status        Reason             Start Time                   End Time                     Realtime       CPU Time       Fast Synthesis
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Controler                         Unchanged     -                  Tue Dec  5 20:03:43 2023     Tue Dec  5 20:03:48 2023     0h:00m:04s     0h:00m:05s     No            
+Data_Block                        Unchanged     -                  Tue Dec 26 14:01:32 2023     Tue Dec 26 14:02:01 2023     0h:00m:29s     0h:00m:27s     No            
 UART_Protocol_UART_Protocol_0     Unchanged     -                  Tue Nov 14 17:42:06 2023     Tue Nov 14 17:42:12 2023     0h:00m:05s     0h:00m:05s     No            
 UART_Protocol_UART_Protocol_1     Unchanged     -                  Tue Nov 14 17:42:06 2023     Tue Nov 14 17:42:12 2023     0h:00m:05s     0h:00m:05s     No            
 Communication                     Unchanged     -                  Tue Dec  5 20:03:44 2023     Tue Dec  5 20:03:49 2023     0h:00m:05s     0h:00m:05s     No            
-Data_Block                        Remapped      Design changed     Fri Dec 22 22:25:51 2023     Fri Dec 22 22:26:17 2023     0h:00m:25s     0h:00m:25s     No            
-DataSource_Transcievers           Remapped      Design changed     Fri Dec 22 22:25:51 2023     Fri Dec 22 22:25:57 2023     0h:00m:06s     0h:00m:06s     No            
+DataSource_Transcievers           Remapped      Design changed     Tue Dec 26 14:34:48 2023     Tue Dec 26 14:34:55 2023     0h:00m:06s     0h:00m:06s     No            
 Top                               Unchanged     -                  Tue Dec  5 20:03:45 2023     Tue Dec  5 20:03:49 2023     0h:00m:04s     0h:00m:04s     No            
 =========================================================================================================================================================================
 Total number of compile points: 7
@@ -393,21 +219,21 @@ Total number of compile points: 7
 
 Links to Compile point Reports:
 ******************************
-@L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Data_Block\Data_Block.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\DataSource_Transcievers\DataSource_Transcievers.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top\Top.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Communication\Communication.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\UART_Protocol_UART_Protocol_1\UART_Protocol_UART_Protocol_1.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\UART_Protocol_UART_Protocol_0\UART_Protocol_UART_Protocol_0.srr"
+@L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Data_Block\Data_Block.srr"
 @L: "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Controler\Controler.srr"
 
 ==============================
 
 
-Start loading CP mapped netlist (Real Time elapsed 0h:00m:27s; CPU Time elapsed 0h:00m:02s; Memory used current: 253MB peak: 254MB)
+Start loading CP mapped netlist (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:02s; Memory used current: 255MB peak: 256MB)
 
 
-Finished loading CP mapped netlist (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:03s; Memory used current: 272MB peak: 272MB)
+Finished loading CP mapped netlist (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:03s; Memory used current: 275MB peak: 275MB)
 
 
 
@@ -418,8 +244,8 @@ Finished loading CP mapped netlist (Real Time elapsed 0h:00m:28s; CPU Time elaps
 
 Clock optimization not enabled
 3 non-gated/non-generated clock tree(s) driving 255 clock pin(s) of sequential element(s)
-4 gated/generated clock tree(s) driving 8677 clock pin(s) of sequential element(s)
-0 instances converted, 8677 sequential instances remain driven by gated/generated clocks
+4 gated/generated clock tree(s) driving 9360 clock pin(s) of sequential element(s)
+0 instances converted, 9360 sequential instances remain driven by gated/generated clocks
 
 ================================================================================ Non-Gated/Non-Generated Clocks ================================================================================
 Clock Tree ID     Driving Element                                     Drive Element Type                   Fanout     Sample Instance                                                           
@@ -431,7 +257,7 @@ Clock Tree ID     Driving Element                                     Drive Elem
 ================================================================================================================================ Gated/Generated Clocks =================================================================================================================================
 Clock Tree ID     Driving Element                                                                      Drive Element Type     Fanout     Sample Instance                                                                          Explanation                                            
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                     PLL                    7628       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_5                                  No gated clock conversion method for cell cell:ACG4.SLE
+@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                     PLL                    8311       Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_5                                  No gated clock conversion method for cell cell:ACG4.SLE
 @K:CKID0002       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                     PLL                    1047       Clock_Reset_0.Synchronizer_0.Chain[0]                                                    No gated clock conversion method for cell cell:ACG4.SLE
 @K:CKID0003       Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.un1_WR_INDEX_3_2_1.m72     CFG4                   1          Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0_0.RD_Enable_Vector_Encoded_0     No gated clock conversion method for cell cell:ACG4.SLE
 @K:CKID0004       Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.un1_WR_INDEX_3_2_1.m72       CFG4                   1          Data_Block_0.DataSource_Transcievers_0.Alignment_Fifo_0.RD_Enable_Vector_Encoded_0       No gated clock conversion method for cell cell:ACG4.SLE
@@ -441,11 +267,11 @@ Clock Tree ID     Driving Element                                               
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:29s; CPU Time elapsed 0h:00m:05s; Memory used current: 144MB peak: 275MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:04s; Memory used current: 144MB peak: 279MB)
 
 Writing Analyst data base C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\Top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:32s; CPU Time elapsed 0h:00m:07s; Memory used current: 230MB peak: 275MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:07s; Memory used current: 234MB peak: 279MB)
 
 Writing Verilog Simulation files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
@@ -454,13 +280,13 @@ Writing Verilog Simulation files
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 @W: BW156 :|Option "-name" of set_clock_groups cannot be forward-annotated; there is no equivalent option in your place-and-route tool.
 
-Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:12s; Memory used current: 229MB peak: 275MB)
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:12s; Memory used current: 233MB peak: 279MB)
 
 
-Finished Writing Netlists (Real Time elapsed 0h:00m:37s; CPU Time elapsed 0h:00m:12s; Memory used current: 229MB peak: 275MB)
+Finished Writing Netlists (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:12s; Memory used current: 233MB peak: 279MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:13s; Memory used current: 232MB peak: 275MB)
+Start final timing analysis (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:13s; Memory used current: 236MB peak: 279MB)
 
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":13:17:13:25|Blackbox OSC_RC160MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_init_monitor_c0\pf_init_monitor_c0_0\pf_init_monitor_c0_pf_init_monitor_c0_0_pf_init_monitor.v":38:53:38:58|Blackbox INIT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
@@ -472,7 +298,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Fri Dec 22 22:26:28 2023
+# Timing report written on Tue Dec 26 14:35:07 2023
 #
 
 
@@ -980,10 +806,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:39s; CPU Time elapsed 0h:00m:14s; Memory used current: 242MB peak: 275MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:14s; Memory used current: 246MB peak: 279MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:39s; CPU Time elapsed 0h:00m:14s; Memory used current: 242MB peak: 275MB)
+Finished timing report (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:14s; Memory used current: 246MB peak: 279MB)
 
 ---------------------------------------
 Resource Usage Report for Top 
@@ -999,18 +825,18 @@ OR4             192 uses
 OSC_RC160MHZ    1 use
 PLL             2 uses
 CFG1           89 uses
-CFG2           1064 uses
-CFG3           2435 uses
-CFG4           3450 uses
+CFG2           1224 uses
+CFG3           2411 uses
+CFG4           3645 uses
 
 Carry cells:
-ARI1            2765 uses - used for arithmetic functions
+ARI1            3029 uses - used for arithmetic functions
 ARI1            1514 uses - used for Wide-Mux implementation
-Total ARI1      4279 uses
+Total ARI1      4543 uses
 
 
 Sequential Cells: 
-SLE            7088 uses
+SLE            7755 uses
 
 DSP Blocks:    0 of 924 (0%)
 
@@ -1027,25 +853,25 @@ TRIBUFF        6 uses
 Global Clock Buffers: 9
 
 RAM/ROM usage summary
-Total Block RAMs (RAM1K20) : 921 of 952 (96%)
+Total Block RAMs (RAM1K20) : 929 of 952 (97%)
 
-Total LUTs:    11317
+Total LUTs:    11912
 
 Extra resources required for RAM and MACC_PA interface logic during P&R:
 
 RAM64X12 Interface Logic : SLEs = 0; LUTs = 0;
-RAM1K20  Interface Logic : SLEs = 33156; LUTs = 33156;
+RAM1K20  Interface Logic : SLEs = 33444; LUTs = 33444;
 MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
 MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
 
-Total number of SLEs after P&R:  7088 + 0 + 33156 + 0 = 40244;
-Total number of LUTs after P&R:  11317 + 0 + 33156 + 0 = 44473;
+Total number of SLEs after P&R:  7755 + 0 + 33444 + 0 = 41199;
+Total number of LUTs after P&R:  11912 + 0 + 33444 + 0 = 45356;
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:39s; CPU Time elapsed 0h:00m:14s; Memory used current: 73MB peak: 275MB)
+At Mapper Exit (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:14s; Memory used current: 72MB peak: 279MB)
 
-Process took 0h:00m:39s realtime, 0h:00m:14s cputime
-# Fri Dec 22 22:26:29 2023
+Process took 0h:00m:20s realtime, 0h:00m:14s cputime
+# Tue Dec 26 14:35:07 2023
 
 ###########################################################]
