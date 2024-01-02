@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Dec 26 14:31:15 2023
+// Created by SmartDesign Tue Jan  2 13:17:22 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -23,7 +23,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "ECC:0"  \
 "ESTOP:true"  \
 "FSTOP:true"  \
-"FWFT:false"  \
+"FWFT:true"  \
 "NUM_STAGES:2"  \
 "OVERFLOW_EN:false"  \
 "PIPE:1"  \
@@ -127,7 +127,7 @@ COREFIFO_C13_COREFIFO_C13_0_COREFIFO #(
         .ESTOP        ( 1 ),
         .FAMILY       ( 26 ),
         .FSTOP        ( 1 ),
-        .FWFT         ( 0 ),
+        .FWFT         ( 1 ),
         .NUM_STAGES   ( 2 ),
         .OVERFLOW_EN  ( 0 ),
         .PIPE         ( 1 ),

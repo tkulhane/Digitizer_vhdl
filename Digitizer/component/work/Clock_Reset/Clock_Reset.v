@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Oct  9 10:22:29 2023
+// Created by SmartDesign Tue Jan  2 17:44:10 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -14,7 +14,9 @@ module Clock_Reset(
     Main_CLOCK,
     Main_RESET_N,
     UART_CLOCK,
-    UART_RESER_N
+    UART_RESER_N,
+    XCVR_CTRL_Clock_40M,
+    XCVR_REF_Clock
 );
 
 //--------------------------------------------------------------------
@@ -29,6 +31,8 @@ output Main_CLOCK;
 output Main_RESET_N;
 output UART_CLOCK;
 output UART_RESER_N;
+output XCVR_CTRL_Clock_40M;
+output XCVR_REF_Clock;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -40,14 +44,17 @@ wire   Main_RESET_N_net_0;
 wire   PF_CCC_C0_0_PLL_LOCK_0;
 wire   PF_INIT_MONITOR_C0_0_DEVICE_INIT_DONE;
 wire   PF_INIT_MONITOR_C0_0_FABRIC_POR_N;
-wire   PF_OSC_C0_0_RCOSC_160MHZ_GL;
 wire   UART_CLOCK_net_0;
 wire   UART_RESER_N_net_0;
+wire   XCVR_CTRL_Clock_40M_net_0;
+wire   XCVR_REF_Clock_net_0;
 wire   Main_CLOCK_net_1;
 wire   Main_RESET_N_net_1;
 wire   UART_CLOCK_net_1;
 wire   UART_RESER_N_net_1;
 wire   HMC_CLK_net_1;
+wire   XCVR_CTRL_Clock_40M_net_1;
+wire   XCVR_REF_Clock_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -61,16 +68,20 @@ assign GND_net = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign Main_CLOCK_net_1   = Main_CLOCK_net_0;
-assign Main_CLOCK         = Main_CLOCK_net_1;
-assign Main_RESET_N_net_1 = Main_RESET_N_net_0;
-assign Main_RESET_N       = Main_RESET_N_net_1;
-assign UART_CLOCK_net_1   = UART_CLOCK_net_0;
-assign UART_CLOCK         = UART_CLOCK_net_1;
-assign UART_RESER_N_net_1 = UART_RESER_N_net_0;
-assign UART_RESER_N       = UART_RESER_N_net_1;
-assign HMC_CLK_net_1      = HMC_CLK_net_0;
-assign HMC_CLK            = HMC_CLK_net_1;
+assign Main_CLOCK_net_1          = Main_CLOCK_net_0;
+assign Main_CLOCK                = Main_CLOCK_net_1;
+assign Main_RESET_N_net_1        = Main_RESET_N_net_0;
+assign Main_RESET_N              = Main_RESET_N_net_1;
+assign UART_CLOCK_net_1          = UART_CLOCK_net_0;
+assign UART_CLOCK                = UART_CLOCK_net_1;
+assign UART_RESER_N_net_1        = UART_RESER_N_net_0;
+assign UART_RESER_N              = UART_RESER_N_net_1;
+assign HMC_CLK_net_1             = HMC_CLK_net_0;
+assign HMC_CLK                   = HMC_CLK_net_1;
+assign XCVR_CTRL_Clock_40M_net_1 = XCVR_CTRL_Clock_40M_net_0;
+assign XCVR_CTRL_Clock_40M       = XCVR_CTRL_Clock_40M_net_1;
+assign XCVR_REF_Clock_net_1      = XCVR_REF_Clock_net_0;
+assign XCVR_REF_Clock            = XCVR_REF_Clock_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -94,7 +105,7 @@ CORERESET_PF_C0 CORERESET_PF_C0_0(
 //--------PF_CCC_C0
 PF_CCC_C0 PF_CCC_C0_0(
         // Inputs
-        .REF_CLK_0         ( PF_OSC_C0_0_RCOSC_160MHZ_GL ),
+        .REF_CLK_0         ( XCVR_REF_Clock_net_0 ),
         .PLL_POWERDOWN_N_0 ( CORERESET_PF_C0_0_PLL_POWERDOWN_B ),
         // Outputs
         .OUT0_FABCLK_0     ( Main_CLOCK_net_0 ),
@@ -105,11 +116,19 @@ PF_CCC_C0 PF_CCC_C0_0(
 //--------PF_CCC_C3
 PF_CCC_C3 PF_CCC_C3_0(
         // Inputs
-        .REF_CLK_0         ( PF_OSC_C0_0_RCOSC_160MHZ_GL ),
+        .REF_CLK_0         ( XCVR_REF_Clock_net_0 ),
         .PLL_POWERDOWN_N_0 ( CORERESET_PF_C0_0_PLL_POWERDOWN_B ),
         // Outputs
         .OUT0_FABCLK_0     ( HMC_CLK_net_0 ),
         .PLL_LOCK_0        (  ) 
+        );
+
+//--------PF_CLK_DIV_C2
+PF_CLK_DIV_C2 PF_CLK_DIV_C2_0(
+        // Inputs
+        .CLK_IN  ( XCVR_REF_Clock_net_0 ),
+        // Outputs
+        .CLK_OUT ( XCVR_CTRL_Clock_40M_net_0 ) 
         );
 
 //--------PF_INIT_MONITOR_C0
@@ -133,7 +152,7 @@ PF_INIT_MONITOR_C0 PF_INIT_MONITOR_C0_0(
 //--------PF_OSC_C0
 PF_OSC_C0 PF_OSC_C0_0(
         // Outputs
-        .RCOSC_160MHZ_GL ( PF_OSC_C0_0_RCOSC_160MHZ_GL ) 
+        .RCOSC_160MHZ_GL ( XCVR_REF_Clock_net_0 ) 
         );
 
 //--------Synchronizer

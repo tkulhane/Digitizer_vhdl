@@ -31,7 +31,7 @@ module PF_XCVR_ERM_C8_I_XCVR_PF_XCVR(
        LANE0_LINK_ADDR,
        LANE0_LINK_RDATA,
        LANE0_LINK_WDATA,
-       LANE0_CDR_REF_CLK_0,
+       LANE0_CDR_REF_CLK_FAB,
        LANE0_RX_READY_CDR,
        LANE0_RX_VAL_CDR
     );
@@ -63,7 +63,7 @@ input  LANE0_LINK_ARST_N;
 input  [2:0] LANE0_LINK_ADDR;
 output [3:0] LANE0_LINK_RDATA;
 input  [3:0] LANE0_LINK_WDATA;
-input  LANE0_CDR_REF_CLK_0;
+input  LANE0_CDR_REF_CLK_FAB;
 output LANE0_RX_READY_CDR;
 output LANE0_RX_VAL_CDR;
 
@@ -272,10 +272,10 @@ output LANE0_RX_VAL_CDR;
         , .PMA_DES_PKDET_RXPKDETEN(1'b1), .PMA_DES_PKDET_RXPKDETRANGE(1'b0)
         , .PMA_DES_PKDET_RXPKDET_LOW_THRESHOLD(3'b011), .PMA_DES_PKDET_RXPKDET_HIGH_THRESHOLD(3'b101)
         , .PMA_DES_RTL_LOCK_CTRL_LOCK_MODE(1'b0), .PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE(2'b00)
-        , .PMA_DES_RTL_LOCK_CTRL_FDET_SAMPLE_PERIODS(5'b00001), .PMA_DES_RXPLL_DIV_RXPLL_FBDIV(8'b00101000)
+        , .PMA_DES_RTL_LOCK_CTRL_FDET_SAMPLE_PERIODS(5'b00001), .PMA_DES_RXPLL_DIV_RXPLL_FBDIV(8'b00100000)
         , .PMA_DES_RXPLL_DIV_RXPLL_REFDIV(5'b00010), .PMA_DES_RXPLL_DIV_RXPLL_RANGE(2'b00)
         , .PMA_DES_RXPLL_DIV_CDR_GAIN(1'b0), .PMA_DES_TEST_BUS_RXATESTEN(1'b0)
-        , .PMA_DES_CLK_CTRL_RXREFCLK_SEL(3'b100), .PMA_DES_CLK_CTRL_DESMODE(3'b111)
+        , .PMA_DES_CLK_CTRL_RXREFCLK_SEL(3'b000), .PMA_DES_CLK_CTRL_DESMODE(3'b111)
         , .PMA_DES_CLK_CTRL_DATALOCKEN(1'b0), .PMA_DES_CLK_CTRL_DATALOCKDIVEN(1'b0)
         , .PMA_SER_CTRL_TXVBGREF_SEL(1'b0), .PMA_SER_CLK_CTRL_TXPOSTDIVEN(1'b0)
         , .PMA_SER_CLK_CTRL_TXPOSTDIV(2'b00), .PMA_SER_CLK_CTRL_TXBITCLKSEL(1'b0)
@@ -348,52 +348,52 @@ output LANE0_RX_VAL_CDR;
         LANE0_RX_DATA[6], LANE0_RX_DATA[5], LANE0_RX_DATA[4], 
         LANE0_RX_DATA[3], LANE0_RX_DATA[2], LANE0_RX_DATA[1], 
         LANE0_RX_DATA[0]}), .RX_CLK_R(LANE0_rx_rclkint_input_net), 
-        .TX_CLK_R(LANE0_tx_rclkint_input_net), .RX_REF_CLK(gnd_net), 
-        .TX_DATA({gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
+        .TX_CLK_R(LANE0_tx_rclkint_input_net), .RX_REF_CLK(
+        LANE0_CDR_REF_CLK_FAB), .TX_DATA({gnd_net, gnd_net, gnd_net, 
         gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
         gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
         gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
-        gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, LANE0_TX_DATA[31], 
-        LANE0_TX_DATA[30], LANE0_TX_DATA[29], LANE0_TX_DATA[28], 
-        LANE0_TX_DATA[27], LANE0_TX_DATA[26], LANE0_TX_DATA[25], 
-        LANE0_TX_DATA[24], LANE0_TX_DATA[23], LANE0_TX_DATA[22], 
-        LANE0_TX_DATA[21], LANE0_TX_DATA[20], LANE0_TX_DATA[19], 
-        LANE0_TX_DATA[18], LANE0_TX_DATA[17], LANE0_TX_DATA[16], 
-        LANE0_TX_DATA[15], LANE0_TX_DATA[14], LANE0_TX_DATA[13], 
-        LANE0_TX_DATA[12], LANE0_TX_DATA[11], LANE0_TX_DATA[10], 
-        LANE0_TX_DATA[9], LANE0_TX_DATA[8], LANE0_TX_DATA[7], 
-        LANE0_TX_DATA[6], LANE0_TX_DATA[5], LANE0_TX_DATA[4], 
-        LANE0_TX_DATA[3], LANE0_TX_DATA[2], LANE0_TX_DATA[1], 
-        LANE0_TX_DATA[0]}), .RX_FWF_EN(vcc_net), .TX_FWF_EN(vcc_net), 
-        .RX_SLIP(gnd_net), .TX_K({gnd_net, gnd_net, gnd_net, gnd_net, 
-        LANE0_8B10B_TX_K[3], LANE0_8B10B_TX_K[2], LANE0_8B10B_TX_K[1], 
-        LANE0_8B10B_TX_K[0]}), .TX_DISPFNC({gnd_net, gnd_net, gnd_net, 
-        gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
-        LANE0_TX_DISPFNC[7], LANE0_TX_DISPFNC[6], LANE0_TX_DISPFNC[5], 
-        LANE0_TX_DISPFNC[4], LANE0_TX_DISPFNC[3], LANE0_TX_DISPFNC[2], 
-        LANE0_TX_DISPFNC[1], LANE0_TX_DISPFNC[0]}), .PCS_ARST_N(
-        LANE0_PCS_ARST_N), .PMA_ARST_N(LANE0_PMA_ARST_N), .RX_FWF_CLK(
-        LANE0_RX_CLK_R), .TX_FWF_CLK(LANE0_TX_CLK_R), .PCS_DEBUG({nc36, 
-        nc37, nc38, nc39, nc40, nc41, nc42, nc43, nc44, nc45, nc46, 
-        nc47, nc48, nc49, nc50, nc51, nc52, nc53, nc54, nc55}), 
-        .REF_CLK_N(gnd_net), .REF_CLK_P(LANE0_CDR_REF_CLK_0), .RX_N(
-        LANE0_RXD_N), .RX_P(LANE0_RXD_P), .TX_N(LANE0_TXD_N), .TX_P(
-        LANE0_TXD_P), .JA_CLK(), .TX_BIT_CLK_0(TX_BIT_CLK_0), 
-        .TX_BIT_CLK_1(gnd_net), .TX_PLL_LOCK_0(TX_PLL_LOCK_0), 
-        .TX_PLL_LOCK_1(gnd_net), .TX_PLL_REF_CLK_0(TX_PLL_REF_CLK_0), 
-        .TX_PLL_REF_CLK_1(gnd_net), .TX_CLK_G(), .RX_CLK_G(), 
-        .PMA_DEBUG(), .ARST_N({nc56, nc57}), .DRI_CLK(gnd_net), 
-        .DRI_CTRL({gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
-        gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net}), 
-        .DRI_WDATA({gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
+        gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
+        gnd_net, LANE0_TX_DATA[31], LANE0_TX_DATA[30], 
+        LANE0_TX_DATA[29], LANE0_TX_DATA[28], LANE0_TX_DATA[27], 
+        LANE0_TX_DATA[26], LANE0_TX_DATA[25], LANE0_TX_DATA[24], 
+        LANE0_TX_DATA[23], LANE0_TX_DATA[22], LANE0_TX_DATA[21], 
+        LANE0_TX_DATA[20], LANE0_TX_DATA[19], LANE0_TX_DATA[18], 
+        LANE0_TX_DATA[17], LANE0_TX_DATA[16], LANE0_TX_DATA[15], 
+        LANE0_TX_DATA[14], LANE0_TX_DATA[13], LANE0_TX_DATA[12], 
+        LANE0_TX_DATA[11], LANE0_TX_DATA[10], LANE0_TX_DATA[9], 
+        LANE0_TX_DATA[8], LANE0_TX_DATA[7], LANE0_TX_DATA[6], 
+        LANE0_TX_DATA[5], LANE0_TX_DATA[4], LANE0_TX_DATA[3], 
+        LANE0_TX_DATA[2], LANE0_TX_DATA[1], LANE0_TX_DATA[0]}), 
+        .RX_FWF_EN(vcc_net), .TX_FWF_EN(vcc_net), .RX_SLIP(gnd_net), 
+        .TX_K({gnd_net, gnd_net, gnd_net, gnd_net, LANE0_8B10B_TX_K[3], 
+        LANE0_8B10B_TX_K[2], LANE0_8B10B_TX_K[1], LANE0_8B10B_TX_K[0]})
+        , .TX_DISPFNC({gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
+        gnd_net, gnd_net, gnd_net, LANE0_TX_DISPFNC[7], 
+        LANE0_TX_DISPFNC[6], LANE0_TX_DISPFNC[5], LANE0_TX_DISPFNC[4], 
+        LANE0_TX_DISPFNC[3], LANE0_TX_DISPFNC[2], LANE0_TX_DISPFNC[1], 
+        LANE0_TX_DISPFNC[0]}), .PCS_ARST_N(LANE0_PCS_ARST_N), 
+        .PMA_ARST_N(LANE0_PMA_ARST_N), .RX_FWF_CLK(LANE0_RX_CLK_R), 
+        .TX_FWF_CLK(LANE0_TX_CLK_R), .PCS_DEBUG({nc36, nc37, nc38, 
+        nc39, nc40, nc41, nc42, nc43, nc44, nc45, nc46, nc47, nc48, 
+        nc49, nc50, nc51, nc52, nc53, nc54, nc55}), .REF_CLK_N(gnd_net)
+        , .REF_CLK_P(gnd_net), .RX_N(LANE0_RXD_N), .RX_P(LANE0_RXD_P), 
+        .TX_N(LANE0_TXD_N), .TX_P(LANE0_TXD_P), .JA_CLK(), 
+        .TX_BIT_CLK_0(TX_BIT_CLK_0), .TX_BIT_CLK_1(gnd_net), 
+        .TX_PLL_LOCK_0(TX_PLL_LOCK_0), .TX_PLL_LOCK_1(gnd_net), 
+        .TX_PLL_REF_CLK_0(TX_PLL_REF_CLK_0), .TX_PLL_REF_CLK_1(gnd_net)
+        , .TX_CLK_G(), .RX_CLK_G(), .PMA_DEBUG(), .ARST_N({nc56, nc57})
+        , .DRI_CLK(gnd_net), .DRI_CTRL({gnd_net, gnd_net, gnd_net, 
+        gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
+        gnd_net}), .DRI_WDATA({gnd_net, gnd_net, gnd_net, gnd_net, 
         gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
         gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
         gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
-        gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net})
-        , .DRI_ARST_N(gnd_net), .DRI_RDATA({nc58, nc59, nc60, nc61, 
-        nc62, nc63, nc64, nc65, nc66, nc67, nc68, nc69, nc70, nc71, 
-        nc72, nc73, nc74, nc75, nc76, nc77, nc78, nc79, nc80, nc81, 
-        nc82, nc83, nc84, nc85, nc86, nc87, nc88, nc89, nc90}), 
+        gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, gnd_net, 
+        gnd_net}), .DRI_ARST_N(gnd_net), .DRI_RDATA({nc58, nc59, nc60, 
+        nc61, nc62, nc63, nc64, nc65, nc66, nc67, nc68, nc69, nc70, 
+        nc71, nc72, nc73, nc74, nc75, nc76, nc77, nc78, nc79, nc80, 
+        nc81, nc82, nc83, nc84, nc85, nc86, nc87, nc88, nc89, nc90}), 
         .DRI_INTERRUPT(), .LINK_CLK(LANE0_LINK_CLK), .LINK_ADDR({
         LANE0_LINK_ADDR[2], LANE0_LINK_ADDR[1], LANE0_LINK_ADDR[0]}), 
         .LINK_EN(LANE0_LINK_EN), .LINK_ARST_N(LANE0_LINK_ARST_N), 

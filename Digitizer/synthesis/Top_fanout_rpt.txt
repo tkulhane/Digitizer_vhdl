@@ -5,14 +5,20 @@ CLOCK GLOBAL THRESHOLD - 2
 ASYNC GLOBAL THRESHOLD - 800
 GLOBAL THRESHOLD - 5000
 
-NET NAME                                      CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
----------------------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0_Main_CLOCK_1                    8311            0                   0              8311             YES                  
-Clock_Reset_0_UART_CLOCK_1                    1047            0                   0              1047             YES                  
-BUFD_0_Y                                      251             0                   0              251              YES                  
-INBUF_DIFF_0_0_Y                              2               0                   0              2                YES                  
-Clock_Reset_0.PF_OSC_C0_0_RCOSC_160MHZ_GL     2               0                   0              2                YES                  
-dff_arst                                      0               5235                0              5235             YES                  
-INT_DataFifo_Reset_N_arst                     0               882                 0              882              YES                  
-Chain_arst1                                   0               878                 0              878              YES                  
-=======================================================================================================================================
+NET NAME                                                                                           CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0_Main_CLOCK_1                                                                         8256            0                   0              8256             YES                  
+Clock_Reset_0_UART_CLOCK_1                                                                         1047            0                   0              1047             YES                  
+BUFD_0_Y                                                                                           251             0                   0              251              YES                  
+Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R     225             0                   0              225              YES                  
+Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R       225             0                   0              225              YES                  
+Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R       93              0                   0              93               YES                  
+Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R     93              0                   0              93               YES                  
+Clock_Reset_0_XCVR_CTRL_Clock_40M                                                                  66              0                   4              70               YES                  
+Data_Block_0.DataSource_Transcievers_0.PF_CCC_C5_0_OUT0_FABCLK_0                                   60              0                   4              64               YES                  
+Clock_Reset_0_XCVR_REF_Clock                                                                       4               0                   0              4                YES                  
+INBUF_DIFF_0_0_Y                                                                                   2               0                   0              2                YES                  
+dff_arst                                                                                           0               5076                0              5076             YES                  
+INT_DataFifo_Reset_N_arst                                                                          0               882                 0              882              YES                  
+Chain_arst1                                                                                        0               878                 0              878              YES                  
+============================================================================================================================================================================================

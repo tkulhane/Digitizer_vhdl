@@ -13,7 +13,7 @@ Hostname: DESKTOP-TDPVUTD
 
 Implementation : synthesis
 
-# Written on Tue Dec 26 14:34:46 2023
+# Written on Tue Jan  2 20:38:55 2024
 
 ##### DESIGN INFO #######################################################
 
@@ -25,7 +25,7 @@ Constraint File(s):      "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\design
 
 ##### SUMMARY ############################################################
 
-Found 3 issues in 3 out of 22 constraints
+Found 4 issues in 4 out of 36 constraints
 
 
 ##### DETAILS ############################################################
@@ -35,21 +35,49 @@ Found 3 issues in 3 out of 22 constraints
 Clock Relationships
 *******************
 
-Starting                                                            Ending                                                              |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                                              PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
-FTDI_CLK                                                            FTDI_CLK                                                            |     10.000           |     No paths         |     No paths         |     No paths                         
-FTDI_CLK                                                            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     FTDI_CLK                                                            |     Diff grp         |     No paths         |     No paths         |     No paths                         
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     10.000           |     10.000           |     5.000            |     5.000                            
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     Top|N_4_inferred_clock                                              |     Diff grp         |     No paths         |     No paths         |     No paths                         
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
-Top|N_4_inferred_clock                                              Top|N_4_inferred_clock                                              |     10.000           |     No paths         |     No paths         |     No paths                         
-===================================================================================================================================================================================================================================================
+Starting                                                                                                  Ending                                                                                                    |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                                                    System                                                                                                    |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                                                                                    Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  |     25.000           |     No paths         |     No paths         |     No paths                         
+System                                                                                                    PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     10.000           |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R       Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R       |     8.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       |     8.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       PF_CCC_C5_PF_CCC_C5_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     |     8.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     |     8.000            |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     PF_CCC_C5_PF_CCC_C5_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+FTDI_CLK                                                                                                  FTDI_CLK                                                                                                  |     10.000           |     No paths         |     No paths         |     No paths                         
+FTDI_CLK                                                                                                  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  System                                                                                                    |     25.000           |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     |     1.000            |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  |     25.000           |     No paths         |     No paths         |     No paths                         
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  PF_CCC_C5_PF_CCC_C5_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R       |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           FTDI_CLK                                                                                                  |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     10.000           |     10.000           |     5.000            |     5.000                            
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           Top|N_4_inferred_clock                                                                                    |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                           |     10.000           |     No paths         |     No paths         |     No paths                         
+PF_CCC_C5_PF_CCC_C5_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  |     Diff grp         |     No paths         |     No paths         |     No paths                         
+PF_CCC_C5_PF_CCC_C5_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           PF_CCC_C5_PF_CCC_C5_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           |     10.000           |     No paths         |     No paths         |     No paths                         
+Top|N_4_inferred_clock                                                                                    Top|N_4_inferred_clock                                                                                    |     10.000           |     No paths         |     No paths         |     No paths                         
+===============================================================================================================================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":17:0:17:0|Paths from clock (Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV:r) to clock (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R:r) are overconstrained because the required time of 1.00 ns is too small. 
+@W:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":17:0:17:0|Paths from clock (Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV:r) to clock (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R:r) are overconstrained because the required time of 1.00 ns is too small. 
 
 
 Unconstrained Start/End Points
@@ -178,6 +206,14 @@ p:HMC_sclk
 p:HMC_sdio (bidir end point)
 p:HMC_sdio (bidir start point)
 p:HMC_ss_n
+p:LANE0_RXD_N
+p:LANE0_RXD_P
+p:LANE0_TXD_N
+p:LANE0_TXD_P
+p:LANE1_RXD_N
+p:LANE1_RXD_P
+p:LANE1_TXD_N
+p:LANE1_TXD_P
 p:LDO_PWR_GOOD
 p:LED_1
 p:LED_2
@@ -211,11 +247,13 @@ Inapplicable constraints
 ************************
 
 create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 -multiply_by 25 -divide_by 32 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0 }]
-	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":10:0:10:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 create_generated_clock -name Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 -multiply_by 125 -divide_by 3616 -source [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1 }]
-	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":11:0:11:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 create_generated_clock -name Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0/OUT0 -multiply_by 96 -divide_by 125 -source [get_pins { Clock_Reset_0.PF_CCC_C3_0.PF_CCC_C3_0.pll_inst_0.REF_CLK_0 }] [get_pins { Clock_Reset_0.PF_CCC_C3_0.PF_CCC_C3_0.pll_inst_0.OUT0 }]
-	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":12:0:12:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":16:0:16:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+create_generated_clock -name Data_Block_0/DataSource_Transcievers_0/PF_CCC_C5_0/PF_CCC_C5_0/pll_inst_0/OUT0 -multiply_by 125 -divide_by 128 -source [get_pins { Data_Block_0.DataSource_Transcievers_0.PF_CCC_C5_0.PF_CCC_C5_0.pll_inst_0.REF_CLK_0 }] [get_pins { Data_Block_0.DataSource_Transcievers_0.PF_CCC_C5_0.PF_CCC_C5_0.pll_inst_0.OUT0 }]
+	@E:BN544:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":18:0:18:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 
 Applicable constraints with issues
 **********************************
@@ -227,7 +265,7 @@ Constraints with matching wildcard expressions
 **********************************************
 
 set_false_path -to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|expression "[get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":21:0:21:0|expression "[get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -251,7 +289,7 @@ set_false_path -to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.
 		Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":13:0:13:0|expression "[get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":19:0:19:0|expression "[get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -275,7 +313,7 @@ set_false_path -to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst
 		Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":16:0:16:0|expression "[get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":22:0:22:0|expression "[get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -299,7 +337,7 @@ set_false_path -to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.
 		Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|expression "[get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":20:0:20:0|expression "[get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -323,7 +361,7 @@ set_false_path -to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst
 		Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":17:0:17:0|expression "[get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":23:0:23:0|expression "[get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
 		Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
 		Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
@@ -347,7 +385,7 @@ set_false_path -to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.C
 		Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[9]
 		Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[10]
 set_false_path -to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":18:0:18:0|expression "[get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":24:0:24:0|expression "[get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
 		Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
 		Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]
@@ -377,7 +415,7 @@ set_false_path -to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.C
 		Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[12]
 		Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[13]
 set_false_path -to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]
-	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":19:0:19:0|expression "[get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":25:0:25:0|expression "[get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
 		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[0]
 		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[1]
 		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync.shift_reg[2]
@@ -406,6 +444,134 @@ set_false_path -to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genbl
 		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[11]
 		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[12]
 		Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[13]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":26:0:26:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":28:0:28:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":30:0:30:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":32:0:32:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":27:0:27:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":29:0:29:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":31:0:31:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
+set_false_path -to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]
+	@N:MF891:"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":33:0:33:0|expression "[get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]" applies to objects:
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Rd_corefifo_NstagesSync_fwft.shift_reg[6]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[0]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[1]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[2]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[3]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[4]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[5]
+		Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk16\.U_corefifo_async.Wr_corefifo_NstagesSync.shift_reg[6]
 
 Library Report
 **************

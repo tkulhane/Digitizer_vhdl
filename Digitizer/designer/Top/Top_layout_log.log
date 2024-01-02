@@ -20,7 +20,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
 
  Running Timing based Global Demotion. 
         Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
-        Moved 54 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+        Moved 58 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
    - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
@@ -42,7 +42,7 @@ I/O Bank and Globals Assigner completed successfully.
 Total time spent in I/O Bank and Globals Assigner: 4 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Tue Dec 26 14:37:30 2023
+Design: Top                             Started: Tue Jan  2 20:53:21 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -50,53 +50,53 @@ Placing ...
 Improving placement ...
 
 CDC Report:
-    Total number of CDC synchronizer driver/sink pairs     : 332
+    Total number of CDC synchronizer driver/sink pairs     : 556
     Maximum distance between CDC synchronizer driver & sink:   1 cluster(s)
 
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 6 seconds
-Placement                : 49 seconds
-Improvement              : 46 seconds
+Clustering (1 pass)      : 9 seconds
+Placement                : 56 seconds
+Improvement              : 50 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Tue Dec 26 14:40:01 2023
-Total CPU Time:     00:03:15            Total Elapsed Time: 00:02:31
-Total Memory Usage: 1853.8 Mbytes
+Finished: Tue Jan  2 20:56:08 2024
+Total CPU Time:     00:03:37            Total Elapsed Time: 00:02:47
+Total Memory Usage: 1893.4 Mbytes
                         o - o - o - o - o - o
 
 
 Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
-    Driver: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0/un1_WR_INDEX_3_2_1.m72:Y
-       Net: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0/N_73_0
+    Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/un1_WR_INDEX_3_2_1.m72:Y
+       Net: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/N_73_0
 Clock pins: 1
-    Driver: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0_0/un1_WR_INDEX_3_2_1.m72:Y
-       Net: Data_Block_0/DataSource_Transcievers_0/Alignment_Fifo_0_0/N_73_0
+    Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/un1_WR_INDEX_3_2_1.m72:Y
+       Net: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/N_73_0
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Tue Dec 26 14:40:24 2023
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Tue Jan  2 20:56:32 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Tue Dec 26 14:41:30 2023
-Total CPU Time:     00:02:38            Total Elapsed Time: 00:01:06
-Total Memory Usage: 5409.2 Mbytes
+Finished: Tue Jan  2 20:57:36 2024
+Total CPU Time:     00:02:23            Total Elapsed Time: 00:01:04
+Total Memory Usage: 5408.3 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 45586 | 299544 | 15.22      |
-| DFF           | 41199 | 299544 | 13.75      |
+| 4LUT          | 46922 | 299544 | 15.66      |
+| DFF           | 42162 | 299544 | 14.08      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 46919 | 299544 | 15.66      |
+| Logic Element | 48408 | 299544 | 16.16      |
 +---------------+-------+--------+------------+
 
 I/O Placement

@@ -25,7 +25,7 @@ end TB_DataSource_Transciever;
 
 architecture behavioral of TB_DataSource_Transciever is
 
-    constant SYSCLK_PERIOD : time := 10 ns; -- 100MHZ
+    constant SYSCLK_PERIOD : time := 8 ns; 
 
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
@@ -41,30 +41,45 @@ architecture behavioral of TB_DataSource_Transciever is
     signal Output_Data_2_0 : std_logic_vector(11 downto 0);
     signal Output_Data_3_0 : std_logic_vector(11 downto 0);
     
+    signal LANE0_P :  std_logic;
+    signal LANE0_N :  std_logic;
+    signal LANE1_P :  std_logic;
+    signal LANE1_N :  std_logic;
     
 
+    
+    
     component DataSource_Transcievers
         -- ports
         port( 
             -- Inputs
+            LANE0_RXD_P : in std_logic;
+            LANE0_RXD_N : in std_logic;
+            LANE1_RXD_P : in std_logic;
+            LANE1_RXD_N : in std_logic;
             Gen_Enable : in std_logic;
-            Clock : in std_logic;
-            Reset_N : in std_logic;
+            Logic_Clock : in std_logic;
+            Logic_Reset_N : in std_logic;
 
             -- Outputs
+            LANE0_TXD_P : out std_logic;
+            LANE0_TXD_N : out std_logic;
             Output_Data_3_1 : out std_logic_vector(11 downto 0);
-            Output_Data_0_1 : out std_logic_vector(11 downto 0);
+            Output_Data_3_0 : out std_logic_vector(11 downto 0);
             Output_Data_1_1 : out std_logic_vector(11 downto 0);
-            Output_Data_2_1 : out std_logic_vector(11 downto 0);
-            Output_Data_0_0 : out std_logic_vector(11 downto 0);
             Output_Data_1_0 : out std_logic_vector(11 downto 0);
+            Output_Data_0_1 : out std_logic_vector(11 downto 0);
+            Output_Data_0_0 : out std_logic_vector(11 downto 0);
+            Output_Data_2_1 : out std_logic_vector(11 downto 0);
             Output_Data_2_0 : out std_logic_vector(11 downto 0);
-            Output_Data_3_0 : out std_logic_vector(11 downto 0)
+            LANE1_TXD_P : out std_logic;
+            LANE1_TXD_N : out std_logic
 
             -- Inouts
 
         );
     end component;
+    
 
 begin
 
@@ -90,9 +105,14 @@ begin
         -- port map
         port map( 
             -- Inputs
+            LANE0_RXD_P => LANE0_P,
+            LANE0_RXD_N => LANE0_N,
+            LANE1_RXD_P => LANE1_P,
+            LANE1_RXD_N => LANE1_N,
+            
             Gen_Enable => Gen_Enable,
-            Clock => SYSCLK,
-            Reset_N => NSYSRESET,
+            Logic_Clock => SYSCLK,
+            Logic_Reset_N => NSYSRESET,
 
             -- Outputs
             Output_Data_3_1 => Output_Data_3_1,
@@ -102,7 +122,12 @@ begin
             Output_Data_0_0 => Output_Data_0_0,
             Output_Data_1_0 => Output_Data_1_0,
             Output_Data_2_0 => Output_Data_2_0,
-            Output_Data_3_0 => Output_Data_3_0
+            Output_Data_3_0 => Output_Data_3_0,
+            
+            LANE0_TXD_P =>  LANE0_P,
+            LANE0_TXD_N =>  LANE0_N,
+            LANE1_TXD_P =>  LANE1_P,
+            LANE1_TXD_N =>  LANE1_N
 
             -- Inouts
 

@@ -30,28 +30,31 @@ architecture behavioral of xxx is
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
 
-    component Data_Block
+    component DataSource_Transcievers
         -- ports
         port( 
             -- Inputs
-            C_enable_cmd : in std_logic;
-            C_write_read : in std_logic;
-            Clock : in std_logic;
-            Reset_N : in std_logic;
-            Communication_Data_Full : in std_logic;
-            C_addr_frame : in std_logic_vector(7 downto 0);
-            C_write_data_frame : in std_logic_vector(15 downto 0);
-            Communication_DATA_Ack : in std_logic;
+            LANE0_RXD_P : in std_logic;
+            LANE0_RXD_N : in std_logic;
+            LANE1_RXD_P : in std_logic;
+            LANE1_RXD_N : in std_logic;
+            Gen_Enable : in std_logic;
+            Logic_Clock : in std_logic;
+            Logic_Reset_N : in std_logic;
 
             -- Outputs
-            C_busy : out std_logic;
-            Communication_Data_Enable : out std_logic;
-            Communication_Data_Req : out std_logic;
-            C_read_data_frame : out std_logic_vector(15 downto 0);
-            Communication_Data_Frame : out std_logic_vector(31 downto 0);
-            Diag_0 : out std_logic;
-            Diag_1 : out std_logic;
-            Diag_2 : out std_logic
+            LANE0_TXD_P : out std_logic;
+            LANE0_TXD_N : out std_logic;
+            Output_Data_3_1 : out std_logic_vector(11 downto 0);
+            Output_Data_3_0 : out std_logic_vector(11 downto 0);
+            Output_Data_1_1 : out std_logic_vector(11 downto 0);
+            Output_Data_1_0 : out std_logic_vector(11 downto 0);
+            Output_Data_0_1 : out std_logic_vector(11 downto 0);
+            Output_Data_0_0 : out std_logic_vector(11 downto 0);
+            Output_Data_2_1 : out std_logic_vector(11 downto 0);
+            Output_Data_2_0 : out std_logic_vector(11 downto 0);
+            LANE1_TXD_P : out std_logic;
+            LANE1_TXD_N : out std_logic
 
             -- Inouts
 
@@ -77,29 +80,34 @@ begin
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
 
-    -- Instantiate Unit Under Test:  Data_Block
-    Data_Block_0 : Data_Block
+    -- Instantiate Unit Under Test:  DataSource_Transcievers
+    DataSource_Transcievers_0 : DataSource_Transcievers
         -- port map
         port map( 
             -- Inputs
-            C_enable_cmd => '0',
-            C_write_read => '0',
-            Clock => SYSCLK,
-            Reset_N => NSYSRESET,
-            Communication_Data_Full => '0',
-            C_addr_frame => (others=> '0'),
-            C_write_data_frame => (others=> '0'),
-            Communication_DATA_Ack => '0',
+            LANE0_RXD_P => '0',
+            LANE0_RXD_N => '0',
+            LANE1_RXD_P => '0',
+            LANE1_RXD_N => '0',
+            Gen_Enable => '0',
+            Logic_Clock => SYSCLK,
+            Logic_Reset_N => NSYSRESET,
 
             -- Outputs
-            C_busy =>  open,
-            Communication_Data_Enable =>  open,
-            Communication_Data_Req =>  open,
-            C_read_data_frame => open,
-            Communication_Data_Frame => open,
-            Diag_0 =>  open,
-            Diag_1 =>  open,
-            Diag_2 =>  open
+
+            Output_Data_3_1 => open,
+            Output_Data_3_0 => open,
+            Output_Data_1_1 => open,
+            Output_Data_1_0 => open,
+            Output_Data_0_1 => open,
+            Output_Data_0_0 => open,
+            Output_Data_2_1 => open,
+            Output_Data_2_0 => open,
+            
+            LANE0_TXD_P =>  open,
+            LANE0_TXD_N =>  open,
+            LANE1_TXD_P =>  open,
+            LANE1_TXD_N =>  open
 
             -- Inouts
 

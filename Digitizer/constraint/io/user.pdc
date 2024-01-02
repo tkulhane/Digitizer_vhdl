@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Mon Oct 23 12:57:19 2023 
+# Date generated: Tue Jan  2 20:47:57 2024 
 
 
 # 
@@ -931,4 +931,56 @@ set_io -port_name TX_1  \
 #Ports using Dedicated Pins
 
 #
+
+set_io -port_name LANE0_RXD_N  \
+    -pin_name AG32             \
+    -RX_CTLE No_Peak_+2.4dB    \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE0_RXD_P  \
+    -pin_name AG31             \
+    -RX_CTLE No_Peak_+2.4dB    \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE0_TXD_N  \
+    -pin_name AF34             \
+    -TX_IMPEDANCE 100          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LANE0_TXD_P  \
+    -pin_name AF33             \
+    -TX_IMPEDANCE 100          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LANE1_RXD_N  \
+    -pin_name AH30             \
+    -RX_CTLE No_Peak_+2.4dB    \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE1_RXD_P  \
+    -pin_name AH29             \
+    -RX_CTLE No_Peak_+2.4dB    \
+    -RX_TERMINATION 100        \
+    -DIRECTION INPUT
+
+
+set_io -port_name LANE1_TXD_N  \
+    -pin_name AH34             \
+    -TX_IMPEDANCE 100          \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name LANE1_TXD_P  \
+    -pin_name AH33             \
+    -TX_IMPEDANCE 100          \
+    -DIRECTION OUTPUT
+
 

@@ -1,5 +1,5 @@
 ----------------------------------------------------------------
--Pin Report - Date: Tue Dec 26 14:41:46 2023 Pinchecksum: NOT-AVAILABLE
+-Pin Report - Date: Tue Jan  2 20:57:52 2024 Pinchecksum: NOT-AVAILABLE
 -Product: Designer
 -Release: v2022.1
 -Version: 2022.1.0.10
@@ -245,8 +245,8 @@ AF29                      XCVR_2B_REFCLK_P                                      
 AF30                      XCVR_2B_REFCLK_N                                         Reserved       
 AF31                      VSS                                                      Reserved       
 AF32                      VSS                                                      Reserved       
-AF33                      XCVR_2_TX2_P                                             Reserved       
-AF34                      XCVR_2_TX2_N                                             Reserved       
+AF33    LANE0_TXD_P       XCVR_2_TX2_P                                             Dedicated      
+AF34    LANE0_TXD_N       XCVR_2_TX2_N                                             Dedicated      
 AG1                       HSIO168PB0/CLKIN_N_3/CCC_NW_CLKIN_N_3                    Unassigned     
 AG2                       HSIO168NB0                                               Unassigned     
 AG3                       VSS                                                      Reserved       
@@ -277,8 +277,8 @@ AG27                      NC                                                    
 AG28                      NC                                                       Reserved       
 AG29                      VDDA                                                     Reserved       
 AG30                      VSS                                                      Reserved       
-AG31                      XCVR_2_RX2_P                                             Reserved       
-AG32                      XCVR_2_RX2_N                                             Reserved       
+AG31    LANE0_RXD_P       XCVR_2_RX2_P                                             Dedicated      
+AG32    LANE0_RXD_N       XCVR_2_RX2_N                                             Dedicated      
 AG33                      VSS                                                      Reserved       
 AG34                      VSS                                                      Reserved       
 AH1                       HSIO166PB0                                               Unassigned     
@@ -309,12 +309,12 @@ AH25                      HSIO80NB1                                             
 AH26                      VSS                                                      Reserved       
 AH27                      VDDA                                                     Reserved       
 AH28                      VSS                                                      Reserved       
-AH29                      XCVR_2_RX3_P                                             Reserved       
-AH30                      XCVR_2_RX3_N                                             Reserved       
+AH29    LANE1_RXD_P       XCVR_2_RX3_P                                             Dedicated      
+AH30    LANE1_RXD_N       XCVR_2_RX3_N                                             Dedicated      
 AH31                      VSS                                                      Reserved       
 AH32                      VDDA                                                     Reserved       
-AH33                      XCVR_2_TX3_P                                             Reserved       
-AH34                      XCVR_2_TX3_N                                             Reserved       
+AH33    LANE1_TXD_P       XCVR_2_TX3_P                                             Dedicated      
+AH34    LANE1_TXD_N       XCVR_2_TX3_N                                             Dedicated      
 AJ1                       HSIO164PB0                                               Unassigned     
 AJ2                       VDDI0                                                    Reserved       
 AJ3                       HSIO167NB0                                               Unassigned     
@@ -402,13 +402,13 @@ AL16                      VDDI7                                                 
 AL17                      HSIO103PB7                                               Unassigned     
 AL18                      HSIO105PB7/DQS                                           Unassigned     
 AL19                      HSIO105NB7/DQS                                           Unassigned     
-AL20                      HSIO101PB1                                               Unassigned     
+AL20    DBGport_9         HSIO101PB1                                               Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
 AL21                      VSS                                                      Reserved       
 AL22                      HSIO82NB1                                                Unassigned     
 AL23                      HSIO83PB1                                                Unassigned     
 AL24                      HSIO83NB1                                                Unassigned     
-AL25    SIWU_N            HSIO77NB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
-AL26                      HSIO72PB1/CCC_NE_CLKIN_N_11                              Unassigned     
+AL25                      HSIO77NB1                                                Unassigned     
+AL26    DBGport_8         HSIO72PB1/CCC_NE_CLKIN_N_11                              Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
 AL27                      HSIO72NB1                                                Unassigned     
 AL28                      VSS                                                      Reserved       
 AL29                      VDDA                                                     Reserved       
@@ -440,7 +440,7 @@ AM20                      HSIO96PB1/CLKIN_N_7                                   
 AM21                      HSIO96NB1                                                Unassigned     
 AM22                      HSIO95PB1                                                Unassigned     
 AM23                      VDDI1                                                    Reserved       
-AM24                      HSIO91NB1                                                Unassigned     
+AM24    SIWU_N            HSIO91NB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
 AM25                      HSIO74PB1/CCC_NE_CLKIN_N_10/CCC_NE_PLL0_OUT0             Unassigned     
 AM26                      HSIO74NB1                                                Unassigned     
 AM27                      HSIO73NB1                                                Unassigned     
@@ -504,12 +504,12 @@ AP17                      VDDI7                                                 
 AP18                      HSIO102NB7                                               Unassigned     
 AP19                      HSIO94NB1                                                Unassigned     
 AP20                      HSIO92PB1                                                Unassigned     
-AP21    DBGport_9         HSIO92NB1                                                Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
+AP21                      HSIO92NB1                                                Unassigned     
 AP22                      VSS                                                      Reserved       
 AP23                      HSIO93PB1/DQS                                            Unassigned     
 AP24                      HSIO93NB1/DQS                                            Unassigned     
 AP25                      HSIO76PB1                                                Unassigned     
-AP26    DBGport_8         HSIO75PB1/DQS/CCC_NE_PLL0_OUT0                           Assigned       LVCMOS18  Output     None          No                  ON           None           ---              ---              ---                 120              ---          OFF   8                  ---              5                 ---                       OFF           
+AP26                      HSIO75PB1/DQS/CCC_NE_PLL0_OUT0                           Unassigned     
 AP27                      HSIO75NB1/DQS                                            Unassigned     
 AP28                      VSS                                                      Reserved       
 AP29                      NC                                                       Reserved       

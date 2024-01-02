@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Nov 14 16:47:32 2023
+// Created by SmartDesign Tue Jan  2 17:45:18 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -26,6 +26,10 @@ module Top(
     HMC_CLK_IN_P,
     HMC_GPIO_0,
     HMC_GPIO_1,
+    LANE0_RXD_N,
+    LANE0_RXD_P,
+    LANE1_RXD_N,
+    LANE1_RXD_P,
     LDO_PWR_GOOD,
     LMX1_miso,
     LMX2_miso,
@@ -69,6 +73,10 @@ module Top(
     HMC_SYNC,
     HMC_sclk,
     HMC_ss_n,
+    LANE0_TXD_N,
+    LANE0_TXD_P,
+    LANE1_TXD_N,
+    LANE1_TXD_P,
     LED_1,
     LED_2,
     LED_3,
@@ -116,6 +124,10 @@ input         HMC_CLK_IN_N;
 input         HMC_CLK_IN_P;
 input         HMC_GPIO_0;
 input         HMC_GPIO_1;
+input         LANE0_RXD_N;
+input         LANE0_RXD_P;
+input         LANE1_RXD_N;
+input         LANE1_RXD_P;
 input         LDO_PWR_GOOD;
 input         LMX1_miso;
 input         LMX2_miso;
@@ -161,6 +173,10 @@ output        HMC_GPIO_3;
 output        HMC_SYNC;
 output        HMC_sclk;
 output        HMC_ss_n;
+output        LANE0_TXD_N;
+output        LANE0_TXD_P;
+output        LANE1_TXD_N;
+output        LANE1_TXD_P;
 output        LED_1;
 output        LED_2;
 output        LED_3;
@@ -212,6 +228,8 @@ wire          Clock_Reset_0_Main_CLOCK_1;
 wire          Clock_Reset_0_Main_RESET_N_0;
 wire          Clock_Reset_0_UART_CLOCK_1;
 wire          Clock_Reset_0_UART_RESER_N_1;
+wire          Clock_Reset_0_XCVR_CTRL_Clock_40M;
+wire          Clock_Reset_0_XCVR_REF_Clock;
 wire          Communication_0_ANW_FULL;
 wire          Communication_0_Builder_Enable;
 wire          Communication_0_busy;
@@ -268,6 +286,14 @@ wire          HMC_ss_n_net_0;
 wire          HMC_SYNC_net_0;
 wire          INBUF_DIFF_0_0_Y;
 wire          INBUF_DIFF_0_Y;
+wire          LANE0_RXD_N;
+wire          LANE0_RXD_P;
+wire          LANE0_TXD_N_net_0;
+wire          LANE0_TXD_P_net_0;
+wire          LANE1_RXD_N;
+wire          LANE1_RXD_P;
+wire          LANE1_TXD_N_net_0;
+wire          LANE1_TXD_P_net_0;
 wire          LDO_PWR_GOOD;
 wire          LED_3_net_0;
 wire          LED_4_net_0;
@@ -337,6 +363,10 @@ wire          FTDI_GPIO_1_net_1;
 wire          SIWU_N_net_1;
 wire          TX_0_net_1;
 wire          TX_1_net_1;
+wire          LANE0_TXD_P_net_1;
+wire          LANE0_TXD_N_net_1;
+wire          LANE1_TXD_P_net_1;
+wire          LANE1_TXD_N_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -447,6 +477,14 @@ assign TX_0_net_1          = TX_0_net_0;
 assign TX_0                = TX_0_net_1;
 assign TX_1_net_1          = TX_1_net_0;
 assign TX_1                = TX_1_net_1;
+assign LANE0_TXD_P_net_1   = LANE0_TXD_P_net_0;
+assign LANE0_TXD_P         = LANE0_TXD_P_net_1;
+assign LANE0_TXD_N_net_1   = LANE0_TXD_N_net_0;
+assign LANE0_TXD_N         = LANE0_TXD_N_net_1;
+assign LANE1_TXD_P_net_1   = LANE1_TXD_P_net_0;
+assign LANE1_TXD_P         = LANE1_TXD_P_net_1;
+assign LANE1_TXD_N_net_1   = LANE1_TXD_N_net_0;
+assign LANE1_TXD_N         = LANE1_TXD_N_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -461,13 +499,15 @@ BUFD BUFD_0(
 //--------Clock_Reset
 Clock_Reset Clock_Reset_0(
         // Inputs
-        .EXT_RST_N    ( DBGport_2_net_0 ),
+        .EXT_RST_N           ( DBGport_2_net_0 ),
         // Outputs
-        .Main_CLOCK   ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Main_RESET_N ( Clock_Reset_0_Main_RESET_N_0 ),
-        .UART_CLOCK   ( Clock_Reset_0_UART_CLOCK_1 ),
-        .UART_RESER_N ( Clock_Reset_0_UART_RESER_N_1 ),
-        .HMC_CLK      ( Clock_Reset_0_HMC_CLK ) 
+        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_1 ),
+        .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_0 ),
+        .UART_CLOCK          ( Clock_Reset_0_UART_CLOCK_1 ),
+        .UART_RESER_N        ( Clock_Reset_0_UART_RESER_N_1 ),
+        .HMC_CLK             ( Clock_Reset_0_HMC_CLK ),
+        .XCVR_CTRL_Clock_40M ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
+        .XCVR_REF_Clock      ( Clock_Reset_0_XCVR_REF_Clock ) 
         );
 
 //--------Communication
@@ -599,6 +639,12 @@ Data_Block Data_Block_0(
         .Reset_N                   ( Clock_Reset_0_Main_RESET_N_0 ),
         .C_addr_frame              ( Controler_0_TRG_addr ),
         .C_write_data_frame        ( Controler_0_TRG_data ),
+        .LANE0_RXD_P               ( LANE0_RXD_P ),
+        .LANE0_RXD_N               ( LANE0_RXD_N ),
+        .LANE1_RXD_P               ( LANE1_RXD_P ),
+        .LANE1_RXD_N               ( LANE1_RXD_N ),
+        .CTRL_Clock_40M            ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
+        .REF_Clock                 ( Clock_Reset_0_XCVR_REF_Clock ),
         // Outputs
         .C_busy                    ( Data_Block_0_C_busy ),
         .Communication_Empty       ( Data_Block_0_Communication_Empty ),
@@ -608,7 +654,11 @@ Data_Block Data_Block_0(
         .Diag_3                    (  ),
         .Communication_Data_Req    (  ),
         .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ) 
+        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ),
+        .LANE0_TXD_P               ( LANE0_TXD_P_net_0 ),
+        .LANE0_TXD_N               ( LANE0_TXD_N_net_0 ),
+        .LANE1_TXD_P               ( LANE1_TXD_P_net_0 ),
+        .LANE1_TXD_N               ( LANE1_TXD_N_net_0 ) 
         );
 
 //--------INBUF_DIFF

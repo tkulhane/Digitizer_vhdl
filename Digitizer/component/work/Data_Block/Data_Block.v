@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Dec 22 20:34:39 2023
+// Created by SmartDesign Tue Jan  2 17:35:19 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,6 +8,7 @@
 // Data_Block
 module Data_Block(
     // Inputs
+    CTRL_Clock_40M,
     C_addr_frame,
     C_enable_cmd,
     C_write_data_frame,
@@ -16,6 +17,11 @@ module Data_Block(
     Communication_Builder_RUN,
     Communication_Read,
     Fifo_RESET_N,
+    LANE0_RXD_N,
+    LANE0_RXD_P,
+    LANE1_RXD_N,
+    LANE1_RXD_P,
+    REF_Clock,
     Reset_N,
     // Outputs
     C_busy,
@@ -26,12 +32,17 @@ module Data_Block(
     Diag_0,
     Diag_1,
     Diag_2,
-    Diag_3
+    Diag_3,
+    LANE0_TXD_N,
+    LANE0_TXD_P,
+    LANE1_TXD_N,
+    LANE1_TXD_P
 );
 
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input         CTRL_Clock_40M;
 input  [7:0]  C_addr_frame;
 input         C_enable_cmd;
 input  [15:0] C_write_data_frame;
@@ -40,6 +51,11 @@ input         Clock;
 input         Communication_Builder_RUN;
 input         Communication_Read;
 input         Fifo_RESET_N;
+input         LANE0_RXD_N;
+input         LANE0_RXD_P;
+input         LANE1_RXD_N;
+input         LANE1_RXD_P;
+input         REF_Clock;
 input         Reset_N;
 //--------------------------------------------------------------------
 // Output
@@ -53,6 +69,10 @@ output        Diag_0;
 output        Diag_1;
 output        Diag_2;
 output        Diag_3;
+output        LANE0_TXD_N;
+output        LANE0_TXD_P;
+output        LANE1_TXD_N;
+output        LANE1_TXD_P;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -74,13 +94,14 @@ wire   [31:0] Communication_Data_Frame_net_0;
 wire          Communication_Data_Req_net_0;
 wire          Communication_Empty_net_0;
 wire          Communication_Read;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_0_0;
+wire          CTRL_Clock_40M;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_0_0;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_0_1;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_1_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_0_0;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_1_1;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_2_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_2_0_0;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_2_1;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_3_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_3_0_0;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_3_1;
 wire          Diag_0_net_0;
 wire          Diag_1_net_0;
@@ -115,6 +136,15 @@ wire   [15:0] Input_Data_Part_1_Q_0;
 wire   [15:0] Input_Data_Part_1_Q_1;
 wire   [15:0] Input_Data_Part_1_Q_2;
 wire   [15:0] Input_Data_Part_1_Q_3;
+wire          LANE0_RXD_N;
+wire          LANE0_RXD_P;
+wire          LANE0_TXD_N_net_0;
+wire          LANE0_TXD_P_net_0;
+wire          LANE1_RXD_N;
+wire          LANE1_RXD_P;
+wire          LANE1_TXD_N_net_0;
+wire          LANE1_TXD_P_net_0;
+wire          REF_Clock;
 wire          Reset_N;
 wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
 wire          Trigger_Top_Part_0_ALL_FIFO_Enable;
@@ -132,6 +162,10 @@ wire          Diag_1_net_1;
 wire          Communication_Data_Req_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [31:0] Communication_Data_Frame_net_1;
+wire          LANE0_TXD_P_net_1;
+wire          LANE0_TXD_N_net_1;
+wire          LANE1_TXD_P_net_1;
+wire          LANE1_TXD_N_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -178,6 +212,14 @@ assign C_read_data_frame_net_1        = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]        = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1 = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0] = Communication_Data_Frame_net_1;
+assign LANE0_TXD_P_net_1              = LANE0_TXD_P_net_0;
+assign LANE0_TXD_P                    = LANE0_TXD_P_net_1;
+assign LANE0_TXD_N_net_1              = LANE0_TXD_N_net_0;
+assign LANE0_TXD_N                    = LANE0_TXD_N_net_1;
+assign LANE1_TXD_P_net_1              = LANE1_TXD_P_net_0;
+assign LANE1_TXD_P                    = LANE1_TXD_P_net_1;
+assign LANE1_TXD_N_net_1              = LANE1_TXD_N_net_0;
+assign LANE1_TXD_N                    = LANE1_TXD_N_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -228,19 +270,29 @@ COREFIFO_C10 COREFIFO_C10_0(
 //--------DataSource_Transcievers
 DataSource_Transcievers DataSource_Transcievers_0(
         // Inputs
+        .LANE0_RXD_P     ( LANE0_RXD_P ),
+        .LANE0_RXD_N     ( LANE0_RXD_N ),
+        .LANE1_RXD_P     ( LANE1_RXD_P ),
+        .LANE1_RXD_N     ( LANE1_RXD_N ),
         .Gen_Enable      ( Trigger_Top_Part_0_Control_Test_Generator_Enable ),
-        .Clock           ( Clock ),
-        .Reset_N         ( Reset_N ),
+        .Logic_Clock     ( Clock ),
+        .Logic_Reset_N   ( Reset_N ),
+        .CTRL_Clock_40M  ( CTRL_Clock_40M ),
+        .REF_Clock       ( REF_Clock ),
         // Outputs
+        .LANE0_TXD_P     ( LANE0_TXD_P_net_0 ),
+        .LANE0_TXD_N     ( LANE0_TXD_N_net_0 ),
+        .LANE1_TXD_P     ( LANE1_TXD_P_net_0 ),
+        .LANE1_TXD_N     ( LANE1_TXD_N_net_0 ),
         .Output_Data_3_1 ( DataSource_Transcievers_0_Output_Data_3_1 ),
-        .Output_Data_0_1 ( DataSource_Transcievers_0_Output_Data_0_1 ),
+        .Output_Data_3_0 ( DataSource_Transcievers_0_Output_Data_3_0_0 ),
         .Output_Data_1_1 ( DataSource_Transcievers_0_Output_Data_1_1 ),
+        .Output_Data_1_0 ( DataSource_Transcievers_0_Output_Data_1_0_0 ),
+        .Output_Data_0_1 ( DataSource_Transcievers_0_Output_Data_0_1 ),
+        .Output_Data_0_0 ( DataSource_Transcievers_0_Output_Data_0_0_0 ),
         .Output_Data_2_1 ( DataSource_Transcievers_0_Output_Data_2_1 ),
-        .Output_Data_0_0 ( DataSource_Transcievers_0_Output_Data_0_0 ),
-        .Output_Data_1_0 ( DataSource_Transcievers_0_Output_Data_1_0 ),
-        .Output_Data_2_0 ( DataSource_Transcievers_0_Output_Data_2_0 ),
-        .Output_Data_3_0 ( DataSource_Transcievers_0_Output_Data_3_0 ),
-        .DataValid       (  ) 
+        .Output_Data_2_0 ( DataSource_Transcievers_0_Output_Data_2_0_0 ),
+        .Data_Valid      (  ) 
         );
 
 //--------Event_Info_RAM_Block
@@ -313,8 +365,8 @@ Input_Data_Part Input_Data_Part_0(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_0_0 ),
-        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_1_0 ),
+        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_0_0_0 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_1_0_0 ),
         .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_0_1 ),
         .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_1_1 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
@@ -342,8 +394,8 @@ Input_Data_Part Input_Data_Part_1(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_2_0 ),
-        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_3_0 ),
+        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_2_0_0 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_3_0_0 ),
         .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_2_1 ),
         .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_3_1 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),

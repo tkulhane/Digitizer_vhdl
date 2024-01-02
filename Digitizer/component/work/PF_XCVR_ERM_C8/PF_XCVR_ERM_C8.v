@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Dec 26 21:04:34 2023
+// Created by SmartDesign Tue Jan  2 20:36:55 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -18,8 +18,8 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "EXPOSE_FWF_EN_PORTS:false" \
 "SHOW_UNIVERSAL_SOLN_PORTS:true" \
 "UI_CDR_LOCK_MODE:Lock to data" \
-"UI_CDR_REFERENCE_CLK_FREQ:125.0" \
-"UI_CDR_REFERENCE_CLK_SOURCE:Dedicated" \
+"UI_CDR_REFERENCE_CLK_FREQ:156.25" \
+"UI_CDR_REFERENCE_CLK_SOURCE:Fabric" \
 "UI_CDR_REFERENCE_CLK_TOLERANCE:1" \
 "UI_ENABLE_32BIT_DATA_WIDTH:false" \
 "UI_ENABLE_64B66B:true" \
@@ -72,7 +72,7 @@ module PF_XCVR_ERM_C8(
     CTRL_ARST_N,
     CTRL_CLK,
     LANE0_8B10B_TX_K,
-    LANE0_CDR_REF_CLK_0,
+    LANE0_CDR_REF_CLK_FAB,
     LANE0_CLK_REF,
     LANE0_LOS,
     LANE0_PCS_ARST_N,
@@ -107,7 +107,7 @@ module PF_XCVR_ERM_C8(
 input         CTRL_ARST_N;
 input         CTRL_CLK;
 input  [3:0]  LANE0_8B10B_TX_K;
-input         LANE0_CDR_REF_CLK_0;
+input         LANE0_CDR_REF_CLK_FAB;
 input         LANE0_CLK_REF;
 input         LANE0_LOS;
 input         LANE0_PCS_ARST_N;
@@ -170,7 +170,7 @@ wire          I_XCVR_LANE0_SD_OR2_Y;
 wire          I_XCVR_LANE0_SD_SLE_DEBUG_Q;
 wire   [3:0]  LANE0_8B10B_RX_K_net_0;
 wire   [3:0]  LANE0_8B10B_TX_K;
-wire          LANE0_CDR_REF_CLK_0;
+wire          LANE0_CDR_REF_CLK_FAB;
 wire          LANE0_CLK_REF;
 wire          LANE0_LOS;
 wire          LANE0_PCS_ARST_N;
@@ -387,7 +387,7 @@ OR2 I_OR2_RX_IDLE_0(
 PF_XCVR_ERM_C8_I_XCVR_PF_XCVR I_XCVR(
         // Inputs
         .LANE0_TX_DATA            ( LANE0_TX_DATA ),
-        .LANE0_CDR_REF_CLK_0      ( LANE0_CDR_REF_CLK_0 ),
+        .LANE0_CDR_REF_CLK_FAB    ( LANE0_CDR_REF_CLK_FAB ),
         .LANE0_PCS_ARST_N         ( LANE0_PCS_ARST_N ),
         .LANE0_PMA_ARST_N         ( LANE0_PMA_ARST_N ),
         .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC ),
