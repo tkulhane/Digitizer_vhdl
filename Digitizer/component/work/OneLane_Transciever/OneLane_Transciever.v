@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Jan  2 20:37:05 2024
+// Created by SmartDesign Wed Jan  3 15:10:22 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -117,8 +117,8 @@ wire           PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE;
 wire   [3:0]   PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K;
 wire           PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R;
 wire   [31:0]  PF_XCVR_ERM_C8_0_LANE0_RX_DATA;
-wire           PF_XCVR_ERM_C8_0_LANE0_RX_READY_CDR;
-wire           PF_XCVR_ERM_C8_0_LANE0_RX_VAL_CDR;
+wire           PF_XCVR_ERM_C8_0_LANE0_RX_READY;
+wire           PF_XCVR_ERM_C8_0_LANE0_RX_VAL;
 wire           PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R;
 wire           PF_XCVR_ERM_C8_0_LANE0_TX_CLK_STABLE_0;
 wire           Read_Enable;
@@ -367,22 +367,19 @@ PF_XCVR_ERM_C8 PF_XCVR_ERM_C8_0(
         .CTRL_CLK                 ( CTRL_CLK ),
         .CTRL_ARST_N              ( CTRL_RST_N ),
         .LANE0_LOS                ( GND_net ),
-        .LANE0_CLK_REF            ( REF_CLK ),
         // Outputs
         .LANE0_TXD_P              ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N              ( LANE0_TXD_N_net_0 ),
         .LANE0_RX_DATA            ( PF_XCVR_ERM_C8_0_LANE0_RX_DATA ),
         .LANE0_TX_CLK_R           ( PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R ),
         .LANE0_RX_CLK_R           ( PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R ),
-        .LANE0_RX_READY_CDR       ( PF_XCVR_ERM_C8_0_LANE0_RX_READY_CDR ),
-        .LANE0_RX_VAL_CDR         ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL_CDR ),
         .LANE0_RX_IDLE            (  ),
         .LANE0_TX_CLK_STABLE      ( PF_XCVR_ERM_C8_0_LANE0_TX_CLK_STABLE_0 ),
         .LANE0_RX_CODE_VIOLATION  (  ),
         .LANE0_RX_DISPARITY_ERROR (  ),
         .LANE0_8B10B_RX_K         ( PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K ),
-        .LANE0_RX_READY           (  ),
-        .LANE0_RX_VAL             (  ) 
+        .LANE0_RX_READY           ( PF_XCVR_ERM_C8_0_LANE0_RX_READY ),
+        .LANE0_RX_VAL             ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL ) 
         );
 
 //--------RxLaneControl
@@ -418,7 +415,7 @@ Synchronizer Synchronizer_0(
         // Inputs
         .nRST     ( Logic_Reser_N ),
         .CLK      ( Logic_Clock ),
-        .Data_In  ( PF_XCVR_ERM_C8_0_LANE0_RX_READY_CDR ),
+        .Data_In  ( PF_XCVR_ERM_C8_0_LANE0_RX_READY ),
         // Outputs
         .Data_Out ( Synchronizer_0_Data_Out ) 
         );
@@ -428,7 +425,7 @@ Synchronizer Synchronizer_0_0(
         // Inputs
         .nRST     ( Logic_Reser_N ),
         .CLK      ( Logic_Clock ),
-        .Data_In  ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL_CDR ),
+        .Data_In  ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL ),
         // Outputs
         .Data_Out ( Synchronizer_0_0_Data_Out ) 
         );

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Jan  2 20:36:55 2024
+// Created by SmartDesign Wed Jan  3 15:09:46 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -39,7 +39,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "UI_EXPOSE_CDR_BITSLIP_PORT:false" \
 "UI_EXPOSE_DYNAMIC_RECONFIGURATION_PORTS:false" \
 "UI_EXPOSE_JA_CLOCK_PORT:false" \
-"UI_EXPOSE_RX_READY_VAL_CDR_PORT:true" \
+"UI_EXPOSE_RX_READY_VAL_CDR_PORT:false" \
 "UI_EXPOSE_TX_BYPASS_DATA:false" \
 "UI_EXPOSE_TX_ELEC_IDLE:false" \
 "UI_INTERFACE_RXCLOCK:Regional" \
@@ -56,7 +56,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "UI_TX_CLK_DIV_FACTOR:1" \
 "UI_TX_DATA_RATE:5000" \
 "UI_TX_PCS_FAB_IF_WIDTH:32" \
-"UI_TX_RX_MODE:Tx and Rx (Independent)" \
+"UI_TX_RX_MODE:Duplex" \
 "UI_USE_INTERFACE_CLK_AS_PLL_REFCLK:false" \
 "UI_XCVR_RX_CALIBRATION:None (CDR)" \
 "UI_XCVR_RX_DATA_EYE_CALIBRATION:false" \
@@ -73,7 +73,6 @@ module PF_XCVR_ERM_C8(
     CTRL_CLK,
     LANE0_8B10B_TX_K,
     LANE0_CDR_REF_CLK_FAB,
-    LANE0_CLK_REF,
     LANE0_LOS,
     LANE0_PCS_ARST_N,
     LANE0_PMA_ARST_N,
@@ -92,9 +91,7 @@ module PF_XCVR_ERM_C8(
     LANE0_RX_DISPARITY_ERROR,
     LANE0_RX_IDLE,
     LANE0_RX_READY,
-    LANE0_RX_READY_CDR,
     LANE0_RX_VAL,
-    LANE0_RX_VAL_CDR,
     LANE0_TXD_N,
     LANE0_TXD_P,
     LANE0_TX_CLK_R,
@@ -108,7 +105,6 @@ input         CTRL_ARST_N;
 input         CTRL_CLK;
 input  [3:0]  LANE0_8B10B_TX_K;
 input         LANE0_CDR_REF_CLK_FAB;
-input         LANE0_CLK_REF;
 input         LANE0_LOS;
 input         LANE0_PCS_ARST_N;
 input         LANE0_PMA_ARST_N;
@@ -129,9 +125,7 @@ output [31:0] LANE0_RX_DATA;
 output [3:0]  LANE0_RX_DISPARITY_ERROR;
 output        LANE0_RX_IDLE;
 output        LANE0_RX_READY;
-output        LANE0_RX_READY_CDR;
 output        LANE0_RX_VAL;
-output        LANE0_RX_VAL_CDR;
 output        LANE0_TXD_N;
 output        LANE0_TXD_P;
 output        LANE0_TX_CLK_R;
@@ -171,7 +165,6 @@ wire          I_XCVR_LANE0_SD_SLE_DEBUG_Q;
 wire   [3:0]  LANE0_8B10B_RX_K_net_0;
 wire   [3:0]  LANE0_8B10B_TX_K;
 wire          LANE0_CDR_REF_CLK_FAB;
-wire          LANE0_CLK_REF;
 wire          LANE0_LOS;
 wire          LANE0_PCS_ARST_N;
 wire          LANE0_PMA_ARST_N;
@@ -181,9 +174,7 @@ wire   [31:0] LANE0_RX_DATA_net_0;
 wire   [3:0]  LANE0_RX_DISPARITY_ERROR_net_0;
 wire          LANE0_RX_IDLE_net_0;
 wire          LANE0_RX_READY_net_0;
-wire          LANE0_RX_READY_CDR_net_0;
 wire          LANE0_RX_VAL_net_0;
-wire          LANE0_RX_VAL_CDR_net_0;
 wire          LANE0_RXD_N;
 wire          LANE0_RXD_P;
 wire          LANE0_TX_CLK_R_net_0;
@@ -197,8 +188,6 @@ wire          LANE0_TXD_N_net_1;
 wire   [31:0] LANE0_RX_DATA_net_1;
 wire          LANE0_TX_CLK_R_net_1;
 wire          LANE0_RX_CLK_R_net_1;
-wire          LANE0_RX_READY_CDR_net_1;
-wire          LANE0_RX_VAL_CDR_net_1;
 wire          LANE0_RX_IDLE_net_1;
 wire          LANE0_TX_CLK_STABLE_net_1;
 wire   [3:0]  LANE0_RX_CODE_VIOLATION_net_1;
@@ -335,10 +324,6 @@ assign LANE0_TX_CLK_R_net_1           = LANE0_TX_CLK_R_net_0;
 assign LANE0_TX_CLK_R                 = LANE0_TX_CLK_R_net_1;
 assign LANE0_RX_CLK_R_net_1           = LANE0_RX_CLK_R_net_0;
 assign LANE0_RX_CLK_R                 = LANE0_RX_CLK_R_net_1;
-assign LANE0_RX_READY_CDR_net_1       = LANE0_RX_READY_CDR_net_0;
-assign LANE0_RX_READY_CDR             = LANE0_RX_READY_CDR_net_1;
-assign LANE0_RX_VAL_CDR_net_1         = LANE0_RX_VAL_CDR_net_0;
-assign LANE0_RX_VAL_CDR               = LANE0_RX_VAL_CDR_net_1;
 assign LANE0_RX_IDLE_net_1            = LANE0_RX_IDLE_net_0;
 assign LANE0_RX_IDLE                  = LANE0_RX_IDLE_net_1;
 assign LANE0_TX_CLK_STABLE_net_1      = LANE0_TX_CLK_STABLE_net_0;
@@ -406,8 +391,6 @@ PF_XCVR_ERM_C8_I_XCVR_PF_XCVR I_XCVR(
         .LANE0_RX_DATA            ( LANE0_RX_DATA_net_0 ),
         .LANE0_TX_CLK_R           ( LANE0_TX_CLK_R_net_0 ),
         .LANE0_RX_CLK_R           ( LANE0_RX_CLK_R_net_0 ),
-        .LANE0_RX_READY_CDR       ( LANE0_RX_READY_CDR_net_0 ),
-        .LANE0_RX_VAL_CDR         ( LANE0_RX_VAL_CDR_net_0 ),
         .LANE0_RX_IDLE            ( LANE0_RX_IDLE_net_0 ),
         .LANE0_RX_READY           ( I_XCVR_LANE0_RX_READY ),
         .LANE0_RX_VAL             ( I_XCVR_LANE0_RX_VAL ),
@@ -503,7 +486,7 @@ I_XCVR_CORERFD_0(
         // Inputs
         .ARST_N        ( CTRL_ARST_N ),
         .CLK_IN        ( LANE0_RX_CLK_R_net_0 ),
-        .CLK_REF       ( LANE0_CLK_REF ),
+        .CLK_REF       ( LANE0_TX_CLK_R_net_0 ),
         .XCVR_RX_READY ( I_XCVR_LANE0_RX_READY ),
         // Outputs
         .RX_FINE_LOCK  ( LANE0_RX_READY_net_0 ) 

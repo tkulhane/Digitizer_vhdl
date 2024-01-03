@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Jan  2 17:35:19 2024
+// Created by SmartDesign Wed Jan  3 16:25:43 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -365,10 +365,10 @@ Input_Data_Part Input_Data_Part_0(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_0_0_0 ),
-        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_1_0_0 ),
-        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_0_1 ),
-        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_1_1 ),
+        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_0_1 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_1_1 ),
+        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_0_0_0 ),
+        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_1_0_0 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
         .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_0 ),
@@ -394,10 +394,10 @@ Input_Data_Part Input_Data_Part_1(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_2_0_0 ),
-        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_3_0_0 ),
-        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_2_1 ),
-        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_3_1 ),
+        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_2_1 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_3_1 ),
+        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_2_0_0 ),
+        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_3_0_0 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
         .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_1 ),

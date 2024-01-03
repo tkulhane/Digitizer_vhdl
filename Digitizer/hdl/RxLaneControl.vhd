@@ -70,6 +70,7 @@ architecture rtl of RxLaneControl is
   signal ComparatorData_R : type_logic_array;
 
   signal AndComparatorData_K : std_logic;
+  signal OrComparatorData_K : std_logic;
   signal OrComparatorData_R : std_logic;
   signal OrComparatorData_A : std_logic;
 
@@ -162,7 +163,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, fsm_timer, CDR_READY, CDR_VAL, AndComparatorData_K, OrComparatorData_A, Last_ILAS_Seq)
+    process(next_state, state_reg, fsm_timer, CDR_READY, CDR_VAL, AndComparatorData_K, OrComparatorData_A,OrComparatorData_K , Last_ILAS_Seq)
     begin
 
         next_state <= state_reg;
@@ -316,11 +317,13 @@ begin
 --Comparator And Or gen
 ------------------------------------------------------------------------------------------------------------
   
-
+  
   
   AndComparatorData_K <= ComparatorData_K(3) and ComparatorData_K(2) and ComparatorData_K(1) and ComparatorData_K(0);
   OrComparatorData_R  <= ComparatorData_R(3) or ComparatorData_R(2) or ComparatorData_R(1) or ComparatorData_R(0);
   OrComparatorData_A <= ComparatorData_A(3) or ComparatorData_A(2) or ComparatorData_A(1) or ComparatorData_A(0);
+  
+  OrComparatorData_K  <= ComparatorData_K(3) or ComparatorData_K(2) or ComparatorData_K(1) or ComparatorData_K(0);
 
 ------------------------------------------------------------------------------------------------------------
 --Process: D for data - 1 cycle delay

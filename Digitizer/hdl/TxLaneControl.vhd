@@ -231,9 +231,15 @@ begin
 
         when SEND_K =>
 
+            --OutputData(0) <= const_K_char;
+            --OutputK(0) <= '1';
+        
             MUX_OUTS_K : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
                 OutputData(i) <= const_K_char;
                 OutputK(i) <= '1';
+                
+                --OutputData(i) <= x"00";--const_K_char;
+                --OutputK(i) <= '0';--'1';
             end loop MUX_OUTS_K;
 
             Input_MainData_Read <= '0';
