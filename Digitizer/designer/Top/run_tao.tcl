@@ -145,7 +145,6 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\COREFIFO_C13_COREFIFO_C13_0_ram_wrapper.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\COREFIFO.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13.v}
-read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\LaneOutExtender.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_TX_PLL_C1\PF_TX_PLL_C1_0\PF_TX_PLL_C1_PF_TX_PLL_C1_0_PF_TX_PLL.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_TX_PLL_C1\PF_TX_PLL_C1.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELCKMGT\2.0.100\rtl\vlog\core\CORELCKMGT.v}
@@ -170,11 +169,13 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTR.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C8\PF_XCVR_ERM_C8.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd}
+read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\OneLane_Transciever\OneLane_Transciever.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C5\PF_CCC_C5_0\PF_CCC_C5_PF_CCC_C5_0_PF_CCC.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C5\PF_CCC_C5.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd}
+read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator_for_Lanes.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\DataSource_Transcievers\DataSource_Transcievers.v}

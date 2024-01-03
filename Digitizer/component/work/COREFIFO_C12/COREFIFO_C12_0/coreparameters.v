@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Tue Jan  2 13:11:54 2024
+// Created by Microsemi SmartDesign Wed Jan  3 20:07:56 2024
 // Parameters for COREFIFO
 //--------------------------------------------------------------------
 
@@ -14,12 +14,12 @@ parameter ECC = 0;
 parameter ESTOP = 1;
 parameter FAMILY = 26;
 parameter FSTOP = 1;
-parameter FWFT = 1;
+parameter FWFT = 0;
 parameter HDL_License = "U";
 parameter NUM_STAGES = 2;
 parameter OVERFLOW_EN = 0;
 parameter PIPE = 1;
-parameter PREFETCH = 0;
+parameter PREFETCH = 1;
 parameter RAM_OPT = 0;
 parameter RDCNT_EN = 0;
 parameter RDEPTH = 64;

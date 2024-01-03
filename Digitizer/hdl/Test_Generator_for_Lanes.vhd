@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity Test_Generator_for_Lanes is
     generic
     (
-        g_Data_Length : Natural := 8
+        g_Data_Length : Natural := 12
     );
     port
     (

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Jan  2 17:30:15 2024
+// Created by SmartDesign Wed Jan  3 22:24:51 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -101,15 +101,19 @@ wire          PF_CCC_C5_0_OUT0_FABCLK_0;
 wire          PF_CCC_C5_0_PLL_LOCK_0;
 wire          REF_Clock;
 wire          RxMainLinkController_0_SYNCINB;
+wire   [7:0]  SampleTxDeCompose_0_0_Output_Data_0;
+wire   [7:0]  SampleTxDeCompose_0_0_Output_Data_1;
+wire   [7:0]  SampleTxDeCompose_0_1_Output_Data_0;
+wire   [7:0]  SampleTxDeCompose_0_1_Output_Data_1;
+wire   [7:0]  SampleTxDeCompose_0_2_Output_Data_0;
+wire   [7:0]  SampleTxDeCompose_0_2_Output_Data_1;
+wire   [7:0]  SampleTxDeCompose_0_Output_Data_0;
+wire   [7:0]  SampleTxDeCompose_0_Output_Data_1;
 wire          Synchronizer_0_2_Data_Out;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_0;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_1;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_2;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_3;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_4;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_5;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_6;
-wire   [7:0]  Test_Generator_for_Lanes_0_Test_Data_7;
+wire   [11:0] Test_Generator_for_Lanes_0_Test_Data_0;
+wire   [11:0] Test_Generator_for_Lanes_0_Test_Data_1;
+wire   [11:0] Test_Generator_for_Lanes_0_Test_Data_2;
+wire   [11:0] Test_Generator_for_Lanes_0_Test_Data_3;
 wire          TxMainLinkController_0_Data_Read;
 wire          TxMainLinkController_0_SYNC_OK;
 wire          LANE0_TXD_P_net_1;
@@ -134,10 +138,18 @@ wire   [1:0]  Lanes_DataGo_net_0;
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire          VCC_net;
+wire   [3:0]  Input_TailBits_const_net_0;
+wire   [3:0]  Input_TailBits_const_net_1;
+wire   [3:0]  Input_TailBits_const_net_2;
+wire   [3:0]  Input_TailBits_const_net_3;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign VCC_net = 1'b1;
+assign VCC_net                    = 1'b1;
+assign Input_TailBits_const_net_0 = 4'h0;
+assign Input_TailBits_const_net_1 = 4'h0;
+assign Input_TailBits_const_net_2 = 4'h0;
+assign Input_TailBits_const_net_3 = 4'h0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -209,10 +221,10 @@ OneLane_Transciever OneLane_Transciever_0(
         .REF_CLK             ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
         .Read_Enable         ( Data_Valid_net_0 ),
         .CTRL_RST_N          ( Synchronizer_0_2_Data_Out ),
-        .Input_MainData_3    ( Test_Generator_for_Lanes_0_Test_Data_5 ),
-        .Input_MainData_0    ( Test_Generator_for_Lanes_0_Test_Data_0 ),
-        .Input_MainData_1    ( Test_Generator_for_Lanes_0_Test_Data_1 ),
-        .Input_MainData_2    ( Test_Generator_for_Lanes_0_Test_Data_4 ),
+        .Input_MainData_3    ( SampleTxDeCompose_0_1_Output_Data_1 ),
+        .Input_MainData_0    ( SampleTxDeCompose_0_Output_Data_0 ),
+        .Input_MainData_1    ( SampleTxDeCompose_0_Output_Data_1 ),
+        .Input_MainData_2    ( SampleTxDeCompose_0_1_Output_Data_0 ),
         // Outputs
         .LANE0_TXD_P         ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N         ( LANE0_TXD_N_net_0 ),
@@ -239,10 +251,10 @@ OneLane_Transciever OneLane_Transciever_0_0(
         .REF_CLK             ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
         .Read_Enable         ( Data_Valid_net_0 ),
         .CTRL_RST_N          ( Synchronizer_0_2_Data_Out ),
-        .Input_MainData_3    ( Test_Generator_for_Lanes_0_Test_Data_7 ),
-        .Input_MainData_0    ( Test_Generator_for_Lanes_0_Test_Data_2 ),
-        .Input_MainData_1    ( Test_Generator_for_Lanes_0_Test_Data_3 ),
-        .Input_MainData_2    ( Test_Generator_for_Lanes_0_Test_Data_6 ),
+        .Input_MainData_3    ( SampleTxDeCompose_0_2_Output_Data_1 ),
+        .Input_MainData_0    ( SampleTxDeCompose_0_0_Output_Data_0 ),
+        .Input_MainData_1    ( SampleTxDeCompose_0_0_Output_Data_1 ),
+        .Input_MainData_2    ( SampleTxDeCompose_0_2_Output_Data_0 ),
         // Outputs
         .LANE0_TXD_P         ( LANE1_TXD_P_net_0 ),
         .LANE0_TXD_N         ( LANE1_TXD_N_net_0 ),
@@ -281,6 +293,46 @@ RxMainLinkController RxMainLinkController_0(
         .Alignment_Fifo_Read       ( Data_Valid_net_0 ) 
         );
 
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_0 ),
+        .Input_TailBits ( Input_TailBits_const_net_0 ),
+        // Outputs
+        .Output_Data_1  ( SampleTxDeCompose_0_Output_Data_1 ),
+        .Output_Data_0  ( SampleTxDeCompose_0_Output_Data_0 ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_0(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_1 ),
+        .Input_TailBits ( Input_TailBits_const_net_1 ),
+        // Outputs
+        .Output_Data_1  ( SampleTxDeCompose_0_0_Output_Data_1 ),
+        .Output_Data_0  ( SampleTxDeCompose_0_0_Output_Data_0 ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_1(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_2 ),
+        .Input_TailBits ( Input_TailBits_const_net_2 ),
+        // Outputs
+        .Output_Data_1  ( SampleTxDeCompose_0_1_Output_Data_1 ),
+        .Output_Data_0  ( SampleTxDeCompose_0_1_Output_Data_0 ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_2(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_3 ),
+        .Input_TailBits ( Input_TailBits_const_net_3 ),
+        // Outputs
+        .Output_Data_1  ( SampleTxDeCompose_0_2_Output_Data_1 ),
+        .Output_Data_0  ( SampleTxDeCompose_0_2_Output_Data_0 ) 
+        );
+
 //--------Synchronizer
 Synchronizer Synchronizer_0_2(
         // Inputs
@@ -302,10 +354,10 @@ Test_Generator_for_Lanes Test_Generator_for_Lanes_0(
         .Test_Data_1 ( Test_Generator_for_Lanes_0_Test_Data_1 ),
         .Test_Data_2 ( Test_Generator_for_Lanes_0_Test_Data_2 ),
         .Test_Data_3 ( Test_Generator_for_Lanes_0_Test_Data_3 ),
-        .Test_Data_4 ( Test_Generator_for_Lanes_0_Test_Data_4 ),
-        .Test_Data_5 ( Test_Generator_for_Lanes_0_Test_Data_5 ),
-        .Test_Data_6 ( Test_Generator_for_Lanes_0_Test_Data_6 ),
-        .Test_Data_7 ( Test_Generator_for_Lanes_0_Test_Data_7 ) 
+        .Test_Data_4 (  ),
+        .Test_Data_5 (  ),
+        .Test_Data_6 (  ),
+        .Test_Data_7 (  ) 
         );
 
 //--------TxMainLinkController
