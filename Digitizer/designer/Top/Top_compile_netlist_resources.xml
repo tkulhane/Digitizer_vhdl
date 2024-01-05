@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)</text>
-<text>Date: Wed Jan  3 22:49:26 2024
+<text>Date: Thu Jan  4 22:45:11 2024
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -78,15 +78,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>46204</cell>
+ <cell>93322</cell>
  <cell>299544</cell>
- <cell>15.42</cell>
+ <cell>31.15</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>42185</cell>
+ <cell>50708</cell>
  <cell>299544</cell>
- <cell>14.08</cell>
+ <cell>16.93</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -218,8 +218,8 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>12616</cell>
- <cell>8597</cell>
+ <cell>59734</cell>
+ <cell>17120</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
@@ -238,8 +238,8 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>46204</cell>
- <cell>42185</cell>
+ <cell>93322</cell>
+ <cell>50708</cell>
 </row>
 </table>
 <section><name>Detailed Carry Chains Resource Usage</name></section>
@@ -256,23 +256,23 @@
 </row>
 <row>
  <cell>7</cell>
- <cell>47</cell>
+ <cell>49</cell>
 </row>
 <row>
  <cell>8</cell>
- <cell>27</cell>
+ <cell>45</cell>
 </row>
 <row>
  <cell>9</cell>
- <cell>14</cell>
+ <cell>28</cell>
 </row>
 <row>
  <cell>10</cell>
- <cell>16</cell>
+ <cell>30</cell>
 </row>
 <row>
  <cell>11</cell>
- <cell>37</cell>
+ <cell>49</cell>
 </row>
 <row>
  <cell>12</cell>
@@ -280,15 +280,15 @@
 </row>
 <row>
  <cell>13</cell>
- <cell>4</cell>
+ <cell>8</cell>
 </row>
 <row>
  <cell>14</cell>
- <cell>7</cell>
+ <cell>8</cell>
 </row>
 <row>
  <cell>15</cell>
- <cell>24</cell>
+ <cell>23</cell>
 </row>
 <row>
  <cell>16</cell>
@@ -328,7 +328,7 @@
 </row>
 <row>
  <cell>Total</cell>
- <cell>263</cell>
+ <cell>327</cell>
 </row>
 </table>
 <section><name>Detailed 4LUT Groups Resource Usage</name></section>
@@ -341,19 +341,19 @@
 </row>
 <row>
  <cell>2</cell>
- <cell>48</cell>
+ <cell>144</cell>
 </row>
 <row>
  <cell>5</cell>
  <cell>2</cell>
 </row>
 <row>
- <cell>22</cell>
- <cell>48</cell>
+ <cell>46</cell>
+ <cell>384</cell>
 </row>
 <row>
  <cell>Total</cell>
- <cell>98</cell>
+ <cell>530</cell>
 </row>
 </table>
 <section><name>I/O Function</name></section>
@@ -403,7 +403,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>8316</cell>
+ <cell>16840</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Main_CLOCK_1</cell>
 </row>
@@ -418,7 +418,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>5131</cell>
+ <cell>13653</cell>
  <cell>INT_NET</cell>
  <cell>Net   : dff_arst</cell>
 </row>
@@ -455,7 +455,7 @@
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNIEAL5/U0_RGB1</cell>
+ <cell>Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNI3DRB/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -470,7 +470,7 @@
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Clock_Reset_0/Synchronizer_0/Chain_rep_RNI8C36[1]/U0_RGB1</cell>
+ <cell>Driver: Clock_Reset_0/Synchronizer_0/Chain_RNI23CB[1]/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -478,7 +478,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>251</cell>
+ <cell>248</cell>
  <cell>INT_NET</cell>
  <cell>Net   : BUFD_0_Y</cell>
 </row>
@@ -644,14 +644,94 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>806</cell>
+ <cell>1024</cell>
  <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_N_122_i</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]</cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>806</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/N_122_i</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNIG19R[1]</cell>
 </row>
 <row>
  <cell>771</cell>
@@ -662,86 +742,6 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]</cell>
 </row>
 </table>
 <section><name>High fanout nets (through buffer trees)</name></section>
@@ -752,14 +752,94 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>806</cell>
+ <cell>1024</cell>
  <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_N_122_i</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNID0141[1]</cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_2[6]</cell>
+</row>
+<row>
+ <cell>1024</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/read_index_control.RD_INDEX_0[6]</cell>
+</row>
+<row>
+ <cell>806</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : Data_Block_0/N_122_i</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: Data_Block_0/FIFOs_Reader_0/state_reg_RNIG19R[1]</cell>
 </row>
 <row>
  <cell>771</cell>
@@ -770,86 +850,6 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[0]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[13]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[13]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[12]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[12]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[11]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[11]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[10]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[10]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[9]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[9]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[8]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[8]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[7]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[7]</cell>
-</row>
-<row>
- <cell>770</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Data_Block_0/FIFOs_Reader_0_Sample_RAM_W_Address[6]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Data_Block_0/FIFOs_Reader_0/Sample_RAM_W_Address_Unsigned[6]</cell>
 </row>
 </table>
 </doc>

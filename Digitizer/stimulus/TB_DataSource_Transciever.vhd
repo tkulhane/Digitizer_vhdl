@@ -39,14 +39,14 @@ architecture behavioral of TB_DataSource_Transciever is
     
     signal Gen_Enable : std_logic := '1';
     
-    signal Output_Data_3_1 : std_logic_vector(11 downto 0);
-    signal Output_Data_0_1 : std_logic_vector(11 downto 0);
-    signal Output_Data_1_1 : std_logic_vector(11 downto 0);
-    signal Output_Data_2_1 : std_logic_vector(11 downto 0);
-    signal Output_Data_0_0 : std_logic_vector(11 downto 0);
-    signal Output_Data_1_0 : std_logic_vector(11 downto 0);
-    signal Output_Data_2_0 : std_logic_vector(11 downto 0);
-    signal Output_Data_3_0 : std_logic_vector(11 downto 0);
+    signal Output_Data_0_0 :  std_logic_vector(11 downto 0);
+    signal Output_Data_1_0 :  std_logic_vector(11 downto 0);
+    signal Output_Data_0_1 :  std_logic_vector(11 downto 0);
+    signal Output_Data_1_1 :  std_logic_vector(11 downto 0);
+    signal Output_Data_0_2 :  std_logic_vector(11 downto 0);
+    signal Output_Data_1_2 :  std_logic_vector(11 downto 0);
+    signal Output_Data_0_3 :  std_logic_vector(11 downto 0);
+    signal Output_Data_1_3 :  std_logic_vector(11 downto 0);
     
     signal LANE0_P :  std_logic;
     signal LANE0_N :  std_logic;
@@ -74,14 +74,17 @@ architecture behavioral of TB_DataSource_Transciever is
             -- Outputs
             LANE0_TXD_P : out std_logic;
             LANE0_TXD_N : out std_logic;
-            Output_Data_3_1 : out std_logic_vector(11 downto 0);
-            Output_Data_3_0 : out std_logic_vector(11 downto 0);
-            Output_Data_1_1 : out std_logic_vector(11 downto 0);
+            
+            Output_Data_0_0 : out std_logic_vector(11 downto 0);
             Output_Data_1_0 : out std_logic_vector(11 downto 0);
             Output_Data_0_1 : out std_logic_vector(11 downto 0);
-            Output_Data_0_0 : out std_logic_vector(11 downto 0);
-            Output_Data_2_1 : out std_logic_vector(11 downto 0);
-            Output_Data_2_0 : out std_logic_vector(11 downto 0);
+            Output_Data_1_1 : out std_logic_vector(11 downto 0);
+            Output_Data_0_2 : out std_logic_vector(11 downto 0);
+            Output_Data_1_2 : out std_logic_vector(11 downto 0);
+            Output_Data_0_3 : out std_logic_vector(11 downto 0);
+            Output_Data_1_3 : out std_logic_vector(11 downto 0);
+            
+            
             Data_Valid : out std_logic;
             LANE1_TXD_P : out std_logic;
             LANE1_TXD_N : out std_logic
@@ -132,14 +135,15 @@ begin
             Logic_Reset_N => NSYSRESET,
 
             -- Outputs
-            Output_Data_3_1 => Output_Data_3_1,
-            Output_Data_0_1 => Output_Data_0_1,
-            Output_Data_1_1 => Output_Data_1_1,
-            Output_Data_2_1 => Output_Data_2_1,
             Output_Data_0_0 => Output_Data_0_0,
             Output_Data_1_0 => Output_Data_1_0,
-            Output_Data_2_0 => Output_Data_2_0,
-            Output_Data_3_0 => Output_Data_3_0,
+            Output_Data_0_1 => Output_Data_0_1,
+            Output_Data_1_1 => Output_Data_1_1,
+            Output_Data_0_2 => Output_Data_0_2,
+            Output_Data_1_2 => Output_Data_1_2,
+            Output_Data_0_3 => Output_Data_0_3,
+            Output_Data_1_3 => Output_Data_1_3,
+
             Data_Valid => open,
             
             LANE0_TXD_P =>  LANE1_P,

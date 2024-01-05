@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Jan  2 17:45:18 2024
+// Created by SmartDesign Thu Jan  4 21:34:57 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -637,14 +637,14 @@ Data_Block Data_Block_0(
         .Communication_Builder_RUN ( Communication_0_Builder_Enable ),
         .Fifo_RESET_N              ( DBGport_4_1 ),
         .Reset_N                   ( Clock_Reset_0_Main_RESET_N_0 ),
-        .C_addr_frame              ( Controler_0_TRG_addr ),
-        .C_write_data_frame        ( Controler_0_TRG_data ),
         .LANE0_RXD_P               ( LANE0_RXD_P ),
         .LANE0_RXD_N               ( LANE0_RXD_N ),
         .LANE1_RXD_P               ( LANE1_RXD_P ),
         .LANE1_RXD_N               ( LANE1_RXD_N ),
         .CTRL_Clock_40M            ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
         .REF_Clock                 ( Clock_Reset_0_XCVR_REF_Clock ),
+        .C_addr_frame              ( Controler_0_TRG_addr ),
+        .C_write_data_frame        ( Controler_0_TRG_data ),
         // Outputs
         .C_busy                    ( Data_Block_0_C_busy ),
         .Communication_Empty       ( Data_Block_0_Communication_Empty ),
@@ -653,12 +653,12 @@ Data_Block Data_Block_0(
         .Diag_2                    (  ),
         .Diag_3                    (  ),
         .Communication_Data_Req    (  ),
-        .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ),
         .LANE0_TXD_P               ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N               ( LANE0_TXD_N_net_0 ),
         .LANE1_TXD_P               ( LANE1_TXD_P_net_0 ),
-        .LANE1_TXD_N               ( LANE1_TXD_N_net_0 ) 
+        .LANE1_TXD_N               ( LANE1_TXD_N_net_0 ),
+        .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
+        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ) 
         );
 
 //--------INBUF_DIFF

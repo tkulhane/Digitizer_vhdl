@@ -7,7 +7,7 @@ entity Alignment_Fifo is
   generic 
   (
     g_WIDTH : natural := 8;
-    g_DEPTH : integer := 32
+    g_DEPTH : integer := 256
   );
   port 
   (

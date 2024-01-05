@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Jan  3 22:38:36 2024
+// Created by SmartDesign Thu Jan  4 21:34:11 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -30,9 +30,7 @@ module OneLane_Transciever(
     LANE0_TXD_N,
     LANE0_TXD_P,
     Output_Data_0,
-    Output_Data_1,
-    Output_Data_2,
-    Output_Data_3
+    Output_Data_1
 );
 
 //--------------------------------------------------------------------
@@ -63,8 +61,6 @@ output        LANE0_TXD_N;
 output        LANE0_TXD_P;
 output [11:0] Output_Data_0;
 output [11:0] Output_Data_1;
-output [11:0] Output_Data_2;
-output [11:0] Output_Data_3;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -108,7 +104,7 @@ wire           LANE0_TXD_P_net_0;
 wire           Logic_Clock;
 wire           Logic_Reser_N;
 wire   [11:0]  Output_Data_0_net_0;
-wire   [11:0]  Output_Data_2_net_0;
+wire   [11:0]  Output_Data_1_net_0;
 wire           PF_TX_PLL_C1_0_CLKS_TO_XCVR_BIT_CLK;
 wire           PF_TX_PLL_C1_0_CLKS_TO_XCVR_LOCK;
 wire           PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE;
@@ -145,10 +141,8 @@ wire           CTRL_Data_Go_net_1;
 wire           CTRL_ILAS_Go_net_1;
 wire           Empty_For_NonAll_net_1;
 wire           Input_MainData_Read_net_1;
-wire   [11:0]  Output_Data_2_net_1;
-wire   [11:0]  Output_Data_2_net_2;
 wire   [11:0]  Output_Data_0_net_1;
-wire   [11:0]  Output_Data_0_net_2;
+wire   [11:0]  Output_Data_1_net_1;
 wire   [31:0]  DATA_net_0;
 wire   [31:0]  Q_net_0;
 wire   [3:0]   DATA_net_1;
@@ -206,14 +200,10 @@ assign Empty_For_NonAll_net_1    = Empty_For_NonAll_net_0;
 assign Empty_For_NonAll          = Empty_For_NonAll_net_1;
 assign Input_MainData_Read_net_1 = Input_MainData_Read_net_0;
 assign Input_MainData_Read       = Input_MainData_Read_net_1;
-assign Output_Data_2_net_1       = Output_Data_2_net_0;
-assign Output_Data_2[11:0]       = Output_Data_2_net_1;
-assign Output_Data_2_net_2       = Output_Data_2_net_0;
-assign Output_Data_3[11:0]       = Output_Data_2_net_2;
 assign Output_Data_0_net_1       = Output_Data_0_net_0;
 assign Output_Data_0[11:0]       = Output_Data_0_net_1;
-assign Output_Data_0_net_2       = Output_Data_0_net_0;
-assign Output_Data_1[11:0]       = Output_Data_0_net_2;
+assign Output_Data_1_net_1       = Output_Data_1_net_0;
+assign Output_Data_1[11:0]       = Output_Data_1_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -414,7 +404,7 @@ SampleCompose SampleCompose_0_0(
         .Input_Data_1    ( Alignment_Fifo_0_Read_Data_3 ),
         .Input_Data_0    ( Alignment_Fifo_0_Read_Data_2 ),
         // Outputs
-        .Output_Data     ( Output_Data_2_net_0 ),
+        .Output_Data     ( Output_Data_1_net_0 ),
         .Output_TailBits (  ) 
         );
 

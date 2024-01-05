@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity RxMainLinkController is
   generic 
   (
-    g_NumOfLanes : natural := 2
+    g_NumOfLanes : natural := 4
   );
   port 
   (

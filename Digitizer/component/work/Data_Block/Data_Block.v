@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Jan  3 16:25:43 2024
+// Created by SmartDesign Thu Jan  4 21:34:32 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -97,12 +97,12 @@ wire          Communication_Read;
 wire          CTRL_Clock_40M;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_0_0_0;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_0_1;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_2;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_3;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_1_0_0;
 wire   [11:0] DataSource_Transcievers_0_Output_Data_1_1;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_2_0_0;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_2_1;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_3_0_0;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_3_1;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_2;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_3;
 wire          Diag_0_net_0;
 wire          Diag_1_net_0;
 wire   [7:0]  Event_Info_RAM_Block_0_A_DOUT_Event_Status;
@@ -160,12 +160,12 @@ wire          Communication_Empty_net_1;
 wire          Diag_0_net_1;
 wire          Diag_1_net_1;
 wire          Communication_Data_Req_net_1;
-wire   [15:0] C_read_data_frame_net_1;
-wire   [31:0] Communication_Data_Frame_net_1;
 wire          LANE0_TXD_P_net_1;
 wire          LANE0_TXD_N_net_1;
 wire          LANE1_TXD_P_net_1;
 wire          LANE1_TXD_N_net_1;
+wire   [15:0] C_read_data_frame_net_1;
+wire   [31:0] Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -208,10 +208,6 @@ assign Diag_1_net_1                   = Diag_1_net_0;
 assign Diag_1                         = Diag_1_net_1;
 assign Communication_Data_Req_net_1   = Communication_Data_Req_net_0;
 assign Communication_Data_Req         = Communication_Data_Req_net_1;
-assign C_read_data_frame_net_1        = C_read_data_frame_net_0;
-assign C_read_data_frame[15:0]        = C_read_data_frame_net_1;
-assign Communication_Data_Frame_net_1 = Communication_Data_Frame_net_0;
-assign Communication_Data_Frame[31:0] = Communication_Data_Frame_net_1;
 assign LANE0_TXD_P_net_1              = LANE0_TXD_P_net_0;
 assign LANE0_TXD_P                    = LANE0_TXD_P_net_1;
 assign LANE0_TXD_N_net_1              = LANE0_TXD_N_net_0;
@@ -220,6 +216,10 @@ assign LANE1_TXD_P_net_1              = LANE1_TXD_P_net_0;
 assign LANE1_TXD_P                    = LANE1_TXD_P_net_1;
 assign LANE1_TXD_N_net_1              = LANE1_TXD_N_net_0;
 assign LANE1_TXD_N                    = LANE1_TXD_N_net_1;
+assign C_read_data_frame_net_1        = C_read_data_frame_net_0;
+assign C_read_data_frame[15:0]        = C_read_data_frame_net_1;
+assign Communication_Data_Frame_net_1 = Communication_Data_Frame_net_0;
+assign Communication_Data_Frame[31:0] = Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -284,15 +284,15 @@ DataSource_Transcievers DataSource_Transcievers_0(
         .LANE0_TXD_N     ( LANE0_TXD_N_net_0 ),
         .LANE1_TXD_P     ( LANE1_TXD_P_net_0 ),
         .LANE1_TXD_N     ( LANE1_TXD_N_net_0 ),
-        .Output_Data_3_1 ( DataSource_Transcievers_0_Output_Data_3_1 ),
-        .Output_Data_3_0 ( DataSource_Transcievers_0_Output_Data_3_0_0 ),
         .Output_Data_1_1 ( DataSource_Transcievers_0_Output_Data_1_1 ),
         .Output_Data_1_0 ( DataSource_Transcievers_0_Output_Data_1_0_0 ),
         .Output_Data_0_1 ( DataSource_Transcievers_0_Output_Data_0_1 ),
         .Output_Data_0_0 ( DataSource_Transcievers_0_Output_Data_0_0_0 ),
-        .Output_Data_2_1 ( DataSource_Transcievers_0_Output_Data_2_1 ),
-        .Output_Data_2_0 ( DataSource_Transcievers_0_Output_Data_2_0_0 ),
-        .Data_Valid      (  ) 
+        .Data_Valid      (  ),
+        .Output_Data_0_2 ( DataSource_Transcievers_0_Output_Data_0_2 ),
+        .Output_Data_1_2 ( DataSource_Transcievers_0_Output_Data_1_2 ),
+        .Output_Data_1_3 ( DataSource_Transcievers_0_Output_Data_1_3 ),
+        .Output_Data_0_3 ( DataSource_Transcievers_0_Output_Data_0_3 ) 
         );
 
 //--------Event_Info_RAM_Block
@@ -366,9 +366,9 @@ Input_Data_Part Input_Data_Part_0(
         .RE                  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
         .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_0_1 ),
-        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_1_1 ),
-        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_0_0_0 ),
-        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_1_0_0 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_0_0_0 ),
+        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_0_2 ),
+        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_0_3 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
         .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_0 ),
@@ -394,10 +394,10 @@ Input_Data_Part Input_Data_Part_1(
         .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
         .RE                  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
-        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_2_1 ),
-        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_3_1 ),
-        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_2_0_0 ),
-        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_3_0_0 ),
+        .Input_Data_0        ( DataSource_Transcievers_0_Output_Data_1_1 ),
+        .Input_Data_1        ( DataSource_Transcievers_0_Output_Data_1_0_0 ),
+        .Input_Data_2        ( DataSource_Transcievers_0_Output_Data_1_2 ),
+        .Input_Data_3        ( DataSource_Transcievers_0_Output_Data_1_3 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
         .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_1 ),
