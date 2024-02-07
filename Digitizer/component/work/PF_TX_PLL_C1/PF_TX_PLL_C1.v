@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Jan  2 18:06:57 2024
+// Created by SmartDesign Wed Feb  7 15:39:41 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -19,7 +19,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_TX_PLL:2.0.300} -component
 "TxPLL_AUX_LOW_SEL:true"  \
 "TxPLL_AUX_OUT:125"  \
 "TxPLL_BANDWIDTH:Low"  \
-"TxPLL_CLK_125_EN:true"  \
+"TxPLL_CLK_125_EN:false"  \
 "TxPLL_DYNAMIC_RECONFIG_INTERFACE_EN:false"  \
 "TxPLL_EXT_WAVE_SEL:0"  \
 "TxPLL_FAB_LOCK_EN:false"  \
@@ -33,7 +33,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_TX_PLL:2.0.300} -component
 "TxPLL_JITTER_MODE_SEL:10G SyncE 32Bit"  \
 "TxPLL_JITTER_MODE_WANDER:15"  \
 "TxPLL_MODE:NORMAL"  \
-"TxPLL_OUT:2500.000"  \
+"TxPLL_OUT:3000.000"  \
 "TxPLL_REF:156.25"  \
 "TxPLL_RN_FILTER:false"  \
 "TxPLL_SOURCE:FABRIC"  \
@@ -52,7 +52,6 @@ module PF_TX_PLL_C1(
     FAB_REF_CLK,
     // Outputs
     BIT_CLK,
-    CLK_125,
     LOCK,
     PLL_LOCK,
     REF_CLK_TO_LANE
@@ -66,14 +65,12 @@ input  FAB_REF_CLK;
 // Output
 //--------------------------------------------------------------------
 output BIT_CLK;
-output CLK_125;
 output LOCK;
 output PLL_LOCK;
 output REF_CLK_TO_LANE;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire   CLK_125_net_0;
 wire   CLKS_TO_XCVR_BIT_CLK;
 wire   CLKS_TO_XCVR_LOCK;
 wire   CLKS_TO_XCVR_REF_CLK_TO_LANE;
@@ -83,7 +80,6 @@ wire   PLL_LOCK_net_1;
 wire   CLKS_TO_XCVR_LOCK_net_0;
 wire   CLKS_TO_XCVR_BIT_CLK_net_0;
 wire   CLKS_TO_XCVR_REF_CLK_TO_LANE_net_0;
-wire   CLK_125_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -107,8 +103,6 @@ assign CLKS_TO_XCVR_BIT_CLK_net_0         = CLKS_TO_XCVR_BIT_CLK;
 assign BIT_CLK                            = CLKS_TO_XCVR_BIT_CLK_net_0;
 assign CLKS_TO_XCVR_REF_CLK_TO_LANE_net_0 = CLKS_TO_XCVR_REF_CLK_TO_LANE;
 assign REF_CLK_TO_LANE                    = CLKS_TO_XCVR_REF_CLK_TO_LANE_net_0;
-assign CLK_125_net_1                      = CLK_125_net_0;
-assign CLK_125                            = CLK_125_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -119,7 +113,6 @@ PF_TX_PLL_C1_PF_TX_PLL_C1_0_PF_TX_PLL PF_TX_PLL_C1_0(
         // Outputs
         .LOCK            ( CLKS_TO_XCVR_LOCK ),
         .BIT_CLK         ( CLKS_TO_XCVR_BIT_CLK ),
-        .CLK_125         ( CLK_125_net_0 ),
         .REF_CLK_TO_LANE ( CLKS_TO_XCVR_REF_CLK_TO_LANE ),
         .PLL_LOCK        ( PLL_LOCK_net_0 ) 
         );

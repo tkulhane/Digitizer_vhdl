@@ -39,10 +39,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 5 seconds
+Total time spent in I/O Bank and Globals Assigner: 6 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Thu Jan  4 22:48:19 2024
+Design: Top                             Started: Wed Feb  7 23:22:29 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -56,53 +56,53 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 21 seconds
-Placement                : 104 seconds
-Improvement              : 153 seconds
+Clustering (1 pass)      : 22 seconds
+Placement                : 110 seconds
+Improvement              : 163 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Thu Jan  4 22:54:10 2024
-Total CPU Time:     00:08:14            Total Elapsed Time: 00:05:51
-Total Memory Usage: 2680.3 Mbytes
+Finished: Wed Feb  7 23:28:37 2024
+Total CPU Time:     00:08:37            Total Elapsed Time: 00:06:08
+Total Memory Usage: 2662.5 Mbytes
                         o - o - o - o - o - o
 
 
 Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
-    Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/N_35_i
+    Driver: DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
+       Net: DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/N_35_i
 Clock pins: 1
-    Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/N_35_i
+    Driver: DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
+       Net: DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/N_35_i
 Clock pins: 1
-    Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/N_35_i
+    Driver: DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
+       Net: DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/N_35_i
 Clock pins: 1
-    Driver: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/N_35_i
+    Driver: DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
+       Net: DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/N_35_i
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Thu Jan  4 22:54:46 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Feb  7 23:29:14 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Thu Jan  4 22:56:06 2024
-Total CPU Time:     00:03:21            Total Elapsed Time: 00:01:20
-Total Memory Usage: 5492.1 Mbytes
+Finished: Wed Feb  7 23:30:46 2024
+Total CPU Time:     00:03:35            Total Elapsed Time: 00:01:32
+Total Memory Usage: 5267.5 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 93785 | 299544 | 31.31      |
+| 4LUT          | 93772 | 299544 | 31.30      |
 | DFF           | 50813 | 299544 | 16.96      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 95434 | 299544 | 31.86      |
+| Logic Element | 95488 | 299544 | 31.88      |
 +---------------+-------+--------+------------+
 
 I/O Placement

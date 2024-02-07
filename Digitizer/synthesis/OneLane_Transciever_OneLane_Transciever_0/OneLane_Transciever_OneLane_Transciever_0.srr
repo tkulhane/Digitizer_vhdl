@@ -1,4 +1,4 @@
-# Thu Jan  4 22:43:14 2024
+# Wed Feb  7 22:07:19 2024
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -23,10 +23,10 @@ Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 134MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 134MB)
 
 
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 134MB)
@@ -43,7 +43,7 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 Begin environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 178MB peak: 178MB)
 
 
-Finished environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 178MB peak: 179MB)
+Finished environment creation (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 178MB peak: 178MB)
 
 
 Start loading ILMs (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 178MB peak: 179MB)
@@ -77,26 +77,26 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 
 Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 187MB peak: 187MB)
 
-Encoding state machine Data_Block_0.DataSource_Transcievers_0.TxMainLinkController_0.state_reg[0:2] (in view: work.Top(verilog))
+Encoding state machine DataSource_Transcievers_0.TxMainLinkController_0.state_reg[0:2] (in view: work.Top(verilog))
 original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
-Encoding state machine Data_Block_0.DataSource_Transcievers_0.RxMainLinkController_0.state_reg[0:4] (in view: work.Top(verilog))
+Encoding state machine DataSource_Transcievers_0.RxMainLinkController_0.state_reg[0:4] (in view: work.Top(verilog))
 original code -> new code
    00001 -> 00001
    00010 -> 00010
    00100 -> 00100
    01000 -> 01000
    10000 -> 10000
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing sequential instance Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[0] (in view: work.Top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z25_layer0_1_0(verilog) instance genblk10\.rptr[6:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z25_layer0_1_0(verilog) instance genblk10\.memraddr_r[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z25_layer0_1_0(verilog) instance genblk10\.memwaddr_r[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z25_layer0_1_1(verilog) instance genblk10\.wptr[6:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z25_layer0_1_1(verilog) instance genblk10\.rptr[6:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z25_layer0_1_1(verilog) instance genblk10\.memraddr_r[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z25_layer0_1_1(verilog) instance genblk10\.memwaddr_r[5:0] 
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing sequential instance DataSource_Transcievers_0.Synchronizer_0_2.Chain[0] (in view: work.Top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z31_layer0_1_0(verilog) instance genblk10\.rptr[6:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z31_layer0_1_0(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z31_layer0_1_0(verilog) instance genblk10\.memwaddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z31_layer0_1_1(verilog) instance genblk10\.wptr[6:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z31_layer0_1_1(verilog) instance genblk10\.rptr[6:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z31_layer0_1_1(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c13\corefifo_c13_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z31_layer0_1_1(verilog) instance genblk10\.memwaddr_r[5:0] 
 Encoding state machine rmfsm[4:0] (in view: work.CORELANEMSTRmode2_OneLane_Transciever_OneLane_Transciever_0(verilog))
 original code -> new code
    000 -> 00001
@@ -104,7 +104,7 @@ original code -> new code
    010 -> 00100
    011 -> 01000
    100 -> 10000
-Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z27_layer0_OneLane_Transciever_OneLane_Transciever_0(verilog))
+Encoding state machine fsm_st[5:0] (in view: work.CORELCKMGT_Z33_layer0_OneLane_Transciever_OneLane_Transciever_0(verilog))
 original code -> new code
    000 -> 000001
    001 -> 000010
@@ -112,7 +112,7 @@ original code -> new code
    011 -> 001000
    110 -> 010000
    111 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelckmgt\2.0.100\rtl\vlog\core\corelckmgt.v":211:0:211:5|Found counter in view:work.CORELCKMGT_Z27_layer0_OneLane_Transciever_OneLane_Transciever_0(verilog) instance intg_st[6:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelckmgt\2.0.100\rtl\vlog\core\corelckmgt.v":211:0:211:5|Found counter in view:work.CORELCKMGT_Z33_layer0_OneLane_Transciever_OneLane_Transciever_0(verilog) instance intg_st[6:0] 
 Encoding state machine state_reg[0:4] (in view: work.TxLaneControl_1_1(rtl))
 original code -> new code
    00001 -> 00001
@@ -130,16 +130,16 @@ original code -> new code
    10000 -> 10000
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":152:8:152:9|Found counter in view:work.RxLaneControl_0_OneLane_Transciever_OneLane_Transciever_0(rtl) instance fsm_timer[9:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":360:4:360:5|Found counter in view:work.RxLaneControl_0_OneLane_Transciever_OneLane_Transciever_0(rtl) instance Counter_IlasSequence[7:0] 
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":348:4:348:5|Removing instance Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control.RD_INDEX_3[0] because it is equivalent to instance Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_1_1(verilog) instance genblk10\.wptr[6:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_1_1(verilog) instance genblk10\.rptr[6:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_1_1(verilog) instance genblk10\.memraddr_r[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_1_1(verilog) instance genblk10\.memwaddr_r[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_1_0(verilog) instance genblk10\.rptr[6:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_1_0(verilog) instance genblk10\.memraddr_r[5:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z22_layer0_1_0(verilog) instance genblk10\.memwaddr_r[5:0] 
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":348:4:348:5|Removing instance DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control.RD_INDEX_3[0] because it is equivalent to instance DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z28_layer0_1_1(verilog) instance genblk10\.wptr[6:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z28_layer0_1_1(verilog) instance genblk10\.rptr[6:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z28_layer0_1_1(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z28_layer0_1_1(verilog) instance genblk10\.memwaddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z28_layer0_1_0(verilog) instance genblk10\.rptr[6:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z28_layer0_1_0(verilog) instance genblk10\.memraddr_r[5:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":823:12:823:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z28_layer0_1_0(verilog) instance genblk10\.memwaddr_r[5:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 210MB peak: 217MB)
+Starting factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 211MB peak: 218MB)
 
 
 Finished factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 227MB peak: 227MB)
@@ -148,28 +148,28 @@ Finished factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; M
 Available hyper_sources - for debug and ip models
 	None Found
 
-@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":318:6:318:7|Sequential instance Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.RD_Enable_Vector_Encoded is reduced to a combinational gate by constant propagation.
+@W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignment_fifo.vhd":318:6:318:7|Sequential instance DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.RD_Enable_Vector_Encoded is reduced to a combinational gate by constant propagation.
 
 Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 228MB peak: 252MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:15s; Memory used current: 234MB peak: 252MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:16s; Memory used current: 235MB peak: 252MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:17s; Memory used current: 235MB peak: 252MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:20s; Memory used current: 235MB peak: 252MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 235MB peak: 252MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:20s; Memory used current: 235MB peak: 252MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:21s; CPU Time elapsed 0h:00m:21s; Memory used current: 228MB peak: 252MB)
+Finished preparing to map (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:23s; Memory used current: 229MB peak: 252MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:23s; Memory used current: 294MB peak: 294MB)
+Finished technology mapping (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:26s; Memory used current: 297MB peak: 297MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:24s		    -1.05ns		13552 /      3142
+   1		0h:00m:27s		    -0.38ns		13547 /      3142
 
 
 
@@ -179,10 +179,10 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:28s; Memory used current: 300MB peak: 300MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:34s; Memory used current: 303MB peak: 303MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:29s; CPU Time elapsed 0h:00m:29s; Memory used current: 301MB peak: 303MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:34s; Memory used current: 304MB peak: 305MB)
 
 
 End compile point sub-process log
@@ -191,14 +191,14 @@ End compile point sub-process log
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c8\pf_xcvr_erm_c8.v":473:13:473:29|Blackbox CORELNKTMR_V is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\sgcore\pf_xcvr_apblink_v\1.1.104\hdl\pf_xcvr_apblink_v.v":57:17:57:18|Blackbox XCVR_APB_LINK_V2 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @N: MT615 |Found clock Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK with period 6.25ns 
-@N: MT615 |Found clock Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R with period 8.00ns 
-@N: MT615 |Found clock Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R with period 8.00ns 
+@N: MT615 |Found clock DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R with period 6.67ns 
+@N: MT615 |Found clock DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R with period 6.67ns 
 @N: MT615 |Found clock Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV with period 25.00ns 
 @W: MT420 |Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0_clkint_0.
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Thu Jan  4 22:43:43 2024
+# Timing report written on Wed Feb  7 22:07:54 2024
 #
 
 
@@ -218,54 +218,51 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -1.300
+Worst slack in design: -0.633
 
-                                                                                                          Requested     Estimated     Requested     Estimated                Clock                                                                    Clock                
-Starting Clock                                                                                            Frequency     Frequency     Period        Period        Slack      Type                                                                     Group                
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                  40.0 MHz      17.4 MHz      25.000        57.498        -1.300     generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                                                       160.0 MHz     NA            6.250         NA            NA         declared                                                                 default_clkgroup     
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       125.0 MHz     54.4 MHz      8.000         18.399        3.421      declared                                                                 default_clkgroup     
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R       125.0 MHz     54.4 MHz      8.000         18.399        -0.387     declared                                                                 default_clkgroup     
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     125.0 MHz     NA            8.000         NA            NA         declared                                                                 default_clkgroup     
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     125.0 MHz     NA            8.000         NA            NA         declared                                                                 default_clkgroup     
-FTDI_CLK                                                                                                  100.0 MHz     NA            10.000        NA            NA         declared                                                                 default_clkgroup     
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                           100.0 MHz     217.0 MHz     10.000        4.608         5.392      inferred                                                                 Inferred_clkgroup_0_1
-System                                                                                                    100.0 MHz     925.9 MHz     10.000        1.080         8.920      system                                                                   system_clkgroup      
-===========================================================================================================================================================================================================================================================================
+                                                                                             Requested     Estimated     Requested     Estimated                Clock                                                                    Clock                
+Starting Clock                                                                               Frequency     Frequency     Period        Period        Slack      Type                                                                     Group                
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                     40.0 MHz      29.0 MHz      25.000        34.498        -0.633     generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                                          160.0 MHz     NA            6.250         NA            NA         declared                                                                 default_clkgroup     
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R       150.0 MHz     108.7 MHz     6.667         9.199         2.088      declared                                                                 default_clkgroup     
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R       150.0 MHz     108.7 MHz     6.667         9.199         0.280      declared                                                                 default_clkgroup     
+DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     150.0 MHz     NA            6.667         NA            NA         declared                                                                 default_clkgroup     
+DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     150.0 MHz     NA            6.667         NA            NA         declared                                                                 default_clkgroup     
+FTDI_CLK                                                                                     100.0 MHz     NA            10.000        NA            NA         declared                                                                 default_clkgroup     
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                              100.0 MHz     217.0 MHz     10.000        4.608         5.392      inferred                                                                 Inferred_clkgroup_0_1
+System                                                                                       100.0 MHz     925.9 MHz     10.000        1.080         8.920      system                                                                   system_clkgroup      
+==============================================================================================================================================================================================================================================================
 Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
 
 
-@W: MT116 |Paths from clock (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R:r) to clock (Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV:r) are overconstrained because the required time of 1.00 ns is too small.  
-@W: MT116 |Paths from clock (Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV:r) to clock (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R:r) are overconstrained because the required time of 1.00 ns is too small.  
-@W: MT116 |Paths from clock (Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV:r) to clock (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R:r) are overconstrained because the required time of 1.00 ns is too small.  
 
 
 
 Clock Relationships
 *******************
 
-Clocks                                                                                                                                                                                                    |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Starting                                                                                             Ending                                                                                               |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-System                                                                                               System                                                                                               |  10.000      8.920   |  No paths    -      |  No paths    -      |  No paths    -    
-System                                                                                               Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             |  25.000      22.907  |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  8.000       4.315   |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             |  1.000       -0.387  |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                      |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  8.000       7.658   |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  8.000       3.421   |  No paths    -      |  No paths    -      |  No paths    -    
-Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                      |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             System                                                                                               |  25.000      23.773  |  No paths    -      |  No paths    -      |  No paths    -    
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  1.000       -1.300  |  No paths    -      |  No paths    -      |  No paths    -    
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  1.000       -1.300  |  No paths    -      |  No paths    -      |  No paths    -    
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             |  25.000      22.483  |  No paths    -      |  No paths    -      |  No paths    -    
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                             PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                      |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                      Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                      Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                      PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                      |  10.000      5.392   |  No paths    -      |  No paths    -      |  No paths    -    
-=================================================================================================================================================================================================================================================================================================
+Clocks                                                                                                                                                                          |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                                                Ending                                                                                  |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                                                  System                                                                                  |  10.000      8.920   |  No paths    -      |  No paths    -      |  No paths    -    
+System                                                                                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                |  25.000      22.907  |  No paths    -      |  No paths    -      |  No paths    -    
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  6.667       2.981   |  No paths    -      |  No paths    -      |  No paths    -    
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                |  1.667       0.280   |  No paths    -      |  No paths    -      |  No paths    -    
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                         |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  6.667       6.324   |  No paths    -      |  No paths    -      |  No paths    -    
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  6.667       2.088   |  No paths    -      |  No paths    -      |  No paths    -    
+DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                         |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                System                                                                                  |  25.000      23.773  |  No paths    -      |  No paths    -      |  No paths    -    
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  1.667       -0.633  |  No paths    -      |  No paths    -      |  No paths    -    
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  1.667       -0.633  |  No paths    -      |  No paths    -      |  No paths    -    
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                |  25.000      22.483  |  No paths    -      |  No paths    -      |  No paths    -    
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                         |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                         DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                         DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                         |  10.000      5.392   |  No paths    -      |  No paths    -      |  No paths    -    
+=======================================================================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -287,41 +284,41 @@ Detailed Report for Clock: Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_
 Starting Points with Worst Slack
 ********************************
 
-                                                                                                                                    Starting                                                                                                                                           Arrival           
-Instance                                                                                                                            Reference                                                    Type     Pin     Net                                                                  Time        Slack 
-                                                                                                                                    Clock                                                                                                                                                                
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                    Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]     0.218       -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN2                                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     DFN1     Q       I_XCVR_LANE0_SD_DFN2_Q                                               0.094       22.483
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[1]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[1]                                                            0.218       22.654
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[3]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[3]                                                            0.218       22.736
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[1]                        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       sync_st[1]                                                           0.201       23.002
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rqEn            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       I_XCVR_CORELANEMSTR_0_RQI[0]                                         0.201       23.004
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.o_lckfrc_st     Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       I_XCVR_CORELANEMSTR_0_O_LCKFRC                                       0.218       23.061
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rmfsm[3]        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       rmfsm[3]                                                             0.218       23.192
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[0]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[0]                                                            0.218       23.402
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[5]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[5]                                                            0.218       23.465
-=========================================================================================================================================================================================================================================================================================================
+                                                                                                                       Starting                                                                                                                              Arrival           
+Instance                                                                                                               Reference                                                    Type     Pin     Net                                                     Time        Slack 
+                                                                                                                       Clock                                                                                                                                                   
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                    Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]     0.218       -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN2                                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     DFN1     Q       I_XCVR_LANE0_SD_DFN2_Q                                  0.094       22.483
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[1]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[1]                                               0.218       22.654
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[3]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[3]                                               0.218       22.736
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[1]                        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       sync_st[1]                                              0.201       23.002
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rqEn            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       I_XCVR_CORELANEMSTR_0_RQI[0]                            0.201       23.004
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.o_lckfrc_st     Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       I_XCVR_CORELANEMSTR_0_O_LCKFRC                          0.218       23.061
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rmfsm[3]        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       rmfsm[3]                                                0.218       23.192
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[0]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[0]                                               0.218       23.402
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[5]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[5]                                               0.218       23.465
+===============================================================================================================================================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                                                                                                          Starting                                                                                         Required           
-Instance                                                                                                                                  Reference                                                    Type     Pin     Net                Time         Slack 
-                                                                                                                                          Clock                                                                                                               
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock                                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[0]                                 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[1]                                 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_ref.syncOutput[0]     Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0]      Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_ref.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_ref.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       rstn               1.000        -1.300
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.lckfrc_st                               Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      EN      un1_lckfrc_nx6     24.873       22.483
-==============================================================================================================================================================================================================================================================
+                                                                                                                             Starting                                                                                         Required           
+Instance                                                                                                                     Reference                                                    Type     Pin     Net                Time         Slack 
+                                                                                                                             Clock                                                                                                               
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock                                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[0]                                 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[1]                                 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_ref.syncOutput[0]     Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0]      Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_ref.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_ref.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]        Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       rstn               1.667        -0.633
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.lckfrc_st                               Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      EN      un1_lckfrc_nx6     24.873       22.483
+=================================================================================================================================================================================================================================================
 
 
 
@@ -330,151 +327,151 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      1.000
+      Requested Period:                      1.667
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.000
+    = Required time:                         1.667
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.300
+    = Slack (critical) :                     -0.633
 
     Number of logic level(s):                1
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock / ALn
+    Starting point:                          DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock / ALn
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    The end   point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin CLK
 
-Instance / Net                                                                                                        Pin      Pin               Arrival     No. of    
-Name                                                                                                         Type     Name     Dir     Delay     Time        Fan Out(s)
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                             SLE      Q        Out     0.218     0.218 r     -         
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                             Net      -        -       1.009     -           6         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn          CFG2     A        In      -         1.227 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn          CFG2     Y        Out     0.051     1.278 r     -         
-rstn                                                                                                         Net      -        -       1.022     -           9         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock     SLE      ALn      In      -         2.300 r     -         
-=======================================================================================================================================================================
+Instance / Net                                                                                           Pin      Pin               Arrival     No. of    
+Name                                                                                            Type     Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                             SLE      Q        Out     0.218     0.218 r     -         
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                             Net      -        -       1.009     -           6         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn          CFG2     A        In      -         1.227 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn          CFG2     Y        Out     0.051     1.278 r     -         
+rstn                                                                                            Net      -        -       1.022     -           9         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock     SLE      ALn      In      -         2.300 r     -         
+==========================================================================================================================================================
 Total path delay (propagation time + setup) of 2.300 is 0.269(11.7%) logic and 2.031(88.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 2: 
-      Requested Period:                      1.000
+      Requested Period:                      1.667
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.000
+    = Required time:                         1.667
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.300
+    = Slack (critical) :                     -0.633
 
     Number of logic level(s):                1
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[0] / ALn
+    Starting point:                          DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[0] / ALn
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    The end   point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin CLK
 
-Instance / Net                                                                                                         Pin      Pin               Arrival     No. of    
-Name                                                                                                          Type     Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              SLE      Q        Out     0.218     0.218 r     -         
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              Net      -        -       1.009     -           6         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     A        In      -         1.227 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     Y        Out     0.051     1.278 r     -         
-rstn                                                                                                          Net      -        -       1.022     -           9         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[0]     SLE      ALn      In      -         2.300 r     -         
-========================================================================================================================================================================
+Instance / Net                                                                                            Pin      Pin               Arrival     No. of    
+Name                                                                                             Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              SLE      Q        Out     0.218     0.218 r     -         
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              Net      -        -       1.009     -           6         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     A        In      -         1.227 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     Y        Out     0.051     1.278 r     -         
+rstn                                                                                             Net      -        -       1.022     -           9         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[0]     SLE      ALn      In      -         2.300 r     -         
+===========================================================================================================================================================
 Total path delay (propagation time + setup) of 2.300 is 0.269(11.7%) logic and 2.031(88.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 3: 
-      Requested Period:                      1.000
+      Requested Period:                      1.667
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.000
+    = Required time:                         1.667
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.300
+    = Slack (critical) :                     -0.633
 
     Number of logic level(s):                1
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[1] / ALn
+    Starting point:                          DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[1] / ALn
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    The end   point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin CLK
 
-Instance / Net                                                                                                         Pin      Pin               Arrival     No. of    
-Name                                                                                                          Type     Name     Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              SLE      Q        Out     0.218     0.218 r     -         
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              Net      -        -       1.009     -           6         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     A        In      -         1.227 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     Y        Out     0.051     1.278 r     -         
-rstn                                                                                                          Net      -        -       1.022     -           9         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[1]     SLE      ALn      In      -         2.300 r     -         
-========================================================================================================================================================================
+Instance / Net                                                                                            Pin      Pin               Arrival     No. of    
+Name                                                                                             Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              SLE      Q        Out     0.218     0.218 r     -         
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                              Net      -        -       1.009     -           6         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     A        In      -         1.227 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn           CFG2     Y        Out     0.051     1.278 r     -         
+rstn                                                                                             Net      -        -       1.022     -           9         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.history[1]     SLE      ALn      In      -         2.300 r     -         
+===========================================================================================================================================================
 Total path delay (propagation time + setup) of 2.300 is 0.269(11.7%) logic and 2.031(88.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 4: 
-      Requested Period:                      1.000
+      Requested Period:                      1.667
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.000
+    = Required time:                         1.667
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.300
+    = Slack (critical) :                     -0.633
 
     Number of logic level(s):                1
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0] / ALn
+    Starting point:                          DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0] / ALn
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    The end   point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin CLK
 
-Instance / Net                                                                                                                                    Pin      Pin               Arrival     No. of    
-Name                                                                                                                                     Type     Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                         SLE      Q        Out     0.218     0.218 r     -         
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                         Net      -        -       1.009     -           6         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                      CFG2     A        In      -         1.227 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                      CFG2     Y        Out     0.051     1.278 r     -         
-rstn                                                                                                                                     Net      -        -       1.022     -           9         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0]     SLE      ALn      In      -         2.300 r     -         
-===================================================================================================================================================================================================
+Instance / Net                                                                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                                                                        Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                         SLE      Q        Out     0.218     0.218 r     -         
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                         Net      -        -       1.009     -           6         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                      CFG2     A        In      -         1.227 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                      CFG2     Y        Out     0.051     1.278 r     -         
+rstn                                                                                                                        Net      -        -       1.022     -           9         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0]     SLE      ALn      In      -         2.300 r     -         
+======================================================================================================================================================================================
 Total path delay (propagation time + setup) of 2.300 is 0.269(11.7%) logic and 2.031(88.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 5: 
-      Requested Period:                      1.000
+      Requested Period:                      1.667
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.000
+    = Required time:                         1.667
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.300
+    = Slack (critical) :                     -0.633
 
     Number of logic level(s):                1
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0] / D
+    Starting point:                          DataSource_Transcievers_0.Synchronizer_0_2.Chain[1] / Q
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0] / D
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    The end   point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin CLK
 
-Instance / Net                                                                                                                                  Pin      Pin               Arrival     No. of    
-Name                                                                                                                                   Type     Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                       SLE      Q        Out     0.218     0.218 r     -         
-Data_Block_0.DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                       Net      -        -       1.009     -           6         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                    CFG2     A        In      -         1.227 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                    CFG2     Y        Out     0.051     1.278 r     -         
-rstn                                                                                                                                   Net      -        -       1.022     -           9         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]     SLE      D        In      -         2.300 r     -         
-=================================================================================================================================================================================================
+Instance / Net                                                                                                                     Pin      Pin               Arrival     No. of    
+Name                                                                                                                      Type     Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                       SLE      Q        Out     0.218     0.218 r     -         
+DataSource_Transcievers_0.Synchronizer_0_2.Chain[1]                                                                       Net      -        -       1.009     -           6         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                    CFG2     A        In      -         1.227 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.rstn                                    CFG2     Y        Out     0.051     1.278 r     -         
+rstn                                                                                                                      Net      -        -       1.022     -           9         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]     SLE      D        In      -         2.300 r     -         
+====================================================================================================================================================================================
 Total path delay (propagation time + setup) of 2.300 is 0.269(11.7%) logic and 2.031(88.3%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
@@ -482,7 +479,7 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 
 ====================================
-Detailed Report for Clock: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R
+Detailed Report for Clock: DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R
 ====================================
 
 
@@ -490,41 +487,41 @@ Detailed Report for Clock: Data_Block_0/DataSource_Transcievers_0/OneLane_Transc
 Starting Points with Worst Slack
 ********************************
 
-                                                                                               Starting                                                                                                                                                                        Arrival          
-Instance                                                                                       Reference                                                                                               Type           Pin             Net                                      Time        Slack
-                                                                                               Clock                                                                                                                                                                                            
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[3]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        2.964       3.421
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[0]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        2.954       3.431
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[1]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        2.937       3.448
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[2]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        2.928       3.457
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[1]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     2.904       3.481
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[3]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     2.903       3.482
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[0]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     2.898       3.487
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[2]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     2.890       3.495
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[7]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[7]        2.868       3.517
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[12]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[12]       2.867       3.518
-================================================================================================================================================================================================================================================================================================
+                                                                                  Starting                                                                                                                                                           Arrival          
+Instance                                                                          Reference                                                                                  Type           Pin             Net                                      Time        Slack
+                                                                                  Clock                                                                                                                                                                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[3]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        2.964       2.088
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[0]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        2.954       2.098
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[1]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        2.937       2.115
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[2]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        2.928       2.124
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[1]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     2.904       2.148
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[3]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     2.903       2.149
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[0]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     2.898       2.154
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[2]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     2.890       2.162
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[7]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[7]        2.868       2.184
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[12]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[12]       2.867       2.185
+======================================================================================================================================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                                                                                                                                                       Starting                                                                                                                                                                   Required          
-Instance                                                                                                                                                                               Reference                                                                                               Type        Pin           Net                                      Time         Slack
-                                                                                                                                                                                       Clock                                                                                                                                                                                        
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        7.197        3.421
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        7.197        3.431
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        7.197        3.448
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        7.197        3.457
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     7.197        3.481
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     7.197        3.482
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     7.197        3.487
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     7.197        3.495
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[7]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[7]        7.197        3.517
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[14]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[12]       7.197        3.518
-====================================================================================================================================================================================================================================================================================================================================================================================
+                                                                                                                                                                          Starting                                                                                                                                                      Required          
+Instance                                                                                                                                                                  Reference                                                                                  Type        Pin           Net                                      Time         Slack
+                                                                                                                                                                          Clock                                                                                                                                                                           
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        5.864        2.088
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        5.864        2.098
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        5.864        2.115
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        5.864        2.124
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     5.864        2.148
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     5.864        2.149
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     5.864        2.154
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]      PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     5.864        2.162
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[7]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[7]        5.864        2.184
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[14]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[12]       5.864        2.185
+==========================================================================================================================================================================================================================================================================================================================================================
 
 
 
@@ -533,28 +530,28 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      8.000
+      Requested Period:                      6.667
     - Setup time:                            0.803
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         7.197
+    = Required time:                         5.864
 
     - Propagation time:                      3.776
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 3.421
+    = Slack (non-critical) :                 2.088
 
     Number of logic level(s):                0
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0 / RX_DATA[3]
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / B_DIN[3]
-    The start point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin RX_FWF_CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin B_CLK
+    Starting point:                          DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0 / RX_DATA[3]
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / B_DIN[3]
+    The start point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin RX_FWF_CLK
+    The end   point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin B_CLK
 
-Instance / Net                                                                                                                                                                                        Pin            Pin               Arrival     No. of    
-Name                                                                                                                                                                                   Type           Name           Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0                                                                                             XCVR_8B10B     RX_DATA[3]     Out     2.964     2.964 f     -         
-PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]                                                                                                                                                      Net            -              -       0.812     -           1         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     RAM1K20        B_DIN[3]       In      -         3.776 f     -         
-=============================================================================================================================================================================================================================================================
+Instance / Net                                                                                                                                                                           Pin            Pin               Arrival     No. of    
+Name                                                                                                                                                                      Type           Name           Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0                                                                                             XCVR_8B10B     RX_DATA[3]     Out     2.964     2.964 f     -         
+PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]                                                                                                                                         Net            -              -       0.812     -           1         
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     RAM1K20        B_DIN[3]       In      -         3.776 f     -         
+================================================================================================================================================================================================================================================
 Total path delay (propagation time + setup) of 4.579 is 3.767(82.3%) logic and 0.812(17.7%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
@@ -562,7 +559,7 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 
 ====================================
-Detailed Report for Clock: Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R
+Detailed Report for Clock: DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R
 ====================================
 
 
@@ -570,41 +567,41 @@ Detailed Report for Clock: Data_Block_0/DataSource_Transcievers_0/OneLane_Transc
 Starting Points with Worst Slack
 ********************************
 
-                                                                                                                                                                                     Starting                                                                                                                                                               Arrival           
-Instance                                                                                                                                                                             Reference                                                                                               Type        Pin            Net                                 Time        Slack 
-                                                                                                                                                                                     Clock                                                                                                                                                                                    
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock                                                                             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE         Q              PF_XCVR_ERM_C8_0_LANE0_RX_READY     0.218       -0.387
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[0]      RDATA_int[16]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[1]      RDATA_int[17]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[2]      RDATA_int[18]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[3]      RDATA_int[19]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[4]      RDATA_int[20]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[5]      RDATA_int[21]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[6]      RDATA_int[22]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[7]      RDATA_int[23]                       3.023       4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[10]     RDATA_int[24]                       3.023       4.315 
-==============================================================================================================================================================================================================================================================================================================================================================================
+                                                                                                                                                                        Starting                                                                                                                                                  Arrival          
+Instance                                                                                                                                                                Reference                                                                                  Type        Pin            Net                                 Time        Slack
+                                                                                                                                                                        Clock                                                                                                                                                                      
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock                                                                             DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE         Q              PF_XCVR_ERM_C8_0_LANE0_RX_READY     0.218       0.280
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[0]      RDATA_int[16]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[1]      RDATA_int[17]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[2]      RDATA_int[18]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[3]      RDATA_int[19]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[4]      RDATA_int[20]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[5]      RDATA_int[21]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[6]      RDATA_int[22]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[7]      RDATA_int[23]                       3.023       2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[10]     RDATA_int[24]                       3.023       2.981
+===================================================================================================================================================================================================================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                                                                                                         Starting                                                                                                                                                     Required           
-Instance                                                                                                                                 Reference                                                                                               Type     Pin     Net                                 Time         Slack 
-                                                                                                                                         Clock                                                                                                                                                                           
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[0]                             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       I_AND2_FINE_LOCK_0_Y                1.000        -0.387
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rx_ready_sync[0]     Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       PF_XCVR_ERM_C8_0_LANE0_RX_READY     1.000        -0.166
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[0]             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_47                                8.000        4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[1]             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_46                                8.000        4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[2]             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_45                                8.000        4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[3]             Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_44                                8.000        4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[16]            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[16]                          8.000        4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[17]            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[17]                          8.000        4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[18]            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[18]                          8.000        4.315 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[19]            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[19]                          8.000        4.315 
-=========================================================================================================================================================================================================================================================================================================================
+                                                                                                                            Starting                                                                                                                                        Required          
+Instance                                                                                                                    Reference                                                                                  Type     Pin     Net                                 Time         Slack
+                                                                                                                            Clock                                                                                                                                                             
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[0]                             DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       I_AND2_FINE_LOCK_0_Y                1.667        0.280
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rx_ready_sync[0]     DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       PF_XCVR_ERM_C8_0_LANE0_RX_READY     1.667        0.500
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[0]             DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_47                                6.667        2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[1]             DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_46                                6.667        2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[2]             DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_45                                6.667        2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk17\.u_corefifo_fwft.dout[3]             DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       N_44                                6.667        2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[16]            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[16]                          6.667        2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[17]            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[17]                          6.667        2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[18]            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[18]                          6.667        2.981
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[19]            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      D       dout_4[19]                          6.667        2.981
+==============================================================================================================================================================================================================================================================================================
 
 
 
@@ -613,158 +610,32 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      1.000
+      Requested Period:                      1.667
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.000
+    = Required time:                         1.667
 
     - Propagation time:                      1.387
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -0.387
+    = Slack (non-critical) :                 0.280
 
     Number of logic level(s):                1
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[0] / D
-    The start point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
+    Starting point:                          DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock / Q
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[0] / D
+    The start point is clocked by            DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=3.333 period=6.667) on pin CLK
     The end   point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
 
-Instance / Net                                                                                                            Pin      Pin               Arrival     No. of    
-Name                                                                                                             Type     Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock         SLE      Q        Out     0.218     0.218 r     -         
-PF_XCVR_ERM_C8_0_LANE0_RX_READY                                                                                  Net      -        -       0.948     -           5         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_AND2_FINE_LOCK_0                 AND2     A        In      -         1.166 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_AND2_FINE_LOCK_0                 AND2     Y        Out     0.103     1.269 r     -         
-I_AND2_FINE_LOCK_0_Y                                                                                             Net      -        -       0.118     -           1         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[0]     SLE      D        In      -         1.387 r     -         
-===========================================================================================================================================================================
+Instance / Net                                                                                               Pin      Pin               Arrival     No. of    
+Name                                                                                                Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock         SLE      Q        Out     0.218     0.218 r     -         
+PF_XCVR_ERM_C8_0_LANE0_RX_READY                                                                     Net      -        -       0.948     -           5         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_AND2_FINE_LOCK_0                 AND2     A        In      -         1.166 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_AND2_FINE_LOCK_0                 AND2     Y        Out     0.103     1.269 r     -         
+I_AND2_FINE_LOCK_0_Y                                                                                Net      -        -       0.118     -           1         
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[0]     SLE      D        In      -         1.387 r     -         
+==============================================================================================================================================================
 Total path delay (propagation time + setup) of 1.387 is 0.321(23.1%) logic and 1.066(76.9%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 2: 
-      Requested Period:                      1.000
-    - Setup time:                            0.000
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.000
-
-    - Propagation time:                      1.166
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -0.166
-
-    Number of logic level(s):                0
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rx_ready_sync[0] / D
-    The start point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
-    The end   point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-
-Instance / Net                                                                                                                                    Pin      Pin               Arrival     No. of    
-Name                                                                                                                                     Type     Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.fine_lock                                 SLE      Q        Out     0.218     0.218 r     -         
-PF_XCVR_ERM_C8_0_LANE0_RX_READY                                                                                                          Net      -        -       0.948     -           5         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2\.u_mstr.rx_ready_sync[0]     SLE      D        In      -         1.166 r     -         
-===================================================================================================================================================================================================
-Total path delay (propagation time + setup) of 1.166 is 0.218(18.7%) logic and 0.948(81.3%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 3: 
-      Requested Period:                      8.000
-    - Setup time:                            0.000
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.000
-
-    - Propagation time:                      3.685
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 4.315
-
-    Number of logic level(s):                2
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / A_DOUT[0]
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[16] / D
-    The start point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin A_CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
-
-Instance / Net                                                                                                                                                                                   Pin           Pin               Arrival     No. of    
-Name                                                                                                                                                                                 Type        Name          Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     RAM1K20     A_DOUT[0]     Out     3.023     3.023 r     -         
-RDATA_int[16]                                                                                                                                                                        Net         -             -       0.124     -           2         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.int_MEMRD_fwft_1[16]                                                                      CFG4        C             In      -         3.147 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.int_MEMRD_fwft_1[16]                                                                      CFG4        Y             Out     0.148     3.295 r     -         
-int_MEMRD_fwft_1[16]                                                                                                                                                                 Net         -             -       0.124     -           2         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout_4[16]                                                      CFG3        C             In      -         3.419 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout_4[16]                                                      CFG3        Y             Out     0.148     3.567 r     -         
-dout_4[16]                                                                                                                                                                           Net         -             -       0.118     -           1         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[16]                                                        SLE         D             In      -         3.685 r     -         
-=======================================================================================================================================================================================================================================================
-Total path delay (propagation time + setup) of 3.685 is 3.319(90.1%) logic and 0.366(9.9%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 4: 
-      Requested Period:                      8.000
-    - Setup time:                            0.000
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.000
-
-    - Propagation time:                      3.685
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 4.315
-
-    Number of logic level(s):                2
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / A_DOUT[1]
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[17] / D
-    The start point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin A_CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
-
-Instance / Net                                                                                                                                                                                   Pin           Pin               Arrival     No. of    
-Name                                                                                                                                                                                 Type        Name          Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     RAM1K20     A_DOUT[1]     Out     3.023     3.023 r     -         
-RDATA_int[17]                                                                                                                                                                        Net         -             -       0.124     -           2         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.int_MEMRD_fwft_1[17]                                                                      CFG4        C             In      -         3.147 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.int_MEMRD_fwft_1[17]                                                                      CFG4        Y             Out     0.148     3.295 r     -         
-int_MEMRD_fwft_1[17]                                                                                                                                                                 Net         -             -       0.124     -           2         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout_4[17]                                                      CFG3        C             In      -         3.419 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout_4[17]                                                      CFG3        Y             Out     0.148     3.567 r     -         
-dout_4[17]                                                                                                                                                                           Net         -             -       0.118     -           1         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[17]                                                        SLE         D             In      -         3.685 r     -         
-=======================================================================================================================================================================================================================================================
-Total path delay (propagation time + setup) of 3.685 is 3.319(90.1%) logic and 0.366(9.9%) route.
-Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
-
-
-Path information for path number 5: 
-      Requested Period:                      8.000
-    - Setup time:                            0.000
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         8.000
-
-    - Propagation time:                      3.685
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 4.315
-
-    Number of logic level(s):                2
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / A_DOUT[2]
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[18] / D
-    The start point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin A_CLK
-    The end   point is clocked by            Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=4.000 period=8.000) on pin CLK
-
-Instance / Net                                                                                                                                                                                   Pin           Pin               Arrival     No. of    
-Name                                                                                                                                                                                 Type        Name          Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     RAM1K20     A_DOUT[2]     Out     3.023     3.023 r     -         
-RDATA_int[18]                                                                                                                                                                        Net         -             -       0.124     -           2         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.int_MEMRD_fwft_1[18]                                                                      CFG4        C             In      -         3.147 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.int_MEMRD_fwft_1[18]                                                                      CFG4        Y             Out     0.148     3.295 r     -         
-int_MEMRD_fwft_1[18]                                                                                                                                                                 Net         -             -       0.124     -           2         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout_4[18]                                                      CFG3        C             In      -         3.419 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout_4[18]                                                      CFG3        Y             Out     0.148     3.567 r     -         
-dout_4[18]                                                                                                                                                                           Net         -             -       0.118     -           1         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.dout[18]                                                        SLE         D             In      -         3.685 r     -         
-=======================================================================================================================================================================================================================================================
-Total path delay (propagation time + setup) of 3.685 is 3.319(90.1%) logic and 0.366(9.9%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -779,41 +650,41 @@ Detailed Report for Clock: PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_infe
 Starting Points with Worst Slack
 ********************************
 
-                                                                                                                    Starting                                                                                                       Arrival          
-Instance                                                                                                            Reference                                                           Type     Pin     Net                       Time        Slack
-                                                                                                                    Clock                                                                                                                           
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.state_reg[2]                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       state_reg[2]              0.218       5.392
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[1]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[1]             0.218       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[0]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[0]             0.218       5.470
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[7]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[7]             0.218       5.478
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_Enable_Vector_1[0]                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_Enable_Vector_1[0]     0.218       5.506
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.FIFO_COUNT[2]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFO_COUNT[2]             0.201       5.516
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control\.RD_INDEX_0[6]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX_0[6]             0.218       5.545
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control\.RD_INDEX_2[6]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX_2[6]             0.218       5.545
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[3]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[3]             0.218       5.572
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[4]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[4]             0.218       5.575
-====================================================================================================================================================================================================================================================
+                                                                                                       Starting                                                                                                       Arrival          
+Instance                                                                                               Reference                                                           Type     Pin     Net                       Time        Slack
+                                                                                                       Clock                                                                                                                           
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.state_reg[2]                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       state_reg[2]              0.218       5.392
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[0]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[0]             0.218       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_Enable_Vector_1[0]                 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_Enable_Vector_1[0]     0.218       5.467
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[7]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[7]             0.218       5.471
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[1]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[1]             0.218       5.515
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.FIFO_COUNT[2]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFO_COUNT[2]             0.201       5.516
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control\.RD_INDEX_0[6]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX_0[6]             0.218       5.545
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.read_index_control\.RD_INDEX_2[6]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX_2[6]             0.218       5.545
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[3]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[3]             0.218       5.572
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.WR_INDEX_0[5]                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       WR_INDEX_0[5]             0.201       5.574
+=======================================================================================================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                                                                                                                                                     Starting                                                                                                                          Required          
-Instance                                                                                                                                                                             Reference                                                           Type        Pin          Net                                  Time         Slack
-                                                                                                                                                                                     Clock                                                                                                                                               
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[6]     TxLaneControl_0_Output_Data_0[6]     9.197        5.392
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[7]     TxLaneControl_0_Output_Data_0[7]     9.197        5.392
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[0]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[0]                 10.000       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[1]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[1]                 10.000       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[2]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[2]                 10.000       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[3]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[3]                 10.000       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[4]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[4]                 10.000       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[5]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[5]                 10.000       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[6]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[6]                 10.000       5.412
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_158[7]                                                                       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_158_9[7]                 10.000       5.412
-=========================================================================================================================================================================================================================================================================================================================================
+                                                                                                                                                                        Starting                                                                                                                          Required          
+Instance                                                                                                                                                                Reference                                                           Type        Pin          Net                                  Time         Slack
+                                                                                                                                                                        Clock                                                                                                                                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[6]     TxLaneControl_0_Output_Data_0[6]     9.197        5.392
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     RAM1K20     B_DIN[7]     TxLaneControl_0_Output_Data_0[7]     9.197        5.392
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[0]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[0]                  10.000       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[1]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[1]                  10.000       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[2]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[2]                  10.000       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[3]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[3]                  10.000       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[4]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[4]                  10.000       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[5]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[5]                  10.000       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[6]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[6]                  10.000       5.428
+DataSource_Transcievers_0.OneLane_Transciever_0.Alignment_Fifo_0.memory_store\.r_FIFO_DATA_71[7]                                                                        PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE         D            r_FIFO_DATA_71_9[7]                  10.000       5.428
+============================================================================================================================================================================================================================================================================================================================
 
 
 
@@ -832,30 +703,30 @@ Path information for path number 1:
     = Slack (non-critical) :                 5.392
 
     Number of logic level(s):                4
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.state_reg[2] / Q
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / B_DIN[6]
+    Starting point:                          DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.state_reg[2] / Q
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / B_DIN[6]
     The start point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
     The end   point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin B_CLK
 
-Instance / Net                                                                                                                                                                                   Pin          Pin               Arrival     No. of    
-Name                                                                                                                                                                                 Type        Name         Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.state_reg[2]                                                                                            SLE         Q            Out     0.218     0.218 r     -         
-state_reg[2]                                                                                                                                                                         Net         -            -       0.970     -           66        
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.un1_state_reg_4                                                                                         CFG3        C            In      -         1.188 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.un1_state_reg_4                                                                                         CFG3        Y            Out     0.148     1.336 r     -         
-un1_state_reg_4                                                                                                                                                                      Net         -            -       0.563     -           4         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_m2s2                                                                                      CFG3        B            In      -         1.900 r     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_m2s2                                                                                      CFG3        Y            Out     0.088     1.987 f     -         
-N_1340                                                                                                                                                                               Net         -            -       0.594     -           6         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_1[6]                                                                                      CFG4        C            In      -         2.582 f     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_1[6]                                                                                      CFG4        Y            Out     0.148     2.730 f     -         
-TxLaneControl_0_Output_Data_0_1[6]                                                                                                                                                   Net         -            -       0.118     -           1         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0[6]                                                                                        CFG3        C            In      -         2.848 f     -         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0[6]                                                                                        CFG3        Y            Out     0.145     2.993 f     -         
-TxLaneControl_0_Output_Data_0[6]                                                                                                                                                     Net         -            -       0.812     -           1         
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     RAM1K20     B_DIN[6]     In      -         3.805 f     -         
-======================================================================================================================================================================================================================================================
+Instance / Net                                                                                                                                                                      Pin          Pin               Arrival     No. of    
+Name                                                                                                                                                                    Type        Name         Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.state_reg[2]                                                                                            SLE         Q            Out     0.218     0.218 r     -         
+state_reg[2]                                                                                                                                                            Net         -            -       0.970     -           66        
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.un1_state_reg_4                                                                                         CFG3        C            In      -         1.188 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.un1_state_reg_4                                                                                         CFG3        Y            Out     0.148     1.336 r     -         
+un1_state_reg_4                                                                                                                                                         Net         -            -       0.563     -           4         
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_m2s2                                                                                      CFG3        B            In      -         1.900 r     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_m2s2                                                                                      CFG3        Y            Out     0.088     1.987 f     -         
+N_1340                                                                                                                                                                  Net         -            -       0.594     -           6         
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_1[6]                                                                                      CFG4        C            In      -         2.582 f     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0_1[6]                                                                                      CFG4        Y            Out     0.148     2.730 f     -         
+TxLaneControl_0_Output_Data_0_1[6]                                                                                                                                      Net         -            -       0.118     -           1         
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0[6]                                                                                        CFG3        C            In      -         2.848 f     -         
+DataSource_Transcievers_0.OneLane_Transciever_0.TxLaneControl_0.Output_Data_0[6]                                                                                        CFG3        Y            Out     0.145     2.993 f     -         
+TxLaneControl_0_Output_Data_0[6]                                                                                                                                        Net         -            -       0.812     -           1         
+DataSource_Transcievers_0.OneLane_Transciever_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     RAM1K20     B_DIN[6]     In      -         3.805 f     -         
+=========================================================================================================================================================================================================================================
 Total path delay (propagation time + setup) of 4.608 is 1.550(33.6%) logic and 3.058(66.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
@@ -871,35 +742,35 @@ Detailed Report for Clock: System
 Starting Points with Worst Slack
 ********************************
 
-                                                                                                        Starting                                                                             Arrival           
-Instance                                                                                                Reference     Type                 Pin             Net                               Time        Slack 
-                                                                                                        Clock                                                                                                  
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR         System        CORELNKTMR_V         CTRL_SRST_N     I_XCVR_CORELNKTMR_CTRL_SRST_N     0.000       8.920 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR         System        CORELNKTMR_V         LTPULSE[0]      I_XCVR_CORELNKTMR_LTPULSE[0]      0.000       22.907
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0     System        XCVR_APB_LINK_V2     RQR[0]          I_XCVR_APBLINK_V_0_RQR[0]         0.000       23.837
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0     System        XCVR_APB_LINK_V2     GRANT           I_XCVR_APBLINK_V_0_GRANT          0.000       23.935
-===============================================================================================================================================================================================================
+                                                                                           Starting                                                                             Arrival           
+Instance                                                                                   Reference     Type                 Pin             Net                               Time        Slack 
+                                                                                           Clock                                                                                                  
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR         System        CORELNKTMR_V         CTRL_SRST_N     I_XCVR_CORELNKTMR_CTRL_SRST_N     0.000       8.920 
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR         System        CORELNKTMR_V         LTPULSE[0]      I_XCVR_CORELNKTMR_LTPULSE[0]      0.000       22.907
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0     System        XCVR_APB_LINK_V2     RQR[0]          I_XCVR_APBLINK_V_0_RQR[0]         0.000       23.837
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0     System        XCVR_APB_LINK_V2     GRANT           I_XCVR_APBLINK_V_0_GRANT          0.000       23.935
+==================================================================================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                                                                                 Starting                                                                             Required           
-Instance                                                                                                         Reference     Type                 Pin             Net                               Time         Slack 
-                                                                                                                 Clock                                                                                                   
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0              System        XCVR_APB_LINK_V2     CTRL_SRST_N     I_XCVR_CORELNKTMR_CTRL_SRST_N     10.000       8.920 
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[6]     System        SLE                  D               intg_st_s[6]                      25.000       22.907
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[5]     System        SLE                  D               intg_st_s[5]                      25.000       22.915
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[4]     System        SLE                  D               intg_st_s[4]                      25.000       22.923
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[3]     System        SLE                  D               intg_st_s[3]                      25.000       22.931
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[2]     System        SLE                  D               intg_st_s[2]                      25.000       22.939
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[0]     System        SLE                  EN              intg_ste                          24.873       23.114
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[1]     System        SLE                  EN              intg_ste                          24.873       23.114
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[2]     System        SLE                  EN              intg_ste                          24.873       23.114
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[3]     System        SLE                  EN              intg_ste                          24.873       23.114
-=========================================================================================================================================================================================================================
+                                                                                                    Starting                                                                             Required           
+Instance                                                                                            Reference     Type                 Pin             Net                               Time         Slack 
+                                                                                                    Clock                                                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0              System        XCVR_APB_LINK_V2     CTRL_SRST_N     I_XCVR_CORELNKTMR_CTRL_SRST_N     10.000       8.920 
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[6]     System        SLE                  D               intg_st_s[6]                      25.000       22.907
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[5]     System        SLE                  D               intg_st_s[5]                      25.000       22.915
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[4]     System        SLE                  D               intg_st_s[4]                      25.000       22.923
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[3]     System        SLE                  D               intg_st_s[3]                      25.000       22.931
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[2]     System        SLE                  D               intg_st_s[2]                      25.000       22.939
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[0]     System        SLE                  EN              intg_ste                          24.873       23.114
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[1]     System        SLE                  EN              intg_ste                          24.873       23.114
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[2]     System        SLE                  EN              intg_ste                          24.873       23.114
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[3]     System        SLE                  EN              intg_ste                          24.873       23.114
+============================================================================================================================================================================================================
 
 
 
@@ -920,18 +791,18 @@ Path information for path number 1:
     = Slack (non-critical) :                 8.920
 
     Number of logic level(s):                0
-    Starting point:                          Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR / CTRL_SRST_N
-    Ending point:                            Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0 / CTRL_SRST_N
+    Starting point:                          DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR / CTRL_SRST_N
+    Ending point:                            DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0 / CTRL_SRST_N
     The start point is clocked by            System [rising]
     The end   point is clocked by            System [rising]
 
-Instance / Net                                                                                                               Pin             Pin               Arrival     No. of    
-Name                                                                                                    Type                 Name            Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR         CORELNKTMR_V         CTRL_SRST_N     Out     0.000     0.000 r     -         
-I_XCVR_CORELNKTMR_CTRL_SRST_N                                                                           Net                  -               -       1.080     -           31        
-Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0     XCVR_APB_LINK_V2     CTRL_SRST_N     In      -         1.080 r     -         
-=====================================================================================================================================================================================
+Instance / Net                                                                                                  Pin             Pin               Arrival     No. of    
+Name                                                                                       Type                 Name            Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELNKTMR         CORELNKTMR_V         CTRL_SRST_N     Out     0.000     0.000 r     -         
+I_XCVR_CORELNKTMR_CTRL_SRST_N                                                              Net                  -               -       1.080     -           31        
+DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0.I_XCVR_APBLINK_V_0.u0     XCVR_APB_LINK_V2     CTRL_SRST_N     In      -         1.080 r     -         
+========================================================================================================================================================================
 Total path delay (propagation time + setup) of 1.080 is 0.000(0.0%) logic and 1.080(100.0%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
@@ -947,10 +818,10 @@ Timing exceptions that could not be applied
 @W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":23:0:23:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
 @W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":24:0:24:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
 @W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":25:0:25:0|Timing constraint (to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":27:0:27:0|Timing constraint (to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":29:0:29:0|Timing constraint (to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":31:0:31:0|Timing constraint (to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":33:0:33:0|Timing constraint (to [get_cells { Data_Block_0.DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":27:0:27:0|Timing constraint (to [get_cells { DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":29:0:29:0|Timing constraint (to [get_cells { DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":31:0:31:0|Timing constraint (to [get_cells { DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":33:0:33:0|Timing constraint (to [get_cells { DataSource_Transcievers_0.OneLane_Transciever_0_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
 None
 Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\OneLane_Transciever_OneLane_Transciever_0\cpprop
 
@@ -961,7 +832,7 @@ Name                                          Status       Reason
 OneLane_Transciever_OneLane_Transciever_0     Remapped     Design changed
 =========================================================================
 
-Process took 0h:00m:29s realtime, 0h:00m:29s cputime
-# Thu Jan  4 22:43:43 2024
+Process took 0h:00m:35s realtime, 0h:00m:35s cputime
+# Wed Feb  7 22:07:55 2024
 
 ###########################################################]

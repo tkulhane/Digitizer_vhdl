@@ -19,11 +19,11 @@ set_defvar -name {RTG4_MITIGATION_ON} -value {0}
 set_defvar -name {USE_CONSTRAINT_FLOW} -value True
 set_defvar -name {FHB_AUTO_INSTANTIATION} -value {0}
 
-set_partition_info -name "/Top" -timestamp "1704399893"
-set_partition_info -name "/Top/Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0" -timestamp "1704404587"
-set_partition_info -name "/Top/Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0" -timestamp "1704404587"
-set_partition_info -name "/Top/Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0" -timestamp "1704404587"
-set_partition_info -name "/Top/Data_Block_0/DataSource_Transcievers_0/OneLane_NoTRV_test_0" -timestamp "1704404587"
+set_partition_info -name "/Top" -timestamp "1707340036"
+set_partition_info -name "/Top/DataSource_Transcievers_0/OneLane_Transciever_0" -timestamp "1707340036"
+set_partition_info -name "/Top/DataSource_Transcievers_0/OneLane_Transciever_0_0" -timestamp "1707340036"
+set_partition_info -name "/Top/DataSource_Transcievers_0/OneLane_NoTRV_test_0_0" -timestamp "1704404587"
+set_partition_info -name "/Top/DataSource_Transcievers_0/OneLane_NoTRV_test_0" -timestamp "1704404587"
 set_compile_info \
     -category {"Device Selection"} \
     -name {"Family"} \

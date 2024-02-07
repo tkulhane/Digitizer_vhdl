@@ -1,5 +1,5 @@
 ;--------------------------------------------------------------------------------
-; Date:    Thu Jan  4 22:57:11 2024
+; Date:    Wed Feb  7 23:33:03 2024
 ; version: 2022.1 2022.1.0.10
 ; Design:  Top
 ; Family:  PolarFire
@@ -56,7 +56,7 @@ Module  PLL_SW_0                              0    5        15   13   PLL       
         DESKEW_CAL_CNT                        "3'h6"                   U. 
         DESKEW_CAL_EN                         "1'h1"                   U. 
         DIV0_RST_DELAY                        "3'h0"                   U. 
-        DIV0_VAL                              "7'h8"                   U. 
+        DIV0_VAL                              "7'hA"                   U. 
         DIV1_RST_DELAY                        "3'h0"                   U. 
         DIV1_VAL                              "7'h1"                   U. 
         DIV2_RST_DELAY                        "3'h0"                   U. 
@@ -68,7 +68,7 @@ Module  PLL_SW_0                              0    5        15   13   PLL       
         FB_CLK_SEL_0                          "2'h0"                   U. 
         FB_CLK_SEL_1                          "1'h0"                   U. 
         FB_FRAC_VAL                           "24'h0"                  U. 
-        FB_INT_VAL                            "12'h7D"                 U. 
+        FB_INT_VAL                            "12'h300"                U. 
         FF_REQUIRES_LOCK                      "1'h0"                   U. 
         FRAC_DAC_EN                           "1'h0"                   U. 
         FRAC_EN                               "1'h0"                   U. 
@@ -85,7 +85,7 @@ Module  PLL_SW_0                              0    5        15   13   PLL       
         OUT3_DIV_EN                           "1'h0"                   U. 
         OUT3_PHASE_SEL                        "3'h0"                   U. 
         RESET_ON_LOCK                         "1'h1"                   U. 
-        RFDIV                                 "6'h4"                   U. 
+        RFDIV                                 "6'h19"                  U. 
         RFDIV_EN                              "1'h1"                   U. 
         SOFTRESET                             "1'h0"                   U. 
         SOFT_LOAD_PHASE_N                     "1'h1"                   U. 
@@ -153,7 +153,7 @@ Module  PLL_SE_0                              2460 5        2424 12   PLL       
         DESKEW_CAL_CNT                        "3'h6"                   U. 
         DESKEW_CAL_EN                         "1'h1"                   U. 
         DIV0_RST_DELAY                        "3'h0"                   U. 
-        DIV0_VAL                              "7'hA"                   U. 
+        DIV0_VAL                              "7'h8"                   U. 
         DIV1_RST_DELAY                        "3'h0"                   U. 
         DIV1_VAL                              "7'h1"                   U. 
         DIV2_RST_DELAY                        "3'h0"                   U. 
@@ -165,7 +165,7 @@ Module  PLL_SE_0                              2460 5        2424 12   PLL       
         FB_CLK_SEL_0                          "2'h0"                   U. 
         FB_CLK_SEL_1                          "1'h0"                   U. 
         FB_FRAC_VAL                           "24'h0"                  U. 
-        FB_INT_VAL                            "12'h300"                U. 
+        FB_INT_VAL                            "12'h7D"                 U. 
         FF_REQUIRES_LOCK                      "1'h0"                   U. 
         FRAC_DAC_EN                           "1'h0"                   U. 
         FRAC_EN                               "1'h0"                   U. 
@@ -182,7 +182,7 @@ Module  PLL_SE_0                              2460 5        2424 12   PLL       
         OUT3_DIV_EN                           "1'h0"                   U. 
         OUT3_PHASE_SEL                        "3'h0"                   U. 
         RESET_ON_LOCK                         "1'h1"                   U. 
-        RFDIV                                 "6'h19"                  U. 
+        RFDIV                                 "6'h4"                   U. 
         RFDIV_EN                              "1'h1"                   U. 
         SOFTRESET                             "1'h0"                   U. 
         SOFT_LOAD_PHASE_N                     "1'h1"                   U. 
@@ -240,13 +240,13 @@ Module  ICBMUXINGPC_W_0                       8    163      9    626  ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'h90000"              U. 
+        CLKSTOP_SOURCE_SEL                    "60'h1100000"            U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFFF03FFFFFFFFFF" U. 
+        NMUX_SEL                              "72'hFFFFFFFC0FFFFFFFFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
-        STOP_SEL                              "24'hFFFF3F"             U. 
+        STOP_SEL                              "24'hFFFCFF"             U. 
 End_Module.
 
 Module  ICBMUXINGPC_E_0                       2468 163      2436 649  ICBMUXING       .
@@ -255,13 +255,13 @@ Module  ICBMUXINGPC_E_0                       2468 163      2436 649  ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'h1001206160"         U. 
+        CLKSTOP_SOURCE_SEL                    "60'h600000000016160"    U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFD1FFF03F27F43FFFF" U. 
+        NMUX_SEL                              "72'hFD1FFFFFF24043FFFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
-        STOP_SEL                              "24'hFF3CC3"             U. 
+        STOP_SEL                              "24'h3FFF03"             U. 
 End_Module.
 
 Module  QUADPLL_GPSS2_I                       2466 320      2437 1406 QUADPLL         .
@@ -274,10 +274,10 @@ Module  QUADPLL_GPSS2_I                       2466 320      2437 1406 QUADPLL   
         CTRL_DSMPD                            "1'h1"                   U. 
         CTRL_FBDIV_SEL                        "2'h0"                   U. 
         CTRL_VBGREF_SEL                       "1'h0"                   U. 
-        DIV_1_AUXDIV                          "12'hA"                  U. 
-        DIV_1_FBDIV                           "12'h20"                 U. 
+        DIV_1_AUXDIV                          "12'hC"                  U. 
+        DIV_1_FBDIV                           "12'h60"                 U. 
         DIV_2_FRAC                            "24'h0"                  U. 
-        DIV_2_REFDIV                          "6'h2"                   U. 
+        DIV_2_REFDIV                          "6'h5"                   U. 
 End_Module.
 
 Module  LANE_GPSS2_2                          2461 344      2440 1394 LANE            .
@@ -362,14 +362,14 @@ Module  LANE_GPSS2_2                          2461 344      2440 1394 LANE      
         PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   U. 
         PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h2"                   U. 
         PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   U. 
-        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h20"                  U. 
+        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h60"                  U. 
         PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   U. 
-        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h2"                   U. 
+        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h5"                   U. 
         PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   U. 
         PMA_SERDES_RTL_CTRL_RX_HALF_RATE10BIT  "1'h0"                   U. 
         PMA_SERDES_RTL_CTRL_TX_HALF_RATE10BIT  "1'h0"                   U. 
         PMA_SER_CLK_CTRL_SERMODE              "3'h7"                   U. 
-        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h1"                   U. 
+        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h0"                   U. 
         PMA_SER_CLK_CTRL_TXPOSTDIV            "2'h0"                   U. 
         PMA_SER_CLK_CTRL_TXPOSTDIVEN          "1'h0"                   U. 
         PMA_SER_CTRL_TXVBGREF_SEL             "1'h0"                   U. 
@@ -479,14 +479,14 @@ Module  LANE_GPSS2_3                          2460 371      2437 1404 LANE      
         PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   U. 
         PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h2"                   U. 
         PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   U. 
-        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h20"                  U. 
+        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h60"                  U. 
         PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   U. 
-        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h2"                   U. 
+        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h5"                   U. 
         PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   U. 
         PMA_SERDES_RTL_CTRL_RX_HALF_RATE10BIT  "1'h0"                   U. 
         PMA_SERDES_RTL_CTRL_TX_HALF_RATE10BIT  "1'h0"                   U. 
         PMA_SER_CLK_CTRL_SERMODE              "3'h7"                   U. 
-        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h0"                   U. 
+        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h1"                   U. 
         PMA_SER_CLK_CTRL_TXPOSTDIV            "2'h0"                   U. 
         PMA_SER_CLK_CTRL_TXPOSTDIVEN          "1'h0"                   U. 
         PMA_SER_CTRL_TXVBGREF_SEL             "1'h0"                   U. 
@@ -524,10 +524,10 @@ Module  TXPLL_EXTPLL24_0                      2460 374      2439 1477 TXPLL     
         CTRL_DSMPD                            "1'h1"                   U. 
         CTRL_FBDIV_SEL                        "1'h0"                   U. 
         CTRL_VBGREF_SEL                       "1'h0"                   U. 
-        DIV_1_AUXDIV                          "12'hA"                  U. 
-        DIV_1_FBDIV                           "12'h20"                 U. 
+        DIV_1_AUXDIV                          "12'hC"                  U. 
+        DIV_1_FBDIV                           "12'h60"                 U. 
         DIV_2_FRAC                            "24'h0"                  U. 
-        DIV_2_REFDIV                          "6'h2"                   U. 
+        DIV_2_REFDIV                          "6'h5"                   U. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
 End_Module.
 
@@ -547,9 +547,9 @@ Module  PLL_NE_0                              2460 377      2430 1489 PLL       
         DESKEW_CAL_CNT                        "3'h6"                   U. 
         DESKEW_CAL_EN                         "1'h1"                   U. 
         DIV0_RST_DELAY                        "3'h0"                   U. 
-        DIV0_VAL                              "7'h5"                   U. 
+        DIV0_VAL                              "7'h4"                   U. 
         DIV1_RST_DELAY                        "3'h0"                   U. 
-        DIV1_VAL                              "7'h71"                  U. 
+        DIV1_VAL                              "7'h6D"                  U. 
         DIV2_RST_DELAY                        "3'h0"                   U. 
         DIV2_VAL                              "7'h1"                   U. 
         DIV3_CLK_SEL                          "1'h0"                   U. 
@@ -559,7 +559,7 @@ Module  PLL_NE_0                              2460 377      2430 1489 PLL       
         FB_CLK_SEL_0                          "2'h0"                   U. 
         FB_CLK_SEL_1                          "1'h0"                   U. 
         FB_FRAC_VAL                           "24'h0"                  U. 
-        FB_INT_VAL                            "12'h7D"                 U. 
+        FB_INT_VAL                            "12'h1E"                 U. 
         FF_REQUIRES_LOCK                      "1'h0"                   U. 
         FRAC_DAC_EN                           "1'h0"                   U. 
         FRAC_EN                               "1'h0"                   U. 
@@ -576,7 +576,7 @@ Module  PLL_NE_0                              2460 377      2430 1489 PLL       
         OUT3_DIV_EN                           "1'h0"                   U. 
         OUT3_PHASE_SEL                        "3'h0"                   U. 
         RESET_ON_LOCK                         "1'h1"                   U. 
-        RFDIV                                 "6'h8"                   U. 
+        RFDIV                                 "6'h2"                   U. 
         RFDIV_EN                              "1'h1"                   U. 
         SOFTRESET                             "1'h0"                   U. 
         SOFT_LOAD_PHASE_N                     "1'h1"                   U. 

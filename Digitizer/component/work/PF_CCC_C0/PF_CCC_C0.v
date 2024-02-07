@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Sep  1 13:14:51 2023
+// Created by SmartDesign Wed Feb  7 15:41:30 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -58,7 +58,7 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_CCC:2.2.100} -component_na
 "GL0_0_FABCLK_USED:true"  \
 "GL0_0_FREQ_SEL:false"  \
 "GL0_0_IS_USED:true"  \
-"GL0_0_OUT_FREQ:125"  \
+"GL0_0_OUT_FREQ:150"  \
 "GL0_0_PHASE_INDEX:0"  \
 "GL0_0_PHASE_SEL:false"  \
 "GL0_0_PLL_PHASE:0"  \

@@ -3,7 +3,7 @@ Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.
 Family: PolarFire
 Die: MPF300TS_ES
 Package: FCG1152
-Date: Thu Jan  4 22:59:56 2024
+Date: Wed Feb  7 23:36:13 2024
 
 Report path: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Design_Initialization_Data_Report.txt
 
@@ -1616,127 +1616,26 @@ Q1_PCS_LANE0   (Unused)
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
-Q2_PMA_LANE2   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
-+-----------------------+-----------+-----------------------+------------------+----------+---------------+
-| Register Name         | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
-+-----------------------+-----------+-----------------------+------------------+----------+---------------+
-| SOFT_RESET            | 0x1104000 | 0x00000000            | 0x00000000       | No       | 1             |
-| DES_CDR_CTRL_1        | 0x1104004 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_CDR_CTRL_2        | 0x1104008 | 0x00000015            | 0x00000015       | No       | N/A           |
-| DES_CDR_CTRL_3        | 0x110400C | 0x00000000            | 0x00050180       | Yes      | N/A           |
-| DES_DFEEM_CTRL_1      | 0x1104010 | 0x00000015            | 0x00000015       | No       | N/A           |
-| DES_DFEEM_CTRL_2      | 0x1104014 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFEEM_CTRL_3      | 0x1104018 | 0x00000000            | 0x00004F00       | Yes      | 1             |
-| DES_DFE_CTRL_1        | 0x1104020 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CTRL_2        | 0x1104024 | 0x00000000            | 0x05000001       | Yes      | 1             |
-| DES_EM_CTRL_1         | 0x1104028 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_EM_CTRL_2         | 0x110402C | 0x00000000            | 0x00000001       | Yes      | 1             |
-| DES_IN_TERM           | 0x1104030 | 0x000000A7            | 0x000000B7       | Yes      | 1             |
-| DES_PKDET             | 0x1104034 | 0x000000AC            | 0x00000041       | Yes      | 1             |
-| DES_RTL_EM            | 0x1104038 | 0x000000C8            | 0x000007D0       | Yes      | N/A           |
-| DES_RTL_LOCK_CTRL     | 0x110403C | 0x00000008            | 0x0000000C       | Yes      | 1             |
-| DES_RXPLL_DIV         | 0x1104040 | 0x00002219            | 0x00000220       | Yes      | 1             |
-| DES_TEST_BUS          | 0x1104044 | 0x00000000            | 0x00000000       | No       | 1             |
-| DES_CLK_CTRL          | 0x1104048 | 0x0000003C            | 0x00000038       | Yes      | 1             |
-| DES_RSTPD             | 0x110404C | 0x0000002F            | 0x0000003C       | Yes      | N/A           |
-| DES_RTL_ERR_CHK       | 0x1104050 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_PCIE1_2_RXPLL_DIV | 0x1104054 | 0x02322219            | 0x02322219       | No       | N/A           |
-| DES_SATA1_2_RXPLL_DIV | 0x1104058 | 0x22184418            | 0x22184418       | No       | N/A           |
-| DES_SATA3_RXPLL_DIV   | 0x110405C | 0x00000230            | 0x00000230       | No       | N/A           |
-| SER_CTRL              | 0x1104070 | 0x00000000            | 0x00000000       | No       | 1             |
-| SER_CLK_CTRL          | 0x1104074 | 0x00000070            | 0x00000078       | Yes      | 1             |
-| SER_RSTPD             | 0x1104078 | 0x00000006            | 0x00000001       | Yes      | N/A           |
-| SER_DRV_BYP           | 0x110407C | 0x00000000            | 0x00000000       | No       | 1             |
-| SER_RXDET_CTRL        | 0x1104080 | 0x00008A10            | 0x00008A10       | No       | 1             |
-| SER_RXDET_OUT         | 0x1104084 | 0x00000000            | 0x00000000       | No       | N/A           |
-| SER_STATIC_LSB        | 0x1104088 | 0x00000000            | 0x00000000       | No       | N/A           |
-| SER_STATIC_MSB        | 0x110408C | 0x00000000            | 0x00000000       | No       | N/A           |
-| SER_TERM_CTRL         | 0x1104090 | 0x00007200            | 0x00007300       | Yes      | 1             |
-| SER_TEST_BUS          | 0x1104094 | 0xE0000000            | 0xE0000000       | No       | 1             |
-| SER_DRV_DATA_CTRL     | 0x1104098 | 0x00000000            | 0x00000000       | No       | 1             |
-| SER_DRV_CTRL          | 0x110409C | 0x01000000            | 0x11000000       | Yes      | 1             |
-| SER_DRV_CTRL_SEL      | 0x11040A0 | 0x00000000            | 0x0000000D       | Yes      | 1             |
-| SER_DRV_CTRL_M0       | 0x11040A4 | 0x001B3423            | 0x001B3423       | No       | N/A           |
-| SER_DRV_CTRL_M1       | 0x11040A8 | 0x00232C27            | 0x00232C27       | No       | N/A           |
-| SER_DRV_CTRL_M2       | 0x11040AC | 0x001B1B1B            | 0x001B1B1B       | No       | N/A           |
-| SER_DRV_CTRL_M3       | 0x11040B0 | 0x001B1B14            | 0x001B1B14       | No       | N/A           |
-| SER_DRV_CTRL_M4       | 0x11040B4 | 0x00240C0A            | 0x00240C0A       | No       | N/A           |
-| SER_DRV_CTRL_M5       | 0x11040B8 | 0x1B383B38            | 0x1B383B38       | No       | N/A           |
-| SERDES_RTL_CTRL       | 0x11040C0 | 0x00000100            | 0x00000000       | Yes      | 1             |
-| DES_DFE_CAL_CTRL_0    | 0x11040D0 | 0x64100702            | 0xFF3F0715       | Yes      | N/A           |
-| DES_DFE_CAL_CTRL_1    | 0x11040D4 | 0x01034018            | 0x010148FC       | Yes      | N/A           |
-| DES_DFE_CAL_CTRL_2    | 0x11040D8 | 0x00800000            | 0x00800010       | Yes      | N/A           |
-| DES_DFE_CAL_CMD       | 0x11040DC | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CAL_BYPASS    | 0x11040E0 | 0x00000000            | 0x00213201       | Yes      | N/A           |
-| DES_DFE_CAL_EYE_DATA  | 0x11040E4 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CDRH0_MON     | 0x11040E8 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_COEFF_MON_0   | 0x11040EC | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_COEFF_MON_1   | 0x11040F0 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CAL_OS_MON    | 0x11040F4 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CAL_ST_0      | 0x11040F8 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CAL_ST_1      | 0x11040FC | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CAL_FLAG      | 0x1104100 | 0x00000000            | 0x00000000       | No       | N/A           |
-+-----------------------+-----------+-----------------------+------------------+----------+---------------+
-
-Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
-
-Q2_PCS_LANE2   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
-+---------------+----------+-----------------------+------------------+----------+---------------+
-| Register Name | Address  | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
-+---------------+----------+-----------------------+------------------+----------+---------------+
-| SOFT_RESET    | 0x104000 | 0x00000000            | 0x00000000       | No       | N/A           |
-| LFWF_R0       | 0x104004 | 0x00000000            | 0x00000000       | No       | 1             |
-| LOVR_R0       | 0x104008 | 0x00000010            | 0x00000044       | Yes      | 1             |
-| LPIP_R0       | 0x10400C | 0x0000005D            | 0x00000058       | Yes      | 1             |
-| L64_R0        | 0x104010 | 0x01400000            | 0x00000012       | Yes      | N/A           |
-| L64_R1        | 0x104014 | 0x00000001            | 0x00000001       | No       | N/A           |
-| L64_R2        | 0x104018 | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R3        | 0x10401C | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R4        | 0x104020 | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R5        | 0x104024 | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R6        | 0x104028 | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R7        | 0x10402C | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R8        | 0x104030 | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R9        | 0x104034 | 0x00000000            | 0x00000000       | No       | N/A           |
-| L64_R10       | 0x104038 | 0x00000000            | 0x00000000       | No       | N/A           |
-| L8_R0         | 0x104040 | 0x00000000            | 0x00000000       | No       | 1             |
-| LNTV_R0       | 0x104050 | 0x00000E0E            | 0x00000E0E       | No       | 1             |
-| LCLK_R0       | 0x104058 | 0x00000000            | 0x00051E11       | Yes      | 1             |
-| LCLK_R1       | 0x10405C | 0x03000000            | 0x00000F00       | Yes      | 1             |
-| LRST_R0       | 0x104068 | 0x00000004            | 0x00000405       | Yes      | N/A           |
-| LRST_OPT      | 0x10406C | 0x00000000            | 0x00000002       | Yes      | N/A           |
-| OOB_R0        | 0x104078 | 0x110F110F            | 0x110F110F       | No       | N/A           |
-| OOB_R1        | 0x10407C | 0x9888332D            | 0x9888332D       | No       | N/A           |
-| OOB_R2        | 0x104080 | 0x00000000            | 0x00000000       | No       | N/A           |
-| OOB_R3        | 0x104084 | 0x00000000            | 0x00000000       | No       | N/A           |
-| PMA_CTRL_R0   | 0x104088 | 0x03030347            | 0x0303037F       | Yes      | 1             |
-| PMA_CTRL_R1   | 0x10408C | 0x000A0640            | 0x000A0640       | No       | N/A           |
-| PMA_CTRL_R2   | 0x104090 | 0x000000A6            | 0x000000A6       | No       | N/A           |
-| MSTR_CTRL     | 0x104094 | 0x00000000            | 0x00000000       | No       | N/A           |
-+---------------+----------+-----------------------+------------------+----------+---------------+
-
-Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
-
-Q2_PMA_LANE3   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
+Q2_PMA_LANE3   (DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
 +-----------------------+-----------+-----------------------+------------------+----------+---------------+
 | Register Name         | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
 +-----------------------+-----------+-----------------------+------------------+----------+---------------+
 | SOFT_RESET            | 0x1108000 | 0x00000000            | 0x00000000       | No       | 1             |
 | DES_CDR_CTRL_1        | 0x1108004 | 0x00000000            | 0x00000000       | No       | N/A           |
 | DES_CDR_CTRL_2        | 0x1108008 | 0x00000015            | 0x00000015       | No       | N/A           |
-| DES_CDR_CTRL_3        | 0x110800C | 0x00000000            | 0x00050180       | Yes      | N/A           |
+| DES_CDR_CTRL_3        | 0x110800C | 0x00000000            | 0x00050280       | Yes      | N/A           |
 | DES_DFEEM_CTRL_1      | 0x1108010 | 0x00000015            | 0x00000015       | No       | N/A           |
 | DES_DFEEM_CTRL_2      | 0x1108014 | 0x00000000            | 0x00000000       | No       | N/A           |
 | DES_DFEEM_CTRL_3      | 0x1108018 | 0x00000000            | 0x00004F00       | Yes      | 1             |
 | DES_DFE_CTRL_1        | 0x1108020 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_DFE_CTRL_2        | 0x1108024 | 0x00000000            | 0x05000001       | Yes      | 1             |
+| DES_DFE_CTRL_2        | 0x1108024 | 0x00000000            | 0x05000002       | Yes      | 1             |
 | DES_EM_CTRL_1         | 0x1108028 | 0x00000000            | 0x00000000       | No       | N/A           |
-| DES_EM_CTRL_2         | 0x110802C | 0x00000000            | 0x00000001       | Yes      | 1             |
+| DES_EM_CTRL_2         | 0x110802C | 0x00000000            | 0x00000002       | Yes      | 1             |
 | DES_IN_TERM           | 0x1108030 | 0x000000A7            | 0x000000B7       | Yes      | 1             |
 | DES_PKDET             | 0x1108034 | 0x000000AC            | 0x00000041       | Yes      | 1             |
 | DES_RTL_EM            | 0x1108038 | 0x000000C8            | 0x000007D0       | Yes      | N/A           |
 | DES_RTL_LOCK_CTRL     | 0x110803C | 0x00000008            | 0x0000000C       | Yes      | 1             |
-| DES_RXPLL_DIV         | 0x1108040 | 0x00002219            | 0x00000220       | Yes      | 1             |
+| DES_RXPLL_DIV         | 0x1108040 | 0x00002219            | 0x00000560       | Yes      | 1             |
 | DES_TEST_BUS          | 0x1108044 | 0x00000000            | 0x00000000       | No       | 1             |
 | DES_CLK_CTRL          | 0x1108048 | 0x0000003C            | 0x00000038       | Yes      | 1             |
 | DES_RSTPD             | 0x110804C | 0x0000002F            | 0x0000003C       | Yes      | N/A           |
@@ -1745,7 +1644,7 @@ Q2_PMA_LANE3   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/P
 | DES_SATA1_2_RXPLL_DIV | 0x1108058 | 0x22184418            | 0x22184418       | No       | N/A           |
 | DES_SATA3_RXPLL_DIV   | 0x110805C | 0x00000230            | 0x00000230       | No       | N/A           |
 | SER_CTRL              | 0x1108070 | 0x00000000            | 0x00000000       | No       | 1             |
-| SER_CLK_CTRL          | 0x1108074 | 0x00000070            | 0x00000070       | No       | 1             |
+| SER_CLK_CTRL          | 0x1108074 | 0x00000070            | 0x00000078       | Yes      | 1             |
 | SER_RSTPD             | 0x1108078 | 0x00000006            | 0x00000001       | Yes      | N/A           |
 | SER_DRV_BYP           | 0x110807C | 0x00000000            | 0x00000000       | No       | 1             |
 | SER_RXDET_CTRL        | 0x1108080 | 0x00008A10            | 0x00008A10       | No       | 1             |
@@ -1781,7 +1680,7 @@ Q2_PMA_LANE3   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/P
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
-Q2_PCS_LANE3   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
+Q2_PCS_LANE3   (DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
 +---------------+----------+-----------------------+------------------+----------+---------------+
 | Register Name | Address  | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
 +---------------+----------+-----------------------+------------------+----------+---------------+
@@ -1818,6 +1717,107 @@ Q2_PCS_LANE3   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/P
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
+Q2_PMA_LANE2   (DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
++-----------------------+-----------+-----------------------+------------------+----------+---------------+
+| Register Name         | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
++-----------------------+-----------+-----------------------+------------------+----------+---------------+
+| SOFT_RESET            | 0x1104000 | 0x00000000            | 0x00000000       | No       | 1             |
+| DES_CDR_CTRL_1        | 0x1104004 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_CDR_CTRL_2        | 0x1104008 | 0x00000015            | 0x00000015       | No       | N/A           |
+| DES_CDR_CTRL_3        | 0x110400C | 0x00000000            | 0x00050280       | Yes      | N/A           |
+| DES_DFEEM_CTRL_1      | 0x1104010 | 0x00000015            | 0x00000015       | No       | N/A           |
+| DES_DFEEM_CTRL_2      | 0x1104014 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFEEM_CTRL_3      | 0x1104018 | 0x00000000            | 0x00004F00       | Yes      | 1             |
+| DES_DFE_CTRL_1        | 0x1104020 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_CTRL_2        | 0x1104024 | 0x00000000            | 0x05000002       | Yes      | 1             |
+| DES_EM_CTRL_1         | 0x1104028 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_EM_CTRL_2         | 0x110402C | 0x00000000            | 0x00000002       | Yes      | 1             |
+| DES_IN_TERM           | 0x1104030 | 0x000000A7            | 0x000000B7       | Yes      | 1             |
+| DES_PKDET             | 0x1104034 | 0x000000AC            | 0x00000041       | Yes      | 1             |
+| DES_RTL_EM            | 0x1104038 | 0x000000C8            | 0x000007D0       | Yes      | N/A           |
+| DES_RTL_LOCK_CTRL     | 0x110403C | 0x00000008            | 0x0000000C       | Yes      | 1             |
+| DES_RXPLL_DIV         | 0x1104040 | 0x00002219            | 0x00000560       | Yes      | 1             |
+| DES_TEST_BUS          | 0x1104044 | 0x00000000            | 0x00000000       | No       | 1             |
+| DES_CLK_CTRL          | 0x1104048 | 0x0000003C            | 0x00000038       | Yes      | 1             |
+| DES_RSTPD             | 0x110404C | 0x0000002F            | 0x0000003C       | Yes      | N/A           |
+| DES_RTL_ERR_CHK       | 0x1104050 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_PCIE1_2_RXPLL_DIV | 0x1104054 | 0x02322219            | 0x02322219       | No       | N/A           |
+| DES_SATA1_2_RXPLL_DIV | 0x1104058 | 0x22184418            | 0x22184418       | No       | N/A           |
+| DES_SATA3_RXPLL_DIV   | 0x110405C | 0x00000230            | 0x00000230       | No       | N/A           |
+| SER_CTRL              | 0x1104070 | 0x00000000            | 0x00000000       | No       | 1             |
+| SER_CLK_CTRL          | 0x1104074 | 0x00000070            | 0x00000070       | No       | 1             |
+| SER_RSTPD             | 0x1104078 | 0x00000006            | 0x00000001       | Yes      | N/A           |
+| SER_DRV_BYP           | 0x110407C | 0x00000000            | 0x00000000       | No       | 1             |
+| SER_RXDET_CTRL        | 0x1104080 | 0x00008A10            | 0x00008A10       | No       | 1             |
+| SER_RXDET_OUT         | 0x1104084 | 0x00000000            | 0x00000000       | No       | N/A           |
+| SER_STATIC_LSB        | 0x1104088 | 0x00000000            | 0x00000000       | No       | N/A           |
+| SER_STATIC_MSB        | 0x110408C | 0x00000000            | 0x00000000       | No       | N/A           |
+| SER_TERM_CTRL         | 0x1104090 | 0x00007200            | 0x00007300       | Yes      | 1             |
+| SER_TEST_BUS          | 0x1104094 | 0xE0000000            | 0xE0000000       | No       | 1             |
+| SER_DRV_DATA_CTRL     | 0x1104098 | 0x00000000            | 0x00000000       | No       | 1             |
+| SER_DRV_CTRL          | 0x110409C | 0x01000000            | 0x11000000       | Yes      | 1             |
+| SER_DRV_CTRL_SEL      | 0x11040A0 | 0x00000000            | 0x0000000D       | Yes      | 1             |
+| SER_DRV_CTRL_M0       | 0x11040A4 | 0x001B3423            | 0x001B3423       | No       | N/A           |
+| SER_DRV_CTRL_M1       | 0x11040A8 | 0x00232C27            | 0x00232C27       | No       | N/A           |
+| SER_DRV_CTRL_M2       | 0x11040AC | 0x001B1B1B            | 0x001B1B1B       | No       | N/A           |
+| SER_DRV_CTRL_M3       | 0x11040B0 | 0x001B1B14            | 0x001B1B14       | No       | N/A           |
+| SER_DRV_CTRL_M4       | 0x11040B4 | 0x00240C0A            | 0x00240C0A       | No       | N/A           |
+| SER_DRV_CTRL_M5       | 0x11040B8 | 0x1B383B38            | 0x1B383B38       | No       | N/A           |
+| SERDES_RTL_CTRL       | 0x11040C0 | 0x00000100            | 0x00000000       | Yes      | 1             |
+| DES_DFE_CAL_CTRL_0    | 0x11040D0 | 0x64100702            | 0xFF3F0715       | Yes      | N/A           |
+| DES_DFE_CAL_CTRL_1    | 0x11040D4 | 0x01034018            | 0x010148FC       | Yes      | N/A           |
+| DES_DFE_CAL_CTRL_2    | 0x11040D8 | 0x00800000            | 0x00800010       | Yes      | N/A           |
+| DES_DFE_CAL_CMD       | 0x11040DC | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_CAL_BYPASS    | 0x11040E0 | 0x00000000            | 0x00213201       | Yes      | N/A           |
+| DES_DFE_CAL_EYE_DATA  | 0x11040E4 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_CDRH0_MON     | 0x11040E8 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_COEFF_MON_0   | 0x11040EC | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_COEFF_MON_1   | 0x11040F0 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_CAL_OS_MON    | 0x11040F4 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_CAL_ST_0      | 0x11040F8 | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_CAL_ST_1      | 0x11040FC | 0x00000000            | 0x00000000       | No       | N/A           |
+| DES_DFE_CAL_FLAG      | 0x1104100 | 0x00000000            | 0x00000000       | No       | N/A           |
++-----------------------+-----------+-----------------------+------------------+----------+---------------+
+
+Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
+
+Q2_PCS_LANE2   (DataSource_Transcievers_0/OneLane_Transciever_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)
++---------------+----------+-----------------------+------------------+----------+---------------+
+| Register Name | Address  | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
++---------------+----------+-----------------------+------------------+----------+---------------+
+| SOFT_RESET    | 0x104000 | 0x00000000            | 0x00000000       | No       | N/A           |
+| LFWF_R0       | 0x104004 | 0x00000000            | 0x00000000       | No       | 1             |
+| LOVR_R0       | 0x104008 | 0x00000010            | 0x00000044       | Yes      | 1             |
+| LPIP_R0       | 0x10400C | 0x0000005D            | 0x00000058       | Yes      | 1             |
+| L64_R0        | 0x104010 | 0x01400000            | 0x00000012       | Yes      | N/A           |
+| L64_R1        | 0x104014 | 0x00000001            | 0x00000001       | No       | N/A           |
+| L64_R2        | 0x104018 | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R3        | 0x10401C | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R4        | 0x104020 | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R5        | 0x104024 | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R6        | 0x104028 | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R7        | 0x10402C | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R8        | 0x104030 | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R9        | 0x104034 | 0x00000000            | 0x00000000       | No       | N/A           |
+| L64_R10       | 0x104038 | 0x00000000            | 0x00000000       | No       | N/A           |
+| L8_R0         | 0x104040 | 0x00000000            | 0x00000000       | No       | 1             |
+| LNTV_R0       | 0x104050 | 0x00000E0E            | 0x00000E0E       | No       | 1             |
+| LCLK_R0       | 0x104058 | 0x00000000            | 0x00051E11       | Yes      | 1             |
+| LCLK_R1       | 0x10405C | 0x03000000            | 0x00000F00       | Yes      | 1             |
+| LRST_R0       | 0x104068 | 0x00000004            | 0x00000405       | Yes      | N/A           |
+| LRST_OPT      | 0x10406C | 0x00000000            | 0x00000002       | Yes      | N/A           |
+| OOB_R0        | 0x104078 | 0x110F110F            | 0x110F110F       | No       | N/A           |
+| OOB_R1        | 0x10407C | 0x9888332D            | 0x9888332D       | No       | N/A           |
+| OOB_R2        | 0x104080 | 0x00000000            | 0x00000000       | No       | N/A           |
+| OOB_R3        | 0x104084 | 0x00000000            | 0x00000000       | No       | N/A           |
+| PMA_CTRL_R0   | 0x104088 | 0x03030347            | 0x0303037F       | Yes      | 1             |
+| PMA_CTRL_R1   | 0x10408C | 0x000A0640            | 0x000A0640       | No       | N/A           |
+| PMA_CTRL_R2   | 0x104090 | 0x000000A6            | 0x000000A6       | No       | N/A           |
+| MSTR_CTRL     | 0x104094 | 0x00000000            | 0x00000000       | No       | N/A           |
++---------------+----------+-----------------------+------------------+----------+---------------+
+
+Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
+
 Q2_PCSCMN
 +---------------+----------+-----------------------+------------------+----------+---------------+
 | Register Name | Address  | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
@@ -1830,7 +1830,7 @@ Q2_PCSCMN
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
-Q2_PMA_CMN   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_TX_PLL_C1_0/PF_TX_PLL_C1_0/txpll_isnt_0)
+Q2_PMA_CMN   (DataSource_Transcievers_0/OneLane_Transciever_0/PF_TX_PLL_C1_0/PF_TX_PLL_C1_0/txpll_isnt_0)
 +---------------+-----------+-----------------------+------------------+----------+---------------+
 | Register Name | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
 +---------------+-----------+-----------------------+------------------+----------+---------------+
@@ -1838,8 +1838,8 @@ Q2_PMA_CMN   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_
 | TXPLL_CLKBUF  | 0x1110004 | 0x00000000            | 0x00000000       | No       | 1             |
 | TXPLL_CTRL    | 0x1110008 | 0x00E60010            | 0x00800010       | Yes      | 1             |
 | TXPLL_CLK_SEL | 0x111000C | 0x3F3F1C03            | 0x3F3F0003       | Yes      | 1             |
-| TXPLL_DIV_1   | 0x1110010 | 0x00190019            | 0x0020000A       | Yes      | 1             |
-| TXPLL_DIV_2   | 0x1110014 | 0x01000001            | 0x02000000       | Yes      | 1             |
+| TXPLL_DIV_1   | 0x1110010 | 0x00190019            | 0x0060000C       | Yes      | 1             |
+| TXPLL_DIV_2   | 0x1110014 | 0x01000001            | 0x05000000       | Yes      | 1             |
 | TXPLL_JA_1    | 0x1110018 | 0x00640064            | 0x00640064       | No       | N/A           |
 | TXPLL_JA_2    | 0x111001C | 0x00000064            | 0x00000064       | No       | N/A           |
 | TXPLL_JA_3    | 0x1110020 | 0x00640064            | 0x00640064       | No       | N/A           |
@@ -2524,7 +2524,7 @@ Q3_PCS_LANE0   (Unused)
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
-Q2_TXPLL0   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_TX_PLL_C1_0/PF_TX_PLL_C1_0/txpll_isnt_0)
+Q2_TXPLL0   (DataSource_Transcievers_0/OneLane_Transciever_0_0/PF_TX_PLL_C1_0/PF_TX_PLL_C1_0/txpll_isnt_0)
 +----------------+-----------+-----------------------+------------------+----------+---------------+
 | Register Name  | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
 +----------------+-----------+-----------------------+------------------+----------+---------------+
@@ -2532,8 +2532,8 @@ Q2_TXPLL0   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_TX_
 | EXTPLL_CLKBUF  | 0x4080004 | 0x00000000            | 0x00000000       | No       | 1             |
 | EXTPLL_CTRL    | 0x4080008 | 0x00CE0009            | 0x00800008       | Yes      | 1             |
 | EXTPLL_CLK_SEL | 0x408000C | 0x00001F00            | 0x00000003       | Yes      | 1             |
-| EXTPLL_DIV_1   | 0x4080010 | 0x00140014            | 0x0020000A       | Yes      | 1             |
-| EXTPLL_DIV_2   | 0x4080014 | 0x01000001            | 0x02000000       | Yes      | 1             |
+| EXTPLL_DIV_1   | 0x4080010 | 0x00140014            | 0x0060000C       | Yes      | 1             |
+| EXTPLL_DIV_2   | 0x4080014 | 0x01000001            | 0x05000000       | Yes      | 1             |
 | EXTPLL_JA_1    | 0x4080018 | 0x00640064            | 0x00640064       | No       | N/A           |
 | EXTPLL_JA_2    | 0x408001C | 0x00000064            | 0x00000064       | No       | N/A           |
 | EXTPLL_JA_3    | 0x4080020 | 0x000A0064            | 0x000A0064       | No       | N/A           |
@@ -2549,64 +2549,64 @@ Q2_TXPLL0   (Data_Block_0/DataSource_Transcievers_0/OneLane_Transciever_0/PF_TX_
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
-PLL_NE_0   (Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0)
-+---------------+-----------+-----------------------+------------------+----------+---------------+
-| Register Name | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
-+---------------+-----------+-----------------------+------------------+----------+---------------+
-| SOFT_RESET    | 0x8040000 | 0x00000000            | 0x00000000       | No       | N/A           |
-| PLL_CTRL      | 0x8040004 | 0x0000107C            | 0x0000108F       | Yes      | N/A           |
-| PLL_REF_FB    | 0x8040008 | 0x00000000            | 0x00000800       | Yes      | N/A           |
-| PLL_FRACN     | 0x804000C | 0x00000000            | 0x00000000       | No       | N/A           |
-| PLL_DIV_0_1   | 0x8040010 | 0x00000000            | 0x71000500       | Yes      | N/A           |
-| PLL_DIV_2_3   | 0x8040014 | 0x00000000            | 0x01000100       | Yes      | N/A           |
-| PLL_CTRL2     | 0x8040018 | 0x00001006            | 0x00001014       | Yes      | N/A           |
-| PLL_CAL       | 0x804001C | 0x00000000            | 0x0000000E       | Yes      | N/A           |
-| PLL_PHADJ     | 0x8040020 | 0x00004001            | 0x00004000       | Yes      | N/A           |
-| SSCG_REG_0    | 0x8040024 | 0x00000000            | 0x00000001       | Yes      | N/A           |
-| SSCG_REG_1    | 0x8040028 | 0x00000000            | 0x0000000A       | Yes      | N/A           |
-| SSCG_REG_2    | 0x804002C | 0x00000000            | 0x0000007D       | Yes      | N/A           |
-| SSCG_REG_3    | 0x8040030 | 0x00000000            | 0x00000001       | Yes      | N/A           |
-+---------------+-----------+-----------------------+------------------+----------+---------------+
-
-Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
-
-PLL_SE_0   (Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0)
+PLL_SE_0   (DataSource_Transcievers_0/PF_CCC_C5_0/PF_CCC_C5_0/pll_inst_0)
 +---------------+-----------+-----------------------+------------------+----------+---------------+
 | Register Name | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
 +---------------+-----------+-----------------------+------------------+----------+---------------+
 | SOFT_RESET    | 0x8010000 | 0x00000000            | 0x00000000       | No       | N/A           |
 | PLL_CTRL      | 0x8010004 | 0x0000107C            | 0x00001087       | Yes      | N/A           |
-| PLL_REF_FB    | 0x8010008 | 0x00000000            | 0x00001900       | Yes      | N/A           |
+| PLL_REF_FB    | 0x8010008 | 0x00000000            | 0x00000400       | Yes      | N/A           |
 | PLL_FRACN     | 0x801000C | 0x00000000            | 0x00000000       | No       | N/A           |
-| PLL_DIV_0_1   | 0x8010010 | 0x00000000            | 0x01000A00       | Yes      | N/A           |
+| PLL_DIV_0_1   | 0x8010010 | 0x00000000            | 0x01000800       | Yes      | N/A           |
 | PLL_DIV_2_3   | 0x8010014 | 0x00000000            | 0x01000100       | Yes      | N/A           |
 | PLL_CTRL2     | 0x8010018 | 0x00001006            | 0x00001014       | Yes      | N/A           |
 | PLL_CAL       | 0x801001C | 0x00000000            | 0x0000000E       | Yes      | N/A           |
 | PLL_PHADJ     | 0x8010020 | 0x00004001            | 0x00004000       | Yes      | N/A           |
 | SSCG_REG_0    | 0x8010024 | 0x00000000            | 0x00000001       | Yes      | N/A           |
 | SSCG_REG_1    | 0x8010028 | 0x00000000            | 0x0000000A       | Yes      | N/A           |
-| SSCG_REG_2    | 0x801002C | 0x00000000            | 0x00000300       | Yes      | N/A           |
+| SSCG_REG_2    | 0x801002C | 0x00000000            | 0x0000007D       | Yes      | N/A           |
 | SSCG_REG_3    | 0x8010030 | 0x00000000            | 0x00000001       | Yes      | N/A           |
 +---------------+-----------+-----------------------+------------------+----------+---------------+
 
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
-PLL_SW_0   (Data_Block_0/DataSource_Transcievers_0/PF_CCC_C5_0/PF_CCC_C5_0/pll_inst_0)
+PLL_NE_0   (Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0)
++---------------+-----------+-----------------------+------------------+----------+---------------+
+| Register Name | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
++---------------+-----------+-----------------------+------------------+----------+---------------+
+| SOFT_RESET    | 0x8040000 | 0x00000000            | 0x00000000       | No       | N/A           |
+| PLL_CTRL      | 0x8040004 | 0x0000107C            | 0x0000108F       | Yes      | N/A           |
+| PLL_REF_FB    | 0x8040008 | 0x00000000            | 0x00000200       | Yes      | N/A           |
+| PLL_FRACN     | 0x804000C | 0x00000000            | 0x00000000       | No       | N/A           |
+| PLL_DIV_0_1   | 0x8040010 | 0x00000000            | 0x6D000400       | Yes      | N/A           |
+| PLL_DIV_2_3   | 0x8040014 | 0x00000000            | 0x01000100       | Yes      | N/A           |
+| PLL_CTRL2     | 0x8040018 | 0x00001006            | 0x00001014       | Yes      | N/A           |
+| PLL_CAL       | 0x804001C | 0x00000000            | 0x0000000E       | Yes      | N/A           |
+| PLL_PHADJ     | 0x8040020 | 0x00004001            | 0x00004000       | Yes      | N/A           |
+| SSCG_REG_0    | 0x8040024 | 0x00000000            | 0x00000001       | Yes      | N/A           |
+| SSCG_REG_1    | 0x8040028 | 0x00000000            | 0x0000000A       | Yes      | N/A           |
+| SSCG_REG_2    | 0x804002C | 0x00000000            | 0x0000001E       | Yes      | N/A           |
+| SSCG_REG_3    | 0x8040030 | 0x00000000            | 0x00000001       | Yes      | N/A           |
++---------------+-----------+-----------------------+------------------+----------+---------------+
+
+Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
+
+PLL_SW_0   (Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0)
 +---------------+-----------+-----------------------+------------------+----------+---------------+
 | Register Name | Address   | Silicon Default Value | Configured Value | Modified | Lock Value(*) |
 +---------------+-----------+-----------------------+------------------+----------+---------------+
 | SOFT_RESET    | 0x8400000 | 0x00000000            | 0x00000000       | No       | N/A           |
 | PLL_CTRL      | 0x8400004 | 0x0000107C            | 0x00001087       | Yes      | N/A           |
-| PLL_REF_FB    | 0x8400008 | 0x00000000            | 0x00000400       | Yes      | N/A           |
+| PLL_REF_FB    | 0x8400008 | 0x00000000            | 0x00001900       | Yes      | N/A           |
 | PLL_FRACN     | 0x840000C | 0x00000000            | 0x00000000       | No       | N/A           |
-| PLL_DIV_0_1   | 0x8400010 | 0x00000000            | 0x01000800       | Yes      | N/A           |
+| PLL_DIV_0_1   | 0x8400010 | 0x00000000            | 0x01000A00       | Yes      | N/A           |
 | PLL_DIV_2_3   | 0x8400014 | 0x00000000            | 0x01000100       | Yes      | N/A           |
 | PLL_CTRL2     | 0x8400018 | 0x00001006            | 0x00001014       | Yes      | N/A           |
 | PLL_CAL       | 0x840001C | 0x00000000            | 0x0000000E       | Yes      | N/A           |
 | PLL_PHADJ     | 0x8400020 | 0x00004001            | 0x00004000       | Yes      | N/A           |
 | SSCG_REG_0    | 0x8400024 | 0x00000000            | 0x00000001       | Yes      | N/A           |
 | SSCG_REG_1    | 0x8400028 | 0x00000000            | 0x0000000A       | Yes      | N/A           |
-| SSCG_REG_2    | 0x840002C | 0x00000000            | 0x0000007D       | Yes      | N/A           |
+| SSCG_REG_2    | 0x840002C | 0x00000000            | 0x00000300       | Yes      | N/A           |
 | SSCG_REG_3    | 0x8400030 | 0x00000000            | 0x00000001       | Yes      | N/A           |
 +---------------+-----------+-----------------------+------------------+----------+---------------+
 
@@ -2753,82 +2753,82 @@ G5_CONTROL_VOLTAGEDETECT   (Unused)
 Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.
 
 Block-Level Control For Locking Peripheral Blocks.
-+------------------------------------+----------------------------+---------------------------------------------------------------------------+---------------+
-| Peripheral Block Name              | Name For Locking The Block | Instance Name                                                             | Lock Value(*) |
-+------------------------------------+----------------------------+---------------------------------------------------------------------------+---------------+
-| CCC PLL                            | PLL_NE_0_LOCK              | Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0                          | 1             |
-| CCC PLL                            | PLL_NE_1_LOCK              | N/A                                                                       | 1             |
-| CCC PLL                            | PLL_NW_0_LOCK              | N/A                                                                       | 1             |
-| CCC PLL                            | PLL_NW_1_LOCK              | N/A                                                                       | 1             |
-| CCC PLL                            | PLL_SE_0_LOCK              | Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0                          | 1             |
-| CCC PLL                            | PLL_SE_1_LOCK              | N/A                                                                       | 1             |
-| CCC PLL                            | PLL_SW_0_LOCK              | Data_Block_0/DataSource_Transcievers_0/PF_CCC_C5_0/PF_CCC_C5_0/pll_inst_0 | 1             |
-| CCC PLL                            | PLL_SW_1_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_NE_0_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_NE_1_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_NW_0_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_NW_1_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_SE_0_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_SE_1_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_SW_0_LOCK              | N/A                                                                       | 1             |
-| CCC DLL                            | DLL_SW_1_LOCK              | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_0_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_10_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_11_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_12_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_13_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_14_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_15_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_16_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_1_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_2_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_3_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_4_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_5_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_6_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_7_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_8_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_N_9_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_0_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_10_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_11_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_12_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_13_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_1_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_2_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_3_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_4_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_5_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_6_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_7_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_8_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_S_9_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_0_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_10_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_11_LOCK         | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_1_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_2_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_3_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_4_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_5_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_6_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_7_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_8_LOCK          | N/A                                                                       | 1             |
-| Lane Controller                    | LANECTRL_W_9_LOCK          | N/A                                                                       | 1             |
-| Corner CFM                         | CRNCOMMON_NE_LOCK          | N/A                                                                       | 1             |
-| Corner CFM                         | CRNCOMMON_NW_LOCK          | N/A                                                                       | 1             |
-| Corner CFM                         | CRNCOMMON_SE_LOCK          | N/A                                                                       | 1             |
-| Corner CFM                         | CRNCOMMON_SW_LOCK          | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_E_0_LOCK       | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_NE_0_LOCK      | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_NW_0_LOCK      | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_SE_0_LOCK      | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_SW_0_LOCK      | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_W_0_LOCK       | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL                  | VREFBANKDYNPC_NE_H_LOCK    | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL                  | VREFBANKDYNPC_NW_V_LOCK    | N/A                                                                       | 1             |
-| IOCALIB / BNKCTRL                  | VREFBANKDYNPC_SW_H_LOCK    | N/A                                                                       | 1             |
-+------------------------------------+----------------------------+---------------------------------------------------------------------------+---------------+
++------------------------------------+----------------------------+--------------------------------------------------------------+---------------+
+| Peripheral Block Name              | Name For Locking The Block | Instance Name                                                | Lock Value(*) |
++------------------------------------+----------------------------+--------------------------------------------------------------+---------------+
+| CCC PLL                            | PLL_NE_0_LOCK              | Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0             | 1             |
+| CCC PLL                            | PLL_NE_1_LOCK              | N/A                                                          | 1             |
+| CCC PLL                            | PLL_NW_0_LOCK              | N/A                                                          | 1             |
+| CCC PLL                            | PLL_NW_1_LOCK              | N/A                                                          | 1             |
+| CCC PLL                            | PLL_SE_0_LOCK              | DataSource_Transcievers_0/PF_CCC_C5_0/PF_CCC_C5_0/pll_inst_0 | 1             |
+| CCC PLL                            | PLL_SE_1_LOCK              | N/A                                                          | 1             |
+| CCC PLL                            | PLL_SW_0_LOCK              | Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0             | 1             |
+| CCC PLL                            | PLL_SW_1_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_NE_0_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_NE_1_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_NW_0_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_NW_1_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_SE_0_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_SE_1_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_SW_0_LOCK              | N/A                                                          | 1             |
+| CCC DLL                            | DLL_SW_1_LOCK              | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_0_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_10_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_11_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_12_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_13_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_14_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_15_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_16_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_1_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_2_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_3_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_4_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_5_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_6_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_7_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_8_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_N_9_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_0_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_10_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_11_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_12_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_13_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_1_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_2_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_3_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_4_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_5_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_6_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_7_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_8_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_S_9_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_0_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_10_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_11_LOCK         | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_1_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_2_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_3_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_4_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_5_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_6_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_7_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_8_LOCK          | N/A                                                          | 1             |
+| Lane Controller                    | LANECTRL_W_9_LOCK          | N/A                                                          | 1             |
+| Corner CFM                         | CRNCOMMON_NE_LOCK          | N/A                                                          | 1             |
+| Corner CFM                         | CRNCOMMON_NW_LOCK          | N/A                                                          | 1             |
+| Corner CFM                         | CRNCOMMON_SE_LOCK          | N/A                                                          | 1             |
+| Corner CFM                         | CRNCOMMON_SW_LOCK          | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_E_0_LOCK       | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_NE_0_LOCK      | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_NW_0_LOCK      | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_SE_0_LOCK      | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_SW_0_LOCK      | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL / Clock Controls | ICBMUXINGPC_W_0_LOCK       | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL                  | VREFBANKDYNPC_NE_H_LOCK    | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL                  | VREFBANKDYNPC_NW_V_LOCK    | N/A                                                          | 1             |
+| IOCALIB / BNKCTRL                  | VREFBANKDYNPC_SW_H_LOCK    | N/A                                                          | 1             |
++------------------------------------+----------------------------+--------------------------------------------------------------+---------------+
 
 Note: (*) Lock Value = 0, disables modification of the Peripheral Block.
 

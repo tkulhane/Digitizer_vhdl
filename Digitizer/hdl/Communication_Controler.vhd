@@ -25,6 +25,8 @@ end Communication_Controler;
 
 architecture rtl of Communication_Controler is
 
+    constant ACTIVITY_MSG_TIME     : natural := 10000;
+
 
     constant CMD_COMSW_DATA_DESTINATION             : std_logic_vector(7 downto 0) := x"11";
     constant CMD_COMSW_DATA_DESTINATION_CMD_SOURCE  : std_logic_vector(7 downto 0) := x"12";
@@ -43,6 +45,10 @@ architecture rtl of Communication_Controler is
 
     signal Communication_Vote_Number : integer range 0 to 3;
     signal Communication_vote_vector : std_logic_vector(2 downto 0);
+
+    signal ActivityCounter : unsigned(31 downto 0);
+    signal ActivityMSG : std_logic;
+    signal ActivityConnection : std_logic;
     
     signal Data_Valid : std_logic;
 
@@ -249,6 +255,47 @@ begin
 
     end process;
 
+
+
+------------------------------------------------------------------------------------------------------------
+--communication activity timer
+------------------------------------------------------------------------------------------------------------
+    process(Reset_N, Clock)
+
+    begin
+    
+        if(Reset_N = '0') then 
+            ActivityCounter <= (others => '0');
+            ActivityConnection <= '0';
+
+        elsif(Clock'event and Clock = '1') then    
+
+
+            if(ActivityMSG = '1') then      
+                ActivityCounter <= (others => '0');
+                ActivityConnection <= '1';
+
+            end if;
+
+
+            if(ActivityConnection = '1') then
+
+                ActivityCounter <= ActivityCounter + 1;
+
+                if(ActivityCounter >= ACTIVITY_MSG_TIME) then 
+
+                    ActivityConnection <= '0';
+
+                end if;
+
+            end if;
+
+
+
+
+        end if;
+
+    end process;
 
 
 

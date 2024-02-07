@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Jan  4 21:34:57 2024
+// Created by SmartDesign Wed Feb  7 23:12:32 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -224,8 +224,8 @@ wire          BUFD_0_Y;
 wire          CLK_OUT_N_net_0;
 wire          CLK_OUT_P_net_0;
 wire          Clock_Reset_0_HMC_CLK;
-wire          Clock_Reset_0_Main_CLOCK_1;
-wire          Clock_Reset_0_Main_RESET_N_0;
+wire          Clock_Reset_0_Main_CLOCK_0;
+wire          Clock_Reset_0_Main_RESET_N_1;
 wire          Clock_Reset_0_UART_CLOCK_1;
 wire          Clock_Reset_0_UART_RESER_N_1;
 wire          Clock_Reset_0_XCVR_CTRL_Clock_40M;
@@ -254,6 +254,15 @@ wire          Data_Block_0_C_busy;
 wire   [15:0] Data_Block_0_C_read_data_frame;
 wire   [31:0] Data_Block_0_Communication_Data_Frame;
 wire          Data_Block_0_Communication_Empty;
+wire          Data_Block_0_Control_Test_Generator_Enable;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_1;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_2;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_0_3;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_0;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_1;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_2;
+wire   [11:0] DataSource_Transcievers_0_Output_Data_1_3;
 wire          DBGport_0_1;
 wire          DBGport_1_0;
 wire          DBGport_2_net_0;
@@ -501,8 +510,8 @@ Clock_Reset Clock_Reset_0(
         // Inputs
         .EXT_RST_N           ( DBGport_2_net_0 ),
         // Outputs
-        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_1 ),
         .UART_CLOCK          ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESER_N        ( Clock_Reset_0_UART_RESER_N_1 ),
         .HMC_CLK             ( Clock_Reset_0_HMC_CLK ),
@@ -515,8 +524,8 @@ Communication Communication_0(
         // Inputs
         .UART_Clock       ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESET_N     ( Clock_Reset_0_UART_RESER_N_1 ),
-        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_1 ),
         .write_read       ( Controler_0_COMM_write_read ),
         .enable_cmd       ( Controler_0_COMM_enable_cmd ),
         .DataFifo_Empty   ( Data_Block_0_Communication_Empty ),
@@ -556,8 +565,8 @@ Communication Communication_0(
 //--------Controler
 Controler Controler_0(
         // Inputs
-        .Clock                 ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Reset_N               ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Clock                 ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Reset_N               ( Clock_Reset_0_Main_RESET_N_1 ),
         .TRG_busy              ( Data_Block_0_C_busy ),
         .LMX1_miso             ( LMX1_miso ),
         .LMX2_miso             ( LMX2_miso ),
@@ -630,35 +639,62 @@ Controler Controler_0(
 //--------Data_Block
 Data_Block Data_Block_0(
         // Inputs
-        .C_enable_cmd              ( Controler_0_TRG_enable_cmd ),
-        .C_write_read              ( Controler_0_TRG_write_read ),
-        .Clock                     ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Communication_Read        ( Communication_0_DataFifo_RD ),
-        .Communication_Builder_RUN ( Communication_0_Builder_Enable ),
-        .Fifo_RESET_N              ( DBGport_4_1 ),
-        .Reset_N                   ( Clock_Reset_0_Main_RESET_N_0 ),
-        .LANE0_RXD_P               ( LANE0_RXD_P ),
-        .LANE0_RXD_N               ( LANE0_RXD_N ),
-        .LANE1_RXD_P               ( LANE1_RXD_P ),
-        .LANE1_RXD_N               ( LANE1_RXD_N ),
-        .CTRL_Clock_40M            ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
-        .REF_Clock                 ( Clock_Reset_0_XCVR_REF_Clock ),
-        .C_addr_frame              ( Controler_0_TRG_addr ),
-        .C_write_data_frame        ( Controler_0_TRG_data ),
+        .C_enable_cmd                  ( Controler_0_TRG_enable_cmd ),
+        .C_write_read                  ( Controler_0_TRG_write_read ),
+        .Communication_Read            ( Communication_0_DataFifo_RD ),
+        .Communication_Builder_RUN     ( Communication_0_Builder_Enable ),
+        .Fifo_RESET_N                  ( DBGport_4_1 ),
+        .C_addr_frame                  ( Controler_0_TRG_addr ),
+        .C_write_data_frame            ( Controler_0_TRG_data ),
+        .Reset_N                       ( Clock_Reset_0_Main_RESET_N_1 ),
+        .Clock                         ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Input_Data_0_00               ( DataSource_Transcievers_0_Output_Data_0_1 ),
+        .Input_Data_3_00               ( DataSource_Transcievers_0_Output_Data_0_3 ),
+        .Input_Data_2_00               ( DataSource_Transcievers_0_Output_Data_0_2 ),
+        .Input_Data_1_00               ( DataSource_Transcievers_0_Output_Data_0_0 ),
+        .Input_Data_0_01               ( DataSource_Transcievers_0_Output_Data_1_1 ),
+        .Input_Data_3_01               ( DataSource_Transcievers_0_Output_Data_1_3 ),
+        .Input_Data_2_01               ( DataSource_Transcievers_0_Output_Data_1_2 ),
+        .Input_Data_1_01               ( DataSource_Transcievers_0_Output_Data_1_0 ),
         // Outputs
-        .C_busy                    ( Data_Block_0_C_busy ),
-        .Communication_Empty       ( Data_Block_0_Communication_Empty ),
-        .Diag_0                    (  ),
-        .Diag_1                    (  ),
-        .Diag_2                    (  ),
-        .Diag_3                    (  ),
-        .Communication_Data_Req    (  ),
-        .LANE0_TXD_P               ( LANE0_TXD_P_net_0 ),
-        .LANE0_TXD_N               ( LANE0_TXD_N_net_0 ),
-        .LANE1_TXD_P               ( LANE1_TXD_P_net_0 ),
-        .LANE1_TXD_N               ( LANE1_TXD_N_net_0 ),
-        .C_read_data_frame         ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame  ( Data_Block_0_Communication_Data_Frame ) 
+        .C_busy                        ( Data_Block_0_C_busy ),
+        .Communication_Empty           ( Data_Block_0_Communication_Empty ),
+        .Diag_0                        (  ),
+        .Diag_1                        (  ),
+        .Diag_2                        (  ),
+        .Diag_3                        (  ),
+        .Communication_Data_Req        (  ),
+        .C_read_data_frame             ( Data_Block_0_C_read_data_frame ),
+        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ),
+        .Control_Test_Generator_Enable ( Data_Block_0_Control_Test_Generator_Enable ) 
+        );
+
+//--------DataSource_Transcievers
+DataSource_Transcievers DataSource_Transcievers_0(
+        // Inputs
+        .LANE0_RXD_P     ( LANE0_RXD_P ),
+        .LANE0_RXD_N     ( LANE0_RXD_N ),
+        .LANE1_RXD_P     ( LANE1_RXD_P ),
+        .LANE1_RXD_N     ( LANE1_RXD_N ),
+        .Gen_Enable      ( Data_Block_0_Control_Test_Generator_Enable ),
+        .Logic_Clock     ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Logic_Reset_N   ( Clock_Reset_0_Main_RESET_N_1 ),
+        .CTRL_Clock_40M  ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
+        .REF_Clock       ( Clock_Reset_0_XCVR_REF_Clock ),
+        // Outputs
+        .LANE0_TXD_P     ( LANE0_TXD_P_net_0 ),
+        .LANE0_TXD_N     ( LANE0_TXD_N_net_0 ),
+        .LANE1_TXD_P     ( LANE1_TXD_P_net_0 ),
+        .LANE1_TXD_N     ( LANE1_TXD_N_net_0 ),
+        .Data_Valid      (  ),
+        .Output_Data_1_1 ( DataSource_Transcievers_0_Output_Data_1_1 ),
+        .Output_Data_1_0 ( DataSource_Transcievers_0_Output_Data_1_0 ),
+        .Output_Data_0_1 ( DataSource_Transcievers_0_Output_Data_0_1 ),
+        .Output_Data_0_0 ( DataSource_Transcievers_0_Output_Data_0_0 ),
+        .Output_Data_0_2 ( DataSource_Transcievers_0_Output_Data_0_2 ),
+        .Output_Data_1_2 ( DataSource_Transcievers_0_Output_Data_1_2 ),
+        .Output_Data_1_3 ( DataSource_Transcievers_0_Output_Data_1_3 ),
+        .Output_Data_0_3 ( DataSource_Transcievers_0_Output_Data_0_3 ) 
         );
 
 //--------INBUF_DIFF
@@ -718,7 +754,7 @@ OUTBUF_DIFF OUTBUF_DIFF_0_0_1(
 //--------Synchronizer
 Synchronizer Synchronizer_0(
         // Inputs
-        .nRST     ( Clock_Reset_0_Main_RESET_N_0 ),
+        .nRST     ( Clock_Reset_0_Main_RESET_N_1 ),
         .CLK      ( INBUF_DIFF_0_0_Y ),
         .Data_In  ( Controler_0_LMX_Sync ),
         // Outputs

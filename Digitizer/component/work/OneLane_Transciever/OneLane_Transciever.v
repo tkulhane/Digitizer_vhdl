@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Jan  4 21:34:11 2024
+// Created by SmartDesign Tue Feb  6 22:10:20 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -152,8 +152,8 @@ wire   [3:0]   Q_net_1;
 //--------------------------------------------------------------------
 wire           VCC_net;
 wire   [3:0]   Read_Data_Enable_const_net_0;
-wire   [7:0]   LANE0_TX_DISPFNC_const_net_0;
 wire           GND_net;
+wire   [7:0]   LANE0_TX_DISPFNC_const_net_0;
 //--------------------------------------------------------------------
 // Inverted Nets
 //--------------------------------------------------------------------
@@ -170,8 +170,8 @@ wire           EMPTY_OUT_PRE_INV7_0;
 //--------------------------------------------------------------------
 assign VCC_net                      = 1'b1;
 assign Read_Data_Enable_const_net_0 = 4'hF;
-assign LANE0_TX_DISPFNC_const_net_0 = 8'h00;
 assign GND_net                      = 1'b0;
+assign LANE0_TX_DISPFNC_const_net_0 = 8'h00;
 //--------------------------------------------------------------------
 // Inversions
 //--------------------------------------------------------------------
@@ -320,8 +320,7 @@ PF_TX_PLL_C1 PF_TX_PLL_C1_0(
         .PLL_LOCK        (  ),
         .LOCK            ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_LOCK ),
         .BIT_CLK         ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_BIT_CLK ),
-        .REF_CLK_TO_LANE ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE ),
-        .CLK_125         (  ) 
+        .REF_CLK_TO_LANE ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE ) 
         );
 
 //--------PF_XCVR_ERM_C8
@@ -329,31 +328,31 @@ PF_XCVR_ERM_C8 PF_XCVR_ERM_C8_0(
         // Inputs
         .LANE0_RXD_P              ( LANE0_RXD_P ),
         .LANE0_RXD_N              ( LANE0_RXD_N ),
-        .LANE0_TX_DATA            ( COREFIFO_C12_0_Q ),
         .LANE0_CDR_REF_CLK_FAB    ( REF_CLK ),
         .LANE0_PCS_ARST_N         ( CTRL_RST_N ),
         .LANE0_PMA_ARST_N         ( CTRL_RST_N ),
-        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_0 ),
-        .LANE0_8B10B_TX_K         ( COREFIFO_C13_0_Q ),
         .TX_PLL_LOCK_0            ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_LOCK ),
         .TX_BIT_CLK_0             ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_BIT_CLK ),
         .TX_PLL_REF_CLK_0         ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE ),
         .CTRL_CLK                 ( CTRL_CLK ),
         .CTRL_ARST_N              ( CTRL_RST_N ),
         .LANE0_LOS                ( GND_net ),
+        .LANE0_TX_DATA            ( COREFIFO_C12_0_Q ),
+        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_0 ),
+        .LANE0_8B10B_TX_K         ( COREFIFO_C13_0_Q ),
         // Outputs
         .LANE0_TXD_P              ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N              ( LANE0_TXD_N_net_0 ),
-        .LANE0_RX_DATA            ( PF_XCVR_ERM_C8_0_LANE0_RX_DATA ),
         .LANE0_TX_CLK_R           ( PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R ),
         .LANE0_RX_CLK_R           ( PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R ),
         .LANE0_RX_IDLE            (  ),
         .LANE0_TX_CLK_STABLE      ( PF_XCVR_ERM_C8_0_LANE0_TX_CLK_STABLE_0 ),
+        .LANE0_RX_READY           ( PF_XCVR_ERM_C8_0_LANE0_RX_READY ),
+        .LANE0_RX_VAL             ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL ),
+        .LANE0_RX_DATA            ( PF_XCVR_ERM_C8_0_LANE0_RX_DATA ),
         .LANE0_RX_CODE_VIOLATION  (  ),
         .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         ( PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K ),
-        .LANE0_RX_READY           ( PF_XCVR_ERM_C8_0_LANE0_RX_READY ),
-        .LANE0_RX_VAL             ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL ) 
+        .LANE0_8B10B_RX_K         ( PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K ) 
         );
 
 //--------RxLaneControl

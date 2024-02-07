@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Jan  3 15:09:46 2024
+// Created by SmartDesign Wed Feb  7 15:39:06 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -50,11 +50,11 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "UI_PIPE_PROTOCOL_USED:PCIe Gen1 (2.5 Gbps)" \
 "UI_PMA_ARST_N:TX and RX PMA" \
 "UI_PROTOCOL_PRESET_USED:None" \
-"UI_RX_DATA_RATE:5000" \
+"UI_RX_DATA_RATE:6000" \
 "UI_RX_PCS_FAB_IF_WIDTH:32" \
 "UI_SATA_IDLE_BURST_TIMING:MAC" \
 "UI_TX_CLK_DIV_FACTOR:1" \
-"UI_TX_DATA_RATE:5000" \
+"UI_TX_DATA_RATE:6000" \
 "UI_TX_PCS_FAB_IF_WIDTH:32" \
 "UI_TX_RX_MODE:Duplex" \
 "UI_USE_INTERFACE_CLK_AS_PLL_REFCLK:false" \
