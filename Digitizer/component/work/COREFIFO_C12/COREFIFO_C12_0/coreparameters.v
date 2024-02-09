@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Wed Jan  3 20:07:56 2024
+// Created by Microsemi SmartDesign Fri Feb  9 20:02:46 2024
 // Parameters for COREFIFO
 //--------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ parameter RDCNT_EN = 0;
 parameter RDEPTH = 64;
 parameter RE_POLARITY = 0;
 parameter READ_DVALID = 0;
-parameter RWIDTH = 32;
+parameter RWIDTH = 64;
 parameter SYNC = 0;
 parameter SYNC_RESET = 0;
 parameter testbench = "User";
@@ -34,4 +34,4 @@ parameter WDEPTH = 64;
 parameter WE_POLARITY = 0;
 parameter WRCNT_EN = 0;
 parameter WRITE_ACK = 0;
-parameter WWIDTH = 32;
+parameter WWIDTH = 64;

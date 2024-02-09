@@ -6,7 +6,8 @@ use ieee.numeric_std.all;
 entity Alignment_Fifo is
   generic 
   (
-    g_WIDTH : natural := 8;
+    g_NumOfBYTES : natural := 4;
+    g_BYTE_WIDTH : natural := 8;
     g_DEPTH : integer := 256
   );
   port 
@@ -20,13 +21,15 @@ entity Alignment_Fifo is
     Full_For_All : out std_logic;
 
     --data bytes vectors ... !!!supplement for all insputs!!!
-    Write_Data_0 : in  std_logic_vector(g_WIDTH-1 downto 0);
-    Write_Data_1 : in  std_logic_vector(g_WIDTH-1 downto 0);
-    Write_Data_2 : in  std_logic_vector(g_WIDTH-1 downto 0);
-    Write_Data_3 : in  std_logic_vector(g_WIDTH-1 downto 0);
+    --Write_Data_0 : in  std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+    --Write_Data_1 : in  std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+    --Write_Data_2 : in  std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+    --Write_Data_3 : in  std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+
+    Write_Data : in std_logic_vector( (g_BYTE_WIDTH * g_NumOfBYTES) - 1 downto 0);
 
     --data bytes enable
-    Write_Data_Enable : in std_logic_vector(4 - 1 downto 0); --!!!supplement number of all insputs!!!
+    Write_Data_Enable : in std_logic_vector(g_NumOfBYTES - 1 downto 0); --!!!supplement number of all insputs!!!
 
 
     -- FIFO Read Interface
@@ -35,13 +38,16 @@ entity Alignment_Fifo is
     Empty_For_NonAll : out std_logic;
 
     --data bytes vectors ... !!!supplement for all outputs!!!
-    Read_Data_0 : out std_logic_vector(g_WIDTH-1 downto 0);
-    Read_Data_1 : out std_logic_vector(g_WIDTH-1 downto 0);
-    Read_Data_2 : out std_logic_vector(g_WIDTH-1 downto 0);
-    Read_Data_3 : out std_logic_vector(g_WIDTH-1 downto 0);
+    --Read_Data_0 : out std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+    --Read_Data_1 : out std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+    --Read_Data_2 : out std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+    --Read_Data_3 : out std_logic_vector(g_BYTE_WIDTH-1 downto 0);
+
+    Read_Data : out std_logic_vector( (g_BYTE_WIDTH * g_NumOfBYTES) - 1 downto 0);
+
     --data bytes enable
-    Read_Data_Enable : in std_logic_vector(4 - 1 downto 0); --!!!supplement number of all outputs!!!
-    Read_Data_Empty : out std_logic_vector(4 - 1 downto 0)   --!!!supplement number of all outputs!!!
+    Read_Data_Enable : in std_logic_vector(g_NumOfBYTES - 1 downto 0); --!!!supplement number of all outputs!!!
+    Read_Data_Empty : out std_logic_vector(g_NumOfBYTES - 1 downto 0)   --!!!supplement number of all outputs!!!
 
 
   );
@@ -58,7 +64,7 @@ architecture rtl of Alignment_Fifo is
 ------------------------------------------------------------------------------------------------------------
 --Memory signals declaration
 ------------------------------------------------------------------------------------------------------------  
-  type t_FIFO_DATA is array (0 to g_DEPTH-1) of std_logic_vector(g_WIDTH-1 downto 0);
+  type t_FIFO_DATA is array (0 to g_DEPTH-1) of std_logic_vector(g_BYTE_WIDTH-1 downto 0);
   signal r_FIFO_DATA : t_FIFO_DATA := (others => (others => '0'));
  
 ------------------------------------------------------------------------------------------------------------
@@ -82,7 +88,7 @@ architecture rtl of Alignment_Fifo is
   signal Write_Enable_0 : std_logic;
   signal Write_Enable_1 : std_logic;
 
-  type type_wr_data_vector_array is array(0 to (Write_NumberOfDataBytes - 1)) of std_logic_vector(g_WIDTH - 1 downto 0);
+  type type_wr_data_vector_array is array(0 to (Write_NumberOfDataBytes - 1)) of std_logic_vector(g_BYTE_WIDTH - 1 downto 0);
   signal WR_Data_Array_0 : type_wr_data_vector_array;
   signal WR_Data_Array_1 : type_wr_data_vector_array;
 
@@ -102,7 +108,7 @@ architecture rtl of Alignment_Fifo is
 
   signal Read_Enable_0 : std_logic;
 
-  type type_rd_data_vector_array is array(0 to (Read_NumberOfDataBytes - 1)) of std_logic_vector(g_WIDTH - 1 downto 0);
+  type type_rd_data_vector_array is array(0 to (Read_NumberOfDataBytes - 1)) of std_logic_vector(g_BYTE_WIDTH - 1 downto 0);
   signal RD_Data_Array : type_rd_data_vector_array;
 
 ------------------------------------------------------------------------------------------------------------
@@ -119,11 +125,11 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --Signals routing... !!!supplement for all insputs and otputs!!!
 ------------------------------------------------------------------------------------------------------------  
-  --data input bytes
-  WR_Data_Array_0(0) <= Write_Data_0;
-  WR_Data_Array_0(1) <= Write_Data_1;
-  WR_Data_Array_0(2) <= Write_Data_2;
-  WR_Data_Array_0(3) <= Write_Data_3;
+
+  --get Input data vector into array     
+  InputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+    WR_Data_Array_0(i) <= Write_Data(((g_NumOfBYTES * g_BYTE_WIDTH) + (g_BYTE_WIDTH - 1)) downto (g_NumberOfDataOutputBytes * g_BYTE_WIDTH)); --generate: (7 downto 0) -> (15 downto 8) -> (23 downto 16) 
+  end generate InputData_GEN;
 
   --data output bytes
   Read_Data_0 <= RD_Data_Array(0);

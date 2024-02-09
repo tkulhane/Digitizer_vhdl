@@ -4,29 +4,23 @@ use ieee.numeric_std.all;
 
 
 entity RxLaneControl is
+  generic 
+  (
+    g_NumberOfDataOutputBytes : natural := 4;
+    g_NumberOfIlasSequences : natural := 3
+  );
   port 
   (
     Clock : in std_logic;
     Reset_N : in std_logic;
  
-    Input_Data_3 : in std_logic_vector(7 downto 0);
-    Input_Data_2 : in std_logic_vector(7 downto 0);
-    Input_Data_1 : in std_logic_vector(7 downto 0);
-    Input_Data_0 : in std_logic_vector(7 downto 0);
-
-    Input_K_3 : in std_logic;
-    Input_K_2 : in std_logic;
-    Input_K_1 : in std_logic;
-    Input_K_0 : in std_logic;
+    Input_Data : in std_logic_vector( (8*g_NumberOfDataOutputBytes) - 1 downto 0);
+    Input_K : in std_logic_vector(g_NumberOfDataOutputBytes - 1 downto 0);
 
     CDR_READY : in std_logic;
     CDR_VAL : in std_logic;
 
-    Output_Data_3 : out std_logic_vector(7 downto 0);
-    Output_Data_2 : out std_logic_vector(7 downto 0);
-    Output_Data_1 : out std_logic_vector(7 downto 0);
-    Output_Data_0 : out std_logic_vector(7 downto 0);
-
+    Output_Data : out std_logic_vector( (8*g_NumberOfDataOutputBytes) - 1 downto 0);
     Output_DataWrite : out std_logic_vector(3 downto 0);
 
     CTRL_Synced : out std_logic;
@@ -44,8 +38,6 @@ architecture rtl of RxLaneControl is
 ------------------------------------------------------------------------------------------------------------
 --constant
 ------------------------------------------------------------------------------------------------------------ 
-  constant NumberOfIlasSequences : integer := 3;
-  constant NumberOfDataInputBytes : integer := 4;
 
   constant const_K_char : std_logic_vector(7 downto 0) := X"BC";
   constant const_A_char : std_logic_vector(7 downto 0) := X"7C";  
@@ -55,14 +47,14 @@ architecture rtl of RxLaneControl is
 --Signals declaration
 ------------------------------------------------------------------------------------------------------------ 
 
-  type type_data_vector_array is array(0 to (NumberOfDataInputBytes - 1)) of std_logic_vector(8 - 1 downto 0);
+  type type_data_vector_array is array(0 to (g_NumberOfDataOutputBytes - 1)) of std_logic_vector(8 - 1 downto 0);
 
   signal InputData : type_data_vector_array;
   signal BufferedData : type_data_vector_array;
   signal OutputData : type_data_vector_array;
 
   
-  type type_logic_array is array(0 to (NumberOfDataInputBytes - 1)) of std_logic;
+  type type_logic_array is array(0 to (g_NumberOfDataOutputBytes - 1)) of std_logic;
   
   signal Input_K_Array : type_logic_array;
   signal ComparatorData_K : type_logic_array;
@@ -101,27 +93,25 @@ begin
 --Array Signals routing
 ------------------------------------------------------------------------------------------------------------  
   
-  InputData(3) <= Input_Data_3;
-  InputData(2) <= Input_Data_2;
-  InputData(1) <= Input_Data_1;
-  InputData(0) <= Input_Data_0;
 
-  Output_Data_3 <= OutputData(3);
-  Output_Data_2 <= OutputData(2); 
-  Output_Data_1 <= OutputData(1); 
-  Output_Data_0 <= OutputData(0);  
+  --get Input data vector into array     
+  InputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+      InputData(i) <= Input_Data((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)); --generate: (7 downto 0) -> (15 downto 8) -> (23 downto 16) 
+  end generate InputData_GEN;
 
-  Output_DataWrite(3) <= DataWrite(3);
-  Output_DataWrite(2) <= DataWrite(2);
-  Output_DataWrite(1) <= DataWrite(1);
-  Output_DataWrite(0) <= DataWrite(0);
+  --get array to output data vector
+  OutputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+      Output_Data((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)) <= OutputData(i);
+  end generate OutputData_GEN;
+
+  OutputDataWrite_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+    Output_DataWrite(i) <= DataWrite(i);
+  end generate OutputDataWrite_GEN;
+
+  OutputK_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+    Input_K_Array(i) <= Input_K(i);
+  end generate OutputK_GEN;  
   
-  
-  Input_K_Array(3) <= Input_K_3;
-  Input_K_Array(2) <= Input_K_2;
-  Input_K_Array(1) <= Input_K_1;
-  Input_K_Array(0) <= Input_K_0;
-
 
 ------------------------------------------------------------------------------------------------------------
 --Signals routing
@@ -267,7 +257,7 @@ begin
         if(Reset_N = '0') then
           
           --loop: resets comparators
-          Comparator_Resets : for i in 0 to (NumberOfDataInputBytes - 1) loop
+          Comparator_Resets : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
               ComparatorData_K(i) <= '0';
               ComparatorData_A(i) <= '0';
               ComparatorData_R(i) <= '0';
@@ -283,7 +273,7 @@ begin
 
 
           --loop: comparator for char K  
-          Comparator_K : for i in 0 to (NumberOfDataInputBytes - 1) loop
+          Comparator_K : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
             if( (Input_K_Array(i) = '1') and (InputData(i) = const_K_char) ) then
               ComparatorData_K(i) <= '1';
             else
@@ -292,7 +282,7 @@ begin
           end loop Comparator_K;
 
           --loop: comparator for char A  
-          Comparator_A : for i in 0 to (NumberOfDataInputBytes - 1) loop
+          Comparator_A : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
             if( (Input_K_Array(i) = '1') and (InputData(i) = const_A_char) ) then
               ComparatorData_A(i) <= '1';
             else
@@ -301,7 +291,7 @@ begin
           end loop Comparator_A;
 
           --loop: comparator for char R
-          Comparator_R : for i in 0 to (NumberOfDataInputBytes - 1) loop
+          Comparator_R : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
             if( (Input_K_Array(i) = '1') and (InputData(i) = const_R_char) ) then
               ComparatorData_R(i) <= '1';
             else
@@ -333,7 +323,7 @@ begin
 
     if(Reset_N = '0') then
 
-      data_out_reset : for i in 0 to (NumberOfDataInputBytes - 1) loop
+      data_out_reset : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
         OutputData(i) <= (others => '0');
         BufferedData(i) <= (others => '0');
       end loop data_out_reset;
@@ -341,7 +331,7 @@ begin
 
     elsif(Clock'event and Clock = '1') then
                       
-      data_out_assing_D : for i in 0 to (NumberOfDataInputBytes - 1) loop
+      data_out_assing_D : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
         OutputData(i) <= BufferedData(i);
         BufferedData(i) <= InputData(i);
       end loop data_out_assing_D;
@@ -365,7 +355,7 @@ begin
 
       if(IlasCounterGo = '1') then
 
-        IlasSeqCountLoop : for i in 0 to (NumberOfDataInputBytes - 1) loop
+        IlasSeqCountLoop : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
         
           if(OrComparatorData_R = '1') then
             Counter_IlasSequence <= Counter_IlasSequence + 1; 
@@ -373,7 +363,7 @@ begin
 
         end loop IlasSeqCountLoop;
 
-        if(Counter_IlasSequence >= NumberOfIlasSequences) then
+        if(Counter_IlasSequence >= g_NumberOfIlasSequences) then
           Last_ILAS_Seq <= '1';    
       
         else
@@ -413,7 +403,7 @@ begin
       if(DataGo_WriteAll = '1') then
 
         
-        DataGo_WriteAll_loop : for i in 0 to (NumberOfDataInputBytes - 1) loop          
+        DataGo_WriteAll_loop : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
           
           if(ComparatorData_K(i) = '0') then -- K se nazapisuje do fifo
             DataWrite(i) <= '1';

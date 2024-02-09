@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Jan  3 20:07:56 2024
+// Created by SmartDesign Fri Feb  9 20:02:47 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -33,7 +33,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "RDEPTH:64"  \
 "RE_POLARITY:0"  \
 "READ_DVALID:false"  \
-"RWIDTH:32"  \
+"RWIDTH:64"  \
 "SYNC:0"  \
 "SYNC_RESET:0"  \
 "UNDERFLOW_EN:false"  \
@@ -41,7 +41,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "WE_POLARITY:0"  \
 "WRCNT_EN:false"  \
 "WRITE_ACK:false"  \
-"WWIDTH:32"   }
+"WWIDTH:64"   }
 # Exporting Component Description of COREFIFO_C12 to TCL done
 */
 
@@ -64,7 +64,7 @@ module COREFIFO_C12(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
-input  [31:0] DATA;
+input  [63:0] DATA;
 input         RCLOCK;
 input         RE;
 input         RRESET_N;
@@ -76,14 +76,14 @@ input         WRESET_N;
 //--------------------------------------------------------------------
 output        EMPTY;
 output        FULL;
-output [31:0] Q;
+output [63:0] Q;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire   [31:0] DATA;
+wire   [63:0] DATA;
 wire          EMPTY_net_0;
 wire          FULL_net_0;
-wire   [31:0] Q_net_0;
+wire   [63:0] Q_net_0;
 wire          RCLOCK;
 wire          RE;
 wire          RRESET_N;
@@ -92,17 +92,17 @@ wire          WE;
 wire          WRESET_N;
 wire          FULL_net_1;
 wire          EMPTY_net_1;
-wire   [31:0] Q_net_1;
+wire   [63:0] Q_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire          GND_net;
-wire   [31:0] MEMRD_const_net_0;
+wire   [63:0] MEMRD_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
 assign GND_net           = 1'b0;
-assign MEMRD_const_net_0 = 32'h00000000;
+assign MEMRD_const_net_0 = 64'h0000000000000000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -111,7 +111,7 @@ assign FULL        = FULL_net_1;
 assign EMPTY_net_1 = EMPTY_net_0;
 assign EMPTY       = EMPTY_net_1;
 assign Q_net_1     = Q_net_0;
-assign Q[31:0]     = Q_net_1;
+assign Q[63:0]     = Q_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -137,7 +137,7 @@ COREFIFO_C12_COREFIFO_C12_0_COREFIFO #(
         .RDEPTH       ( 64 ),
         .RE_POLARITY  ( 0 ),
         .READ_DVALID  ( 0 ),
-        .RWIDTH       ( 32 ),
+        .RWIDTH       ( 64 ),
         .SYNC         ( 0 ),
         .SYNC_RESET   ( 0 ),
         .UNDERFLOW_EN ( 0 ),
@@ -145,7 +145,7 @@ COREFIFO_C12_COREFIFO_C12_0_COREFIFO #(
         .WE_POLARITY  ( 0 ),
         .WRCNT_EN     ( 0 ),
         .WRITE_ACK    ( 0 ),
-        .WWIDTH       ( 32 ) )
+        .WWIDTH       ( 64 ) )
 COREFIFO_C12_0(
         // Inputs
         .CLK        ( GND_net ), // tied to 1'b0 from definition
@@ -157,7 +157,7 @@ COREFIFO_C12_0(
         .WE         ( WE ),
         .RE         ( RE ),
         .DATA       ( DATA ),
-        .MEMRD      ( MEMRD_const_net_0 ), // tied to 32'h00000000 from definition
+        .MEMRD      ( MEMRD_const_net_0 ), // tied to 64'h0000000000000000 from definition
         // Outputs
         .FULL       ( FULL_net_0 ),
         .EMPTY      ( EMPTY_net_0 ),

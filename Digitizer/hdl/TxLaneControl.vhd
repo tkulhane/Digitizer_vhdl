@@ -6,6 +6,8 @@ use ieee.numeric_std.all;
 entity TxLaneControl is
   generic 
   (
+    g_NumberOfDataOutputBytes : natural := 4;
+    g_NumberOfIlasSequences : natural := 3;
     g_Delay : natural := 0
   );
   port 
@@ -13,23 +15,11 @@ entity TxLaneControl is
     Clock : in std_logic;
     Reset_N : in std_logic;
 
-    Input_MainData_3 : in std_logic_vector(7 downto 0);
-    Input_MainData_2 : in std_logic_vector(7 downto 0);
-    Input_MainData_1 : in std_logic_vector(7 downto 0);
-    Input_MainData_0 : in std_logic_vector(7 downto 0);
-
+    Input_MainData : in std_logic_vector( (8*g_NumberOfDataOutputBytes) - 1 downto 0);
     Input_MainData_Read : out std_logic;
 
-
-    Output_Data_3 : out std_logic_vector(7 downto 0);
-    Output_Data_2 : out std_logic_vector(7 downto 0);
-    Output_Data_1 : out std_logic_vector(7 downto 0);
-    Output_Data_0 : out std_logic_vector(7 downto 0);
-
-    Output_K_3 : out std_logic;
-    Output_K_2 : out std_logic;
-    Output_K_1 : out std_logic;
-    Output_K_0 : out std_logic;
+    Output_Data : out std_logic_vector( (8*g_NumberOfDataOutputBytes) - 1 downto 0);
+    Output_K : out std_logic_vector(g_NumberOfDataOutputBytes - 1 downto 0);
 
     SYNC_OK : in std_logic
 
@@ -41,7 +31,6 @@ architecture rtl of TxLaneControl is
 ------------------------------------------------------------------------------------------------------------
 --constant
 ------------------------------------------------------------------------------------------------------------ 
-    constant NumberOfIlasSequences : integer := 3;
     constant NumberOfDataOutputBytes : integer := 4;
 
   constant const_K_char : std_logic_vector(7 downto 0) := X"BC";
@@ -51,10 +40,10 @@ architecture rtl of TxLaneControl is
 ------------------------------------------------------------------------------------------------------------
 --Signals declaration
 ------------------------------------------------------------------------------------------------------------ 
-    type type_IlasRawIntCounter_Array is array(0 to NumberOfDataOutputBytes - 1) of integer range -1 to 256;
+    type type_IlasRawIntCounter_Array is array(0 to g_NumberOfDataOutputBytes - 1) of integer range -1 to 256;
     signal IlasRawCounter : type_IlasRawIntCounter_Array;
     
-    type type_data_array is array(0 to NumberOfDataOutputBytes - 1) of std_logic_vector(8 - 1 downto 0);  
+    type type_data_array is array(0 to g_NumberOfDataOutputBytes - 1) of std_logic_vector(8 - 1 downto 0);  
     signal IlasGeneratorVectors : type_data_array;
     signal OutputData : type_data_array;
     signal Data_DataVector : type_data_array;
@@ -63,11 +52,11 @@ architecture rtl of TxLaneControl is
     signal Counter_IlasSequence: integer range 0 to 255 := 0;
     signal Ilas_LastFrame : std_logic;
 
-    type type_logic_array is array(0 to (NumberOfDataOutputBytes - 1)) of std_logic;
+    type type_logic_array is array(0 to (g_NumberOfDataOutputBytes - 1)) of std_logic;
     signal DataBytesInLastIlasFrame : type_logic_array;
     signal OutputK : type_logic_array;
   
-    type type_data_unsigned_array is array(0 to NumberOfDataOutputBytes - 1) of unsigned(8 - 1 downto 0);  
+    type type_data_unsigned_array is array(0 to g_NumberOfDataOutputBytes - 1) of unsigned(8 - 1 downto 0);  
     signal Test_Data : type_data_unsigned_array;
 
 
@@ -92,26 +81,26 @@ begin
 --Array Signals routing
 ------------------------------------------------------------------------------------------------------------  
   
-    Output_Data_3 <= OutputData(3);
-    Output_Data_2 <= OutputData(2);
-    Output_Data_1 <= OutputData(1);
-    Output_Data_0 <= OutputData(0);
 
-    Output_K_3 <= OutputK(3);
-    Output_K_2 <= OutputK(2);
-    Output_K_1 <= OutputK(1);
-    Output_K_0 <= OutputK(0);
+    --get Input data vector into array     
+    InputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+        Data_DataVector(i) <= Input_MainData((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)); --generate: (7 downto 0) -> (15 downto 8) -> (23 downto 16) 
+    end generate InputData_GEN;
 
-    Data_DataVector(3) <= Input_MainData_3;
-    Data_DataVector(2) <= Input_MainData_2;
-    Data_DataVector(1) <= Input_MainData_1;
-    Data_DataVector(0) <= Input_MainData_0;
+    --get array to output data vector
+    OutputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+        Output_Data((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)) <= OutputData(i);
+    end generate OutputData_GEN;
+
+    OutputK_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
+        Output_K(i) <= OutputK(i);
+    end generate OutputK_GEN;
 
 
 ------------------------------------------------------------------------------------------------------------
 --Signals routing
 ------------------------------------------------------------------------------------------------------------  
-  last_max_IlasRawCounter <= IlasRawCounter(NumberOfDataOutputBytes - 1);
+  last_max_IlasRawCounter <= IlasRawCounter(g_NumberOfDataOutputBytes - 1);
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -168,7 +157,7 @@ begin
             when SEND_ILAS => 
                 if(SYNC_OK = '0') then
                     next_state <= SEND_K;
-                elsif((Counter_IlasSequence >= NumberOfIlasSequences) and (Ilas_LastFrame = '1')) then
+                elsif((Counter_IlasSequence >= g_NumberOfIlasSequences) and (Ilas_LastFrame = '1')) then
                     next_state <= SEND_SWITCH_TO_DATA;
                 end if;
             
@@ -234,7 +223,7 @@ begin
             --OutputData(0) <= const_K_char;
             --OutputK(0) <= '1';
         
-            MUX_OUTS_K : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+            MUX_OUTS_K : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                 OutputData(i) <= const_K_char;
                 OutputK(i) <= '1';
                 
@@ -246,7 +235,7 @@ begin
 
         when SEND_ILAS => 
 
-            MUX_OUTS_ILAS : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+            MUX_OUTS_ILAS : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                 
                 if(IlasRawCounter(i) = -1) then
                     OutputData(i) <= const_R_char;
@@ -268,7 +257,7 @@ begin
 
         when SEND_SWITCH_TO_DATA =>
 
-            MUX_OUTS_ILAS_Last : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+            MUX_OUTS_ILAS_Last : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                 
                 if(DataBytesInLastIlasFrame(i) = '0') then -- jeste ilas Byte
                 --if( (LastIlasFrameDataShift > i) ) then -- jeste ilas Byte
@@ -306,7 +295,7 @@ begin
 
         when SEND_D =>
 
-            MUX_OUTS_D : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+            MUX_OUTS_D : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                 OutputData(i) <= Data_DataVector(i);
                 OutputK(i) <= '0';
             end loop MUX_OUTS_D;
@@ -316,7 +305,7 @@ begin
 
         when others =>
 
-            MUX_OUTS_OTHERS : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+            MUX_OUTS_OTHERS : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                 OutputData(i) <= const_K_char;
                 OutputK(i) <= '1';
             end loop MUX_OUTS_OTHERS;
@@ -349,7 +338,7 @@ end process;
 
             --Enable_Waiting_Counter <= '0';
 
-            Test_Data_Reset : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+            Test_Data_Reset : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                 Test_Data(i) <= to_unsigned(i, 8);
             end loop Test_Data_Reset;
 
@@ -357,13 +346,13 @@ end process;
 
             if(Test_Enable = '1') then
      
-                Test_Data_Count : for i in 0 to (NumberOfDataOutputBytes - 1) loop
-                    Test_Data(i) <= Test_Data(i) + NumberOfDataOutputBytes;
+                Test_Data_Count : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
+                    Test_Data(i) <= Test_Data(i) + g_NumberOfDataOutputBytes;
                 end loop Test_Data_Count;
     
             else 
             
-                Test_Data_Reset_E : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+                Test_Data_Reset_E : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                     Test_Data(i) <= to_unsigned(i, 8);
                 end loop Test_Data_Reset_E;
 
@@ -387,7 +376,7 @@ end process;
 
         if(Reset_N = '0') then
 
-            ILAS_RawCounterReset : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+            ILAS_RawCounterReset : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                 IlasRawCounter(i) <= ((-1) + i);
                 DataBytesInLastIlasFrame(i) <= '0';
                 
@@ -401,7 +390,7 @@ end process;
 
             if(ILAS_Enable = '1') then
             
-                ILAS_RawSeqCounter : for i in 0 to (NumberOfDataOutputBytes - 1) loop
+                ILAS_RawSeqCounter : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
                     
                     if((last_max_IlasRawCounter + i) >= (256)) then
                         IlasRawCounter(i) <= (i - (256 - last_max_IlasRawCounter) - 1);
@@ -425,7 +414,7 @@ end process;
     
             else 
             
-                ILAS_RawCounterReset_Disable : for i in 0 to (NumberOfDataOutputBytes - 1) loop          
+                ILAS_RawCounterReset_Disable : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
                     
                     IlasRawCounter(i) <= ((-1) + i);
                     DataBytesInLastIlasFrame(i) <= '0';
@@ -445,40 +434,6 @@ end process;
 
 
 
-
-
-
-
-------------------------------------------------------------------------------------------------------------
---GENERATE ...
-------------------------------------------------------------------------------------------------------------
-
-  --ADD_AVAR : for i in 0 to (NumberOfDataBytes - 1) generate  
-  --  WR_ADD_AVAR(i) <= 1 when (WR_Enable_Vector_0(i) = '1') else 0;
-  --end generate ADD_AVAR;
-
-
-------------------------------------------------------------------------------------------------------------
---Process: 
-------------------------------------------------------------------------------------------------------------
-  read_index_control: process(Clock,Reset_N)
-  begin
-
-    if(Reset_N = '0') then
-
-
-      
-    elsif(Clock'event and Clock = '1') then
-      
-      --if(xxx = '1') then
-        
-
-
-      --end if;
-
-    end if;  
-
-  end process;
 
 
 

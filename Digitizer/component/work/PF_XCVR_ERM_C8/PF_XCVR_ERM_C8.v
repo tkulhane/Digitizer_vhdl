@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Feb  7 15:39:06 2024
+// Created by SmartDesign Fri Feb  9 20:00:50 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -18,7 +18,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "EXPOSE_FWF_EN_PORTS:false" \
 "SHOW_UNIVERSAL_SOLN_PORTS:true" \
 "UI_CDR_LOCK_MODE:Lock to data" \
-"UI_CDR_REFERENCE_CLK_FREQ:156.25" \
+"UI_CDR_REFERENCE_CLK_FREQ:80.0" \
 "UI_CDR_REFERENCE_CLK_SOURCE:Fabric" \
 "UI_CDR_REFERENCE_CLK_TOLERANCE:1" \
 "UI_ENABLE_32BIT_DATA_WIDTH:false" \
@@ -50,12 +50,12 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "UI_PIPE_PROTOCOL_USED:PCIe Gen1 (2.5 Gbps)" \
 "UI_PMA_ARST_N:TX and RX PMA" \
 "UI_PROTOCOL_PRESET_USED:None" \
-"UI_RX_DATA_RATE:6000" \
-"UI_RX_PCS_FAB_IF_WIDTH:32" \
+"UI_RX_DATA_RATE:10000" \
+"UI_RX_PCS_FAB_IF_WIDTH:64" \
 "UI_SATA_IDLE_BURST_TIMING:MAC" \
 "UI_TX_CLK_DIV_FACTOR:1" \
-"UI_TX_DATA_RATE:6000" \
-"UI_TX_PCS_FAB_IF_WIDTH:32" \
+"UI_TX_DATA_RATE:10000" \
+"UI_TX_PCS_FAB_IF_WIDTH:64" \
 "UI_TX_RX_MODE:Duplex" \
 "UI_USE_INTERFACE_CLK_AS_PLL_REFCLK:false" \
 "UI_XCVR_RX_CALIBRATION:None (CDR)" \
@@ -103,26 +103,26 @@ module PF_XCVR_ERM_C8(
 //--------------------------------------------------------------------
 input         CTRL_ARST_N;
 input         CTRL_CLK;
-input  [3:0]  LANE0_8B10B_TX_K;
+input  [7:0]  LANE0_8B10B_TX_K;
 input         LANE0_CDR_REF_CLK_FAB;
 input         LANE0_LOS;
 input         LANE0_PCS_ARST_N;
 input         LANE0_PMA_ARST_N;
 input         LANE0_RXD_N;
 input         LANE0_RXD_P;
-input  [31:0] LANE0_TX_DATA;
-input  [7:0]  LANE0_TX_DISPFNC;
+input  [63:0] LANE0_TX_DATA;
+input  [15:0] LANE0_TX_DISPFNC;
 input         TX_BIT_CLK_0;
 input         TX_PLL_LOCK_0;
 input         TX_PLL_REF_CLK_0;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output [3:0]  LANE0_8B10B_RX_K;
+output [7:0]  LANE0_8B10B_RX_K;
 output        LANE0_RX_CLK_R;
-output [3:0]  LANE0_RX_CODE_VIOLATION;
-output [31:0] LANE0_RX_DATA;
-output [3:0]  LANE0_RX_DISPARITY_ERROR;
+output [7:0]  LANE0_RX_CODE_VIOLATION;
+output [63:0] LANE0_RX_DATA;
+output [7:0]  LANE0_RX_DISPARITY_ERROR;
 output        LANE0_RX_IDLE;
 output        LANE0_RX_READY;
 output        LANE0_RX_VAL;
@@ -162,16 +162,16 @@ wire          I_XCVR_LANE0_SD_DFN1_Q;
 wire          I_XCVR_LANE0_SD_DFN2_Q;
 wire          I_XCVR_LANE0_SD_OR2_Y;
 wire          I_XCVR_LANE0_SD_SLE_DEBUG_Q;
-wire   [3:0]  LANE0_8B10B_RX_K_net_0;
-wire   [3:0]  LANE0_8B10B_TX_K;
+wire   [7:0]  LANE0_8B10B_RX_K_net_0;
+wire   [7:0]  LANE0_8B10B_TX_K;
 wire          LANE0_CDR_REF_CLK_FAB;
 wire          LANE0_LOS;
 wire          LANE0_PCS_ARST_N;
 wire          LANE0_PMA_ARST_N;
 wire          LANE0_RX_CLK_R_net_0;
-wire   [3:0]  LANE0_RX_CODE_VIOLATION_net_0;
-wire   [31:0] LANE0_RX_DATA_net_0;
-wire   [3:0]  LANE0_RX_DISPARITY_ERROR_net_0;
+wire   [7:0]  LANE0_RX_CODE_VIOLATION_net_0;
+wire   [63:0] LANE0_RX_DATA_net_0;
+wire   [7:0]  LANE0_RX_DISPARITY_ERROR_net_0;
 wire          LANE0_RX_IDLE_net_0;
 wire          LANE0_RX_READY_net_0;
 wire          LANE0_RX_VAL_net_0;
@@ -179,20 +179,20 @@ wire          LANE0_RXD_N;
 wire          LANE0_RXD_P;
 wire          LANE0_TX_CLK_R_net_0;
 wire          LANE0_TX_CLK_STABLE_net_0;
-wire   [31:0] LANE0_TX_DATA;
-wire   [7:0]  LANE0_TX_DISPFNC;
+wire   [63:0] LANE0_TX_DATA;
+wire   [15:0] LANE0_TX_DISPFNC;
 wire          LANE0_TXD_N_net_0;
 wire          LANE0_TXD_P_net_0;
 wire          LANE0_TXD_P_net_1;
 wire          LANE0_TXD_N_net_1;
-wire   [31:0] LANE0_RX_DATA_net_1;
+wire   [63:0] LANE0_RX_DATA_net_1;
 wire          LANE0_TX_CLK_R_net_1;
 wire          LANE0_RX_CLK_R_net_1;
 wire          LANE0_RX_IDLE_net_1;
 wire          LANE0_TX_CLK_STABLE_net_1;
-wire   [3:0]  LANE0_RX_CODE_VIOLATION_net_1;
-wire   [3:0]  LANE0_RX_DISPARITY_ERROR_net_1;
-wire   [3:0]  LANE0_8B10B_RX_K_net_1;
+wire   [7:0]  LANE0_RX_CODE_VIOLATION_net_1;
+wire   [7:0]  LANE0_RX_DISPARITY_ERROR_net_1;
+wire   [7:0]  LANE0_8B10B_RX_K_net_1;
 wire          LANE0_RX_READY_net_1;
 wire          LANE0_RX_VAL_net_1;
 //--------------------------------------------------------------------
@@ -207,9 +207,9 @@ wire   [1:0]  LANE0_POWERDOWN_const_net_0;
 wire   [1:0]  LANE0_SATA_RATE_const_net_0;
 wire   [1:0]  LANE0_TXPATTERN_const_net_0;
 wire   [1:0]  LANE0_CDR_LOCKMODE_const_net_0;
-wire   [31:0] LANE1_TX_DATA_const_net_0;
-wire   [7:0]  LANE1_TX_DISPFNC_const_net_0;
-wire   [3:0]  LANE1_8B10B_TX_K_const_net_0;
+wire   [63:0] LANE1_TX_DATA_const_net_0;
+wire   [15:0] LANE1_TX_DISPFNC_const_net_0;
+wire   [7:0]  LANE1_8B10B_TX_K_const_net_0;
 wire   [3:0]  LANE1_TX_HDR_const_net_0;
 wire   [3:0]  LANE1_TXDATAK_const_net_0;
 wire   [1:0]  LANE1_SATA_TX_OOB_const_net_0;
@@ -217,9 +217,9 @@ wire   [1:0]  LANE1_POWERDOWN_const_net_0;
 wire   [1:0]  LANE1_SATA_RATE_const_net_0;
 wire   [1:0]  LANE1_TXPATTERN_const_net_0;
 wire   [1:0]  LANE1_CDR_LOCKMODE_const_net_0;
-wire   [31:0] LANE2_TX_DATA_const_net_0;
-wire   [7:0]  LANE2_TX_DISPFNC_const_net_0;
-wire   [3:0]  LANE2_8B10B_TX_K_const_net_0;
+wire   [63:0] LANE2_TX_DATA_const_net_0;
+wire   [15:0] LANE2_TX_DISPFNC_const_net_0;
+wire   [7:0]  LANE2_8B10B_TX_K_const_net_0;
 wire   [3:0]  LANE2_TX_HDR_const_net_0;
 wire   [3:0]  LANE2_TXDATAK_const_net_0;
 wire   [1:0]  LANE2_SATA_TX_OOB_const_net_0;
@@ -227,9 +227,9 @@ wire   [1:0]  LANE2_POWERDOWN_const_net_0;
 wire   [1:0]  LANE2_SATA_RATE_const_net_0;
 wire   [1:0]  LANE2_TXPATTERN_const_net_0;
 wire   [1:0]  LANE2_CDR_LOCKMODE_const_net_0;
-wire   [31:0] LANE3_TX_DATA_const_net_0;
-wire   [7:0]  LANE3_TX_DISPFNC_const_net_0;
-wire   [3:0]  LANE3_8B10B_TX_K_const_net_0;
+wire   [63:0] LANE3_TX_DATA_const_net_0;
+wire   [15:0] LANE3_TX_DISPFNC_const_net_0;
+wire   [7:0]  LANE3_8B10B_TX_K_const_net_0;
 wire   [3:0]  LANE3_TX_HDR_const_net_0;
 wire   [3:0]  LANE3_TXDATAK_const_net_0;
 wire   [1:0]  LANE3_SATA_TX_OOB_const_net_0;
@@ -265,9 +265,9 @@ assign LANE0_POWERDOWN_const_net_0    = 2'h0;
 assign LANE0_SATA_RATE_const_net_0    = 2'h0;
 assign LANE0_TXPATTERN_const_net_0    = 2'h0;
 assign LANE0_CDR_LOCKMODE_const_net_0 = 2'h0;
-assign LANE1_TX_DATA_const_net_0      = 32'h00000000;
-assign LANE1_TX_DISPFNC_const_net_0   = 8'h00;
-assign LANE1_8B10B_TX_K_const_net_0   = 4'h0;
+assign LANE1_TX_DATA_const_net_0      = 64'h0000000000000000;
+assign LANE1_TX_DISPFNC_const_net_0   = 16'h0000;
+assign LANE1_8B10B_TX_K_const_net_0   = 8'h00;
 assign LANE1_TX_HDR_const_net_0       = 4'h0;
 assign LANE1_TXDATAK_const_net_0      = 4'h0;
 assign LANE1_SATA_TX_OOB_const_net_0  = 2'h0;
@@ -275,9 +275,9 @@ assign LANE1_POWERDOWN_const_net_0    = 2'h0;
 assign LANE1_SATA_RATE_const_net_0    = 2'h0;
 assign LANE1_TXPATTERN_const_net_0    = 2'h0;
 assign LANE1_CDR_LOCKMODE_const_net_0 = 2'h0;
-assign LANE2_TX_DATA_const_net_0      = 32'h00000000;
-assign LANE2_TX_DISPFNC_const_net_0   = 8'h00;
-assign LANE2_8B10B_TX_K_const_net_0   = 4'h0;
+assign LANE2_TX_DATA_const_net_0      = 64'h0000000000000000;
+assign LANE2_TX_DISPFNC_const_net_0   = 16'h0000;
+assign LANE2_8B10B_TX_K_const_net_0   = 8'h00;
 assign LANE2_TX_HDR_const_net_0       = 4'h0;
 assign LANE2_TXDATAK_const_net_0      = 4'h0;
 assign LANE2_SATA_TX_OOB_const_net_0  = 2'h0;
@@ -285,9 +285,9 @@ assign LANE2_POWERDOWN_const_net_0    = 2'h0;
 assign LANE2_SATA_RATE_const_net_0    = 2'h0;
 assign LANE2_TXPATTERN_const_net_0    = 2'h0;
 assign LANE2_CDR_LOCKMODE_const_net_0 = 2'h0;
-assign LANE3_TX_DATA_const_net_0      = 32'h00000000;
-assign LANE3_TX_DISPFNC_const_net_0   = 8'h00;
-assign LANE3_8B10B_TX_K_const_net_0   = 4'h0;
+assign LANE3_TX_DATA_const_net_0      = 64'h0000000000000000;
+assign LANE3_TX_DISPFNC_const_net_0   = 16'h0000;
+assign LANE3_8B10B_TX_K_const_net_0   = 8'h00;
 assign LANE3_TX_HDR_const_net_0       = 4'h0;
 assign LANE3_TXDATAK_const_net_0      = 4'h0;
 assign LANE3_SATA_TX_OOB_const_net_0  = 2'h0;
@@ -319,7 +319,7 @@ assign LANE0_TXD_P                    = LANE0_TXD_P_net_1;
 assign LANE0_TXD_N_net_1              = LANE0_TXD_N_net_0;
 assign LANE0_TXD_N                    = LANE0_TXD_N_net_1;
 assign LANE0_RX_DATA_net_1            = LANE0_RX_DATA_net_0;
-assign LANE0_RX_DATA[31:0]            = LANE0_RX_DATA_net_1;
+assign LANE0_RX_DATA[63:0]            = LANE0_RX_DATA_net_1;
 assign LANE0_TX_CLK_R_net_1           = LANE0_TX_CLK_R_net_0;
 assign LANE0_TX_CLK_R                 = LANE0_TX_CLK_R_net_1;
 assign LANE0_RX_CLK_R_net_1           = LANE0_RX_CLK_R_net_0;
@@ -329,11 +329,11 @@ assign LANE0_RX_IDLE                  = LANE0_RX_IDLE_net_1;
 assign LANE0_TX_CLK_STABLE_net_1      = LANE0_TX_CLK_STABLE_net_0;
 assign LANE0_TX_CLK_STABLE            = LANE0_TX_CLK_STABLE_net_1;
 assign LANE0_RX_CODE_VIOLATION_net_1  = LANE0_RX_CODE_VIOLATION_net_0;
-assign LANE0_RX_CODE_VIOLATION[3:0]   = LANE0_RX_CODE_VIOLATION_net_1;
+assign LANE0_RX_CODE_VIOLATION[7:0]   = LANE0_RX_CODE_VIOLATION_net_1;
 assign LANE0_RX_DISPARITY_ERROR_net_1 = LANE0_RX_DISPARITY_ERROR_net_0;
-assign LANE0_RX_DISPARITY_ERROR[3:0]  = LANE0_RX_DISPARITY_ERROR_net_1;
+assign LANE0_RX_DISPARITY_ERROR[7:0]  = LANE0_RX_DISPARITY_ERROR_net_1;
 assign LANE0_8B10B_RX_K_net_1         = LANE0_8B10B_RX_K_net_0;
-assign LANE0_8B10B_RX_K[3:0]          = LANE0_8B10B_RX_K_net_1;
+assign LANE0_8B10B_RX_K[7:0]          = LANE0_8B10B_RX_K_net_1;
 assign LANE0_RX_READY_net_1           = LANE0_RX_READY_net_0;
 assign LANE0_RX_READY                 = LANE0_RX_READY_net_1;
 assign LANE0_RX_VAL_net_1             = LANE0_RX_VAL_net_0;
