@@ -1,0 +1,444 @@
+//////////////////////////////////////////////////////////////////////
+// Created by SmartDesign Sun Feb 11 13:37:27 2024
+// Version: 2022.1 2022.1.0.10
+//////////////////////////////////////////////////////////////////////
+
+`timescale 1ns / 100ps
+
+// Transceiver_Main
+module Transceiver_Main(
+    // Inputs
+    CTRL_Clock_40M,
+    Gen_Enable,
+    LANE0_RXD_N,
+    LANE0_RXD_P,
+    LANE1_RXD_N,
+    LANE1_RXD_P,
+    Logic_Clock,
+    Logic_Reset_N,
+    REF_Clock,
+    // Outputs
+    Data_Valid,
+    LANE0_TXD_N,
+    LANE0_TXD_P,
+    LANE1_TXD_N,
+    LANE1_TXD_P,
+    Output_Data_0,
+    Output_Data_1,
+    Output_Data_2,
+    Output_Data_3,
+    Output_Data_4,
+    Output_Data_5,
+    Output_Data_6,
+    Output_Data_7
+);
+
+//--------------------------------------------------------------------
+// Input
+//--------------------------------------------------------------------
+input          CTRL_Clock_40M;
+input          Gen_Enable;
+input          LANE0_RXD_N;
+input          LANE0_RXD_P;
+input          LANE1_RXD_N;
+input          LANE1_RXD_P;
+input          Logic_Clock;
+input          Logic_Reset_N;
+input          REF_Clock;
+//--------------------------------------------------------------------
+// Output
+//--------------------------------------------------------------------
+output         Data_Valid;
+output         LANE0_TXD_N;
+output         LANE0_TXD_P;
+output         LANE1_TXD_N;
+output         LANE1_TXD_P;
+output [11:0]  Output_Data_0;
+output [23:12] Output_Data_1;
+output [35:24] Output_Data_2;
+output [47:36] Output_Data_3;
+output [59:48] Output_Data_4;
+output [71:60] Output_Data_5;
+output [83:72] Output_Data_6;
+output [95:84] Output_Data_7;
+//--------------------------------------------------------------------
+// Nets
+//--------------------------------------------------------------------
+wire             AND2_0_0_Y;
+wire             AND2_0_Y;
+wire             CTRL_Clock_40M;
+wire             Data_Valid_net_0;
+wire             Gen_Enable;
+wire             LANE0_RXD_N;
+wire             LANE0_RXD_P;
+wire             LANE0_TXD_N_net_0;
+wire             LANE0_TXD_P_net_0;
+wire             LANE1_RXD_N;
+wire             LANE1_RXD_P;
+wire             LANE1_TXD_N_net_0;
+wire             LANE1_TXD_P_net_0;
+wire             Logic_Clock;
+wire             Logic_Reset_N;
+wire   [11:0]    Output_Data_0_net_0;
+wire   [11:0]    Output_Data_1_net_0;
+wire   [11:0]    Output_Data_2_net_0;
+wire   [11:0]    Output_Data_3_net_0;
+wire   [11:0]    Output_Data_4_net_0;
+wire   [11:0]    Output_Data_5_net_0;
+wire   [11:0]    Output_Data_6_net_0;
+wire   [11:0]    Output_Data_7_net_0;
+wire             PF_CCC_C5_0_OUT0_FABCLK_0;
+wire             PF_CCC_C5_0_PLL_LOCK_0;
+wire             REF_Clock;
+wire   [15:0]    SampleTxDeCompose_0_0_Output_Data;
+wire   [15:0]    SampleTxDeCompose_0_1_Output_Data;
+wire   [15:0]    SampleTxDeCompose_0_2_Output_Data;
+wire   [15:0]    SampleTxDeCompose_0_3_Output_Data;
+wire   [15:0]    SampleTxDeCompose_0_4_Output_Data;
+wire   [15:0]    SampleTxDeCompose_0_5_Output_Data;
+wire   [15:0]    SampleTxDeCompose_0_Output_Data;
+wire   [15:0]    SampleTxDeCompose_1_Output_Data;
+wire             Synchronizer_0_2_Data_Out;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_0;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_1;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_2;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_3;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_4;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_5;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_6;
+wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_7;
+wire             Transceiver_LanesConnection_0_Input_Data_Read;
+wire   [15:0]    Transceiver_LanesConnection_0_Output_Data15to0;
+wire   [31:16]   Transceiver_LanesConnection_0_Output_Data31to16;
+wire   [47:32]   Transceiver_LanesConnection_0_Output_Data47to32;
+wire   [63:48]   Transceiver_LanesConnection_0_Output_Data63to48;
+wire   [79:64]   Transceiver_LanesConnection_0_Output_Data79to64;
+wire   [95:80]   Transceiver_LanesConnection_0_Output_Data95to80;
+wire   [111:96]  Transceiver_LanesConnection_0_Output_Data111to96;
+wire   [127:112] Transceiver_LanesConnection_0_Output_Data127to112;
+wire             LANE1_TXD_N_net_1;
+wire             LANE0_TXD_P_net_1;
+wire             LANE0_TXD_N_net_1;
+wire             LANE1_TXD_P_net_1;
+wire             Data_Valid_net_1;
+wire   [95:84]   Output_Data_7_net_1;
+wire   [11:0]    Output_Data_0_net_1;
+wire   [23:12]   Output_Data_1_net_1;
+wire   [35:24]   Output_Data_2_net_1;
+wire   [47:36]   Output_Data_3_net_1;
+wire   [59:48]   Output_Data_4_net_1;
+wire   [71:60]   Output_Data_5_net_1;
+wire   [83:72]   Output_Data_6_net_1;
+wire   [127:0]   Input_Data_net_0;
+wire   [127:0]   Output_Data_net_0;
+//--------------------------------------------------------------------
+// TiedOff Nets
+//--------------------------------------------------------------------
+wire             VCC_net;
+wire   [3:0]     Input_TailBits_const_net_0;
+wire   [3:0]     Input_TailBits_const_net_1;
+wire   [3:0]     Input_TailBits_const_net_2;
+wire   [3:0]     Input_TailBits_const_net_3;
+wire   [3:0]     Input_TailBits_const_net_4;
+wire   [3:0]     Input_TailBits_const_net_5;
+wire   [3:0]     Input_TailBits_const_net_6;
+wire   [3:0]     Input_TailBits_const_net_7;
+//--------------------------------------------------------------------
+// Constant assignments
+//--------------------------------------------------------------------
+assign VCC_net                    = 1'b1;
+assign Input_TailBits_const_net_0 = 4'h0;
+assign Input_TailBits_const_net_1 = 4'h0;
+assign Input_TailBits_const_net_2 = 4'h0;
+assign Input_TailBits_const_net_3 = 4'h0;
+assign Input_TailBits_const_net_4 = 4'h0;
+assign Input_TailBits_const_net_5 = 4'h0;
+assign Input_TailBits_const_net_6 = 4'h0;
+assign Input_TailBits_const_net_7 = 4'h0;
+//--------------------------------------------------------------------
+// Top level output port assignments
+//--------------------------------------------------------------------
+assign LANE1_TXD_N_net_1    = LANE1_TXD_N_net_0;
+assign LANE1_TXD_N          = LANE1_TXD_N_net_1;
+assign LANE0_TXD_P_net_1    = LANE0_TXD_P_net_0;
+assign LANE0_TXD_P          = LANE0_TXD_P_net_1;
+assign LANE0_TXD_N_net_1    = LANE0_TXD_N_net_0;
+assign LANE0_TXD_N          = LANE0_TXD_N_net_1;
+assign LANE1_TXD_P_net_1    = LANE1_TXD_P_net_0;
+assign LANE1_TXD_P          = LANE1_TXD_P_net_1;
+assign Data_Valid_net_1     = Data_Valid_net_0;
+assign Data_Valid           = Data_Valid_net_1;
+assign Output_Data_7_net_1  = Output_Data_7_net_0;
+assign Output_Data_7[95:84] = Output_Data_7_net_1;
+assign Output_Data_0_net_1  = Output_Data_0_net_0;
+assign Output_Data_0[11:0]  = Output_Data_0_net_1;
+assign Output_Data_1_net_1  = Output_Data_1_net_0;
+assign Output_Data_1[23:12] = Output_Data_1_net_1;
+assign Output_Data_2_net_1  = Output_Data_2_net_0;
+assign Output_Data_2[35:24] = Output_Data_2_net_1;
+assign Output_Data_3_net_1  = Output_Data_3_net_0;
+assign Output_Data_3[47:36] = Output_Data_3_net_1;
+assign Output_Data_4_net_1  = Output_Data_4_net_0;
+assign Output_Data_4[59:48] = Output_Data_4_net_1;
+assign Output_Data_5_net_1  = Output_Data_5_net_0;
+assign Output_Data_5[71:60] = Output_Data_5_net_1;
+assign Output_Data_6_net_1  = Output_Data_6_net_0;
+assign Output_Data_6[83:72] = Output_Data_6_net_1;
+//--------------------------------------------------------------------
+// Slices assignments
+//--------------------------------------------------------------------
+assign Transceiver_LanesConnection_0_Output_Data15to0    = Output_Data_net_0[15:0];
+assign Transceiver_LanesConnection_0_Output_Data31to16   = Output_Data_net_0[31:16];
+assign Transceiver_LanesConnection_0_Output_Data47to32   = Output_Data_net_0[47:32];
+assign Transceiver_LanesConnection_0_Output_Data63to48   = Output_Data_net_0[63:48];
+assign Transceiver_LanesConnection_0_Output_Data79to64   = Output_Data_net_0[79:64];
+assign Transceiver_LanesConnection_0_Output_Data95to80   = Output_Data_net_0[95:80];
+assign Transceiver_LanesConnection_0_Output_Data111to96  = Output_Data_net_0[111:96];
+assign Transceiver_LanesConnection_0_Output_Data127to112 = Output_Data_net_0[127:112];
+//--------------------------------------------------------------------
+// Concatenation assignments
+//--------------------------------------------------------------------
+assign Input_Data_net_0 = { SampleTxDeCompose_0_5_Output_Data , SampleTxDeCompose_0_4_Output_Data , SampleTxDeCompose_0_3_Output_Data , SampleTxDeCompose_0_2_Output_Data , SampleTxDeCompose_0_1_Output_Data , SampleTxDeCompose_0_0_Output_Data , SampleTxDeCompose_1_Output_Data , SampleTxDeCompose_0_Output_Data };
+//--------------------------------------------------------------------
+// Component instances
+//--------------------------------------------------------------------
+//--------AND2
+AND2 AND2_0(
+        // Inputs
+        .A ( Logic_Reset_N ),
+        .B ( PF_CCC_C5_0_PLL_LOCK_0 ),
+        // Outputs
+        .Y ( AND2_0_Y ) 
+        );
+
+//--------AND2
+AND2 AND2_0_0(
+        // Inputs
+        .A ( Gen_Enable ),
+        .B ( Transceiver_LanesConnection_0_Input_Data_Read ),
+        // Outputs
+        .Y ( AND2_0_0_Y ) 
+        );
+
+//--------PF_CCC_C5
+PF_CCC_C5 PF_CCC_C5_0(
+        // Inputs
+        .REF_CLK_0         ( REF_Clock ),
+        .PLL_POWERDOWN_N_0 ( VCC_net ),
+        // Outputs
+        .OUT0_FABCLK_0     ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
+        .PLL_LOCK_0        ( PF_CCC_C5_0_PLL_LOCK_0 ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data15to0 ),
+        // Outputs
+        .Output_Data     ( Output_Data_0_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0_0(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data31to16 ),
+        // Outputs
+        .Output_Data     ( Output_Data_1_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0_1(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data47to32 ),
+        // Outputs
+        .Output_Data     ( Output_Data_2_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0_2(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data63to48 ),
+        // Outputs
+        .Output_Data     ( Output_Data_3_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0_3(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data79to64 ),
+        // Outputs
+        .Output_Data     ( Output_Data_4_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0_4(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data95to80 ),
+        // Outputs
+        .Output_Data     ( Output_Data_5_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0_5(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data111to96 ),
+        // Outputs
+        .Output_Data     ( Output_Data_6_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleCompose
+SampleCompose SampleCompose_0_6(
+        // Inputs
+        .Clock           ( Logic_Clock ),
+        .Reset_N         ( Logic_Reset_N ),
+        .Input_Data      ( Transceiver_LanesConnection_0_Output_Data127to112 ),
+        // Outputs
+        .Output_Data     ( Output_Data_7_net_0 ),
+        .Output_TailBits (  ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_0 ),
+        .Input_TailBits ( Input_TailBits_const_net_0 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_0_Output_Data ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_0(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_2 ),
+        .Input_TailBits ( Input_TailBits_const_net_1 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_0_0_Output_Data ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_1(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_3 ),
+        .Input_TailBits ( Input_TailBits_const_net_2 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_0_1_Output_Data ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_2(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_4 ),
+        .Input_TailBits ( Input_TailBits_const_net_3 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_0_2_Output_Data ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_3(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_5 ),
+        .Input_TailBits ( Input_TailBits_const_net_4 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_0_3_Output_Data ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_4(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_6 ),
+        .Input_TailBits ( Input_TailBits_const_net_5 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_0_4_Output_Data ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_0_5(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_7 ),
+        .Input_TailBits ( Input_TailBits_const_net_6 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_0_5_Output_Data ) 
+        );
+
+//--------SampleTxDeCompose
+SampleTxDeCompose SampleTxDeCompose_1(
+        // Inputs
+        .Input_Data_0   ( Test_Generator_for_Lanes_0_Test_Data_1 ),
+        .Input_TailBits ( Input_TailBits_const_net_7 ),
+        // Outputs
+        .Output_Data    ( SampleTxDeCompose_1_Output_Data ) 
+        );
+
+//--------Synchronizer
+Synchronizer Synchronizer_0_2(
+        // Inputs
+        .nRST     ( AND2_0_Y ),
+        .CLK      ( CTRL_Clock_40M ),
+        .Data_In  ( VCC_net ),
+        // Outputs
+        .Data_Out ( Synchronizer_0_2_Data_Out ) 
+        );
+
+//--------Test_Generator_for_Lanes
+Test_Generator_for_Lanes Test_Generator_for_Lanes_0(
+        // Inputs
+        .Clock       ( Logic_Clock ),
+        .Reset_N     ( Logic_Reset_N ),
+        .Test_Enable ( AND2_0_0_Y ),
+        // Outputs
+        .Test_Data_0 ( Test_Generator_for_Lanes_0_Test_Data_0 ),
+        .Test_Data_1 ( Test_Generator_for_Lanes_0_Test_Data_1 ),
+        .Test_Data_2 ( Test_Generator_for_Lanes_0_Test_Data_2 ),
+        .Test_Data_3 ( Test_Generator_for_Lanes_0_Test_Data_3 ),
+        .Test_Data_4 ( Test_Generator_for_Lanes_0_Test_Data_4 ),
+        .Test_Data_5 ( Test_Generator_for_Lanes_0_Test_Data_5 ),
+        .Test_Data_6 ( Test_Generator_for_Lanes_0_Test_Data_6 ),
+        .Test_Data_7 ( Test_Generator_for_Lanes_0_Test_Data_7 ) 
+        );
+
+//--------Transceiver_LanesConnection
+Transceiver_LanesConnection Transceiver_LanesConnection_0(
+        // Inputs
+        .Logic_Clock     ( Logic_Clock ),
+        .Logic_Reset_N   ( Logic_Reset_N ),
+        .CTRL_Clock      ( CTRL_Clock_40M ),
+        .CTRL_Reset_N    ( Synchronizer_0_2_Data_Out ),
+        .REF_Clock       ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
+        .LANE0_RXD_P     ( LANE0_RXD_P ),
+        .LANE0_RXD_N     ( LANE0_RXD_N ),
+        .LANE1_RXD_P     ( LANE1_RXD_P ),
+        .LANE1_RXD_N     ( LANE1_RXD_N ),
+        .Input_Data      ( Input_Data_net_0 ),
+        // Outputs
+        .LANE0_TXD_P     ( LANE0_TXD_P_net_0 ),
+        .LANE0_TXD_N     ( LANE0_TXD_N_net_0 ),
+        .LANE1_TXD_P     ( LANE1_TXD_P_net_0 ),
+        .LANE1_TXD_N     ( LANE1_TXD_N_net_0 ),
+        .Input_Data_Read ( Transceiver_LanesConnection_0_Input_Data_Read ),
+        .Output_Data     ( Output_Data_net_0 ),
+        .Data_Valid      ( Data_Valid_net_0 ) 
+        );
+
+
+endmodule

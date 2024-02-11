@@ -10,8 +10,10 @@ entity SampleTxDeCompose is
     Input_Data_0 : in std_logic_vector(11 downto 0);
     Input_TailBits : in std_logic_vector(3 downto 0);
 
-    Output_Data_1 : out std_logic_vector(7 downto 0);
-    Output_Data_0 : out std_logic_vector(7 downto 0)
+    Output_Data : out std_logic_vector(15 downto 0)
+    
+    --Output_Data_1 : out std_logic_vector(7 downto 0);
+    --Output_Data_0 : out std_logic_vector(7 downto 0)
     
 
   );
@@ -40,9 +42,10 @@ begin
 
   DATA <= Input_Data_0 & Input_TailBits;
 
-  Output_Data_1 <= DATA(7 downto 0);
-  Output_Data_0 <= DATA(15 downto 8);
+  --Output_Data_1 <= DATA(7 downto 0);
+  --Output_Data_0 <= DATA(15 downto 8);
 
+  Output_Data <= DATA;
 
 
 end rtl;

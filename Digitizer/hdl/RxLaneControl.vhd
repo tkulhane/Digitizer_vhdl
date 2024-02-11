@@ -21,7 +21,7 @@ entity RxLaneControl is
     CDR_VAL : in std_logic;
 
     Output_Data : out std_logic_vector( (8*g_NumberOfDataOutputBytes) - 1 downto 0);
-    Output_DataWrite : out std_logic_vector(3 downto 0);
+    Output_DataWrite : out std_logic_vector(g_NumberOfDataOutputBytes - 1 downto 0);
 
     CTRL_Synced : out std_logic;
     CTRL_ILAS_Go : out std_logic;
@@ -87,6 +87,44 @@ architecture rtl of RxLaneControl is
 --Other Signals declaration
 ------------------------------------------------------------------------------------------------------------  
 
+
+------------------------------------------------------------------------------------------------------------
+--Functions
+------------------------------------------------------------------------------------------------------------  
+    function OR_ARRAY(slv : in type_logic_array) return std_logic is
+    
+      variable temp : std_logic;
+      
+      begin
+
+        temp := '0';
+
+        for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
+          temp := temp or slv(i);
+        end loop;
+
+      return temp;
+
+    end function;
+
+
+    function AND_ARRAY(slv : in type_logic_array) return std_logic is
+    
+      variable temp : std_logic;
+      
+      begin
+
+        temp := '1';
+
+        for i in 0 to (g_NumberOfDataOutputBytes - 1) loop
+          temp := temp and slv(i);
+        end loop;
+
+      return temp;
+
+    end function;
+
+
 begin
 
 ------------------------------------------------------------------------------------------------------------
@@ -96,12 +134,12 @@ begin
 
   --get Input data vector into array     
   InputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
-      InputData(i) <= Input_Data((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)); --generate: (7 downto 0) -> (15 downto 8) -> (23 downto 16) 
+      InputData(i) <= Input_Data((i*8 + 7) downto (i*8)); --generate: (7 downto 0) -> (15 downto 8) -> (23 downto 16) 
   end generate InputData_GEN;
 
   --get array to output data vector
   OutputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
-      Output_Data((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)) <= OutputData(i);
+      Output_Data((i*8 + 7) downto (i*8)) <= OutputData(i);
   end generate OutputData_GEN;
 
   OutputDataWrite_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
@@ -307,13 +345,18 @@ begin
 --Comparator And Or gen
 ------------------------------------------------------------------------------------------------------------
   
+
+
+  AndComparatorData_K <= AND_ARRAY(ComparatorData_K);
+  OrComparatorData_R <= OR_ARRAY(ComparatorData_R);
+  OrComparatorData_A <= OR_ARRAY(ComparatorData_A);
+  OrComparatorData_K <= OR_ARRAY(ComparatorData_K);
   
+  --AndComparatorData_K <= ComparatorData_K(3) and ComparatorData_K(2) and ComparatorData_K(1) and ComparatorData_K(0);
+  --OrComparatorData_R  <= ComparatorData_R(3) or ComparatorData_R(2) or ComparatorData_R(1) or ComparatorData_R(0);
+  --OrComparatorData_A <= ComparatorData_A(3) or ComparatorData_A(2) or ComparatorData_A(1) or ComparatorData_A(0);
   
-  AndComparatorData_K <= ComparatorData_K(3) and ComparatorData_K(2) and ComparatorData_K(1) and ComparatorData_K(0);
-  OrComparatorData_R  <= ComparatorData_R(3) or ComparatorData_R(2) or ComparatorData_R(1) or ComparatorData_R(0);
-  OrComparatorData_A <= ComparatorData_A(3) or ComparatorData_A(2) or ComparatorData_A(1) or ComparatorData_A(0);
-  
-  OrComparatorData_K  <= ComparatorData_K(3) or ComparatorData_K(2) or ComparatorData_K(1) or ComparatorData_K(0);
+  --OrComparatorData_K  <= ComparatorData_K(3) or ComparatorData_K(2) or ComparatorData_K(1) or ComparatorData_K(0);
 
 ------------------------------------------------------------------------------------------------------------
 --Process: D for data - 1 cycle delay
@@ -392,10 +435,10 @@ begin
 
     if(Reset_N = '0') then
       
-      DataWrite(3) <= '0';
-      DataWrite(2) <= '0';
-      DataWrite(1) <= '0';
-      DataWrite(0) <= '0';
+      DataWrite_Reset : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
+        DataWrite(i) <= '0';
+      end loop DataWrite_Reset;
+
 
     elsif(Clock'event and Clock = '1') then
       
@@ -416,51 +459,34 @@ begin
 
       elsif(Last_ILAS_Seq = '1') then -- posledni ILAS sekvence 
 
-        DataWrite(3) <= '0';
-        DataWrite(2) <= '0';
-        DataWrite(1) <= '0';
-        DataWrite(0) <= '0';
+        DataWrite_Reset_ILAS : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
+          DataWrite(i) <= '0';
+        end loop DataWrite_Reset_ILAS;
 
 
 
-        if(ComparatorData_A(2) = '1') then
-          
-          if(ComparatorData_K(3) = '0') then
-            DataWrite(3) <= '1';
+        Last_Ilas_DataWrite_LOOP : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
+
+          if(ComparatorData_A(i) = '1') then -- na i miste je char_A -> vsechny dalsi jsou uz data
+
+            -- od i do konce davam 1
+            Last_Ilas_DataWrite_LOOP_2 : for j in i + 1 to (g_NumberOfDataOutputBytes - 1) loop
+              
+              if(ComparatorData_K(j) = '0') then -- K se nazapisuje do fifo
+                DataWrite(j) <= '1';
+              else
+                DataWrite(j) <= '0';
+              end if;
+
+            end loop Last_Ilas_DataWrite_LOOP_2;
+
           end if;
 
-        else 
-          --DataWrite(3) <= '0';
-        end if;
+        end loop Last_Ilas_DataWrite_LOOP;
 
-        if(ComparatorData_A(1) = '1') then
-          
-          if(ComparatorData_K(2) = '0') then -- K se nazapisuje do fifo
-            DataWrite(2) <= '1';
-          end if;
-          
-          if(ComparatorData_K(3) = '0') then -- K se nazapisuje do fifo
-            DataWrite(3) <= '1';
-          end if;
 
-        end if;
 
-        if(ComparatorData_A(0) = '1') then
-          
-          if(ComparatorData_K(1) = '0') then -- K se nazapisuje do fifo
-            DataWrite(1) <= '1';
-          end if;
-          
-          if(ComparatorData_K(2) = '0') then -- K se nazapisuje do fifo
-            DataWrite(2) <= '1';
-          end if;
-          
-          if(ComparatorData_K(3) = '0') then -- K se nazapisuje do fifo
-            DataWrite(3) <= '1';
-          end if;
-
-        end if;
-
+        --posledni byte predchoziho taktu byl char_A
         if(ComparatorData_Last_A(3) = '1') then
           
           if(ComparatorData_K(0) = '0') then -- K se nazapisuje do fifo
@@ -474,10 +500,10 @@ begin
 
       else
         
-        DataWrite(3) <= '0';
-        DataWrite(2) <= '0';
-        DataWrite(1) <= '0';
-        DataWrite(0) <= '0';
+
+        DataWrite_Reset_ELSE : for i in 0 to (g_NumberOfDataOutputBytes - 1) loop          
+          DataWrite(i) <= '0';
+        end loop DataWrite_Reset_ELSE;
 
       end if;
 

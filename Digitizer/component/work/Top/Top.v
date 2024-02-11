@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Feb  7 23:12:32 2024
+// Created by SmartDesign Sun Feb 11 21:57:13 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -206,180 +206,180 @@ inout         HMC_sdio;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire          ADC_FD;
-wire          ADC_GPIO_0;
-wire          ADC_GPIO_1;
-wire          ADC_GPIO_2;
-wire          ADC_GPIO_3;
-wire          ADC_GPIO_4;
-wire          ADC_LDO_PWR_GOOD;
-wire          ADC_PWDN_net_0;
-wire          ADC_PWR_RUN_net_0;
-wire          ADC_sclk_net_0;
-wire          ADC_sdio;
-wire          ADC_ss_n_net_0;
-wire          BOARD_PWR_RUN_net_0;
-wire          BTN_1;
-wire          BUFD_0_Y;
-wire          CLK_OUT_N_net_0;
-wire          CLK_OUT_P_net_0;
-wire          Clock_Reset_0_HMC_CLK;
-wire          Clock_Reset_0_Main_CLOCK_0;
-wire          Clock_Reset_0_Main_RESET_N_1;
-wire          Clock_Reset_0_UART_CLOCK_1;
-wire          Clock_Reset_0_UART_RESER_N_1;
-wire          Clock_Reset_0_XCVR_CTRL_Clock_40M;
-wire          Clock_Reset_0_XCVR_REF_Clock;
-wire          Communication_0_ANW_FULL;
-wire          Communication_0_Builder_Enable;
-wire          Communication_0_busy;
-wire          Communication_0_CMD_EMPTY;
-wire   [39:0] Communication_0_CMD_Q;
-wire          Communication_0_DataFifo_RD;
-wire   [15:0] Communication_0_read_data_frame;
-wire   [39:0] Controler_0_ANW_Fifo_Write_Data;
-wire          Controler_0_ANW_Fifo_Write_Enable;
-wire          Controler_0_CMD_Fifo_Read_Enable;
-wire   [7:0]  Controler_0_COMM_addr;
-wire   [3:0]  Controler_0_COMM_comm_number;
-wire   [15:0] Controler_0_COMM_data;
-wire          Controler_0_COMM_enable_cmd;
-wire          Controler_0_COMM_write_read;
-wire          Controler_0_LMX_Sync;
-wire   [7:0]  Controler_0_TRG_addr;
-wire   [15:0] Controler_0_TRG_data;
-wire          Controler_0_TRG_enable_cmd;
-wire          Controler_0_TRG_write_read;
-wire          Data_Block_0_C_busy;
-wire   [15:0] Data_Block_0_C_read_data_frame;
-wire   [31:0] Data_Block_0_Communication_Data_Frame;
-wire          Data_Block_0_Communication_Empty;
-wire          Data_Block_0_Control_Test_Generator_Enable;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_0_0;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_0_1;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_0_2;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_0_3;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_1_0;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_1_1;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_1_2;
-wire   [11:0] DataSource_Transcievers_0_Output_Data_1_3;
-wire          DBGport_0_1;
-wire          DBGport_1_0;
-wire          DBGport_2_net_0;
-wire          DBGport_2_1;
-wire          DBGport_3_0;
-wire          DBGport_3_1;
-wire          DBGport_4_1;
-wire          BTN_2;
-wire          DBGport_6_2;
-wire          DBGport_7_1;
-wire   [3:0]  FTDI_BE;
-wire          FTDI_CLK;
-wire   [31:0] FTDI_DATA;
-wire          FTDI_GPIO_0_net_0;
-wire          FTDI_GPIO_1_net_0;
-wire          FTDI_nOE_net_0;
-wire          FTDI_nRD_net_0;
-wire          FTDI_nRXF;
-wire          FTDI_nTXE;
-wire          FTDI_nWR_net_0;
-wire          FTDI_RESET_N_net_0;
-wire          HMC_CLK_IN_N;
-wire          HMC_CLK_IN_P;
-wire          HMC_GPIO_0;
-wire          HMC_GPIO_1;
-wire          HMC_GPIO_2_net_0;
-wire          HMC_GPIO_3_net_0;
-wire          HMC_sdio;
-wire          HMC_ss_n_net_0;
-wire          HMC_SYNC_net_0;
-wire          INBUF_DIFF_0_0_Y;
-wire          INBUF_DIFF_0_Y;
-wire          LANE0_RXD_N;
-wire          LANE0_RXD_P;
-wire          LANE0_TXD_N_net_0;
-wire          LANE0_TXD_P_net_0;
-wire          LANE1_RXD_N;
-wire          LANE1_RXD_P;
-wire          LANE1_TXD_N_net_0;
-wire          LANE1_TXD_P_net_0;
-wire          LDO_PWR_GOOD;
-wire          LED_3_net_0;
-wire          LED_4_net_0;
-wire          LMX1_miso;
-wire          LMX1_mosi_net_0;
-wire          LMX1_sclk_net_0;
-wire          LMX1_ss_n_net_0;
-wire          LMX2_miso;
-wire          LMX2_mosi_net_0;
-wire          LMX2_sclk_net_0;
-wire          LMX2_ss_n_net_0;
-wire          RX_0;
-wire          RX_1;
-wire          SIWU_N_net_0;
-wire          SMPS_PWR_GOOD;
-wire          SYNC_IN_N;
-wire          SYNC_IN_P;
-wire          SYNC_OUT_1_N_net_0;
-wire          SYNC_OUT_1_P_net_0;
-wire          SYNC_OUT_2_N_net_0;
-wire          SYNC_OUT_2_P_net_0;
-wire          Synchronizer_0_Data_Out;
-wire          SYNCINB_N_net_0;
-wire          SYNCINB_P_net_0;
-wire          TX_0_net_0;
-wire          TX_1_net_0;
-wire          DBGport_6_2_net_0;
-wire          DBGport_7_1_net_0;
-wire          LED_3_net_1;
-wire          LED_4_net_1;
-wire          FTDI_nWR_net_1;
-wire          FTDI_RESET_N_net_1;
-wire          FTDI_nOE_net_1;
-wire          FTDI_nRD_net_1;
-wire          ADC_sclk_net_1;
-wire          ADC_ss_n_net_1;
-wire          DBGport_3_0_net_0;
-wire          HMC_ss_n_net_1;
-wire          LMX1_mosi_net_1;
-wire          LMX1_ss_n_net_1;
-wire          LMX1_sclk_net_1;
-wire          LMX2_sclk_net_1;
-wire          LMX2_ss_n_net_1;
-wire          LMX2_mosi_net_1;
-wire          DBGport_0_1_net_0;
-wire          DBGport_1_0_net_0;
-wire          DBGport_2_1_net_0;
-wire          DBGport_3_1_net_0;
-wire          HMC_SYNC_net_1;
-wire          DBGport_7_1_net_1;
-wire          DBGport_6_2_net_1;
-wire          ADC_PWDN_net_1;
-wire          ADC_PWR_RUN_net_1;
-wire          BOARD_PWR_RUN_net_1;
-wire          SYNC_OUT_1_P_net_1;
-wire          SYNC_OUT_1_N_net_1;
-wire          SYNC_OUT_2_P_net_1;
-wire          SYNC_OUT_2_N_net_1;
-wire          CLK_OUT_P_net_1;
-wire          CLK_OUT_N_net_1;
-wire          SYNCINB_P_net_1;
-wire          SYNCINB_N_net_1;
-wire          HMC_GPIO_2_net_1;
-wire          HMC_GPIO_3_net_1;
-wire          FTDI_GPIO_0_net_1;
-wire          FTDI_GPIO_1_net_1;
-wire          SIWU_N_net_1;
-wire          TX_0_net_1;
-wire          TX_1_net_1;
-wire          LANE0_TXD_P_net_1;
-wire          LANE0_TXD_N_net_1;
-wire          LANE1_TXD_P_net_1;
-wire          LANE1_TXD_N_net_1;
+wire           ADC_FD;
+wire           ADC_GPIO_0;
+wire           ADC_GPIO_1;
+wire           ADC_GPIO_2;
+wire           ADC_GPIO_3;
+wire           ADC_GPIO_4;
+wire           ADC_LDO_PWR_GOOD;
+wire           ADC_PWDN_net_0;
+wire           ADC_PWR_RUN_net_0;
+wire           ADC_sclk_net_0;
+wire           ADC_sdio;
+wire           ADC_ss_n_net_0;
+wire           BOARD_PWR_RUN_net_0;
+wire           BTN_1;
+wire           BUFD_0_Y;
+wire           CLK_OUT_N_net_0;
+wire           CLK_OUT_P_net_0;
+wire           Clock_Reset_0_HMC_CLK;
+wire           Clock_Reset_0_Main_CLOCK_1;
+wire           Clock_Reset_0_Main_RESET_N_0;
+wire           Clock_Reset_0_UART_CLOCK_1;
+wire           Clock_Reset_0_UART_RESER_N_1;
+wire           Clock_Reset_0_XCVR_CTRL_Clock_40M;
+wire           Clock_Reset_0_XCVR_REF_Clock;
+wire           Communication_0_ANW_FULL;
+wire           Communication_0_Builder_Enable;
+wire           Communication_0_busy;
+wire           Communication_0_CMD_EMPTY;
+wire   [39:0]  Communication_0_CMD_Q;
+wire           Communication_0_DataFifo_RD;
+wire   [15:0]  Communication_0_read_data_frame;
+wire   [39:0]  Controler_0_ANW_Fifo_Write_Data;
+wire           Controler_0_ANW_Fifo_Write_Enable;
+wire           Controler_0_CMD_Fifo_Read_Enable;
+wire   [7:0]   Controler_0_COMM_addr;
+wire   [3:0]   Controler_0_COMM_comm_number;
+wire   [15:0]  Controler_0_COMM_data;
+wire           Controler_0_COMM_enable_cmd;
+wire           Controler_0_COMM_write_read;
+wire           Controler_0_LMX_Sync;
+wire   [7:0]   Controler_0_TRG_addr;
+wire   [15:0]  Controler_0_TRG_data;
+wire           Controler_0_TRG_enable_cmd;
+wire           Controler_0_TRG_write_read;
+wire           Data_Block_0_C_busy;
+wire   [15:0]  Data_Block_0_C_read_data_frame;
+wire   [31:0]  Data_Block_0_Communication_Data_Frame;
+wire           Data_Block_0_Communication_Empty;
+wire           Data_Block_0_Control_Test_Generator_Enable;
+wire           DBGport_0_1;
+wire           DBGport_1_0;
+wire           DBGport_2_net_0;
+wire           DBGport_2_1;
+wire           DBGport_3_0;
+wire           DBGport_3_1;
+wire           DBGport_4_1;
+wire           BTN_2;
+wire           DBGport_6_2;
+wire           DBGport_7_1;
+wire   [3:0]   FTDI_BE;
+wire           FTDI_CLK;
+wire   [31:0]  FTDI_DATA;
+wire           FTDI_GPIO_0_net_0;
+wire           FTDI_GPIO_1_net_0;
+wire           FTDI_nOE_net_0;
+wire           FTDI_nRD_net_0;
+wire           FTDI_nRXF;
+wire           FTDI_nTXE;
+wire           FTDI_nWR_net_0;
+wire           FTDI_RESET_N_net_0;
+wire           HMC_CLK_IN_N;
+wire           HMC_CLK_IN_P;
+wire           HMC_GPIO_0;
+wire           HMC_GPIO_1;
+wire           HMC_GPIO_2_net_0;
+wire           HMC_GPIO_3_net_0;
+wire           HMC_sdio;
+wire           HMC_ss_n_net_0;
+wire           HMC_SYNC_net_0;
+wire           INBUF_DIFF_0_0_Y;
+wire           INBUF_DIFF_0_Y;
+wire           LANE0_RXD_N;
+wire           LANE0_RXD_P;
+wire           LANE0_TXD_N_net_0;
+wire           LANE0_TXD_P_net_0;
+wire           LANE1_RXD_N;
+wire           LANE1_RXD_P;
+wire           LANE1_TXD_N_net_0;
+wire           LANE1_TXD_P_net_0;
+wire           LDO_PWR_GOOD;
+wire           LED_3_net_0;
+wire           LED_4_net_0;
+wire           LMX1_miso;
+wire           LMX1_mosi_net_0;
+wire           LMX1_sclk_net_0;
+wire           LMX1_ss_n_net_0;
+wire           LMX2_miso;
+wire           LMX2_mosi_net_0;
+wire           LMX2_sclk_net_0;
+wire           LMX2_ss_n_net_0;
+wire           RX_0;
+wire           RX_1;
+wire           SIWU_N_net_0;
+wire           SMPS_PWR_GOOD;
+wire           SYNC_IN_N;
+wire           SYNC_IN_P;
+wire           SYNC_OUT_1_N_net_0;
+wire           SYNC_OUT_1_P_net_0;
+wire           SYNC_OUT_2_N_net_0;
+wire           SYNC_OUT_2_P_net_0;
+wire           Synchronizer_0_Data_Out;
+wire           SYNCINB_N_net_0;
+wire           SYNCINB_P_net_0;
+wire   [11:0]  Transceiver_Main_0_Output_Data_0;
+wire   [23:12] Transceiver_Main_0_Output_Data_1;
+wire   [35:24] Transceiver_Main_0_Output_Data_2;
+wire   [47:36] Transceiver_Main_0_Output_Data_3;
+wire   [59:48] Transceiver_Main_0_Output_Data_4;
+wire   [71:60] Transceiver_Main_0_Output_Data_5;
+wire   [83:72] Transceiver_Main_0_Output_Data_6;
+wire   [95:84] Transceiver_Main_0_Output_Data_7;
+wire           TX_0_net_0;
+wire           TX_1_net_0;
+wire           DBGport_6_2_net_0;
+wire           DBGport_7_1_net_0;
+wire           LED_3_net_1;
+wire           LED_4_net_1;
+wire           FTDI_nWR_net_1;
+wire           FTDI_RESET_N_net_1;
+wire           FTDI_nOE_net_1;
+wire           FTDI_nRD_net_1;
+wire           ADC_sclk_net_1;
+wire           ADC_ss_n_net_1;
+wire           DBGport_3_0_net_0;
+wire           HMC_ss_n_net_1;
+wire           LMX1_mosi_net_1;
+wire           LMX1_ss_n_net_1;
+wire           LMX1_sclk_net_1;
+wire           LMX2_sclk_net_1;
+wire           LMX2_ss_n_net_1;
+wire           LMX2_mosi_net_1;
+wire           DBGport_0_1_net_0;
+wire           DBGport_1_0_net_0;
+wire           DBGport_2_1_net_0;
+wire           DBGport_3_1_net_0;
+wire           HMC_SYNC_net_1;
+wire           DBGport_7_1_net_1;
+wire           DBGport_6_2_net_1;
+wire           ADC_PWDN_net_1;
+wire           ADC_PWR_RUN_net_1;
+wire           BOARD_PWR_RUN_net_1;
+wire           SYNC_OUT_1_P_net_1;
+wire           SYNC_OUT_1_N_net_1;
+wire           SYNC_OUT_2_P_net_1;
+wire           SYNC_OUT_2_N_net_1;
+wire           CLK_OUT_P_net_1;
+wire           CLK_OUT_N_net_1;
+wire           SYNCINB_P_net_1;
+wire           SYNCINB_N_net_1;
+wire           HMC_GPIO_2_net_1;
+wire           HMC_GPIO_3_net_1;
+wire           FTDI_GPIO_0_net_1;
+wire           FTDI_GPIO_1_net_1;
+wire           SIWU_N_net_1;
+wire           TX_0_net_1;
+wire           TX_1_net_1;
+wire           LANE1_TXD_N_net_1;
+wire           LANE1_TXD_P_net_1;
+wire           LANE0_TXD_N_net_1;
+wire           LANE0_TXD_P_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire          GND_net;
+wire           GND_net;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
@@ -486,14 +486,14 @@ assign TX_0_net_1          = TX_0_net_0;
 assign TX_0                = TX_0_net_1;
 assign TX_1_net_1          = TX_1_net_0;
 assign TX_1                = TX_1_net_1;
-assign LANE0_TXD_P_net_1   = LANE0_TXD_P_net_0;
-assign LANE0_TXD_P         = LANE0_TXD_P_net_1;
-assign LANE0_TXD_N_net_1   = LANE0_TXD_N_net_0;
-assign LANE0_TXD_N         = LANE0_TXD_N_net_1;
-assign LANE1_TXD_P_net_1   = LANE1_TXD_P_net_0;
-assign LANE1_TXD_P         = LANE1_TXD_P_net_1;
 assign LANE1_TXD_N_net_1   = LANE1_TXD_N_net_0;
 assign LANE1_TXD_N         = LANE1_TXD_N_net_1;
+assign LANE1_TXD_P_net_1   = LANE1_TXD_P_net_0;
+assign LANE1_TXD_P         = LANE1_TXD_P_net_1;
+assign LANE0_TXD_N_net_1   = LANE0_TXD_N_net_0;
+assign LANE0_TXD_N         = LANE0_TXD_N_net_1;
+assign LANE0_TXD_P_net_1   = LANE0_TXD_P_net_0;
+assign LANE0_TXD_P         = LANE0_TXD_P_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -510,8 +510,8 @@ Clock_Reset Clock_Reset_0(
         // Inputs
         .EXT_RST_N           ( DBGport_2_net_0 ),
         // Outputs
-        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_1 ),
+        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_1 ),
+        .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_0 ),
         .UART_CLOCK          ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESER_N        ( Clock_Reset_0_UART_RESER_N_1 ),
         .HMC_CLK             ( Clock_Reset_0_HMC_CLK ),
@@ -524,8 +524,8 @@ Communication Communication_0(
         // Inputs
         .UART_Clock       ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESET_N     ( Clock_Reset_0_UART_RESER_N_1 ),
-        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_1 ),
+        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_1 ),
+        .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_0 ),
         .write_read       ( Controler_0_COMM_write_read ),
         .enable_cmd       ( Controler_0_COMM_enable_cmd ),
         .DataFifo_Empty   ( Data_Block_0_Communication_Empty ),
@@ -565,8 +565,8 @@ Communication Communication_0(
 //--------Controler
 Controler Controler_0(
         // Inputs
-        .Clock                 ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Reset_N               ( Clock_Reset_0_Main_RESET_N_1 ),
+        .Clock                 ( Clock_Reset_0_Main_CLOCK_1 ),
+        .Reset_N               ( Clock_Reset_0_Main_RESET_N_0 ),
         .TRG_busy              ( Data_Block_0_C_busy ),
         .LMX1_miso             ( LMX1_miso ),
         .LMX2_miso             ( LMX2_miso ),
@@ -644,18 +644,18 @@ Data_Block Data_Block_0(
         .Communication_Read            ( Communication_0_DataFifo_RD ),
         .Communication_Builder_RUN     ( Communication_0_Builder_Enable ),
         .Fifo_RESET_N                  ( DBGport_4_1 ),
+        .Reset_N                       ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Clock                         ( Clock_Reset_0_Main_CLOCK_1 ),
         .C_addr_frame                  ( Controler_0_TRG_addr ),
         .C_write_data_frame            ( Controler_0_TRG_data ),
-        .Reset_N                       ( Clock_Reset_0_Main_RESET_N_1 ),
-        .Clock                         ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Input_Data_0_00               ( DataSource_Transcievers_0_Output_Data_0_1 ),
-        .Input_Data_3_00               ( DataSource_Transcievers_0_Output_Data_0_3 ),
-        .Input_Data_2_00               ( DataSource_Transcievers_0_Output_Data_0_2 ),
-        .Input_Data_1_00               ( DataSource_Transcievers_0_Output_Data_0_0 ),
-        .Input_Data_0_01               ( DataSource_Transcievers_0_Output_Data_1_1 ),
-        .Input_Data_3_01               ( DataSource_Transcievers_0_Output_Data_1_3 ),
-        .Input_Data_2_01               ( DataSource_Transcievers_0_Output_Data_1_2 ),
-        .Input_Data_1_01               ( DataSource_Transcievers_0_Output_Data_1_0 ),
+        .Input_Data_0_00               ( Transceiver_Main_0_Output_Data_1 ),
+        .Input_Data_3_00               ( Transceiver_Main_0_Output_Data_2 ),
+        .Input_Data_2_00               ( Transceiver_Main_0_Output_Data_3 ),
+        .Input_Data_1_00               ( Transceiver_Main_0_Output_Data_0 ),
+        .Input_Data_0_01               ( Transceiver_Main_0_Output_Data_5 ),
+        .Input_Data_3_01               ( Transceiver_Main_0_Output_Data_6 ),
+        .Input_Data_2_01               ( Transceiver_Main_0_Output_Data_7 ),
+        .Input_Data_1_01               ( Transceiver_Main_0_Output_Data_4 ),
         // Outputs
         .C_busy                        ( Data_Block_0_C_busy ),
         .Communication_Empty           ( Data_Block_0_Communication_Empty ),
@@ -664,37 +664,9 @@ Data_Block Data_Block_0(
         .Diag_2                        (  ),
         .Diag_3                        (  ),
         .Communication_Data_Req        (  ),
+        .Control_Test_Generator_Enable ( Data_Block_0_Control_Test_Generator_Enable ),
         .C_read_data_frame             ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ),
-        .Control_Test_Generator_Enable ( Data_Block_0_Control_Test_Generator_Enable ) 
-        );
-
-//--------DataSource_Transcievers
-DataSource_Transcievers DataSource_Transcievers_0(
-        // Inputs
-        .LANE0_RXD_P     ( LANE0_RXD_P ),
-        .LANE0_RXD_N     ( LANE0_RXD_N ),
-        .LANE1_RXD_P     ( LANE1_RXD_P ),
-        .LANE1_RXD_N     ( LANE1_RXD_N ),
-        .Gen_Enable      ( Data_Block_0_Control_Test_Generator_Enable ),
-        .Logic_Clock     ( Clock_Reset_0_Main_CLOCK_0 ),
-        .Logic_Reset_N   ( Clock_Reset_0_Main_RESET_N_1 ),
-        .CTRL_Clock_40M  ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
-        .REF_Clock       ( Clock_Reset_0_XCVR_REF_Clock ),
-        // Outputs
-        .LANE0_TXD_P     ( LANE0_TXD_P_net_0 ),
-        .LANE0_TXD_N     ( LANE0_TXD_N_net_0 ),
-        .LANE1_TXD_P     ( LANE1_TXD_P_net_0 ),
-        .LANE1_TXD_N     ( LANE1_TXD_N_net_0 ),
-        .Data_Valid      (  ),
-        .Output_Data_1_1 ( DataSource_Transcievers_0_Output_Data_1_1 ),
-        .Output_Data_1_0 ( DataSource_Transcievers_0_Output_Data_1_0 ),
-        .Output_Data_0_1 ( DataSource_Transcievers_0_Output_Data_0_1 ),
-        .Output_Data_0_0 ( DataSource_Transcievers_0_Output_Data_0_0 ),
-        .Output_Data_0_2 ( DataSource_Transcievers_0_Output_Data_0_2 ),
-        .Output_Data_1_2 ( DataSource_Transcievers_0_Output_Data_1_2 ),
-        .Output_Data_1_3 ( DataSource_Transcievers_0_Output_Data_1_3 ),
-        .Output_Data_0_3 ( DataSource_Transcievers_0_Output_Data_0_3 ) 
+        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ) 
         );
 
 //--------INBUF_DIFF
@@ -754,11 +726,39 @@ OUTBUF_DIFF OUTBUF_DIFF_0_0_1(
 //--------Synchronizer
 Synchronizer Synchronizer_0(
         // Inputs
-        .nRST     ( Clock_Reset_0_Main_RESET_N_1 ),
+        .nRST     ( Clock_Reset_0_Main_RESET_N_0 ),
         .CLK      ( INBUF_DIFF_0_0_Y ),
         .Data_In  ( Controler_0_LMX_Sync ),
         // Outputs
         .Data_Out ( Synchronizer_0_Data_Out ) 
+        );
+
+//--------Transceiver_Main
+Transceiver_Main Transceiver_Main_0(
+        // Inputs
+        .LANE1_RXD_N    ( LANE1_RXD_N ),
+        .LANE0_RXD_P    ( LANE0_RXD_P ),
+        .LANE0_RXD_N    ( LANE0_RXD_N ),
+        .LANE1_RXD_P    ( LANE1_RXD_P ),
+        .REF_Clock      ( Clock_Reset_0_XCVR_REF_Clock ),
+        .CTRL_Clock_40M ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
+        .Logic_Clock    ( Clock_Reset_0_Main_CLOCK_1 ),
+        .Logic_Reset_N  ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Gen_Enable     ( Data_Block_0_Control_Test_Generator_Enable ),
+        // Outputs
+        .LANE1_TXD_N    ( LANE1_TXD_N_net_0 ),
+        .LANE0_TXD_P    ( LANE0_TXD_P_net_0 ),
+        .LANE0_TXD_N    ( LANE0_TXD_N_net_0 ),
+        .LANE1_TXD_P    ( LANE1_TXD_P_net_0 ),
+        .Data_Valid     (  ),
+        .Output_Data_7  ( Transceiver_Main_0_Output_Data_7 ),
+        .Output_Data_0  ( Transceiver_Main_0_Output_Data_0 ),
+        .Output_Data_1  ( Transceiver_Main_0_Output_Data_1 ),
+        .Output_Data_2  ( Transceiver_Main_0_Output_Data_2 ),
+        .Output_Data_3  ( Transceiver_Main_0_Output_Data_3 ),
+        .Output_Data_4  ( Transceiver_Main_0_Output_Data_4 ),
+        .Output_Data_5  ( Transceiver_Main_0_Output_Data_5 ),
+        .Output_Data_6  ( Transceiver_Main_0_Output_Data_6 ) 
         );
 
 

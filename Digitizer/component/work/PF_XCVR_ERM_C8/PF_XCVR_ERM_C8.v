@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Feb  9 20:00:50 2024
+// Created by SmartDesign Sun Feb 11 13:35:13 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -18,7 +18,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "EXPOSE_FWF_EN_PORTS:false" \
 "SHOW_UNIVERSAL_SOLN_PORTS:true" \
 "UI_CDR_LOCK_MODE:Lock to data" \
-"UI_CDR_REFERENCE_CLK_FREQ:80.0" \
+"UI_CDR_REFERENCE_CLK_FREQ:125.0" \
 "UI_CDR_REFERENCE_CLK_SOURCE:Fabric" \
 "UI_CDR_REFERENCE_CLK_TOLERANCE:1" \
 "UI_ENABLE_32BIT_DATA_WIDTH:false" \

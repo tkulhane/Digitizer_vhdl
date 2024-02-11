@@ -1,51 +1,106 @@
 --
 -- Synopsys
--- Vhdl wrapper for top level design, written on Wed Feb  7 23:14:11 2024
+-- Vhdl wrapper for top level design, written on Sun Feb 11 22:01:46 2024
 --
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-entity wrapper_for_Synchronizer is
+entity wrapper_for_work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH is
    port (
-      nRST : in std_logic;
-      CLK : in std_logic;
-      Data_In : in std_logic;
-      Data_Out : out std_logic
+      Clock : in std_logic;
+      Reset_N : in std_logic;
+      Write_Enable : in std_logic;
+      Full : out std_logic;
+      Full_For_All : out std_logic;
+      Write_Data : in std_logic_vector(63 downto 0);
+      Write_Data_Enable : in std_logic_vector(7 downto 0);
+      Read_Enable : in std_logic;
+      Empty : out std_logic;
+      Empty_For_NonAll : out std_logic;
+      Read_Data : out std_logic_vector(63 downto 0);
+      Read_Data_Enable : in std_logic_vector(7 downto 0);
+      Read_Data_Empty : out std_logic_vector(7 downto 0)
    );
-end wrapper_for_Synchronizer;
+end wrapper_for_work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH;
 
-architecture arch of wrapper_for_Synchronizer is
+architecture rtl of wrapper_for_work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH is
 
-component Synchronizer
+component work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH
  port (
-   nRST : in std_logic;
-   CLK : in std_logic;
-   Data_In : in std_logic;
-   Data_Out : out std_logic
+   Clock : in std_logic;
+   Reset_N : in std_logic;
+   Write_Enable : in std_logic;
+   Full : out std_logic;
+   Full_For_All : out std_logic;
+   Write_Data : in std_logic_vector (63 downto 0);
+   Write_Data_Enable : in std_logic_vector (7 downto 0);
+   Read_Enable : in std_logic;
+   Empty : out std_logic;
+   Empty_For_NonAll : out std_logic;
+   Read_Data : out std_logic_vector (63 downto 0);
+   Read_Data_Enable : in std_logic_vector (7 downto 0);
+   Read_Data_Empty : out std_logic_vector (7 downto 0)
  );
 end component;
 
-signal tmp_nRST : std_logic;
-signal tmp_CLK : std_logic;
-signal tmp_Data_In : std_logic;
-signal tmp_Data_Out : std_logic;
+signal tmp_Clock : std_logic;
+signal tmp_Reset_N : std_logic;
+signal tmp_Write_Enable : std_logic;
+signal tmp_Full : std_logic;
+signal tmp_Full_For_All : std_logic;
+signal tmp_Write_Data : std_logic_vector (63 downto 0);
+signal tmp_Write_Data_Enable : std_logic_vector (7 downto 0);
+signal tmp_Read_Enable : std_logic;
+signal tmp_Empty : std_logic;
+signal tmp_Empty_For_NonAll : std_logic;
+signal tmp_Read_Data : std_logic_vector (63 downto 0);
+signal tmp_Read_Data_Enable : std_logic_vector (7 downto 0);
+signal tmp_Read_Data_Empty : std_logic_vector (7 downto 0);
 
 begin
 
-tmp_nRST <= nRST;
+tmp_Clock <= Clock;
 
-tmp_CLK <= CLK;
+tmp_Reset_N <= Reset_N;
 
-tmp_Data_In <= Data_In;
+tmp_Write_Enable <= Write_Enable;
 
-Data_Out <= tmp_Data_Out;
+Full <= tmp_Full;
+
+Full_For_All <= tmp_Full_For_All;
+
+tmp_Write_Data <= Write_Data;
+
+tmp_Write_Data_Enable <= Write_Data_Enable;
+
+tmp_Read_Enable <= Read_Enable;
+
+Empty <= tmp_Empty;
+
+Empty_For_NonAll <= tmp_Empty_For_NonAll;
+
+Read_Data <= tmp_Read_Data;
+
+tmp_Read_Data_Enable <= Read_Data_Enable;
+
+Read_Data_Empty <= tmp_Read_Data_Empty;
 
 
 
-u1:   Synchronizer port map (
-		nRST => tmp_nRST,
-		CLK => tmp_CLK,
-		Data_In => tmp_Data_In,
-		Data_Out => tmp_Data_Out
+u1:   work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH port map (
+		Clock => tmp_Clock,
+		Reset_N => tmp_Reset_N,
+		Write_Enable => tmp_Write_Enable,
+		Full => tmp_Full,
+		Full_For_All => tmp_Full_For_All,
+		Write_Data => tmp_Write_Data,
+		Write_Data_Enable => tmp_Write_Data_Enable,
+		Read_Enable => tmp_Read_Enable,
+		Empty => tmp_Empty,
+		Empty_For_NonAll => tmp_Empty_For_NonAll,
+		Read_Data => tmp_Read_Data,
+		Read_Data_Enable => tmp_Read_Data_Enable,
+		Read_Data_Empty => tmp_Read_Data_Empty
        );
-end arch;
+end rtl;

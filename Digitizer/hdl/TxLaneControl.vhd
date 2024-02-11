@@ -84,12 +84,12 @@ begin
 
     --get Input data vector into array     
     InputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
-        Data_DataVector(i) <= Input_MainData((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)); --generate: (7 downto 0) -> (15 downto 8) -> (23 downto 16) 
+        Data_DataVector(i) <= Input_MainData((i*8 + 7) downto (i*8)); --generate: (7 downto 0) -> (15 downto 8) -> (23 downto 16) 
     end generate InputData_GEN;
 
     --get array to output data vector
     OutputData_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
-        Output_Data((g_NumberOfDataOutputBytes*8 + 7) downto (g_NumberOfDataOutputBytes*8)) <= OutputData(i);
+        Output_Data((i*8 + 7) downto (i*8)) <= OutputData(i);
     end generate OutputData_GEN;
 
     OutputK_GEN : for i in 0 to (g_NumberOfDataOutputBytes - 1) generate
@@ -404,7 +404,8 @@ end process;
                         Counter_IlasSequence <= Counter_IlasSequence + 1;
                     end if;
 
-                    if(IlasRawCounter(i) >= 256 - 8) then
+                    --if(IlasRawCounter(i) >= 256 - 8) then
+                    if(IlasRawCounter(i) >= 256 - g_NumberOfDataOutputBytes*2) then 
                         Ilas_LastFrame <= '1';
                     else 
                         Ilas_LastFrame <= '0';

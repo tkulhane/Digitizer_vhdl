@@ -17,11 +17,12 @@ if {[file exists CORESPI_LIB/_info]} {
 }
 vmap CORESPI_LIB "CORESPI_LIB"
 
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Alignment_Fifo.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RxLaneControl.vhd"
+vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/PF_CCC_C5/PF_CCC_C5_0/PF_CCC_C5_PF_CCC_C5_0_PF_CCC.v"
+vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/PF_CCC_C5/PF_CCC_C5.v"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SampleCompose.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/TxLaneControl.vhd"
-vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/OneLane_NoTRV_test/OneLane_NoTRV_test.v"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SampleTxDeCompose.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Synchronizer.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Test_Generator_for_Lanes.vhd"
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C12/COREFIFO_C12_0/rtl/vlog/core/corefifo_sync_scntr.v"
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C12/COREFIFO_C12_0/rtl/vlog/core/corefifo_sync.v"
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C12/COREFIFO_C12_0/rtl/vlog/core/corefifo_NstagesSync.v"
@@ -62,19 +63,18 @@ vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core/CORELANEMSTR.v"
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/PF_XCVR_ERM_C8/I_XCVR/PF_XCVR_ERM_C8_I_XCVR_PF_XCVR_sim.v"
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/PF_XCVR_ERM_C8/PF_XCVR_ERM_C8.v"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Synchronizer.vhd"
-vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/OneLane_Transciever/OneLane_Transciever.v"
-vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/PF_CCC_C5/PF_CCC_C5_0/PF_CCC_C5_PF_CCC_C5_0_PF_CCC.v"
-vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/PF_CCC_C5/PF_CCC_C5.v"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/AlignmentLane_Fifo.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RxLaneControl.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/TxLaneControl.vhd"
+vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/Transciever_OneLane/Transciever_OneLane.v"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/RxMainLinkController.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SampleTxDeCompose.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Test_Generator_for_Lanes.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/TxMainLinkController.vhd"
-vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/DataSource_Transcievers/DataSource_Transcievers.v"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Transceiver_LanesConnection.vhd"
+vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/Transceiver_Main/Transceiver_Main.v"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/cmd_table.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/cmd_table_trigger.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/TB_DataSource_Transciever.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/stimulus/TB_Transceiver_Main.vhd"
 
-vsim -L PolarFire -L presynth -L CORESPI_LIB  -t 1ps -pli C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll -gSIM_PA5M300T=0 presynth.TB_DataSource_Transciever
-add wave /TB_DataSource_Transciever/*
+vsim -L PolarFire -L presynth -L CORESPI_LIB  -t 1ps -pli C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll -gSIM_PA5M300T=0 presynth.TB_Transceiver_Main
+add wave /TB_Transceiver_Main/*
 run 1000ns

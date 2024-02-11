@@ -48,7 +48,7 @@
       <spirit:signal>
         <spirit:name>Output_DataWrite</spirit:name>
         <spirit:direction>out</spirit:direction>
-        <spirit:left>3</spirit:left>
+        <spirit:left spirit:dependency="id('g_NumberOfDataOutputBytes') - 1" spirit:resolve="dependent">3</spirit:left>
         <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>

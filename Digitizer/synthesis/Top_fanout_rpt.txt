@@ -5,19 +5,19 @@ CLOCK GLOBAL THRESHOLD - 2
 ASYNC GLOBAL THRESHOLD - 800
 GLOBAL THRESHOLD - 5000
 
-NET NAME                                                                              CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Clock_Reset_0_Main_CLOCK_0                                                            16836           0                   0              16836            YES                  
-Clock_Reset_0_UART_CLOCK_1                                                            1046            0                   0              1046             YES                  
-DataSource_Transcievers_0.OneLane_Transciever_0_0.PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R     291             0                   0              291              YES                  
-DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R       291             0                   0              291              YES                  
-BUFD_0_Y                                                                              248             0                   0              248              YES                  
-DataSource_Transcievers_0.OneLane_Transciever_0_0.PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R     93              0                   0              93               YES                  
-DataSource_Transcievers_0.OneLane_Transciever_0.PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R       93              0                   0              93               YES                  
-Clock_Reset_0_XCVR_CTRL_Clock_40M                                                     66              0                   4              70               YES                  
-Clock_Reset_0_XCVR_REF_Clock                                                          4               0                   0              4                YES                  
-INBUF_DIFF_0_0_Y                                                                      2               0                   0              2                YES                  
-dff_arst                                                                              0               13653               0              13653            YES                  
-INT_DataFifo_Reset_N_arst                                                             0               882                 0              882              YES                  
-Chain_arst1                                                                           0               878                 0              878              YES                  
-===============================================================================================================================================================================
+NET NAME                                                                                                          CLOCK LOADS     ASYNC RST LOADS     DATA LOADS     TOTAL FANOUT     GLOBAL BUFFER PRESENT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Clock_Reset_0_Main_CLOCK_1                                                                                        12916           0                   0              12916            YES                  
+Clock_Reset_0_UART_CLOCK_1                                                                                        1046            0                   0              1046             YES                  
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R_0     436             0                   0              436              YES                  
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R_0     436             0                   0              436              YES                  
+BUFD_0_Y                                                                                                          248             0                   0              248              YES                  
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R       94              0                   0              94               YES                  
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R       94              0                   0              94               YES                  
+Clock_Reset_0_XCVR_CTRL_Clock_40M                                                                                 66              0                   4              70               YES                  
+Clock_Reset_0_XCVR_REF_Clock                                                                                      4               0                   0              4                YES                  
+INBUF_DIFF_0_0_Y                                                                                                  2               0                   0              2                YES                  
+dff_arst                                                                                                          0               9643                0              9643             YES                  
+INT_DataFifo_Reset_N_arst                                                                                         0               882                 0              882              YES                  
+Chain_arst1                                                                                                       0               878                 0              878              YES                  
+===========================================================================================================================================================================================================

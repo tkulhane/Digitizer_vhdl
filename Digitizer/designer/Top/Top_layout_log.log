@@ -39,10 +39,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 6 seconds
+Total time spent in I/O Bank and Globals Assigner: 5 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Wed Feb  7 23:22:29 2024
+Design: Top                             Started: Sun Feb 11 22:06:34 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -56,53 +56,47 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 22 seconds
-Placement                : 110 seconds
-Improvement              : 163 seconds
+Clustering (1 pass)      : 23 seconds
+Placement                : 122 seconds
+Improvement              : 106 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Wed Feb  7 23:28:37 2024
-Total CPU Time:     00:08:37            Total Elapsed Time: 00:06:08
-Total Memory Usage: 2662.5 Mbytes
+Finished: Sun Feb 11 22:11:58 2024
+Total CPU Time:     00:07:50            Total Elapsed Time: 00:05:24
+Total Memory Usage: 2628.8 Mbytes
                         o - o - o - o - o - o
 
 
 Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
-    Driver: DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: DataSource_Transcievers_0/OneLane_Transciever_0_0/Alignment_Fifo_0/N_35_i
+    Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
+       Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/N_3
 Clock pins: 1
-    Driver: DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: DataSource_Transcievers_0/OneLane_NoTRV_test_0_0/Alignment_Fifo_0/N_35_i
-Clock pins: 1
-    Driver: DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: DataSource_Transcievers_0/OneLane_Transciever_0/Alignment_Fifo_0/N_35_i
-Clock pins: 1
-    Driver: DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/RD_Enable_Vector_Encoded_0_RNO:Y
-       Net: DataSource_Transcievers_0/OneLane_NoTRV_test_0/Alignment_Fifo_0/N_35_i
+    Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
+       Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/N_3
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Wed Feb  7 23:29:14 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sun Feb 11 22:12:35 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Wed Feb  7 23:30:46 2024
-Total CPU Time:     00:03:35            Total Elapsed Time: 00:01:32
-Total Memory Usage: 5267.5 Mbytes
+Finished: Sun Feb 11 22:14:11 2024
+Total CPU Time:     00:04:03            Total Elapsed Time: 00:01:36
+Total Memory Usage: 5482.2 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+-------+--------+------------+
 | Type          | Used  | Total  | Percentage |
 +---------------+-------+--------+------------+
-| 4LUT          | 93772 | 299544 | 31.30      |
-| DFF           | 50813 | 299544 | 16.96      |
+| 4LUT          | 91097 | 299544 | 30.41      |
+| DFF           | 47463 | 299544 | 15.85      |
 | I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 95488 | 299544 | 31.88      |
+| Logic Element | 93020 | 299544 | 31.05      |
 +---------------+-------+--------+------------+
 
 I/O Placement

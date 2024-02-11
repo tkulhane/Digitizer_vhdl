@@ -10,9 +10,10 @@ entity SampleCompose is
     Clock : in std_logic;
     Reset_N : in std_logic;
 
-
-    Input_Data_1 : in std_logic_vector(7 downto 0);
-    Input_Data_0 : in std_logic_vector(7 downto 0);
+    Input_Data : in std_logic_vector(15 downto 0);
+    
+    --Input_Data_1 : in std_logic_vector(7 downto 0);
+    --Input_Data_0 : in std_logic_vector(7 downto 0);
 
     Output_Data : out std_logic_vector(11 downto 0);
     Output_TailBits : out std_logic_vector(3 downto 0)
@@ -42,7 +43,8 @@ begin
 --Signals routing
 ------------------------------------------------------------------------------------------------------------  
 
-  DATA <= Input_Data_0 & Input_Data_1;
+    DATA <= Input_Data;
+  --DATA <= Input_Data_0 & Input_Data_1;
 
 ------------------------------------------------------------------------------------------------------------
 --buffer
