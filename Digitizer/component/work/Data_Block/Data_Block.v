@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed Feb  7 23:12:24 2024
+// Created by SmartDesign Mon Feb 12 08:28:36 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -95,6 +95,7 @@ wire          Communication_Read;
 wire          Control_Test_Generator_Enable_net_0;
 wire          Diag_0_net_0;
 wire          Diag_1_net_0;
+wire          Diag_1_0;
 wire   [7:0]  Event_Info_RAM_Block_0_A_DOUT_Event_Status;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
@@ -103,7 +104,6 @@ wire   [7:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Status;
 wire          Fifo_RESET_N;
 wire          FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
 wire          FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable;
-wire          FIFOs_Reader_0_Event_FIFO_R_Enable;
 wire   [9:0]  FIFOs_Reader_0_Event_RAM_W_Address;
 wire   [19:0] FIFOs_Reader_0_Event_RAM_W_Data_Number;
 wire   [19:0] FIFOs_Reader_0_Event_RAM_W_Data_Size;
@@ -146,11 +146,11 @@ wire   [11:0] Trigger_Top_Part_0_TRG_Threshold;
 wire          C_busy_net_1;
 wire          Communication_Empty_net_1;
 wire          Diag_0_net_1;
-wire          Diag_1_net_1;
+wire          Diag_1_0_net_0;
 wire          Communication_Data_Req_net_1;
+wire          Control_Test_Generator_Enable_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [31:0] Communication_Data_Frame_net_1;
-wire          Control_Test_Generator_Enable_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -189,16 +189,16 @@ assign Communication_Empty_net_1           = Communication_Empty_net_0;
 assign Communication_Empty                 = Communication_Empty_net_1;
 assign Diag_0_net_1                        = Diag_0_net_0;
 assign Diag_0                              = Diag_0_net_1;
-assign Diag_1_net_1                        = Diag_1_net_0;
-assign Diag_1                              = Diag_1_net_1;
+assign Diag_1_0_net_0                      = Diag_1_0;
+assign Diag_1                              = Diag_1_0_net_0;
 assign Communication_Data_Req_net_1        = Communication_Data_Req_net_0;
 assign Communication_Data_Req              = Communication_Data_Req_net_1;
+assign Control_Test_Generator_Enable_net_1 = Control_Test_Generator_Enable_net_0;
+assign Control_Test_Generator_Enable       = Control_Test_Generator_Enable_net_1;
 assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
-assign Control_Test_Generator_Enable_net_1 = Control_Test_Generator_Enable_net_0;
-assign Control_Test_Generator_Enable       = Control_Test_Generator_Enable_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -287,7 +287,7 @@ FIFOs_Reader FIFOs_Reader_0(
         .Block_1_Sample_FIFO_3_R_Data  ( Input_Data_Part_1_Q_3 ),
         .Event_RAM_R_Data_Status       ( Event_Info_RAM_Block_0_A_DOUT_Event_Status ),
         // Outputs
-        .Event_FIFO_R_Enable           ( FIFOs_Reader_0_Event_FIFO_R_Enable ),
+        .Event_FIFO_R_Enable           ( Diag_1_0 ),
         .Block_0_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .Block_1_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
         .Event_RAM_W_Enable_Start_ADDR ( FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR ),
@@ -385,7 +385,7 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .Reset_N                       ( Reset_N ),
         .C_enable_cmd                  ( C_enable_cmd ),
         .C_write_read                  ( C_write_read ),
-        .RE                            ( FIFOs_Reader_0_Event_FIFO_R_Enable ),
+        .RE                            ( Diag_1_0 ),
         .C_addr_frame                  ( C_addr_frame ),
         .C_write_data_frame            ( C_write_data_frame ),
         .TRG_Detect_Vector             ( Input_Data_Part_0_TRG_Detect_Vector ),

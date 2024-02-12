@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Feb 11 21:57:13 2024
+// Created by SmartDesign Mon Feb 12 10:04:39 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -255,7 +255,9 @@ wire   [15:0]  Data_Block_0_C_read_data_frame;
 wire   [31:0]  Data_Block_0_Communication_Data_Frame;
 wire           Data_Block_0_Communication_Empty;
 wire           Data_Block_0_Control_Test_Generator_Enable;
+wire           DBGport_0_net_0;
 wire           DBGport_0_1;
+wire           DBGport_1_net_0;
 wire           DBGport_1_0;
 wire           DBGport_2_net_0;
 wire           DBGport_2_1;
@@ -263,7 +265,6 @@ wire           DBGport_3_0;
 wire           DBGport_3_1;
 wire           DBGport_4_1;
 wire           BTN_2;
-wire           DBGport_6_2;
 wire           DBGport_7_1;
 wire   [3:0]   FTDI_BE;
 wire           FTDI_CLK;
@@ -276,6 +277,7 @@ wire           FTDI_nRXF;
 wire           FTDI_nTXE;
 wire           FTDI_nWR_net_0;
 wire           FTDI_RESET_N_net_0;
+wire           GPIO_0_net_0;
 wire           HMC_CLK_IN_N;
 wire           HMC_CLK_IN_P;
 wire           HMC_GPIO_0;
@@ -285,7 +287,6 @@ wire           HMC_GPIO_3_net_0;
 wire           HMC_sdio;
 wire           HMC_ss_n_net_0;
 wire           HMC_SYNC_net_0;
-wire           INBUF_DIFF_0_0_Y;
 wire           INBUF_DIFF_0_Y;
 wire           LANE0_RXD_N;
 wire           LANE0_RXD_P;
@@ -329,8 +330,9 @@ wire   [83:72] Transceiver_Main_0_Output_Data_6;
 wire   [95:84] Transceiver_Main_0_Output_Data_7;
 wire           TX_0_net_0;
 wire           TX_1_net_0;
-wire           DBGport_6_2_net_0;
-wire           DBGport_7_1_net_0;
+wire           DBGport_1_net_1;
+wire           FTDI_nRXF_net_0;
+wire           FTDI_nTXE_net_0;
 wire           LED_3_net_1;
 wire           LED_4_net_1;
 wire           FTDI_nWR_net_1;
@@ -352,8 +354,8 @@ wire           DBGport_1_0_net_0;
 wire           DBGport_2_1_net_0;
 wire           DBGport_3_1_net_0;
 wire           HMC_SYNC_net_1;
-wire           DBGport_7_1_net_1;
-wire           DBGport_6_2_net_1;
+wire           DBGport_7_1_net_0;
+wire           GPIO_0_net_1;
 wire           ADC_PWDN_net_1;
 wire           ADC_PWR_RUN_net_1;
 wire           BOARD_PWR_RUN_net_1;
@@ -372,6 +374,9 @@ wire           FTDI_GPIO_1_net_1;
 wire           SIWU_N_net_1;
 wire           TX_0_net_1;
 wire           TX_1_net_1;
+wire           FTDI_nWR_net_2;
+wire           FTDI_nRD_net_2;
+wire           DBGport_0_net_1;
 wire           LANE1_TXD_N_net_1;
 wire           LANE1_TXD_P_net_1;
 wire           LANE0_TXD_N_net_1;
@@ -387,23 +392,21 @@ assign GND_net = 1'b0;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
-assign DBGport_1           = 1'b0;
-assign DBGport_4           = 1'b0;
-assign DBGport_5           = 1'b0;
+assign DBGport_6           = 1'b0;
+assign DBGport_7           = 1'b0;
 assign LED_1               = 1'b0;
 assign LED_2               = 1'b0;
 assign DBGport_8           = 1'b0;
 assign DBGport_9           = 1'b0;
-assign DBGport_3           = 1'b0;
-assign DBGport_2           = 1'b0;
-assign DBGport_0           = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign DBGport_6_2_net_0   = DBGport_6_2;
-assign DBGport_6           = DBGport_6_2_net_0;
-assign DBGport_7_1_net_0   = DBGport_7_1;
-assign DBGport_7           = DBGport_7_1_net_0;
+assign DBGport_1_net_1     = DBGport_1_net_0;
+assign DBGport_1           = DBGport_1_net_1;
+assign FTDI_nRXF_net_0     = FTDI_nRXF;
+assign DBGport_4           = FTDI_nRXF_net_0;
+assign FTDI_nTXE_net_0     = FTDI_nTXE;
+assign DBGport_5           = FTDI_nTXE_net_0;
 assign LED_3_net_1         = LED_3_net_0;
 assign LED_3               = LED_3_net_1;
 assign LED_4_net_1         = LED_4_net_0;
@@ -446,10 +449,10 @@ assign DBGport_3_1_net_0   = DBGport_3_1;
 assign EXT_LMX2_Reset_N    = DBGport_3_1_net_0;
 assign HMC_SYNC_net_1      = HMC_SYNC_net_0;
 assign HMC_SYNC            = HMC_SYNC_net_1;
-assign DBGport_7_1_net_1   = DBGport_7_1;
-assign GPIO_1              = DBGport_7_1_net_1;
-assign DBGport_6_2_net_1   = DBGport_6_2;
-assign GPIO_0              = DBGport_6_2_net_1;
+assign DBGport_7_1_net_0   = DBGport_7_1;
+assign GPIO_1              = DBGport_7_1_net_0;
+assign GPIO_0_net_1        = GPIO_0_net_0;
+assign GPIO_0              = GPIO_0_net_1;
 assign ADC_PWDN_net_1      = ADC_PWDN_net_0;
 assign ADC_PWDN            = ADC_PWDN_net_1;
 assign ADC_PWR_RUN_net_1   = ADC_PWR_RUN_net_0;
@@ -486,6 +489,12 @@ assign TX_0_net_1          = TX_0_net_0;
 assign TX_0                = TX_0_net_1;
 assign TX_1_net_1          = TX_1_net_0;
 assign TX_1                = TX_1_net_1;
+assign FTDI_nWR_net_2      = FTDI_nWR_net_0;
+assign DBGport_3           = FTDI_nWR_net_2;
+assign FTDI_nRD_net_2      = FTDI_nRD_net_0;
+assign DBGport_2           = FTDI_nRD_net_2;
+assign DBGport_0_net_1     = DBGport_0_net_0;
+assign DBGport_0           = DBGport_0_net_1;
 assign LANE1_TXD_N_net_1   = LANE1_TXD_N_net_0;
 assign LANE1_TXD_N         = LANE1_TXD_N_net_1;
 assign LANE1_TXD_P_net_1   = LANE1_TXD_P_net_0;
@@ -615,7 +624,7 @@ Controler Controler_0(
         .BOARD_PWR_RUN         ( BOARD_PWR_RUN_net_0 ),
         .LED_2                 ( LED_4_net_0 ),
         .LED_3                 ( LED_3_net_0 ),
-        .GPIO_0                ( DBGport_6_2 ),
+        .GPIO_0                (  ),
         .GPIO_1                ( DBGport_7_1 ),
         .INT_FtdiReset_N       ( FTDI_RESET_N_net_0 ),
         .HMC_GPIO_3            ( HMC_GPIO_3_net_0 ),
@@ -659,8 +668,8 @@ Data_Block Data_Block_0(
         // Outputs
         .C_busy                        ( Data_Block_0_C_busy ),
         .Communication_Empty           ( Data_Block_0_Communication_Empty ),
-        .Diag_0                        (  ),
-        .Diag_1                        (  ),
+        .Diag_0                        ( DBGport_0_net_0 ),
+        .Diag_1                        ( DBGport_1_net_0 ),
         .Diag_2                        (  ),
         .Diag_3                        (  ),
         .Communication_Data_Req        (  ),
@@ -684,7 +693,7 @@ INBUF_DIFF INBUF_DIFF_0_0(
         .PADP ( HMC_CLK_IN_P ),
         .PADN ( HMC_CLK_IN_N ),
         // Outputs
-        .Y    ( INBUF_DIFF_0_0_Y ) 
+        .Y    ( GPIO_0_net_0 ) 
         );
 
 //--------OUTBUF_DIFF
@@ -727,7 +736,7 @@ OUTBUF_DIFF OUTBUF_DIFF_0_0_1(
 Synchronizer Synchronizer_0(
         // Inputs
         .nRST     ( Clock_Reset_0_Main_RESET_N_0 ),
-        .CLK      ( INBUF_DIFF_0_0_Y ),
+        .CLK      ( GPIO_0_net_0 ),
         .Data_In  ( Controler_0_LMX_Sync ),
         // Outputs
         .Data_Out ( Synchronizer_0_Data_Out ) 

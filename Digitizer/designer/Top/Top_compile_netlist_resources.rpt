@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Sun Feb 11 22:04:16 2024
+Date: Mon Feb 12 10:10:09 2024
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -30,8 +30,8 @@ Resource Usage
 +---------------------------+-------+--------+------------+
 | Type                      | Used  | Total  | Percentage |
 +---------------------------+-------+--------+------------+
-| 4LUT                      | 90634 | 299544 | 30.26      |
-| DFF                       | 47358 | 299544 | 15.81      |
+| 4LUT                      | 90641 | 299544 | 30.26      |
+| DFF                       | 47360 | 299544 | 15.81      |
 | I/O Register              | 0     | 1536   | 0.00       |
 | User I/O                  | 114   | 512    | 22.27      |
 | -- Single-ended I/O       | 102   | 512    | 19.92      |
@@ -58,11 +58,11 @@ Detailed Logic Resource Usage
 +-----------------------+-------+-------+
 | Type                  | 4LUT  | DFF   |
 +-----------------------+-------+-------+
-| Fabric Logic          | 56758 | 13482 |
+| Fabric Logic          | 56765 | 13484 |
 | uSRAM Interface Logic | 0     | 0     |
 | LSRAM Interface Logic | 33876 | 33876 |
 | Math Interface Logic  | 0     | 0     |
-| Total Used            | 90634 | 47358 |
+| Total Used            | 90641 | 47360 |
 +-----------------------+-------+-------+
 
 Detailed Carry Chains Resource Usage
@@ -114,10 +114,10 @@ Nets assigned to chip global resources
 +--------+---------+-------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                |
 +--------+---------+-------------------------------------------------------------------------------------+
-| 12924  | INT_NET | Net   : Clock_Reset_0_Main_CLOCK_1                                                  |
+| 12926  | INT_NET | Net   : Clock_Reset_0_Main_CLOCK_1                                                  |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0/U0_RGB1                      |
 |        |         | Source: NETLIST                                                                     |
-| 9643   | INT_NET | Net   : dff_arst                                                                    |
+| 9645   | INT_NET | Net   : dff_arst                                                                    |
 |        |         | Driver: Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8/U0_RGB1 |
 |        |         | Source: NETLIST                                                                     |
 | 1046   | INT_NET | Net   : Clock_Reset_0_UART_CLOCK_1                                                  |
@@ -141,7 +141,7 @@ Nets assigned to chip global resources
 | 4      | INT_NET | Net   : Transceiver_Main_0/PF_CCC_C5_0_OUT0_FABCLK_0                                |
 |        |         | Driver: Transceiver_Main_0/PF_CCC_C5_0/PF_CCC_C5_0/clkint_0/U0_RGB1                 |
 |        |         | Source: NETLIST                                                                     |
-| 2      | INT_NET | Net   : INBUF_DIFF_0_0_Y                                                            |
+| 3      | INT_NET | Net   : GPIO_0_c                                                                    |
 |        |         | Driver: I_2/U0_RGB1                                                                 |
 |        |         | Source: NETLIST                                                                     |
 | 1      | INT_NET | Net   : Clock_Reset_0_HMC_CLK                                                       |
