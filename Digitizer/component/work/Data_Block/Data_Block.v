@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Feb 12 08:28:36 2024
+// Created by SmartDesign Mon Feb 12 20:39:47 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -136,12 +136,9 @@ wire   [15:0] Input_Data_Part_1_Q_2;
 wire   [15:0] Input_Data_Part_1_Q_3;
 wire          Reset_N;
 wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
-wire          Trigger_Top_Part_0_ALL_FIFO_Enable;
+wire          Trigger_Top_Part_0_ALL_FIFO_Write;
 wire          Trigger_Top_Part_0_EMPTY;
 wire   [17:0] Trigger_Top_Part_0_Q;
-wire   [7:0]  Trigger_Top_Part_0_TRG_Enable_Vector;
-wire          Trigger_Top_Part_0_TRG_First_Is_First;
-wire          Trigger_Top_Part_0_TRG_Last_Is_Last;
 wire   [11:0] Trigger_Top_Part_0_TRG_Threshold;
 wire          C_busy_net_1;
 wire          Communication_Empty_net_1;
@@ -311,17 +308,14 @@ Input_Data_Part Input_Data_Part_0(
         // Inputs
         .Clock               ( Clock ),
         .Reset_N_Trigger     ( Reset_N ),
-        .Fifo_WE             ( Trigger_Top_Part_0_ALL_FIFO_Enable ),
-        .TRG_First_Is_First  ( Trigger_Top_Part_0_TRG_First_Is_First ),
-        .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
-        .RE                  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
+        .Fifo_Write          ( Trigger_Top_Part_0_ALL_FIFO_Write ),
+        .Fifo_Read           ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
         .Input_Data_0        ( Input_Data_0_00 ),
         .Input_Data_1        ( Input_Data_1_00 ),
         .Input_Data_2        ( Input_Data_2_00 ),
         .Input_Data_3        ( Input_Data_3_00 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
-        .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_0 ),
         .Order_Of_TRG_Unit_1 ( Order_Of_TRG_Unit_1_const_net_0 ),
         .Order_Of_TRG_Unit_3 ( Order_Of_TRG_Unit_3_const_net_0 ),
@@ -340,17 +334,14 @@ Input_Data_Part Input_Data_Part_1(
         // Inputs
         .Clock               ( Clock ),
         .Reset_N_Trigger     ( Reset_N ),
-        .Fifo_WE             ( Trigger_Top_Part_0_ALL_FIFO_Enable ),
-        .TRG_First_Is_First  ( Trigger_Top_Part_0_TRG_First_Is_First ),
-        .TRG_Last_Is_Last    ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
-        .RE                  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
+        .Fifo_Write          ( Trigger_Top_Part_0_ALL_FIFO_Write ),
+        .Fifo_Read           ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
         .RESET_N_Fifo        ( Fifo_RESET_N ),
         .Input_Data_0        ( Input_Data_0_01 ),
         .Input_Data_1        ( Input_Data_1_01 ),
         .Input_Data_2        ( Input_Data_2_01 ),
         .Input_Data_3        ( Input_Data_3_01 ),
         .TRG_Threshold       ( Trigger_Top_Part_0_TRG_Threshold ),
-        .TRG_Enable_Vector   ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Order_Of_TRG_Unit_0 ( Order_Of_TRG_Unit_0_const_net_1 ),
         .Order_Of_TRG_Unit_1 ( Order_Of_TRG_Unit_1_const_net_1 ),
         .Order_Of_TRG_Unit_3 ( Order_Of_TRG_Unit_3_const_net_1 ),
@@ -392,13 +383,10 @@ Trigger_Top_Part Trigger_Top_Part_0(
         // Outputs
         .C_busy                        ( C_busy_net_0 ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
-        .ALL_FIFO_Enable               ( Trigger_Top_Part_0_ALL_FIFO_Enable ),
-        .TRG_First_Is_First            ( Trigger_Top_Part_0_TRG_First_Is_First ),
-        .TRG_Last_Is_Last              ( Trigger_Top_Part_0_TRG_Last_Is_Last ),
+        .ALL_FIFO_Write                ( Trigger_Top_Part_0_ALL_FIFO_Write ),
         .EMPTY                         ( Trigger_Top_Part_0_EMPTY ),
         .C_read_data_frame             ( C_read_data_frame_net_0 ),
         .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
-        .TRG_Enable_Vector             ( Trigger_Top_Part_0_TRG_Enable_Vector ),
         .Q                             ( Trigger_Top_Part_0_Q ) 
         );
 

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Aug  7 10:00:54 2023
+// Created by SmartDesign Mon Feb 12 20:34:27 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -9,7 +9,8 @@
 module Input_Data_Part(
     // Inputs
     Clock,
-    Fifo_WE,
+    Fifo_Read,
+    Fifo_Write,
     Input_Data_0,
     Input_Data_1,
     Input_Data_2,
@@ -18,12 +19,8 @@ module Input_Data_Part(
     Order_Of_TRG_Unit_1,
     Order_Of_TRG_Unit_2,
     Order_Of_TRG_Unit_3,
-    RE,
     RESET_N_Fifo,
     Reset_N_Trigger,
-    TRG_Enable_Vector,
-    TRG_First_Is_First,
-    TRG_Last_Is_Last,
     TRG_Threshold,
     // Outputs
     Q_0,
@@ -38,7 +35,8 @@ module Input_Data_Part(
 // Input
 //--------------------------------------------------------------------
 input         Clock;
-input         Fifo_WE;
+input         Fifo_Read;
+input         Fifo_Write;
 input  [11:0] Input_Data_0;
 input  [11:0] Input_Data_1;
 input  [11:0] Input_Data_2;
@@ -47,12 +45,8 @@ input  [2:0]  Order_Of_TRG_Unit_0;
 input  [2:0]  Order_Of_TRG_Unit_1;
 input  [2:0]  Order_Of_TRG_Unit_2;
 input  [2:0]  Order_Of_TRG_Unit_3;
-input         RE;
 input         RESET_N_Fifo;
 input         Reset_N_Trigger;
-input  [7:0]  TRG_Enable_Vector;
-input         TRG_First_Is_First;
-input         TRG_Last_Is_Last;
 input  [11:0] TRG_Threshold;
 //--------------------------------------------------------------------
 // Output
@@ -69,7 +63,8 @@ inout  [7:0]  TRG_Detect_Vector;
 // Nets
 //--------------------------------------------------------------------
 wire          Clock;
-wire          Fifo_WE;
+wire          Fifo_Read;
+wire          Fifo_Write;
 wire   [11:0] Input_Data_0;
 wire   [11:0] Input_Data_1;
 wire   [11:0] Input_Data_2;
@@ -82,13 +77,9 @@ wire   [15:0] Q_0_net_0;
 wire   [15:0] Q_1_net_0;
 wire   [15:0] Q_2_net_0;
 wire   [15:0] Q_3_net_0;
-wire          RE;
 wire          RESET_N_Fifo;
 wire          Reset_N_Trigger;
 wire   [7:0]  TRG_Detect_Vector;
-wire   [7:0]  TRG_Enable_Vector;
-wire          TRG_First_Is_First;
-wire          TRG_Last_Is_Last;
 wire   [11:0] TRG_Threshold;
 wire   [15:0] Trigger_Unit_0_Output_Data;
 wire   [15:0] Trigger_Unit_1_Output_Data;
@@ -117,8 +108,8 @@ COREFIFO_C4 COREFIFO_C4_0(
         // Inputs
         .CLK     ( Clock ),
         .RESET_N ( RESET_N_Fifo ),
-        .WE      ( Fifo_WE ),
-        .RE      ( RE ),
+        .WE      ( Fifo_Write ),
+        .RE      ( Fifo_Read ),
         .DATA    ( Trigger_Unit_0_Output_Data ),
         // Outputs
         .FULL    (  ),
@@ -132,8 +123,8 @@ COREFIFO_C4 COREFIFO_C4_0_0(
         // Inputs
         .CLK     ( Clock ),
         .RESET_N ( RESET_N_Fifo ),
-        .WE      ( Fifo_WE ),
-        .RE      ( RE ),
+        .WE      ( Fifo_Write ),
+        .RE      ( Fifo_Read ),
         .DATA    ( Trigger_Unit_1_Output_Data ),
         // Outputs
         .FULL    (  ),
@@ -147,8 +138,8 @@ COREFIFO_C4 COREFIFO_C4_0_1(
         // Inputs
         .CLK     ( Clock ),
         .RESET_N ( RESET_N_Fifo ),
-        .WE      ( Fifo_WE ),
-        .RE      ( RE ),
+        .WE      ( Fifo_Write ),
+        .RE      ( Fifo_Read ),
         .DATA    ( Trigger_Unit_2_Output_Data ),
         // Outputs
         .FULL    (  ),
@@ -162,8 +153,8 @@ COREFIFO_C4 COREFIFO_C4_0_2(
         // Inputs
         .CLK     ( Clock ),
         .RESET_N ( RESET_N_Fifo ),
-        .WE      ( Fifo_WE ),
-        .RE      ( RE ),
+        .WE      ( Fifo_Write ),
+        .RE      ( Fifo_Read ),
         .DATA    ( Trigger_Unit_3_Output_Data ),
         // Outputs
         .FULL    (  ),
@@ -179,18 +170,15 @@ Trigger_Unit #(
         .g_Order_Vector_Length ( 3 ) )
 Trigger_Unit_0(
         // Inputs
-        .Clock              ( Clock ),
-        .Reset_N            ( Reset_N_Trigger ),
-        .TRG_First_Is_First ( TRG_First_Is_First ),
-        .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
-        .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_0 ),
-        .Input_Data         ( Input_Data_0 ),
-        .TRG_Threshold      ( TRG_Threshold ),
-        .TRG_Enable_Vector  ( TRG_Enable_Vector ),
+        .Clock             ( Clock ),
+        .Reset_N           ( Reset_N_Trigger ),
+        .Order_Of_TRG_Unit ( Order_Of_TRG_Unit_0 ),
+        .Input_Data        ( Input_Data_0 ),
+        .TRG_Threshold     ( TRG_Threshold ),
         // Outputs
-        .Output_Data        ( Trigger_Unit_0_Output_Data ),
+        .Output_Data       ( Trigger_Unit_0_Output_Data ),
         // Inouts
-        .TRG_Detect_Vector  ( TRG_Detect_Vector ) 
+        .TRG_Detect_Vector ( TRG_Detect_Vector ) 
         );
 
 //--------Trigger_Unit
@@ -200,18 +188,15 @@ Trigger_Unit #(
         .g_Order_Vector_Length ( 3 ) )
 Trigger_Unit_1(
         // Inputs
-        .Clock              ( Clock ),
-        .Reset_N            ( Reset_N_Trigger ),
-        .TRG_First_Is_First ( TRG_First_Is_First ),
-        .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
-        .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_1 ),
-        .Input_Data         ( Input_Data_1 ),
-        .TRG_Threshold      ( TRG_Threshold ),
-        .TRG_Enable_Vector  ( TRG_Enable_Vector ),
+        .Clock             ( Clock ),
+        .Reset_N           ( Reset_N_Trigger ),
+        .Order_Of_TRG_Unit ( Order_Of_TRG_Unit_1 ),
+        .Input_Data        ( Input_Data_1 ),
+        .TRG_Threshold     ( TRG_Threshold ),
         // Outputs
-        .Output_Data        ( Trigger_Unit_1_Output_Data ),
+        .Output_Data       ( Trigger_Unit_1_Output_Data ),
         // Inouts
-        .TRG_Detect_Vector  ( TRG_Detect_Vector ) 
+        .TRG_Detect_Vector ( TRG_Detect_Vector ) 
         );
 
 //--------Trigger_Unit
@@ -221,18 +206,15 @@ Trigger_Unit #(
         .g_Order_Vector_Length ( 3 ) )
 Trigger_Unit_2(
         // Inputs
-        .Clock              ( Clock ),
-        .Reset_N            ( Reset_N_Trigger ),
-        .TRG_First_Is_First ( TRG_First_Is_First ),
-        .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
-        .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_2 ),
-        .Input_Data         ( Input_Data_2 ),
-        .TRG_Threshold      ( TRG_Threshold ),
-        .TRG_Enable_Vector  ( TRG_Enable_Vector ),
+        .Clock             ( Clock ),
+        .Reset_N           ( Reset_N_Trigger ),
+        .Order_Of_TRG_Unit ( Order_Of_TRG_Unit_2 ),
+        .Input_Data        ( Input_Data_2 ),
+        .TRG_Threshold     ( TRG_Threshold ),
         // Outputs
-        .Output_Data        ( Trigger_Unit_2_Output_Data ),
+        .Output_Data       ( Trigger_Unit_2_Output_Data ),
         // Inouts
-        .TRG_Detect_Vector  ( TRG_Detect_Vector ) 
+        .TRG_Detect_Vector ( TRG_Detect_Vector ) 
         );
 
 //--------Trigger_Unit
@@ -242,18 +224,15 @@ Trigger_Unit #(
         .g_Order_Vector_Length ( 3 ) )
 Trigger_Unit_3(
         // Inputs
-        .Clock              ( Clock ),
-        .Reset_N            ( Reset_N_Trigger ),
-        .TRG_First_Is_First ( TRG_First_Is_First ),
-        .TRG_Last_Is_Last   ( TRG_Last_Is_Last ),
-        .Order_Of_TRG_Unit  ( Order_Of_TRG_Unit_3 ),
-        .Input_Data         ( Input_Data_3 ),
-        .TRG_Threshold      ( TRG_Threshold ),
-        .TRG_Enable_Vector  ( TRG_Enable_Vector ),
+        .Clock             ( Clock ),
+        .Reset_N           ( Reset_N_Trigger ),
+        .Order_Of_TRG_Unit ( Order_Of_TRG_Unit_3 ),
+        .Input_Data        ( Input_Data_3 ),
+        .TRG_Threshold     ( TRG_Threshold ),
         // Outputs
-        .Output_Data        ( Trigger_Unit_3_Output_Data ),
+        .Output_Data       ( Trigger_Unit_3_Output_Data ),
         // Inouts
-        .TRG_Detect_Vector  ( TRG_Detect_Vector ) 
+        .TRG_Detect_Vector ( TRG_Detect_Vector ) 
         );
 
 

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Feb 12 10:04:39 2024
+// Created by SmartDesign Tue Feb 13 22:07:36 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -220,7 +220,6 @@ wire           ADC_sdio;
 wire           ADC_ss_n_net_0;
 wire           BOARD_PWR_RUN_net_0;
 wire           BTN_1;
-wire           BUFD_0_Y;
 wire           CLK_OUT_N_net_0;
 wire           CLK_OUT_P_net_0;
 wire           Clock_Reset_0_HMC_CLK;
@@ -506,14 +505,6 @@ assign LANE0_TXD_P         = LANE0_TXD_P_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
-//--------BUFD
-BUFD BUFD_0(
-        // Inputs
-        .A ( FTDI_CLK ),
-        // Outputs
-        .Y ( BUFD_0_Y ) 
-        );
-
 //--------Clock_Reset
 Clock_Reset Clock_Reset_0(
         // Inputs
@@ -544,7 +535,7 @@ Communication Communication_0(
         .RX_1             ( RX_1 ),
         .FTDI_nTXE        ( FTDI_nTXE ),
         .FTDI_nRXF        ( FTDI_nRXF ),
-        .FTDI_CLK         ( BUFD_0_Y ),
+        .FTDI_CLK         ( FTDI_CLK ),
         .write_data_frame ( Controler_0_COMM_data ),
         .addr_frame       ( Controler_0_COMM_addr ),
         .comm_number      ( Controler_0_COMM_comm_number ),

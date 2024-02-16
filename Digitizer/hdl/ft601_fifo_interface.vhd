@@ -127,7 +127,9 @@ begin
 				next_state <= TRANSMIT;
 
 			when TRANSMIT =>
-				if(FTDI_nTXE = '1') then 
+				if(FTDI_nRXF = '0') then
+					next_state <= TRANSMIT_ABORT;
+				elsif(FTDI_nTXE = '1') then 
 					next_state <= TRANSMIT_ABORT;
 				elsif(CH_AF_EMPTY = '1') then
 					next_state <= IDLE;

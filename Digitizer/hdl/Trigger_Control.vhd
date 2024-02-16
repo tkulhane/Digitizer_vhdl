@@ -274,7 +274,7 @@ begin
             REG_Test_Generator_Enable <= '0';
             REG_Enable  <= '0';
             REG_Threshold <= X"121";
-            REG_Sample_Per_Event_L <= X"0064";
+            REG_Sample_Per_Event_L <= X"000A";
             REG_Sample_Per_Event_M <= X"0000";
             REG_Set_Number_of_Events_L <= X"0000";
             REG_Set_Number_of_Events_M <= X"0000";

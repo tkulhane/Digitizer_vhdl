@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Sep 14 22:57:40 2023
+// Created by SmartDesign Mon Feb 12 20:36:05 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,15 +17,12 @@ module Trigger_Top_Part(
     Reset_N,
     TRG_Detect_Vector,
     // Outputs
-    ALL_FIFO_Enable,
+    ALL_FIFO_Write,
     C_busy,
     C_read_data_frame,
     Control_Test_Generator_Enable,
     EMPTY,
     Q,
-    TRG_Enable_Vector,
-    TRG_First_Is_First,
-    TRG_Last_Is_Last,
     TRG_Threshold
 );
 
@@ -43,20 +40,17 @@ input  [7:0]  TRG_Detect_Vector;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output        ALL_FIFO_Enable;
+output        ALL_FIFO_Write;
 output        C_busy;
 output [15:0] C_read_data_frame;
 output        Control_Test_Generator_Enable;
 output        EMPTY;
 output [17:0] Q;
-output [7:0]  TRG_Enable_Vector;
-output        TRG_First_Is_First;
-output        TRG_Last_Is_Last;
 output [11:0] TRG_Threshold;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire          ALL_FIFO_Enable_net_0;
+wire          ALL_FIFO_Write_net_0;
 wire   [7:0]  C_addr_frame;
 wire          C_busy_net_0;
 wire          C_enable_cmd;
@@ -71,9 +65,6 @@ wire   [17:0] Q_net_0;
 wire          RE;
 wire          Reset_N;
 wire   [7:0]  TRG_Detect_Vector;
-wire   [7:0]  TRG_Enable_Vector_net_0;
-wire          TRG_First_Is_First_net_0;
-wire          TRG_Last_Is_Last_net_0;
 wire   [11:0] TRG_Threshold_net_0;
 wire          Trigger_Control_0_Control_Abort;
 wire          Trigger_Control_0_Control_Enable;
@@ -84,13 +75,10 @@ wire          Trigger_Main_0_Control_Trigger_Out;
 wire   [17:0] Trigger_Main_0_FIFO_Event_Data;
 wire          C_busy_net_1;
 wire          Control_Test_Generator_Enable_net_1;
-wire          ALL_FIFO_Enable_net_1;
-wire          TRG_First_Is_First_net_1;
-wire          TRG_Last_Is_Last_net_1;
+wire          ALL_FIFO_Write_net_1;
 wire          EMPTY_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [11:0] TRG_Threshold_net_1;
-wire   [7:0]  TRG_Enable_Vector_net_1;
 wire   [17:0] Q_net_1;
 //--------------------------------------------------------------------
 // Top level output port assignments
@@ -99,20 +87,14 @@ assign C_busy_net_1                        = C_busy_net_0;
 assign C_busy                              = C_busy_net_1;
 assign Control_Test_Generator_Enable_net_1 = Control_Test_Generator_Enable_net_0;
 assign Control_Test_Generator_Enable       = Control_Test_Generator_Enable_net_1;
-assign ALL_FIFO_Enable_net_1               = ALL_FIFO_Enable_net_0;
-assign ALL_FIFO_Enable                     = ALL_FIFO_Enable_net_1;
-assign TRG_First_Is_First_net_1            = TRG_First_Is_First_net_0;
-assign TRG_First_Is_First                  = TRG_First_Is_First_net_1;
-assign TRG_Last_Is_Last_net_1              = TRG_Last_Is_Last_net_0;
-assign TRG_Last_Is_Last                    = TRG_Last_Is_Last_net_1;
+assign ALL_FIFO_Write_net_1                = ALL_FIFO_Write_net_0;
+assign ALL_FIFO_Write                      = ALL_FIFO_Write_net_1;
 assign EMPTY_net_1                         = EMPTY_net_0;
 assign EMPTY                               = EMPTY_net_1;
 assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign TRG_Threshold_net_1                 = TRG_Threshold_net_0;
 assign TRG_Threshold[11:0]                 = TRG_Threshold_net_1;
-assign TRG_Enable_Vector_net_1             = TRG_Enable_Vector_net_0;
-assign TRG_Enable_Vector[7:0]              = TRG_Enable_Vector_net_1;
 assign Q_net_1                             = Q_net_0;
 assign Q[17:0]                             = Q_net_1;
 //--------------------------------------------------------------------
@@ -123,7 +105,7 @@ COREFIFO_C5 COREFIFO_C5_0(
         // Inputs
         .CLK     ( Clock ),
         .RESET_N ( Reset_N ),
-        .WE      ( ALL_FIFO_Enable_net_0 ),
+        .WE      ( ALL_FIFO_Write_net_0 ),
         .RE      ( RE ),
         .DATA    ( Trigger_Main_0_FIFO_Event_Data ),
         // Outputs
@@ -161,19 +143,17 @@ Trigger_Main Trigger_Main_0(
         .Reset_N                  ( Reset_N ),
         .Control_Enable           ( Trigger_Control_0_Control_Enable ),
         .Control_Abort            ( Trigger_Control_0_Control_Abort ),
-        .FIFO_Event_A_Full        ( COREFIFO_C5_0_AFULL ),
         .Control_Threshold        ( Trigger_Control_0_Control_Threshold ),
         .Control_Sample_Per_Event ( Trigger_Control_0_Control_Sample_Per_Event ),
+        .FIFO_Event_A_Full        ( COREFIFO_C5_0_AFULL ),
         .TRG_Detect_Vector        ( TRG_Detect_Vector ),
         // Outputs
         .Control_Trigger_Out      ( Trigger_Main_0_Control_Trigger_Out ),
         .Control_Busy_Out         ( Trigger_Main_0_Control_Busy_Out ),
-        .ALL_FIFO_Enable          ( ALL_FIFO_Enable_net_0 ),
-        .TRG_First_Is_First       ( TRG_First_Is_First_net_0 ),
-        .TRG_Last_Is_Last         ( TRG_Last_Is_Last_net_0 ),
+        .Control_AcqStart         (  ),
+        .ALL_FIFO_Enable          ( ALL_FIFO_Write_net_0 ),
         .FIFO_Event_Data          ( Trigger_Main_0_FIFO_Event_Data ),
-        .TRG_Threshold            ( TRG_Threshold_net_0 ),
-        .TRG_Enable_Vector        ( TRG_Enable_Vector_net_0 ) 
+        .TRG_Threshold            ( TRG_Threshold_net_0 ) 
         );
 
 

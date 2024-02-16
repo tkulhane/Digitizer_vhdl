@@ -136,6 +136,8 @@ architecture rtl of Communication_Builder is
     --signal Communication_Data_Full : std_logic;
     signal Communication_Data_Req_F : std_logic;
     
+    signal Communication_Data_Full_Buffer : std_logic;
+    signal Communication_Data_Full_Buffer_Clear : std_logic;
 
 begin
 
@@ -162,6 +164,37 @@ begin
     --Diag_2 <= 
     --Diag_3 <= 
 
+
+
+------------------------------------------------------------------------------------------------------------
+--fifo full - state_reg buffer 
+------------------------------------------------------------------------------------------------------------
+    -- ulozim si hodnotu stav registru drive nez ho prepnu do fifo wait 
+    process(Reset_N,Clock)
+    begin
+
+        if(Reset_N = '0') then
+            wait_next_state <= IDLE;
+            Communication_Data_Full_Buffer <= '0';
+        
+        elsif(Clock'event and Clock = '1') then
+            
+            if(Communication_Data_Full = '1' and Communication_Data_Full_Buffer = '0' and wait_next_state_store = '1') then
+                wait_next_state <= next_state;
+                Communication_Data_Full_Buffer <= '1';
+            end if;
+
+            if(Communication_Data_Full_Buffer_Clear = '1') then
+                Communication_Data_Full_Buffer <= '0';
+            end if;
+
+
+        end if;
+    end process;
+
+
+
+
 ------------------------------------------------------------------------------------------------------------
 --FSM builder ride
 ------------------------------------------------------------------------------------------------------------
@@ -171,13 +204,18 @@ begin
 
         if(Reset_N = '0') then
             state_reg <= IDLE;
-            wait_next_state <= IDLE;
         
         elsif(Clock'event and Clock = '1') then
-            if(wait_next_state_store = '1')then
-                wait_next_state <= state_reg;
+            
+            if(Communication_Data_Full = '1') then
+                state_reg <= WAIT_FOR_FIFO;
+            
+            else
+                state_reg <= next_state;
+            
             end if;
-            state_reg <= next_state;
+ 
+            
 
         end if;
     end process;
@@ -220,16 +258,16 @@ begin
             when READ_EVENT_INFO =>
                 next_state <= SEND_EVENT_HEAD;
 
-                if(Communication_Data_Full = '1') then -- wait for fifo
-                    next_state <= WAIT_FOR_FIFO;
-                end if;
+                --if(Communication_Data_Full = '1') then -- wait for fifo
+                    --next_state <= WAIT_FOR_FIFO;
+                --end if;
 
             when SEND_EVENT_HEAD =>
                 next_state <= SEND_PACKET_HEAD;
 
-                if(Communication_Data_Full = '1') then -- wait for fifo
-                    next_state <= WAIT_FOR_FIFO;
-                end if;
+                --if(Communication_Data_Full = '1') then -- wait for fifo
+                    --next_state <= WAIT_FOR_FIFO;
+                --end if;
 
             when SEND_PACKET_HEAD =>
                 next_state <= READ_SAMPLE_DATA;
@@ -237,16 +275,16 @@ begin
             when READ_SAMPLE_DATA =>
                 next_state <= SEND_DATA_FRAMES_1;
 
-                if(Communication_Data_Full = '1') then -- wait for fifo
-                    next_state <= WAIT_FOR_FIFO;
-                end if;
+                --if(Communication_Data_Full = '1') then -- wait for fifo
+                    --next_state <= WAIT_FOR_FIFO;
+                --end if;
 
             when SEND_DATA_FRAMES_1 =>
                 next_state <= SEND_DATA_FRAMES_2;
 
-                if(Communication_Data_Full = '1') then -- wait for fifo
-                    next_state <= WAIT_FOR_FIFO;
-                end if;
+                --if(Communication_Data_Full = '1') then -- wait for fifo
+                    --next_state <= WAIT_FOR_FIFO;
+                --end if;
 
             when SEND_DATA_FRAMES_2 =>
                 if(Frame_Counter_Modulo = '1' or Sample_RAM_ADDR_GEN_Modulo = '1') then
@@ -255,9 +293,9 @@ begin
                     next_state <= READ_SAMPLE_DATA;
                 end if;
 
-                if(Communication_Data_Full = '1') then -- wait for fifo
-                    next_state <= WAIT_FOR_FIFO;
-                end if;
+                --if(Communication_Data_Full = '1') then -- wait for fifo
+                    --next_state <= WAIT_FOR_FIFO;
+                --end if;
 
             when SEND_PACKET_TAIL =>
                 if(Sample_RAM_ADDR_GEN_Modulo = '1') then
@@ -266,9 +304,9 @@ begin
                     next_state <= SEND_PACKET_HEAD;
                 end if;
 
-                if(Communication_Data_Full = '1') then -- wait for fifo
-                    next_state <= WAIT_FOR_FIFO;
-                end if;    
+                --if(Communication_Data_Full = '1') then -- wait for fifo
+                    --next_state <= WAIT_FOR_FIFO;
+                --end if;    
 
             when SEND_EVENT_TAIL =>
                 next_state <= NEXT_EVENT_ADDR;
@@ -285,9 +323,7 @@ begin
                 end if;
 
             when WAIT_FOR_FIFO_TIMER =>
-                if(Communication_Data_Full = '1') then
-                    next_state <= WAIT_FOR_FIFO;
-                elsif(fsm_timer >= 4 -1) then
+                if(fsm_timer >= 4 -1) then
                     next_state <= wait_next_state;
                 end if;
 
@@ -330,6 +366,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '0';
+
             when COMMUNICATION_REQ =>
                 wait_next_state_store       <= '1';
                 
@@ -352,6 +390,8 @@ begin
                 Communication_Data_Frame_F    <= (others => '0');
 
                 Event_RAM_W_Enable_Status   <= '0';
+
+                Communication_Data_Full_Buffer_Clear <= '0';
 
             when READ_EVENT_INFO =>
                 wait_next_state_store       <= '1';
@@ -376,6 +416,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '0';
+
             when SEND_EVENT_HEAD =>
                 wait_next_state_store       <= '1';
                 
@@ -398,6 +440,8 @@ begin
                 Communication_Data_Frame_F    <= EVENT_HEAD;
 
                 Event_RAM_W_Enable_Status   <= '0';
+
+                Communication_Data_Full_Buffer_Clear <= '0';
 
             when SEND_PACKET_HEAD =>
                 wait_next_state_store       <= '1';
@@ -422,6 +466,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '0';
+
             when READ_SAMPLE_DATA =>
                 wait_next_state_store       <= '1';
                 
@@ -444,6 +490,8 @@ begin
                 Communication_Data_Frame_F    <= (others => '0');
 
                 Event_RAM_W_Enable_Status   <= '0';
+
+                Communication_Data_Full_Buffer_Clear <= '0';
 
             when SEND_DATA_FRAMES_1 =>
                 wait_next_state_store       <= '1';
@@ -468,6 +516,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '0';
+
             when SEND_DATA_FRAMES_2 =>
                 wait_next_state_store       <= '1';
                 
@@ -490,6 +540,8 @@ begin
                 Communication_Data_Frame_F    <= Data_Frame_2;
 
                 Event_RAM_W_Enable_Status   <= '0';
+
+                Communication_Data_Full_Buffer_Clear <= '0';
 
             when SEND_PACKET_TAIL =>
                 wait_next_state_store       <= '1';
@@ -514,6 +566,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '0';
+
             when SEND_EVENT_TAIL =>
                 wait_next_state_store       <= '1';
                 
@@ -536,6 +590,8 @@ begin
                 Communication_Data_Frame_F    <= EVENT_TAIL;
 
                 Event_RAM_W_Enable_Status   <= '1';
+
+                Communication_Data_Full_Buffer_Clear <= '0';
 
             when NEXT_EVENT_ADDR =>
                 wait_next_state_store       <= '1';
@@ -560,6 +616,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '0';
+
             when END_WAIT =>
                 wait_next_state_store       <= '1';
                 
@@ -582,6 +640,8 @@ begin
                 Communication_Data_Frame_F    <= (others => '0');
 
                 Event_RAM_W_Enable_Status   <= '0';
+
+                Communication_Data_Full_Buffer_Clear <= '0';
 
             when WAIT_FOR_FIFO =>
                 wait_next_state_store       <= '0';
@@ -606,6 +666,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '1';
+
             when WAIT_FOR_FIFO_TIMER =>
                 wait_next_state_store       <= '0';
                 
@@ -629,6 +691,8 @@ begin
 
                 Event_RAM_W_Enable_Status   <= '0';
 
+                Communication_Data_Full_Buffer_Clear <= '0';
+
             when others =>
                 wait_next_state_store       <= '0';
                 
@@ -651,6 +715,8 @@ begin
                 Communication_Data_Frame_F    <= (others => '0');
 
                 Event_RAM_W_Enable_Status   <= '0';
+
+                Communication_Data_Full_Buffer_Clear <= '0';
                 
                 
         end case;
@@ -773,7 +839,7 @@ end process;
 
             elsif(Sample_RAM_ADDR_GEN_Enable = '1') then
                 
-                if(Sample_RAM_R_Order_Unsigned >= Event_Size_Buffer_Unsigned - 1) then
+                if(Sample_RAM_R_Order_Unsigned > Event_Size_Buffer_Unsigned - 1) then
                     Sample_RAM_ADDR_GEN_Modulo <= '1';
                 else
                     Sample_RAM_ADDR_GEN_Modulo <= '0';
@@ -784,7 +850,7 @@ end process;
 
             else
 
-                if(Sample_RAM_R_Order_Unsigned >= Event_Size_Buffer_Unsigned - 1) then
+                if(Sample_RAM_R_Order_Unsigned > Event_Size_Buffer_Unsigned - 1) then
                     Sample_RAM_ADDR_GEN_Modulo <= '1';
                 else
                     Sample_RAM_ADDR_GEN_Modulo <= '0';
