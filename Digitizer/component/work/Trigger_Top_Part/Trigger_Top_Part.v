@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Feb 12 20:36:05 2024
+// Created by SmartDesign Fri Feb 16 22:07:17 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -71,6 +71,7 @@ wire          Trigger_Control_0_Control_Enable;
 wire   [31:0] Trigger_Control_0_Control_Sample_Per_Event;
 wire   [11:0] Trigger_Control_0_Control_Threshold;
 wire          Trigger_Main_0_Control_Busy_Out;
+wire          Trigger_Main_0_Control_EnableRst;
 wire          Trigger_Main_0_Control_Trigger_Out;
 wire   [17:0] Trigger_Main_0_FIFO_Event_Data;
 wire          C_busy_net_1;
@@ -112,7 +113,8 @@ COREFIFO_C5 COREFIFO_C5_0(
         .FULL    (  ),
         .EMPTY   ( EMPTY_net_0 ),
         .AFULL   ( COREFIFO_C5_0_AFULL ),
-        .Q       ( Q_net_0 ) 
+        .Q       ( Q_net_0 ),
+        .WRCNT   (  ) 
         );
 
 //--------Trigger_Control
@@ -122,16 +124,17 @@ Trigger_Control Trigger_Control_0(
         .Reset_N                       ( Reset_N ),
         .enable_cmd                    ( C_enable_cmd ),
         .write_read                    ( C_write_read ),
-        .Control_Trigger_Out           ( Trigger_Main_0_Control_Trigger_Out ),
-        .Control_Busy_Out              ( Trigger_Main_0_Control_Busy_Out ),
         .addr_frame                    ( C_addr_frame ),
         .write_data_frame              ( C_write_data_frame ),
+        .Control_EnableRst             ( Trigger_Main_0_Control_EnableRst ),
+        .Control_Trigger_Out           ( Trigger_Main_0_Control_Trigger_Out ),
+        .Control_Busy_Out              ( Trigger_Main_0_Control_Busy_Out ),
         // Outputs
         .busy                          ( C_busy_net_0 ),
+        .read_data_frame               ( C_read_data_frame_net_0 ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
         .Control_Enable                ( Trigger_Control_0_Control_Enable ),
         .Control_Abort                 ( Trigger_Control_0_Control_Abort ),
-        .read_data_frame               ( C_read_data_frame_net_0 ),
         .Control_Threshold             ( Trigger_Control_0_Control_Threshold ),
         .Control_Sample_Per_Event      ( Trigger_Control_0_Control_Sample_Per_Event ) 
         );
@@ -148,6 +151,7 @@ Trigger_Main Trigger_Main_0(
         .FIFO_Event_A_Full        ( COREFIFO_C5_0_AFULL ),
         .TRG_Detect_Vector        ( TRG_Detect_Vector ),
         // Outputs
+        .Control_EnableRst        ( Trigger_Main_0_Control_EnableRst ),
         .Control_Trigger_Out      ( Trigger_Main_0_Control_Trigger_Out ),
         .Control_Busy_Out         ( Trigger_Main_0_Control_Busy_Out ),
         .Control_AcqStart         (  ),

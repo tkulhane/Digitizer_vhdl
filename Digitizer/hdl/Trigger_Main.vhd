@@ -17,6 +17,7 @@ entity Trigger_Main is
 
         Control_Enable : in std_logic;
         Control_Abort : in std_logic;
+        Control_EnableRst : out std_logic; 
         Control_Threshold : in std_logic_vector(g_Data_Length - 1 downto 0);
         Control_Sample_Per_Event : in std_logic_vector(31 downto 0);
         Control_Trigger_Out : out std_logic;
@@ -93,6 +94,7 @@ begin
 
 
     ACQ_Abort <= Control_Abort or FIFO_Event_A_Full;
+    Control_EnableRst <= ACQ_Abort;
 
     FIFO_Event_Data <= Event_Info & Event_Reserved_Bit & Event_End_Aborted & Event_End_In_Frame & Event_Start_In_Frame;
 
@@ -195,7 +197,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, Control_Enable, Control_Abort, ACQ_RunSignal, ACQ_LastSampleTact)
+    process(next_state, state_reg, Control_Enable, ACQ_Abort, ACQ_RunSignal, ACQ_LastSampleTact)
     begin
 
         next_state <= state_reg;
@@ -223,7 +225,7 @@ begin
                 if(ACQ_LastSampleTact = '1') then
                     next_state <= ACQ_ENABLE;
                 
-                elsif(Control_Abort = '1') then
+                elsif(ACQ_Abort = '1') then
                     next_state <= IDLE;	
            
                 end if;

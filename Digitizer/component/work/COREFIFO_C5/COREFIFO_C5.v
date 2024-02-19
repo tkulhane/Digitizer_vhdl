@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Sep 14 22:57:26 2023
+// Created by SmartDesign Fri Feb 16 21:58:09 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -39,7 +39,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "UNDERFLOW_EN:false"  \
 "WDEPTH:16384"  \
 "WE_POLARITY:0"  \
-"WRCNT_EN:false"  \
+"WRCNT_EN:true"  \
 "WRITE_ACK:false"  \
 "WWIDTH:18"   }
 # Exporting Component Description of COREFIFO_C5 to TCL done
@@ -57,7 +57,8 @@ module COREFIFO_C5(
     AFULL,
     EMPTY,
     FULL,
-    Q
+    Q,
+    WRCNT
 );
 
 //--------------------------------------------------------------------
@@ -75,6 +76,7 @@ output        AFULL;
 output        EMPTY;
 output        FULL;
 output [17:0] Q;
+output [14:0] WRCNT;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -87,10 +89,12 @@ wire   [17:0] Q_net_0;
 wire          RE;
 wire          RESET_N;
 wire          WE;
+wire   [14:0] WRCNT_net_0;
 wire          FULL_net_1;
 wire          EMPTY_net_1;
 wire          AFULL_net_1;
 wire   [17:0] Q_net_1;
+wire   [14:0] WRCNT_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -112,6 +116,8 @@ assign AFULL_net_1 = AFULL_net_0;
 assign AFULL       = AFULL_net_1;
 assign Q_net_1     = Q_net_0;
 assign Q[17:0]     = Q_net_1;
+assign WRCNT_net_1 = WRCNT_net_0;
+assign WRCNT[14:0] = WRCNT_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -143,7 +149,7 @@ COREFIFO_C5_COREFIFO_C5_0_COREFIFO #(
         .UNDERFLOW_EN ( 0 ),
         .WDEPTH       ( 16384 ),
         .WE_POLARITY  ( 0 ),
-        .WRCNT_EN     ( 0 ),
+        .WRCNT_EN     ( 1 ),
         .WRITE_ACK    ( 0 ),
         .WWIDTH       ( 18 ) )
 COREFIFO_C5_0(
@@ -172,7 +178,7 @@ COREFIFO_C5_0(
         .SB_CORRECT (  ),
         .DB_DETECT  (  ),
         .Q          ( Q_net_0 ),
-        .WRCNT      (  ),
+        .WRCNT      ( WRCNT_net_0 ),
         .RDCNT      (  ),
         .MEMWADDR   (  ),
         .MEMRADDR   (  ),

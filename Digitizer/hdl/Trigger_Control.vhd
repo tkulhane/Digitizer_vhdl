@@ -27,10 +27,12 @@ entity Trigger_Control is
         Control_Test_Generator_Enable : out std_logic;
         Control_Enable : out std_logic;
         Control_Abort : out std_logic;
+        Control_EnableRst : in std_logic; 
         Control_Threshold : out std_logic_vector(g_Data_Length - 1 downto 0);
         Control_Sample_Per_Event : out std_logic_vector(31 downto 0);
         Control_Trigger_Out : in std_logic;
         Control_Busy_Out : in std_logic
+        --Control_AcqStart : in std_logic
         
 
     );
@@ -400,12 +402,17 @@ begin
             if(Internal_Enable_Reset = '1') then
                 Internal_Enable_Reset <= '0';
             end if;
+
+            --reset enable form main unit
+            if(Control_EnableRst = '1') then
+                Internal_Enable_Reset <= '1';
+            end if;
             
             --if set>0 and enable=1 -> active finite set events
             if(REG_Set_Number_of_Events_Unsigned > 0 and REG_Enable = '1') then
                 
                 --count events
-                if(Control_Trigger_Out = '1' and last_Control_Trigger_Out = '0') then
+                if(Control_Busy_Out = '1' and last_Control_Busy_Out = '0') then
                     Finite_Event_Counter := Finite_Event_Counter + 1;
                 
                 end if;
