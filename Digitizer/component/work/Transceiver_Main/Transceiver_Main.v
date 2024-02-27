@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Feb 11 13:37:27 2024
+// Created by SmartDesign Mon Feb 26 10:38:41 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,6 +17,10 @@ module Transceiver_Main(
     Logic_Clock,
     Logic_Reset_N,
     REF_Clock,
+    addr_frame,
+    enable_cmd,
+    write_data_frame,
+    write_read,
     // Outputs
     Data_Valid,
     LANE0_TXD_N,
@@ -30,7 +34,9 @@ module Transceiver_Main(
     Output_Data_4,
     Output_Data_5,
     Output_Data_6,
-    Output_Data_7
+    Output_Data_7,
+    busy,
+    read_data_frame
 );
 
 //--------------------------------------------------------------------
@@ -45,6 +51,10 @@ input          LANE1_RXD_P;
 input          Logic_Clock;
 input          Logic_Reset_N;
 input          REF_Clock;
+input  [7:0]   addr_frame;
+input          enable_cmd;
+input  [15:0]  write_data_frame;
+input          write_read;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
@@ -61,13 +71,18 @@ output [59:48] Output_Data_4;
 output [71:60] Output_Data_5;
 output [83:72] Output_Data_6;
 output [95:84] Output_Data_7;
+output         busy;
+output [15:0]  read_data_frame;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire   [7:0]     addr_frame;
 wire             AND2_0_0_Y;
 wire             AND2_0_Y;
+wire             busy_net_0;
 wire             CTRL_Clock_40M;
 wire             Data_Valid_net_0;
+wire             enable_cmd;
 wire             Gen_Enable;
 wire             LANE0_RXD_N;
 wire             LANE0_RXD_P;
@@ -89,6 +104,7 @@ wire   [11:0]    Output_Data_6_net_0;
 wire   [11:0]    Output_Data_7_net_0;
 wire             PF_CCC_C5_0_OUT0_FABCLK_0;
 wire             PF_CCC_C5_0_PLL_LOCK_0;
+wire   [15:0]    read_data_frame_net_0;
 wire             REF_Clock;
 wire   [15:0]    SampleTxDeCompose_0_0_Output_Data;
 wire   [15:0]    SampleTxDeCompose_0_1_Output_Data;
@@ -116,6 +132,9 @@ wire   [79:64]   Transceiver_LanesConnection_0_Output_Data79to64;
 wire   [95:80]   Transceiver_LanesConnection_0_Output_Data95to80;
 wire   [111:96]  Transceiver_LanesConnection_0_Output_Data111to96;
 wire   [127:112] Transceiver_LanesConnection_0_Output_Data127to112;
+wire   [63:0]    Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector;
+wire   [15:0]    write_data_frame;
+wire             write_read;
 wire             LANE1_TXD_N_net_1;
 wire             LANE0_TXD_P_net_1;
 wire             LANE0_TXD_N_net_1;
@@ -129,6 +148,8 @@ wire   [47:36]   Output_Data_3_net_1;
 wire   [59:48]   Output_Data_4_net_1;
 wire   [71:60]   Output_Data_5_net_1;
 wire   [83:72]   Output_Data_6_net_1;
+wire             busy_net_1;
+wire   [15:0]    read_data_frame_net_1;
 wire   [127:0]   Input_Data_net_0;
 wire   [127:0]   Output_Data_net_0;
 //--------------------------------------------------------------------
@@ -158,32 +179,36 @@ assign Input_TailBits_const_net_7 = 4'h0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign LANE1_TXD_N_net_1    = LANE1_TXD_N_net_0;
-assign LANE1_TXD_N          = LANE1_TXD_N_net_1;
-assign LANE0_TXD_P_net_1    = LANE0_TXD_P_net_0;
-assign LANE0_TXD_P          = LANE0_TXD_P_net_1;
-assign LANE0_TXD_N_net_1    = LANE0_TXD_N_net_0;
-assign LANE0_TXD_N          = LANE0_TXD_N_net_1;
-assign LANE1_TXD_P_net_1    = LANE1_TXD_P_net_0;
-assign LANE1_TXD_P          = LANE1_TXD_P_net_1;
-assign Data_Valid_net_1     = Data_Valid_net_0;
-assign Data_Valid           = Data_Valid_net_1;
-assign Output_Data_7_net_1  = Output_Data_7_net_0;
-assign Output_Data_7[95:84] = Output_Data_7_net_1;
-assign Output_Data_0_net_1  = Output_Data_0_net_0;
-assign Output_Data_0[11:0]  = Output_Data_0_net_1;
-assign Output_Data_1_net_1  = Output_Data_1_net_0;
-assign Output_Data_1[23:12] = Output_Data_1_net_1;
-assign Output_Data_2_net_1  = Output_Data_2_net_0;
-assign Output_Data_2[35:24] = Output_Data_2_net_1;
-assign Output_Data_3_net_1  = Output_Data_3_net_0;
-assign Output_Data_3[47:36] = Output_Data_3_net_1;
-assign Output_Data_4_net_1  = Output_Data_4_net_0;
-assign Output_Data_4[59:48] = Output_Data_4_net_1;
-assign Output_Data_5_net_1  = Output_Data_5_net_0;
-assign Output_Data_5[71:60] = Output_Data_5_net_1;
-assign Output_Data_6_net_1  = Output_Data_6_net_0;
-assign Output_Data_6[83:72] = Output_Data_6_net_1;
+assign LANE1_TXD_N_net_1     = LANE1_TXD_N_net_0;
+assign LANE1_TXD_N           = LANE1_TXD_N_net_1;
+assign LANE0_TXD_P_net_1     = LANE0_TXD_P_net_0;
+assign LANE0_TXD_P           = LANE0_TXD_P_net_1;
+assign LANE0_TXD_N_net_1     = LANE0_TXD_N_net_0;
+assign LANE0_TXD_N           = LANE0_TXD_N_net_1;
+assign LANE1_TXD_P_net_1     = LANE1_TXD_P_net_0;
+assign LANE1_TXD_P           = LANE1_TXD_P_net_1;
+assign Data_Valid_net_1      = Data_Valid_net_0;
+assign Data_Valid            = Data_Valid_net_1;
+assign Output_Data_7_net_1   = Output_Data_7_net_0;
+assign Output_Data_7[95:84]  = Output_Data_7_net_1;
+assign Output_Data_0_net_1   = Output_Data_0_net_0;
+assign Output_Data_0[11:0]   = Output_Data_0_net_1;
+assign Output_Data_1_net_1   = Output_Data_1_net_0;
+assign Output_Data_1[23:12]  = Output_Data_1_net_1;
+assign Output_Data_2_net_1   = Output_Data_2_net_0;
+assign Output_Data_2[35:24]  = Output_Data_2_net_1;
+assign Output_Data_3_net_1   = Output_Data_3_net_0;
+assign Output_Data_3[47:36]  = Output_Data_3_net_1;
+assign Output_Data_4_net_1   = Output_Data_4_net_0;
+assign Output_Data_4[59:48]  = Output_Data_4_net_1;
+assign Output_Data_5_net_1   = Output_Data_5_net_0;
+assign Output_Data_5[71:60]  = Output_Data_5_net_1;
+assign Output_Data_6_net_1   = Output_Data_6_net_0;
+assign Output_Data_6[83:72]  = Output_Data_6_net_1;
+assign busy_net_1            = busy_net_0;
+assign busy                  = busy_net_1;
+assign read_data_frame_net_1 = read_data_frame_net_0;
+assign read_data_frame[15:0] = read_data_frame_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -417,27 +442,45 @@ Test_Generator_for_Lanes Test_Generator_for_Lanes_0(
         .Test_Data_7 ( Test_Generator_for_Lanes_0_Test_Data_7 ) 
         );
 
+//--------Transceiver_Controller
+Transceiver_Controller #( 
+        .g_NumberOfLanes ( 2 ) )
+Transceiver_Controller_0(
+        // Inputs
+        .Clock              ( Logic_Clock ),
+        .Reset_N            ( Logic_Reset_N ),
+        .enable_cmd         ( enable_cmd ),
+        .write_read         ( write_read ),
+        .addr_frame         ( addr_frame ),
+        .write_data_frame   ( write_data_frame ),
+        .StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ),
+        // Outputs
+        .busy               ( busy_net_0 ),
+        .read_data_frame    ( read_data_frame_net_0 ) 
+        );
+
 //--------Transceiver_LanesConnection
 Transceiver_LanesConnection Transceiver_LanesConnection_0(
         // Inputs
-        .Logic_Clock     ( Logic_Clock ),
-        .Logic_Reset_N   ( Logic_Reset_N ),
-        .CTRL_Clock      ( CTRL_Clock_40M ),
-        .CTRL_Reset_N    ( Synchronizer_0_2_Data_Out ),
-        .REF_Clock       ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
-        .LANE0_RXD_P     ( LANE0_RXD_P ),
-        .LANE0_RXD_N     ( LANE0_RXD_N ),
-        .LANE1_RXD_P     ( LANE1_RXD_P ),
-        .LANE1_RXD_N     ( LANE1_RXD_N ),
-        .Input_Data      ( Input_Data_net_0 ),
+        .Logic_Clock                  ( Logic_Clock ),
+        .Logic_Reset_N                ( Logic_Reset_N ),
+        .CTRL_Clock                   ( CTRL_Clock_40M ),
+        .CTRL_Reset_N                 ( Synchronizer_0_2_Data_Out ),
+        .REF_Clock                    ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
+        .LANE0_RXD_P                  ( LANE0_RXD_P ),
+        .LANE0_RXD_N                  ( LANE0_RXD_N ),
+        .LANE1_RXD_P                  ( LANE1_RXD_P ),
+        .LANE1_RXD_N                  ( LANE1_RXD_N ),
+        .Input_Data                   ( Input_Data_net_0 ),
         // Outputs
-        .LANE0_TXD_P     ( LANE0_TXD_P_net_0 ),
-        .LANE0_TXD_N     ( LANE0_TXD_N_net_0 ),
-        .LANE1_TXD_P     ( LANE1_TXD_P_net_0 ),
-        .LANE1_TXD_N     ( LANE1_TXD_N_net_0 ),
-        .Input_Data_Read ( Transceiver_LanesConnection_0_Input_Data_Read ),
-        .Output_Data     ( Output_Data_net_0 ),
-        .Data_Valid      ( Data_Valid_net_0 ) 
+        .LANE0_TXD_P                  ( LANE0_TXD_P_net_0 ),
+        .LANE0_TXD_N                  ( LANE0_TXD_N_net_0 ),
+        .LANE1_TXD_P                  ( LANE1_TXD_P_net_0 ),
+        .LANE1_TXD_N                  ( LANE1_TXD_N_net_0 ),
+        .Input_Data_Read              ( Transceiver_LanesConnection_0_Input_Data_Read ),
+        .Output_Data                  ( Output_Data_net_0 ),
+        .Data_Valid                   ( Data_Valid_net_0 ),
+        .TRNV_CTRL_StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ) 
         );
 
 

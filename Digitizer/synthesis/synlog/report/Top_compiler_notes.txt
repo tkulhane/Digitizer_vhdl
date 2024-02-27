@@ -1,6 +1,6 @@
 @N|Running in 64-bit mode
 @N|Running in 64-bit mode
-@N:"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd":6:7:6:33|Top entity is set to Transceiver_LanesConnection.
+@N:"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":6:7:6:28|Top entity is set to Transceiver_Controller.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Synchronizer.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_ANW_MUX.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_CMD_MUX.vhd'.
@@ -28,11 +28,13 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator_for_Lanes.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd'.
@@ -202,12 +204,12 @@
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\SPI_LMX\SPI_LMX.v":96:0:96:14|Using module SPI_interface from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\SPI_LMX\SPI_LMX.v":117:0:117:11|Using module spi_master from library work
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":9:7:9:15|Synthesizing module Controler in library work.
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":439:8:439:16|Using module ADI_SPI from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":475:15:475:30|Using module Answer_Encoder from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":500:16:500:32|Using module Command_Decoder from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":562:15:562:30|Using module gpio_controler from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":579:10:579:20|Using module REGISTERS from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":594:16:594:32|Using module Reset_Controler from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":461:8:461:16|Using module ADI_SPI from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":497:15:497:30|Using module Answer_Encoder from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":523:16:523:32|Using module Command_Decoder from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":590:15:590:30|Using module gpio_controler from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":607:10:607:20|Using module REGISTERS from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Controler\Controler.v":622:16:622:32|Using module Reset_Controler from library work
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\COREFIFO.v":29:7:29:42|Synthesizing module COREFIFO_C10_COREFIFO_C10_0_COREFIFO in library work.
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\corefifo_NstagesSync.v":29:7:29:54|Synthesizing module COREFIFO_C10_COREFIFO_C10_0_corefifo_NstagesSync in library work.
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\corefifo_grayToBinConv.v":29:7:29:56|Synthesizing module COREFIFO_C10_COREFIFO_C10_0_corefifo_grayToBinConv in library work.
@@ -241,10 +243,11 @@
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":143:13:143:26|Using module Trigger_Main from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":203:22:203:44|Using module Communication_Builder from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":271:13:271:26|Using module FIFOs_Reader from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":234:14:234:28|Using module SampleCompose from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":322:18:322:36|Using module SampleTxDeCompose from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":404:25:404:50|Using module Test_Generator_for_Lanes from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":421:28:421:56|Using module Transceiver_LanesConnection from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":259:14:259:28|Using module SampleCompose from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":347:18:347:36|Using module SampleTxDeCompose from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":429:25:429:50|Using module Test_Generator_for_Lanes from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":448:0:448:23|Using module Transceiver_Controller from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":463:28:463:56|Using module Transceiver_LanesConnection from library work
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":117:14:117:18|Input BTN_2 is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":118:14:118:18|Input BTN_3 is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":119:14:119:18|Input BTN_4 is unused.
@@ -376,11 +379,13 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator_for_Lanes.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd'.
@@ -394,6 +399,10 @@
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd":6:7:6:26|Synthesizing work.txmainlinkcontroller.rtl.
 @N: CD233 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd":36:19:36:20|Using sequential encoding for type fsm_state.
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd":141:12:141:25|OTHERS clause is not synthesized.
+@N: Setting default value for generic g_numberoflanes to 2;
+@N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":6:7:6:28|Synthesizing work.transceiver_controller.rtl.
+@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":72:19:72:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "100000".
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":230:12:230:25|OTHERS clause is not synthesized.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator_for_Lanes.vhd":6:7:6:30|Synthesizing work.test_generator_for_lanes.rtl.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd":6:7:6:23|Synthesizing work.sampletxdecompose.rtl.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd":6:7:6:19|Synthesizing work.samplecompose.rtl.
@@ -431,11 +440,11 @@
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":55:19:55:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "100000".
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":190:12:190:25|OTHERS clause is not synthesized.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":8:7:8:21|Synthesizing work.command_decoder.rtl.
-@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":105:19:105:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "1000000000".
-@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":382:12:382:25|OTHERS clause is not synthesized.
+@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":112:19:112:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "1000000000".
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":397:12:397:25|OTHERS clause is not synthesized.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":9:7:9:20|Synthesizing work.answer_encoder.rtl.
-@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":61:19:61:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000".
-@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":189:12:189:25|OTHERS clause is not synthesized.
+@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":64:19:64:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000".
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":192:12:192:25|OTHERS clause is not synthesized.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":6:7:6:13|Synthesizing work.adi_spi.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":36:19:36:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000".
 @N: Setting default value for generic data_length to 24;
@@ -483,8 +492,8 @@
 @N: CL189 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd":49:4:49:5|Register bit last_bit(5) is always 1.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd":49:4:49:5|Trying to extract state machine for register state.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":59:8:59:9|Trying to extract state machine for register state_reg.
-@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":104:8:104:9|Trying to extract state machine for register state_reg.
-@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":204:8:204:9|Trying to extract state machine for register state_reg.
+@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":107:8:107:9|Trying to extract state machine for register state_reg.
+@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":219:8:219:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":107:8:107:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":426:8:426:9|Trying to extract state machine for register TMP_OR_Counter_Input.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\REGISTERS.vhd":50:8:50:9|Trying to extract state machine for register state_reg.
@@ -493,6 +502,8 @@
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":114:8:114:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":190:8:190:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":129:8:129:9|Trying to extract state machine for register state_reg.
+@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":147:8:147:9|Trying to extract state machine for register state_reg.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":21:8:21:23|Input write_data_frame is unused.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd":66:8:66:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd":73:8:73:9|Trying to extract state machine for register state_reg.
 @N: CG1349 :	| Running Verilog Compiler in System Verilog mode
@@ -577,10 +588,11 @@
 @N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":1647:7:1647:15|Synthesizing module SLE_DEBUG in library work.
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C8\PF_XCVR_ERM_C8.v":70:7:70:20|Synthesizing module PF_XCVR_ERM_C8 in library work.
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":9:7:9:25|Synthesizing module Transciever_OneLane in library work.
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":241:0:241:19|Using module AlignmentLane_Fifo from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":406:0:406:14|Using module RxLaneControl from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":425:13:425:26|Using module Synchronizer from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":459:0:459:14|Using module TxLaneControl from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":233:0:233:19|Using module AlignmentLane_Fifo from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":399:0:399:14|Using module RxLaneControl from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":418:13:418:26|Using module Synchronizer from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":498:23:498:46|Using module Transceiver_LaneStatus from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v":520:0:520:14|Using module TxLaneControl from library work
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELCKMGT\2.0.100\rtl\vlog\core\CORELCKMGT.v":211:0:211:5|Trying to extract state machine for register fsm_st.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode2.v":132:0:132:5|Trying to extract state machine for register rmfsm.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode2.v":41:19:41:25|Input LTPULSE is unused.
@@ -635,11 +647,13 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator_for_Lanes.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd'.
@@ -651,6 +665,7 @@
 @N: Setting default value for generic g_delay to 0;
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd":6:7:6:19|Synthesizing work.txlanecontrol.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd":64:17:64:18|Using onehot encoding for type fsm_state. For example, enumeration send_k is mapped to "10000".
+@N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd":6:7:6:28|Synthesizing work.transceiver_lanestatus.rtl.
 @N: Setting default value for generic g_numberofdataoutputbytes to 8;
 @N: Setting default value for generic g_numberofilassequences to 3;
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd":6:7:6:19|Synthesizing work.rxlanecontrol.rtl.

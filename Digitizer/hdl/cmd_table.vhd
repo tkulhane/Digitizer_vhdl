@@ -33,6 +33,8 @@ package cmd_table is
     constant CMD_CONST_GET_GPIO                 : std_logic_vector(7 downto 0) := x"34";
     constant CMD_CONST_SET_CommunicationSwitch  : std_logic_vector(7 downto 0) := x"35";
     constant CMD_CONST_GET_CommunicationSwitch  : std_logic_vector(7 downto 0) := x"36";
+    constant CMD_CONST_SET_TransceiversControl  : std_logic_vector(7 downto 0) := x"37";
+    constant CMD_CONST_GET_TransceiversControl  : std_logic_vector(7 downto 0) := x"38";
 
 
 
@@ -45,7 +47,7 @@ package cmd_table is
 ------------------------------------------------------------------------------------------------------------
 --perif numbers constant
 ------------------------------------------------------------------------------------------------------------
-    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 9;
+    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 10;
 
     constant PER_NUM_CONST_Reset_Controler          : Natural := 0;
     constant PER_NUM_CONST_TestRegisters            : Natural := 1;
@@ -56,6 +58,7 @@ package cmd_table is
     constant PER_NUM_CONST_Trigger                  : Natural := 6;
     constant PER_NUM_CONST_GPIO                     : Natural := 7;
     constant PER_NUM_CONST_COMSW                    : Natural := 8;
+    constant PER_NUM_CONST_TRNV                     : Natural := 9;
     
 
 end package;

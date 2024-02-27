@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Sun Feb 11 20:35:21 2024 
+# Date generated: Tue Feb 27 22:15:48 2024 
 
 
 # 
@@ -290,7 +290,8 @@ set_io -port_name FTDI_CLK  \
     -pin_name H1            \
     -fixed true             \
     -io_std LVCMOS33        \
-    -RES_PULL None          \
+    -IN_DELAY 5             \
+    -RES_PULL Down          \
     -DIRECTION INPUT
 
 
@@ -298,7 +299,8 @@ set_io -port_name {FTDI_DATA[0]}  \
     -pin_name B1                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -307,7 +309,8 @@ set_io -port_name {FTDI_DATA[1]}  \
     -pin_name C1                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -316,7 +319,8 @@ set_io -port_name {FTDI_DATA[2]}  \
     -pin_name F5                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -325,7 +329,8 @@ set_io -port_name {FTDI_DATA[3]}  \
     -pin_name G5                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -334,7 +339,8 @@ set_io -port_name {FTDI_DATA[4]}  \
     -pin_name B2                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -343,7 +349,8 @@ set_io -port_name {FTDI_DATA[5]}  \
     -pin_name C2                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -352,7 +359,8 @@ set_io -port_name {FTDI_DATA[6]}  \
     -pin_name E8                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -361,7 +369,8 @@ set_io -port_name {FTDI_DATA[7]}  \
     -pin_name E7                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -370,7 +379,8 @@ set_io -port_name {FTDI_DATA[8]}  \
     -pin_name T8                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -379,7 +389,8 @@ set_io -port_name {FTDI_DATA[9]}  \
     -pin_name T7                  \
     -fixed true                   \
     -io_std LVCMOS33              \
-    -OUT_DRIVE 20                 \
+    -OUT_DRIVE 8                  \
+    -OUT_LOAD 20                  \
     -RES_PULL Down                \
     -DIRECTION INOUT
 
@@ -388,7 +399,8 @@ set_io -port_name {FTDI_DATA[10]}  \
     -pin_name D6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -397,7 +409,8 @@ set_io -port_name {FTDI_DATA[11]}  \
     -pin_name E6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -406,8 +419,8 @@ set_io -port_name {FTDI_DATA[12]}  \
     -pin_name P3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
-    -RES_PULL Down                 \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -DIRECTION INOUT
 
 
@@ -415,7 +428,8 @@ set_io -port_name {FTDI_DATA[13]}  \
     -pin_name P4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -424,7 +438,8 @@ set_io -port_name {FTDI_DATA[14]}  \
     -pin_name M5                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -433,7 +448,8 @@ set_io -port_name {FTDI_DATA[15]}  \
     -pin_name M6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -442,7 +458,8 @@ set_io -port_name {FTDI_DATA[16]}  \
     -pin_name C8                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -451,7 +468,8 @@ set_io -port_name {FTDI_DATA[17]}  \
     -pin_name D8                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -460,7 +478,8 @@ set_io -port_name {FTDI_DATA[18]}  \
     -pin_name H8                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -469,7 +488,8 @@ set_io -port_name {FTDI_DATA[19]}  \
     -pin_name H9                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -478,7 +498,8 @@ set_io -port_name {FTDI_DATA[20]}  \
     -pin_name N6                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -487,7 +508,8 @@ set_io -port_name {FTDI_DATA[21]}  \
     -pin_name N7                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -496,7 +518,8 @@ set_io -port_name {FTDI_DATA[22]}  \
     -pin_name M1                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -505,7 +528,8 @@ set_io -port_name {FTDI_DATA[23]}  \
     -pin_name M2                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -514,7 +538,8 @@ set_io -port_name {FTDI_DATA[24]}  \
     -pin_name C4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -523,7 +548,8 @@ set_io -port_name {FTDI_DATA[25]}  \
     -pin_name C3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -532,7 +558,8 @@ set_io -port_name {FTDI_DATA[26]}  \
     -pin_name H3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -541,7 +568,8 @@ set_io -port_name {FTDI_DATA[27]}  \
     -pin_name H4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -550,7 +578,8 @@ set_io -port_name {FTDI_DATA[28]}  \
     -pin_name A3                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -559,7 +588,8 @@ set_io -port_name {FTDI_DATA[29]}  \
     -pin_name A2                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -568,7 +598,8 @@ set_io -port_name {FTDI_DATA[30]}  \
     -pin_name M4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -577,7 +608,8 @@ set_io -port_name {FTDI_DATA[31]}  \
     -pin_name L4                   \
     -fixed true                    \
     -io_std LVCMOS33               \
-    -OUT_DRIVE 20                  \
+    -OUT_DRIVE 8                   \
+    -OUT_LOAD 20                   \
     -RES_PULL Down                 \
     -DIRECTION INOUT
 
@@ -586,6 +618,7 @@ set_io -port_name FTDI_GPIO_0  \
     -pin_name N3               \
     -fixed true                \
     -io_std LVCMOS33           \
+    -OUT_LOAD 20               \
     -DIRECTION OUTPUT
 
 
@@ -593,6 +626,7 @@ set_io -port_name FTDI_GPIO_1  \
     -pin_name N4               \
     -fixed true                \
     -io_std LVCMOS33           \
+    -OUT_LOAD 20               \
     -DIRECTION OUTPUT
 
 
@@ -600,6 +634,7 @@ set_io -port_name FTDI_RESET_N  \
     -pin_name N1                \
     -fixed true                 \
     -io_std LVCMOS33            \
+    -OUT_LOAD 20                \
     -DIRECTION OUTPUT
 
 
@@ -607,7 +642,8 @@ set_io -port_name FTDI_nOE  \
     -pin_name K5            \
     -fixed true             \
     -io_std LVCMOS33        \
-    -OUT_DRIVE 20           \
+    -OUT_DRIVE 8            \
+    -OUT_LOAD 20            \
     -DIRECTION OUTPUT
 
 
@@ -615,7 +651,8 @@ set_io -port_name FTDI_nRD  \
     -pin_name L5            \
     -fixed true             \
     -io_std LVCMOS33        \
-    -OUT_DRIVE 20           \
+    -OUT_DRIVE 8            \
+    -OUT_LOAD 20            \
     -DIRECTION OUTPUT
 
 
@@ -639,7 +676,8 @@ set_io -port_name FTDI_nWR  \
     -pin_name R5            \
     -fixed true             \
     -io_std LVCMOS33        \
-    -OUT_DRIVE 20           \
+    -OUT_DRIVE 8            \
+    -OUT_LOAD 20            \
     -DIRECTION OUTPUT
 
 

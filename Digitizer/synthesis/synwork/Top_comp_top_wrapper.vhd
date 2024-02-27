@@ -1,6 +1,6 @@
 --
 -- Synopsys
--- Vhdl wrapper for top level design, written on Fri Feb 16 22:09:16 2024
+-- Vhdl wrapper for top level design, written on Tue Feb 27 12:48:36 2024
 --
 library ieee;
 use ieee.std_logic_1164.all;
@@ -10,6 +10,7 @@ entity wrapper_for_work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDT
    port (
       Clock : in std_logic;
       Reset_N : in std_logic;
+      Count : out std_logic_vector(15 downto 0);
       Write_Enable : in std_logic;
       Full : out std_logic;
       Full_For_All : out std_logic;
@@ -30,6 +31,7 @@ component work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH
  port (
    Clock : in std_logic;
    Reset_N : in std_logic;
+   Count : out std_logic_vector (15 downto 0);
    Write_Enable : in std_logic;
    Full : out std_logic;
    Full_For_All : out std_logic;
@@ -46,6 +48,7 @@ end component;
 
 signal tmp_Clock : std_logic;
 signal tmp_Reset_N : std_logic;
+signal tmp_Count : std_logic_vector (15 downto 0);
 signal tmp_Write_Enable : std_logic;
 signal tmp_Full : std_logic;
 signal tmp_Full_For_All : std_logic;
@@ -63,6 +66,8 @@ begin
 tmp_Clock <= Clock;
 
 tmp_Reset_N <= Reset_N;
+
+Count <= tmp_Count;
 
 tmp_Write_Enable <= Write_Enable;
 
@@ -91,6 +96,7 @@ Read_Data_Empty <= tmp_Read_Data_Empty;
 u1:   work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH port map (
 		Clock => tmp_Clock,
 		Reset_N => tmp_Reset_N,
+		Count => tmp_Count,
 		Write_Enable => tmp_Write_Enable,
 		Full => tmp_Full,
 		Full_For_All => tmp_Full_For_All,

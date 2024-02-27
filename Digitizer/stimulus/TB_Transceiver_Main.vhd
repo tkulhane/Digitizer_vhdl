@@ -54,6 +54,14 @@ architecture behavioral of TB_Transceiver_Main is
     signal LANE1_N :  std_logic;
 
 
+    signal CTRL_enable_cmd : std_logic;
+    signal CTRL_write_read : std_logic;
+    signal CTRL_busy    : std_logic;
+    signal CTRL_addr_frame : std_logic_vector(7 downto 0);
+    signal CTRL_write_data_frame : std_logic_vector(15 downto 0);
+    signal CTRL_read_data_frame : std_logic_vector(15 downto 0);
+
+
 
     component Transceiver_Main
         -- ports
@@ -68,6 +76,11 @@ architecture behavioral of TB_Transceiver_Main is
             Logic_Clock : in std_logic;
             Logic_Reset_N : in std_logic;
             Gen_Enable : in std_logic;
+            write_read : in std_logic;
+            addr_frame : in std_logic_vector(7 downto 0);
+            enable_cmd : in std_logic;
+            write_data_frame : in std_logic_vector(15 downto 0);
+
 
             -- Outputs
             LANE1_TXD_N : out std_logic;
@@ -82,12 +95,49 @@ architecture behavioral of TB_Transceiver_Main is
             Output_Data_3 : out std_logic_vector(47 downto 36);
             Output_Data_4 : out std_logic_vector(59 downto 48);
             Output_Data_5 : out std_logic_vector(71 downto 60);
-            Output_Data_6 : out std_logic_vector(83 downto 72)
+            Output_Data_6 : out std_logic_vector(83 downto 72);
+            busy : out std_logic;
+            read_data_frame : out std_logic_vector(15 downto 0)
 
             -- Inouts
 
         );
     end component;
+
+
+------------------------------------------------------------------------------------------------------------
+--Procedure
+------------------------------------------------------------------------------------------------------------
+    procedure SEND_CMD( REG_ADDR : in std_logic_vector(7 downto 0);
+                        REG_DATA : in std_logic_vector(15 downto 0);
+                        Write_Read : in std_logic;
+
+                        signal Clock : in std_logic;
+                        signal CTRL_addr_frame : out std_logic_vector(7 downto 0);
+                        signal CTRL_write_data_frame : out std_logic_vector(15 downto 0);
+                        signal CTRL_enable_cmd : out std_logic;
+                        signal CTRL_write_read : out std_logic;
+                        signal CTRL_busy : in std_logic
+                    ) is
+    begin
+
+        wait until Clock'event and Clock = '1';
+
+        CTRL_addr_frame <= REG_ADDR;
+        CTRL_write_data_frame <= REG_DATA;
+
+        CTRL_write_read <= Write_Read;
+
+        CTRL_enable_cmd <= '1';
+        wait until Clock'event and Clock = '1';
+        wait until CTRL_busy'event and CTRL_busy = '1';
+        CTRL_enable_cmd <= '0';
+        wait until CTRL_busy'event and CTRL_busy = '0';
+        CTRL_enable_cmd <= '0';
+        wait until Clock'event and Clock = '1';
+
+    end SEND_CMD; 
+
 
 begin
 
@@ -132,6 +182,11 @@ begin
             
             Gen_Enable => Gen_Enable,
 
+            write_read => CTRL_write_read,
+            addr_frame => CTRL_addr_frame,
+            enable_cmd => CTRL_enable_cmd,
+            write_data_frame => CTRL_write_data_frame,
+
             -- Outputs
             
             Output_Data_7 => Output_Data_7,
@@ -148,11 +203,34 @@ begin
             LANE0_TXD_P =>  LANE1_P,
             LANE0_TXD_N =>  LANE1_N,
             LANE1_TXD_P =>  LANE0_P, 
-            LANE1_TXD_N =>  LANE0_N
+            LANE1_TXD_N =>  LANE0_N,
+
+            busy => CTRL_busy,
+            read_data_frame => CTRL_read_data_frame
 
             -- Inouts
 
         );
+
+
+    process
+    begin
+
+        wait until NSYSRESET'event and NSYSRESET = '1';
+        wait for 10 us;
+
+
+        SEND_CMD( X"00", X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+
+        wait for 10 us;
+
+        SEND_CMD( X"0A", X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+
+
+
+        wait;
+
+    end process;
 
 end behavioral;
 

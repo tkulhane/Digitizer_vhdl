@@ -1,6 +1,6 @@
 set_component PF_XCVR_ERM_C8_I_XCVR_PF_XCVR
 # Microsemi Corp.
-# Date: 2024-Feb-11 13:35:13
+# Date: 2024-Feb-23 11:25:21
 #
 
 create_clock -period 8 [ get_pins { LANE0/RX_REF_CLK } ]

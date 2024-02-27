@@ -50,6 +50,9 @@ entity Answer_Encoder is
         --Communiacion Switch
         COMM_rx_data : in std_logic_vector(15 downto 0);
 
+        --transceiver control
+        TRNV_rx_data : in std_logic_vector(15 downto 0);
+
 
         Diag_Valid : out std_logic                                     
     );
@@ -333,6 +336,13 @@ begin
 
             when CMD_CONST_GET_CommunicationSwitch=>
                 periph_data <= CMD_DATA_Part_2 & COMM_rx_data; 
+
+            --transceiver control
+            when CMD_CONST_SET_TransceiversControl=>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_TransceiversControl=>
+                periph_data <= CMD_DATA_Part_2 & TRNV_rx_data; 
 
 
             when others =>

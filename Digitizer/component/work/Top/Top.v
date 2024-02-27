@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Feb 13 22:07:36 2024
+// Created by SmartDesign Mon Feb 26 10:38:21 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -223,8 +223,8 @@ wire           BTN_1;
 wire           CLK_OUT_N_net_0;
 wire           CLK_OUT_P_net_0;
 wire           Clock_Reset_0_HMC_CLK;
-wire           Clock_Reset_0_Main_CLOCK_1;
-wire           Clock_Reset_0_Main_RESET_N_0;
+wire           Clock_Reset_0_Main_CLOCK_0;
+wire           Clock_Reset_0_Main_RESET_N_1;
 wire           Clock_Reset_0_UART_CLOCK_1;
 wire           Clock_Reset_0_UART_RESER_N_1;
 wire           Clock_Reset_0_XCVR_CTRL_Clock_40M;
@@ -249,6 +249,10 @@ wire   [7:0]   Controler_0_TRG_addr;
 wire   [15:0]  Controler_0_TRG_data;
 wire           Controler_0_TRG_enable_cmd;
 wire           Controler_0_TRG_write_read;
+wire   [7:0]   Controler_0_TRNV_addr;
+wire   [15:0]  Controler_0_TRNV_data;
+wire           Controler_0_TRNV_enable_cmd;
+wire           Controler_0_TRNV_write_read;
 wire           Data_Block_0_C_busy;
 wire   [15:0]  Data_Block_0_C_read_data_frame;
 wire   [31:0]  Data_Block_0_Communication_Data_Frame;
@@ -319,6 +323,7 @@ wire           SYNC_OUT_2_P_net_0;
 wire           Synchronizer_0_Data_Out;
 wire           SYNCINB_N_net_0;
 wire           SYNCINB_P_net_0;
+wire           Transceiver_Main_0_busy;
 wire   [11:0]  Transceiver_Main_0_Output_Data_0;
 wire   [23:12] Transceiver_Main_0_Output_Data_1;
 wire   [35:24] Transceiver_Main_0_Output_Data_2;
@@ -327,6 +332,7 @@ wire   [59:48] Transceiver_Main_0_Output_Data_4;
 wire   [71:60] Transceiver_Main_0_Output_Data_5;
 wire   [83:72] Transceiver_Main_0_Output_Data_6;
 wire   [95:84] Transceiver_Main_0_Output_Data_7;
+wire   [15:0]  Transceiver_Main_0_read_data_frame;
 wire           TX_0_net_0;
 wire           TX_1_net_0;
 wire           DBGport_1_net_1;
@@ -510,8 +516,8 @@ Clock_Reset Clock_Reset_0(
         // Inputs
         .EXT_RST_N           ( DBGport_2_net_0 ),
         // Outputs
-        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_1 ),
         .UART_CLOCK          ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESER_N        ( Clock_Reset_0_UART_RESER_N_1 ),
         .HMC_CLK             ( Clock_Reset_0_HMC_CLK ),
@@ -524,8 +530,8 @@ Communication Communication_0(
         // Inputs
         .UART_Clock       ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESET_N     ( Clock_Reset_0_UART_RESER_N_1 ),
-        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_1 ),
         .write_read       ( Controler_0_COMM_write_read ),
         .enable_cmd       ( Controler_0_COMM_enable_cmd ),
         .DataFifo_Empty   ( Data_Block_0_Communication_Empty ),
@@ -565,8 +571,8 @@ Communication Communication_0(
 //--------Controler
 Controler Controler_0(
         // Inputs
-        .Clock                 ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Reset_N               ( Clock_Reset_0_Main_RESET_N_0 ),
+        .Clock                 ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Reset_N               ( Clock_Reset_0_Main_RESET_N_1 ),
         .TRG_busy              ( Data_Block_0_C_busy ),
         .LMX1_miso             ( LMX1_miso ),
         .LMX2_miso             ( LMX2_miso ),
@@ -590,6 +596,8 @@ Controler Controler_0(
         .TRG_rx_data           ( Data_Block_0_C_read_data_frame ),
         .CMD_Fifo_Read_Data    ( Communication_0_CMD_Q ),
         .COMM_rx_data          ( Communication_0_read_data_frame ),
+        .TRNV_rx_data          ( Transceiver_Main_0_read_data_frame ),
+        .TRNV_busy             ( Transceiver_Main_0_busy ),
         // Outputs
         .ADC_sclk              ( ADC_sclk_net_0 ),
         .ADC_ss_n              ( ADC_ss_n_net_0 ),
@@ -631,6 +639,10 @@ Controler Controler_0(
         .COMM_addr             ( Controler_0_COMM_addr ),
         .COMM_comm_number      ( Controler_0_COMM_comm_number ),
         .COMM_data             ( Controler_0_COMM_data ),
+        .TRNV_write_read       ( Controler_0_TRNV_write_read ),
+        .TRNV_addr             ( Controler_0_TRNV_addr ),
+        .TRNV_data             ( Controler_0_TRNV_data ),
+        .TRNV_enable_cmd       ( Controler_0_TRNV_enable_cmd ),
         // Inouts
         .HMC_sdio              ( HMC_sdio ),
         .ADC_sdio              ( ADC_sdio ) 
@@ -644,8 +656,8 @@ Data_Block Data_Block_0(
         .Communication_Read            ( Communication_0_DataFifo_RD ),
         .Communication_Builder_RUN     ( Communication_0_Builder_Enable ),
         .Fifo_RESET_N                  ( DBGport_4_1 ),
-        .Reset_N                       ( Clock_Reset_0_Main_RESET_N_0 ),
-        .Clock                         ( Clock_Reset_0_Main_CLOCK_1 ),
+        .Reset_N                       ( Clock_Reset_0_Main_RESET_N_1 ),
+        .Clock                         ( Clock_Reset_0_Main_CLOCK_0 ),
         .C_addr_frame                  ( Controler_0_TRG_addr ),
         .C_write_data_frame            ( Controler_0_TRG_data ),
         .Input_Data_0_00               ( Transceiver_Main_0_Output_Data_1 ),
@@ -726,7 +738,7 @@ OUTBUF_DIFF OUTBUF_DIFF_0_0_1(
 //--------Synchronizer
 Synchronizer Synchronizer_0(
         // Inputs
-        .nRST     ( Clock_Reset_0_Main_RESET_N_0 ),
+        .nRST     ( Clock_Reset_0_Main_RESET_N_1 ),
         .CLK      ( GPIO_0_net_0 ),
         .Data_In  ( Controler_0_LMX_Sync ),
         // Outputs
@@ -736,29 +748,35 @@ Synchronizer Synchronizer_0(
 //--------Transceiver_Main
 Transceiver_Main Transceiver_Main_0(
         // Inputs
-        .LANE1_RXD_N    ( LANE1_RXD_N ),
-        .LANE0_RXD_P    ( LANE0_RXD_P ),
-        .LANE0_RXD_N    ( LANE0_RXD_N ),
-        .LANE1_RXD_P    ( LANE1_RXD_P ),
-        .REF_Clock      ( Clock_Reset_0_XCVR_REF_Clock ),
-        .CTRL_Clock_40M ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
-        .Logic_Clock    ( Clock_Reset_0_Main_CLOCK_1 ),
-        .Logic_Reset_N  ( Clock_Reset_0_Main_RESET_N_0 ),
-        .Gen_Enable     ( Data_Block_0_Control_Test_Generator_Enable ),
+        .LANE1_RXD_N      ( LANE1_RXD_N ),
+        .LANE0_RXD_P      ( LANE0_RXD_P ),
+        .LANE0_RXD_N      ( LANE0_RXD_N ),
+        .LANE1_RXD_P      ( LANE1_RXD_P ),
+        .REF_Clock        ( Clock_Reset_0_XCVR_REF_Clock ),
+        .CTRL_Clock_40M   ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
+        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Logic_Reset_N    ( Clock_Reset_0_Main_RESET_N_1 ),
+        .Gen_Enable       ( Data_Block_0_Control_Test_Generator_Enable ),
+        .write_read       ( Controler_0_TRNV_write_read ),
+        .addr_frame       ( Controler_0_TRNV_addr ),
+        .enable_cmd       ( Controler_0_TRNV_enable_cmd ),
+        .write_data_frame ( Controler_0_TRNV_data ),
         // Outputs
-        .LANE1_TXD_N    ( LANE1_TXD_N_net_0 ),
-        .LANE0_TXD_P    ( LANE0_TXD_P_net_0 ),
-        .LANE0_TXD_N    ( LANE0_TXD_N_net_0 ),
-        .LANE1_TXD_P    ( LANE1_TXD_P_net_0 ),
-        .Data_Valid     (  ),
-        .Output_Data_7  ( Transceiver_Main_0_Output_Data_7 ),
-        .Output_Data_0  ( Transceiver_Main_0_Output_Data_0 ),
-        .Output_Data_1  ( Transceiver_Main_0_Output_Data_1 ),
-        .Output_Data_2  ( Transceiver_Main_0_Output_Data_2 ),
-        .Output_Data_3  ( Transceiver_Main_0_Output_Data_3 ),
-        .Output_Data_4  ( Transceiver_Main_0_Output_Data_4 ),
-        .Output_Data_5  ( Transceiver_Main_0_Output_Data_5 ),
-        .Output_Data_6  ( Transceiver_Main_0_Output_Data_6 ) 
+        .LANE1_TXD_N      ( LANE1_TXD_N_net_0 ),
+        .LANE0_TXD_P      ( LANE0_TXD_P_net_0 ),
+        .LANE0_TXD_N      ( LANE0_TXD_N_net_0 ),
+        .LANE1_TXD_P      ( LANE1_TXD_P_net_0 ),
+        .Data_Valid       (  ),
+        .Output_Data_7    ( Transceiver_Main_0_Output_Data_7 ),
+        .Output_Data_0    ( Transceiver_Main_0_Output_Data_0 ),
+        .Output_Data_1    ( Transceiver_Main_0_Output_Data_1 ),
+        .Output_Data_2    ( Transceiver_Main_0_Output_Data_2 ),
+        .Output_Data_3    ( Transceiver_Main_0_Output_Data_3 ),
+        .Output_Data_4    ( Transceiver_Main_0_Output_Data_4 ),
+        .Output_Data_5    ( Transceiver_Main_0_Output_Data_5 ),
+        .Output_Data_6    ( Transceiver_Main_0_Output_Data_6 ),
+        .busy             ( Transceiver_Main_0_busy ),
+        .read_data_frame  ( Transceiver_Main_0_read_data_frame ) 
         );
 
 

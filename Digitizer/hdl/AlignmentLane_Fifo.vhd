@@ -14,6 +14,8 @@ entity AlignmentLane_Fifo is
   (
     Clock : in std_logic;
     Reset_N : in std_logic;
+
+    Count : out std_logic_vector(15 downto 0);
  
     -- FIFO Write Interface
     Write_Enable   : in  std_logic;
@@ -143,6 +145,8 @@ begin
   Full_For_All <= Full_For_All_Signal;
   Empty <= EMPTY_Signal;
   Read_Data_Empty <= Read_Data_Empty_Signal;
+
+  Count <=  (std_logic_vector(to_unsigned(FIFO_COUNT, Count'length))) when FIFO_COUNT >= 0   else (others => '0');
 
 ------------------------------------------------------------------------------------------------------------
 --Process: Count data in FIFO

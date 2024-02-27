@@ -85,7 +85,14 @@ entity Command_Decoder is
         COMM_addr : out std_logic_vector(7 downto 0);
         COMM_data : out std_logic_vector(15 downto 0);
         COMM_comm_number : out std_logic_vector(3 downto 0);
-        
+
+        --Transceiver Control
+        TRNV_busy : in std_logic;
+        TRNV_enable_cmd : out std_logic;
+        TRNV_write_read : out std_logic;
+        TRNV_addr : out std_logic_vector(7 downto 0);
+        TRNV_data : out std_logic_vector(15 downto 0);
+
 
         Diag_Valid : out std_logic
     
@@ -138,7 +145,8 @@ begin
                     LMX1SPI_busy OR
                     LMX2SPI_busy OR
                     GPIO_busy OR
-                    COMM_busy;
+                    COMM_busy OR
+                    TRNV_busy;
     
     --write read
     RST_write_read      <= Has_Answer;
@@ -149,7 +157,8 @@ begin
     LMX1SPI_write_read  <= Has_Answer;
     LMX2SPI_write_read  <= Has_Answer;
     GPIO_write_read     <= Has_Answer;
-    COMM_write_read    <= Has_Answer;
+    COMM_write_read     <= Has_Answer;
+    TRNV_write_read     <= Has_Answer;
 
     --perif data routing
     RST_addr    <= cmd_data(23 downto 16);
@@ -170,7 +179,6 @@ begin
     LMX2SPI_addr_frame <= cmd_data(22 downto 16);
     LMX2SPI_tx_data_frame <= cmd_data(15 downto 0);
 
-
     TRG_addr    <= cmd_data(23 downto 16);
     TRG_data    <= cmd_data(15 downto 0);
 
@@ -180,6 +188,11 @@ begin
     COMM_addr <= cmd_data(23 downto 16);
     COMM_data <= cmd_data(15 downto 0);
     COMM_comm_number <= cmd_status_comm;
+
+    TRNV_addr <= cmd_data(23 downto 16);
+    TRNV_data <= cmd_data(15 downto 0);
+
+
 
     --decoder output routing to enable cmd signals
     RST_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Reset_Controler);
@@ -192,7 +205,9 @@ begin
 
     TRG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Trigger);
     GPIO_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_GPIO);
-    COMM_enable_cmd    <= data_valid_for_decode and decode_vector(PER_NUM_CONST_COMSW);
+    COMM_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_COMSW);
+
+    TRNV_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_TRNV);
 
 ------------------------------------------------------------------------------------------------------------
 --FSM decoder ride
@@ -550,8 +565,19 @@ begin
                     decode_vector(PER_NUM_CONST_COMSW) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
+
+                --transceiver control
+                when CMD_CONST_SET_TransceiversControl =>
+                    decode_vector(PER_NUM_CONST_TRNV) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
                     
-                    
+                when CMD_CONST_GET_TransceiversControl =>
+                    decode_vector(PER_NUM_CONST_TRNV) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
+
                 when others =>
                     decode_vector <= (others => '0');
                     Has_Answer <= '0';

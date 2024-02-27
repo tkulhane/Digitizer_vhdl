@@ -30,37 +30,40 @@ architecture behavioral of xxx is
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
 
-    component Transciever_OneLane
+    component Transceiver_Main
         -- ports
         port( 
             -- Inputs
-            Logic_Clock : in std_logic;
-            CTRL_RST_N : in std_logic;
-            CTRL_CLK : in std_logic;
-            Read_Enable : in std_logic;
-            Logic_Reser_N : in std_logic;
-            REF_CLK : in std_logic;
+            LANE1_RXD_N : in std_logic;
             LANE0_RXD_P : in std_logic;
             LANE0_RXD_N : in std_logic;
-            SYNC_OK : in std_logic;
-            Input_MainData : in std_logic_vector(63 downto 0);
+            LANE1_RXD_P : in std_logic;
+            REF_Clock : in std_logic;
+            CTRL_Clock_40M : in std_logic;
+            Logic_Clock : in std_logic;
+            Logic_Reset_N : in std_logic;
+            Gen_Enable : in std_logic;
+            write_read : in std_logic;
+            addr_frame : in std_logic_vector(7 downto 0);
+            enable_cmd : in std_logic;
+            write_data_frame : in std_logic_vector(15 downto 0);
 
             -- Outputs
-            Input_MainData_Read : out std_logic;
-            Empty_For_NonAll : out std_logic;
-            CTRL_Data_Go : out std_logic;
-            CTRL_Synced : out std_logic;
-            CTRL_ILAS_Go : out std_logic;
+            LANE1_TXD_N : out std_logic;
             LANE0_TXD_P : out std_logic;
             LANE0_TXD_N : out std_logic;
-            Output_Data_1 : out std_logic_vector(11 downto 0);
+            LANE1_TXD_P : out std_logic;
+            Data_Valid : out std_logic;
+            Output_Data_7 : out std_logic_vector(95 downto 84);
             Output_Data_0 : out std_logic_vector(11 downto 0);
-            Output_Data_2 : out std_logic_vector(11 downto 0);
-            Output_Data_3 : out std_logic_vector(11 downto 0);
-            Tx_FIFO_FULL : out std_logic;
-            Tx_FIFO_EMPTY : out std_logic;
-            Rx_FIFO_FULL : out std_logic;
-            Rx_FIFO_EMPTY : out std_logic
+            Output_Data_1 : out std_logic_vector(23 downto 12);
+            Output_Data_2 : out std_logic_vector(35 downto 24);
+            Output_Data_3 : out std_logic_vector(47 downto 36);
+            Output_Data_4 : out std_logic_vector(59 downto 48);
+            Output_Data_5 : out std_logic_vector(71 downto 60);
+            Output_Data_6 : out std_logic_vector(83 downto 72);
+            busy : out std_logic;
+            read_data_frame : out std_logic_vector(15 downto 0)
 
             -- Inouts
 
@@ -86,38 +89,41 @@ begin
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
 
-    -- Instantiate Unit Under Test:  Transciever_OneLane
-    Transciever_OneLane_0 : Transciever_OneLane
+    -- Instantiate Unit Under Test:  Transceiver_Main
+    Transceiver_Main_0 : Transceiver_Main
         -- port map
         port map( 
             -- Inputs
-            Logic_Clock => SYSCLK,
-            CTRL_RST_N => NSYSRESET,
-            CTRL_CLK => SYSCLK,
-            Read_Enable => '0',
-            Logic_Reser_N => '0',
-            REF_CLK => SYSCLK,
+            LANE1_RXD_N => '0',
             LANE0_RXD_P => '0',
             LANE0_RXD_N => '0',
-            SYNC_OK => '0',
-            Input_MainData => (others=> '0'),
+            LANE1_RXD_P => '0',
+            REF_Clock => SYSCLK,
+            CTRL_Clock_40M => SYSCLK,
+            Logic_Clock => SYSCLK,
+            Logic_Reset_N => NSYSRESET,
+            Gen_Enable => '0',
+            write_read => '0',
+            addr_frame => (others=> '0'),
+            enable_cmd => '0',
+            write_data_frame => (others=> '0'),
 
             -- Outputs
-            Input_MainData_Read =>  open,
-            Empty_For_NonAll =>  open,
-            CTRL_Data_Go =>  open,
-            CTRL_Synced =>  open,
-            CTRL_ILAS_Go =>  open,
+            LANE1_TXD_N =>  open,
             LANE0_TXD_P =>  open,
             LANE0_TXD_N =>  open,
-            Output_Data_1 => open,
+            LANE1_TXD_P =>  open,
+            Data_Valid =>  open,
+            Output_Data_7 => open,
             Output_Data_0 => open,
+            Output_Data_1 => open,
             Output_Data_2 => open,
             Output_Data_3 => open,
-            Tx_FIFO_FULL =>  open,
-            Tx_FIFO_EMPTY =>  open,
-            Rx_FIFO_FULL =>  open,
-            Rx_FIFO_EMPTY =>  open
+            Output_Data_4 => open,
+            Output_Data_5 => open,
+            Output_Data_6 => open,
+            busy =>  open,
+            read_data_frame => open
 
             -- Inouts
 

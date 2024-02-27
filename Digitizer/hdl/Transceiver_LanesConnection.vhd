@@ -33,7 +33,9 @@ entity Transceiver_LanesConnection is
     Input_Data : in std_logic_vector( (4*16*g_NumberOfLanes) - 1 downto 0);
     Output_Data : out std_logic_vector( (4*16*g_NumberOfLanes) - 1 downto 0);
 
-    Data_Valid : out std_logic
+    Data_Valid : out std_logic;
+
+    TRNV_CTRL_StatusLanes_Vector : out std_logic_vector((g_NumberOfLanes * 32) - 1 downto 0)
 
 
   );
@@ -64,16 +66,13 @@ architecture rtl of Transceiver_LanesConnection is
 
     signal Lanes_Input_MainData_Read_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
 
-    signal Lanes_Tx_FIFO_FULL_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
-    signal Lanes_Tx_FIFO_EMPTY_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0); 
-    signal Lanes_Rx_FIFO_FULL_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
-    signal Lanes_Rx_FIFO_EMPTY_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);  
 
     signal SYNCINB : std_logic;
     signal Lanes_Alignment_Fifo_Read : std_logic;
     signal Lanes_SYNC_OK : std_logic;
 
-
+    type type_LanesStatusVector_array is array(0 to (g_NumberOfLanes - 1)) of std_logic_vector(32 - 1 downto 0);
+    signal LanesStatusVector_Array : type_LanesStatusVector_array;
 
     signal LANE_RXD_P_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
     signal LANE_RXD_N_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
@@ -160,10 +159,7 @@ architecture rtl of Transceiver_LanesConnection is
             Output_Data_1 : out std_logic_vector(15 downto 0);
             Output_Data_2 : out std_logic_vector(15 downto 0);
             Output_Data_3 : out std_logic_vector(15 downto 0);
-            Tx_FIFO_FULL : out std_logic;
-            Tx_FIFO_EMPTY : out std_logic;
-            Rx_FIFO_FULL : out std_logic;
-            Rx_FIFO_EMPTY : out std_logic
+            StatusVector : out std_logic_vector(31 downto 0)
 
             -- Inouts
 
@@ -215,6 +211,13 @@ begin
     Output_Data(95 downto 80) <= OutputData_Array(5);
     Output_Data(111 downto 96) <= OutputData_Array(6);
     Output_Data(127 downto 112) <= OutputData_Array(7);
+
+
+
+    StatusArray_GEN : for i in 0 to (g_NumberOfLanes - 1) generate
+        TRNV_CTRL_StatusLanes_Vector( ((i*32) + 31) downto (i*32) ) <= LanesStatusVector_Array(i);
+    
+    end generate StatusArray_GEN;
 
 
 
@@ -297,10 +300,7 @@ begin
             CTRL_Synced => CTRL_Synced_Vector(0),
             CTRL_ILAS_Go => CTRL_ILAS_Go_Vector(0),
             Input_MainData_Read => Lanes_Input_MainData_Read_Vector(0),
-            Tx_FIFO_FULL => Lanes_Tx_FIFO_FULL_Vector(0),
-            Tx_FIFO_EMPTY => Lanes_Tx_FIFO_EMPTY_Vector(0),
-            Rx_FIFO_FULL => Lanes_Rx_FIFO_FULL_Vector(0),
-            Rx_FIFO_EMPTY => Lanes_Rx_FIFO_EMPTY_Vector(0),
+            StatusVector => LanesStatusVector_Array(0),
 
 
             --lanes
@@ -344,10 +344,7 @@ begin
             CTRL_Synced => CTRL_Synced_Vector(1),
             CTRL_ILAS_Go => CTRL_ILAS_Go_Vector(1),
             Input_MainData_Read => Lanes_Input_MainData_Read_Vector(1),
-            Tx_FIFO_FULL => Lanes_Tx_FIFO_FULL_Vector(1),
-            Tx_FIFO_EMPTY => Lanes_Tx_FIFO_EMPTY_Vector(1),
-            Rx_FIFO_FULL => Lanes_Rx_FIFO_FULL_Vector(1),
-            Rx_FIFO_EMPTY => Lanes_Rx_FIFO_EMPTY_Vector(1),
+            StatusVector => LanesStatusVector_Array(1),
 
 
             --lanes
