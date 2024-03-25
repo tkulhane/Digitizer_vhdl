@@ -23,12 +23,15 @@ entity RxLaneControl is
     Output_Data : out std_logic_vector( (8*g_NumberOfDataOutputBytes) - 1 downto 0);
     Output_DataWrite : out std_logic_vector(g_NumberOfDataOutputBytes - 1 downto 0);
 
+    CTRL_Fault_CLR : in std_logic;
     CTRL_Synced : out std_logic;
     CTRL_ILAS_Go : out std_logic;
     CTRL_Data_Go : out std_logic;
+    CTRL_Fault : out std_logic;
 
-    CTRL_Fault_Sync : out std_logic;
-    CTRL_Fault_ILAS : out std_logic
+    Status_CTRL_Fault : out std_logic;
+    Status_Fault_CLR : in std_logic;
+    Status_FSM_State : out std_logic_vector(2 downto 0)
     
   );
 end RxLaneControl;
@@ -78,7 +81,7 @@ architecture rtl of RxLaneControl is
   signal DataGo_WriteAll : std_logic;
 
 
-  type FSM_state is (WAIT_FOR_SYNC, WAIT_FOR_xK, WAIT_FOR_ILAS, ILAS_GO, DATA_GO);
+  type FSM_state is (WAIT_FOR_SYNC, WAIT_FOR_xK, WAIT_FOR_ILAS, ILAS_GO, DATA_GO, FAULT_LANE);
   signal state_reg, next_state : FSM_state;
   signal fsm_timer : unsigned(9 downto 0);
 
@@ -191,7 +194,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, fsm_timer, CDR_READY, CDR_VAL, AndComparatorData_K, OrComparatorData_A,OrComparatorData_K , Last_ILAS_Seq)
+    process(next_state, state_reg, fsm_timer, CDR_READY, CDR_VAL, AndComparatorData_K, OrComparatorData_A,OrComparatorData_K , Last_ILAS_Seq, CTRL_Fault_CLR)
     begin
 
         next_state <= state_reg;
@@ -199,29 +202,40 @@ begin
         case state_reg is
         
             when WAIT_FOR_SYNC =>
-                if(CDR_READY = '1' and CDR_VAL = '1' and AndComparatorData_K = '1') then
+                if(CDR_READY = '1' and CDR_VAL = '1' and AndComparatorData_K = '1' and CTRL_Fault_CLR = '0') then
                     next_state <= WAIT_FOR_xK;        
                 end if;
                 
             when WAIT_FOR_xK =>
                 if(CDR_READY = '0' and CDR_VAL = '0' and AndComparatorData_K = '0') then
                     next_state <= WAIT_FOR_SYNC;
-                elsif(fsm_timer >= 20 -1) then
+                elsif(fsm_timer >= 10 -1) then
                     next_state <= WAIT_FOR_ILAS;         
                 end if;
 
             when WAIT_FOR_ILAS =>
-              if(OrComparatorData_R = '1') then
+              if(CDR_READY = '0' or CDR_VAL = '0' or CTRL_Fault_CLR = '1') then
+                next_state <= FAULT_LANE;
+              elsif(OrComparatorData_R = '1') then
                 next_state <= ILAS_GO;
               end if;
 
             when ILAS_GO =>
-              if(OrComparatorData_A = '1' and Last_ILAS_Seq = '1') then
+              if(CDR_READY = '0' or CDR_VAL = '0' or CTRL_Fault_CLR = '1') then
+                next_state <= FAULT_LANE;
+              elsif(OrComparatorData_A = '1' and Last_ILAS_Seq = '1') then
                 next_state <= DATA_GO;
               end if;
 
             when DATA_GO =>
-              null;
+              if(CDR_READY = '0' or CDR_VAL = '0' or CTRL_Fault_CLR = '1') then
+                next_state <= FAULT_LANE;
+              end if;
+
+            when FAULT_LANE =>
+              if(CTRL_Fault_CLR = '1') then
+                next_state <= WAIT_FOR_SYNC;
+              end if;
 
             when others =>
                 null; 
@@ -241,6 +255,7 @@ begin
               CTRL_Data_Go <= '0';
               IlasCounterGo <= '0';
               DataGo_WriteAll <= '0';
+              CTRL_Fault <= '0';
 
             when WAIT_FOR_xK =>
               CTRL_Synced <= '0';
@@ -248,6 +263,7 @@ begin
               CTRL_Data_Go <= '0';   
               IlasCounterGo <= '0';
               DataGo_WriteAll <= '0';
+              CTRL_Fault <= '0';
            
 
             when WAIT_FOR_ILAS =>
@@ -256,6 +272,7 @@ begin
               CTRL_Data_Go <= '0';  
               IlasCounterGo <= '1';
               DataGo_WriteAll <= '0';
+              CTRL_Fault <= '0';
             
 
             when ILAS_GO =>
@@ -264,6 +281,7 @@ begin
               CTRL_Data_Go <= '0';       
               IlasCounterGo <= '1'; 
               DataGo_WriteAll <= '0';
+              CTRL_Fault <= '0';
       
 
             when DATA_GO =>
@@ -272,6 +290,15 @@ begin
               CTRL_Data_Go <= '1';    
               IlasCounterGo <= '0'; 
               DataGo_WriteAll <= '1';
+              CTRL_Fault <= '0';
+
+            when FAULT_LANE =>
+              CTRL_Synced <= '0';
+              CTRL_ILAS_Go <= '0';
+              CTRL_Data_Go <= '0';
+              IlasCounterGo <= '0';
+              DataGo_WriteAll <= '0';
+              CTRL_Fault <= '1';
          
 
             when others =>

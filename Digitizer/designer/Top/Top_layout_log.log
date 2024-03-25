@@ -19,10 +19,22 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
 INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\fp\user.pdc. 0 error(s) and 0 warning(s)
 
  Running Timing based Global Demotion. 
-        Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
+        Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
+        Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
+        Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
+        Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
+        Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
         Moved 56 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
-1  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
+1  - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3] duplicated 
+   - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]_GB_DEMOTE
+2  - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4] duplicated 
+   - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]_GB_DEMOTE
+3  - AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[3] duplicated 
+   - AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[3]_GB_DEMOTE
+4  - AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4] duplicated 
+   - AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]_GB_DEMOTE
+5  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
    - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
 
  Timing based Global Demotion completed successfully. 
@@ -39,10 +51,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 5 seconds
+Total time spent in I/O Bank and Globals Assigner: 6 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Tue Feb 27 22:18:27 2024
+Design: Top                             Started: Sat Mar 23 19:16:39 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -56,16 +68,16 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 23 seconds
-Placement                : 110 seconds
-Improvement              : 127 seconds
+Clustering (1 pass)      : 33 seconds
+Placement                : 182 seconds
+Improvement              : 207 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Tue Feb 27 22:24:03 2024
-Total CPU Time:     00:07:53            Total Elapsed Time: 00:05:36
-Total Memory Usage: 2633.7 Mbytes
+Finished: Sat Mar 23 19:25:18 2024
+Total CPU Time:     00:12:40            Total Elapsed Time: 00:08:39
+Total Memory Usage: 3608.3 Mbytes
                         o - o - o - o - o - o
 
 
@@ -78,26 +90,26 @@ Clock pins: 1
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Tue Feb 27 22:24:39 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sat Mar 23 19:26:07 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Tue Feb 27 22:26:05 2024
-Total CPU Time:     00:03:49            Total Elapsed Time: 00:01:26
-Total Memory Usage: 5491.8 Mbytes
+Finished: Sat Mar 23 19:28:02 2024
+Total CPU Time:     00:04:16            Total Elapsed Time: 00:01:55
+Total Memory Usage: 5521.1 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
-+---------------+-------+--------+------------+
-| Type          | Used  | Total  | Percentage |
-+---------------+-------+--------+------------+
-| 4LUT          | 92261 | 299544 | 30.80      |
-| DFF           | 47043 | 299544 | 15.70      |
-| I/O Register  | 0     | 510    | 0.00       |
-| Logic Element | 94108 | 299544 | 31.42      |
-+---------------+-------+--------+------------+
++---------------+--------+--------+------------+
+| Type          | Used   | Total  | Percentage |
++---------------+--------+--------+------------+
+| 4LUT          | 142793 | 299544 | 47.67      |
+| DFF           | 65637  | 299544 | 21.91      |
+| I/O Register  | 0      | 510    | 0.00       |
+| Logic Element | 144874 | 299544 | 48.36      |
++---------------+--------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+

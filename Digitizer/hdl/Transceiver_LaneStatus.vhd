@@ -15,11 +15,12 @@ entity Transceiver_LaneStatus is
     TxClk_Stable : in std_logic;
     Rx_Ready : in std_logic;
     Rx_Val : in std_logic;
-    Rx_SyncFault : in std_logic;
+    Rx_LaneFault : in std_logic;
     RxFifo_Full : in std_logic;
     RxFifo_Empty : in std_logic;
     TxFifo_Full : in std_logic;
-    TxFifo_Empty : in std_logic
+    TxFifo_Empty : in std_logic;
+    RxFsmState : in std_logic_vector(2 downto 0)
 
   );
 end Transceiver_LaneStatus;
@@ -65,12 +66,14 @@ begin
             StatusVector(16) <= TxClk_Stable;
             StatusVector(17) <= Rx_Ready;
             StatusVector(18) <= Rx_Val;
-            StatusVector(19) <= Rx_SyncFault;
+            StatusVector(19) <= Rx_LaneFault;
 
             StatusVector(20) <= RxFifo_Full;
             StatusVector(21) <= RxFifo_Empty;
             StatusVector(22) <= TxFifo_Full;
             StatusVector(23) <= TxFifo_Empty;
+            
+            StatusVector(26 downto 24) <= RxFsmState;
             
         end if;
 

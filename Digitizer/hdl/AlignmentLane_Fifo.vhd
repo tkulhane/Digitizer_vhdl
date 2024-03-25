@@ -62,12 +62,12 @@ architecture rtl of AlignmentLane_Fifo is
 ------------------------------------------------------------------------------------------------------------
 --Write Signals declaration
 ------------------------------------------------------------------------------------------------------------  
-  type type_wr_index is array(0 to Write_NumberOfDataBytes - 1) of integer range -1 to g_DEPTH-1;
+  type type_wr_index is array(0 to Write_NumberOfDataBytes - 1) of integer range (-1)*(Write_NumberOfDataBytes) to g_DEPTH-1;
   signal WR_INDEX : type_wr_index;
 
-  signal last_max_WR_INDEX : integer range -1 to g_DEPTH-1 := 0;
+  signal last_max_WR_INDEX : integer range (-1)*(Write_NumberOfDataBytes) to g_DEPTH-1 := 0;
 
-  type type_wr_add_index_array is array(0 to Write_NumberOfDataBytes - 1) of integer range -1 to Write_NumberOfDataBytes;
+  type type_wr_add_index_array is array(0 to Write_NumberOfDataBytes - 1) of integer range (-1)*(Write_NumberOfDataBytes) to Write_NumberOfDataBytes;
   signal WR_ADD_INDEX : type_wr_add_index_array;
   signal WR_ADD_INDEX_1 : type_wr_add_index_array;
 
@@ -107,7 +107,7 @@ architecture rtl of AlignmentLane_Fifo is
 --Other Signals declaration
 ------------------------------------------------------------------------------------------------------------  
   -- # Words in FIFO, has extra range to allow for assert conditions
-  signal FIFO_COUNT : integer range -1 to g_DEPTH+1 := 0;
+  signal FIFO_COUNT : integer range (-1)*(g_NumOfBYTES) to g_DEPTH+g_NumOfBYTES := 0;
   signal FULL_Signal : std_logic;
   signal EMPTY_Signal : std_logic;
   signal Full_For_All_Signal : std_logic;

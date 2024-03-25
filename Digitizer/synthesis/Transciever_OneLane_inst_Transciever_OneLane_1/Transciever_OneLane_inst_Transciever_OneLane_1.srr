@@ -1,4 +1,4 @@
-# Tue Feb 27 11:03:38 2024
+# Sat Mar 23 15:39:07 2024
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -32,7 +32,7 @@ Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 134MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 134MB)
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 127MB peak: 134MB)
 
 
 @N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transciever_onelane\transciever_onelane.v":9:7:9:25|Found compile point of type hard on View view:work.Transciever_OneLane_inst_Transciever_OneLane_1(verilog) 
@@ -55,10 +55,10 @@ Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s
 Begin compile point sub-process log
 
 @N: MF106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transciever_onelane\transciever_onelane.v":9:7:9:25|Mapping Compile point view:work.Transciever_OneLane_inst_Transciever_OneLane_1(verilog) because 
-		 RTL and/or Constraints changed.
+		 Interface of Compile Point has changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 186MB peak: 186MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 186MB peak: 186MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_0(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_0(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_0(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_0(verilog)) has its enable tied to GND.
@@ -75,20 +75,21 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 
 #### END OF SSF LOG MESSAGES ####
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 191MB peak: 197MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 191MB peak: 198MB)
 
 Encoding state machine Transceiver_Main_0.Transceiver_LanesConnection_0.inst_TxMainLinkController.state_reg[0:2] (in view: work.Top(verilog))
 original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
-Encoding state machine Transceiver_Main_0.Transceiver_LanesConnection_0.inst_RxMainLinkController.state_reg[0:4] (in view: work.Top(verilog))
+Encoding state machine Transceiver_Main_0.Transceiver_LanesConnection_0.inst_RxMainLinkController.state_reg[0:5] (in view: work.Top(verilog))
 original code -> new code
-   00001 -> 00001
-   00010 -> 00010
-   00100 -> 00100
-   01000 -> 01000
-   10000 -> 10000
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing sequential instance Transceiver_Main_0.Synchronizer_0_2.Chain[0] (in view: work.Top(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z2_layer2_1_0(verilog) instance genblk10\.rptr[6:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z2_layer2_1_0(verilog) instance genblk10\.memraddr_r[5:0] 
@@ -126,6 +127,16 @@ original code -> new code
    01000 -> 01000
    10000 -> 10000
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\txlanecontrol.vhd":377:8:377:9|Found counter in view:work.work_txlanecontrol_rtl_8_3_0_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay_0(rtl) instance Counter_IlasSequence[7:0] 
+Encoding state machine state_reg[0:5] (in view: work.work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":183:8:183:9|Found counter in view:work.work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1(rtl) instance fsm_timer[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":420:4:420:5|Found counter in view:work.work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1(rtl) instance Counter_IlasSequence[7:0] 
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_6[0] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_2[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_2[0] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_0[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_5[1] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_1[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
@@ -134,22 +145,13 @@ original code -> new code
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_3[0] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_5[0] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_7[0] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-Encoding state machine state_reg[0:4] (in view: work.work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1(rtl))
-original code -> new code
-   00001 -> 00001
-   00010 -> 00010
-   00100 -> 00100
-   01000 -> 01000
-   10000 -> 10000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":180:8:180:9|Found counter in view:work.work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1(rtl) instance fsm_timer[9:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxlanecontrol.vhd":393:4:393:5|Found counter in view:work.work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1(rtl) instance Counter_IlasSequence[7:0] 
 
-Starting factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 252MB peak: 266MB)
+Starting factoring (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 251MB peak: 267MB)
 
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":317:6:317:7|Removing sequential instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[1] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":317:6:317:7|Removing sequential instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[2] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 301MB peak: 301MB)
+Finished factoring (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:20s; Memory used current: 301MB peak: 301MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -160,26 +162,26 @@ Available hyper_sources - for debug and ip models
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing sequential instance AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_5[7] (in view: work.Transciever_OneLane_inst_Transciever_OneLane_1(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing sequential instance AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_7[7] (in view: work.Transciever_OneLane_inst_Transciever_OneLane_1(verilog)) because it does not drive other instances.
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:28s; Memory used current: 300MB peak: 351MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:29s; CPU Time elapsed 0h:00m:29s; Memory used current: 298MB peak: 352MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:34s; Memory used current: 313MB peak: 351MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:35s; CPU Time elapsed 0h:00m:35s; Memory used current: 311MB peak: 352MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:43s; CPU Time elapsed 0h:00m:43s; Memory used current: 314MB peak: 351MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:44s; CPU Time elapsed 0h:00m:44s; Memory used current: 311MB peak: 352MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:45s; Memory used current: 314MB peak: 351MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:46s; CPU Time elapsed 0h:00m:46s; Memory used current: 311MB peak: 352MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:52s; CPU Time elapsed 0h:00m:52s; Memory used current: 286MB peak: 351MB)
+Finished preparing to map (Real Time elapsed 0h:00m:53s; CPU Time elapsed 0h:00m:52s; Memory used current: 286MB peak: 352MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:57s; CPU Time elapsed 0h:00m:57s; Memory used current: 354MB peak: 371MB)
+Finished technology mapping (Real Time elapsed 0h:00m:58s; CPU Time elapsed 0h:00m:58s; Memory used current: 355MB peak: 372MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:59s		    -1.05ns		25277 /      3725
+   1		0h:01m:00s		    -1.05ns		25283 /      3855
 
 
 
@@ -189,10 +191,10 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:01m:06s; CPU Time elapsed 0h:01m:06s; Memory used current: 371MB peak: 371MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:01m:09s; CPU Time elapsed 0h:01m:09s; Memory used current: 371MB peak: 372MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:01m:07s; CPU Time elapsed 0h:01m:07s; Memory used current: 374MB peak: 376MB)
+Finished restoring hierarchy (Real Time elapsed 0h:01m:10s; CPU Time elapsed 0h:01m:10s; Memory used current: 373MB peak: 376MB)
 
 
 End compile point sub-process log
@@ -209,7 +211,7 @@ End compile point sub-process log
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Tue Feb 27 11:04:46 2024
+# Timing report written on Sat Mar 23 15:40:18 2024
 #
 
 
@@ -274,6 +276,7 @@ Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                        
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  1.000       -1.300  |  No paths    -      |  No paths    -      |  No paths    -    
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            |  25.000      22.483  |  No paths    -      |  No paths    -      |  No paths    -    
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     System                                                                                                              |  10.000      8.140   |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  10.000      5.006   |  No paths    -      |  No paths    -      |  No paths    -    
@@ -976,12 +979,12 @@ Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitize
 
 Summary of Compile Points :
 *************************** 
-Name                                               Status       Reason        
-------------------------------------------------------------------------------
-Transciever_OneLane_inst_Transciever_OneLane_1     Remapped     Design changed
-==============================================================================
+Name                                               Status       Reason                            
+--------------------------------------------------------------------------------------------------
+Transciever_OneLane_inst_Transciever_OneLane_1     Remapped     Interface of Compile Point changed
+==================================================================================================
 
-Process took 0h:01m:09s realtime, 0h:01m:09s cputime
-# Tue Feb 27 11:04:47 2024
+Process took 0h:01m:11s realtime, 0h:01m:11s cputime
+# Sat Mar 23 15:40:18 2024
 
 ###########################################################]

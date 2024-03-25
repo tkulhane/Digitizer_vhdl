@@ -93,6 +93,12 @@ entity Command_Decoder is
         TRNV_addr : out std_logic_vector(7 downto 0);
         TRNV_data : out std_logic_vector(15 downto 0);
 
+        --AnalyzInCirc
+        ANICI_busy : in std_logic;
+        ANICI_enable_cmd : out std_logic;
+        ANICI_write_read : out std_logic;
+        ANICI_addr : out std_logic_vector(7 downto 0);
+        ANICI_data : out std_logic_vector(15 downto 0);
 
         Diag_Valid : out std_logic
     
@@ -146,7 +152,8 @@ begin
                     LMX2SPI_busy OR
                     GPIO_busy OR
                     COMM_busy OR
-                    TRNV_busy;
+                    TRNV_busy OR
+                    ANICI_busy;
     
     --write read
     RST_write_read      <= Has_Answer;
@@ -159,6 +166,7 @@ begin
     GPIO_write_read     <= Has_Answer;
     COMM_write_read     <= Has_Answer;
     TRNV_write_read     <= Has_Answer;
+    ANICI_write_read    <= Has_Answer;
 
     --perif data routing
     RST_addr    <= cmd_data(23 downto 16);
@@ -191,6 +199,9 @@ begin
 
     TRNV_addr <= cmd_data(23 downto 16);
     TRNV_data <= cmd_data(15 downto 0);
+    
+    ANICI_addr <= cmd_data(23 downto 16);
+    ANICI_data <= cmd_data(15 downto 0);
 
 
 
@@ -208,6 +219,8 @@ begin
     COMM_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_COMSW);
 
     TRNV_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_TRNV);
+    
+    ANICI_enable_cmd    <= data_valid_for_decode and decode_vector(PER_NUM_CONST_ANICI);
 
 ------------------------------------------------------------------------------------------------------------
 --FSM decoder ride
@@ -574,6 +587,17 @@ begin
                     
                 when CMD_CONST_GET_TransceiversControl =>
                     decode_vector(PER_NUM_CONST_TRNV) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
+                --Anylyz In Circ
+                when CMD_CONST_SET_AnalyzInCirc =>
+                    decode_vector(PER_NUM_CONST_ANICI) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
+                    
+                when CMD_CONST_GET_AnalyzInCirc =>
+                    decode_vector(PER_NUM_CONST_ANICI) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
 

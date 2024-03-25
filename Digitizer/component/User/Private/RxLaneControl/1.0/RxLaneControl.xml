@@ -52,6 +52,10 @@
         <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>
+        <spirit:name>CTRL_Fault_CLR</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
         <spirit:name>CTRL_Synced</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
@@ -64,12 +68,22 @@
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>CTRL_Fault_Sync</spirit:name>
+        <spirit:name>CTRL_Fault</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>CTRL_Fault_ILAS</spirit:name>
+        <spirit:name>Status_CTRL_Fault</spirit:name>
         <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>Status_Fault_CLR</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>Status_FSM_State</spirit:name>
+        <spirit:direction>out</spirit:direction>
+        <spirit:left>2</spirit:left>
+        <spirit:right>0</spirit:right>
       </spirit:signal>
     </spirit:signals>
     <spirit:hwParameters>

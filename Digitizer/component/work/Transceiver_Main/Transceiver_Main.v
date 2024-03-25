@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Feb 26 10:38:41 2024
+// Created by SmartDesign Thu Mar 21 19:11:13 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -35,6 +35,9 @@ module Transceiver_Main(
     Output_Data_5,
     Output_Data_6,
     Output_Data_7,
+    SYNCINB_OUT,
+    Transceivers_Rx_Data,
+    Transceivers_Rx_K,
     busy,
     read_data_frame
 );
@@ -71,6 +74,9 @@ output [59:48] Output_Data_4;
 output [71:60] Output_Data_5;
 output [83:72] Output_Data_6;
 output [95:84] Output_Data_7;
+output         SYNCINB_OUT;
+output [127:0] Transceivers_Rx_Data;
+output [15:0]  Transceivers_Rx_K;
 output         busy;
 output [15:0]  read_data_frame;
 //--------------------------------------------------------------------
@@ -115,6 +121,7 @@ wire   [15:0]    SampleTxDeCompose_0_5_Output_Data;
 wire   [15:0]    SampleTxDeCompose_0_Output_Data;
 wire   [15:0]    SampleTxDeCompose_1_Output_Data;
 wire             Synchronizer_0_2_Data_Out;
+wire             SYNCINB_OUT_net_0;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_0;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_1;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_2;
@@ -123,6 +130,7 @@ wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_4;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_5;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_6;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_7;
+wire             Transceiver_Controller_0_Lanes_Restart;
 wire             Transceiver_LanesConnection_0_Input_Data_Read;
 wire   [15:0]    Transceiver_LanesConnection_0_Output_Data15to0;
 wire   [31:16]   Transceiver_LanesConnection_0_Output_Data31to16;
@@ -133,6 +141,8 @@ wire   [95:80]   Transceiver_LanesConnection_0_Output_Data95to80;
 wire   [111:96]  Transceiver_LanesConnection_0_Output_Data111to96;
 wire   [127:112] Transceiver_LanesConnection_0_Output_Data127to112;
 wire   [63:0]    Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector;
+wire   [127:0]   Transceivers_Rx_Data_net_0;
+wire   [15:0]    Transceivers_Rx_K_net_0;
 wire   [15:0]    write_data_frame;
 wire             write_read;
 wire             LANE1_TXD_N_net_1;
@@ -140,6 +150,7 @@ wire             LANE0_TXD_P_net_1;
 wire             LANE0_TXD_N_net_1;
 wire             LANE1_TXD_P_net_1;
 wire             Data_Valid_net_1;
+wire             busy_net_1;
 wire   [95:84]   Output_Data_7_net_1;
 wire   [11:0]    Output_Data_0_net_1;
 wire   [23:12]   Output_Data_1_net_1;
@@ -148,8 +159,10 @@ wire   [47:36]   Output_Data_3_net_1;
 wire   [59:48]   Output_Data_4_net_1;
 wire   [71:60]   Output_Data_5_net_1;
 wire   [83:72]   Output_Data_6_net_1;
-wire             busy_net_1;
 wire   [15:0]    read_data_frame_net_1;
+wire   [127:0]   Transceivers_Rx_Data_net_1;
+wire   [15:0]    Transceivers_Rx_K_net_1;
+wire             SYNCINB_OUT_net_1;
 wire   [127:0]   Input_Data_net_0;
 wire   [127:0]   Output_Data_net_0;
 //--------------------------------------------------------------------
@@ -179,36 +192,42 @@ assign Input_TailBits_const_net_7 = 4'h0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign LANE1_TXD_N_net_1     = LANE1_TXD_N_net_0;
-assign LANE1_TXD_N           = LANE1_TXD_N_net_1;
-assign LANE0_TXD_P_net_1     = LANE0_TXD_P_net_0;
-assign LANE0_TXD_P           = LANE0_TXD_P_net_1;
-assign LANE0_TXD_N_net_1     = LANE0_TXD_N_net_0;
-assign LANE0_TXD_N           = LANE0_TXD_N_net_1;
-assign LANE1_TXD_P_net_1     = LANE1_TXD_P_net_0;
-assign LANE1_TXD_P           = LANE1_TXD_P_net_1;
-assign Data_Valid_net_1      = Data_Valid_net_0;
-assign Data_Valid            = Data_Valid_net_1;
-assign Output_Data_7_net_1   = Output_Data_7_net_0;
-assign Output_Data_7[95:84]  = Output_Data_7_net_1;
-assign Output_Data_0_net_1   = Output_Data_0_net_0;
-assign Output_Data_0[11:0]   = Output_Data_0_net_1;
-assign Output_Data_1_net_1   = Output_Data_1_net_0;
-assign Output_Data_1[23:12]  = Output_Data_1_net_1;
-assign Output_Data_2_net_1   = Output_Data_2_net_0;
-assign Output_Data_2[35:24]  = Output_Data_2_net_1;
-assign Output_Data_3_net_1   = Output_Data_3_net_0;
-assign Output_Data_3[47:36]  = Output_Data_3_net_1;
-assign Output_Data_4_net_1   = Output_Data_4_net_0;
-assign Output_Data_4[59:48]  = Output_Data_4_net_1;
-assign Output_Data_5_net_1   = Output_Data_5_net_0;
-assign Output_Data_5[71:60]  = Output_Data_5_net_1;
-assign Output_Data_6_net_1   = Output_Data_6_net_0;
-assign Output_Data_6[83:72]  = Output_Data_6_net_1;
-assign busy_net_1            = busy_net_0;
-assign busy                  = busy_net_1;
-assign read_data_frame_net_1 = read_data_frame_net_0;
-assign read_data_frame[15:0] = read_data_frame_net_1;
+assign LANE1_TXD_N_net_1           = LANE1_TXD_N_net_0;
+assign LANE1_TXD_N                 = LANE1_TXD_N_net_1;
+assign LANE0_TXD_P_net_1           = LANE0_TXD_P_net_0;
+assign LANE0_TXD_P                 = LANE0_TXD_P_net_1;
+assign LANE0_TXD_N_net_1           = LANE0_TXD_N_net_0;
+assign LANE0_TXD_N                 = LANE0_TXD_N_net_1;
+assign LANE1_TXD_P_net_1           = LANE1_TXD_P_net_0;
+assign LANE1_TXD_P                 = LANE1_TXD_P_net_1;
+assign Data_Valid_net_1            = Data_Valid_net_0;
+assign Data_Valid                  = Data_Valid_net_1;
+assign busy_net_1                  = busy_net_0;
+assign busy                        = busy_net_1;
+assign Output_Data_7_net_1         = Output_Data_7_net_0;
+assign Output_Data_7[95:84]        = Output_Data_7_net_1;
+assign Output_Data_0_net_1         = Output_Data_0_net_0;
+assign Output_Data_0[11:0]         = Output_Data_0_net_1;
+assign Output_Data_1_net_1         = Output_Data_1_net_0;
+assign Output_Data_1[23:12]        = Output_Data_1_net_1;
+assign Output_Data_2_net_1         = Output_Data_2_net_0;
+assign Output_Data_2[35:24]        = Output_Data_2_net_1;
+assign Output_Data_3_net_1         = Output_Data_3_net_0;
+assign Output_Data_3[47:36]        = Output_Data_3_net_1;
+assign Output_Data_4_net_1         = Output_Data_4_net_0;
+assign Output_Data_4[59:48]        = Output_Data_4_net_1;
+assign Output_Data_5_net_1         = Output_Data_5_net_0;
+assign Output_Data_5[71:60]        = Output_Data_5_net_1;
+assign Output_Data_6_net_1         = Output_Data_6_net_0;
+assign Output_Data_6[83:72]        = Output_Data_6_net_1;
+assign read_data_frame_net_1       = read_data_frame_net_0;
+assign read_data_frame[15:0]       = read_data_frame_net_1;
+assign Transceivers_Rx_Data_net_1  = Transceivers_Rx_Data_net_0;
+assign Transceivers_Rx_Data[127:0] = Transceivers_Rx_Data_net_1;
+assign Transceivers_Rx_K_net_1     = Transceivers_Rx_K_net_0;
+assign Transceivers_Rx_K[15:0]     = Transceivers_Rx_K_net_1;
+assign SYNCINB_OUT_net_1           = SYNCINB_OUT_net_0;
+assign SYNCINB_OUT                 = SYNCINB_OUT_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -456,7 +475,8 @@ Transceiver_Controller_0(
         .StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ),
         // Outputs
         .busy               ( busy_net_0 ),
-        .read_data_frame    ( read_data_frame_net_0 ) 
+        .read_data_frame    ( read_data_frame_net_0 ),
+        .Lanes_Restart      ( Transceiver_Controller_0_Lanes_Restart ) 
         );
 
 //--------Transceiver_LanesConnection
@@ -472,6 +492,7 @@ Transceiver_LanesConnection Transceiver_LanesConnection_0(
         .LANE1_RXD_P                  ( LANE1_RXD_P ),
         .LANE1_RXD_N                  ( LANE1_RXD_N ),
         .Input_Data                   ( Input_Data_net_0 ),
+        .TRNV_CTRL_RESTART            ( Transceiver_Controller_0_Lanes_Restart ),
         // Outputs
         .LANE0_TXD_P                  ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N                  ( LANE0_TXD_N_net_0 ),
@@ -480,7 +501,10 @@ Transceiver_LanesConnection Transceiver_LanesConnection_0(
         .Input_Data_Read              ( Transceiver_LanesConnection_0_Input_Data_Read ),
         .Output_Data                  ( Output_Data_net_0 ),
         .Data_Valid                   ( Data_Valid_net_0 ),
-        .TRNV_CTRL_StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ) 
+        .TRNV_CTRL_StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ),
+        .Transceivers_Rx_Data         ( Transceivers_Rx_Data_net_0 ),
+        .Transceivers_Rx_K            ( Transceivers_Rx_K_net_0 ),
+        .SYNCINB_OUT                  ( SYNCINB_OUT_net_0 ) 
         );
 
 

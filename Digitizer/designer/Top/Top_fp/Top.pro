@@ -25,6 +25,14 @@
             E2002F2N83
         </id>
     </programmer>
+    <programmer status="disable" type="FlashPro5" revision="UndefRev" connection="usb1.1">
+        <name>
+            E2002F2KKC
+        </name>
+        <id>
+            E2002F2KKC
+        </id>
+    </programmer>
     <Server>
         <name>
             localhost

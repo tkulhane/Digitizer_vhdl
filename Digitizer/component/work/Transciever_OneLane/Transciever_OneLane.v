@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Feb 25 23:06:39 2024
+// Created by SmartDesign Thu Mar 21 19:11:17 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -9,6 +9,7 @@
 module Transciever_OneLane(
     // Inputs
     CTRL_CLK,
+    CTRL_Fault_CLR,
     CTRL_RST_N,
     Input_Data_0,
     Input_Data_1,
@@ -23,12 +24,15 @@ module Transciever_OneLane(
     SYNC_OK,
     // Outputs
     CTRL_Data_Go,
+    CTRL_Fault,
     CTRL_ILAS_Go,
     CTRL_Synced,
     Empty_For_NonAll,
     Input_MainData_Read,
     LANE0_TXD_N,
     LANE0_TXD_P,
+    LANE_RX_DATA,
+    LANE_RX_K,
     Output_Data_0,
     Output_Data_1,
     Output_Data_2,
@@ -40,6 +44,7 @@ module Transciever_OneLane(
 // Input
 //--------------------------------------------------------------------
 input         CTRL_CLK;
+input         CTRL_Fault_CLR;
 input         CTRL_RST_N;
 input  [15:0] Input_Data_0;
 input  [15:0] Input_Data_1;
@@ -56,12 +61,15 @@ input         SYNC_OK;
 // Output
 //--------------------------------------------------------------------
 output        CTRL_Data_Go;
+output        CTRL_Fault;
 output        CTRL_ILAS_Go;
 output        CTRL_Synced;
 output        Empty_For_NonAll;
 output        Input_MainData_Read;
 output        LANE0_TXD_N;
 output        LANE0_TXD_P;
+output [63:0] LANE_RX_DATA;
+output [7:0]  LANE_RX_K;
 output [15:0] Output_Data_0;
 output [15:0] Output_Data_1;
 output [15:0] Output_Data_2;
@@ -73,18 +81,18 @@ output [31:0] StatusVector;
 wire   [15:0]  AlignmentLane_Fifo_0_Count;
 wire           COREFIFO_C12_0_1_EMPTY;
 wire           COREFIFO_C12_0_1_FULL;
-wire   [63:0]  COREFIFO_C12_0_1_Q;
 wire           COREFIFO_C12_0_EMPTY;
 wire           COREFIFO_C12_0_FULL;
 wire   [63:0]  COREFIFO_C12_0_Q;
 wire           COREFIFO_C13_0_0_EMPTY;
 wire           COREFIFO_C13_0_0_FULL;
-wire   [7:0]   COREFIFO_C13_0_0_Q;
 wire           COREFIFO_C13_0_EMPTY;
 wire           COREFIFO_C13_0_FULL;
 wire   [7:0]   COREFIFO_C13_0_Q;
 wire           CTRL_CLK;
 wire           CTRL_Data_Go_net_0;
+wire           CTRL_Fault_net_0;
+wire           CTRL_Fault_CLR;
 wire           CTRL_ILAS_Go_net_0;
 wire           CTRL_RST_N;
 wire           CTRL_Synced_net_0;
@@ -98,6 +106,8 @@ wire           LANE0_RXD_N;
 wire           LANE0_RXD_P;
 wire           LANE0_TXD_N_net_0;
 wire           LANE0_TXD_P_net_0;
+wire   [63:0]  LANE_RX_DATA_net_0;
+wire   [7:0]   LANE_RX_K_net_0;
 wire           Logic_Clock;
 wire           Logic_Reser_N;
 wire           OR2_0_0_0_Y;
@@ -122,6 +132,8 @@ wire           Read_Enable;
 wire           REF_CLK;
 wire   [63:0]  RxLaneControl_0_Output_Data;
 wire   [7:0]   RxLaneControl_0_Output_DataWrite;
+wire           RxLaneControl_0_Status_CTRL_Fault;
+wire   [2:0]   RxLaneControl_0_Status_FSM_State;
 wire   [31:0]  StatusVector_net_0;
 wire           SYNC_OK;
 wire           Synchronizer_0_0_Data_Out;
@@ -146,6 +158,9 @@ wire   [15:0]  Output_Data_1_net_1;
 wire   [15:0]  Output_Data_2_net_1;
 wire   [15:0]  Output_Data_3_net_1;
 wire   [31:0]  StatusVector_net_1;
+wire   [63:0]  LANE_RX_DATA_net_1;
+wire   [7:0]   LANE_RX_K_net_1;
+wire           CTRL_Fault_net_1;
 wire   [63:0]  Read_Data_net_0;
 wire   [63:0]  Input_MainData_net_0;
 //--------------------------------------------------------------------
@@ -211,6 +226,12 @@ assign Output_Data_3_net_1       = Output_Data_3_net_0;
 assign Output_Data_3[15:0]       = Output_Data_3_net_1;
 assign StatusVector_net_1        = StatusVector_net_0;
 assign StatusVector[31:0]        = StatusVector_net_1;
+assign LANE_RX_DATA_net_1        = LANE_RX_DATA_net_0;
+assign LANE_RX_DATA[63:0]        = LANE_RX_DATA_net_1;
+assign LANE_RX_K_net_1           = LANE_RX_K_net_0;
+assign LANE_RX_K[7:0]            = LANE_RX_K_net_1;
+assign CTRL_Fault_net_1          = CTRL_Fault_net_0;
+assign CTRL_Fault                = CTRL_Fault_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -235,16 +256,16 @@ AlignmentLane_Fifo_0(
         .Clock             ( Logic_Clock ),
         .Reset_N           ( Logic_Reser_N ),
         .Write_Enable      ( VCC_net ),
+        .Read_Enable       ( Read_Enable ),
         .Write_Data        ( RxLaneControl_0_Output_Data ),
         .Write_Data_Enable ( RxLaneControl_0_Output_DataWrite ),
-        .Read_Enable       ( Read_Enable ),
         .Read_Data_Enable  ( Read_Data_Enable_const_net_0 ),
         // Outputs
-        .Count             ( AlignmentLane_Fifo_0_Count ),
         .Full              (  ),
         .Full_For_All      (  ),
         .Empty             (  ),
         .Empty_For_NonAll  ( Empty_For_NonAll_net_0 ),
+        .Count             ( AlignmentLane_Fifo_0_Count ),
         .Read_Data         ( Read_Data_net_0 ),
         .Read_Data_Empty   (  ) 
         );
@@ -278,7 +299,7 @@ COREFIFO_C12 COREFIFO_C12_0_1(
         // Outputs
         .FULL     ( COREFIFO_C12_0_1_FULL ),
         .EMPTY    ( COREFIFO_C12_0_1_EMPTY ),
-        .Q        ( COREFIFO_C12_0_1_Q ) 
+        .Q        ( LANE_RX_DATA_net_0 ) 
         );
 
 //--------COREFIFO_C13
@@ -310,7 +331,7 @@ COREFIFO_C13 COREFIFO_C13_0_0(
         // Outputs
         .FULL     ( COREFIFO_C13_0_0_FULL ),
         .EMPTY    ( COREFIFO_C13_0_0_EMPTY ),
-        .Q        ( COREFIFO_C13_0_0_Q ) 
+        .Q        ( LANE_RX_K_net_0 ) 
         );
 
 //--------OR2
@@ -398,20 +419,23 @@ RxLaneControl #(
         .g_NumberOfIlasSequences   ( 3 ) )
 RxLaneControl_0(
         // Inputs
-        .Clock            ( Logic_Clock ),
-        .Reset_N          ( Logic_Reser_N ),
-        .CDR_READY        ( Synchronizer_0_Data_Out ),
-        .CDR_VAL          ( Synchronizer_0_0_Data_Out ),
-        .Input_Data       ( COREFIFO_C12_0_1_Q ),
-        .Input_K          ( COREFIFO_C13_0_0_Q ),
+        .Clock             ( Logic_Clock ),
+        .Reset_N           ( Logic_Reser_N ),
+        .Input_Data        ( LANE_RX_DATA_net_0 ),
+        .Input_K           ( LANE_RX_K_net_0 ),
+        .CDR_READY         ( Synchronizer_0_Data_Out ),
+        .CDR_VAL           ( Synchronizer_0_0_Data_Out ),
+        .CTRL_Fault_CLR    ( CTRL_Fault_CLR ),
+        .Status_Fault_CLR  ( GND_net ),
         // Outputs
-        .CTRL_Synced      ( CTRL_Synced_net_0 ),
-        .CTRL_ILAS_Go     ( CTRL_ILAS_Go_net_0 ),
-        .CTRL_Data_Go     ( CTRL_Data_Go_net_0 ),
-        .CTRL_Fault_Sync  (  ),
-        .CTRL_Fault_ILAS  (  ),
-        .Output_Data      ( RxLaneControl_0_Output_Data ),
-        .Output_DataWrite ( RxLaneControl_0_Output_DataWrite ) 
+        .Output_Data       ( RxLaneControl_0_Output_Data ),
+        .Output_DataWrite  ( RxLaneControl_0_Output_DataWrite ),
+        .CTRL_Synced       ( CTRL_Synced_net_0 ),
+        .CTRL_ILAS_Go      ( CTRL_ILAS_Go_net_0 ),
+        .CTRL_Data_Go      ( CTRL_Data_Go_net_0 ),
+        .CTRL_Fault        ( CTRL_Fault_net_0 ),
+        .Status_CTRL_Fault ( RxLaneControl_0_Status_CTRL_Fault ),
+        .Status_FSM_State  ( RxLaneControl_0_Status_FSM_State ) 
         );
 
 //--------Synchronizer
@@ -499,15 +523,16 @@ Transceiver_LaneStatus Transceiver_LaneStatus_0(
         // Inputs
         .Clock               ( Logic_Clock ),
         .Reset_N             ( Logic_Reser_N ),
-        .AlligmentFifo_Count ( AlignmentLane_Fifo_0_Count ),
         .TxClk_Stable        ( Synchronizer_0_2_4_Data_Out ),
         .Rx_Ready            ( Synchronizer_0_Data_Out ),
         .Rx_Val              ( Synchronizer_0_0_Data_Out ),
-        .Rx_SyncFault        ( GND_net ),
+        .Rx_LaneFault        ( RxLaneControl_0_Status_CTRL_Fault ),
         .RxFifo_Full         ( Synchronizer_0_2_0_Data_Out ),
         .RxFifo_Empty        ( Synchronizer_0_2_1_Data_Out ),
         .TxFifo_Full         ( Synchronizer_0_2_2_Data_Out ),
         .TxFifo_Empty        ( Synchronizer_0_2_3_Data_Out ),
+        .AlligmentFifo_Count ( AlignmentLane_Fifo_0_Count ),
+        .RxFsmState          ( RxLaneControl_0_Status_FSM_State ),
         // Outputs
         .StatusVector        ( StatusVector_net_0 ) 
         );

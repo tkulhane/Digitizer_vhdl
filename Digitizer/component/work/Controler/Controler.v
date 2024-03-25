@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Feb 25 23:24:42 2024
+// Created by SmartDesign Mon Mar 18 12:05:11 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -15,6 +15,8 @@ module Controler(
     ADC_GPIO_3,
     ADC_GPIO_4,
     ADC_LDO_PWR_GOOD,
+    ANICI_busy,
+    ANICI_rx_data,
     ANW_Fifo_Full,
     BTN,
     CMD_Fifo_Empty,
@@ -40,6 +42,10 @@ module Controler(
     ADC_PWR_RUN,
     ADC_sclk,
     ADC_ss_n,
+    ANICI_addr,
+    ANICI_data,
+    ANICI_enable_cmd,
+    ANICI_write_read,
     ANW_Fifo_Write_Data,
     ANW_Fifo_Write_Enable,
     BOARD_PWR_RUN,
@@ -95,6 +101,8 @@ input         ADC_GPIO_2;
 input         ADC_GPIO_3;
 input         ADC_GPIO_4;
 input         ADC_LDO_PWR_GOOD;
+input         ANICI_busy;
+input  [15:0] ANICI_rx_data;
 input         ANW_Fifo_Full;
 input         BTN;
 input         CMD_Fifo_Empty;
@@ -122,6 +130,10 @@ output        ADC_PWDN;
 output        ADC_PWR_RUN;
 output        ADC_sclk;
 output        ADC_ss_n;
+output [7:0]  ANICI_addr;
+output [15:0] ANICI_data;
+output        ANICI_enable_cmd;
+output        ANICI_write_read;
 output [39:0] ANW_Fifo_Write_Data;
 output        ANW_Fifo_Write_Enable;
 output        BOARD_PWR_RUN;
@@ -186,6 +198,12 @@ wire           ADI_SPI_0_0_busy;
 wire   [7:0]   ADI_SPI_0_0_rx_data_frame;
 wire           ADI_SPI_0_busy;
 wire   [7:0]   ADI_SPI_0_rx_data_frame;
+wire   [7:0]   ANICI_addr_net_0;
+wire           ANICI_busy;
+wire   [15:0]  ANICI_data_net_0;
+wire           ANICI_enable_cmd_net_0;
+wire   [15:0]  ANICI_rx_data;
+wire           ANICI_write_read_net_0;
 wire           Answer_Encoder_0_CD_busy;
 wire           ANW_Fifo_Full;
 wire   [39:0]  ANW_Fifo_Write_Data_net_0;
@@ -323,16 +341,20 @@ wire           CMD_Fifo_Read_Enable_net_1;
 wire           ANW_Fifo_Write_Enable_net_1;
 wire           COMM_write_read_net_1;
 wire           COMM_enable_cmd_net_1;
+wire           TRNV_write_read_net_1;
+wire           TRNV_enable_cmd_net_1;
 wire   [7:0]   TRG_addr_net_1;
 wire   [15:0]  TRG_data_net_1;
 wire   [39:0]  ANW_Fifo_Write_Data_net_1;
 wire   [7:0]   COMM_addr_net_1;
 wire   [3:0]   COMM_comm_number_net_1;
 wire   [15:0]  COMM_data_net_1;
-wire           TRNV_write_read_net_1;
 wire   [7:0]   TRNV_addr_net_1;
 wire   [15:0]  TRNV_data_net_1;
-wire           TRNV_enable_cmd_net_1;
+wire           ANICI_write_read_net_1;
+wire   [7:0]   ANICI_addr_net_1;
+wire   [15:0]  ANICI_data_net_1;
+wire           ANICI_enable_cmd_net_1;
 wire   [10:10] Outputs_slice_0;
 wire   [11:11] Outputs_slice_1;
 wire   [3:3]   Outputs_slice_2;
@@ -411,6 +433,10 @@ assign COMM_write_read_net_1       = COMM_write_read_net_0;
 assign COMM_write_read             = COMM_write_read_net_1;
 assign COMM_enable_cmd_net_1       = COMM_enable_cmd_net_0;
 assign COMM_enable_cmd             = COMM_enable_cmd_net_1;
+assign TRNV_write_read_net_1       = TRNV_write_read_net_0;
+assign TRNV_write_read             = TRNV_write_read_net_1;
+assign TRNV_enable_cmd_net_1       = TRNV_enable_cmd_net_0;
+assign TRNV_enable_cmd             = TRNV_enable_cmd_net_1;
 assign TRG_addr_net_1              = TRG_addr_net_0;
 assign TRG_addr[7:0]               = TRG_addr_net_1;
 assign TRG_data_net_1              = TRG_data_net_0;
@@ -423,14 +449,18 @@ assign COMM_comm_number_net_1      = COMM_comm_number_net_0;
 assign COMM_comm_number[3:0]       = COMM_comm_number_net_1;
 assign COMM_data_net_1             = COMM_data_net_0;
 assign COMM_data[15:0]             = COMM_data_net_1;
-assign TRNV_write_read_net_1       = TRNV_write_read_net_0;
-assign TRNV_write_read             = TRNV_write_read_net_1;
 assign TRNV_addr_net_1             = TRNV_addr_net_0;
 assign TRNV_addr[7:0]              = TRNV_addr_net_1;
 assign TRNV_data_net_1             = TRNV_data_net_0;
 assign TRNV_data[15:0]             = TRNV_data_net_1;
-assign TRNV_enable_cmd_net_1       = TRNV_enable_cmd_net_0;
-assign TRNV_enable_cmd             = TRNV_enable_cmd_net_1;
+assign ANICI_write_read_net_1      = ANICI_write_read_net_0;
+assign ANICI_write_read            = ANICI_write_read_net_1;
+assign ANICI_addr_net_1            = ANICI_addr_net_0;
+assign ANICI_addr[7:0]             = ANICI_addr_net_1;
+assign ANICI_data_net_1            = ANICI_data_net_0;
+assign ANICI_data[15:0]            = ANICI_data_net_1;
+assign ANICI_enable_cmd_net_1      = ANICI_enable_cmd_net_0;
+assign ANICI_enable_cmd            = ANICI_enable_cmd_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -512,6 +542,7 @@ Answer_Encoder Answer_Encoder_0(
         .GPIO_rx_data               ( gpio_controler_0_read_data_frame ),
         .COMM_rx_data               ( COMM_rx_data ),
         .TRNV_rx_data               ( TRNV_rx_data ),
+        .ANICI_rx_data              ( ANICI_rx_data ),
         // Outputs
         .Fifo_Write_Data            ( ANW_Fifo_Write_Data_net_0 ),
         .Fifo_Write_Enable          ( ANW_Fifo_Write_Enable_net_0 ),
@@ -537,6 +568,7 @@ Command_Decoder Command_Decoder_0(
         .GPIO_busy                  ( gpio_controler_0_busy ),
         .COMM_busy                  ( COMM_busy ),
         .TRNV_busy                  ( TRNV_busy ),
+        .ANICI_busy                 ( ANICI_busy ),
         // Outputs
         .Fifo_Read_Enable           ( CMD_Fifo_Read_Enable_net_0 ),
         .AE_CMD_Data                ( Command_Decoder_0_AE_CMD_Data ),
@@ -583,6 +615,10 @@ Command_Decoder Command_Decoder_0(
         .TRNV_write_read            ( TRNV_write_read_net_0 ),
         .TRNV_addr                  ( TRNV_addr_net_0 ),
         .TRNV_data                  ( TRNV_data_net_0 ),
+        .ANICI_enable_cmd           ( ANICI_enable_cmd_net_0 ),
+        .ANICI_write_read           ( ANICI_write_read_net_0 ),
+        .ANICI_addr                 ( ANICI_addr_net_0 ),
+        .ANICI_data                 ( ANICI_data_net_0 ),
         .Diag_Valid                 (  ) 
         );
 

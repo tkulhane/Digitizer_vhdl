@@ -21,7 +21,9 @@ entity Transceiver_Controller is
         write_data_frame : in std_logic_vector(15 downto 0);
         read_data_frame : out std_logic_vector(15 downto 0);
 
-        StatusLanes_Vector : std_logic_vector((g_NumberOfLanes * 32) - 1 downto 0)
+        Lanes_Restart : out std_logic;
+
+        StatusLanes_Vector : in std_logic_vector((g_NumberOfLanes * 32) - 1 downto 0)
 
 
     );
@@ -62,7 +64,8 @@ architecture rtl of Transceiver_Controller is
 
 
     constant CMD_TRNV_GENERAL_STATUS    : std_logic_vector(7 downto 0) := x"00";
-
+    constant CMD_TRNV_LANES_RESTART     : std_logic_vector(7 downto 0) := x"01";
+ 
  
 
 ------------------------------------------------------------------------------------------------------------
@@ -94,6 +97,8 @@ architecture rtl of Transceiver_Controller is
 
     signal StatusArray_XCVR_Last : type_LaneStatus_vector_array;
     signal StatusArray_FIFO_Last : type_LaneStatus_vector_array;
+
+    signal Lanes_Restart_signal : std_logic;
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -136,6 +141,8 @@ begin
 
     end generate StatusArray_GEN;
 
+
+    Lanes_Restart <= Lanes_Restart_signal;
 
 ------------------------------------------------------------------------------------------------------------
 --FSM CMD ride
@@ -247,6 +254,7 @@ begin
     
         if(Reset_N = '0') then 
             read_data_frame <= (others => '0');
+            Lanes_Restart_signal <= '0';
 
 
         elsif(Clock'event and Clock = '1') then    
@@ -266,7 +274,9 @@ begin
                     when CMD_TRNV_GENERAL_STATUS =>
                         --REG_EXT_Resets <= write_data_frame;
                         null;
-                        
+
+                    when CMD_TRNV_LANES_RESTART =>
+                        Lanes_Restart_signal <= write_data_frame(0);                             
                     
                     when others =>
                         null;
@@ -330,7 +340,8 @@ begin
                         when CMD_TRNV_GENERAL_STATUS => 
                             read_data_frame <= X"5555";
                         
-
+                        when CMD_TRNV_LANES_RESTART =>
+                            read_data_frame(0) <= Lanes_Restart_signal;  
                     
                         when others =>
                             --read_data_frame <= (others => '0');

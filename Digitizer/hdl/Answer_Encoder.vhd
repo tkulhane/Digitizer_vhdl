@@ -53,6 +53,9 @@ entity Answer_Encoder is
         --transceiver control
         TRNV_rx_data : in std_logic_vector(15 downto 0);
 
+        --Analyz In Circ
+        ANICI_rx_data : in std_logic_vector(15 downto 0);
+
 
         Diag_Valid : out std_logic                                     
     );
@@ -343,6 +346,13 @@ begin
 
             when CMD_CONST_GET_TransceiversControl=>
                 periph_data <= CMD_DATA_Part_2 & TRNV_rx_data; 
+
+            --Analyz In Circ
+            when CMD_CONST_SET_AnalyzInCirc=>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_AnalyzInCirc=>
+                periph_data <= CMD_DATA_Part_2 & ANICI_rx_data; 
 
 
             when others =>

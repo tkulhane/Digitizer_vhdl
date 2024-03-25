@@ -35,7 +35,13 @@ entity Transceiver_LanesConnection is
 
     Data_Valid : out std_logic;
 
-    TRNV_CTRL_StatusLanes_Vector : out std_logic_vector((g_NumberOfLanes * 32) - 1 downto 0)
+    TRNV_CTRL_RESTART : in std_logic;
+    TRNV_CTRL_StatusLanes_Vector : out std_logic_vector((g_NumberOfLanes * 32) - 1 downto 0);
+
+    Transceivers_Rx_Data : out std_logic_vector((g_NumberOfLanes * 64) - 1 downto 0);
+    Transceivers_Rx_K : out std_logic_vector((g_NumberOfLanes * 8) - 1 downto 0);
+    
+    SYNCINB_OUT : out std_logic
 
 
   );
@@ -59,10 +65,18 @@ architecture rtl of Transceiver_LanesConnection is
     signal OutputData_Array : type_data_vector_array;
 
 
+    type type_LaneRxData_array is array(0 to (g_NumberOfLanes - 1)) of std_logic_vector(64 - 1 downto 0);
+    signal LANE_RX_DATA_Array : type_LaneRxData_array;
+
+    type type_LaneRxK_array is array(0 to (g_NumberOfLanes - 1)) of std_logic_vector(8 - 1 downto 0);
+    signal LANE_RX_K_Array : type_LaneRxK_array;
+
+
     signal CTRL_Data_Go_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
     signal CTRL_Synced_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
     signal CTRL_ILAS_Go_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
     signal CTRL_Empty_For_NonAll_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
+    signal CTRL_Fault_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
 
     signal Lanes_Input_MainData_Read_Vector : std_logic_vector(g_NumberOfLanes - 1 downto 0);
 
@@ -70,6 +84,7 @@ architecture rtl of Transceiver_LanesConnection is
     signal SYNCINB : std_logic;
     signal Lanes_Alignment_Fifo_Read : std_logic;
     signal Lanes_SYNC_OK : std_logic;
+    signal Lanes_CTRL_Fault_CLR : std_logic;
 
     type type_LanesStatusVector_array is array(0 to (g_NumberOfLanes - 1)) of std_logic_vector(32 - 1 downto 0);
     signal LanesStatusVector_Array : type_LanesStatusVector_array;
@@ -120,8 +135,12 @@ architecture rtl of Transceiver_LanesConnection is
         LANE_Data_Go : in std_logic_vector(g_NumOfLanes - 1 downto 0);
 
         LANE_Alignment_Fifo_Empty : in std_logic_vector(g_NumOfLanes - 1 downto 0);
+        LANE_Fault : in std_logic_vector(g_NumOfLanes - 1 downto 0);
+
+        TRNV_CTRL_Restart : in std_logic;
 
         SYNCINB : out std_logic;
+        LANE_CLR_Fault : out std_logic;
         Alignment_Fifo_Read : out std_logic
 
     
@@ -142,6 +161,7 @@ architecture rtl of Transceiver_LanesConnection is
             LANE0_RXD_P : in std_logic;
             LANE0_RXD_N : in std_logic;
             SYNC_OK : in std_logic;
+            CTRL_Fault_CLR : in std_logic;
             Input_Data_0 : in std_logic_vector(15 downto 0);
             Input_Data_1 : in std_logic_vector(15 downto 0);
             Input_Data_2 : in std_logic_vector(15 downto 0);
@@ -150,6 +170,7 @@ architecture rtl of Transceiver_LanesConnection is
             -- Outputs
             Input_MainData_Read : out std_logic;
             Empty_For_NonAll : out std_logic;
+            CTRL_Fault : out std_logic;
             CTRL_Data_Go : out std_logic;
             CTRL_Synced : out std_logic;
             CTRL_ILAS_Go : out std_logic;
@@ -159,7 +180,9 @@ architecture rtl of Transceiver_LanesConnection is
             Output_Data_1 : out std_logic_vector(15 downto 0);
             Output_Data_2 : out std_logic_vector(15 downto 0);
             Output_Data_3 : out std_logic_vector(15 downto 0);
-            StatusVector : out std_logic_vector(31 downto 0)
+            StatusVector : out std_logic_vector(31 downto 0);
+            LANE_RX_DATA : out std_logic_vector(63 downto 0);
+            LANE_RX_K : out std_logic_vector(7 downto 0)
 
             -- Inouts
 
@@ -221,6 +244,13 @@ begin
 
 
 
+    Transceivers_Rx_Data <= LANE_RX_DATA_Array(1) & LANE_RX_DATA_Array(0);
+    Transceivers_Rx_K  <= LANE_RX_K_Array(1) & LANE_RX_K_Array(0);
+    
+    SYNCINB_OUT <= SYNCINB;
+
+
+
 ------------------------------------------------------------------------------------------------------------
 --instance TxMainLinkController
 ------------------------------------------------------------------------------------------------------------ 
@@ -259,8 +289,12 @@ begin
         LANE_Data_Go => CTRL_Data_Go_Vector,
 
         LANE_Alignment_Fifo_Empty => CTRL_Empty_For_NonAll_Vector,
+        LANE_Fault => CTRL_Fault_Vector,
+
+        TRNV_CTRL_Restart => TRNV_CTRL_Restart,
 
         SYNCINB => SYNCINB,
+        LANE_CLR_Fault => Lanes_CTRL_Fault_CLR,
         Alignment_Fifo_Read => Lanes_Alignment_Fifo_Read
 
     );
@@ -287,6 +321,8 @@ begin
 
             SYNC_OK => Lanes_SYNC_OK,
             Read_Enable => Lanes_Alignment_Fifo_Read,
+
+            CTRL_Fault_CLR => Lanes_CTRL_Fault_CLR,
             
 
             -- Outputs
@@ -296,11 +332,14 @@ begin
             Output_Data_3 => OutputData_Array(6),
 
             Empty_For_NonAll => CTRL_Empty_For_NonAll_Vector(0),
+            CTRL_Fault => CTRL_Fault_Vector(0),
             CTRL_Data_Go => CTRL_Data_Go_Vector(0),
             CTRL_Synced => CTRL_Synced_Vector(0),
             CTRL_ILAS_Go => CTRL_ILAS_Go_Vector(0),
             Input_MainData_Read => Lanes_Input_MainData_Read_Vector(0),
             StatusVector => LanesStatusVector_Array(0),
+            LANE_RX_DATA => LANE_RX_DATA_Array(0),
+            LANE_RX_K => LANE_RX_K_Array(0),
 
 
             --lanes
@@ -331,6 +370,8 @@ begin
             
             SYNC_OK => Lanes_SYNC_OK,
             Read_Enable => Lanes_Alignment_Fifo_Read,
+
+            CTRL_Fault_CLR => Lanes_CTRL_Fault_CLR,
             
 
             -- Outputs
@@ -340,11 +381,14 @@ begin
             Output_Data_3 => OutputData_Array(7),
 
             Empty_For_NonAll => CTRL_Empty_For_NonAll_Vector(1),
+            CTRL_Fault => CTRL_Fault_Vector(1),
             CTRL_Data_Go => CTRL_Data_Go_Vector(1),
             CTRL_Synced => CTRL_Synced_Vector(1),
             CTRL_ILAS_Go => CTRL_ILAS_Go_Vector(1),
             Input_MainData_Read => Lanes_Input_MainData_Read_Vector(1),
             StatusVector => LanesStatusVector_Array(1),
+            LANE_RX_DATA => LANE_RX_DATA_Array(1),
+            LANE_RX_K => LANE_RX_K_Array(1),
 
 
             --lanes

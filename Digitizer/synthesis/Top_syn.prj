@@ -1,12 +1,15 @@
 #--  Synopsys, Inc.
 #--  Version S-2021.09M
 #--  Project file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_syn.prj
-#--  Written on Tue Feb 27 12:50:03 2024
+#--  Written on Sat Mar 23 19:10:07 2024
 
 
 #project files
 add_file -verilog "../component/polarfire_syn_comps.v"
 add_file -include "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core/request_code.v"
+add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/AnalyzInCirc_Controler.vhd"
+add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/AnalyzInCirc_FIFO.vhd"
+add_file -vhdl -lib work "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/hdl/AnalyzInCirc_Top.vhd"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/CORERESET_PF_C0/CORERESET_PF_C0_0/core/corereset_pf.v"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/CORERESET_PF_C0/CORERESET_PF_C0.v"
 add_file -verilog "C:/VHDL_temp/Digitizer/Digitizer_vhdl/Digitizer/component/work/PF_CCC_C0/PF_CCC_C0_0/PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v"
