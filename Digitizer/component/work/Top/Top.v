@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Mar 18 19:59:40 2024
+// Created by SmartDesign Sun Mar 31 14:52:03 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -625,11 +625,11 @@ Controler Controler_0(
         .ANW_Fifo_Full         ( Communication_0_ANW_FULL ),
         .COMM_busy             ( Communication_0_busy ),
         .TRNV_busy             ( Transceiver_Main_0_busy ),
+        .ANICI_busy            ( AnalyzInCirc_Top_0_busy ),
         .TRG_rx_data           ( Data_Block_0_C_read_data_frame ),
         .CMD_Fifo_Read_Data    ( Communication_0_CMD_Q ),
         .COMM_rx_data          ( Communication_0_read_data_frame ),
         .TRNV_rx_data          ( Transceiver_Main_0_read_data_frame ),
-        .ANICI_busy            ( AnalyzInCirc_Top_0_busy ),
         .ANICI_rx_data         ( AnalyzInCirc_Top_0_read_data_frame ),
         // Outputs
         .ADC_sclk              ( ADC_sclk_net_0 ),
@@ -668,6 +668,8 @@ Controler Controler_0(
         .COMM_enable_cmd       ( Controler_0_COMM_enable_cmd ),
         .TRNV_write_read       ( Controler_0_TRNV_write_read ),
         .TRNV_enable_cmd       ( Controler_0_TRNV_enable_cmd ),
+        .ANICI_write_read      ( Controler_0_ANICI_write_read ),
+        .ANICI_enable_cmd      ( Controler_0_ANICI_enable_cmd ),
         .TRG_addr              ( Controler_0_TRG_addr ),
         .TRG_data              ( Controler_0_TRG_data ),
         .ANW_Fifo_Write_Data   ( Controler_0_ANW_Fifo_Write_Data ),
@@ -676,10 +678,8 @@ Controler Controler_0(
         .COMM_data             ( Controler_0_COMM_data ),
         .TRNV_addr             ( Controler_0_TRNV_addr ),
         .TRNV_data             ( Controler_0_TRNV_data ),
-        .ANICI_write_read      ( Controler_0_ANICI_write_read ),
         .ANICI_addr            ( Controler_0_ANICI_addr ),
         .ANICI_data            ( Controler_0_ANICI_data ),
-        .ANICI_enable_cmd      ( Controler_0_ANICI_enable_cmd ),
         // Inouts
         .HMC_sdio              ( HMC_sdio ),
         .ADC_sdio              ( ADC_sdio ) 
@@ -805,6 +805,7 @@ Transceiver_Main Transceiver_Main_0(
         .LANE1_TXD_P          ( LANE1_TXD_P_net_0 ),
         .Data_Valid           (  ),
         .busy                 ( Transceiver_Main_0_busy ),
+        .SYNCINB_OUT          ( Transceiver_Main_0_SYNCINB_OUT ),
         .Output_Data_7        ( Transceiver_Main_0_Output_Data_7 ),
         .Output_Data_0        ( Transceiver_Main_0_Output_Data_0 ),
         .Output_Data_1        ( Transceiver_Main_0_Output_Data_1 ),
@@ -815,8 +816,7 @@ Transceiver_Main Transceiver_Main_0(
         .Output_Data_6        ( Transceiver_Main_0_Output_Data_6 ),
         .read_data_frame      ( Transceiver_Main_0_read_data_frame ),
         .Transceivers_Rx_Data ( Transceiver_Main_0_Transceivers_Rx_Data ),
-        .Transceivers_Rx_K    ( Transceiver_Main_0_Transceivers_Rx_K ),
-        .SYNCINB_OUT          ( Transceiver_Main_0_SYNCINB_OUT ) 
+        .Transceivers_Rx_K    ( Transceiver_Main_0_Transceivers_Rx_K ) 
         );
 
 

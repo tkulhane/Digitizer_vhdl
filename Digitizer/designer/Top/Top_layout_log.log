@@ -51,10 +51,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 6 seconds
+Total time spent in I/O Bank and Globals Assigner: 5 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Sat Mar 23 19:16:39 2024
+Design: Top                             Started: Sun Mar 31 22:05:43 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -63,52 +63,52 @@ Improving placement ...
 
 CDC Report:
     Total number of CDC synchronizer driver/sink pairs     : 544
-    Maximum distance between CDC synchronizer driver & sink:   2 cluster(s)
+    Maximum distance between CDC synchronizer driver & sink:   1 cluster(s)
 
 End of placement.
 
 Placer Runtime Summary   :
 Clustering (1 pass)      : 33 seconds
-Placement                : 182 seconds
-Improvement              : 207 seconds
+Placement                : 177 seconds
+Improvement              : 196 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Sat Mar 23 19:25:18 2024
-Total CPU Time:     00:12:40            Total Elapsed Time: 00:08:39
-Total Memory Usage: 3608.3 Mbytes
+Finished: Sun Mar 31 22:14:02 2024
+Total CPU Time:     00:12:11            Total Elapsed Time: 00:08:19
+Total Memory Usage: 3611.3 Mbytes
                         o - o - o - o - o - o
 
 
 Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
-    Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
-       Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/N_3
-Clock pins: 1
     Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
        Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/N_3
 Clock pins: 1
+    Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
+       Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/N_3
+Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sat Mar 23 19:26:07 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sun Mar 31 22:14:50 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Sat Mar 23 19:28:02 2024
-Total CPU Time:     00:04:16            Total Elapsed Time: 00:01:55
-Total Memory Usage: 5521.1 Mbytes
+Finished: Sun Mar 31 22:16:36 2024
+Total CPU Time:     00:04:21            Total Elapsed Time: 00:01:46
+Total Memory Usage: 5569.0 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+--------+--------+------------+
 | Type          | Used   | Total  | Percentage |
 +---------------+--------+--------+------------+
-| 4LUT          | 142793 | 299544 | 47.67      |
-| DFF           | 65637  | 299544 | 21.91      |
+| 4LUT          | 142970 | 299544 | 47.73      |
+| DFF           | 65750  | 299544 | 21.95      |
 | I/O Register  | 0      | 510    | 0.00       |
-| Logic Element | 144874 | 299544 | 48.36      |
+| Logic Element | 145080 | 299544 | 48.43      |
 +---------------+--------+--------+------------+
 
 I/O Placement

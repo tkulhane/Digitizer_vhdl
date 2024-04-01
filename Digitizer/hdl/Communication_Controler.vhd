@@ -27,12 +27,15 @@ architecture rtl of Communication_Controler is
 
     constant ACTIVITY_MSG_TIME     : natural := 10000;
 
-
+    constant CMD_COMSW_DUMMY                        : std_logic_vector(7 downto 0) := x"01";
     constant CMD_COMSW_DATA_DESTINATION             : std_logic_vector(7 downto 0) := x"11";
     constant CMD_COMSW_DATA_DESTINATION_CMD_SOURCE  : std_logic_vector(7 downto 0) := x"12";
     constant CMD_COMSW_CMD_COM_SOURCE               : std_logic_vector(7 downto 0) := x"31";
     constant CMD_COMSW_ACTIVITY_MSG                 : std_logic_vector(7 downto 0) := x"A1";
     constant CMD_COMSW_CONNECTED_COM                : std_logic_vector(7 downto 0) := x"A5";
+
+
+    constant NUM_OF_COMMS : natural := 7;
     
     
 
@@ -43,12 +46,16 @@ architecture rtl of Communication_Controler is
     signal read_signal : std_logic;
     signal address : std_logic_vector(7 downto 0);
 
-    signal Communication_Vote_Number : integer range 0 to 3;
+    signal comm_number_INT : integer range 0 to NUM_OF_COMMS;
+    signal Communication_Vote_Number : integer range 0 to NUM_OF_COMMS;
     signal Communication_vote_vector : std_logic_vector(2 downto 0);
 
-    signal ActivityCounter : unsigned(31 downto 0);
-    signal ActivityMSG : std_logic;
-    signal ActivityConnection : std_logic;
+
+    type type_ActivityCounterUnsigned_array is array(0 to (NUM_OF_COMMS - 1)) of unsigned(31 downto 0);
+    signal ActivityCounter : type_ActivityCounterUnsigned_array;
+    
+    signal ActivityMSG : std_logic_vector(NUM_OF_COMMS - 1 downto 0);
+    signal ActivityConnection : std_logic_vector(NUM_OF_COMMS - 1 downto 0);
     
     signal Data_Valid : std_logic;
 
@@ -62,6 +69,7 @@ begin
 
     Cummunication_Switch_Vote_Vector <= Communication_vote_vector;
 
+    comm_number_INT <= to_integer(unsigned(comm_number(2 downto 0))); 
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -181,6 +189,8 @@ begin
 
         elsif(Clock'event and Clock = '1') then    
             
+            --read_data_frame <= (others => '0');
+            ActivityMSG <= (others => '0');
 
             if(write_signal = '1') then
                 
@@ -189,6 +199,20 @@ begin
                     when CMD_COMSW_DATA_DESTINATION =>
                         --Communication_vote_vector <= write_data_frame(2 downto 0);
                         Communication_Vote_Number <= to_integer(unsigned(write_data_frame(2 downto 0)));
+
+                    when CMD_COMSW_DATA_DESTINATION_CMD_SOURCE => 
+                        Communication_Vote_Number <= to_integer(unsigned(comm_number(2 downto 0))); 
+
+                    when CMD_COMSW_ACTIVITY_MSG =>
+                        
+
+                        xxx : for i in 0 to (NUM_OF_COMMS - 1) loop
+                            ActivityMSG(i) <= '1';
+                        end loop xxx;
+
+                        --if(comm_number_INT > 0) then
+                           --ActivityMSG(comm_number_INT - 1) <= '1';
+                        --end if;
 
                     when others =>
                         null;
@@ -199,7 +223,12 @@ begin
 
             elsif(read_signal = '1') then
 
+                read_data_frame <= (others => '0');
+
                 case address is
+
+                    when CMD_COMSW_DUMMY => 
+                        read_data_frame <= x"ABCD";
 
                     when CMD_COMSW_DATA_DESTINATION =>
                         read_data_frame <=  x"000" & '0' & std_logic_vector(to_unsigned(Communication_Vote_Number, 3));
@@ -209,6 +238,16 @@ begin
                         
                     when CMD_COMSW_ACTIVITY_MSG =>
                         read_data_frame <= write_data_frame;
+                                               
+                        if(comm_number_INT > 0) then
+                            ActivityMSG(comm_number_INT - 1) <= '1';
+                        end if;
+
+                    when CMD_COMSW_CONNECTED_COM =>
+                        
+                        CMD_COMSW_CONNECTED_COM_For : for i in 0 to (NUM_OF_COMMS - 1) loop
+                            read_data_frame(i) <= ActivityConnection(i);
+                        end loop CMD_COMSW_CONNECTED_COM_For;
 
                     when others =>
                         read_data_frame <= (others => '0');
@@ -264,36 +303,39 @@ begin
 
     begin
     
-        if(Reset_N = '0') then 
-            ActivityCounter <= (others => '0');
-            ActivityConnection <= '0';
+        ActivityTimerFor : for i in 0 to (NUM_OF_COMMS - 1) loop
 
-        elsif(Clock'event and Clock = '1') then    
+            if(Reset_N = '0') then 
+                ActivityCounter(i) <= (others => '0');
+                ActivityConnection(i) <= '0';
 
-
-            if(ActivityMSG = '1') then      
-                ActivityCounter <= (others => '0');
-                ActivityConnection <= '1';
-
-            end if;
+            elsif(Clock'event and Clock = '1') then    
 
 
-            if(ActivityConnection = '1') then
-
-                ActivityCounter <= ActivityCounter + 1;
-
-                if(ActivityCounter >= ACTIVITY_MSG_TIME) then 
-
-                    ActivityConnection <= '0';
+                if(ActivityMSG(i) = '1') then      
+                    ActivityCounter(i) <= (others => '0');
+                    ActivityConnection(i) <= '1';
 
                 end if;
 
+
+                if(ActivityConnection(i) = '1') then
+
+                    ActivityCounter(i) <= ActivityCounter(i) + 1;
+
+                    if(ActivityCounter(i) >= ACTIVITY_MSG_TIME) then 
+
+                        ActivityConnection(i) <= '0';
+
+                    end if;
+
+                end if;
+
+
             end if;
 
+        end loop ActivityTimerFor;
 
-
-
-        end if;
 
     end process;
 
