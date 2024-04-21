@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Feb 12 20:39:47 2024
+// Created by SmartDesign Sat Apr 20 15:45:08 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -82,6 +82,8 @@ wire   [15:0] C_write_data_frame;
 wire          C_write_read;
 wire          Clock;
 wire   [31:0] Communication_Builder_0_Communication_Data_Frame;
+wire          Communication_Builder_0_CountOfEventWord_Read;
+wire          Communication_Builder_0_CountOfSampleWord_Read;
 wire   [9:0]  Communication_Builder_0_Event_RAM_R_Address;
 wire   [7:0]  Communication_Builder_0_Event_RAM_W_Data_Status;
 wire          Communication_Builder_0_Event_RAM_W_Enable_Status;
@@ -104,6 +106,8 @@ wire   [7:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Status;
 wire          Fifo_RESET_N;
 wire          FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
 wire          FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable;
+wire          FIFOs_Reader_0_CountOfEventWord_Write;
+wire          FIFOs_Reader_0_CountOfSampleWord_Write;
 wire   [9:0]  FIFOs_Reader_0_Event_RAM_W_Address;
 wire   [19:0] FIFOs_Reader_0_Event_RAM_W_Data_Number;
 wire   [19:0] FIFOs_Reader_0_Event_RAM_W_Data_Size;
@@ -204,26 +208,28 @@ Communication_Builder Communication_Builder_0(
         // Inputs
         .Clock                       ( Clock ),
         .Reset_N                     ( Reset_N ),
-        .Communication_Data_Full     ( Diag_1_net_0 ),
-        .Communication_DATA_Ack      ( Communication_Builder_RUN ),
         .Event_RAM_R_Data_Start_ADDR ( Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR ),
         .Event_RAM_R_Data_Number     ( Event_Info_RAM_Block_0_B_DOUT_Event_Number ),
         .Event_RAM_R_Data_Size       ( Event_Info_RAM_Block_0_B_DOUT_Event_Size ),
         .Event_RAM_R_Data_Status     ( Event_Info_RAM_Block_0_B_DOUT_Event_Status ),
         .Sample_RAM_R_Data           ( Sample_RAM_Block_0_B_Output_Data ),
+        .Communication_Data_Full     ( Diag_1_net_0 ),
+        .Communication_DATA_Ack      ( Communication_Builder_RUN ),
         // Outputs
-        .Event_RAM_W_Enable_Status   ( Communication_Builder_0_Event_RAM_W_Enable_Status ),
-        .Communication_Data_Enable   ( Diag_0_net_0 ),
-        .Communication_Data_Req      ( Communication_Data_Req_net_0 ),
-        .Diag_0                      (  ),
-        .Diag_1                      (  ),
-        .Diag_2                      (  ),
-        .Diag_3                      (  ),
         .Event_RAM_R_Address         ( Communication_Builder_0_Event_RAM_R_Address ),
+        .Event_RAM_W_Enable_Status   ( Communication_Builder_0_Event_RAM_W_Enable_Status ),
         .Event_RAM_W_Data_Status     ( Communication_Builder_0_Event_RAM_W_Data_Status ),
         .Sample_RAM_R_Address        ( Communication_Builder_0_Sample_RAM_R_Address ),
         .Sample_RAM_R_Block_Address  ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
-        .Communication_Data_Frame    ( Communication_Builder_0_Communication_Data_Frame ) 
+        .Communication_Data_Frame    ( Communication_Builder_0_Communication_Data_Frame ),
+        .Communication_Data_Enable   ( Diag_0_net_0 ),
+        .Communication_Data_Req      ( Communication_Data_Req_net_0 ),
+        .CountOfSampleWord_Read      ( Communication_Builder_0_CountOfSampleWord_Read ),
+        .CountOfEventWord_Read       ( Communication_Builder_0_CountOfEventWord_Read ),
+        .Diag_0                      (  ),
+        .Diag_1                      (  ),
+        .Diag_2                      (  ),
+        .Diag_3                      (  ) 
         );
 
 //--------COREFIFO_C10
@@ -241,6 +247,20 @@ COREFIFO_C10 COREFIFO_C10_0(
         .EMPTY    ( Communication_Empty_net_0 ),
         .AFULL    ( Diag_1_net_0 ),
         .Q        ( Communication_Data_Frame_net_0 ) 
+        );
+
+//--------DataRamManage
+DataRamManage DataRamManage_0(
+        // Inputs
+        .Clock                   ( Clock ),
+        .Reset_N                 ( Reset_N ),
+        .CountOfSampleWord_Write ( FIFOs_Reader_0_CountOfSampleWord_Write ),
+        .CountOfEventWord_Write  ( FIFOs_Reader_0_CountOfEventWord_Write ),
+        .CountOfSampleWord_Read  ( Communication_Builder_0_CountOfSampleWord_Read ),
+        .CountOfEventWord_Read   ( Communication_Builder_0_CountOfEventWord_Read ),
+        // Outputs
+        .EnableOfWrite           (  ),
+        .EnableOfRead            (  ) 
         );
 
 //--------Event_Info_RAM_Block
@@ -272,8 +292,8 @@ FIFOs_Reader FIFOs_Reader_0(
         // Inputs
         .Clock                         ( Clock ),
         .Reset_N                       ( Reset_N ),
-        .Event_FIFO_Empty              ( Trigger_Top_Part_0_EMPTY ),
         .Event_FIFO_R_Data             ( Trigger_Top_Part_0_Q ),
+        .Event_FIFO_Empty              ( Trigger_Top_Part_0_EMPTY ),
         .Block_0_Sample_FIFO_0_R_Data  ( Input_Data_Part_0_Q_0 ),
         .Block_0_Sample_FIFO_1_R_Data  ( Input_Data_Part_0_Q_1 ),
         .Block_0_Sample_FIFO_2_R_Data  ( Input_Data_Part_0_Q_2 ),
@@ -287,20 +307,22 @@ FIFOs_Reader FIFOs_Reader_0(
         .Event_FIFO_R_Enable           ( Diag_1_0 ),
         .Block_0_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .Block_1_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
-        .Event_RAM_W_Enable_Start_ADDR ( FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR ),
-        .Event_RAM_W_Enable_Number     ( FIFOs_Reader_0_Event_RAM_W_Enable_Number ),
-        .Event_RAM_W_Enable_Size       ( FIFOs_Reader_0_Event_RAM_W_Enable_Size ),
-        .Event_RAM_W_Enable_Status     ( FIFOs_Reader_0_Event_RAM_W_Enable_Status ),
-        .Sample_RAM_W_Enable           ( FIFOs_Reader_0_Sample_RAM_W_Enable ),
-        .Diag_Valid                    (  ),
         .Event_RAM_W_Address           ( FIFOs_Reader_0_Event_RAM_W_Address ),
         .Event_RAM_W_Data_Start_ADDR   ( FIFOs_Reader_0_Event_RAM_W_Data_Start_ADDR ),
         .Event_RAM_W_Data_Number       ( FIFOs_Reader_0_Event_RAM_W_Data_Number ),
         .Event_RAM_W_Data_Size         ( FIFOs_Reader_0_Event_RAM_W_Data_Size ),
         .Event_RAM_W_Data_Status       ( FIFOs_Reader_0_Event_RAM_W_Data_Status ),
+        .Event_RAM_W_Enable_Start_ADDR ( FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR ),
+        .Event_RAM_W_Enable_Number     ( FIFOs_Reader_0_Event_RAM_W_Enable_Number ),
+        .Event_RAM_W_Enable_Size       ( FIFOs_Reader_0_Event_RAM_W_Enable_Size ),
+        .Event_RAM_W_Enable_Status     ( FIFOs_Reader_0_Event_RAM_W_Enable_Status ),
         .Sample_RAM_W_Address          ( FIFOs_Reader_0_Sample_RAM_W_Address ),
         .Sample_RAM_W_Block_Address    ( FIFOs_Reader_0_Sample_RAM_W_Block_Address ),
-        .Sample_RAM_W_Data             ( FIFOs_Reader_0_Sample_RAM_W_Data ) 
+        .Sample_RAM_W_Data             ( FIFOs_Reader_0_Sample_RAM_W_Data ),
+        .Sample_RAM_W_Enable           ( FIFOs_Reader_0_Sample_RAM_W_Enable ),
+        .CountOfSampleWord_Write       ( FIFOs_Reader_0_CountOfSampleWord_Write ),
+        .CountOfEventWord_Write        ( FIFOs_Reader_0_CountOfEventWord_Write ),
+        .Diag_Valid                    (  ) 
         );
 
 //--------Input_Data_Part

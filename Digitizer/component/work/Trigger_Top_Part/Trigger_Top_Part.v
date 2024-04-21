@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Feb 16 22:07:17 2024
+// Created by SmartDesign Fri Apr 19 20:41:17 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -60,7 +60,9 @@ wire          C_write_read;
 wire          Clock;
 wire          Control_Test_Generator_Enable_net_0;
 wire          COREFIFO_C5_0_AFULL;
+wire   [14:0] COREFIFO_C5_0_WRCNT;
 wire          EMPTY_net_0;
+wire          EventFifoFreeLogic_0_NotFree;
 wire   [17:0] Q_net_0;
 wire          RE;
 wire          Reset_N;
@@ -68,10 +70,10 @@ wire   [7:0]  TRG_Detect_Vector;
 wire   [11:0] TRG_Threshold_net_0;
 wire          Trigger_Control_0_Control_Abort;
 wire          Trigger_Control_0_Control_Enable;
+wire   [13:0] Trigger_Control_0_Control_EventNum;
 wire   [31:0] Trigger_Control_0_Control_Sample_Per_Event;
 wire   [11:0] Trigger_Control_0_Control_Threshold;
 wire          Trigger_Main_0_Control_Busy_Out;
-wire          Trigger_Main_0_Control_EnableRst;
 wire          Trigger_Main_0_Control_Trigger_Out;
 wire   [17:0] Trigger_Main_0_FIFO_Event_Data;
 wire          C_busy_net_1;
@@ -114,7 +116,21 @@ COREFIFO_C5 COREFIFO_C5_0(
         .EMPTY   ( EMPTY_net_0 ),
         .AFULL   ( COREFIFO_C5_0_AFULL ),
         .Q       ( Q_net_0 ),
-        .WRCNT   (  ) 
+        .WRCNT   ( COREFIFO_C5_0_WRCNT ) 
+        );
+
+//--------EventFifoFreeLogic
+EventFifoFreeLogic #( 
+        .g_FifoDepth          ( 16384 ),
+        .g_FifoRemainingWidth ( 15 ) )
+EventFifoFreeLogic_0(
+        // Inputs
+        .Clock          ( Clock ),
+        .Reset_N        ( Reset_N ),
+        .SamplePerEvent ( Trigger_Control_0_Control_Sample_Per_Event ),
+        .Fifo_CountWord ( COREFIFO_C5_0_WRCNT ),
+        // Outputs
+        .NotFree        ( EventFifoFreeLogic_0_NotFree ) 
         );
 
 //--------Trigger_Control
@@ -126,12 +142,14 @@ Trigger_Control Trigger_Control_0(
         .write_read                    ( C_write_read ),
         .addr_frame                    ( C_addr_frame ),
         .write_data_frame              ( C_write_data_frame ),
-        .Control_EnableRst             ( Trigger_Main_0_Control_EnableRst ),
+        .FIFO_Event_A_Full             ( COREFIFO_C5_0_AFULL ),
+        .FIFO_SampleEventComparator    ( EventFifoFreeLogic_0_NotFree ),
         .Control_Trigger_Out           ( Trigger_Main_0_Control_Trigger_Out ),
         .Control_Busy_Out              ( Trigger_Main_0_Control_Busy_Out ),
         // Outputs
         .busy                          ( C_busy_net_0 ),
         .read_data_frame               ( C_read_data_frame_net_0 ),
+        .Control_EventNum              ( Trigger_Control_0_Control_EventNum ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
         .Control_Enable                ( Trigger_Control_0_Control_Enable ),
         .Control_Abort                 ( Trigger_Control_0_Control_Abort ),
@@ -144,14 +162,13 @@ Trigger_Main Trigger_Main_0(
         // Inputs
         .Clock                    ( Clock ),
         .Reset_N                  ( Reset_N ),
+        .Control_EventNum         ( Trigger_Control_0_Control_EventNum ),
         .Control_Enable           ( Trigger_Control_0_Control_Enable ),
         .Control_Abort            ( Trigger_Control_0_Control_Abort ),
         .Control_Threshold        ( Trigger_Control_0_Control_Threshold ),
         .Control_Sample_Per_Event ( Trigger_Control_0_Control_Sample_Per_Event ),
-        .FIFO_Event_A_Full        ( COREFIFO_C5_0_AFULL ),
         .TRG_Detect_Vector        ( TRG_Detect_Vector ),
         // Outputs
-        .Control_EnableRst        ( Trigger_Main_0_Control_EnableRst ),
         .Control_Trigger_Out      ( Trigger_Main_0_Control_Trigger_Out ),
         .Control_Busy_Out         ( Trigger_Main_0_Control_Busy_Out ),
         .Control_AcqStart         (  ),

@@ -43,7 +43,9 @@ entity FIFOs_Reader is
         Sample_RAM_W_Block_Address : out std_logic_vector(3 downto 0);
         Sample_RAM_W_Data : out std_logic_vector(63 downto 0);
         Sample_RAM_W_Enable : out std_logic;
-        
+
+        CountOfSampleWord_Write : out std_logic;
+    	CountOfEventWord_Write : out std_logic;        
 
         Diag_Valid : out std_logic
     
@@ -78,6 +80,7 @@ architecture rtl of FIFOs_Reader is
     signal NewEventInFIFO : std_logic;
     signal EndEventInFIFO : std_logic;
     signal AbortedEventInFIFO : std_logic;
+    signal EventNumFromFifo : std_logic_vector(13 downto 0);
 
     signal Event_In_Process : std_logic;
     signal Event_In_Process_Set : std_logic;
@@ -103,6 +106,9 @@ architecture rtl of FIFOs_Reader is
     signal Event_Number_Counter : unsigned(19 downto 0);
 
 
+
+
+
 begin
 
 ------------------------------------------------------------------------------------------------------------
@@ -114,6 +120,8 @@ begin
     NewEventInFIFO <= Event_FIFO_R_Data(0);
     EndEventInFIFO <= Event_FIFO_R_Data(1);
     AbortedEventInFIFO <= Event_FIFO_R_Data(2);
+    EventNumFromFifo <= Event_FIFO_R_Data(17 downto 4);
+
 
     Sample_RAM_W_Address        <= std_logic_vector(Sample_RAM_W_Address_Unsigned(15 downto 0));
     Sample_RAM_W_Block_Address  <= "00" & std_logic_vector(Sample_RAM_W_Address_Unsigned(17 downto 16));
@@ -189,7 +197,7 @@ begin
     end process;
 
     --output function
-    process(state_reg,Sample_RAM_W_Address_Unsigned,Event_Size_Counter,Event_Number_Counter)
+    process(state_reg,Sample_RAM_W_Address_Unsigned,Event_Size_Counter,Event_Number_Counter,EventNumFromFifo)
     begin
 
         case state_reg is
@@ -217,7 +225,10 @@ begin
 
                 Event_Size_Counter_Reset_N <= '0';
                 Event_Size_Counter_Enable <= '0';
-                Event_Number_Counter_Enable <= '0'; 
+                Event_Number_Counter_Enable <= '0';
+
+                CountOfEventWord_Write  <= '0';
+                CountOfSampleWord_Write <= '0';
                 
             when Event_FIFO_Read =>
                 Event_FIFO_R_Enable <= '1';
@@ -243,6 +254,9 @@ begin
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '0';
                 Event_Number_Counter_Enable <= '0'; 
+                
+                CountOfEventWord_Write  <= '0';
+                CountOfSampleWord_Write <= '0';
 
             when Event_Process_Set =>
                 Event_FIFO_R_Enable <= '0';
@@ -261,13 +275,18 @@ begin
                 Event_RAM_W_Enable_Status <= '1';
 
                 Event_RAM_W_Data_Start_ADDR <= "00" & std_logic_vector(Sample_RAM_W_Address_Unsigned);
-                Event_RAM_W_Data_Number <= std_logic_vector(Event_Number_Counter);
+                --Event_RAM_W_Data_Number <= std_logic_vector(Event_Number_Counter);
+                Event_RAM_W_Data_Number <= "000000" & EventNumFromFifo;
                 Event_RAM_W_Data_Size <= (others => '0');
                 Event_RAM_W_Data_Status <= Event_Status_ID_InWrite;
 
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '0';
                 Event_Number_Counter_Enable <= '0'; 
+
+                CountOfEventWord_Write  <= '1';
+                CountOfSampleWord_Write <= '0';
+            
 
             when Event_Process_Reset =>
                 Event_FIFO_R_Enable <= '0';
@@ -293,6 +312,9 @@ begin
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '0';
                 Event_Number_Counter_Enable <= '0'; 
+                
+                CountOfEventWord_Write  <= '0';
+                CountOfSampleWord_Write <= '1';
 
             when Sample_FIFOs_Read_1 =>
                 Event_FIFO_R_Enable <= '0';
@@ -318,6 +340,9 @@ begin
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '1';
                 Event_Number_Counter_Enable <= '0'; 
+                
+                CountOfEventWord_Write  <= '0';
+                CountOfSampleWord_Write <= '1';
 
             when Sample_FIFOs_Read_2 =>
                 Event_FIFO_R_Enable <= '0';
@@ -343,11 +368,14 @@ begin
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '1';
                 Event_Number_Counter_Enable <= '0'; 
+                
+                CountOfEventWord_Write  <= '0';
+                CountOfSampleWord_Write <= '1';
 
             when Store_Event_End =>
                 Event_FIFO_R_Enable <= '0';
                 Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '1';
+                Block_1_Sample_FIFO_R_Enable <= '0';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '0';
                 Data_MUX_Sel <= 1;
@@ -368,6 +396,9 @@ begin
                 Event_Size_Counter_Reset_N <= '1';
                 Event_Size_Counter_Enable <= '1';
                 Event_Number_Counter_Enable <= '1'; 
+                
+                CountOfEventWord_Write  <= '0';
+                CountOfSampleWord_Write <= '0';
 
             when others =>
                 Event_FIFO_R_Enable <= '0';
@@ -393,6 +424,9 @@ begin
                 Event_Size_Counter_Reset_N <= '0';
                 Event_Size_Counter_Enable <= '0';
                 Event_Number_Counter_Enable <= '0'; 
+                
+                CountOfEventWord_Write  <= '0';
+                CountOfSampleWord_Write <= '0';
 
 
 
@@ -558,6 +592,7 @@ begin
         end if;
 
     end process;
+
 
 
 

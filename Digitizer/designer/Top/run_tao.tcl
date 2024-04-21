@@ -163,6 +163,7 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\cmd_table_trigger.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd}
+read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EventFifoFreeLogic.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C5\PF_CCC_C5_0\PF_CCC_C5_PF_CCC_C5_0_PF_CCC.v}

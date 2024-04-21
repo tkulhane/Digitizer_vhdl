@@ -25,7 +25,7 @@ end Communication_Controler;
 
 architecture rtl of Communication_Controler is
 
-    constant ACTIVITY_MSG_TIME     : natural := 10000;
+    constant ACTIVITY_MSG_TIME     : natural := 125000000;
 
     constant CMD_COMSW_DUMMY                        : std_logic_vector(7 downto 0) := x"01";
     constant CMD_COMSW_DATA_DESTINATION             : std_logic_vector(7 downto 0) := x"11";
@@ -56,6 +56,7 @@ architecture rtl of Communication_Controler is
     
     signal ActivityMSG : std_logic_vector(NUM_OF_COMMS - 1 downto 0);
     signal ActivityConnection : std_logic_vector(NUM_OF_COMMS - 1 downto 0);
+    signal ActivityConnection_CLR : std_logic_vector(NUM_OF_COMMS - 1 downto 0);
     
     signal Data_Valid : std_logic;
 
@@ -205,14 +206,15 @@ begin
 
                     when CMD_COMSW_ACTIVITY_MSG =>
                         
+                        --ActivityMSG <= (others => '1'); 
 
-                        xxx : for i in 0 to (NUM_OF_COMMS - 1) loop
-                            ActivityMSG(i) <= '1';
-                        end loop xxx;
+                        --xxx : for i in 0 to (NUM_OF_COMMS - 1) loop
+                        --    ActivityMSG(i) <= '1';
+                        --end loop xxx;
 
-                        --if(comm_number_INT > 0) then
-                           --ActivityMSG(comm_number_INT - 1) <= '1';
-                        --end if;
+                        if(comm_number_INT > 0) then
+                           ActivityMSG(comm_number_INT - 1) <= '1';
+                        end if;
 
                     when others =>
                         null;
@@ -238,7 +240,9 @@ begin
                         
                     when CMD_COMSW_ACTIVITY_MSG =>
                         read_data_frame <= write_data_frame;
-                                               
+
+                        --ActivityMSG <= (others => '1');                      
+
                         if(comm_number_INT > 0) then
                             ActivityMSG(comm_number_INT - 1) <= '1';
                         end if;
@@ -297,46 +301,85 @@ begin
 
 
 ------------------------------------------------------------------------------------------------------------
+--communication activity control
+------------------------------------------------------------------------------------------------------------
+    process(Reset_N, Clock)
+
+    begin
+    
+        
+
+            if(Reset_N = '0') then 
+                ActivityResetFor : for i in 0 to (NUM_OF_COMMS - 1) loop
+                    --ActivityCounter(i) <= (others => '0');
+                    ActivityConnection(i) <= '0';
+                end loop ActivityResetFor;
+
+
+            elsif(Clock'event and Clock = '1') then    
+
+                ActivityMSGFor : for i in 0 to (NUM_OF_COMMS - 1) loop
+
+                    if(ActivityMSG(i) = '1') then      
+                        --ActivityCounter(i) <= (others => '0');
+                        ActivityConnection(i) <= '1';
+
+                    elsif(ActivityConnection_CLR(i) = '1') then
+                        ActivityConnection(i) <= '0';
+
+                    end if;
+
+                end loop ActivityMSGFor;
+
+
+
+
+
+            end if;
+
+        
+
+    end process;
+
+
+------------------------------------------------------------------------------------------------------------
 --communication activity timer
 ------------------------------------------------------------------------------------------------------------
     process(Reset_N, Clock)
 
     begin
     
-        ActivityTimerFor : for i in 0 to (NUM_OF_COMMS - 1) loop
-
             if(Reset_N = '0') then 
-                ActivityCounter(i) <= (others => '0');
-                ActivityConnection(i) <= '0';
+                ActivityResetTimerFor : for i in 0 to (NUM_OF_COMMS - 1) loop
+                    ActivityCounter(i) <= (others => '0');
+                    ActivityConnection_CLR(i) <= '0';
+                end loop ActivityResetTimerFor;
+
 
             elsif(Clock'event and Clock = '1') then    
 
+                ActivityConnectionTimerFor : for i in 0 to (NUM_OF_COMMS - 1) loop
 
-                if(ActivityMSG(i) = '1') then      
-                    ActivityCounter(i) <= (others => '0');
-                    ActivityConnection(i) <= '1';
+                    if(ActivityConnection(i) = '1') then
+                    
+                        ActivityCounter(i) <= ActivityCounter(i) + 1;
+                    
+                        if(ActivityCounter(i) >= ACTIVITY_MSG_TIME) then 
+                            ActivityConnection_CLR(i) <= '1';
 
-                end if;
+                        end if;
 
-
-                if(ActivityConnection(i) = '1') then
-
-                    ActivityCounter(i) <= ActivityCounter(i) + 1;
-
-                    if(ActivityCounter(i) >= ACTIVITY_MSG_TIME) then 
-
-                        ActivityConnection(i) <= '0';
+                    elsif(ActivityConnection(i) = '0') then
+                        ActivityConnection_CLR(i) <= '0';
+                        ActivityCounter(i) <= (others => '0');
 
                     end if;
 
-                end if;
-
+                end loop ActivityConnectionTimerFor;
 
             end if;
 
-        end loop ActivityTimerFor;
-
-
+        
     end process;
 
 

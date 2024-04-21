@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Fri Feb 16 21:58:09 2024
+// Created by Microsemi SmartDesign Wed Apr 17 12:25:59 2024
 // Parameters for COREFIFO
 //--------------------------------------------------------------------
 
@@ -7,7 +7,7 @@
 parameter AE_STATIC_EN = 0;
 parameter AEVAL = 4;
 parameter AF_STATIC_EN = 1;
-parameter AFVAL = 16300;
+parameter AFVAL = 16380;
 parameter CTRL_TYPE = 2;
 parameter DIE_SIZE = 15;
 parameter ECC = 0;

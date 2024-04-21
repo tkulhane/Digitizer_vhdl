@@ -23,6 +23,9 @@ use ieee.numeric_std.all;
 use std.textio.all;
 use ieee.std_logic_textio.all;
 
+library work;
+use work.cmd_table_trigger.all;
+
 entity TB_Data_Block is
 end TB_Data_Block;
 
@@ -370,15 +373,19 @@ begin
 
         --read threshold
         --SEND_CMD( X"01", X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        
         --set threshold
-        SEND_CMD( X"01", X"001A", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        SEND_CMD( CMD_TRG_THRESHOLD, X"0DAC", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         --set samples count
-        SEND_CMD( X"02", X"0FA0", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
-         
+        SEND_CMD( CMD_TRG_SAMPLE_PER_EVENT_L, X"270F", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        --set event count
+        SEND_CMD( CMD_TRG_SET_NUMBERS_OF_EVENTS_L, X"0004", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        --mode
+        --SEND_CMD( CMD_TRG_ABORT_MODE, X"0001", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
 
-        wait for 200 ns;
+        wait for 100 ns;
         --Enable Acqusition
-        SEND_CMD( X"00", X"0001", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        SEND_CMD( CMD_TRG_ENABLE, X"0001", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         
         wait for 200 ns;
         --Enable Test Generator
@@ -390,7 +397,7 @@ begin
 
 
         wait for 8 us; 
-        SEND_CMD( X"00", X"0000", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);-- disable Acqusition 
+        --SEND_CMD( X"00", X"0000", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);-- disable Acqusition 
         --SEND_CMD( X"30", X"0000", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);-- disble Test Generator
 
 

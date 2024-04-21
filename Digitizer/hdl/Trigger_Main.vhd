@@ -15,9 +15,11 @@ entity Trigger_Main is
         Clock : in std_logic;
         Reset_N : in std_logic;
 
+        Control_EventNum : in std_logic_vector(14 - 1 downto 0);
+
         Control_Enable : in std_logic;
         Control_Abort : in std_logic;
-        Control_EnableRst : out std_logic; 
+        --Control_EnableRst : out std_logic; 
         Control_Threshold : in std_logic_vector(g_Data_Length - 1 downto 0);
         Control_Sample_Per_Event : in std_logic_vector(31 downto 0);
         Control_Trigger_Out : out std_logic;
@@ -26,7 +28,6 @@ entity Trigger_Main is
         
         ALL_FIFO_Enable : out std_logic;
         FIFO_Event_Data : out std_logic_vector(17 downto 0);
-        FIFO_Event_A_Full : in std_logic;
 
         --to trigger units
         TRG_Threshold : out std_logic_vector(g_Data_Length - 1 downto 0);
@@ -80,8 +81,8 @@ architecture rtl of Trigger_Main is
     signal Event_Info : std_logic_vector(14 - 1 downto 0);
 
 
-    signal ALL_FIFO_Enable_0 : std_logic;
-    signal FIFO_Event_Data_0 : std_logic_vector(17 downto 0);
+    --signal ALL_FIFO_Enable_0 : std_logic;
+    --signal FIFO_Event_Data_0 : std_logic_vector(17 downto 0);
 
 begin
 
@@ -93,10 +94,14 @@ begin
     Number_Of_SamplesTact_Per_Event <= unsigned(Control_Sample_Per_Event);
 
 
-    ACQ_Abort <= Control_Abort or FIFO_Event_A_Full;
-    Control_EnableRst <= ACQ_Abort;
+    ACQ_Abort <= Control_Abort; -- or FIFO_Event_A_Full;
+    --Control_EnableRst <= ACQ_Abort;
 
-    FIFO_Event_Data <= Event_Info & Event_Reserved_Bit & Event_End_Aborted & Event_End_In_Frame & Event_Start_In_Frame;
+    --FIFO_Event_Data <= Event_Info & Event_Reserved_Bit & Event_End_Aborted & Event_End_In_Frame & Event_Start_In_Frame;
+    FIFO_Event_Data <= Control_EventNum & Event_Reserved_Bit & Event_End_Aborted & Event_End_In_Frame & Event_Start_In_Frame;
+
+
+    --Event_Info <= Control_EventNum;
 
 ------------------------------------------------------------------------------------------------------------
 --Process: Delay ALL_FIFO_Enable_0 and FIFO_Event_Data_0 (1 cycle)

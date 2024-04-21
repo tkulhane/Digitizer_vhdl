@@ -127,6 +127,7 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\COREFIFO.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd}
+read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7_0\PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_Status_0\PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM.v}
@@ -163,6 +164,7 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\cmd_table_trigger.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd}
+read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EventFifoFreeLogic.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C5\PF_CCC_C5_0\PF_CCC_C5_PF_CCC_C5_0_PF_CCC.v}
@@ -225,6 +227,7 @@ read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\T
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v}
 set_top_level {Top}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREABC_C0\COREABC_C0_0\COREABC_C0_COREABC_C0_0_COREABC.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\COREFIFO_C1_COREFIFO_C1_0_COREFIFO.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\COREFIFO_C10_COREFIFO_C10_0_COREFIFO.sdc}
@@ -262,6 +265,7 @@ read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\w
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C6\I_XCVR\PF_XCVR_ERM_C6_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C7\I_XCVR\PF_XCVR_ERM_C7_I_XCVR_PF_XCVR.sdc}
 read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C8\I_XCVR\PF_XCVR_ERM_C8_I_XCVR_PF_XCVR.sdc}
+read_sdc -component {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C9\I_XCVR\PF_XCVR_ERM_C9_I_XCVR_PF_XCVR.sdc}
 derive_constraints
 write_sdc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.sdc}
 write_ndc {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\constraint\Top_derived_constraints.ndc}

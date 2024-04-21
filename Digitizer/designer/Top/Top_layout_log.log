@@ -21,7 +21,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Running Timing based Global Demotion. 
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
-        Moved all 882 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
+        Moved all 930 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
         Moved 56 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
@@ -51,10 +51,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 5 seconds
+Total time spent in I/O Bank and Globals Assigner: 6 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Sun Mar 31 22:05:43 2024
+Design: Top                             Started: Fri Apr 19 21:44:54 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -69,46 +69,46 @@ End of placement.
 
 Placer Runtime Summary   :
 Clustering (1 pass)      : 33 seconds
-Placement                : 177 seconds
-Improvement              : 196 seconds
+Placement                : 183 seconds
+Improvement              : 218 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Sun Mar 31 22:14:02 2024
-Total CPU Time:     00:12:11            Total Elapsed Time: 00:08:19
-Total Memory Usage: 3611.3 Mbytes
+Finished: Fri Apr 19 21:53:48 2024
+Total CPU Time:     00:12:51            Total Elapsed Time: 00:08:54
+Total Memory Usage: 3640.5 Mbytes
                         o - o - o - o - o - o
 
 
 Warning:  The following clocks are routed using regular routing resources instead of dedicated global resources. Clocks using regular routing are more susceptible to noise than those using dedicated global resources. Microchip recommends promoting these signals to dedicated global resources.
-    Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
-       Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/N_3
-Clock pins: 1
     Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
        Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/N_3
 Clock pins: 1
+    Driver: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i:Y
+       Net: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/N_3
+Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sun Mar 31 22:14:50 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Fri Apr 19 21:54:40 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Sun Mar 31 22:16:36 2024
-Total CPU Time:     00:04:21            Total Elapsed Time: 00:01:46
-Total Memory Usage: 5569.0 Mbytes
+Finished: Fri Apr 19 21:56:33 2024
+Total CPU Time:     00:04:14            Total Elapsed Time: 00:01:53
+Total Memory Usage: 5575.1 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+--------+--------+------------+
 | Type          | Used   | Total  | Percentage |
 +---------------+--------+--------+------------+
-| 4LUT          | 142970 | 299544 | 47.73      |
-| DFF           | 65750  | 299544 | 21.95      |
+| 4LUT          | 143807 | 299544 | 48.01      |
+| DFF           | 66511  | 299544 | 22.20      |
 | I/O Register  | 0      | 510    | 0.00       |
-| Logic Element | 145080 | 299544 | 48.43      |
+| Logic Element | 145856 | 299544 | 48.69      |
 +---------------+--------+--------+------------+
 
 I/O Placement

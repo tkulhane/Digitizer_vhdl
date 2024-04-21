@@ -1,6 +1,6 @@
 Device Selection
 Report Version,Date,Product,Release,Version,Design Name,Family,Die,Package
-0.1,Sun Mar 31 22:17:15 2024,Designer,v2022.1,2022.1.0.10,Top,PolarFire,MPF300TS_ES,FCG1152
+0.1,Fri Apr 19 21:57:15 2024,Designer,v2022.1,2022.1.0.10,Top,PolarFire,MPF300TS_ES,FCG1152
 Pin Report
 Pin,Port,Function,Bank,State,I/O Std,Direction,Used I/O Reg,User I/O Lock Down,Clamp Diode,Resistor Pull,Schmitt Trigger,Vcm Input Range,On Die Termination,Odt Value (Ohm),Input Delay,Slew,Output Drive (mA),Impedance (ohm),Output Load (pF),Source Termination (Ohm),Output Delay,TX Emphasis Amplitude,TX Impedance (ohms),TX Transmit Common Mode Adjustment (% of VDDA),RX Insertion Loss,RX CTLE,RX Termination (ohms),RX P/N Board Connection,RX Loss of Signal Detector - Low,RX Loss of Signal Detector - High,Board Layout
 A2,FTDI_DATA[29],GPIO251PB2,Bank2,Fixed,LVCMOS33,Inout,None,No,ON,Down,OFF,---,---,---,OFF,OFF,8,---,20,---,OFF,---,---,---,---,---,---,---,---,---,FTDI_DATA[29]
@@ -195,7 +195,7 @@ AE21,---,HSIO114NB7,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---
 AE22,---,HSIO87NB1/DQS,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AE23,---,HSIO85PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AE24,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.8v
-AE25,---,HSIO84PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AE25,DBGport_9,HSIO84PB1,Bank1,Assigned,LVCMOS18,Output,None,No,ON,None,---,---,---,120,---,OFF,8,---,5,---,OFF,---,---,---,---,---,---,---,---,---,DBGport_9
 AE26,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 AE27,---,XCVR_2A_REFCLK_P,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
 AE28,---,XCVR_2A_REFCLK_N,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined, add on-board connect to VSS through resistor (100K ohm) for higher noise immunity,CLAMP=OFF"
@@ -394,13 +394,13 @@ AL16,---,VDDI7,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,
 AL17,---,HSIO103PB7,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AL18,---,HSIO105PB7/DQS,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AL19,---,HSIO105NB7/DQS,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
-AL20,---,HSIO101PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AL20,DBGport_8,HSIO101PB1,Bank1,Assigned,LVCMOS18,Output,None,No,ON,None,---,---,---,120,---,OFF,8,---,5,---,OFF,---,---,---,---,---,---,---,---,---,DBGport_8
 AL21,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 AL22,---,HSIO82NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AL23,---,HSIO83PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AL24,---,HSIO83NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AL25,---,HSIO77NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
-AL26,DBGport_9,HSIO72PB1/CCC_NE_CLKIN_N_11,Bank1,Assigned,LVCMOS18,Output,None,No,ON,None,---,---,---,120,---,OFF,8,---,5,---,OFF,---,---,---,---,---,---,---,---,---,DBGport_9
+AL26,---,HSIO72PB1/CCC_NE_CLKIN_N_11,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AL27,---,HSIO72NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AL28,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
 AL29,---,VDDA,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.0v
@@ -427,9 +427,9 @@ AM15,---,HSIO110NB7,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---
 AM16,---,HSIO103NB7,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AM17,---,HSIO106PB7,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AM18,---,VSS,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,VSS
-AM19,---,HSIO101NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
+AM19,SIWU_N,HSIO101NB1,Bank1,Assigned,LVCMOS18,Output,None,No,ON,None,---,---,---,120,---,OFF,8,---,5,---,OFF,---,---,---,---,---,---,---,---,---,SIWU_N
 AM20,---,HSIO96PB1/CLKIN_N_7,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
-AM21,SIWU_N,HSIO96NB1,Bank1,Assigned,LVCMOS18,Output,None,No,ON,None,---,---,---,120,---,OFF,8,---,5,---,OFF,---,---,---,---,---,---,---,---,---,SIWU_N
+AM21,---,HSIO96NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AM22,---,HSIO95PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AM23,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.8v
 AM24,---,HSIO91NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
@@ -463,7 +463,7 @@ AN17,---,HSIO106NB7,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---
 AN18,---,HSIO102PB7,Bank7,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AN19,---,HSIO94PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AN20,---,VDDI1,---,Reserved,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,1.8v
-AN21,DBGport_8,HSIO90PB1,Bank1,Assigned,LVCMOS18,Output,None,No,ON,None,---,---,---,120,---,OFF,8,---,5,---,OFF,---,---,---,---,---,---,---,---,---,DBGport_8
+AN21,---,HSIO90PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AN22,---,HSIO90NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AN23,---,HSIO95NB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"
 AN24,---,HSIO91PB1,Bank1,Unassigned,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,---,"DNC, Libero Defined High-Z with weak pull up ON,CLAMP=ON"

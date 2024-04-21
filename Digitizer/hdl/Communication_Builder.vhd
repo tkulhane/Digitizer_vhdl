@@ -30,6 +30,9 @@ entity Communication_Builder is
         Communication_Data_Req : out std_logic;
         Communication_DATA_Ack : in std_logic;
 
+        CountOfSampleWord_Read : out std_logic;
+    	CountOfEventWord_Read : out std_logic;  
+
         Diag_0 : out std_logic;
         Diag_1 : out std_logic;
         Diag_2 : out std_logic;
@@ -368,6 +371,9 @@ begin
 
                 Communication_Data_Full_Buffer_Clear <= '0';
 
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
+
             when COMMUNICATION_REQ =>
                 wait_next_state_store       <= '1';
                 
@@ -393,6 +399,9 @@ begin
 
                 Communication_Data_Full_Buffer_Clear <= '0';
 
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
+
             when READ_EVENT_INFO =>
                 wait_next_state_store       <= '1';
                 
@@ -417,6 +426,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when SEND_EVENT_HEAD =>
                 wait_next_state_store       <= '1';
@@ -442,6 +454,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when SEND_PACKET_HEAD =>
                 wait_next_state_store       <= '1';
@@ -467,6 +482,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when READ_SAMPLE_DATA =>
                 wait_next_state_store       <= '1';
@@ -492,6 +510,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '1';
 
             when SEND_DATA_FRAMES_1 =>
                 wait_next_state_store       <= '1';
@@ -517,6 +538,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when SEND_DATA_FRAMES_2 =>
                 wait_next_state_store       <= '1';
@@ -542,6 +566,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when SEND_PACKET_TAIL =>
                 wait_next_state_store       <= '1';
@@ -567,6 +594,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when SEND_EVENT_TAIL =>
                 wait_next_state_store       <= '1';
@@ -592,6 +622,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '1';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '1';
+                CountOfSampleWord_Read  <= '0';
 
             when NEXT_EVENT_ADDR =>
                 wait_next_state_store       <= '1';
@@ -617,6 +650,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when END_WAIT =>
                 wait_next_state_store       <= '1';
@@ -642,6 +678,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when WAIT_FOR_FIFO =>
                 wait_next_state_store       <= '0';
@@ -667,6 +706,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '1';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when WAIT_FOR_FIFO_TIMER =>
                 wait_next_state_store       <= '0';
@@ -692,6 +734,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
 
             when others =>
                 wait_next_state_store       <= '0';
@@ -717,6 +762,9 @@ begin
                 Event_RAM_W_Enable_Status   <= '0';
 
                 Communication_Data_Full_Buffer_Clear <= '0';
+                
+                CountOfEventWord_Read   <= '0';
+                CountOfSampleWord_Read  <= '0';
                 
                 
         end case;

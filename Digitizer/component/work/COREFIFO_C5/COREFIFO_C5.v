@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Feb 16 21:58:09 2024
+// Created by SmartDesign Wed Apr 17 12:25:59 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,7 +17,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREFIFO:3.0.101} -compon
 "AE_STATIC_EN:false"  \
 "AEVAL:4"  \
 "AF_STATIC_EN:true"  \
-"AFVAL:16300"  \
+"AFVAL:16380"  \
 "CTRL_TYPE:2"  \
 "DIE_SIZE:15"  \
 "ECC:0"  \
@@ -126,7 +126,7 @@ COREFIFO_C5_COREFIFO_C5_0_COREFIFO #(
         .AE_STATIC_EN ( 0 ),
         .AEVAL        ( 4 ),
         .AF_STATIC_EN ( 1 ),
-        .AFVAL        ( 16300 ),
+        .AFVAL        ( 16380 ),
         .CTRL_TYPE    ( 2 ),
         .DIE_SIZE     ( 15 ),
         .ECC          ( 0 ),

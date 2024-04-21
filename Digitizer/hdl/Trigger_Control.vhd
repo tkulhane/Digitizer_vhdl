@@ -24,10 +24,15 @@ entity Trigger_Control is
         write_data_frame : in std_logic_vector(15 downto 0);
         read_data_frame : out std_logic_vector(15 downto 0);
 
+        FIFO_Event_A_Full : in std_logic;
+        FIFO_SampleEventComparator : in std_logic;
+
+        Control_EventNum : out std_logic_vector(14 - 1 downto 0);
+
         Control_Test_Generator_Enable : out std_logic;
         Control_Enable : out std_logic;
         Control_Abort : out std_logic;
-        Control_EnableRst : in std_logic; 
+        --Control_EnableRst : in std_logic; 
         Control_Threshold : out std_logic_vector(g_Data_Length - 1 downto 0);
         Control_Sample_Per_Event : out std_logic_vector(31 downto 0);
         Control_Trigger_Out : in std_logic;
@@ -66,6 +71,10 @@ architecture rtl of Trigger_Control is
 
     signal REG_Set_Number_of_Events_Unsigned : unsigned(31 downto 0) := (others => '0');
 
+    signal InternalEnableAbort : std_logic;
+    signal Enable_X_Mask : std_logic; 
+    signal AbortMode_Vector : std_logic_vector(2 downto 0);
+
 ------------------------------------------------------------------------------------------------------------
 --Signals Declaration -> memory registers
 ------------------------------------------------------------------------------------------------------------  
@@ -75,6 +84,8 @@ architecture rtl of Trigger_Control is
 
     
     signal REG_Enable : std_logic;
+    signal REG_MODE : std_logic_vector(3 downto 0);
+    signal REG_ABORT_MODE : std_logic_vector(3 downto 0);
     signal REG_Threshold : std_logic_vector(12 - 1 downto 0);
     signal REG_Sample_Per_Event_L : std_logic_vector(16 - 1 downto 0);
     signal REG_Sample_Per_Event_M : std_logic_vector(16 - 1 downto 0);
@@ -93,15 +104,41 @@ begin
     
     internal_write_signal <= ACQ_Counters_Reset or Internal_Enable_Reset; --or ... or ...
 
-    --read_data_frame <= X"1234";
 
 ------------------------------------------------------------------------------------------------------------
 --Signals Routing for Output Control
 ------------------------------------------------------------------------------------------------------------
     Control_Test_Generator_Enable <= REG_Test_Generator_Enable;
-    Control_Enable <= REG_Enable;
+    Control_Enable <= REG_Enable and Enable_X_Mask;
     Control_Threshold <= REG_Threshold;
     Control_Sample_Per_Event <= REG_Sample_Per_Event_M & REG_Sample_Per_Event_L;
+
+    Control_EventNum <= Counter_Processed_Events(13 downto 0);
+
+------------------------------------------------------------------------------------------------------------
+--Signals Routing for aborts signals and FIFO SampleEventComparator
+------------------------------------------------------------------------------------------------------------
+    Control_Abort <=        AbortMode_Vector(0) and FIFO_Event_A_Full; --for event abort
+    InternalEnableAbort <=  AbortMode_Vector(1) and FIFO_Event_A_Full; --for acq enable abort
+    
+    Enable_X_Mask <=   not (AbortMode_Vector(2) and FIFO_SampleEventComparator);
+
+    --AbortMode_Vector decoder
+    process(REG_ABORT_MODE)
+    begin
+
+        case REG_ABORT_MODE is
+
+            when "0000" => AbortMode_Vector <="000";
+            when "0001" => AbortMode_Vector <="001";
+            when "0010" => AbortMode_Vector <="011";
+            when "0011" => AbortMode_Vector <="111";
+            when others => AbortMode_Vector <="000";
+
+        end case;
+
+    end process;
+
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -219,10 +256,18 @@ begin
 
             if(read_signal = '1') then
 
+                read_data_frame <= (others => '0');
+
                 case(address) is
 
                     when CMD_TRG_ENABLE => 
                         read_data_frame <= "000000000000000" & REG_Enable;
+
+                    when CMD_TRG_MODE =>
+                        read_data_frame <= "000000000000" & REG_MODE;
+
+                    when CMD_TRG_ABORT_MODE =>
+                        read_data_frame <= "000000000000" & REG_ABORT_MODE;
 
                     when CMD_TRG_THRESHOLD =>
                         read_data_frame <= "0000" & REG_Threshold;
@@ -280,6 +325,7 @@ begin
             REG_Sample_Per_Event_M <= X"0000";
             REG_Set_Number_of_Events_L <= X"0000";
             REG_Set_Number_of_Events_M <= X"0000";
+            REG_ABORT_MODE <= "0011";
             
             REQ_Counters_Reset <= '0';
 
@@ -305,6 +351,12 @@ begin
 
                     when CMD_TRG_ENABLE => 
                         REG_Enable <= write_data_frame(0);
+
+                    when CMD_TRG_MODE =>
+                        REG_MODE <= write_data_frame(3 downto 0);
+
+                    when CMD_TRG_ABORT_MODE =>
+                        REG_ABORT_MODE <= write_data_frame(3 downto 0);
 
                     when CMD_TRG_THRESHOLD =>
                         REG_Threshold <= write_data_frame(11 downto 0);
@@ -394,7 +446,7 @@ begin
             Finite_Event_Counter := (others => '0');
             Internal_Enable_Reset <= '0';
 
-            Control_Abort <= '0';
+            --Control_Abort <= '0';
 
         elsif(Clock'event and Clock = '1') then
             
@@ -403,8 +455,8 @@ begin
                 Internal_Enable_Reset <= '0';
             end if;
 
-            --reset enable form main unit
-            if(Control_EnableRst = '1') then
+            --reset enable from xxx
+            if(InternalEnableAbort = '1') then
                 Internal_Enable_Reset <= '1';
             end if;
             

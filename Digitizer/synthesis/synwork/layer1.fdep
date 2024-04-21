@@ -1,5 +1,5 @@
 #defaultlanguage:vhdl
-#OPTIONS:"|-mixedhdl|-top|work.AnalyzInCirc_Top|-top|work.Transceiver_LanesConnection|-top|work.Transceiver_Controller|-top|work.Test_Generator_for_Lanes|-top|work.SampleTxDeCompose|-top|work.SampleCompose|-top|work.FIFOs_Reader|-top|work.Communication_Builder|-top|work.Trigger_Main|-top|work.Trigger_Control|-top|work.Sample_RAM_Block_MUX|-top|work.Sample_RAM_Block_Decoder|-top|work.Trigger_Unit|-top|work.Reset_Controler|-top|work.REGISTERS|-top|work.gpio_controler|-top|work.Command_Decoder|-top|work.Answer_Encoder|-top|work.ADI_SPI|-top|work.spi_master|-top|work.SPI_interface|-top|work.Communication_Switch|-top|work.Communication_Controler|-top|work.Communication_CMD_MUX|-top|work.Communication_ANW_MUX|-top|work.ftdi_to_fifo_interface|-top|work.ft601_fifo_interface|-top|work.UART_TX_Protocol|-top|work.UART_RX_Protocol|-top|work.mko|-top|work.Communication_TX_Arbiter2|-top|work.Synchronizer|-mpparams|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\Top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|0|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-mixedhdl|-top|work.AnalyzInCirc_Top|-top|work.Transceiver_LanesConnection|-top|work.Transceiver_Controller|-top|work.Test_Generator_for_Lanes|-top|work.SampleTxDeCompose|-top|work.SampleCompose|-top|work.FIFOs_Reader|-top|work.Communication_Builder|-top|work.Trigger_Main|-top|work.Trigger_Control|-top|work.EventFifoFreeLogic|-top|work.Sample_RAM_Block_MUX|-top|work.Sample_RAM_Block_Decoder|-top|work.Trigger_Unit|-top|work.Reset_Controler|-top|work.REGISTERS|-top|work.gpio_controler|-top|work.Command_Decoder|-top|work.Answer_Encoder|-top|work.ADI_SPI|-top|work.spi_master|-top|work.SPI_interface|-top|work.Communication_Switch|-top|work.Communication_Controler|-top|work.Communication_CMD_MUX|-top|work.Communication_ANW_MUX|-top|work.ftdi_to_fifo_interface|-top|work.ft601_fifo_interface|-top|work.UART_TX_Protocol|-top|work.UART_RX_Protocol|-top|work.mko|-top|work.Communication_TX_Arbiter2|-top|work.Synchronizer|-mpparams|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\_mh_params|-layerid|1|-orig_srs|C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\synthesis\\synwork\\Top_comp.srs|-prodtype|synplify_pro|-infer_seqShift|-primux|-dspmac|-pqdpadd|-fixsmult|-sdff_counter|-divnmod|-nram|-actel|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-vhdl2008|-work_is_curlib|0|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\bin64\\c_vhdl.exe":1646899180
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\lib\\vhd2008\\location.map":1646899198
 #CUR:"C:\\Microsemi\\Libero_SoC_v2022.1\\SynplifyPro\\lib\\vhd2008\\std.vhd":1646899198
@@ -16,7 +16,7 @@
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Synchronizer.vhd":1675847088
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_ANW_MUX.vhd":1677792162
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_CMD_MUX.vhd":1677880130
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_Controler.vhd":1711914858
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_Controler.vhd":1712660277
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_Switch.vhd":1699976979
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_TX_Arbiter2.vhd":1695189206
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\UART_RX_Protocol.vhd":1681717075
@@ -31,12 +31,13 @@
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\SPI_interface.vhd":1690296630
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\spi_master.vhd":1690296630
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\gpio_controler.vhd":1697828750
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\FIFOs_Reader.vhd":1684397237
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\FIFOs_Reader.vhd":1713541891
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Trigger_Unit.vhd":1707766256
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Sample_RAM_Block_Decoder.vhd":1683633429
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Sample_RAM_Block_MUX.vhd":1683635492
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\cmd_table_trigger.vhd":1690484914
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Trigger_Main.vhd":1708116907
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\cmd_table_trigger.vhd":1713258053
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Trigger_Main.vhd":1713552068
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\EventFifoFreeLogic.vhd":1713348401
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\SampleCompose.vhd":1707653929
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\SampleTxDeCompose.vhd":1707653960
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Test_Generator_for_Lanes.vhd":1704316889
@@ -51,8 +52,8 @@
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Answer_Encoder.vhd":1710759642
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Command_Decoder.vhd":1710759492
 #CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Communication_Builder.vhd":1708072687
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Trigger_Control.vhd":1708111022
-#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Transceiver_LanesConnection.vhd":1711203108
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Trigger_Control.vhd":1713536042
+#CUR:"C:\\VHDL_temp\\Digitizer\\Digitizer_vhdl\\Digitizer\\hdl\\Transceiver_LanesConnection.vhd":1713021769
 0 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AnalyzInCirc_Controler.vhd" vhdl
 1 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AnalyzInCirc_FIFO.vhd" vhdl
 2 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AnalyzInCirc_Top.vhd" vhdl
@@ -84,17 +85,18 @@
 28 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\cmd_table_trigger.vhd" vhdl
 29 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd" vhdl
 30 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd" vhdl
-31 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd" vhdl
-32 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd" vhdl
-33 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator_for_Lanes.vhd" vhdl
-34 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd" vhdl
-35 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd" vhdl
-36 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd" vhdl
-37 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd" vhdl
-38 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd" vhdl
-39 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd" vhdl
-40 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd" vhdl
-41 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd" vhdl
+31 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EventFifoFreeLogic.vhd" vhdl
+32 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd" vhdl
+33 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd" vhdl
+34 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Test_Generator_for_Lanes.vhd" vhdl
+35 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd" vhdl
+36 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd" vhdl
+37 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd" vhdl
+38 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd" vhdl
+39 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd" vhdl
+40 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd" vhdl
+41 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd" vhdl
+42 "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd" vhdl
 
 # Dependency Lists (Uses list)
 0 -1
@@ -137,8 +139,9 @@
 37 -1
 38 -1
 39 -1
-40 39 38 
-41 -1
+40 -1
+41 40 39 
+42 -1
 
 # Dependency Lists (Users Of)
 0 2 
@@ -179,10 +182,11 @@
 35 -1
 36 -1
 37 -1
-38 40 
-39 40 
-40 -1
+38 -1
+39 41 
+40 41 
 41 -1
+42 -1
 
 # Design Unit to File Association
 arch work analyzincirc_controler rtl 0
@@ -243,31 +247,33 @@ arch work trigger_control rtl 29
 module work trigger_control 29
 arch work trigger_main rtl 30
 module work trigger_main 30
-arch work samplecompose rtl 31
-module work samplecompose 31
-arch work sampletxdecompose rtl 32
-module work sampletxdecompose 32
-arch work test_generator_for_lanes rtl 33
-module work test_generator_for_lanes 33
-arch work transceiver_lanestatus rtl 34
-module work transceiver_lanestatus 34
-arch work alignmentlane_fifo rtl 35
-module work alignmentlane_fifo 35
-arch work rxlanecontrol rtl 36
-module work rxlanecontrol 36
-arch work txlanecontrol rtl 37
-module work txlanecontrol 37
-arch work rxmainlinkcontroller rtl 38
-module work rxmainlinkcontroller 38
-arch work txmainlinkcontroller rtl 39
-module work txmainlinkcontroller 39
-arch work transceiver_lanesconnection rtl 40
-module work transceiver_lanesconnection 40
-arch work transceiver_controller rtl 41
-module work transceiver_controller 41
+arch work eventfifofreelogic arch 31
+module work eventfifofreelogic 31
+arch work samplecompose rtl 32
+module work samplecompose 32
+arch work sampletxdecompose rtl 33
+module work sampletxdecompose 33
+arch work test_generator_for_lanes rtl 34
+module work test_generator_for_lanes 34
+arch work transceiver_lanestatus rtl 35
+module work transceiver_lanestatus 35
+arch work alignmentlane_fifo rtl 36
+module work alignmentlane_fifo 36
+arch work rxlanecontrol rtl 37
+module work rxlanecontrol 37
+arch work txlanecontrol rtl 38
+module work txlanecontrol 38
+arch work rxmainlinkcontroller rtl 39
+module work rxmainlinkcontroller 39
+arch work txmainlinkcontroller rtl 40
+module work txmainlinkcontroller 40
+arch work transceiver_lanesconnection rtl 41
+module work transceiver_lanesconnection 41
+arch work transceiver_controller rtl 42
+module work transceiver_controller 42
 
 # Unbound Instances to File Association
-inst work transceiver_lanesconnection transciever_onelane 40
+inst work transceiver_lanesconnection transciever_onelane 41
 
 
 # Configuration files used
