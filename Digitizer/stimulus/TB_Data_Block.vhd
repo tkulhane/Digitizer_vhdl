@@ -377,9 +377,9 @@ begin
         --set threshold
         SEND_CMD( CMD_TRG_THRESHOLD, X"0DAC", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         --set samples count
-        SEND_CMD( CMD_TRG_SAMPLE_PER_EVENT_L, X"270F", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        SEND_CMD( CMD_TRG_SAMPLE_PER_EVENT_L, X"0009", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         --set event count
-        SEND_CMD( CMD_TRG_SET_NUMBERS_OF_EVENTS_L, X"0004", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        SEND_CMD( CMD_TRG_SET_NUMBERS_OF_EVENTS_L, X"000A", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         --mode
         --SEND_CMD( CMD_TRG_ABORT_MODE, X"0001", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
 

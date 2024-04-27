@@ -38,14 +38,14 @@ entity FIFOs_Reader is
         Event_RAM_W_Enable_Status : out std_logic;
         Event_RAM_R_Data_Status : in std_logic_vector(7 downto 0);
 
-
         Sample_RAM_W_Address : out std_logic_vector(15 downto 0);
         Sample_RAM_W_Block_Address : out std_logic_vector(3 downto 0);
         Sample_RAM_W_Data : out std_logic_vector(63 downto 0);
         Sample_RAM_W_Enable : out std_logic;
 
         CountOfSampleWord_Write : out std_logic;
-    	CountOfEventWord_Write : out std_logic;        
+    	CountOfEventWord_Write : out std_logic;
+        RamMan_WriteEnable : in std_logic;        
 
         Diag_Valid : out std_logic
     
@@ -71,8 +71,8 @@ architecture rtl of FIFOs_Reader is
                             Event_FIFO_Read, 
                             Event_Process_Set, 
                             Event_Process_Reset, 
-                            Sample_FIFOs_Read_1, 
-                            Sample_FIFOs_Read_2,
+                            Sample_FIFOs_Read,
+                            WAIT_FOR_SAMPLE, 
                             Store_Event_End
                         );
     signal state_reg, next_state : FSM_state;
@@ -86,7 +86,7 @@ architecture rtl of FIFOs_Reader is
     signal Event_In_Process_Set : std_logic;
     signal Event_In_Process_Reset : std_logic;
 
-    signal Data_MUX_Sel : integer range 0 to Number_Of_FIFO_Block-1 := 0;
+    --signal Data_MUX_Sel : integer range 0 to Number_Of_FIFO_Block-1 := 0;
 
     signal Block_0_Data : std_logic_vector(63 downto 0);
     signal Block_1_Data : std_logic_vector(63 downto 0);
@@ -105,6 +105,12 @@ architecture rtl of FIFOs_Reader is
     signal Event_Number_Counter_Enable : std_logic;
     signal Event_Number_Counter : unsigned(19 downto 0);
 
+    signal BlockFifo_ReadEnable : std_logic;
+    --signal BlockF_Counter : unsigned(7 downto 0);
+    signal BlockF_Counter :  integer range 0 to 255 := 0;
+    signal BlockF_CounterReset : std_logic;
+    signal BlockF_CounterEnable : std_logic;
+    signal BlockF_CounterModulo : std_logic;
 
 
 
@@ -144,7 +150,7 @@ begin
     end process;
 
     --translation function
-    process(next_state, state_reg, Event_FIFO_Empty, NewEventInFIFO, EndEventInFIFO, Event_In_Process, Event_RAM_ADDR_Is_Free)
+    process(next_state, state_reg, Event_FIFO_Empty, NewEventInFIFO, EndEventInFIFO, Event_In_Process, Event_RAM_ADDR_Is_Free, BlockF_CounterModulo, RamMan_WriteEnable)
     begin
 
         next_state <= state_reg;
@@ -152,7 +158,7 @@ begin
         case state_reg is
         
             when IDLE =>
-                if(Event_FIFO_Empty = '0' and Event_RAM_ADDR_Is_Free = '1') then
+                if(Event_FIFO_Empty = '0' and Event_RAM_ADDR_Is_Free = '1' and RamMan_WriteEnable = '1') then
                     next_state <= Event_FIFO_Read;
                 end if;
                 
@@ -161,29 +167,46 @@ begin
                     next_state <= Event_Process_Reset;
                 elsif(NewEventInFIFO = '1') then
                     next_state <= Event_Process_Set;
-                elsif(Event_In_Process = '1') then
-                    next_state <= Sample_FIFOs_Read_1;
+                elsif(Event_In_Process = '1' and RamMan_WriteEnable = '1') then
+                    next_state <= Sample_FIFOs_Read;
+                elsif(Event_In_Process = '1' and RamMan_WriteEnable = '0') then
+                    next_state <= WAIT_FOR_SAMPLE;
                 else 
                     next_state <= IDLE;
                 end if;
 
-            when Event_Process_Set =>
-                next_state <= Sample_FIFOs_Read_1;
+            when Event_Process_Set => 
+                if(RamMan_WriteEnable = '1') then
+                    next_state <= Sample_FIFOs_Read;
+                else
+                    next_state <= WAIT_FOR_SAMPLE;
+                end if;
 
             when Event_Process_Reset =>
-                next_state <= Sample_FIFOs_Read_1;
-
-            when Sample_FIFOs_Read_1 =>
-                next_state <= Sample_FIFOs_Read_2;
-
-            when Sample_FIFOs_Read_2 =>
-                if(Event_In_Process = '0') then
-                     next_state <= Store_Event_End;
-                elsif(Event_FIFO_Empty = '1') then --možná upravit nebo signalizovat chybovou událost
-                    --next_state <= IDLE;
-                    next_state <= Store_Event_End;
+                if(RamMan_WriteEnable = '1') then
+                    next_state <= Sample_FIFOs_Read;
                 else
+                    next_state <= WAIT_FOR_SAMPLE;
+                end if;
+
+            when Sample_FIFOs_Read =>
+                if(Event_In_Process = '0' and BlockF_CounterModulo = '1') then
+                     next_state <= Store_Event_End;
+
+                elsif(BlockF_CounterModulo = '1') then 
                     next_state <= Event_FIFO_Read;
+
+                --elsif(Event_FIFO_Empty = '1') then --možná upravit nebo signalizovat chybovou událost
+                --    next_state <= Store_Event_End;
+
+                elsif(RamMan_WriteEnable = '0') then
+                    next_state <= WAIT_FOR_SAMPLE;
+
+                end if;
+
+            when WAIT_FOR_SAMPLE =>
+                if(RamMan_WriteEnable = '1') then
+                    next_state <= Sample_FIFOs_Read;
                 end if;
 
             when Store_Event_End =>
@@ -204,11 +227,11 @@ begin
         
             when IDLE =>
                 Event_FIFO_R_Enable <= '0';
-                Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '0';
+                BlockF_CounterReset <= '1';
+                BlockF_CounterEnable <= '0';
+                BlockFifo_ReadEnable <= '0';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '0';
-                Data_MUX_Sel <= 0;
                 Sample_RAM_W_Enable <= '0';
                 Sample_RAM_ADDR_GEN_Enable <= '0';
                 
@@ -232,11 +255,11 @@ begin
                 
             when Event_FIFO_Read =>
                 Event_FIFO_R_Enable <= '1';
-                Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '0';
+                BlockF_CounterReset <= '1';
+                BlockF_CounterEnable <= '0';
+                BlockFifo_ReadEnable <= '0';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '0';
-                Data_MUX_Sel <= 0;
                 Sample_RAM_W_Enable <= '0';
                 Sample_RAM_ADDR_GEN_Enable <= '0';
 
@@ -260,11 +283,11 @@ begin
 
             when Event_Process_Set =>
                 Event_FIFO_R_Enable <= '0';
-                Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '0';
+                BlockF_CounterReset <= '1';
+                BlockF_CounterEnable <= '0';
+                BlockFifo_ReadEnable <= '0';
                 Event_In_Process_Set <= '1';
                 Event_In_Process_Reset <= '0';
-                Data_MUX_Sel <= 0;
                 Sample_RAM_W_Enable <= '0';
                 Sample_RAM_ADDR_GEN_Enable <= '0';
 
@@ -290,11 +313,11 @@ begin
 
             when Event_Process_Reset =>
                 Event_FIFO_R_Enable <= '0';
-                Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '0';
+                BlockF_CounterReset <= '1';
+                BlockF_CounterEnable <= '0';
+                BlockFifo_ReadEnable <= '0';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '1';
-                Data_MUX_Sel <= 0;
                 Sample_RAM_W_Enable <= '0';
                 Sample_RAM_ADDR_GEN_Enable <= '0';
 
@@ -314,15 +337,15 @@ begin
                 Event_Number_Counter_Enable <= '0'; 
                 
                 CountOfEventWord_Write  <= '0';
-                CountOfSampleWord_Write <= '1';
+                CountOfSampleWord_Write <= '0';
 
-            when Sample_FIFOs_Read_1 =>
+            when Sample_FIFOs_Read =>
                 Event_FIFO_R_Enable <= '0';
-                Block_0_Sample_FIFO_R_Enable <= '1';
-                Block_1_Sample_FIFO_R_Enable <= '0';
+                BlockF_CounterReset <= '0';
+                BlockF_CounterEnable <= '1';
+                BlockFifo_ReadEnable <= '1';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '0';
-                Data_MUX_Sel <= 0;
                 Sample_RAM_W_Enable <= '1';
                 Sample_RAM_ADDR_GEN_Enable <= '1';
 
@@ -344,15 +367,15 @@ begin
                 CountOfEventWord_Write  <= '0';
                 CountOfSampleWord_Write <= '1';
 
-            when Sample_FIFOs_Read_2 =>
+            when WAIT_FOR_SAMPLE =>
                 Event_FIFO_R_Enable <= '0';
-                Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '1';
+                BlockF_CounterReset <= '0';
+                BlockF_CounterEnable <= '0';
+                BlockFifo_ReadEnable <= '0';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '0';
-                Data_MUX_Sel <= 1;
-                Sample_RAM_W_Enable <= '1';
-                Sample_RAM_ADDR_GEN_Enable <= '1';
+                Sample_RAM_W_Enable <= '0';
+                Sample_RAM_ADDR_GEN_Enable <= '0';
 
                 Event_RAM_ADDR_GEN_Enable <= '0';
                 Event_RAM_W_Enable_Start_ADDR <= '0';
@@ -366,24 +389,24 @@ begin
                 Event_RAM_W_Data_Status <= (others => '0');
 
                 Event_Size_Counter_Reset_N <= '1';
-                Event_Size_Counter_Enable <= '1';
+                Event_Size_Counter_Enable <= '0';
                 Event_Number_Counter_Enable <= '0'; 
                 
                 CountOfEventWord_Write  <= '0';
-                CountOfSampleWord_Write <= '1';
+                CountOfSampleWord_Write <= '0';
 
             when Store_Event_End =>
                 Event_FIFO_R_Enable <= '0';
-                Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '0';
+                BlockF_CounterReset <= '1';
+                BlockF_CounterEnable <= '0';
+                BlockFifo_ReadEnable <= '0';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '0';
-                Data_MUX_Sel <= 1;
-                Sample_RAM_W_Enable <= '1';
-                Sample_RAM_ADDR_GEN_Enable <= '1';
+                Sample_RAM_W_Enable <= '0';         -- xxx
+                Sample_RAM_ADDR_GEN_Enable <= '0';  -- xxx
 
-                Event_RAM_ADDR_GEN_Enable <= '1';
-                Event_RAM_W_Enable_Start_ADDR <= '0';
+                Event_RAM_ADDR_GEN_Enable <= '1';   -- xxx
+                Event_RAM_W_Enable_Start_ADDR <= '0'; 
                 Event_RAM_W_Enable_Number <= '0';
                 Event_RAM_W_Enable_Size <= '1';
                 Event_RAM_W_Enable_Status <= '1';
@@ -394,7 +417,7 @@ begin
                 Event_RAM_W_Data_Status <= Event_Status_ID_WriteDone;
 
                 Event_Size_Counter_Reset_N <= '1';
-                Event_Size_Counter_Enable <= '1';
+                Event_Size_Counter_Enable <= '0'; --i kdyz tady byla 1 tak to mozna fungovalo
                 Event_Number_Counter_Enable <= '1'; 
                 
                 CountOfEventWord_Write  <= '0';
@@ -402,11 +425,11 @@ begin
 
             when others =>
                 Event_FIFO_R_Enable <= '0';
-                Block_0_Sample_FIFO_R_Enable <= '0';
-                Block_1_Sample_FIFO_R_Enable <= '0';
+                BlockF_CounterReset <= '1';
+                BlockF_CounterEnable <= '0';
+                BlockFifo_ReadEnable <= '0';
                 Event_In_Process_Set <= '0';
                 Event_In_Process_Reset <= '0';
-                Data_MUX_Sel <= 0;
                 Sample_RAM_W_Enable <= '0';
                 Sample_RAM_ADDR_GEN_Enable <= '0';
 
@@ -480,27 +503,6 @@ begin
 
     end process;
 
-------------------------------------------------------------------------------------------------------------
---process Event_In_Process register
-------------------------------------------------------------------------------------------------------------
-    process(Data_MUX_Sel, Block_0_Data, Block_1_Data)
-
-    begin
-
-        case Data_MUX_Sel is
-
-            when 0 =>
-                Sample_RAM_W_Data <=  Block_0_Data;
-
-            when 1 =>
-                Sample_RAM_W_Data <=  Block_1_Data;
-
-            when others =>
-                Sample_RAM_W_Data <= (others => '0');
-
-        end case;
-
-    end process;
 
 ------------------------------------------------------------------------------------------------------------
 --process Sample RAM Write Address Generator
@@ -590,6 +592,85 @@ begin
             end if;
 
         end if;
+
+    end process;
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
+--process fifo select counter
+------------------------------------------------------------------------------------------------------------
+    process(Clock, Reset_N)
+
+    begin
+
+        if(Reset_N = '0') then
+            BlockF_Counter <= 0;
+    
+        elsif(Clock'event and Clock = '1') then
+        
+            if(BlockF_CounterReset = '1') then
+                BlockF_Counter <= 0;
+
+            elsif(BlockF_CounterEnable = '1') then
+                BlockF_Counter <= BlockF_Counter + 1;
+
+            end if;
+
+        end if;
+
+    end process;
+
+
+    BlockF_CounterModulo <= '1' when (BlockF_Counter >= Number_Of_FIFO_Block - 1) else '0';
+
+------------------------------------------------------------------------------------------------------------
+--process data mux
+------------------------------------------------------------------------------------------------------------
+    process(BlockF_Counter, Block_0_Data, Block_1_Data)
+
+    begin
+
+        case BlockF_Counter is
+
+            when 0 =>
+                Sample_RAM_W_Data <=  Block_0_Data;
+
+            when 1 =>
+                Sample_RAM_W_Data <=  Block_1_Data;
+
+            when others =>
+                Sample_RAM_W_Data <= (others => '0');
+
+        end case;
+
+    end process;
+
+------------------------------------------------------------------------------------------------------------
+--process fifo enable demux
+------------------------------------------------------------------------------------------------------------
+    process(BlockF_Counter, BlockFifo_ReadEnable)
+
+    begin
+
+        case BlockF_Counter is
+
+            when 0 =>
+                Block_0_Sample_FIFO_R_Enable <= BlockFifo_ReadEnable;
+                Block_1_Sample_FIFO_R_Enable <= '0';
+
+            when 1 =>
+                Block_0_Sample_FIFO_R_Enable <= '0';
+                Block_1_Sample_FIFO_R_Enable <= BlockFifo_ReadEnable;
+
+            when others =>
+                Block_0_Sample_FIFO_R_Enable <= '0';
+                Block_1_Sample_FIFO_R_Enable <= '0';
+                --Sample_RAM_W_Data <= (others => '0');
+
+        end case;
 
     end process;
 

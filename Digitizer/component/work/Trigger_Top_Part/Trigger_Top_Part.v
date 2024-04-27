@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Apr 19 20:41:17 2024
+// Created by SmartDesign Tue Apr 23 20:16:15 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -140,19 +140,19 @@ Trigger_Control Trigger_Control_0(
         .Reset_N                       ( Reset_N ),
         .enable_cmd                    ( C_enable_cmd ),
         .write_read                    ( C_write_read ),
-        .addr_frame                    ( C_addr_frame ),
-        .write_data_frame              ( C_write_data_frame ),
         .FIFO_Event_A_Full             ( COREFIFO_C5_0_AFULL ),
         .FIFO_SampleEventComparator    ( EventFifoFreeLogic_0_NotFree ),
         .Control_Trigger_Out           ( Trigger_Main_0_Control_Trigger_Out ),
         .Control_Busy_Out              ( Trigger_Main_0_Control_Busy_Out ),
+        .addr_frame                    ( C_addr_frame ),
+        .write_data_frame              ( C_write_data_frame ),
         // Outputs
         .busy                          ( C_busy_net_0 ),
-        .read_data_frame               ( C_read_data_frame_net_0 ),
-        .Control_EventNum              ( Trigger_Control_0_Control_EventNum ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
         .Control_Enable                ( Trigger_Control_0_Control_Enable ),
         .Control_Abort                 ( Trigger_Control_0_Control_Abort ),
+        .read_data_frame               ( C_read_data_frame_net_0 ),
+        .Control_EventNum              ( Trigger_Control_0_Control_EventNum ),
         .Control_Threshold             ( Trigger_Control_0_Control_Threshold ),
         .Control_Sample_Per_Event      ( Trigger_Control_0_Control_Sample_Per_Event ) 
         );
@@ -162,9 +162,9 @@ Trigger_Main Trigger_Main_0(
         // Inputs
         .Clock                    ( Clock ),
         .Reset_N                  ( Reset_N ),
-        .Control_EventNum         ( Trigger_Control_0_Control_EventNum ),
         .Control_Enable           ( Trigger_Control_0_Control_Enable ),
         .Control_Abort            ( Trigger_Control_0_Control_Abort ),
+        .Control_EventNum         ( Trigger_Control_0_Control_EventNum ),
         .Control_Threshold        ( Trigger_Control_0_Control_Threshold ),
         .Control_Sample_Per_Event ( Trigger_Control_0_Control_Sample_Per_Event ),
         .TRG_Detect_Vector        ( TRG_Detect_Vector ),

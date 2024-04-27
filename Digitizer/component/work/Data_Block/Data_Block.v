@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sat Apr 20 15:45:08 2024
+// Created by SmartDesign Tue Apr 23 16:48:05 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -95,6 +95,7 @@ wire          Communication_Data_Req_net_0;
 wire          Communication_Empty_net_0;
 wire          Communication_Read;
 wire          Control_Test_Generator_Enable_net_0;
+wire          DataRamManage_0_EnableOfWrite;
 wire          Diag_0_net_0;
 wire          Diag_1_net_0;
 wire          Diag_1_0;
@@ -259,7 +260,7 @@ DataRamManage DataRamManage_0(
         .CountOfSampleWord_Read  ( Communication_Builder_0_CountOfSampleWord_Read ),
         .CountOfEventWord_Read   ( Communication_Builder_0_CountOfEventWord_Read ),
         // Outputs
-        .EnableOfWrite           (  ),
+        .EnableOfWrite           ( DataRamManage_0_EnableOfWrite ),
         .EnableOfRead            (  ) 
         );
 
@@ -303,6 +304,7 @@ FIFOs_Reader FIFOs_Reader_0(
         .Block_1_Sample_FIFO_2_R_Data  ( Input_Data_Part_1_Q_2 ),
         .Block_1_Sample_FIFO_3_R_Data  ( Input_Data_Part_1_Q_3 ),
         .Event_RAM_R_Data_Status       ( Event_Info_RAM_Block_0_A_DOUT_Event_Status ),
+        .RamMan_WriteEnable            ( DataRamManage_0_EnableOfWrite ),
         // Outputs
         .Event_FIFO_R_Enable           ( Diag_1_0 ),
         .Block_0_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),

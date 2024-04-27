@@ -21,6 +21,7 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SPI_interface.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_Decoder.vhd'.
@@ -246,8 +247,9 @@
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":126:0:126:19|Using module EventFifoFreeLogic from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":137:16:137:32|Using module Trigger_Control from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":161:13:161:26|Using module Trigger_Main from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":203:22:203:44|Using module Communication_Builder from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":271:13:271:26|Using module FIFOs_Reader from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":208:22:208:44|Using module Communication_Builder from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":254:14:254:28|Using module DataRamManage from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":292:13:292:26|Using module FIFOs_Reader from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":278:14:278:28|Using module SampleCompose from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":366:18:366:36|Using module SampleTxDeCompose from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":448:25:448:50|Using module Test_Generator_for_Lanes from library work
@@ -378,6 +380,7 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SPI_interface.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_Decoder.vhd'.
@@ -423,13 +426,15 @@
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleTxDeCompose.vhd":6:7:6:23|Synthesizing work.sampletxdecompose.rtl.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd":6:7:6:19|Synthesizing work.samplecompose.rtl.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":6:7:6:18|Synthesizing work.fifos_reader.rtl.
-@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":67:19:67:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "1000000".
-@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":376:12:376:25|OTHERS clause is not synthesized.
-@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":468:12:468:25|OTHERS clause is not synthesized.
+@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":69:19:69:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "1000000".
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":426:12:426:25|OTHERS clause is not synthesized.
+@N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd":5:7:5:19|Synthesizing work.datarammanage.arch.
+@N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd":58:4:58:19|Removing redundant assignment.
+@N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd":85:4:85:20|Removing redundant assignment.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":8:7:8:27|Synthesizing work.communication_builder.rtl.
-@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":57:19:57:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000000000000".
-@N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":859:16:859:44|Removing redundant assignment.
-@N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":860:16:860:42|Removing redundant assignment.
+@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":60:19:60:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000000000000".
+@N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":907:16:907:44|Removing redundant assignment.
+@N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":908:16:908:42|Removing redundant assignment.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":6:7:6:18|Synthesizing work.trigger_main.rtl.
 @N: CD233 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":51:19:51:20|Using sequential encoding for type fsm_state.
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":239:12:239:25|OTHERS clause is not synthesized.
@@ -520,7 +525,7 @@
 @N: CL135 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd":75:8:75:9|Found sequential shift Output_Sample_Part with address depth of 3 words and data bit width of 12.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":151:8:151:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":195:8:195:9|Trying to extract state machine for register state_reg.
-@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":132:8:132:9|Trying to extract state machine for register state_reg.
+@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":143:8:143:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":154:8:154:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd":66:8:66:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxMainLinkController.vhd":78:8:78:9|Trying to extract state machine for register state_reg.
@@ -659,6 +664,7 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SPI_interface.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Sample_RAM_Block_Decoder.vhd'.

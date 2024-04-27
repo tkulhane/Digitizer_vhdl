@@ -24,8 +24,11 @@ architecture arch of DataRamManage is
 
     constant MaxOfEvents : natural := 1024;
     constant MaxOfSamples : natural := 4*65536;
+    --constant MaxOfSamples : natural := 3000;
 
-	    
+	signal CountOfSampleWord_xWrite : unsigned(128 - 1 downto 0);
+	signal CountOfSampleWord_xRead : unsigned(128 - 1 downto 0);
+
 	signal CountOfSampleWord : unsigned(128 - 1 downto 0);
     signal CountOfEventWord : unsigned(32 - 1 downto 0);
 
@@ -50,13 +53,14 @@ begin
     
         elsif(Clock'event and Clock = '1') then
         
-            --write to RAM
-            if(CountOfEventWord_Write = '1') then
+            
+			if(CountOfEventWord_Write = '1' and CountOfEventWord_Read = '1') then
+				CountOfEventWord <= CountOfEventWord;
+			--write to RAM	
+            elsif(CountOfEventWord_Write = '1') then
                 CountOfEventWord <= CountOfEventWord + 1;
-            end if;
-
             --read from RAM
-            if(CountOfEventWord_Read = '1') then
+            elsif(CountOfEventWord_Read = '1') then
                 CountOfEventWord <= CountOfEventWord - 1;
             end if;
 
@@ -77,13 +81,13 @@ begin
     
         elsif(Clock'event and Clock = '1') then
         
+			if(CountOfSampleWord_Write = '1' and CountOfSampleWord_Read = '1') then
+				CountOfSampleWord <= CountOfSampleWord;
             --write to RAM
-            if(CountOfSampleWord_Write = '1') then
+            elsif(CountOfSampleWord_Write = '1') then
                 CountOfSampleWord <= CountOfSampleWord + 1;
-            end if;
-
             --read from RAM
-            if(CountOfSampleWord_Read = '1') then
+            elsif(CountOfSampleWord_Read = '1') then
                 CountOfSampleWord <= CountOfSampleWord - 1;
             end if;
 
@@ -106,7 +110,7 @@ begin
     
         elsif(Clock'event and Clock = '1') then
         
-            if(CountOfSampleWord > MaxOfSamples) then
+            if(CountOfSampleWord > (MaxOfSamples - 5)) then
 				EnableOfWriteSamples <= '0';
 			else 
 				EnableOfWriteSamples <= '1';
@@ -124,6 +128,33 @@ begin
 
 
 
+
+------------------------------------------------------------------------------------------------------------
+--process CountOfSampleWord
+------------------------------------------------------------------------------------------------------------
+    process(Clock, Reset_N)
+
+    begin
+
+        if(Reset_N = '0') then
+            CountOfSampleWord_xWrite <= (others => '0');
+			CountOfSampleWord_xRead <= (others => '0');
+            
+    
+        elsif(Clock'event and Clock = '1') then
+        
+
+            if(CountOfSampleWord_Write = '1') then
+                CountOfSampleWord_xWrite <= CountOfSampleWord_xWrite + 1;
+            end if;
+
+            if(CountOfSampleWord_Read = '1') then
+                CountOfSampleWord_xRead <= CountOfSampleWord_xRead + 1;
+            end if;
+
+        end if;
+
+    end process;
 
 
 

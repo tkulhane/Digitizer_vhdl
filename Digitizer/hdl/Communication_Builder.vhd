@@ -114,7 +114,7 @@ architecture rtl of Communication_Builder is
     signal Packet_Counter_Go : std_logic;
     --signal Packet_Counter_Modulo : std_logic;
     signal Packet_Counter_Reset_N : std_logic;
-    signal Packet_Counter : unsigned (23 downto 0);
+    signal Packet_Counter : unsigned (19 downto 0);
 
     signal Read_sID_Sample_0 : std_logic_vector(3 downto 0);
     signal Read_sID_Sample_1 : std_logic_vector(3 downto 0);
@@ -156,8 +156,8 @@ begin
     Data_Frame_2 <= CMD_CONST_CDb_Data & '0' & std_logic_vector(Frame_Counter) & Read_Sample_3 & Read_Sample_2;
 
     EVENT_HEAD  <= CMD_CONST_CDb_Command & CMD_CONST_EVENT_HEAD(6 downto 0) & "0000" & Event_Number_Buffer;
-    EVENT_TAIL  <= CMD_CONST_CDb_Command & CMD_CONST_EVENT_TAIL(6 downto 0) & std_logic_vector(Packet_Counter);
-    PACKET_HEAD <= CMD_CONST_CDb_Command & CMD_CONST_PACKET_HEAD(6 downto 0) & std_logic_vector(Packet_Counter);
+    EVENT_TAIL  <= CMD_CONST_CDb_Command & CMD_CONST_EVENT_TAIL(6 downto 0) & "0000" & std_logic_vector(Packet_Counter);
+    PACKET_HEAD <= CMD_CONST_CDb_Command & CMD_CONST_PACKET_HEAD(6 downto 0) & "0000" & std_logic_vector(Packet_Counter);
     PACKET_TAIL <= CMD_CONST_CDb_Command & CMD_CONST_PACKET_TAIL(6 downto 0) & "000000000000000000" & std_logic_vector(Frame_Counter);
 
     Event_RAM_W_Data_Status <= Event_Status_ID_Free;
