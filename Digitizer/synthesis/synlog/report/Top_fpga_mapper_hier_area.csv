@@ -1,10 +1,10 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
-. Top, 32678, 74826, 34616, 0, 0, 933, 0, 19, 108
-.	. AnalyzInCirc_Top, 18586, 38060, 12515, 0, 0, 0, 0, 4, 0
-.	.	. AnalyzInCirc_Controler_2, 96, 104, 49, 0, 0, 0, 0, 0, 0
-.	.	. AnalyzInCirc_FIFO_12_8_1024_Top, 9245, 18753, 6463, 0, 0, 0, 0, 2, 0
-.	.	. AnalyzInCirc_FIFO_12_8_1024_Top_0, 9245, 19203, 6003, 0, 0, 0, 0, 2, 0
+. Top, 32728, 74981, 34436, 0, 0, 933, 0, 19, 110
+.	. AnalyzInCirc_Top, 18586, 38193, 12337, 0, 0, 0, 0, 4, 0
+.	.	. AnalyzInCirc_Controler_2, 96, 103, 49, 0, 0, 0, 0, 0, 0
+.	.	. AnalyzInCirc_FIFO_12_8_1024_Top, 9245, 18834, 6370, 0, 0, 0, 0, 2, 0
+.	.	. AnalyzInCirc_FIFO_12_8_1024_Top_0, 9245, 19256, 5918, 0, 0, 0, 0, 2, 0
 .	. Clock_Reset, 20, 2, 0, 0, 0, 0, 0, 7, 0
 .	.	. CORERESET_PF_C0, 17, 1, 0, 0, 0, 0, 0, 1, 0
 .	.	.	. CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF, 17, 1, 0, 0, 0, 0, 0, 1, 0
@@ -133,13 +133,13 @@
 .	.	.	. Communication_TX_Arbiter2_1_1, 7, 78, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. Synchronizer_1, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. ft601_fifo_interface, 44, 98, 0, 0, 0, 0, 0, 0, 0
-.	. Controler, 1032, 1013, 359, 0, 0, 1, 0, 1, 0
+.	. Controler, 1032, 1016, 359, 0, 0, 1, 0, 1, 0
 .	.	. ADI_SPI_Top, 126, 77, 75, 0, 0, 0, 0, 0, 0
 .	.	. ADI_SPI_Top_0, 126, 79, 75, 0, 0, 0, 0, 0, 0
 .	.	. Answer_Encoder, 45, 179, 0, 0, 0, 0, 0, 0, 0
-.	.	. Command_Decoder, 96, 88, 32, 0, 0, 0, 0, 0, 0
+.	.	. Command_Decoder, 96, 87, 32, 0, 0, 0, 0, 0, 0
 .	.	. REGISTERS, 6, 7, 0, 0, 0, 1, 0, 0, 0
-.	.	. Reset_Controler, 139, 190, 66, 0, 0, 0, 0, 1, 0
+.	.	. Reset_Controler, 139, 194, 66, 0, 0, 0, 0, 1, 0
 .	.	. SPI_LMX_Top, 115, 58, 6, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_interface_rtl_7_16_1_addr_widthdata_width, 42, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_master_behavioural_24_5_1_data_lengthdivider_1, 73, 58, 6, 0, 0, 0, 0, 0, 0
@@ -147,7 +147,7 @@
 .	.	.	. work_spi_interface_rtl_7_16_1_addr_widthdata_width_0, 42, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_master_behavioural_24_5_1_data_lengthdivider_1_0, 73, 58, 6, 0, 0, 0, 0, 0, 0
 .	.	. gpio_controler, 264, 277, 99, 0, 0, 0, 0, 0, 0
-.	. Data_Block, 2307, 1246, 1666, 0, 0, 886, 0, 0, 0
+.	. Data_Block, 2357, 1266, 1666, 0, 0, 886, 0, 0, 0
 .	.	. COREFIFO_C10, 169, 93, 69, 0, 0, 2, 0, 0, 0
 .	.	.	. COREFIFO_C10_COREFIFO_C10_0_COREFIFO_Z19_layer0, 169, 93, 69, 0, 0, 2, 0, 0, 0
 .	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0, 133, 58, 69, 0, 0, 0, 0, 0, 0
@@ -157,7 +157,7 @@
 .	.	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_corefifo_grayToBinConv_10_Top_0, 0, 10, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_10_10_0s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_LSRAM_top, 0, 0, 0, 0, 0, 2, 0, 0, 0
-.	.	. Communication_Builder, 274, 162, 154, 0, 0, 0, 0, 0, 0
+.	.	. Communication_Builder, 274, 159, 154, 0, 0, 0, 0, 0, 0
 .	.	. DataRamManage, 162, 55, 162, 0, 0, 0, 0, 0, 0
 .	.	. Event_Info_RAM_Block, 0, 0, 0, 0, 0, 4, 0, 0, 0
 .	.	.	. PF_DPSRAM_C7_0, 0, 0, 0, 0, 0, 1, 0, 0, 0
@@ -238,18 +238,25 @@
 .	.	.	.	. PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_2, 0, 0, 0, 0, 0, 192, 0, 0, 0
 .	.	.	. Sample_RAM_Block_Decoder, 0, 4, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. Sample_RAM_Block_MUX, 0, 0, 24, 0, 0, 0, 0, 0, 0
-.	.	. Trigger_Top_Part, 411, 250, 416, 0, 0, 16, 0, 0, 0
-.	.	.	. COREFIFO_C5, 149, 85, 78, 0, 0, 16, 0, 0, 0
-.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_COREFIFO_Z24_layer0, 149, 85, 78, 0, 0, 16, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z26_layer0, 36, 65, 0, 0, 0, 0, 0, 0, 0
+.	.	. Trigger_Top_Part, 411, 266, 416, 0, 0, 16, 0, 0, 0
+.	.	.	. COREFIFO_C5, 149, 88, 78, 0, 0, 16, 0, 0, 0
+.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_COREFIFO_Z24_layer0, 149, 88, 78, 0, 0, 16, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z26_layer0, 36, 68, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0, 78, 19, 78, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 16, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_LSRAM_top, 0, 0, 0, 0, 0, 16, 0, 0, 0
-.	.	.	. Trigger_Control, 209, 146, 164, 0, 0, 0, 0, 0, 0
+.	.	.	. Trigger_Control, 209, 159, 164, 0, 0, 0, 0, 0, 0
 .	.	.	. Trigger_Main, 36, 17, 97, 0, 0, 0, 0, 0, 0
 .	.	.	. work_eventfifofreelogic_arch_15_16384_1_g_FifoRemainingWidthg_FifoDepth, 17, 2, 77, 0, 0, 0, 0, 0, 0
+.	.	. work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA, 50, 7, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_0, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	. PF_IO_C0_0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+.	.	. PF_IO_Z27_layer0_1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+.	. PF_IO_C0_1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+.	.	. PF_IO_Z27_layer0_0, 0, 0, 0, 0, 0, 0, 0, 0, 1
 .	. Synchronizer_11_8, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	. Transceiver_Main, 7463, 32128, 18973, 0, 0, 12, 0, 5, 0
+.	. Transceiver_Main, 7463, 32127, 18973, 0, 0, 12, 0, 5, 0
 .	.	. PF_CCC_C5, 0, 0, 0, 0, 0, 0, 0, 1, 0
 .	.	.	. PF_CCC_C5_PF_CCC_C5_0_PF_CCC, 0, 0, 0, 0, 0, 0, 0, 1, 0
 .	.	. SampleCompose, 12, 0, 0, 0, 0, 0, 0, 0, 0
@@ -409,4 +416,4 @@
 .	.	.	.	. work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1, 186, 114, 20, 0, 0, 0, 0, 0, 0
 .	.	.	.	. work_txlanecontrol_rtl_8_3_0_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay_0, 102, 222, 163, 0, 0, 0, 0, 0, 0
 .	.	.	. TxMainLinkController_2, 2, 4, 0, 0, 0, 0, 0, 0, 0
-.	.	. work_transceiver_controller_rtl_2_1_g_NumberOfLanes, 42, 92, 0, 0, 0, 0, 0, 0, 0
+.	.	. work_transceiver_controller_rtl_2_1_g_NumberOfLanes, 42, 91, 0, 0, 0, 0, 0, 0, 0

@@ -29,6 +29,8 @@ entity Trigger_Main is
         ALL_FIFO_Enable : out std_logic;
         FIFO_Event_Data : out std_logic_vector(17 downto 0);
 
+        ACQ_RunOut : out std_logic;
+
         --to trigger units
         TRG_Threshold : out std_logic_vector(g_Data_Length - 1 downto 0);
         TRG_Detect_Vector : in std_logic_vector(g_Num_Of_TRG_Units - 1 downto 0)
@@ -66,6 +68,7 @@ architecture rtl of Trigger_Main is
     signal SampleTactCounter_Reset : std_logic;
     signal SampleTactCounter : unsigned(31 downto 0); 
 
+    signal ACQ_FsmEnable : std_logic;
     signal ACQ_RunSignal : std_logic;
     signal ACQ_LastSampleTact : std_logic;
     signal ACQ_Abort : std_logic;
@@ -102,6 +105,8 @@ begin
 
 
     --Event_Info <= Control_EventNum;
+
+    ACQ_RunOut <= ACQ_RunSignal and ACQ_FsmEnable;
 
 ------------------------------------------------------------------------------------------------------------
 --Process: Delay ALL_FIFO_Enable_0 and FIFO_Event_Data_0 (1 cycle)
@@ -260,6 +265,7 @@ begin
                 Event_End_Aborted <= '0';
                 Event_Reserved_Bit <= '0';
                 Event_Info <= (others => '0');
+                ACQ_FsmEnable <= '0';
 
             when ACQ_ENABLE =>
                 Control_AcqStart <= '0';
@@ -273,6 +279,7 @@ begin
                 Event_End_Aborted <= '0';
                 Event_Reserved_Bit <= '0';
                 Event_Info <= (others => '0');
+                ACQ_FsmEnable <= '1';
 
             when ACQ_START =>
                 Control_AcqStart <= '1';
@@ -286,6 +293,7 @@ begin
                 Event_End_Aborted <= '0';
                 Event_Reserved_Bit <= '0';
                 Event_Info <= (others => '0');
+                ACQ_FsmEnable <= '1';
 
             when ACQ_GO =>
                 Control_AcqStart <= '0';
@@ -299,6 +307,7 @@ begin
                 Event_End_Aborted <= ACQ_Abort;
                 Event_Reserved_Bit <= '0';
                 Event_Info <= (others => '0');
+                ACQ_FsmEnable <= '0';
 
             when others =>
                 Control_AcqStart <= '0';
@@ -311,7 +320,8 @@ begin
                 Event_End_In_Frame <= '0';
                 Event_End_Aborted <= '0';
                 Event_Reserved_Bit <= '0';
-                Event_Info <= (others => '0');                
+                Event_Info <= (others => '0');   
+                ACQ_FsmEnable <= '0';             
 
         end case;
 

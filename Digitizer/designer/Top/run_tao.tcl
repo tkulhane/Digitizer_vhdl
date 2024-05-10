@@ -127,6 +127,7 @@ read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitiz
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\COREFIFO.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd}
+read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7_0\PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7.v}
@@ -167,6 +168,8 @@ read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\T
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EventFifoFreeLogic.vhd}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_IO\2.0.104\core\vlog\PF_IO.v}
+read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_IO_C0\PF_IO_C0.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C5\PF_CCC_C5_0\PF_CCC_C5_PF_CCC_C5_0_PF_CCC.v}
 read_verilog -mode system_verilog {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C5\PF_CCC_C5.v}
 read_vhdl -mode vhdl_2008 {C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\SampleCompose.vhd}

@@ -1,0 +1,119 @@
+<spirit:component xmlns:actel-cc="http://www.actel.com/XMLSchema/CoreConsole" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.1 http://www.spiritconsortium.org/XMLSchema/SPIRIT/1.1/component.xsd">
+  <spirit:vendor>User</spirit:vendor>
+  <spirit:library>Private</spirit:library>
+  <spirit:name>CtrlBus_HandShake</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+  </spirit:memoryMaps>
+  <spirit:hwModel>
+    <spirit:views>
+    </spirit:views>
+    <spirit:signals>
+      <spirit:signal>
+        <spirit:name>CTRL_Clock</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CTRL_Reset_N</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_Clock</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_Reset_N</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CTRL_busy</spirit:name>
+        <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CTRL_enable_cmd</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CTRL_write_read</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CTRL_addr_frame</spirit:name>
+        <spirit:direction>in</spirit:direction>
+        <spirit:left spirit:dependency="id('g_WidthADDR') - 1" spirit:resolve="dependent">7</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CTRL_write_data_frame</spirit:name>
+        <spirit:direction>in</spirit:direction>
+        <spirit:left spirit:dependency="id('g_WidthDATA') - 1" spirit:resolve="dependent">15</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>CTRL_read_data_frame</spirit:name>
+        <spirit:direction>out</spirit:direction>
+        <spirit:left spirit:dependency="id('g_WidthDATA') - 1" spirit:resolve="dependent">15</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_busy</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_enable_cmd</spirit:name>
+        <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_write_read</spirit:name>
+        <spirit:direction>out</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_addr_frame</spirit:name>
+        <spirit:direction>out</spirit:direction>
+        <spirit:left spirit:dependency="id('g_WidthADDR') - 1" spirit:resolve="dependent">7</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_write_data_frame</spirit:name>
+        <spirit:direction>out</spirit:direction>
+        <spirit:left spirit:dependency="id('g_WidthDATA') - 1" spirit:resolve="dependent">15</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>PRH_read_data_frame</spirit:name>
+        <spirit:direction>in</spirit:direction>
+        <spirit:left spirit:dependency="id('g_WidthDATA') - 1" spirit:resolve="dependent">15</spirit:left>
+        <spirit:right>0</spirit:right>
+      </spirit:signal>
+    </spirit:signals>
+    <spirit:hwParameters>
+      <spirit:hwParameter spirit:id="g_WidthADDR" spirit:name="g_WidthADDR" spirit:prompt="g_WidthADDR:" spirit:dataType="int" spirit:resolve="user">8</spirit:hwParameter>
+      <spirit:hwParameter spirit:id="g_WidthDATA" spirit:name="g_WidthDATA" spirit:prompt="g_WidthDATA:" spirit:dataType="int" spirit:resolve="user">16</spirit:hwParameter>
+    </spirit:hwParameters>
+    <spirit:deletedhwParameters>
+    </spirit:deletedhwParameters>
+  </spirit:hwModel>
+  <spirit:choices>
+  </spirit:choices>
+  <spirit:fileSets>
+  <spirit:fileSet spirit:fileSetId="HDL_FILESET">
+    <spirit:file>
+      <spirit:name>hdl/CtrlBus_HandShake.vhd</spirit:name>
+      <spirit:fileType>verilogSource</spirit:fileType>
+    <spirit:vendorExtensions></spirit:vendorExtensions>
+    </spirit:file>
+  <spirit:vendorExtensions></spirit:vendorExtensions>
+  </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:vendorExtensions>
+    <actel-cc:type typeName="IP"/>
+    <actel-cc:instantiateOnCreation value="false"/>
+    <actel-cc:diveInPermission value="READ_WRITE"/>
+    <actel-cc:categories categoryName="OS" style="hidden">
+      <actel-cc:category name="PC">
+      </actel-cc:category>
+    </actel-cc:categories>
+  </spirit:vendorExtensions>
+</spirit:component>

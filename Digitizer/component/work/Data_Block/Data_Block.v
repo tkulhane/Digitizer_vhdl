@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Apr 23 16:48:05 2024
+// Created by SmartDesign Fri May 10 14:15:38 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -26,6 +26,7 @@ module Data_Block(
     Input_Data_3_01,
     Reset_N,
     // Outputs
+    ACQ_RunOut,
     C_busy,
     C_read_data_frame,
     Communication_Data_Frame,
@@ -61,6 +62,7 @@ input         Reset_N;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output        ACQ_RunOut;
 output        C_busy;
 output [15:0] C_read_data_frame;
 output [31:0] Communication_Data_Frame;
@@ -74,6 +76,7 @@ output        Diag_3;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire          ACQ_RunOut_net_0;
 wire   [7:0]  C_addr_frame;
 wire          C_busy_net_0;
 wire          C_enable_cmd;
@@ -95,6 +98,10 @@ wire          Communication_Data_Req_net_0;
 wire          Communication_Empty_net_0;
 wire          Communication_Read;
 wire          Control_Test_Generator_Enable_net_0;
+wire   [7:0]  CtrlBus_HandShake_0_PRH_addr_frame;
+wire          CtrlBus_HandShake_0_PRH_enable_cmd;
+wire   [15:0] CtrlBus_HandShake_0_PRH_write_data_frame;
+wire          CtrlBus_HandShake_0_PRH_write_read;
 wire          DataRamManage_0_EnableOfWrite;
 wire          Diag_0_net_0;
 wire          Diag_1_net_0;
@@ -142,6 +149,8 @@ wire   [15:0] Input_Data_Part_1_Q_3;
 wire          Reset_N;
 wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
 wire          Trigger_Top_Part_0_ALL_FIFO_Write;
+wire          Trigger_Top_Part_0_C_busy;
+wire   [15:0] Trigger_Top_Part_0_C_read_data_frame;
 wire          Trigger_Top_Part_0_EMPTY;
 wire   [17:0] Trigger_Top_Part_0_Q;
 wire   [11:0] Trigger_Top_Part_0_TRG_Threshold;
@@ -153,6 +162,7 @@ wire          Communication_Data_Req_net_1;
 wire          Control_Test_Generator_Enable_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [31:0] Communication_Data_Frame_net_1;
+wire          ACQ_RunOut_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -201,6 +211,8 @@ assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
+assign ACQ_RunOut_net_1                    = ACQ_RunOut_net_0;
+assign ACQ_RunOut                          = ACQ_RunOut_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -209,20 +221,15 @@ Communication_Builder Communication_Builder_0(
         // Inputs
         .Clock                       ( Clock ),
         .Reset_N                     ( Reset_N ),
+        .Communication_Data_Full     ( Diag_1_net_0 ),
+        .Communication_DATA_Ack      ( Communication_Builder_RUN ),
         .Event_RAM_R_Data_Start_ADDR ( Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR ),
         .Event_RAM_R_Data_Number     ( Event_Info_RAM_Block_0_B_DOUT_Event_Number ),
         .Event_RAM_R_Data_Size       ( Event_Info_RAM_Block_0_B_DOUT_Event_Size ),
         .Event_RAM_R_Data_Status     ( Event_Info_RAM_Block_0_B_DOUT_Event_Status ),
         .Sample_RAM_R_Data           ( Sample_RAM_Block_0_B_Output_Data ),
-        .Communication_Data_Full     ( Diag_1_net_0 ),
-        .Communication_DATA_Ack      ( Communication_Builder_RUN ),
         // Outputs
-        .Event_RAM_R_Address         ( Communication_Builder_0_Event_RAM_R_Address ),
         .Event_RAM_W_Enable_Status   ( Communication_Builder_0_Event_RAM_W_Enable_Status ),
-        .Event_RAM_W_Data_Status     ( Communication_Builder_0_Event_RAM_W_Data_Status ),
-        .Sample_RAM_R_Address        ( Communication_Builder_0_Sample_RAM_R_Address ),
-        .Sample_RAM_R_Block_Address  ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
-        .Communication_Data_Frame    ( Communication_Builder_0_Communication_Data_Frame ),
         .Communication_Data_Enable   ( Diag_0_net_0 ),
         .Communication_Data_Req      ( Communication_Data_Req_net_0 ),
         .CountOfSampleWord_Read      ( Communication_Builder_0_CountOfSampleWord_Read ),
@@ -230,7 +237,12 @@ Communication_Builder Communication_Builder_0(
         .Diag_0                      (  ),
         .Diag_1                      (  ),
         .Diag_2                      (  ),
-        .Diag_3                      (  ) 
+        .Diag_3                      (  ),
+        .Event_RAM_R_Address         ( Communication_Builder_0_Event_RAM_R_Address ),
+        .Event_RAM_W_Data_Status     ( Communication_Builder_0_Event_RAM_W_Data_Status ),
+        .Sample_RAM_R_Address        ( Communication_Builder_0_Sample_RAM_R_Address ),
+        .Sample_RAM_R_Block_Address  ( Communication_Builder_0_Sample_RAM_R_Block_Address ),
+        .Communication_Data_Frame    ( Communication_Builder_0_Communication_Data_Frame ) 
         );
 
 //--------COREFIFO_C10
@@ -248,6 +260,31 @@ COREFIFO_C10 COREFIFO_C10_0(
         .EMPTY    ( Communication_Empty_net_0 ),
         .AFULL    ( Diag_1_net_0 ),
         .Q        ( Communication_Data_Frame_net_0 ) 
+        );
+
+//--------CtrlBus_HandShake
+CtrlBus_HandShake #( 
+        .g_WidthADDR ( 8 ),
+        .g_WidthDATA ( 16 ) )
+CtrlBus_HandShake_0(
+        // Inputs
+        .CTRL_Clock            ( Clock ),
+        .CTRL_Reset_N          ( Fifo_RESET_N ),
+        .PRH_Clock             ( Clock ),
+        .PRH_Reset_N           ( Fifo_RESET_N ),
+        .CTRL_enable_cmd       ( C_enable_cmd ),
+        .CTRL_write_read       ( C_write_read ),
+        .CTRL_addr_frame       ( C_addr_frame ),
+        .CTRL_write_data_frame ( C_write_data_frame ),
+        .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
+        .PRH_read_data_frame   ( Trigger_Top_Part_0_C_read_data_frame ),
+        // Outputs
+        .CTRL_busy             ( C_busy_net_0 ),
+        .CTRL_read_data_frame  ( C_read_data_frame_net_0 ),
+        .PRH_enable_cmd        ( CtrlBus_HandShake_0_PRH_enable_cmd ),
+        .PRH_write_read        ( CtrlBus_HandShake_0_PRH_write_read ),
+        .PRH_addr_frame        ( CtrlBus_HandShake_0_PRH_addr_frame ),
+        .PRH_write_data_frame  ( CtrlBus_HandShake_0_PRH_write_data_frame ) 
         );
 
 //--------DataRamManage
@@ -293,8 +330,9 @@ FIFOs_Reader FIFOs_Reader_0(
         // Inputs
         .Clock                         ( Clock ),
         .Reset_N                       ( Reset_N ),
-        .Event_FIFO_R_Data             ( Trigger_Top_Part_0_Q ),
         .Event_FIFO_Empty              ( Trigger_Top_Part_0_EMPTY ),
+        .RamMan_WriteEnable            ( DataRamManage_0_EnableOfWrite ),
+        .Event_FIFO_R_Data             ( Trigger_Top_Part_0_Q ),
         .Block_0_Sample_FIFO_0_R_Data  ( Input_Data_Part_0_Q_0 ),
         .Block_0_Sample_FIFO_1_R_Data  ( Input_Data_Part_0_Q_1 ),
         .Block_0_Sample_FIFO_2_R_Data  ( Input_Data_Part_0_Q_2 ),
@@ -304,27 +342,26 @@ FIFOs_Reader FIFOs_Reader_0(
         .Block_1_Sample_FIFO_2_R_Data  ( Input_Data_Part_1_Q_2 ),
         .Block_1_Sample_FIFO_3_R_Data  ( Input_Data_Part_1_Q_3 ),
         .Event_RAM_R_Data_Status       ( Event_Info_RAM_Block_0_A_DOUT_Event_Status ),
-        .RamMan_WriteEnable            ( DataRamManage_0_EnableOfWrite ),
         // Outputs
         .Event_FIFO_R_Enable           ( Diag_1_0 ),
         .Block_0_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
         .Block_1_Sample_FIFO_R_Enable  ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
+        .Event_RAM_W_Enable_Start_ADDR ( FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR ),
+        .Event_RAM_W_Enable_Number     ( FIFOs_Reader_0_Event_RAM_W_Enable_Number ),
+        .Event_RAM_W_Enable_Size       ( FIFOs_Reader_0_Event_RAM_W_Enable_Size ),
+        .Event_RAM_W_Enable_Status     ( FIFOs_Reader_0_Event_RAM_W_Enable_Status ),
+        .Sample_RAM_W_Enable           ( FIFOs_Reader_0_Sample_RAM_W_Enable ),
+        .CountOfSampleWord_Write       ( FIFOs_Reader_0_CountOfSampleWord_Write ),
+        .CountOfEventWord_Write        ( FIFOs_Reader_0_CountOfEventWord_Write ),
+        .Diag_Valid                    (  ),
         .Event_RAM_W_Address           ( FIFOs_Reader_0_Event_RAM_W_Address ),
         .Event_RAM_W_Data_Start_ADDR   ( FIFOs_Reader_0_Event_RAM_W_Data_Start_ADDR ),
         .Event_RAM_W_Data_Number       ( FIFOs_Reader_0_Event_RAM_W_Data_Number ),
         .Event_RAM_W_Data_Size         ( FIFOs_Reader_0_Event_RAM_W_Data_Size ),
         .Event_RAM_W_Data_Status       ( FIFOs_Reader_0_Event_RAM_W_Data_Status ),
-        .Event_RAM_W_Enable_Start_ADDR ( FIFOs_Reader_0_Event_RAM_W_Enable_Start_ADDR ),
-        .Event_RAM_W_Enable_Number     ( FIFOs_Reader_0_Event_RAM_W_Enable_Number ),
-        .Event_RAM_W_Enable_Size       ( FIFOs_Reader_0_Event_RAM_W_Enable_Size ),
-        .Event_RAM_W_Enable_Status     ( FIFOs_Reader_0_Event_RAM_W_Enable_Status ),
         .Sample_RAM_W_Address          ( FIFOs_Reader_0_Sample_RAM_W_Address ),
         .Sample_RAM_W_Block_Address    ( FIFOs_Reader_0_Sample_RAM_W_Block_Address ),
-        .Sample_RAM_W_Data             ( FIFOs_Reader_0_Sample_RAM_W_Data ),
-        .Sample_RAM_W_Enable           ( FIFOs_Reader_0_Sample_RAM_W_Enable ),
-        .CountOfSampleWord_Write       ( FIFOs_Reader_0_CountOfSampleWord_Write ),
-        .CountOfEventWord_Write        ( FIFOs_Reader_0_CountOfEventWord_Write ),
-        .Diag_Valid                    (  ) 
+        .Sample_RAM_W_Data             ( FIFOs_Reader_0_Sample_RAM_W_Data ) 
         );
 
 //--------Input_Data_Part
@@ -397,21 +434,22 @@ Sample_RAM_Block Sample_RAM_Block_0(
 Trigger_Top_Part Trigger_Top_Part_0(
         // Inputs
         .Clock                         ( Clock ),
-        .Reset_N                       ( Reset_N ),
-        .C_enable_cmd                  ( C_enable_cmd ),
-        .C_write_read                  ( C_write_read ),
+        .Reset_N                       ( Fifo_RESET_N ),
+        .C_enable_cmd                  ( CtrlBus_HandShake_0_PRH_enable_cmd ),
+        .C_write_read                  ( CtrlBus_HandShake_0_PRH_write_read ),
         .RE                            ( Diag_1_0 ),
-        .C_addr_frame                  ( C_addr_frame ),
-        .C_write_data_frame            ( C_write_data_frame ),
+        .C_addr_frame                  ( CtrlBus_HandShake_0_PRH_addr_frame ),
+        .C_write_data_frame            ( CtrlBus_HandShake_0_PRH_write_data_frame ),
         .TRG_Detect_Vector             ( Input_Data_Part_0_TRG_Detect_Vector ),
         // Outputs
-        .C_busy                        ( C_busy_net_0 ),
+        .C_busy                        ( Trigger_Top_Part_0_C_busy ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
         .ALL_FIFO_Write                ( Trigger_Top_Part_0_ALL_FIFO_Write ),
         .EMPTY                         ( Trigger_Top_Part_0_EMPTY ),
-        .C_read_data_frame             ( C_read_data_frame_net_0 ),
+        .C_read_data_frame             ( Trigger_Top_Part_0_C_read_data_frame ),
         .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
-        .Q                             ( Trigger_Top_Part_0_Q ) 
+        .Q                             ( Trigger_Top_Part_0_Q ),
+        .ACQ_RunOut                    ( ACQ_RunOut_net_0 ) 
         );
 
 

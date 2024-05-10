@@ -1,8 +1,8 @@
 Detailed Resource Usage
 Module Name,Fabric 4LUT,Fabric DFF,Interface 4LUT,Interface DFF,Single-Ended I/O,Differential I/O Pairs,LSRAM 18K,Chip Globals,Row Global,PLL,Transceiver Lanes
-AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/Primitives,25218,9245,0,0,0,0,0,2,0,0,0
-AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/Primitives,25208,9245,0,0,0,0,0,2,0,0,0
-AnalyzInCirc_Top_0/inst_AnalyzInCirc_Controler/Primitives,154,96,0,0,0,0,0,0,0,0,0
+AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/Primitives,25206,9245,0,0,0,0,0,2,0,0,0
+AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/Primitives,25176,9245,0,0,0,0,0,2,0,0,0
+AnalyzInCirc_Top_0/inst_AnalyzInCirc_Controler/Primitives,153,96,0,0,0,0,0,0,0,0,0
 Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/Primitives,2,17,0,0,0,0,0,1,0,0,0
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/Primitives,0,0,0,0,0,0,0,2,0,1,0
 Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/Primitives,0,0,0,0,0,0,0,1,0,1,0
@@ -100,9 +100,9 @@ Communication_0/USB_3_Protocol_0/ft601_fifo_interface_0/Primitives,97,44,0,0,0,0
 Controler_0/ADI_SPI_0/Primitives,152,126,0,0,0,0,0,0,0,0,0
 Controler_0/ADI_SPI_1/Primitives,154,126,0,0,0,0,0,0,0,0,0
 Controler_0/Answer_Encoder_0/Primitives,179,45,0,0,0,0,0,0,0,0,0
-Controler_0/Command_Decoder_0/Primitives,120,96,0,0,0,0,0,0,0,0,0
+Controler_0/Command_Decoder_0/Primitives,119,96,0,0,0,0,0,0,0,0,0
 Controler_0/REGISTERS_0/Primitives,7,6,36,36,0,0,1,0,0,0,0
-Controler_0/Reset_Controler_0/Primitives,259,139,0,0,0,0,0,1,0,0,0
+Controler_0/Reset_Controler_0/Primitives,263,139,0,0,0,0,0,1,0,0,0
 Controler_0/SPI_LMX_0/SPI_interface_0/Primitives,0,42,0,0,0,0,0,0,0,0,0
 Controler_0/SPI_LMX_0/spi_master_0/Primitives,62,73,0,0,0,0,0,0,0,0,0
 Controler_0/SPI_LMX_0_0/SPI_interface_0/Primitives,0,42,0,0,0,0,0,0,0,0,0
@@ -115,7 +115,10 @@ Data_Block_0/COREFIFO_C10_0/COREFIFO_C10_0/genblk16.U_corefifo_async/Rd_corefifo
 Data_Block_0/COREFIFO_C10_0/COREFIFO_C10_0/genblk16.U_corefifo_async/Wr_corefifo_NstagesSync/Primitives,0,22,0,0,0,0,0,0,0,0,0
 Data_Block_0/COREFIFO_C10_0/COREFIFO_C10_0/genblk16.U_corefifo_async/Wr_corefifo_grayToBinConv/Primitives,10,0,0,0,0,0,0,0,0,0,0
 Data_Block_0/COREFIFO_C10_0/COREFIFO_C10_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/Primitives,0,0,72,72,0,0,2,0,0,0,0
-Data_Block_0/Communication_Builder_0/Primitives,317,274,0,0,0,0,0,0,0,0,0
+Data_Block_0/Communication_Builder_0/Primitives,314,274,0,0,0,0,0,0,0,0,0
+Data_Block_0/CtrlBus_HandShake_0/Primitives,7,46,0,0,0,0,0,0,0,0,0
+Data_Block_0/CtrlBus_HandShake_0/inst_Synchronizer_Busy/Primitives,0,2,0,0,0,0,0,0,0,0,0
+Data_Block_0/CtrlBus_HandShake_0/inst_Synchronizer_Enable/Primitives,0,2,0,0,0,0,0,0,0,0,0
 Data_Block_0/DataRamManage_0/Primitives,217,162,0,0,0,0,0,0,0,0,0
 Data_Block_0/Event_Info_RAM_Block_0/PF_DPSRAM_C7_0_Event_Start_ADDR/PF_DPSRAM_C7_0/Primitives,0,0,36,36,0,0,1,0,0,0,0
 Data_Block_0/Event_Info_RAM_Block_0/PF_DPSRAM_C7_1_Event_Number/PF_DPSRAM_C7_0/Primitives,0,0,36,36,0,0,1,0,0,0,0
@@ -171,12 +174,14 @@ Data_Block_0/Sample_RAM_Block_0/Sample_RAM_Block_Decoder_0/Primitives,4,0,0,0,0,
 Data_Block_0/Sample_RAM_Block_0/Sample_RAM_Block_MUX_0/Primitives,24,0,0,0,0,0,0,0,0,0,0
 Data_Block_0/Trigger_Top_Part_0/COREFIFO_C5_0/COREFIFO_C5_0/Primitives,1,35,0,0,0,0,0,0,0,0,0
 Data_Block_0/Trigger_Top_Part_0/COREFIFO_C5_0/COREFIFO_C5_0/genblk16.fifo_corefifo_sync_scntr/Primitives,98,78,0,0,0,0,0,0,0,0,0
-Data_Block_0/Trigger_Top_Part_0/COREFIFO_C5_0/COREFIFO_C5_0/genblk17.u_corefifo_fwft/Primitives,65,36,0,0,0,0,0,0,0,0,0
+Data_Block_0/Trigger_Top_Part_0/COREFIFO_C5_0/COREFIFO_C5_0/genblk17.u_corefifo_fwft/Primitives,68,36,0,0,0,0,0,0,0,0,0
 Data_Block_0/Trigger_Top_Part_0/COREFIFO_C5_0/COREFIFO_C5_0/genblk22.UI_ram_wrapper_1/L3_syncnonpipe/Primitives,0,0,576,576,0,0,16,0,0,0,0
 Data_Block_0/Trigger_Top_Part_0/EventFifoFreeLogic_0/Primitives,81,17,0,0,0,0,0,0,0,0,0
-Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/Primitives,311,209,0,0,0,0,0,0,0,0,0
+Data_Block_0/Trigger_Top_Part_0/Trigger_Control_0/Primitives,324,209,0,0,0,0,0,0,0,0,0
 Data_Block_0/Trigger_Top_Part_0/Trigger_Main_0/Primitives,115,36,0,0,0,0,0,0,0,0,0
-Primitives/Primitives,5,0,0,0,102,6,0,2,0,0,0
+PF_IO_C0_0/PF_IO_C0_0/Primitives,0,0,0,0,1,0,0,0,0,0,0
+PF_IO_C0_0_0/PF_IO_C0_0/Primitives,0,0,0,0,1,0,0,0,0,0,0
+Primitives/Primitives,3,0,0,0,102,6,0,2,0,0,0
 Synchronizer_0/Primitives,0,2,0,0,0,0,0,0,0,0,0
 Transceiver_Main_0/PF_CCC_C5_0/PF_CCC_C5_0/Primitives,0,0,0,0,0,0,0,1,0,1,0
 Transceiver_Main_0/Primitives,2,0,0,0,0,0,0,0,0,0,0
@@ -190,7 +195,7 @@ Transceiver_Main_0/SampleCompose_0_5/Primitives,0,12,0,0,0,0,0,0,0,0,0
 Transceiver_Main_0/SampleCompose_0_6/Primitives,0,12,0,0,0,0,0,0,0,0,0
 Transceiver_Main_0/Synchronizer_0_2/Primitives,0,2,0,0,0,0,0,0,0,0,0
 Transceiver_Main_0/Test_Generator_for_Lanes_0/Primitives,73,79,0,0,0,0,0,0,0,0,0
-Transceiver_Main_0/Transceiver_Controller_0/Primitives,92,42,0,0,0,0,0,0,0,0,0
+Transceiver_Main_0/Transceiver_Controller_0/Primitives,91,42,0,0,0,0,0,0,0,0,0
 Transceiver_Main_0/Transceiver_LanesConnection_0/inst_RxMainLinkController/Primitives,31,16,0,0,0,0,0,0,0,0,0
 Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/Primitives,23954,2256,0,0,0,0,0,0,0,0,0
 Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/COREFIFO_C12_0/COREFIFO_C12_0/Primitives,130,131,0,0,0,0,0,0,0,0,0

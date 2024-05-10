@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Tue Apr  9 16:16:53 2024 
+# Date generated: Fri May  3 10:51:04 2024 
 
 
 # 
@@ -167,62 +167,6 @@ set_io -port_name CLK_OUT_P  \
     -pin_name B10            \
     -fixed true              \
     -io_std LVDS33           \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_0  \
-    -pin_name AA3            \
-    -fixed true              \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_1  \
-    -pin_name AB5            \
-    -fixed true              \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_2  \
-    -pin_name AA5            \
-    -fixed true              \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_3  \
-    -pin_name W4             \
-    -fixed true              \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_4  \
-    -pin_name AA4            \
-    -fixed true              \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_5  \
-    -pin_name AB6            \
-    -fixed true              \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_6  \
-    -pin_name V3             \
-    -fixed true              \
-    -io_std LVCMOS33         \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name DBGport_7  \
-    -pin_name V4             \
-    -fixed true              \
-    -io_std LVCMOS33         \
     -DIRECTION OUTPUT
 
 
@@ -735,6 +679,20 @@ set_io -port_name HMC_ss_n  \
     -DIRECTION OUTPUT
 
 
+set_io -port_name IO_0  \
+    -pin_name AA3       \
+    -fixed true         \
+    -io_std LVCMOS33    \
+    -DIRECTION INOUT
+
+
+set_io -port_name IO_1  \
+    -pin_name AB5       \
+    -fixed true         \
+    -io_std LVCMOS33    \
+    -DIRECTION INOUT
+
+
 set_io -port_name LDO_PWR_GOOD  \
     -pin_name E10               \
     -fixed true                 \
@@ -928,6 +886,46 @@ set_io -port_name TX_1  \
 # The I/Os in this section are unplaced or placed but are not locked
 # the other listed attributes have been applied
 # 
+
+set_io -port_name DBGport_0  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_1  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_2  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_3  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_4  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_5  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_6  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name DBGport_7  \
+    -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
 
 
 #

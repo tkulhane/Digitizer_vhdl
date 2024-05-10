@@ -21,7 +21,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Running Timing based Global Demotion. 
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
-        Moved all 930 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
+        Moved all 1385 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
         Moved 56 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
@@ -40,7 +40,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Timing based Global Demotion completed successfully. 
 
 Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 105 fixed I/O macros, 3 unfixed I/O macros
+Info:  I/O Bank and Globals Assigner identified 99 fixed I/O macros, 11 unfixed I/O macros
 Info:  I/O Bank and Globals Assigner identified bank 'Bank0' as being fixed at VCCI:1.35V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank1' as being fixed at VCCI:1.80V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank2' as being fixed at VCCI:3.30V VCCR:n/a
@@ -54,7 +54,7 @@ I/O Bank and Globals Assigner completed successfully.
 Total time spent in I/O Bank and Globals Assigner: 6 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Sat Apr 27 11:47:59 2024
+Design: Top                             Started: Fri May 10 14:50:29 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -69,15 +69,15 @@ End of placement.
 
 Placer Runtime Summary   :
 Clustering (1 pass)      : 35 seconds
-Placement                : 179 seconds
-Improvement              : 207 seconds
+Placement                : 192 seconds
+Improvement              : 238 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Sat Apr 27 11:56:40 2024
-Total CPU Time:     00:12:35            Total Elapsed Time: 00:08:41
-Total Memory Usage: 3634.6 Mbytes
+Finished: Fri May 10 14:59:55 2024
+Total CPU Time:     00:13:46            Total Elapsed Time: 00:09:26
+Total Memory Usage: 3633.0 Mbytes
                         o - o - o - o - o - o
 
 
@@ -90,33 +90,33 @@ Clock pins: 1
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sat Apr 27 11:57:29 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Fri May 10 15:00:46 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Sat Apr 27 11:59:23 2024
-Total CPU Time:     00:04:14            Total Elapsed Time: 00:01:54
-Total Memory Usage: 5579.6 Mbytes
+Finished: Fri May 10 15:02:52 2024
+Total CPU Time:     00:04:13            Total Elapsed Time: 00:02:06
+Total Memory Usage: 4657.9 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+--------+--------+------------+
 | Type          | Used   | Total  | Percentage |
 +---------------+--------+--------+------------+
-| 4LUT          | 144046 | 299544 | 48.09      |
-| DFF           | 66676  | 299544 | 22.26      |
+| 4LUT          | 144021 | 299544 | 48.08      |
+| DFF           | 66726  | 299544 | 22.28      |
 | I/O Register  | 0      | 510    | 0.00       |
-| Logic Element | 146180 | 299544 | 48.80      |
+| Logic Element | 146204 | 299544 | 48.81      |
 +---------------+--------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+
 | Type   | Count | Percentage |
 +--------+-------+------------+
-| Locked |  111  | 97.37%     |
-| Placed |  3    | 2.63%      |
+| Locked |  105  | 90.52%     |
+| Placed |  11   | 9.48%      |
 +--------+-------+------------+
 
 Completed writing pin report files.

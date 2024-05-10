@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Apr 23 20:16:15 2024
+// Created by SmartDesign Fri May  3 17:11:42 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,6 +17,7 @@ module Trigger_Top_Part(
     Reset_N,
     TRG_Detect_Vector,
     // Outputs
+    ACQ_RunOut,
     ALL_FIFO_Write,
     C_busy,
     C_read_data_frame,
@@ -40,6 +41,7 @@ input  [7:0]  TRG_Detect_Vector;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output        ACQ_RunOut;
 output        ALL_FIFO_Write;
 output        C_busy;
 output [15:0] C_read_data_frame;
@@ -50,6 +52,7 @@ output [11:0] TRG_Threshold;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
+wire          ACQ_RunOut_net_0;
 wire          ALL_FIFO_Write_net_0;
 wire   [7:0]  C_addr_frame;
 wire          C_busy_net_0;
@@ -83,6 +86,7 @@ wire          EMPTY_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [11:0] TRG_Threshold_net_1;
 wire   [17:0] Q_net_1;
+wire          ACQ_RunOut_net_1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -100,6 +104,8 @@ assign TRG_Threshold_net_1                 = TRG_Threshold_net_0;
 assign TRG_Threshold[11:0]                 = TRG_Threshold_net_1;
 assign Q_net_1                             = Q_net_0;
 assign Q[17:0]                             = Q_net_1;
+assign ACQ_RunOut_net_1                    = ACQ_RunOut_net_0;
+assign ACQ_RunOut                          = ACQ_RunOut_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -162,9 +168,9 @@ Trigger_Main Trigger_Main_0(
         // Inputs
         .Clock                    ( Clock ),
         .Reset_N                  ( Reset_N ),
+        .Control_EventNum         ( Trigger_Control_0_Control_EventNum ),
         .Control_Enable           ( Trigger_Control_0_Control_Enable ),
         .Control_Abort            ( Trigger_Control_0_Control_Abort ),
-        .Control_EventNum         ( Trigger_Control_0_Control_EventNum ),
         .Control_Threshold        ( Trigger_Control_0_Control_Threshold ),
         .Control_Sample_Per_Event ( Trigger_Control_0_Control_Sample_Per_Event ),
         .TRG_Detect_Vector        ( TRG_Detect_Vector ),
@@ -174,6 +180,7 @@ Trigger_Main Trigger_Main_0(
         .Control_AcqStart         (  ),
         .ALL_FIFO_Enable          ( ALL_FIFO_Write_net_0 ),
         .FIFO_Event_Data          ( Trigger_Main_0_FIFO_Event_Data ),
+        .ACQ_RunOut               ( ACQ_RunOut_net_0 ),
         .TRG_Threshold            ( TRG_Threshold_net_0 ) 
         );
 

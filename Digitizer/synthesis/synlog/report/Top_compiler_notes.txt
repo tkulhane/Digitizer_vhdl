@@ -43,6 +43,7 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd'.
 @N: CD231 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
@@ -244,21 +245,27 @@
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v":207:25:207:50|Using module Sample_RAM_Block_Decoder from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v":215:21:215:42|Using module Sample_RAM_Block_MUX from library work
 @N: CG179 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\corefifo_fwft.v":262:38:262:55|Removing redundant assignment.
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":126:0:126:19|Using module EventFifoFreeLogic from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":137:16:137:32|Using module Trigger_Control from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":161:13:161:26|Using module Trigger_Main from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":208:22:208:44|Using module Communication_Builder from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":254:14:254:28|Using module DataRamManage from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":292:13:292:26|Using module FIFOs_Reader from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":132:0:132:19|Using module EventFifoFreeLogic from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":143:16:143:32|Using module Trigger_Control from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Trigger_Top_Part\Trigger_Top_Part.v":167:13:167:26|Using module Trigger_Main from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":220:22:220:44|Using module Communication_Builder from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":269:0:269:18|Using module CtrlBus_HandShake from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":291:14:291:28|Using module DataRamManage from library work
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Data_Block\Data_Block.v":329:13:329:26|Using module FIFOs_Reader from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":278:14:278:28|Using module SampleCompose from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":366:18:366:36|Using module SampleTxDeCompose from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":448:25:448:50|Using module Test_Generator_for_Lanes from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":467:0:467:23|Using module Transceiver_Controller from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v":483:28:483:56|Using module Transceiver_LanesConnection from library work
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":529:17:529:34|Using module AnalyzInCirc_Top from library work
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":117:14:117:18|Input BTN_2 is unused.
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":118:14:118:18|Input BTN_3 is unused.
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":119:14:119:18|Input BTN_4 is unused.
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":524:17:524:34|Using module AnalyzInCirc_Top from library work
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":119:14:119:18|Input BTN_2 is unused.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":120:14:120:18|Input BTN_3 is unused.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":121:14:121:18|Input BTN_4 is unused.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_IO\2.0.104\core\vlog\PF_IO.v":90:6:90:10|Input PADIP is unused.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_IO\2.0.104\core\vlog\PF_IO.v":91:6:91:10|Input PADIN is unused.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_IO\2.0.104\core\vlog\PF_IO.v":92:6:92:9|Input PADI is unused.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_IO\2.0.104\core\vlog\PF_IO.v":102:9:102:10|Input DF is unused.
+@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_IO\2.0.104\core\vlog\PF_IO.v":102:13:102:14|Input DR is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\COREFIFO_C5_COREFIFO_C5_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\COREFIFO_C5_COREFIFO_C5_0_ram_wrapper.v":44:25:44:30|Input WCLOCK is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C5\COREFIFO_C5_0\rtl\vlog\core\COREFIFO_C5_COREFIFO_C5_0_ram_wrapper.v":45:25:45:30|Input RCLOCK is unused.
@@ -353,11 +360,6 @@
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO_C1_COREFIFO_C1_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO_C1_COREFIFO_C1_0_ram_wrapper.v":44:25:44:30|Input WCLOCK is unused.
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO_C1_COREFIFO_C1_0_ram_wrapper.v":45:25:45:30|Input RCLOCK is unused.
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_sync_scntr.v":102:29:102:34|Input re_top is unused.
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\corefifo_sync_scntr.v":103:29:103:42|Input empty_top_fwft is unused.
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO.v":175:15:175:22|Input WRESET_N is unused.
-@N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO.v":176:15:176:22|Input RRESET_N is unused.
 @N: CL135 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\core\corereset_pf.v":58:0:58:5|Found sequential shift dff with address depth of 16 words and data bit width of 1.
 @N:"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Synchronizer.vhd":4:7:4:18|Top entity is set to Synchronizer.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AnalyzInCirc_Controler.vhd'.
@@ -402,6 +404,7 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd'.
 @N: CD231 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
@@ -431,14 +434,20 @@
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd":5:7:5:19|Synthesizing work.datarammanage.arch.
 @N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd":58:4:58:19|Removing redundant assignment.
 @N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\DataRamManage.vhd":85:4:85:20|Removing redundant assignment.
+@N: Setting default value for generic g_widthaddr to 8;
+@N: Setting default value for generic g_widthdata to 16;
+@N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd":6:7:6:23|Synthesizing work.ctrlbus_handshake.rtl.
+@N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd":45:19:45:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000".
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd":243:12:243:25|OTHERS clause is not synthesized.
+@N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Synchronizer.vhd":4:7:4:18|Synthesizing work.synchronizer.arch.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":8:7:8:27|Synthesizing work.communication_builder.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":60:19:60:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "10000000000000".
 @N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":907:16:907:44|Removing redundant assignment.
 @N: CD364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":908:16:908:42|Removing redundant assignment.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":6:7:6:18|Synthesizing work.trigger_main.rtl.
-@N: CD233 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":51:19:51:20|Using sequential encoding for type fsm_state.
-@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":239:12:239:25|OTHERS clause is not synthesized.
-@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":303:12:303:25|OTHERS clause is not synthesized.
+@N: CD233 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":53:19:53:20|Using sequential encoding for type fsm_state.
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":244:12:244:25|OTHERS clause is not synthesized.
+@N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":312:12:312:25|OTHERS clause is not synthesized.
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":9:7:9:21|Synthesizing work.trigger_control.rtl.
 @N: CD231 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":54:19:54:20|Using onehot encoding for type fsm_state. For example, enumeration idle is mapped to "100000".
 @N: CD604 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":234:12:234:25|OTHERS clause is not synthesized.
@@ -524,7 +533,8 @@
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Reset_Controler.vhd":126:8:126:9|Trying to extract state machine for register state_reg.
 @N: CL135 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Unit.vhd":75:8:75:9|Found sequential shift Output_Sample_Part with address depth of 3 words and data bit width of 12.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd":151:8:151:9|Trying to extract state machine for register state_reg.
-@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":195:8:195:9|Trying to extract state machine for register state_reg.
+@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Main.vhd":200:8:200:9|Trying to extract state machine for register state_reg.
+@N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd":163:8:163:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\FIFOs_Reader.vhd":143:8:143:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_Controller.vhd":154:8:154:9|Trying to extract state machine for register state_reg.
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxMainLinkController.vhd":66:8:66:9|Trying to extract state machine for register state_reg.
@@ -686,6 +696,7 @@
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd'.
+@N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\CtrlBus_HandShake.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Trigger_Control.vhd'.
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd'.
 @N: CD231 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".

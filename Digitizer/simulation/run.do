@@ -31,6 +31,8 @@ vlog -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C10/COREFIFO_C10
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C10/COREFIFO_C10_0/rtl/vlog/core/COREFIFO.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C10/COREFIFO_C10.v"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Communication_Builder.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Synchronizer.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/CtrlBus_HandShake.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/DataRamManage.vhd"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_DPSRAM_C7/PF_DPSRAM_C7_0/PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_DPSRAM_C7/PF_DPSRAM_C7.v"

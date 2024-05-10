@@ -372,7 +372,7 @@ begin
         Control_Fifo_Empty <= '1';
 
         --read threshold
-        --SEND_CMD( X"01", X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        SEND_CMD( CMD_TRG_THRESHOLD, X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         
         --set threshold
         SEND_CMD( CMD_TRG_THRESHOLD, X"0DAC", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);

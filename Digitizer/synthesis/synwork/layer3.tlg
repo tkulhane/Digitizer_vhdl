@@ -62,12 +62,12 @@ Running optimization stage 1 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYT
 @W: CL265 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":244:4:244:5|Removing unused bit 8 of write_index_control.WR_INDEX_1_5(8 downto 0). Either assign all bits or reduce the width of the signal.
 @W: CL265 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":244:4:244:5|Removing unused bit 8 of write_index_control.WR_INDEX_0_7(8 downto 0). Either assign all bits or reduce the width of the signal.
 @W: CL117 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":317:6:317:7|Latch generated from process for signal RD_Enable_Vector_Encoded(2 downto 0); possible missing assignment in an if or case statement.
-Finished optimization stage 1 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH (CPU Time 0h:00m:01s, Memory Used current: 210MB peak: 212MB)
+Finished optimization stage 1 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH (CPU Time 0h:00m:01s, Memory Used current: 211MB peak: 212MB)
 Running optimization stage 2 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH .......
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":214:4:214:5|Optimizing register bit write_shift.WR_ADD_INDEX_1_7(4) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":214:4:214:5|Pruning register bit 4 of WR_ADD_INDEX_1_7(4 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":244:4:244:5|Pruning register bit 8 of write_index_control.WR_INDEX_7(8 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 2 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH (CPU Time 0h:00m:33s, Memory Used current: 319MB peak: 428MB)
+Finished optimization stage 2 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH (CPU Time 0h:00m:32s, Memory Used current: 319MB peak: 428MB)
 Running optimization stage 2 on work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd":170:8:170:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -91,7 +91,7 @@ State machine has 5 reachable states with original encodings of:
    00100
    01000
    10000
-Finished optimization stage 2 on work_txlanecontrol_rtl_8_3_0_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay (CPU Time 0h:00m:00s, Memory Used current: 320MB peak: 428MB)
+Finished optimization stage 2 on work_txlanecontrol_rtl_8_3_0_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay (CPU Time 0h:00m:00s, Memory Used current: 321MB peak: 428MB)
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================

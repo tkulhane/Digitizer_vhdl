@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Mar 31 14:52:03 2024
+// Created by SmartDesign Fri May  3 17:13:31 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -100,7 +100,9 @@ module Top(
     ADC_sdio,
     FTDI_BE,
     FTDI_DATA,
-    HMC_sdio
+    HMC_sdio,
+    IO_0,
+    IO_1
 );
 
 //--------------------------------------------------------------------
@@ -203,6 +205,8 @@ inout         ADC_sdio;
 inout  [3:0]  FTDI_BE;
 inout  [31:0] FTDI_DATA;
 inout         HMC_sdio;
+inout         IO_0;
+inout         IO_1;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -225,7 +229,7 @@ wire           BTN_1;
 wire           CLK_OUT_N_net_0;
 wire           CLK_OUT_P_net_0;
 wire           Clock_Reset_0_HMC_CLK;
-wire           Clock_Reset_0_Main_CLOCK_0;
+wire           Clock_Reset_0_Main_CLOCK_1;
 wire           Clock_Reset_0_Main_RESET_N_1;
 wire           Clock_Reset_0_UART_CLOCK_1;
 wire           Clock_Reset_0_UART_RESER_N_1;
@@ -259,14 +263,13 @@ wire   [7:0]   Controler_0_TRNV_addr;
 wire   [15:0]  Controler_0_TRNV_data;
 wire           Controler_0_TRNV_enable_cmd;
 wire           Controler_0_TRNV_write_read;
+wire           Data_Block_0_ACQ_RunOut;
 wire           Data_Block_0_C_busy;
 wire   [15:0]  Data_Block_0_C_read_data_frame;
 wire   [31:0]  Data_Block_0_Communication_Data_Frame;
 wire           Data_Block_0_Communication_Empty;
 wire           Data_Block_0_Control_Test_Generator_Enable;
-wire           DBGport_0_net_0;
 wire           DBGport_0_1;
-wire           DBGport_1_net_0;
 wire           DBGport_1_0;
 wire           DBGport_2_net_0;
 wire           DBGport_2_1;
@@ -297,6 +300,8 @@ wire           HMC_sdio;
 wire           HMC_ss_n_net_0;
 wire           HMC_SYNC_net_0;
 wire           INBUF_DIFF_0_Y;
+wire           IO_0;
+wire           IO_1;
 wire           LANE0_RXD_N;
 wire           LANE0_RXD_P;
 wire           LANE0_TXD_N_net_0;
@@ -344,9 +349,6 @@ wire   [127:0] Transceiver_Main_0_Transceivers_Rx_Data;
 wire   [15:0]  Transceiver_Main_0_Transceivers_Rx_K;
 wire           TX_0_net_0;
 wire           TX_1_net_0;
-wire           DBGport_1_net_1;
-wire           FTDI_nRXF_net_0;
-wire           FTDI_nTXE_net_0;
 wire           LED_3_net_1;
 wire           LED_4_net_1;
 wire           FTDI_nWR_net_1;
@@ -388,9 +390,6 @@ wire           FTDI_GPIO_1_net_1;
 wire           SIWU_N_net_1;
 wire           TX_0_net_1;
 wire           TX_1_net_1;
-wire           FTDI_nWR_net_2;
-wire           FTDI_nRD_net_2;
-wire           DBGport_0_net_1;
 wire           LANE1_TXD_N_net_1;
 wire           LANE1_TXD_P_net_1;
 wire           LANE0_TXD_N_net_1;
@@ -400,28 +399,30 @@ wire   [7:0]   Start_Triggers_net_0;
 // TiedOff Nets
 //--------------------------------------------------------------------
 wire           GND_net;
+wire           VCC_net;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
 assign GND_net    = 1'b0;
+assign VCC_net    = 1'b1;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
+assign DBGport_1           = 1'b0;
+assign DBGport_4           = 1'b0;
+assign DBGport_5           = 1'b0;
 assign DBGport_6           = 1'b0;
 assign DBGport_7           = 1'b0;
 assign LED_1               = 1'b0;
 assign LED_2               = 1'b0;
 assign DBGport_8           = 1'b0;
 assign DBGport_9           = 1'b0;
+assign DBGport_3           = 1'b0;
+assign DBGport_2           = 1'b0;
+assign DBGport_0           = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign DBGport_1_net_1     = DBGport_1_net_0;
-assign DBGport_1           = DBGport_1_net_1;
-assign FTDI_nRXF_net_0     = FTDI_nRXF;
-assign DBGport_4           = FTDI_nRXF_net_0;
-assign FTDI_nTXE_net_0     = FTDI_nTXE;
-assign DBGport_5           = FTDI_nTXE_net_0;
 assign LED_3_net_1         = LED_3_net_0;
 assign LED_3               = LED_3_net_1;
 assign LED_4_net_1         = LED_4_net_0;
@@ -504,12 +505,6 @@ assign TX_0_net_1          = TX_0_net_0;
 assign TX_0                = TX_0_net_1;
 assign TX_1_net_1          = TX_1_net_0;
 assign TX_1                = TX_1_net_1;
-assign FTDI_nWR_net_2      = FTDI_nWR_net_0;
-assign DBGport_3           = FTDI_nWR_net_2;
-assign FTDI_nRD_net_2      = FTDI_nRD_net_0;
-assign DBGport_2           = FTDI_nRD_net_2;
-assign DBGport_0_net_1     = DBGport_0_net_0;
-assign DBGport_0           = DBGport_0_net_1;
 assign LANE1_TXD_N_net_1   = LANE1_TXD_N_net_0;
 assign LANE1_TXD_N         = LANE1_TXD_N_net_1;
 assign LANE1_TXD_P_net_1   = LANE1_TXD_P_net_0;
@@ -528,7 +523,7 @@ assign Start_Triggers_net_0 = { 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 ,
 //--------AnalyzInCirc_Top
 AnalyzInCirc_Top AnalyzInCirc_Top_0(
         // Inputs
-        .Clock               ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Clock               ( Clock_Reset_0_Main_CLOCK_1 ),
         .Reset_N             ( Clock_Reset_0_Main_RESET_N_1 ),
         .enable_cmd          ( Controler_0_ANICI_enable_cmd ),
         .write_read          ( Controler_0_ANICI_write_read ),
@@ -547,7 +542,7 @@ Clock_Reset Clock_Reset_0(
         // Inputs
         .EXT_RST_N           ( DBGport_2_net_0 ),
         // Outputs
-        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Main_CLOCK          ( Clock_Reset_0_Main_CLOCK_1 ),
         .Main_RESET_N        ( Clock_Reset_0_Main_RESET_N_1 ),
         .UART_CLOCK          ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESER_N        ( Clock_Reset_0_UART_RESER_N_1 ),
@@ -561,7 +556,7 @@ Communication Communication_0(
         // Inputs
         .UART_Clock       ( Clock_Reset_0_UART_CLOCK_1 ),
         .UART_RESET_N     ( Clock_Reset_0_UART_RESER_N_1 ),
-        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Logic_Clock      ( Clock_Reset_0_Main_CLOCK_1 ),
         .Logic_RESET_N    ( Clock_Reset_0_Main_RESET_N_1 ),
         .write_read       ( Controler_0_COMM_write_read ),
         .enable_cmd       ( Controler_0_COMM_enable_cmd ),
@@ -602,7 +597,7 @@ Communication Communication_0(
 //--------Controler
 Controler Controler_0(
         // Inputs
-        .Clock                 ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Clock                 ( Clock_Reset_0_Main_CLOCK_1 ),
         .Reset_N               ( Clock_Reset_0_Main_RESET_N_1 ),
         .TRG_busy              ( Data_Block_0_C_busy ),
         .LMX1_miso             ( LMX1_miso ),
@@ -694,7 +689,7 @@ Data_Block Data_Block_0(
         .Communication_Builder_RUN     ( Communication_0_Builder_Enable ),
         .Fifo_RESET_N                  ( DBGport_4_1 ),
         .Reset_N                       ( Clock_Reset_0_Main_RESET_N_1 ),
-        .Clock                         ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Clock                         ( Clock_Reset_0_Main_CLOCK_1 ),
         .C_addr_frame                  ( Controler_0_TRG_addr ),
         .C_write_data_frame            ( Controler_0_TRG_data ),
         .Input_Data_0_00               ( Transceiver_Main_0_Output_Data_1 ),
@@ -708,14 +703,15 @@ Data_Block Data_Block_0(
         // Outputs
         .C_busy                        ( Data_Block_0_C_busy ),
         .Communication_Empty           ( Data_Block_0_Communication_Empty ),
-        .Diag_0                        ( DBGport_0_net_0 ),
-        .Diag_1                        ( DBGport_1_net_0 ),
+        .Diag_0                        (  ),
+        .Diag_1                        (  ),
         .Diag_2                        (  ),
         .Diag_3                        (  ),
         .Communication_Data_Req        (  ),
         .Control_Test_Generator_Enable ( Data_Block_0_Control_Test_Generator_Enable ),
         .C_read_data_frame             ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ) 
+        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ),
+        .ACQ_RunOut                    ( Data_Block_0_ACQ_RunOut ) 
         );
 
 //--------INBUF_DIFF
@@ -772,6 +768,28 @@ OUTBUF_DIFF OUTBUF_DIFF_0_0_1(
         .PADN ( SYNCINB_N_net_0 ) 
         );
 
+//--------PF_IO_C0
+PF_IO_C0 PF_IO_C0_0(
+        // Inputs
+        .D   ( GND_net ), // tied to 1'b0 from definition
+        .E   ( GND_net ),
+        // Outputs
+        .Y   (  ),
+        // Inouts
+        .PAD ( IO_0 ) 
+        );
+
+//--------PF_IO_C0
+PF_IO_C0 PF_IO_C0_0_0(
+        // Inputs
+        .D   ( Data_Block_0_ACQ_RunOut ),
+        .E   ( VCC_net ),
+        // Outputs
+        .Y   (  ),
+        // Inouts
+        .PAD ( IO_1 ) 
+        );
+
 //--------Synchronizer
 Synchronizer Synchronizer_0(
         // Inputs
@@ -791,7 +809,7 @@ Transceiver_Main Transceiver_Main_0(
         .LANE1_RXD_P          ( LANE1_RXD_P ),
         .REF_Clock            ( Clock_Reset_0_XCVR_REF_Clock ),
         .CTRL_Clock_40M       ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
-        .Logic_Clock          ( Clock_Reset_0_Main_CLOCK_0 ),
+        .Logic_Clock          ( Clock_Reset_0_Main_CLOCK_1 ),
         .Logic_Reset_N        ( Clock_Reset_0_Main_RESET_N_1 ),
         .Gen_Enable           ( Data_Block_0_Control_Test_Generator_Enable ),
         .write_read           ( Controler_0_TRNV_write_read ),
