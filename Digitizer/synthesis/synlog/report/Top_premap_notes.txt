@@ -2,6 +2,8 @@
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Removing sequential instance REG_SwitchSelect_Ref[1:0] (in view: work.Clock_Controller(rtl)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Removing sequential instance REG_SwitchSelect_Logic[1:0] (in view: work.Clock_Controller(rtl)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\sgcore\pf_io\2.0.104\core\vlog\pf_io.v":94:7:94:11|Tristate driver PADOP (in view: work.PF_IO_Z27_layer0_0(verilog)) on net PADOP (in view: work.PF_IO_Z27_layer0_0(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\sgcore\pf_io\2.0.104\core\vlog\pf_io.v":95:7:95:11|Tristate driver PADON (in view: work.PF_IO_Z27_layer0_0(verilog)) on net PADON (in view: work.PF_IO_Z27_layer0_0(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\sgcore\pf_io\2.0.104\core\vlog\pf_io.v":96:7:96:10|Tristate driver PADO (in view: work.PF_IO_Z27_layer0_0(verilog)) on net PADO (in view: work.PF_IO_Z27_layer0_0(verilog)) has its enable tied to GND.
@@ -440,28 +442,33 @@
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\samplecompose.vhd":55:8:55:9|Removing sequential instance Output_TailBits[3:0] (in view: work.SampleCompose_5(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\samplecompose.vhd":55:8:55:9|Removing sequential instance Output_TailBits[3:0] (in view: work.SampleCompose_6(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\samplecompose.vhd":55:8:55:9|Removing sequential instance Output_TailBits[3:0] (in view: work.SampleCompose_7(rtl)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":366:18:366:36|Removing instance SampleTxDeCompose_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":375:18:375:38|Removing instance SampleTxDeCompose_0_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":384:18:384:38|Removing instance SampleTxDeCompose_0_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":393:18:393:38|Removing instance SampleTxDeCompose_0_2 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":402:18:402:38|Removing instance SampleTxDeCompose_0_3 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":411:18:411:38|Removing instance SampleTxDeCompose_0_4 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":420:18:420:38|Removing instance SampleTxDeCompose_0_5 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":429:18:429:36|Removing instance SampleTxDeCompose_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":396:18:396:36|Removing instance SampleTxDeCompose_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":405:18:405:38|Removing instance SampleTxDeCompose_0_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":414:18:414:38|Removing instance SampleTxDeCompose_0_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":423:18:423:38|Removing instance SampleTxDeCompose_0_2 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":432:18:432:38|Removing instance SampleTxDeCompose_0_3 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":441:18:441:38|Removing instance SampleTxDeCompose_0_4 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":450:18:450:38|Removing instance SampleTxDeCompose_0_5 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":459:18:459:36|Removing instance SampleTxDeCompose_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: FP130 |Promoting Net Transceiver_Main_0.Synchronizer_0_2_0.Chain_arst[1] on CLKINT  I_2 
 @N: FP130 |Promoting Net Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_arst on CLKINT  I_2 
 @N: FP130 |Promoting Net Controler_0.Reset_Controler_0.INT_DataFifo_Reset_N_arst on CLKINT  I_2 
+@N: FP130 |Promoting Net Clock_Reset_0.Clock_Switch_0.inst_Synchronizer_Reset_Out.Chain_arst[1] on CLKINT  I_2 
 @N: FP130 |Promoting Net Clock_Reset_0.Synchronizer_0.Chain_arst[1] on CLKINT  I_2 
 @N: FP130 |Promoting Net FTDI_CLK on CLKINT  I_1 
 @N: FP130 |Promoting Net Clock_Reset_0.PF_CLK_DIV_C2_0.PF_CLK_DIV_C2_0.CLK_OUT on CLKINT  I_1 
 @N: FP130 |Promoting Net Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_OR_temp[7] on CLKINT  I_2 
 @N: FP130 |Promoting Net Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_OR_temp[7] on CLKINT  I_2 
 @N: FP130 |Promoting Net GPIO_0 on CLKINT  I_2 
+@N: FP130 |Promoting Net Clock_Reset_0.PF_CLK_DIV_C3_0.PF_CLK_DIV_C3_0.CLK_OUT on CLKINT  I_1 
 @N: FX1184 |Applying syn_allowed_resources blockrams=952 on top level netlist Top 
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 @N: BN225 |Writing default property annotation file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.sap.
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":200:8:200:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
 @N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\coreuart_c0\coreuart_c0_0\rtl\vlog\core\rx_async.v":286:0:286:5|There are no possible illegal states for state machine rx_state[3:0] (in view: work.COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s_0(verilog)); safe FSM implementation is not required.
 @N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\uart_rx_protocol.vhd":422:8:422:9|There are no possible illegal states for state machine Detect_state_reg[0:3] (in view: work.UART_RX_Protocol_0(rtl)); safe FSM implementation is not required.
 @N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\coreuart_c0\coreuart_c0_0\rtl\vlog\core\rx_async.v":286:0:286:5|There are no possible illegal states for state machine rx_state[3:0] (in view: work.COREUART_C0_COREUART_C0_0_Rx_async_0s_0s_0s_1s_2s_3s_1(verilog)); safe FSM implementation is not required.
 @N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\uart_rx_protocol.vhd":422:8:422:9|There are no possible illegal states for state machine Detect_state_reg[0:3] (in view: work.UART_RX_Protocol_1(rtl)); safe FSM implementation is not required.
 @N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_anw_mux.vhd":67:8:67:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Communication_ANW_MUX(rtl)); safe FSM implementation is not required.
-@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":200:8:200:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":102:8:102:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Clock_Switch_1(rtl)); safe FSM implementation is not required.
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":102:8:102:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Clock_Switch_0(rtl)); safe FSM implementation is not required.

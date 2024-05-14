@@ -1,4 +1,4 @@
-# Fri May 10 14:40:30 2024
+# Tue May 14 15:21:16 2024
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -28,16 +28,17 @@ See clock summary report "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthe
 @W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":14:0:14:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 @W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":15:0:15:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 @W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":16:0:16:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
+@W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":17:0:17:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 @W: BN544 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":18:0:18:0|create_generated_clock with both -multiply_by and -divide_by not supported for this target technology
 @N: MF472 |Synthesis running in Automatic Compile Point mode
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 184MB peak: 184MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 184MB peak: 185MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
 
 
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 189MB peak: 189MB)
@@ -49,10 +50,16 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @W: BN114 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_init_monitor_c0\pf_init_monitor_c0_0\pf_init_monitor_c0_pf_init_monitor_c0_0_pf_init_monitor.v":47:8:47:15|Removing instance vcc_inst (in view: work.PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR(verilog)) because it does not drive other instances.
 @W: BN114 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_init_monitor_c0\pf_init_monitor_c0_0\pf_init_monitor_c0_pf_init_monitor_c0_0_pf_init_monitor.v":48:8:48:15|Removing instance gnd_inst (in view: work.PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR(verilog)) because it does not drive other instances.
 @W: BN114 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":15:8:15:15|Removing instance gnd_inst (in view: work.PF_OSC_C0_PF_OSC_C0_0_PF_OSC(verilog)) because it does not drive other instances.
+@W: BN393 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Resolving multiple drivers on net GND, connecting output pin:Q[1] inst:REG_SwitchSelect_Ref[1:0] of PrimLib.dffe(prim) to GND
+@W: BN393 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Resolving multiple drivers on net GND, connecting output pin:Q[0] inst:REG_SwitchSelect_Ref[1:0] of PrimLib.dffe(prim) to GND
+@W: BN393 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Resolving multiple drivers on net GND, connecting output pin:Q[1] inst:REG_SwitchSelect_Logic[1:0] of PrimLib.dffe(prim) to GND
+@W: BN393 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Resolving multiple drivers on net GND, connecting output pin:Q[0] inst:REG_SwitchSelect_Logic[1:0] of PrimLib.dffe(prim) to GND
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Removing sequential instance REG_SwitchSelect_Ref[1:0] (in view: work.Clock_Controller(rtl)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":201:8:201:9|Removing sequential instance REG_SwitchSelect_Logic[1:0] (in view: work.Clock_Controller(rtl)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\uart_rx_protocol.vhd":503:8:503:9|User-specified initial value defined for instance Communication_0.UART_Protocol_1.UART_RX_Protocol_0.counter[31:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|User-specified initial value defined for instance Controler_0.SPI_LMX_0_0.spi_master_0.rxBuffer[23:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|User-specified initial value defined for instance Controler_0.SPI_LMX_0_0.spi_master_0.txBuffer[23:0] is being ignored due to limitations in architecture. 
-@W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":631:8:631:9|User-specified initial value defined for instance Controler_0.Command_Decoder_0.counter[31:0] is being ignored due to limitations in architecture. 
+@W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":655:8:655:9|User-specified initial value defined for instance Controler_0.Command_Decoder_0.counter[31:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\adi_spi.vhd":245:8:245:9|User-specified initial value defined for instance Controler_0.ADI_SPI_0.counter[8:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":445:8:445:9|User-specified initial value defined for instance Data_Block_0.Trigger_Top_Part_0.Trigger_Control_0.finite_event_counter[31:0] is being ignored due to limitations in architecture. 
 @W: FX1172 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":609:8:609:9|User-specified initial value defined for instance Data_Block_0.FIFOs_Reader_0.BlockF_Counter[7:0] is being ignored due to limitations in architecture. 
@@ -152,13 +159,13 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 Only the first 100 messages of id 'FX1172' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_premap.srr -id FX1172' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {FX1172} -count unlimited' in the Tcl shell.
 
-Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 292MB peak: 292MB)
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 293MB peak: 293MB)
 
 
-Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 292MB peak: 293MB)
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 293MB peak: 293MB)
 
 
-Start optimization across hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 293MB peak: 293MB)
+Start optimization across hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 294MB peak: 294MB)
 
 NConnInternalConnection caching in on
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\sgcore\pf_io\2.0.104\core\vlog\pf_io.v":94:7:94:11|Tristate driver PADOP (in view: work.PF_IO_Z27_layer0_0(verilog)) on net PADOP (in view: work.PF_IO_Z27_layer0_0(verilog)) has its enable tied to GND.
@@ -272,36 +279,37 @@ NConnInternalConnection caching in on
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_lsram_top.v":212:12:212:51|Removing sequential instance COREFIFO_C5_COREFIFO_C5_0_LSRAM_top_R0C2 (in view: work.COREFIFO_C5_COREFIFO_C5_0_LSRAM_top(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_c5_corefifo_c5_0_lsram_top.v":387:12:387:51|Removing sequential instance COREFIFO_C5_COREFIFO_C5_0_LSRAM_top_R0C3 (in view: work.COREFIFO_C5_COREFIFO_C5_0_LSRAM_top(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":382:12:382:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R1C44 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":411:12:411:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R1C30 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_dpsram_c5\pf_dpsram_c5_0\pf_dpsram_c5_pf_dpsram_c5_0_pf_dpsram.v":468:12:468:54|Removing sequential instance PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R2C30 (in view: work.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_0(verilog)) of type view:ACG4.RAM1K20(PRIM) because it does not drive other instances.
 
 Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_premap.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\directcore\corelanemstr\2.1.100\rtl\vlog\core\corelanemstrmode2.v":132:0:132:5|Removing sequential instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rx_ok_st because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR_CORELANEMSTR_0.g_mode2.u_mstr.rqCode[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":366:18:366:36|Removing instance SampleTxDeCompose_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":375:18:375:38|Removing instance SampleTxDeCompose_0_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":384:18:384:38|Removing instance SampleTxDeCompose_0_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":393:18:393:38|Removing instance SampleTxDeCompose_0_2 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":402:18:402:38|Removing instance SampleTxDeCompose_0_3 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":411:18:411:38|Removing instance SampleTxDeCompose_0_4 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":420:18:420:38|Removing instance SampleTxDeCompose_0_5 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
-@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":429:18:429:36|Removing instance SampleTxDeCompose_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":396:18:396:36|Removing instance SampleTxDeCompose_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":405:18:405:38|Removing instance SampleTxDeCompose_0_0 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":414:18:414:38|Removing instance SampleTxDeCompose_0_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":423:18:423:38|Removing instance SampleTxDeCompose_0_2 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":432:18:432:38|Removing instance SampleTxDeCompose_0_3 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":441:18:441:38|Removing instance SampleTxDeCompose_0_4 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":450:18:450:38|Removing instance SampleTxDeCompose_0_5 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transceiver_main\transceiver_main.v":459:18:459:36|Removing instance SampleTxDeCompose_1 (in view: work.Transceiver_Main(verilog)) because it does not drive other instances.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
 @W: MO129 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\spi_master.vhd":49:4:49:5|Sequential instance Controler_0.SPI_LMX_0_0.spi_master_0.last_bit[0] is reduced to a combinational gate by constant propagation.
 
-Finished optimization across hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 293MB peak: 294MB)
+Finished optimization across hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 294MB peak: 294MB)
 
+@N: FP130 |Promoting Net Transceiver_Main_0.Synchronizer_0_2_0.Chain_arst[1] on CLKINT  I_2 
 @N: FP130 |Promoting Net Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_arst on CLKINT  I_2 
 @N: FP130 |Promoting Net Controler_0.Reset_Controler_0.INT_DataFifo_Reset_N_arst on CLKINT  I_2 
+@N: FP130 |Promoting Net Clock_Reset_0.Clock_Switch_0.inst_Synchronizer_Reset_Out.Chain_arst[1] on CLKINT  I_2 
 @N: FP130 |Promoting Net Clock_Reset_0.Synchronizer_0.Chain_arst[1] on CLKINT  I_2 
 @N: FP130 |Promoting Net FTDI_CLK on CLKINT  I_1 
 @N: FP130 |Promoting Net Clock_Reset_0.PF_CLK_DIV_C2_0.PF_CLK_DIV_C2_0.CLK_OUT on CLKINT  I_1 
 @N: FP130 |Promoting Net Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_OR_temp[7] on CLKINT  I_2 
 @N: FP130 |Promoting Net Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_OR_temp[7] on CLKINT  I_2 
 @N: FP130 |Promoting Net GPIO_0 on CLKINT  I_2 
+@N: FP130 |Promoting Net Clock_Reset_0.PF_CLK_DIV_C3_0.PF_CLK_DIV_C3_0.CLK_OUT on CLKINT  I_1 
 @N: FX1184 |Applying syn_allowed_resources blockrams=952 on top level netlist Top 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 312MB peak: 318MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:04s; Memory used current: 313MB peak: 319MB)
 
 
 
@@ -323,18 +331,23 @@ Level     Clock                                                                 
                                                                                                                                                                                                                                                                      
 0 -       Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                                                                    160.0 MHz     6.250         declared                                                                 default_clkgroup          4    
 1 .         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                             40.0 MHz      25.000        generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup          66   
+1 .         Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD/Y_DIV                                                             40.0 MHz      25.000        generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup          2    
                                                                                                                                                                                                                                                                      
 0 -       System                                                                                                                 100.0 MHz     10.000        system                                                                   system_clkgroup           0    
                                                                                                                                                                                                                                                                      
-0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_1     14192
+0 -       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_3     10594
+                                                                                                                                                                                                                                                                     
+0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_1     3717 
                                                                                                                                                                                                                                                                      
 0 -       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                                        100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_2     1058 
                                                                                                                                                                                                                                                                      
-0 -       work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock                               100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_5     3    
+0 -       work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock                               100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_7     3    
                                                                                                                                                                                                                                                                      
-0 -       work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock                               100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_4     3    
+0 -       work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock                               100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_6     3    
                                                                                                                                                                                                                                                                      
-0 -       Top|N_6_inferred_clock                                                                                                 100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_3     2    
+0 -       PF_CCC_C8_PF_CCC_C8_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_4     2    
+                                                                                                                                                                                                                                                                     
+0 -       Top|N_7_inferred_clock                                                                                                 100.0 MHz     10.000        inferred                                                                 Inferred_clkgroup_0_5     2    
 =====================================================================================================================================================================================================================================================================
 
 
@@ -355,12 +368,15 @@ Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_X
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     94        Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR.LANE0.RX_CLK_R(XCVR_8B10B)           Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.Synchronizer_0_2.Chain[1:0].C                          -                                                                                                                                          Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR.LANE0_RX_rclkint.A(RCLKINT)                         
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                                                                    4         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)                                                                        Transceiver_Main_0.PF_CCC_C5_0.PF_CCC_C5_0.pll_inst_0.REF_CLK_0                                                                    -                                                                                                                                          Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)                                                                                             
+Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                                                                    4         Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160.CLK(OSC_RC160MHZ)                                                                        Clock_Reset_0.PF_CLK_DIV_C3_0.PF_CLK_DIV_C3_0.I_CD.A                                                                               -                                                                                                                                          Clock_Reset_0.PF_OSC_C0_0.PF_OSC_C0_0.I_OSC_160_INT.I(BUFG)                                                                                             
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                               66        Clock_Reset_0.PF_CLK_DIV_C2_0.PF_CLK_DIV_C2_0.I_CD.Y_DIV(ICB_CLKDIV)                                                                     Transceiver_Main_0.Synchronizer_0_2.Chain[1:0].C                                                                                   -                                                                                                                                          Clock_Reset_0.PF_CLK_DIV_C2_0.PF_CLK_DIV_C2_0.I_1.A(CLKINT)                                                                                             
+Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD/Y_DIV                                                               2         Clock_Reset_0.PF_CLK_DIV_C3_0.PF_CLK_DIV_C3_0.I_CD.Y_DIV(ICB_CLKDIV)                                                                     Clock_Reset_0.PF_CCC_C8_0.PF_CCC_C8_0.pll_inst_0.REF_CLK_0                                                                         -                                                                                                                                          Clock_Reset_0.PF_CLK_DIV_C3_0.PF_CLK_DIV_C3_0.I_1.A(CLKINT)                                                                                             
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 System                                                                                                                 0         -                                                                                                                                        -                                                                                                                                  -                                                                                                                                          -                                                                                                                                                       
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        14192     Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)                                                                               Controler_0.SPI_LMX_0_0.SPI_interface_0.busy.C                                                                                     -                                                                                                                                          Controler_0.SPI_LMX_0_0.spi_master_0.un1_clk.I[0](inv)                                                                                                  
+PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        10594     Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.pll_inst_0.OUT0(PLL)                                                                               Transceiver_Main_0.CtrlBus_HandShake_1.inst_Synchronizer_Enable.Chain[1:0].C                                                       -                                                                                                                                          Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.clkint_0.I(BUFG)                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        3717      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT0(PLL)                                                                               Communication_0.USB_3_Protocol_0.Communication_TX_Arbiter2_0.state_reg[0:6].C                                                      -                                                                                                                                          Controler_0.SPI_LMX_0_0.spi_master_0.un1_clk.I[0](inv)                                                                                                  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                                        1058      Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0.OUT1(PLL)                                                                               Communication_0.UART_Protocol_1.UART_RX_Protocol_0.First_Nibble_Complementary[3:0].C                                               -                                                                                                                                          Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.clkint_4.I(BUFG)                                                                                                  
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
@@ -368,12 +384,16 @@ work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferr
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock                               3         Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_OR_temp[7].OUT(or)     Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[0].C     Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_0[7:0].E     Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.un5_rd_enable_vector_encoded_for_counting[3:0].SEL(mux)
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-Top|N_6_inferred_clock                                                                                                 2         INBUF_DIFF_0_0.Y(INBUF_DIFF)                                                                                                             Synchronizer_0.Chain[1:0].C                                                                                                        -                                                                                                                                          I_2.A(CLKINT)                                                                                                                                           
+PF_CCC_C8_PF_CCC_C8_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        2         Clock_Reset_0.PF_CCC_C8_0.PF_CCC_C8_0.pll_inst_0.OUT0(PLL)                                                                               Clock_Reset_0.Clock_Switch_0_0.inst_Synchronizer_Reset_Out.Chain[1:0].C                                                            Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0.TX_BIT_CLK_0                     Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_TX_PLL_C1_0.PF_TX_PLL_C1_0.txpll_isnt_0.FAB_REF_CLK(TX_PLL)              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+Top|N_7_inferred_clock                                                                                                 2         INBUF_DIFF_0_0.Y(INBUF_DIFF)                                                                                                             Synchronizer_0.Chain[1:0].C                                                                                                        -                                                                                                                                          I_2.A(CLKINT)                                                                                                                                           
 ================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 14192 sequential elements including Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corereset_pf_c0\corereset_pf_c0_0\core\corereset_pf.v":58:0:58:5|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 3717 sequential elements including Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock which controls 1058 sequential elements including Clock_Reset_0.Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
-@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock Top|N_6_inferred_clock which controls 2 sequential elements including Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 10594 sequential elements including Clock_Reset_0.Clock_Switch_0.inst_Synchronizer_Reset_Out.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock PF_CCC_C8_PF_CCC_C8_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock which controls 2 sequential elements including Clock_Reset_0.Clock_Switch_0_0.inst_Synchronizer_Reset_Out.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Found inferred clock Top|N_7_inferred_clock which controls 2 sequential elements including Synchronizer_0.Chain[1:0]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":317:6:317:7|Found inferred clock work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock which controls 3 sequential elements including Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[2]. This clock has no specified timing constraint which may adversely impact design performance. 
 @W: MT530 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":317:6:317:7|Found inferred clock work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock which controls 3 sequential elements including Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[2]. This clock has no specified timing constraint which may adversely impact design performance. 
 
@@ -381,8 +401,107 @@ Top|N_6_inferred_clock                                                          
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 280MB peak: 318MB)
+Starting constraint checker (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 281MB peak: 319MB)
 
+Encoding state machine state_reg[0:5] (in view: work.Reset_Controler(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:5] (in view: work.REGISTERS(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:5] (in view: work.gpio_controler(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:9] (in view: work.Command_Decoder(rtl))
+original code -> new code
+   0000000001 -> 0000000001
+   0000000010 -> 0000000010
+   0000000100 -> 0000000100
+   0000001000 -> 0000001000
+   0000010000 -> 0000010000
+   0000100000 -> 0000100000
+   0001000000 -> 0001000000
+   0010000000 -> 0010000000
+   0100000000 -> 0100000000
+   1000000000 -> 1000000000
+Encoding state machine state_reg[0:4] (in view: work.Answer_Encoder(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+Encoding state machine state[0:2] (in view: work.work_spi_master_behavioural_24_5_1_data_lengthdivider_0(behavioural))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state[0:2] (in view: work.work_spi_master_behavioural_24_5_1_data_lengthdivider_1(behavioural))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+Encoding state machine state_reg[0:4] (in view: work.ADI_SPI_1(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+Encoding state machine state_reg[0:4] (in view: work.ADI_SPI_0(rtl))
+original code -> new code
+   00001 -> 00001
+   00010 -> 00010
+   00100 -> 00100
+   01000 -> 01000
+   10000 -> 10000
+Encoding state machine state_reg[0:5] (in view: work.Trigger_Control(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:3] (in view: work.Trigger_Main(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":200:8:200:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
+Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
+original code -> new code
+   0000001 -> 0000001
+   0000010 -> 0000010
+   0000100 -> 0000100
+   0001000 -> 0001000
+   0010000 -> 0010000
+   0100000 -> 0100000
+   1000000 -> 1000000
+Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_0(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
 Encoding state machine state_reg[0:2] (in view: work.TxMainLinkController_2(rtl))
 original code -> new code
    00 -> 00
@@ -457,6 +576,14 @@ original code -> new code
    010000 -> 010000
    100000 -> 100000
 Encoding state machine state_reg[0:5] (in view: work.work_transceiver_controller_rtl_2_1_g_NumberOfLanes(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_1(rtl))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -635,116 +762,40 @@ original code -> new code
    00100000 -> 00100000
    01000000 -> 01000000
    10000000 -> 10000000
-Encoding state machine state_reg[0:5] (in view: work.Reset_Controler(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-Encoding state machine state_reg[0:5] (in view: work.REGISTERS(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-Encoding state machine state_reg[0:5] (in view: work.gpio_controler(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-Encoding state machine state_reg[0:9] (in view: work.Command_Decoder(rtl))
-original code -> new code
-   0000000001 -> 0000000001
-   0000000010 -> 0000000010
-   0000000100 -> 0000000100
-   0000001000 -> 0000001000
-   0000010000 -> 0000010000
-   0000100000 -> 0000100000
-   0001000000 -> 0001000000
-   0010000000 -> 0010000000
-   0100000000 -> 0100000000
-   1000000000 -> 1000000000
-Encoding state machine state_reg[0:4] (in view: work.Answer_Encoder(rtl))
-original code -> new code
-   00001 -> 00001
-   00010 -> 00010
-   00100 -> 00100
-   01000 -> 01000
-   10000 -> 10000
-Encoding state machine state[0:2] (in view: work.work_spi_master_behavioural_24_5_1_data_lengthdivider_0(behavioural))
-original code -> new code
-   00 -> 00
-   01 -> 01
-   10 -> 10
-Encoding state machine state[0:2] (in view: work.work_spi_master_behavioural_24_5_1_data_lengthdivider_1(behavioural))
-original code -> new code
-   00 -> 00
-   01 -> 01
-   10 -> 10
-Encoding state machine state_reg[0:4] (in view: work.ADI_SPI_1(rtl))
-original code -> new code
-   00001 -> 00001
-   00010 -> 00010
-   00100 -> 00100
-   01000 -> 01000
-   10000 -> 10000
-Encoding state machine state_reg[0:4] (in view: work.ADI_SPI_0(rtl))
-original code -> new code
-   00001 -> 00001
-   00010 -> 00010
-   00100 -> 00100
-   01000 -> 01000
-   10000 -> 10000
-Encoding state machine state_reg[0:5] (in view: work.Trigger_Control(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-Encoding state machine state_reg[0:3] (in view: work.Trigger_Main(rtl))
+Encoding state machine state_reg[0:3] (in view: work.Clock_Switch_1(rtl))
 original code -> new code
    00 -> 00
    01 -> 01
    10 -> 10
    11 -> 11
-@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":200:8:200:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
-Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":102:8:102:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Clock_Switch_1(rtl)); safe FSM implementation is not required.
+Encoding state machine state_reg[0:3] (in view: work.Clock_Switch_0(rtl))
 original code -> new code
-   0000001 -> 0000001
-   0000010 -> 0000010
-   0000100 -> 0000100
-   0001000 -> 0001000
-   0010000 -> 0010000
-   0100000 -> 0100000
-   1000000 -> 1000000
-Encoding state machine state_reg[0:4] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA(rtl))
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":102:8:102:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Clock_Switch_0(rtl)); safe FSM implementation is not required.
+Encoding state machine state_reg[0:5] (in view: work.Clock_Controller(rtl))
 original code -> new code
-   00001 -> 00001
-   00010 -> 00010
-   00100 -> 00100
-   01000 -> 01000
-   10000 -> 10000
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 298MB peak: 318MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 300MB peak: 319MB)
 
 @W: MF511 |Found issues with constraints. Please check constraint checker report "C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top_cck.rpt" .
 
-Finished constraint checker (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 300MB peak: 318MB)
+Finished constraint checker (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 301MB peak: 319MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 209MB peak: 318MB)
+At Mapper Exit (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 210MB peak: 319MB)
 
-Process took 0h:00m:10s realtime, 0h:00m:10s cputime
-# Fri May 10 14:40:41 2024
+Process took 0h:00m:09s realtime, 0h:00m:09s cputime
+# Tue May 14 15:21:26 2024
 
 ###########################################################]
