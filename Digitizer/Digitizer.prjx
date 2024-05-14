@@ -661,7 +661,7 @@ PARENT="<project>\component\work\PF_XCVR_REF_CLK_C0\PF_XCVR_REF_CLK_C0.cxf"
 ENDFILE
 VALUE "<project>\component\work\Clock_Reset\Clock_Reset.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715687419"
+TIME="1715687610"
 SIZE="2934"
 ENDFILE
 VALUE "<project>\component\work\Communication\Communication.cxf,actgen_cxf"
@@ -4237,12 +4237,12 @@ SIZE="12475"
 ENDFILE
 VALUE "<project>\hdl\Clock_Controller.vhd,hdl"
 STATE="utd"
-TIME="1715687380"
+TIME="1715687610"
 SIZE="7664"
 ENDFILE
 VALUE "<project>\hdl\Clock_Switch.vhd,hdl"
 STATE="utd"
-TIME="1715687380"
+TIME="1715687610"
 SIZE="6395"
 ENDFILE
 VALUE "<project>\hdl\cmd_table.vhd,hdl"
@@ -6778,6 +6778,9 @@ ENDLIST
 LIST CORERESET_PF_C2_CORERESET_PF_C2_0_CORERESET_PF
 VALUE "<project>\component\work\CORERESET_PF_C2\CORERESET_PF_C2_0\test\corereset_pf_tb.v,tb_hdl"
 ENDLIST
+LIST CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF
+VALUE "<project>\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\test\corereset_pf_tb.v,tb_hdl"
+ENDLIST
 LIST COREFIFO_C1_COREFIFO_C1_0_COREFIFO
 VALUE "<project>\component\work\COREFIFO_C1\COREFIFO_C1_0\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\test\user\top_define.v,tb_hdl"
@@ -6898,9 +6901,6 @@ VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\
 VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
 ENDLIST
-LIST CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF
-VALUE "<project>\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\test\corereset_pf_tb.v,tb_hdl"
-ENDLIST
 LIST COREFIFO_Ctest_COREFIFO_Ctest_0_COREFIFO
 VALUE "<project>\component\work\COREFIFO_Ctest\COREFIFO_Ctest_0\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\COREFIFO_Ctest\COREFIFO_Ctest_0\rtl\vlog\test\user\top_define.v,tb_hdl"
@@ -7007,6 +7007,9 @@ VALUE "<project>\component\work\PF_XCVR_ERM_C5\I_XCVR\PF_XCVR_ERM_C5_I_XCVR_PF_X
 ENDLIST
 LIST PF_XCVR_ERM_C9
 VALUE "<project>\component\work\PF_XCVR_ERM_C9\I_XCVR\PF_XCVR_ERM_C9_I_XCVR_PF_XCVR_sim.v,hdl"
+ENDLIST
+LIST CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF
+VALUE "<project>\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\test\corereset_pf_tb.v,tb_hdl"
 ENDLIST
 LIST COREFIFO_C1_COREFIFO_C1_0_COREFIFO
 VALUE "<project>\component\work\COREFIFO_C1\COREFIFO_C1_0\coreparameters.v,tb_hdl"
@@ -7156,9 +7159,6 @@ VALUE "<project>\component\work\COREFIFO_C13\COREFIFO_C13_0\mti\scripts\runall.d
 ENDLIST
 LIST PF_XCVR_ERM_C8
 VALUE "<project>\component\work\PF_XCVR_ERM_C8\I_XCVR\PF_XCVR_ERM_C8_I_XCVR_PF_XCVR_sim.v,hdl"
-ENDLIST
-LIST CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF
-VALUE "<project>\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\test\corereset_pf_tb.v,tb_hdl"
 ENDLIST
 LIST PF_XCVR_ERM_C7
 VALUE "<project>\component\work\PF_XCVR_ERM_C7\I_XCVR\PF_XCVR_ERM_C7_I_XCVR_PF_XCVR_sim.v,hdl"
@@ -8808,18 +8808,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Constraint Manager;Constraint Manager;0
-Reports;Reports;0
-ReportsCurrentItem;Run Programming Action:Top_PROGRAM.log
-SmartDesign;Data_Block;0
-HDL;stimulus\TB_Data_Block.vhd;0
-SmartDesign;Top;0
 StartPage;StartPage;0
-SmartDesign;Transceiver_Main;0
-SmartDesign;Transciever_OneLane;0
-SmartDesign;Clock_Reset;0
-SmartDesign;Trigger_Top_Part;0
-ACTIVEVIEW;Clock_Reset
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -8834,10 +8824,12 @@ SUBBLOCK "AnalyzInCirc_FIFO::work","hdl\AnalyzInCirc_FIFO.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Answer_Encoder::work","hdl\Answer_Encoder.vhd","FALSE","FALSE"
 ENDLIST
+LIST "Clock_Controller::work","","FALSE","FALSE"
+ENDLIST
 LIST "Clock_Controller::work","hdl\Clock_Controller.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.cxf","TRUE","FALSE"
-SUBBLOCK "Clock_Controller::work","hdl\Clock_Controller.vhd","FALSE","FALSE"
+SUBBLOCK "Clock_Controller::work","","FALSE","FALSE"
 SUBBLOCK "CORERESET_PF_C0::work","component\work\CORERESET_PF_C0\CORERESET_PF_C0.v","TRUE","FALSE"
 SUBBLOCK "PF_CCC_C0::work","component\work\PF_CCC_C0\PF_CCC_C0.v","TRUE","FALSE"
 SUBBLOCK "PF_CCC_C3::work","component\work\PF_CCC_C3\PF_CCC_C3.v","TRUE","FALSE"
@@ -9864,13 +9856,13 @@ LIST "Test_Generator_XCVR::work","hdl\Test_Generator_XCVR.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Top::work","component\work\Top\Top.v","TRUE","FALSE"
 SUBBLOCK "AnalyzInCirc_Top::work","hdl\AnalyzInCirc_Top.vhd","FALSE","FALSE"
+SUBBLOCK "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.cxf","TRUE","FALSE"
 SUBBLOCK "Communication::work","component\work\Communication\Communication.v","TRUE","FALSE"
 SUBBLOCK "Controler::work","component\work\Controler\Controler.v","TRUE","FALSE"
 SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
 SUBBLOCK "PF_IO_C0::work","component\work\PF_IO_C0\PF_IO_C0.v","TRUE","FALSE"
 SUBBLOCK "Synchronizer::work","hdl\Synchronizer.vhd","FALSE","FALSE"
 SUBBLOCK "Transceiver_Main::work","component\work\Transceiver_Main\Transceiver_Main.v","TRUE","FALSE"
-SUBBLOCK "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.cxf","TRUE","FALSE"
 ENDLIST
 LIST "Transceiver_LanesConnection::work","hdl\Transceiver_LanesConnection.vhd","FALSE","FALSE"
 SUBBLOCK "Transciever_OneLane::work","component\work\Transciever_OneLane\Transciever_OneLane.v","TRUE","FALSE"

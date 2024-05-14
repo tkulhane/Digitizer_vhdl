@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Mar 21 19:11:13 2024
+// Created by SmartDesign Tue May 14 14:51:06 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,7 +8,9 @@
 // Transceiver_Main
 module Transceiver_Main(
     // Inputs
+    CTRL_Clock,
     CTRL_Clock_40M,
+    CTRL_Reset_N,
     Gen_Enable,
     LANE0_RXD_N,
     LANE0_RXD_P,
@@ -17,6 +19,7 @@ module Transceiver_Main(
     Logic_Clock,
     Logic_Reset_N,
     REF_Clock,
+    REF_Reset_N,
     addr_frame,
     enable_cmd,
     write_data_frame,
@@ -45,7 +48,9 @@ module Transceiver_Main(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input          CTRL_Clock;
 input          CTRL_Clock_40M;
+input          CTRL_Reset_N;
 input          Gen_Enable;
 input          LANE0_RXD_N;
 input          LANE0_RXD_P;
@@ -54,6 +59,7 @@ input          LANE1_RXD_P;
 input          Logic_Clock;
 input          Logic_Reset_N;
 input          REF_Clock;
+input          REF_Reset_N;
 input  [7:0]   addr_frame;
 input          enable_cmd;
 input  [15:0]  write_data_frame;
@@ -86,7 +92,13 @@ wire   [7:0]     addr_frame;
 wire             AND2_0_0_Y;
 wire             AND2_0_Y;
 wire             busy_net_0;
+wire             CTRL_Clock;
 wire             CTRL_Clock_40M;
+wire             CTRL_Reset_N;
+wire   [7:0]     CtrlBus_HandShake_1_PRH_addr_frame;
+wire             CtrlBus_HandShake_1_PRH_enable_cmd;
+wire   [15:0]    CtrlBus_HandShake_1_PRH_write_data_frame;
+wire             CtrlBus_HandShake_1_PRH_write_read;
 wire             Data_Valid_net_0;
 wire             enable_cmd;
 wire             Gen_Enable;
@@ -108,10 +120,9 @@ wire   [11:0]    Output_Data_4_net_0;
 wire   [11:0]    Output_Data_5_net_0;
 wire   [11:0]    Output_Data_6_net_0;
 wire   [11:0]    Output_Data_7_net_0;
-wire             PF_CCC_C5_0_OUT0_FABCLK_0;
-wire             PF_CCC_C5_0_PLL_LOCK_0;
 wire   [15:0]    read_data_frame_net_0;
 wire             REF_Clock;
+wire             REF_Reset_N;
 wire   [15:0]    SampleTxDeCompose_0_0_Output_Data;
 wire   [15:0]    SampleTxDeCompose_0_1_Output_Data;
 wire   [15:0]    SampleTxDeCompose_0_2_Output_Data;
@@ -120,6 +131,7 @@ wire   [15:0]    SampleTxDeCompose_0_4_Output_Data;
 wire   [15:0]    SampleTxDeCompose_0_5_Output_Data;
 wire   [15:0]    SampleTxDeCompose_0_Output_Data;
 wire   [15:0]    SampleTxDeCompose_1_Output_Data;
+wire             Synchronizer_0_2_0_Data_Out;
 wire             Synchronizer_0_2_Data_Out;
 wire             SYNCINB_OUT_net_0;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_0;
@@ -130,7 +142,9 @@ wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_4;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_5;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_6;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_7;
+wire             Transceiver_Controller_0_busy;
 wire             Transceiver_Controller_0_Lanes_Restart;
+wire   [15:0]    Transceiver_Controller_0_read_data_frame;
 wire             Transceiver_LanesConnection_0_Input_Data_Read;
 wire   [15:0]    Transceiver_LanesConnection_0_Output_Data15to0;
 wire   [31:16]   Transceiver_LanesConnection_0_Output_Data31to16;
@@ -151,6 +165,7 @@ wire             LANE0_TXD_N_net_1;
 wire             LANE1_TXD_P_net_1;
 wire             Data_Valid_net_1;
 wire             busy_net_1;
+wire             SYNCINB_OUT_net_1;
 wire   [95:84]   Output_Data_7_net_1;
 wire   [11:0]    Output_Data_0_net_1;
 wire   [23:12]   Output_Data_1_net_1;
@@ -162,13 +177,11 @@ wire   [83:72]   Output_Data_6_net_1;
 wire   [15:0]    read_data_frame_net_1;
 wire   [127:0]   Transceivers_Rx_Data_net_1;
 wire   [15:0]    Transceivers_Rx_K_net_1;
-wire             SYNCINB_OUT_net_1;
 wire   [127:0]   Input_Data_net_0;
 wire   [127:0]   Output_Data_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire             VCC_net;
 wire   [3:0]     Input_TailBits_const_net_0;
 wire   [3:0]     Input_TailBits_const_net_1;
 wire   [3:0]     Input_TailBits_const_net_2;
@@ -177,10 +190,10 @@ wire   [3:0]     Input_TailBits_const_net_4;
 wire   [3:0]     Input_TailBits_const_net_5;
 wire   [3:0]     Input_TailBits_const_net_6;
 wire   [3:0]     Input_TailBits_const_net_7;
+wire             VCC_net;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
-assign VCC_net                    = 1'b1;
 assign Input_TailBits_const_net_0 = 4'h0;
 assign Input_TailBits_const_net_1 = 4'h0;
 assign Input_TailBits_const_net_2 = 4'h0;
@@ -189,6 +202,7 @@ assign Input_TailBits_const_net_4 = 4'h0;
 assign Input_TailBits_const_net_5 = 4'h0;
 assign Input_TailBits_const_net_6 = 4'h0;
 assign Input_TailBits_const_net_7 = 4'h0;
+assign VCC_net                    = 1'b1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -204,6 +218,8 @@ assign Data_Valid_net_1            = Data_Valid_net_0;
 assign Data_Valid                  = Data_Valid_net_1;
 assign busy_net_1                  = busy_net_0;
 assign busy                        = busy_net_1;
+assign SYNCINB_OUT_net_1           = SYNCINB_OUT_net_0;
+assign SYNCINB_OUT                 = SYNCINB_OUT_net_1;
 assign Output_Data_7_net_1         = Output_Data_7_net_0;
 assign Output_Data_7[95:84]        = Output_Data_7_net_1;
 assign Output_Data_0_net_1         = Output_Data_0_net_0;
@@ -226,8 +242,6 @@ assign Transceivers_Rx_Data_net_1  = Transceivers_Rx_Data_net_0;
 assign Transceivers_Rx_Data[127:0] = Transceivers_Rx_Data_net_1;
 assign Transceivers_Rx_K_net_1     = Transceivers_Rx_K_net_0;
 assign Transceivers_Rx_K[15:0]     = Transceivers_Rx_K_net_1;
-assign SYNCINB_OUT_net_1           = SYNCINB_OUT_net_0;
-assign SYNCINB_OUT                 = SYNCINB_OUT_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -250,7 +264,7 @@ assign Input_Data_net_0 = { SampleTxDeCompose_0_5_Output_Data , SampleTxDeCompos
 AND2 AND2_0(
         // Inputs
         .A ( Logic_Reset_N ),
-        .B ( PF_CCC_C5_0_PLL_LOCK_0 ),
+        .B ( REF_Reset_N ),
         // Outputs
         .Y ( AND2_0_Y ) 
         );
@@ -264,21 +278,37 @@ AND2 AND2_0_0(
         .Y ( AND2_0_0_Y ) 
         );
 
-//--------PF_CCC_C5
-PF_CCC_C5 PF_CCC_C5_0(
+//--------CtrlBus_HandShake
+CtrlBus_HandShake #( 
+        .g_WidthADDR ( 8 ),
+        .g_WidthDATA ( 16 ) )
+CtrlBus_HandShake_1(
         // Inputs
-        .REF_CLK_0         ( REF_Clock ),
-        .PLL_POWERDOWN_N_0 ( VCC_net ),
+        .CTRL_Clock            ( CTRL_Clock ),
+        .CTRL_Reset_N          ( CTRL_Reset_N ),
+        .PRH_Clock             ( Logic_Clock ),
+        .PRH_Reset_N           ( Logic_Reset_N ),
+        .CTRL_enable_cmd       ( enable_cmd ),
+        .CTRL_write_read       ( write_read ),
+        .CTRL_addr_frame       ( addr_frame ),
+        .CTRL_write_data_frame ( write_data_frame ),
+        .PRH_busy              ( Transceiver_Controller_0_busy ),
+        .PRH_read_data_frame   ( Transceiver_Controller_0_read_data_frame ),
+        .PRH_In_Reset          ( Logic_Reset_N ),
         // Outputs
-        .OUT0_FABCLK_0     ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
-        .PLL_LOCK_0        ( PF_CCC_C5_0_PLL_LOCK_0 ) 
+        .CTRL_busy             ( busy_net_0 ),
+        .CTRL_read_data_frame  ( read_data_frame_net_0 ),
+        .PRH_enable_cmd        ( CtrlBus_HandShake_1_PRH_enable_cmd ),
+        .PRH_write_read        ( CtrlBus_HandShake_1_PRH_write_read ),
+        .PRH_addr_frame        ( CtrlBus_HandShake_1_PRH_addr_frame ),
+        .PRH_write_data_frame  ( CtrlBus_HandShake_1_PRH_write_data_frame ) 
         );
 
 //--------SampleCompose
 SampleCompose SampleCompose_0(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data15to0 ),
         // Outputs
         .Output_Data     ( Output_Data_0_net_0 ),
@@ -289,7 +319,7 @@ SampleCompose SampleCompose_0(
 SampleCompose SampleCompose_0_0(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data31to16 ),
         // Outputs
         .Output_Data     ( Output_Data_1_net_0 ),
@@ -300,7 +330,7 @@ SampleCompose SampleCompose_0_0(
 SampleCompose SampleCompose_0_1(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data47to32 ),
         // Outputs
         .Output_Data     ( Output_Data_2_net_0 ),
@@ -311,7 +341,7 @@ SampleCompose SampleCompose_0_1(
 SampleCompose SampleCompose_0_2(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data63to48 ),
         // Outputs
         .Output_Data     ( Output_Data_3_net_0 ),
@@ -322,7 +352,7 @@ SampleCompose SampleCompose_0_2(
 SampleCompose SampleCompose_0_3(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data79to64 ),
         // Outputs
         .Output_Data     ( Output_Data_4_net_0 ),
@@ -333,7 +363,7 @@ SampleCompose SampleCompose_0_3(
 SampleCompose SampleCompose_0_4(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data95to80 ),
         // Outputs
         .Output_Data     ( Output_Data_5_net_0 ),
@@ -344,7 +374,7 @@ SampleCompose SampleCompose_0_4(
 SampleCompose SampleCompose_0_5(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data111to96 ),
         // Outputs
         .Output_Data     ( Output_Data_6_net_0 ),
@@ -355,7 +385,7 @@ SampleCompose SampleCompose_0_5(
 SampleCompose SampleCompose_0_6(
         // Inputs
         .Clock           ( Logic_Clock ),
-        .Reset_N         ( Logic_Reset_N ),
+        .Reset_N         ( Synchronizer_0_2_0_Data_Out ),
         .Input_Data      ( Transceiver_LanesConnection_0_Output_Data127to112 ),
         // Outputs
         .Output_Data     ( Output_Data_7_net_0 ),
@@ -444,11 +474,21 @@ Synchronizer Synchronizer_0_2(
         .Data_Out ( Synchronizer_0_2_Data_Out ) 
         );
 
+//--------Synchronizer
+Synchronizer Synchronizer_0_2_0(
+        // Inputs
+        .nRST     ( AND2_0_Y ),
+        .CLK      ( Logic_Clock ),
+        .Data_In  ( VCC_net ),
+        // Outputs
+        .Data_Out ( Synchronizer_0_2_0_Data_Out ) 
+        );
+
 //--------Test_Generator_for_Lanes
 Test_Generator_for_Lanes Test_Generator_for_Lanes_0(
         // Inputs
         .Clock       ( Logic_Clock ),
-        .Reset_N     ( Logic_Reset_N ),
+        .Reset_N     ( Synchronizer_0_2_0_Data_Out ),
         .Test_Enable ( AND2_0_0_Y ),
         // Outputs
         .Test_Data_0 ( Test_Generator_for_Lanes_0_Test_Data_0 ),
@@ -467,44 +507,44 @@ Transceiver_Controller #(
 Transceiver_Controller_0(
         // Inputs
         .Clock              ( Logic_Clock ),
-        .Reset_N            ( Logic_Reset_N ),
-        .enable_cmd         ( enable_cmd ),
-        .write_read         ( write_read ),
-        .addr_frame         ( addr_frame ),
-        .write_data_frame   ( write_data_frame ),
+        .Reset_N            ( Synchronizer_0_2_0_Data_Out ),
+        .enable_cmd         ( CtrlBus_HandShake_1_PRH_enable_cmd ),
+        .write_read         ( CtrlBus_HandShake_1_PRH_write_read ),
+        .addr_frame         ( CtrlBus_HandShake_1_PRH_addr_frame ),
+        .write_data_frame   ( CtrlBus_HandShake_1_PRH_write_data_frame ),
         .StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ),
         // Outputs
-        .busy               ( busy_net_0 ),
-        .read_data_frame    ( read_data_frame_net_0 ),
-        .Lanes_Restart      ( Transceiver_Controller_0_Lanes_Restart ) 
+        .busy               ( Transceiver_Controller_0_busy ),
+        .Lanes_Restart      ( Transceiver_Controller_0_Lanes_Restart ),
+        .read_data_frame    ( Transceiver_Controller_0_read_data_frame ) 
         );
 
 //--------Transceiver_LanesConnection
 Transceiver_LanesConnection Transceiver_LanesConnection_0(
         // Inputs
         .Logic_Clock                  ( Logic_Clock ),
-        .Logic_Reset_N                ( Logic_Reset_N ),
+        .Logic_Reset_N                ( Synchronizer_0_2_0_Data_Out ),
         .CTRL_Clock                   ( CTRL_Clock_40M ),
         .CTRL_Reset_N                 ( Synchronizer_0_2_Data_Out ),
-        .REF_Clock                    ( PF_CCC_C5_0_OUT0_FABCLK_0 ),
+        .REF_Clock                    ( REF_Clock ),
         .LANE0_RXD_P                  ( LANE0_RXD_P ),
         .LANE0_RXD_N                  ( LANE0_RXD_N ),
         .LANE1_RXD_P                  ( LANE1_RXD_P ),
         .LANE1_RXD_N                  ( LANE1_RXD_N ),
-        .Input_Data                   ( Input_Data_net_0 ),
         .TRNV_CTRL_RESTART            ( Transceiver_Controller_0_Lanes_Restart ),
+        .Input_Data                   ( Input_Data_net_0 ),
         // Outputs
         .LANE0_TXD_P                  ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N                  ( LANE0_TXD_N_net_0 ),
         .LANE1_TXD_P                  ( LANE1_TXD_P_net_0 ),
         .LANE1_TXD_N                  ( LANE1_TXD_N_net_0 ),
         .Input_Data_Read              ( Transceiver_LanesConnection_0_Input_Data_Read ),
-        .Output_Data                  ( Output_Data_net_0 ),
         .Data_Valid                   ( Data_Valid_net_0 ),
+        .SYNCINB_OUT                  ( SYNCINB_OUT_net_0 ),
+        .Output_Data                  ( Output_Data_net_0 ),
         .TRNV_CTRL_StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ),
         .Transceivers_Rx_Data         ( Transceivers_Rx_Data_net_0 ),
-        .Transceivers_Rx_K            ( Transceivers_Rx_K_net_0 ),
-        .SYNCINB_OUT                  ( SYNCINB_OUT_net_0 ) 
+        .Transceivers_Rx_K            ( Transceivers_Rx_K_net_0 ) 
         );
 
 
