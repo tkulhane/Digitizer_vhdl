@@ -12,6 +12,8 @@ package cmd_table is
 
     constant CMD_CONST_SET_Reset_Controler     : std_logic_vector(7 downto 0) := x"03";
     constant CMD_CONST_GET_Reset_Controler     : std_logic_vector(7 downto 0) := x"04";
+    constant CMD_CONST_SET_Clock_Controler     : std_logic_vector(7 downto 0) := x"05";
+    constant CMD_CONST_GET_Clock_Controler     : std_logic_vector(7 downto 0) := x"06";
     
     constant CMD_CONST_SET_TestRegisters        : std_logic_vector(7 downto 0) := x"11";
     constant CMD_CONST_GET_TestRegisters        : std_logic_vector(7 downto 0) := x"12";
@@ -49,19 +51,21 @@ package cmd_table is
 ------------------------------------------------------------------------------------------------------------
 --perif numbers constant
 ------------------------------------------------------------------------------------------------------------
-    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 11;
+    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 12;
 
     constant PER_NUM_CONST_Reset_Controler          : Natural := 0;
-    constant PER_NUM_CONST_TestRegisters            : Natural := 1;
-    constant PER_NUM_CONST_ADC                      : Natural := 2;
-    constant PER_NUM_CONST_HMC                      : Natural := 3;
-    constant PER_NUM_CONST_LMX1                     : Natural := 4;
-    constant PER_NUM_CONST_LMX2                     : Natural := 5;
-    constant PER_NUM_CONST_Trigger                  : Natural := 6;
-    constant PER_NUM_CONST_GPIO                     : Natural := 7;
-    constant PER_NUM_CONST_COMSW                    : Natural := 8;
-    constant PER_NUM_CONST_TRNV                     : Natural := 9;
-    constant PER_NUM_CONST_ANICI                    : Natural := 10;
+    constant PER_NUM_CONST_Clock_Controler          : Natural := 1;
+    constant PER_NUM_CONST_TestRegisters            : Natural := 2;
+    constant PER_NUM_CONST_ADC                      : Natural := 3;
+    constant PER_NUM_CONST_HMC                      : Natural := 4;
+    constant PER_NUM_CONST_LMX1                     : Natural := 5;
+    constant PER_NUM_CONST_LMX2                     : Natural := 6;
+    constant PER_NUM_CONST_Trigger                  : Natural := 7;
+    constant PER_NUM_CONST_GPIO                     : Natural := 8;
+    constant PER_NUM_CONST_COMSW                    : Natural := 9;
+    constant PER_NUM_CONST_TRNV                     : Natural := 10;
+    constant PER_NUM_CONST_ANICI                    : Natural := 11;
+    
     
 
 end package;

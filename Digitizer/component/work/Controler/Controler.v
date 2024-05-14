@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Mar 18 12:05:11 2024
+// Created by SmartDesign Tue May 14 15:14:16 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -19,6 +19,8 @@ module Controler(
     ANICI_rx_data,
     ANW_Fifo_Full,
     BTN,
+    CLKC_busy,
+    CLKC_rx_data,
     CMD_Fifo_Empty,
     CMD_Fifo_Read_Data,
     COMM_busy,
@@ -49,6 +51,10 @@ module Controler(
     ANW_Fifo_Write_Data,
     ANW_Fifo_Write_Enable,
     BOARD_PWR_RUN,
+    CLKC_addr,
+    CLKC_data,
+    CLKC_enable_cmd,
+    CLKC_write_read,
     CMD_Fifo_Read_Enable,
     COMM_addr,
     COMM_comm_number,
@@ -105,6 +111,8 @@ input         ANICI_busy;
 input  [15:0] ANICI_rx_data;
 input         ANW_Fifo_Full;
 input         BTN;
+input         CLKC_busy;
+input  [15:0] CLKC_rx_data;
 input         CMD_Fifo_Empty;
 input  [39:0] CMD_Fifo_Read_Data;
 input         COMM_busy;
@@ -137,6 +145,10 @@ output        ANICI_write_read;
 output [39:0] ANW_Fifo_Write_Data;
 output        ANW_Fifo_Write_Enable;
 output        BOARD_PWR_RUN;
+output [7:0]  CLKC_addr;
+output [15:0] CLKC_data;
+output        CLKC_enable_cmd;
+output        CLKC_write_read;
 output        CMD_Fifo_Read_Enable;
 output [7:0]  COMM_addr;
 output [3:0]  COMM_comm_number;
@@ -210,6 +222,12 @@ wire   [39:0]  ANW_Fifo_Write_Data_net_0;
 wire           ANW_Fifo_Write_Enable_net_0;
 wire   [6:6]   BOARD_PWR_RUN_net_0;
 wire           BTN;
+wire   [7:0]   CLKC_addr_net_0;
+wire           CLKC_busy;
+wire   [15:0]  CLKC_data_net_0;
+wire           CLKC_enable_cmd_net_0;
+wire   [15:0]  CLKC_rx_data;
+wire           CLKC_write_read_net_0;
 wire           Clock;
 wire           CMD;
 wire           CMD_Fifo_Empty;
@@ -343,6 +361,8 @@ wire           COMM_write_read_net_1;
 wire           COMM_enable_cmd_net_1;
 wire           TRNV_write_read_net_1;
 wire           TRNV_enable_cmd_net_1;
+wire           ANICI_write_read_net_1;
+wire           ANICI_enable_cmd_net_1;
 wire   [7:0]   TRG_addr_net_1;
 wire   [15:0]  TRG_data_net_1;
 wire   [39:0]  ANW_Fifo_Write_Data_net_1;
@@ -351,10 +371,12 @@ wire   [3:0]   COMM_comm_number_net_1;
 wire   [15:0]  COMM_data_net_1;
 wire   [7:0]   TRNV_addr_net_1;
 wire   [15:0]  TRNV_data_net_1;
-wire           ANICI_write_read_net_1;
 wire   [7:0]   ANICI_addr_net_1;
 wire   [15:0]  ANICI_data_net_1;
-wire           ANICI_enable_cmd_net_1;
+wire           CLKC_write_read_net_1;
+wire   [7:0]   CLKC_addr_net_1;
+wire   [15:0]  CLKC_data_net_1;
+wire           CLKC_enable_cmd_net_1;
 wire   [10:10] Outputs_slice_0;
 wire   [11:11] Outputs_slice_1;
 wire   [3:3]   Outputs_slice_2;
@@ -437,6 +459,10 @@ assign TRNV_write_read_net_1       = TRNV_write_read_net_0;
 assign TRNV_write_read             = TRNV_write_read_net_1;
 assign TRNV_enable_cmd_net_1       = TRNV_enable_cmd_net_0;
 assign TRNV_enable_cmd             = TRNV_enable_cmd_net_1;
+assign ANICI_write_read_net_1      = ANICI_write_read_net_0;
+assign ANICI_write_read            = ANICI_write_read_net_1;
+assign ANICI_enable_cmd_net_1      = ANICI_enable_cmd_net_0;
+assign ANICI_enable_cmd            = ANICI_enable_cmd_net_1;
 assign TRG_addr_net_1              = TRG_addr_net_0;
 assign TRG_addr[7:0]               = TRG_addr_net_1;
 assign TRG_data_net_1              = TRG_data_net_0;
@@ -453,14 +479,18 @@ assign TRNV_addr_net_1             = TRNV_addr_net_0;
 assign TRNV_addr[7:0]              = TRNV_addr_net_1;
 assign TRNV_data_net_1             = TRNV_data_net_0;
 assign TRNV_data[15:0]             = TRNV_data_net_1;
-assign ANICI_write_read_net_1      = ANICI_write_read_net_0;
-assign ANICI_write_read            = ANICI_write_read_net_1;
 assign ANICI_addr_net_1            = ANICI_addr_net_0;
 assign ANICI_addr[7:0]             = ANICI_addr_net_1;
 assign ANICI_data_net_1            = ANICI_data_net_0;
 assign ANICI_data[15:0]            = ANICI_data_net_1;
-assign ANICI_enable_cmd_net_1      = ANICI_enable_cmd_net_0;
-assign ANICI_enable_cmd            = ANICI_enable_cmd_net_1;
+assign CLKC_write_read_net_1       = CLKC_write_read_net_0;
+assign CLKC_write_read             = CLKC_write_read_net_1;
+assign CLKC_addr_net_1             = CLKC_addr_net_0;
+assign CLKC_addr[7:0]              = CLKC_addr_net_1;
+assign CLKC_data_net_1             = CLKC_data_net_0;
+assign CLKC_data[15:0]             = CLKC_data_net_1;
+assign CLKC_enable_cmd_net_1       = CLKC_enable_cmd_net_0;
+assign CLKC_enable_cmd             = CLKC_enable_cmd_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -533,6 +563,7 @@ Answer_Encoder Answer_Encoder_0(
         .CD_enable_cmd              ( Command_Decoder_0_AE_enable_cmd ),
         .CD_FAULT_PROCESSED_EXECUTE ( Command_Decoder_0_AE_FAULT_PROCESSED_EXECUTE ),
         .RST_rx_data                ( Reset_Controler_0_read_data_frame ),
+        .CLKC_rx_data               ( CLKC_rx_data ),
         .REG_rx_data                ( REGISTERS_0_read_data_frame ),
         .ADCSPI_rx_data             ( ADI_SPI_0_rx_data_frame ),
         .HMCSPI_rx_data             ( ADI_SPI_0_0_rx_data_frame ),
@@ -559,6 +590,7 @@ Command_Decoder Command_Decoder_0(
         .Fifo_Empty                 ( CMD_Fifo_Empty ),
         .AE_busy                    ( Answer_Encoder_0_CD_busy ),
         .RST_busy                   ( Reset_Controler_0_busy ),
+        .CLKC_busy                  ( CLKC_busy ),
         .REG_busy                   ( REGISTERS_0_busy ),
         .ADCSPI_busy                ( ADI_SPI_0_busy ),
         .HMCSPI_busy                ( ADI_SPI_0_0_busy ),
@@ -578,6 +610,10 @@ Command_Decoder Command_Decoder_0(
         .RST_write_read             ( Command_Decoder_0_RST_write_read ),
         .RST_addr                   ( Command_Decoder_0_RST_addr ),
         .RST_data                   ( Command_Decoder_0_RST_data ),
+        .CLKC_enable_cmd            ( CLKC_enable_cmd_net_0 ),
+        .CLKC_write_read            ( CLKC_write_read_net_0 ),
+        .CLKC_addr                  ( CLKC_addr_net_0 ),
+        .CLKC_data                  ( CLKC_data_net_0 ),
         .REG_enable_cmd             ( CMD ),
         .REG_write_read             ( RW ),
         .REG_addr                   ( Command_Decoder_0_REG_addr ),

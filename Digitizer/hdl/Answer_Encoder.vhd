@@ -26,6 +26,9 @@ entity Answer_Encoder is
         --Reset Controler
         RST_rx_data : in std_logic_vector(15 downto 0);
 
+        --Clock Controler
+        CLKC_rx_data : in std_logic_vector(15 downto 0);
+
         --registers
         REG_rx_data : in std_logic_vector(7 downto 0);
 
@@ -266,7 +269,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --encoder
 ------------------------------------------------------------------------------------------------------------
-    process(cmd_ID,ADCSPI_rx_data,REG_rx_data,CD_CMD_Data,CMD_DATA_Part_2,CMD_DATA_Part_1,CMD_DATA_Part_0,TRG_rx_data,RST_rx_data)
+    process(cmd_ID,ADCSPI_rx_data,REG_rx_data,CD_CMD_Data,CMD_DATA_Part_2,CMD_DATA_Part_1,CMD_DATA_Part_0,TRG_rx_data,RST_rx_data,CLKC_rx_data)
     begin
 
         case cmd_ID is
@@ -283,6 +286,13 @@ begin
 
             when CMD_CONST_GET_Reset_Controler =>
                 periph_data <= CMD_DATA_Part_2 & RST_rx_data;
+
+            --clock controler
+            when CMD_CONST_SET_Clock_Controler =>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_Clock_Controler =>
+                periph_data <= CMD_DATA_Part_2 & CLKC_rx_data;
 
             --Test registers
             when CMD_CONST_SET_TestRegisters =>
