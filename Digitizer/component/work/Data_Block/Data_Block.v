@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue May 14 14:37:26 2024
+// Created by SmartDesign Wed May 15 12:01:34 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -81,6 +81,7 @@ output        Diag_3;
 // Nets
 //--------------------------------------------------------------------
 wire          ACQ_RunOut_net_0;
+wire          AND2_0_Y;
 wire   [7:0]  C_addr_frame;
 wire          C_busy_net_0;
 wire          C_enable_cmd;
@@ -154,6 +155,7 @@ wire   [15:0] Input_Data_Part_1_Q_2;
 wire   [15:0] Input_Data_Part_1_Q_3;
 wire          Reset_N_Logic;
 wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
+wire          Synchronizer_0_2_Data_Out;
 wire          Trigger_Top_Part_0_ALL_FIFO_Write;
 wire          Trigger_Top_Part_0_C_busy;
 wire   [15:0] Trigger_Top_Part_0_C_read_data_frame;
@@ -181,6 +183,7 @@ wire   [2:0]  Order_Of_TRG_Unit_0_const_net_1;
 wire   [2:0]  Order_Of_TRG_Unit_1_const_net_1;
 wire   [2:0]  Order_Of_TRG_Unit_3_const_net_1;
 wire   [2:0]  Order_Of_TRG_Unit_2_const_net_1;
+wire          VCC_net;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
@@ -193,6 +196,7 @@ assign Order_Of_TRG_Unit_0_const_net_1 = 3'h4;
 assign Order_Of_TRG_Unit_1_const_net_1 = 3'h5;
 assign Order_Of_TRG_Unit_3_const_net_1 = 3'h7;
 assign Order_Of_TRG_Unit_2_const_net_1 = 3'h6;
+assign VCC_net                         = 1'b1;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
@@ -222,6 +226,15 @@ assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
+//--------AND2
+AND2 AND2_0(
+        // Inputs
+        .A ( Fifo_RESET_N ),
+        .B ( Reset_N_Logic ),
+        // Outputs
+        .Y ( AND2_0_Y ) 
+        );
+
 //--------Communication_Builder
 Communication_Builder Communication_Builder_0(
         // Inputs
@@ -378,7 +391,7 @@ Input_Data_Part Input_Data_Part_0(
         .Reset_N_Trigger     ( Reset_N_Logic ),
         .Fifo_Write          ( Trigger_Top_Part_0_ALL_FIFO_Write ),
         .Fifo_Read           ( FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable ),
-        .RESET_N_Fifo        ( Fifo_RESET_N ),
+        .RESET_N_Fifo        ( Synchronizer_0_2_Data_Out ),
         .Input_Data_0        ( Input_Data_0_00 ),
         .Input_Data_1        ( Input_Data_1_00 ),
         .Input_Data_2        ( Input_Data_2_00 ),
@@ -404,7 +417,7 @@ Input_Data_Part Input_Data_Part_1(
         .Reset_N_Trigger     ( Reset_N_Logic ),
         .Fifo_Write          ( Trigger_Top_Part_0_ALL_FIFO_Write ),
         .Fifo_Read           ( FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable ),
-        .RESET_N_Fifo        ( Fifo_RESET_N ),
+        .RESET_N_Fifo        ( Synchronizer_0_2_Data_Out ),
         .Input_Data_0        ( Input_Data_0_01 ),
         .Input_Data_1        ( Input_Data_1_01 ),
         .Input_Data_2        ( Input_Data_2_01 ),
@@ -437,11 +450,21 @@ Sample_RAM_Block Sample_RAM_Block_0(
         .B_Output_Data          ( Sample_RAM_Block_0_B_Output_Data ) 
         );
 
+//--------Synchronizer
+Synchronizer Synchronizer_0_2(
+        // Inputs
+        .nRST     ( AND2_0_Y ),
+        .CLK      ( Clock_Logic ),
+        .Data_In  ( VCC_net ),
+        // Outputs
+        .Data_Out ( Synchronizer_0_2_Data_Out ) 
+        );
+
 //--------Trigger_Top_Part
 Trigger_Top_Part Trigger_Top_Part_0(
         // Inputs
         .Clock                         ( Clock_Logic ),
-        .Reset_N                       ( Fifo_RESET_N ),
+        .Reset_N                       ( Reset_N_Logic ),
         .C_enable_cmd                  ( CtrlBus_HandShake_0_PRH_enable_cmd ),
         .C_write_read                  ( CtrlBus_HandShake_0_PRH_write_read ),
         .RE                            ( Diag_1_0 ),

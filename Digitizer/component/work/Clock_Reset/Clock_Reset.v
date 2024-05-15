@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue May 14 14:28:10 2024
+// Created by SmartDesign Wed May 15 10:50:43 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -86,7 +86,7 @@ wire          PF_CCC_C7_0_OUT0_FABCLK_0;
 wire          PF_CCC_C7_0_PLL_LOCK_0;
 wire          PF_CCC_C8_0_OUT0_FABCLK_0;
 wire          PF_CCC_C8_0_PLL_LOCK_0;
-wire          PF_CLK_DIV_C3_0_CLK_OUT;
+wire          PF_CLK_DIV_C3_0_CLK_OUT_0;
 wire          PF_INIT_MONITOR_C0_0_DEVICE_INIT_DONE;
 wire          PF_INIT_MONITOR_C0_0_FABRIC_POR_N;
 wire   [15:0] read_data_frame_net_0;
@@ -179,7 +179,7 @@ Clock_Switch Clock_Switch_0(
         // Inputs
         .CTRL_Clock     ( Main_CLOCK_1 ),
         .CTRL_Reset_N   ( Main_RESET_N_1 ),
-        .ClockInputA    ( PF_CLK_DIV_C3_0_CLK_OUT ),
+        .ClockInputA    ( PF_CLK_DIV_C3_0_CLK_OUT_0 ),
         .ClockInputB    ( ClockInput_ExtHMC ),
         .ClockInputC    ( ClockInput_Ext1 ),
         .ClockInputD    ( ClockInput_Ext2 ),
@@ -199,7 +199,7 @@ Clock_Switch Clock_Switch_0_0(
         // Inputs
         .CTRL_Clock     ( Main_CLOCK_1 ),
         .CTRL_Reset_N   ( Main_RESET_N_1 ),
-        .ClockInputA    ( PF_CLK_DIV_C3_0_CLK_OUT ),
+        .ClockInputA    ( PF_CLK_DIV_C3_0_CLK_OUT_0 ),
         .ClockInputB    ( ClockInput_ExtHMC ),
         .ClockInputC    ( ClockInput_Ext1 ),
         .ClockInputD    ( ClockInput_Ext2 ),
@@ -285,7 +285,7 @@ PF_CLK_DIV_C3 PF_CLK_DIV_C3_0(
         // Inputs
         .CLK_IN  ( XCVR_REF_Clock ),
         // Outputs
-        .CLK_OUT ( PF_CLK_DIV_C3_0_CLK_OUT ) 
+        .CLK_OUT ( PF_CLK_DIV_C3_0_CLK_OUT_0 ) 
         );
 
 //--------PF_INIT_MONITOR_C0

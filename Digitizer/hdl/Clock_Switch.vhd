@@ -37,12 +37,13 @@ architecture rtl of Clock_Switch is
 ------------------------------------------------------------------------------------------------------------  
 
 
-    type FSM_state is (IDLE, GO_TO_RESET, SWITCH_MUX, WAIT_IN_RESET);
+    type FSM_state is (IDLE, GO_TO_RESET, SWITCH_MUX, WAIT_IN_RESET_1, WAIT_FOR_PLL, WAIT_IN_RESET_2);
     signal state_reg, next_state : FSM_state;
-    signal fsm_timer : unsigned(9 downto 0);
+    signal fsm_timer : unsigned(11 downto 0);
 
     signal Internal_Reset_N : std_logic;
     signal FSM_Reset_N : std_logic;
+    signal FSM_PLL_PWR_DOWN : std_logic;
     signal MuxEnable : std_logic;
     signal MUX_select_Register : std_logic_vector(1 downto 0);
 
@@ -72,7 +73,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 
     Internal_Reset_N <= CTRL_Reset_N and PLL_Lock and FSM_Reset_N;
-    PLL_PWR_DOWN <= CTRL_Reset_N;
+    PLL_PWR_DOWN <= CTRL_Reset_N and FSM_PLL_PWR_DOWN;
 
     Clock_OUT <= Clock_From_PLL;
 
@@ -142,10 +143,24 @@ begin
                 next_state <= SWITCH_MUX;
 
             when SWITCH_MUX =>
-                next_state <= WAIT_IN_RESET;
+                if(fsm_timer >= 20 -1) then
+                    next_state <= WAIT_IN_RESET_1;
+                end if;
 
-            when WAIT_IN_RESET =>
-                if(fsm_timer >= 100 -1 and PLL_Lock = '1') then
+            when WAIT_IN_RESET_1 =>
+                if(fsm_timer >= 20 -1) then
+                    next_state <= WAIT_FOR_PLL;
+                end if;
+
+            when WAIT_FOR_PLL =>
+                if(PLL_Lock = '1') then
+                    next_state <= WAIT_IN_RESET_2;
+                elsif(fsm_timer >= 1000  -1) then 
+                    next_state <= IDLE; --ToDo: ulozit nejaky fault flag?
+                end if;
+
+            when WAIT_IN_RESET_2 =>
+                if(fsm_timer >= 100 -1) then
                     next_state <= IDLE;
                 end if;
 
@@ -162,22 +177,39 @@ begin
         case state_reg is
         
             when IDLE =>
+                FSM_PLL_PWR_DOWN <= '1';
                 FSM_Reset_N <= '1';
                 MuxEnable <= '0';
 
             when GO_TO_RESET =>
+                FSM_PLL_PWR_DOWN <= '0';
                 FSM_Reset_N <= '0';
                 MuxEnable <= '0';
 
             when SWITCH_MUX =>
+                FSM_PLL_PWR_DOWN <= '0';
                 FSM_Reset_N <= '0';
                 MuxEnable <= '1';
 
-            when WAIT_IN_RESET =>
+            when WAIT_IN_RESET_1 =>
+                FSM_PLL_PWR_DOWN <= '0';
+                FSM_Reset_N <= '0';
+                MuxEnable <= '0';
+
+            when WAIT_FOR_PLL =>
+                FSM_PLL_PWR_DOWN <= '1';
+                FSM_Reset_N <= '0';
+                MuxEnable <= '0';
+
+            when WAIT_IN_RESET_2 =>
+                FSM_PLL_PWR_DOWN <= '1';
                 FSM_Reset_N <= '0';
                 MuxEnable <= '0';
 
             when others =>
+                FSM_PLL_PWR_DOWN <= '0';
+                FSM_Reset_N <= '0';
+                MuxEnable <= '0';
 
 
 

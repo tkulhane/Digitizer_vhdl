@@ -17,12 +17,12 @@ System jitter (worst aggressor):  0.043 ns
 Jitter Calculation per Clock Domain
 -----------------------------------
 
-Clock: Transceiver_Main_0/PF_CCC_C5_0/PF_CCC_C5_0/pll_inst_0/OUT0
+Clock: Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD/Y_DIV
 
  (1) System jitter (worst aggressor):              0.043 ns
- (2) PLL jitter:                                   0.135 ns
+ (2) Master Clock jitter:                          0.600 ns
 
-     Resulting clock jitter (max of (1) and (2)):  0.135 ns
+     Resulting clock jitter (max of (1) and (2)):  0.600 ns
 
 
 Clock: Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV
@@ -31,6 +31,14 @@ Clock: Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV
  (2) Master Clock jitter:                          0.600 ns
 
      Resulting clock jitter (max of (1) and (2)):  0.600 ns
+
+
+Clock: Clock_Reset_0/PF_CCC_C8_0/PF_CCC_C8_0/pll_inst_0/OUT0
+
+ (1) System jitter (worst aggressor):              0.043 ns
+ (2) PLL jitter:                                   0.135 ns
+
+     Resulting clock jitter (max of (1) and (2)):  0.135 ns
 
 
 Clock: Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1
@@ -91,6 +99,14 @@ Clock: Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane
      Regional jitter:                              0.000 ns
 
      Resulting clock jitter:                       0.000 ns
+
+
+Clock: Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/pll_inst_0/OUT0
+
+ (1) System jitter (worst aggressor):              0.043 ns
+ (2) PLL jitter:                                   0.135 ns
+
+     Resulting clock jitter (max of (1) and (2)):  0.135 ns
 
 
 Clock: Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK

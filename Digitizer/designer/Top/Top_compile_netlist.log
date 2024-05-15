@@ -20,7 +20,8 @@ Info: Following Two-port LSRAM instances with Read-width > 20 and two clocks wer
       Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/COREFIFO_C12_0_1/COREFIFO_C12_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0
       Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/COREFIFO_C12_0_1/COREFIFO_C12_0/genblk23.UI_ram_wrapper_1/L1_asyncnonpipe/COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C1
 
-Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD_RNI04D:A'.
+Info: [127205812]:  CMPPF_148: Added 'ADLIB:CLKINT' instance type after 'Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD'.
+Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD_1:A'.
 Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_INT' instance type before pin 'Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD:A'.
 Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_CLKINT' instance type before pin 'Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD_RNIU5Q9:A'.
 Info: [127205813]:  CMPPF_149: Added 'ADLIB:ICB_INT' instance type before pin 'Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD:A'.
@@ -49,13 +50,13 @@ Info: Global design data:
 Info: List of globals that cannot be demoted: 
     CLK    ASYN   DATA   Instance Name 
     ---    ----   ----   ------------- 
-    21813  0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
-    10462  0      0      'Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/clkint_0' 
+    21834  0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_0' 
+    10464  0      0      'Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/clkint_0' 
     1046   0      0      'Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/clkint_4' 
     78     0      0      'Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD_RNIU5Q9' 
     6      0      0      'Clock_Reset_0/PF_CCC_C8_0/PF_CCC_C8_0/clkint_0' 
     0      0      4      'Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT' 
-    0      0      2      'Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD_RNI04D' 
+    0      0      2      'Clock_Reset_0/PF_CLK_DIV_C3_0/PF_CLK_DIV_C3_0/I_CD_1/U0' 
     0      0      1      'Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/clkint_0' 
 
 Info: List of globals considered for demotion: 
@@ -67,13 +68,14 @@ Info: List of globals considered for demotion:
     0      0      9345   'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX_RNIVH4B[4]' 
     0      6151   0      'Transceiver_Main_0/Synchronizer_0_2_0/Chain_rep_RNI4903[1]' 
     251    0      0      'I_1' 
-    2      0      1      'I_2' 
-    0      3088   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
-    0      1335   0      'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNI3DRB' 
+    2      0      3      'I_2' 
+    0      3109   0      'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_RNI6H8' 
+    0      1278   0      'Clock_Reset_0/Clock_Switch_0/inst_Synchronizer_Reset_Out/Chain_rep_RNI9K7E[1]' 
+    0      930    0      'Data_Block_0/Synchronizer_0_2/Chain_RNI9344[1]' 
     0      878    0      'Clock_Reset_0/Synchronizer_0/Chain_rep_RNI8C36[1]' 
-    0      873    0      'Clock_Reset_0/Clock_Switch_0/inst_Synchronizer_Reset_Out/Chain_rep_RNI9K7E[1]' 
 
 Info: Demotion information: 
+      Disconnected 2 data pins from global 'I_2'. This behavior is controlled by the 'Minimum fanout of non-clock nets to be kept on globals' threshold in the tool options for the Synthesize step. Typically, the low-skew global resources are used for clock and reset nets. When using global resources for data nets, consider the data path effect of global insertion delay and added buffer delay when the net drives carry chain logic.
 Info: [127205381]:  CMPPF_302: Added 0 row global instances.
 Info: [127205382]:  CMPPF_303: Deleted 0 global instances.
 
@@ -85,10 +87,10 @@ Info: Device 'MPF300TS_ES' requires fabric generated global resources driven fro
     Number of AND2 gates inserted: 11 
 Info: Chip global resources driven by the following fabric instances were gated by the 'INIT:FABRIC_POR_N' signal: 
     Clock_Reset_0/Clock_Switch_0/inst_Synchronizer_Reset_Out/Chain_rep[1]
-    Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N
     AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]
     Transceiver_Main_0/Synchronizer_0_2_0/Chain_rep[1]
     AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]
+    Data_Block_0/Synchronizer_0_2/Chain[1]
     AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]
     INBUF_DIFF_0_0/U_IOP
     Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep

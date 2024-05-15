@@ -174,7 +174,7 @@ begin
             write_data_frame => CTRL_write_data_frame,
             ClockInput_ExtHMC => ClockInput_ExtHMC,
             ClockInput_Ext1 => ClockInput_Ext1,
-            ClockInput_Ext2 => ClockInput_Ext2,
+            ClockInput_Ext2 => '0',--ClockInput_Ext2,
 
             -- Outputs
             Main_CLOCK =>  Main_CLOCK,
@@ -211,20 +211,23 @@ begin
         --read threshold
         SEND_CMD( x"11", X"0000", '1', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         
-        wait for 2 us;
+        wait for 3 us;
         SEND_CMD( x"11", X"0001", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
-
-        wait for 2 us;
-        SEND_CMD( x"11", X"0002", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
-
-        wait for 2 us;
-        SEND_CMD( x"11", X"0001", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
-
-        wait for 2 us;
-        SEND_CMD( x"11", X"0003", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
 
         wait for 3 us;
-        SEND_CMD( x"12", X"0001", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        SEND_CMD( x"11", X"0002", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+
+        wait for 5 us;
+        SEND_CMD( x"11", X"0001", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+
+        wait for 5 us;
+        SEND_CMD( x"11", X"0003", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+
+        wait for 10 us;
+        SEND_CMD( x"11", X"0001", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+
+        wait for 10 us;
+        SEND_CMD( x"11", X"0000", '0', Main_CLOCK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
 
 
 

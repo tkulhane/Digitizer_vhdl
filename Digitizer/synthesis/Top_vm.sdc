@@ -1,4 +1,4 @@
-# Written by Synplify Pro version map202109act, Build 055R. Synopsys Run ID: sid1715692886 
+# Written by Synplify Pro version map202109act, Build 055R. Synopsys Run ID: sid1715767438 
 # Top Level Design Parameters 
 
 # Clocks 
@@ -12,7 +12,7 @@ create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C0_PF_CCC_C0_0
 create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock} [get_pins {Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1}] 
 create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock} [get_pins {Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/pll_inst_0/OUT0}] 
 create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C8_PF_CCC_C8_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock} [get_pins {Clock_Reset_0/PF_CCC_C8_0/PF_CCC_C8_0/pll_inst_0/OUT0}] 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {Top|N_7_inferred_clock} [get_pins {INBUF_DIFF_0_0/Y}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {Top|N_8_inferred_clock} [get_pins {INBUF_DIFF_0_0/Y}] 
 create_clock -period 10.000 -waveform {0.000 5.000} -name {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock} [get_pins {Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i/Y}] 
 create_clock -period 10.000 -waveform {0.000 5.000} -name {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock} [get_pins {Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i/Y}] 
 
@@ -66,7 +66,7 @@ set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|
 set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock}]
 set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock}]
 set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C8_PF_CCC_C8_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock}]
-set_clock_groups -asynchronous -group [get_clocks {Top|N_7_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {Top|N_8_inferred_clock}]
 set_clock_groups -asynchronous -group [get_clocks {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock}]
 set_clock_groups -asynchronous -group [get_clocks {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock}]
 

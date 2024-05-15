@@ -45,6 +45,7 @@ architecture rtl of Clock_Controller is
     constant CMD_CLOCK_PLLS_LOCK        : std_logic_vector(7 downto 0) := x"05";
     constant CMD_CLOCK_SELECT_LOGIC     : std_logic_vector(7 downto 0) := x"11";
     constant CMD_CLOCK_SELECT_REF       : std_logic_vector(7 downto 0) := x"12";
+    constant CMD_CLOCK_XXX              : std_logic_vector(7 downto 0) := x"55";
  
  
 
@@ -204,8 +205,8 @@ begin
             SwitchEnable_Logic <= '0';
             SwitchEnable_Ref <= '0';
 
-            SwitchSelect_Logic <= (others => '0');
-            SwitchSelect_Ref <= (others => '0');
+            REG_SwitchSelect_Logic <= (others => '0');
+            REG_SwitchSelect_Ref <= (others => '0');
 
 
         elsif(Clock'event and Clock = '1') then    
@@ -250,7 +251,10 @@ begin
 
                     when CMD_CLOCK_PLLS_LOCK =>
                          read_data_frame(1 downto 0) <= PLLs_Lock; 
-                              
+
+                    when CMD_CLOCK_XXX =>
+                        read_data_frame <= X"ABCD";
+
                     when others =>
                         null;
 
