@@ -545,7 +545,7 @@ PARENT="<project>\component\work\COREUART_C0\COREUART_C0.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SgCore\PF_CCC\2.2.100\PF_CCC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715689046"
+TIME="1715939770"
 SIZE="279"
 PARENT="<project>\component\work\PF_CCC_C0\PF_CCC_C0.cxf"
 PARENT="<project>\component\work\PF_CCC_C1\PF_CCC_C1.cxf"
@@ -554,6 +554,7 @@ PARENT="<project>\component\work\PF_CCC_C3\PF_CCC_C3.cxf"
 PARENT="<project>\component\work\PF_CCC_C4\PF_CCC_C4.cxf"
 PARENT="<project>\component\work\PF_CCC_C5\PF_CCC_C5.cxf"
 PARENT="<project>\component\work\PF_CCC_C6\PF_CCC_C6.cxf"
+PARENT="<project>\component\work\PF_CCC_C7\PF_CCC_C7.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SgCore\PF_CLK_DIV\1.0.103\PF_CLK_DIV.cxf,actgen_cxf"
 STATE="utd"
@@ -661,8 +662,8 @@ PARENT="<project>\component\work\PF_XCVR_REF_CLK_C0\PF_XCVR_REF_CLK_C0.cxf"
 ENDFILE
 VALUE "<project>\component\work\Clock_Reset\Clock_Reset.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715937150"
-SIZE="3038"
+TIME="1715939952"
+SIZE="4164"
 ENDFILE
 VALUE "<project>\component\work\Communication\Communication.cxf,actgen_cxf"
 STATE="utd"
@@ -3160,6 +3161,31 @@ SIZE="3891"
 PARENT="<project>\component\work\PF_CCC_C6\PF_CCC_C6_0\PF_CCC_C6_PF_CCC_C6_0_PF_CCC.cxf"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\component\work\PF_CCC_C7\PF_CCC_C7.cxf,actgen_cxf"
+STATE="utd"
+TIME="1715939772"
+SIZE="18286"
+ENDFILE
+VALUE "<project>\component\work\PF_CCC_C7\PF_CCC_C7.v,hdl"
+STATE="utd"
+TIME="1715939770"
+SIZE="10284"
+PARENT="<project>\component\work\PF_CCC_C7\PF_CCC_C7.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\PF_CCC_C7\PF_CCC_C7_0\PF_CCC_C7_PF_CCC_C7_0_PF_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1715939770"
+SIZE="479"
+PARENT="<project>\component\work\PF_CCC_C7\PF_CCC_C7.cxf"
+ENDFILE
+VALUE "<project>\component\work\PF_CCC_C7\PF_CCC_C7_0\PF_CCC_C7_PF_CCC_C7_0_PF_CCC.v,hdl"
+STATE="utd"
+TIME="1715939770"
+SIZE="3891"
+PARENT="<project>\component\work\PF_CCC_C7\PF_CCC_C7_0\PF_CCC_C7_PF_CCC_C7_0_PF_CCC.cxf"
+IS_READONLY="TRUE"
+ENDFILE
 VALUE "<project>\component\work\PF_CLK_DIV_C0\PF_CLK_DIV_C0.cxf,actgen_cxf"
 STATE="utd"
 TIME="1715681170"
@@ -4090,8 +4116,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715939587"
-SIZE="17579"
+TIME="1715940013"
+SIZE="17908"
 ENDFILE
 VALUE "<project>\component\work\Transceiver_Main\Transceiver_Main.cxf,actgen_cxf"
 STATE="utd"
@@ -8816,8 +8842,14 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+HDL;hdl\Answer_Encoder.vhd;0
+SmartDesign;Controler;0
+SmartDesign;Data_Block;0
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+SmartDesign;Top;0
+SmartDesign;Clock_Reset;0
+SmartDesign;Transceiver_Main;0
+ACTIVEVIEW;Top
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -8826,30 +8858,25 @@ LIST "Alignment_Fifo::work","","FALSE","FALSE"
 ENDLIST
 LIST "AnalyzInCirc_Controler::work","hdl\AnalyzInCirc_Controler.vhd","FALSE","FALSE"
 ENDLIST
-LIST "AnalyzInCirc_Top::work","","FALSE","FALSE"
-ENDLIST
 LIST "AnalyzInCirc_Top::work","hdl\AnalyzInCirc_Top.vhd","FALSE","FALSE"
 SUBBLOCK "AnalyzInCirc_Controler::work","hdl\AnalyzInCirc_Controler.vhd","FALSE","FALSE"
 SUBBLOCK "AnalyzInCirc_FIFO::work","hdl\AnalyzInCirc_FIFO.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Answer_Encoder::work","hdl\Answer_Encoder.vhd","FALSE","FALSE"
 ENDLIST
-LIST "Clock_Controller::work","","FALSE","FALSE"
-ENDLIST
 LIST "Clock_Controller::work","hdl\Clock_Controller.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.cxf","TRUE","FALSE"
-SUBBLOCK "Clock_Controller::work","","FALSE","FALSE"
-SUBBLOCK "Clock_Switch::work","","FALSE","FALSE"
+SUBBLOCK "Clock_Controller::work","hdl\Clock_Controller.vhd","FALSE","FALSE"
+SUBBLOCK "Clock_Switch::work","hdl\Clock_Switch.vhd","FALSE","FALSE"
 SUBBLOCK "CORERESET_PF_C0::work","component\work\CORERESET_PF_C0\CORERESET_PF_C0.v","TRUE","FALSE"
 SUBBLOCK "PF_CCC_C0::work","component\work\PF_CCC_C0\PF_CCC_C0.v","TRUE","FALSE"
 SUBBLOCK "PF_CCC_C3::work","component\work\PF_CCC_C3\PF_CCC_C3.v","TRUE","FALSE"
+SUBBLOCK "PF_CCC_C7::work","component\work\PF_CCC_C7\PF_CCC_C7.cxf","TRUE","FALSE"
 SUBBLOCK "PF_CLK_DIV_C2::work","component\work\PF_CLK_DIV_C2\PF_CLK_DIV_C2.v","TRUE","FALSE"
 SUBBLOCK "PF_INIT_MONITOR_C0::work","component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0.v","TRUE","FALSE"
 SUBBLOCK "PF_OSC_C0::work","component\work\PF_OSC_C0\PF_OSC_C0.v","TRUE","FALSE"
 SUBBLOCK "Synchronizer::work","","FALSE","FALSE"
-ENDLIST
-LIST "Clock_Switch::work","","FALSE","FALSE"
 ENDLIST
 LIST "Clock_Switch::work","hdl\Clock_Switch.vhd","FALSE","FALSE"
 SUBBLOCK "Synchronizer::work","hdl\Synchronizer.vhd","FALSE","FALSE"
@@ -9629,6 +9656,8 @@ SUBBLOCK "PF_CCC_C6_PF_CCC_C6_0_PF_CCC::work","component\work\PF_CCC_C6\PF_CCC_C
 ENDLIST
 LIST "PF_CCC_C6_PF_CCC_C6_0_PF_CCC::work","component\work\PF_CCC_C6\PF_CCC_C6_0\PF_CCC_C6_PF_CCC_C6_0_PF_CCC.v","FALSE","FALSE"
 ENDLIST
+LIST "PF_CCC_C7::work","component\work\PF_CCC_C7\PF_CCC_C7.cxf","TRUE","FALSE"
+ENDLIST
 LIST "PF_CLK_DIV_C0::work","component\work\PF_CLK_DIV_C0\PF_CLK_DIV_C0.v","TRUE","FALSE"
 SUBBLOCK "PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV::work","component\work\PF_CLK_DIV_C0\PF_CLK_DIV_C0_0\PF_CLK_DIV_C0_PF_CLK_DIV_C0_0_PF_CLK_DIV.v","FALSE","FALSE"
 ENDLIST
@@ -9874,7 +9903,7 @@ ENDLIST
 LIST "Test_Generator_XCVR::work","hdl\Test_Generator_XCVR.vhd","FALSE","FALSE"
 ENDLIST
 LIST "Top::work","component\work\Top\Top.cxf","TRUE","FALSE"
-SUBBLOCK "AnalyzInCirc_Top::work","","FALSE","FALSE"
+SUBBLOCK "AnalyzInCirc_Top::work","hdl\AnalyzInCirc_Top.vhd","FALSE","FALSE"
 SUBBLOCK "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.cxf","TRUE","FALSE"
 SUBBLOCK "Communication::work","component\work\Communication\Communication.v","TRUE","FALSE"
 SUBBLOCK "Controler::work","component\work\Controler\Controler.v","TRUE","FALSE"
