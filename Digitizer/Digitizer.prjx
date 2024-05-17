@@ -2959,6 +2959,11 @@ SIZE="6100"
 PARENT="<project>\component\work\Event_Info_RAM_Block\Event_Info_RAM_Block.cxf"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\component\work\EXT_Signals\EXT_Signals.cxf,actgen_cxf"
+STATE="utd"
+TIME="1715946378"
+SIZE="3071"
+ENDFILE
 VALUE "<project>\component\work\fifo_for_test\fifo_for_test.cxf,actgen_cxf"
 STATE="utd"
 TIME="1715681170"
@@ -4123,8 +4128,15 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715945511"
-SIZE="17579"
+TIME="1715945706"
+SIZE="17856"
+ENDFILE
+VALUE "<project>\component\work\Top\Top.v,hdl"
+STATE="utd"
+TIME="1715945705"
+SIZE="33139"
+PARENT="<project>\component\work\Top\Top.cxf"
+IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Transceiver_Main\Transceiver_Main.cxf,actgen_cxf"
 STATE="utd"
@@ -6609,7 +6621,7 @@ VALUE "<project>\component\work\PF_XCVR_ERM_C9\I_XCVR\PF_XCVR_ERM_C9_I_XCVR_PF_X
 ENDLIST
 ENDLIST
 LIST "Top::work"
-FILE "<project>\component\work\Top\Top.cxf,actgen_cxf"
+FILE "<project>\component\work\Top\Top.v,hdl"
 LIST SynthesisConstraints
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 VALUE "<project>\constraint\user1.sdc,sdc"
@@ -8859,8 +8871,6 @@ LIST "Alignment_Fifo::work","","FALSE","FALSE"
 ENDLIST
 LIST "AnalyzInCirc_Controler::work","hdl\AnalyzInCirc_Controler.vhd","FALSE","FALSE"
 ENDLIST
-LIST "AnalyzInCirc_Top::work","","FALSE","FALSE"
-ENDLIST
 LIST "AnalyzInCirc_Top::work","hdl\AnalyzInCirc_Top.vhd","FALSE","FALSE"
 SUBBLOCK "AnalyzInCirc_Controler::work","hdl\AnalyzInCirc_Controler.vhd","FALSE","FALSE"
 SUBBLOCK "AnalyzInCirc_FIFO::work","hdl\AnalyzInCirc_FIFO.vhd","FALSE","FALSE"
@@ -9582,9 +9592,18 @@ LIST "Event_Info_RAM_Block::work","component\work\Event_Info_RAM_Block\Event_Inf
 SUBBLOCK "PF_DPSRAM_C7::work","component\work\PF_DPSRAM_C7\PF_DPSRAM_C7.v","TRUE","FALSE"
 SUBBLOCK "PF_DPSRAM_C8_Event_Status::work","component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_Status.v","TRUE","FALSE"
 ENDLIST
+LIST "EXT_Signals::work","component\work\EXT_Signals\EXT_Signals.cxf","TRUE","FALSE"
+SUBBLOCK "EXT_Signals_Controller::work","","FALSE","FALSE"
+SUBBLOCK "EXT_Signals_OutputSwitch::work","","FALSE","FALSE"
+SUBBLOCK "PF_IO_C0::work","component\work\PF_IO_C0\PF_IO_C0.v","TRUE","FALSE"
+ENDLIST
+LIST "EXT_Signals_Controller::work","","FALSE","FALSE"
+ENDLIST
 LIST "EXT_Signals_Controller::work","hdl\EXT_Signals_Controller.vhd","FALSE","FALSE"
 ENDLIST
 LIST "EXT_Signals_InputSwitch::work","hdl\EXT_Signals_InputSwitch.vhd","FALSE","FALSE"
+ENDLIST
+LIST "EXT_Signals_OutputSwitch::work","","FALSE","FALSE"
 ENDLIST
 LIST "EXT_Signals_OutputSwitch::work","hdl\EXT_Signals_OutputSwitch.vhd","FALSE","FALSE"
 ENDLIST
@@ -9908,14 +9927,14 @@ LIST "Test_Generator_XCVR::work","","FALSE","FALSE"
 ENDLIST
 LIST "Test_Generator_XCVR::work","hdl\Test_Generator_XCVR.vhd","FALSE","FALSE"
 ENDLIST
-LIST "Top::work","component\work\Top\Top.cxf","TRUE","FALSE"
-SUBBLOCK "AnalyzInCirc_Top::work","","FALSE","FALSE"
+LIST "Top::work","component\work\Top\Top.v","TRUE","FALSE"
+SUBBLOCK "AnalyzInCirc_Top::work","hdl\AnalyzInCirc_Top.vhd","FALSE","FALSE"
 SUBBLOCK "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.v","TRUE","FALSE"
 SUBBLOCK "Communication::work","component\work\Communication\Communication.v","TRUE","FALSE"
 SUBBLOCK "Controler::work","component\work\Controler\Controler.v","TRUE","FALSE"
 SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
 SUBBLOCK "PF_IO_C0::work","component\work\PF_IO_C0\PF_IO_C0.v","TRUE","FALSE"
-SUBBLOCK "Synchronizer::work","","FALSE","FALSE"
+SUBBLOCK "Synchronizer::work","hdl\Synchronizer.vhd","FALSE","FALSE"
 SUBBLOCK "Transceiver_Main::work","component\work\Transceiver_Main\Transceiver_Main.v","TRUE","FALSE"
 ENDLIST
 LIST "Transceiver_LanesConnection::work","hdl\Transceiver_LanesConnection.vhd","FALSE","FALSE"
