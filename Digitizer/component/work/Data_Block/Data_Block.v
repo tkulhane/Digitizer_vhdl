@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 10 14:15:38 2024
+// Created by SmartDesign Fri May 17 11:21:00 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,6 +8,8 @@
 // Data_Block
 module Data_Block(
     // Inputs
+    CTRL_Clock,
+    CTRL_Reset_N,
     C_addr_frame,
     C_enable_cmd,
     C_write_data_frame,
@@ -42,6 +44,8 @@ module Data_Block(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input         CTRL_Clock;
+input         CTRL_Reset_N;
 input  [7:0]  C_addr_frame;
 input         C_enable_cmd;
 input  [15:0] C_write_data_frame;
@@ -98,6 +102,8 @@ wire          Communication_Data_Req_net_0;
 wire          Communication_Empty_net_0;
 wire          Communication_Read;
 wire          Control_Test_Generator_Enable_net_0;
+wire          CTRL_Clock;
+wire          CTRL_Reset_N;
 wire   [7:0]  CtrlBus_HandShake_0_PRH_addr_frame;
 wire          CtrlBus_HandShake_0_PRH_enable_cmd;
 wire   [15:0] CtrlBus_HandShake_0_PRH_write_data_frame;
@@ -160,9 +166,9 @@ wire          Diag_0_net_1;
 wire          Diag_1_0_net_0;
 wire          Communication_Data_Req_net_1;
 wire          Control_Test_Generator_Enable_net_1;
+wire          ACQ_RunOut_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [31:0] Communication_Data_Frame_net_1;
-wire          ACQ_RunOut_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -207,12 +213,12 @@ assign Communication_Data_Req_net_1        = Communication_Data_Req_net_0;
 assign Communication_Data_Req              = Communication_Data_Req_net_1;
 assign Control_Test_Generator_Enable_net_1 = Control_Test_Generator_Enable_net_0;
 assign Control_Test_Generator_Enable       = Control_Test_Generator_Enable_net_1;
+assign ACQ_RunOut_net_1                    = ACQ_RunOut_net_0;
+assign ACQ_RunOut                          = ACQ_RunOut_net_1;
 assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
-assign ACQ_RunOut_net_1                    = ACQ_RunOut_net_0;
-assign ACQ_RunOut                          = ACQ_RunOut_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -268,21 +274,21 @@ CtrlBus_HandShake #(
         .g_WidthDATA ( 16 ) )
 CtrlBus_HandShake_0(
         // Inputs
-        .CTRL_Clock            ( Clock ),
-        .CTRL_Reset_N          ( Fifo_RESET_N ),
+        .CTRL_Clock            ( CTRL_Clock ),
+        .CTRL_Reset_N          ( CTRL_Reset_N ),
         .PRH_Clock             ( Clock ),
         .PRH_Reset_N           ( Fifo_RESET_N ),
         .CTRL_enable_cmd       ( C_enable_cmd ),
         .CTRL_write_read       ( C_write_read ),
+        .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
         .CTRL_addr_frame       ( C_addr_frame ),
         .CTRL_write_data_frame ( C_write_data_frame ),
-        .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
         .PRH_read_data_frame   ( Trigger_Top_Part_0_C_read_data_frame ),
         // Outputs
         .CTRL_busy             ( C_busy_net_0 ),
-        .CTRL_read_data_frame  ( C_read_data_frame_net_0 ),
         .PRH_enable_cmd        ( CtrlBus_HandShake_0_PRH_enable_cmd ),
         .PRH_write_read        ( CtrlBus_HandShake_0_PRH_write_read ),
+        .CTRL_read_data_frame  ( C_read_data_frame_net_0 ),
         .PRH_addr_frame        ( CtrlBus_HandShake_0_PRH_addr_frame ),
         .PRH_write_data_frame  ( CtrlBus_HandShake_0_PRH_write_data_frame ) 
         );
@@ -446,10 +452,10 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
         .ALL_FIFO_Write                ( Trigger_Top_Part_0_ALL_FIFO_Write ),
         .EMPTY                         ( Trigger_Top_Part_0_EMPTY ),
+        .ACQ_RunOut                    ( ACQ_RunOut_net_0 ),
         .C_read_data_frame             ( Trigger_Top_Part_0_C_read_data_frame ),
         .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
-        .Q                             ( Trigger_Top_Part_0_Q ),
-        .ACQ_RunOut                    ( ACQ_RunOut_net_0 ) 
+        .Q                             ( Trigger_Top_Part_0_Q ) 
         );
 
 
