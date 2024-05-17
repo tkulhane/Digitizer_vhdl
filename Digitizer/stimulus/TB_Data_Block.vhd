@@ -31,10 +31,14 @@ end TB_Data_Block;
 
 architecture behavioral of TB_Data_Block is
 
-    constant SYSCLK_PERIOD : time := 10 ns; -- 100MHZ
+    constant SYSCLK_PERIOD : time := 5 ns; -- 100MHZ
+    constant LogicClk_PERIOD : time := 10 ns; -- 100MHZ
 
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
+
+    signal LogicClk : std_logic := '0';
+    signal NLogicReset : std_logic := '0';
 
 ------------------------------------------------------------------------------------------------------------
 --Signals Declaration
@@ -88,13 +92,17 @@ architecture behavioral of TB_Data_Block is
         -- ports
         port( 
             -- Inputs
+            CTRL_Reset_N : in std_logic;
+            CTRL_Clock : in std_logic;
+            Reset_N_Logic : in std_logic;
+            Clock_Logic : in std_logic;
             C_enable_cmd : in std_logic;
             C_write_read : in std_logic;
             Communication_Read : in std_logic;
             Communication_Builder_RUN : in std_logic;
             Fifo_RESET_N : in std_logic;
-            Reset_N : in std_logic;
-            Clock : in std_logic;
+            --Reset_N : in std_logic;
+            --Clock : in std_logic;
             C_addr_frame : in std_logic_vector(7 downto 0);
             C_write_data_frame : in std_logic_vector(15 downto 0);
             Input_Data_0_00 : in std_logic_vector(11 downto 0);
@@ -253,19 +261,24 @@ begin
 
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
+    LogicClk <= not LogicClk after (LogicClk_PERIOD / 2.0 );
 
     -- Instantiate Unit Under Test:  Data_Block
     Data_Block_0 : Data_Block
         -- port map
         port map( 
             -- Inputs
+            CTRL_Reset_N => NSYSRESET,
+            CTRL_Clock => SYSCLK,
+            Reset_N_Logic => NLogicReset,
+            Clock_Logic => LogicClk,
             C_enable_cmd => CTRL_enable_cmd,
             C_write_read => CTRL_write_read,
             Communication_Read => Communication_Read,
             Communication_Builder_RUN => Communication_Builder_RUN,
             Fifo_RESET_N => NSYSRESET,
-            Reset_N => NSYSRESET,
-            Clock => SYSCLK,
+            --Reset_N => NSYSRESET,
+            --Clock => SYSCLK,
             C_addr_frame => CTRL_addr_frame,
             C_write_data_frame => CTRL_write_data_frame,
             Input_Data_0_00 => Input_Data_0_00,
@@ -358,10 +371,17 @@ begin
 
         file_open(output_buf_raw, "test_output_file_raw.txt",  write_mode);
 
+        NLogicReset <= '0';
 
 
         wait until NSYSRESET'event and NSYSRESET = '1';
         wait for 100 ns;
+        
+        wait until LogicClk'event and LogicClk = '1';
+        NLogicReset <= '1';
+        wait for 100 ns;
+        
+        
         wait until SYSCLK'event and SYSCLK = '1';
 
         Communication_Builder_RUN <= '1';
@@ -370,6 +390,19 @@ begin
         Control_Fifo_Data <= (others => '0');
         Control_Fifo_Data(31) <= '1';
         Control_Fifo_Empty <= '1';
+
+
+        NLogicReset <= '0';
+        wait for 100 ns;
+
+
+        --read threshold
+        SEND_CMD( CMD_TRG_THRESHOLD, X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+
+        wait for 100 ns;
+        NLogicReset <= '1';
+        
+
 
         --read threshold
         SEND_CMD( CMD_TRG_THRESHOLD, X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);

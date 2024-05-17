@@ -2937,13 +2937,13 @@ SIZE="7506"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715937660"
+TIME="1715947137"
 SIZE="8341"
 ENDFILE
 VALUE "<project>\component\work\Data_Block\Data_Block.v,hdl"
 STATE="utd"
-TIME="1715937660"
-SIZE="22125"
+TIME="1715947137"
+SIZE="22175"
 PARENT="<project>\component\work\Data_Block\Data_Block.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -2961,8 +2961,15 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\EXT_Signals\EXT_Signals.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715946378"
-SIZE="3071"
+TIME="1715948008"
+SIZE="5115"
+ENDFILE
+VALUE "<project>\component\work\EXT_Signals\EXT_Signals.v,hdl"
+STATE="utd"
+TIME="1715948007"
+SIZE="10774"
+PARENT="<project>\component\work\EXT_Signals\EXT_Signals.cxf"
+IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\fifo_for_test\fifo_for_test.cxf,actgen_cxf"
 STATE="utd"
@@ -4128,15 +4135,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 STATE="utd"
-TIME="1715945706"
-SIZE="17856"
-ENDFILE
-VALUE "<project>\component\work\Top\Top.v,hdl"
-STATE="utd"
-TIME="1715945705"
-SIZE="33139"
-PARENT="<project>\component\work\Top\Top.cxf"
-IS_READONLY="TRUE"
+TIME="1715948039"
+SIZE="19048"
 ENDFILE
 VALUE "<project>\component\work\Transceiver_Main\Transceiver_Main.cxf,actgen_cxf"
 STATE="utd"
@@ -4335,8 +4335,8 @@ SIZE="5527"
 ENDFILE
 VALUE "<project>\hdl\CtrlBus_HandShake.vhd,hdl"
 STATE="utd"
-TIME="1715937152"
-SIZE="7698"
+TIME="1715947102"
+SIZE="9751"
 ENDFILE
 VALUE "<project>\hdl\DataRamManage.vhd,hdl"
 STATE="utd"
@@ -4350,8 +4350,8 @@ SIZE="1117"
 ENDFILE
 VALUE "<project>\hdl\EXT_Signals_Controller.vhd,hdl"
 STATE="utd"
-TIME="1715935954"
-SIZE="10769"
+TIME="1715949012"
+SIZE="11494"
 ENDFILE
 VALUE "<project>\hdl\EXT_Signals_InputSwitch.vhd,hdl"
 STATE="utd"
@@ -4360,8 +4360,8 @@ SIZE="3802"
 ENDFILE
 VALUE "<project>\hdl\EXT_Signals_OutputSwitch.vhd,hdl"
 STATE="utd"
-TIME="1715935954"
-SIZE="2525"
+TIME="1715949382"
+SIZE="2648"
 ENDFILE
 VALUE "<project>\hdl\FIFOs_Reader.vhd,hdl"
 STATE="utd"
@@ -4560,6 +4560,11 @@ STATE="utd"
 TIME="1715807525"
 SIZE="79836"
 ENDFILE
+VALUE "<project>\simulation\TB_EXT_Signals_presynth_simulation.log,log"
+STATE="utd"
+TIME="1715948929"
+SIZE="20"
+ENDFILE
 VALUE "<project>\simulation\TB_Transceiver_2_presynth_simulation.log,log"
 STATE="utd"
 TIME="1715681171"
@@ -4611,6 +4616,11 @@ STATE="utd"
 TIME="1715681172"
 SIZE="3131"
 ENDFILE
+VALUE "<project>\simulation\wave16.do,do"
+STATE="utd"
+TIME="1715949431"
+SIZE="4167"
+ENDFILE
 VALUE "<project>\simulation\wave2.do,do"
 STATE="utd"
 TIME="1715681172"
@@ -4636,6 +4646,11 @@ STATE="utd"
 TIME="1715681173"
 SIZE="5105"
 ENDFILE
+VALUE "<project>\stimulus\TB_ClockReset.vhd,tb_hdl"
+STATE="utd"
+TIME="1715948160"
+SIZE="8591"
+ENDFILE
 VALUE "<project>\stimulus\TB_DataBlockWithFifo.vhd,tb_hdl"
 STATE="utd"
 TIME="1715681173"
@@ -4658,8 +4673,13 @@ SIZE="4921"
 ENDFILE
 VALUE "<project>\stimulus\TB_Data_Block.vhd,tb_hdl"
 STATE="utd"
-TIME="1715937152"
-SIZE="21279"
+TIME="1715948160"
+SIZE="22287"
+ENDFILE
+VALUE "<project>\stimulus\TB_EXT_Signals.vhd,tb_hdl"
+STATE="utd"
+TIME="1715949412"
+SIZE="7316"
 ENDFILE
 VALUE "<project>\stimulus\TB_Transceiver.vhd,tb_hdl"
 STATE="utd"
@@ -6621,7 +6641,7 @@ VALUE "<project>\component\work\PF_XCVR_ERM_C9\I_XCVR\PF_XCVR_ERM_C9_I_XCVR_PF_X
 ENDLIST
 ENDLIST
 LIST "Top::work"
-FILE "<project>\component\work\Top\Top.v,hdl"
+FILE "<project>\component\work\Top\Top.cxf,actgen_cxf"
 LIST SynthesisConstraints
 VALUE "<project>\constraint\Top_derived_constraints.sdc,sdc"
 VALUE "<project>\constraint\user1.sdc,sdc"
@@ -7389,7 +7409,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\ModelSimPro\win32acoem\modelsim.exe"
-PARAM=""
+PARAM=" -l TB_EXT_Signals_presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -8861,8 +8881,15 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+HDL;hdl\Answer_Encoder.vhd;0
+SmartDesign;Clock_Reset;0
+SmartDesign;Controler;0
+SmartDesign;Data_Block;0
+SmartDesign;EXT_Signals;0
+SmartDesign;Top;0
+HDL;stimulus\TB_EXT_Signals.vhd;0
+SmartDesign;Transceiver_Main;0
+ACTIVEVIEW;EXT_Signals
 ENDLIST
 LIST ModuleSubBlockList
 LIST "ADI_SPI::work","hdl\ADI_SPI.vhd","FALSE","FALSE"
@@ -8870,6 +8897,8 @@ ENDLIST
 LIST "Alignment_Fifo::work","","FALSE","FALSE"
 ENDLIST
 LIST "AnalyzInCirc_Controler::work","hdl\AnalyzInCirc_Controler.vhd","FALSE","FALSE"
+ENDLIST
+LIST "AnalyzInCirc_Top::work","","FALSE","FALSE"
 ENDLIST
 LIST "AnalyzInCirc_Top::work","hdl\AnalyzInCirc_Top.vhd","FALSE","FALSE"
 SUBBLOCK "AnalyzInCirc_Controler::work","hdl\AnalyzInCirc_Controler.vhd","FALSE","FALSE"
@@ -9592,18 +9621,14 @@ LIST "Event_Info_RAM_Block::work","component\work\Event_Info_RAM_Block\Event_Inf
 SUBBLOCK "PF_DPSRAM_C7::work","component\work\PF_DPSRAM_C7\PF_DPSRAM_C7.v","TRUE","FALSE"
 SUBBLOCK "PF_DPSRAM_C8_Event_Status::work","component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_Status.v","TRUE","FALSE"
 ENDLIST
-LIST "EXT_Signals::work","component\work\EXT_Signals\EXT_Signals.cxf","TRUE","FALSE"
-SUBBLOCK "EXT_Signals_Controller::work","","FALSE","FALSE"
-SUBBLOCK "EXT_Signals_OutputSwitch::work","","FALSE","FALSE"
+LIST "EXT_Signals::work","component\work\EXT_Signals\EXT_Signals.v","TRUE","FALSE"
+SUBBLOCK "EXT_Signals_Controller::work","hdl\EXT_Signals_Controller.vhd","FALSE","FALSE"
+SUBBLOCK "EXT_Signals_OutputSwitch::work","hdl\EXT_Signals_OutputSwitch.vhd","FALSE","FALSE"
 SUBBLOCK "PF_IO_C0::work","component\work\PF_IO_C0\PF_IO_C0.v","TRUE","FALSE"
-ENDLIST
-LIST "EXT_Signals_Controller::work","","FALSE","FALSE"
 ENDLIST
 LIST "EXT_Signals_Controller::work","hdl\EXT_Signals_Controller.vhd","FALSE","FALSE"
 ENDLIST
 LIST "EXT_Signals_InputSwitch::work","hdl\EXT_Signals_InputSwitch.vhd","FALSE","FALSE"
-ENDLIST
-LIST "EXT_Signals_OutputSwitch::work","","FALSE","FALSE"
 ENDLIST
 LIST "EXT_Signals_OutputSwitch::work","hdl\EXT_Signals_OutputSwitch.vhd","FALSE","FALSE"
 ENDLIST
@@ -9927,14 +9952,14 @@ LIST "Test_Generator_XCVR::work","","FALSE","FALSE"
 ENDLIST
 LIST "Test_Generator_XCVR::work","hdl\Test_Generator_XCVR.vhd","FALSE","FALSE"
 ENDLIST
-LIST "Top::work","component\work\Top\Top.v","TRUE","FALSE"
-SUBBLOCK "AnalyzInCirc_Top::work","hdl\AnalyzInCirc_Top.vhd","FALSE","FALSE"
+LIST "Top::work","component\work\Top\Top.cxf","TRUE","FALSE"
+SUBBLOCK "AnalyzInCirc_Top::work","","FALSE","FALSE"
 SUBBLOCK "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.v","TRUE","FALSE"
 SUBBLOCK "Communication::work","component\work\Communication\Communication.v","TRUE","FALSE"
 SUBBLOCK "Controler::work","component\work\Controler\Controler.v","TRUE","FALSE"
 SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
-SUBBLOCK "PF_IO_C0::work","component\work\PF_IO_C0\PF_IO_C0.v","TRUE","FALSE"
-SUBBLOCK "Synchronizer::work","hdl\Synchronizer.vhd","FALSE","FALSE"
+SUBBLOCK "EXT_Signals::work","component\work\EXT_Signals\EXT_Signals.v","TRUE","FALSE"
+SUBBLOCK "Synchronizer::work","","FALSE","FALSE"
 SUBBLOCK "Transceiver_Main::work","component\work\Transceiver_Main\Transceiver_Main.v","TRUE","FALSE"
 ENDLIST
 LIST "Transceiver_LanesConnection::work","hdl\Transceiver_LanesConnection.vhd","FALSE","FALSE"
@@ -10085,6 +10110,9 @@ ENDLIST
 LIST "SRAM_test::work","stimulus\SRAM_test.vhd","FALSE","TRUE"
 SUBBLOCK "SRAM::work","component\work\SRAM\SRAM.v","TRUE","FALSE"
 ENDLIST
+LIST "TB_ClockReset::work","stimulus\TB_ClockReset.vhd","FALSE","TRUE"
+SUBBLOCK "Clock_Reset::work","component\work\Clock_Reset\Clock_Reset.v","TRUE","FALSE"
+ENDLIST
 LIST "TB_Data_Block::work","stimulus\TB_Data_Block.vhd","FALSE","TRUE"
 SUBBLOCK "Communication_TX_Arbiter2::work","hdl\Communication_TX_Arbiter2.vhd","FALSE","FALSE"
 SUBBLOCK "Data_Block::work","component\work\Data_Block\Data_Block.v","TRUE","FALSE"
@@ -10104,6 +10132,9 @@ SUBBLOCK "fifo_for_test::work","component\work\fifo_for_test\fifo_for_test.v","T
 ENDLIST
 LIST "TB_DataSource_Transciever::work","stimulus\TB_DataSource_Transciever.vhd","FALSE","TRUE"
 SUBBLOCK "DataSource_Transcievers::work","","FALSE","FALSE"
+ENDLIST
+LIST "TB_EXT_Signals::work","stimulus\TB_EXT_Signals.vhd","FALSE","TRUE"
+SUBBLOCK "EXT_Signals::work","component\work\EXT_Signals\EXT_Signals.v","TRUE","FALSE"
 ENDLIST
 LIST "TB_Transceiver::work","stimulus\TB_Transceiver.vhd","FALSE","TRUE"
 SUBBLOCK "Transceiver::work","","FALSE","FALSE"

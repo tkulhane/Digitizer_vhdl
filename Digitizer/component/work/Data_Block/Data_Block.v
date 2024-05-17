@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 17 11:21:00 2024
+// Created by SmartDesign Fri May 17 13:58:57 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -280,15 +280,16 @@ CtrlBus_HandShake_0(
         .PRH_Reset_N           ( Fifo_RESET_N ),
         .CTRL_enable_cmd       ( C_enable_cmd ),
         .CTRL_write_read       ( C_write_read ),
-        .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
         .CTRL_addr_frame       ( C_addr_frame ),
         .CTRL_write_data_frame ( C_write_data_frame ),
+        .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
         .PRH_read_data_frame   ( Trigger_Top_Part_0_C_read_data_frame ),
+        .PRH_In_Reset          ( Fifo_RESET_N ),
         // Outputs
         .CTRL_busy             ( C_busy_net_0 ),
+        .CTRL_read_data_frame  ( C_read_data_frame_net_0 ),
         .PRH_enable_cmd        ( CtrlBus_HandShake_0_PRH_enable_cmd ),
         .PRH_write_read        ( CtrlBus_HandShake_0_PRH_write_read ),
-        .CTRL_read_data_frame  ( C_read_data_frame_net_0 ),
         .PRH_addr_frame        ( CtrlBus_HandShake_0_PRH_addr_frame ),
         .PRH_write_data_frame  ( CtrlBus_HandShake_0_PRH_write_data_frame ) 
         );

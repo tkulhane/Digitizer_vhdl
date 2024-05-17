@@ -22,6 +22,7 @@ entity EXT_Signals_Controller is
         write_data_frame : in std_logic_vector(15 downto 0);
         read_data_frame : out std_logic_vector(15 downto 0);
 
+        EXT_OutputEnable : out std_logic_vector(g_NumOfSelectedOutputs - 1 downto 0);
         EXT_SelectOutput : out std_logic_vector(g_SelectNumWidth * g_NumOfSelectedOutputs - 1 downto 0);
         EXT_SelectInput : out std_logic_vector(g_SelectNumWidth * g_NumOfSelectedInputs - 1 downto 0)
 
@@ -39,8 +40,9 @@ architecture rtl of EXT_Signals_Controller is
 --constant
 ------------------------------------------------------------------------------------------------------------ 
     
-    constant CMD_EXT_SIGNALS_ADDR_BASE_INPUTS_SEL       : natural := 10;
-    constant CMD_EXT_SIGNALS_ADDR_BASE_OUTPUTS_SEL      : natural := 110;
+    constant CMD_EXT_SIGNALS_ADDR_BASE_INPUTS_SEL           : natural := 10;
+    constant CMD_EXT_SIGNALS_ADDR_BASE_OUTPUTS_SEL          : natural := 110;
+    constant CMD_EXT_SIGNALS_ADDR_BASE_OUTPUTS_ENABLE       : std_logic_vector := x"6D";
     
 
  
@@ -66,6 +68,7 @@ architecture rtl of EXT_Signals_Controller is
     signal EXT_SelectOutput_vector : type_EXT_SelectOutput_vector_array;
 
 
+    signal EXT_OutputEnable_REG : std_logic_vector(g_NumOfSelectedOutputs - 1 downto 0);
 
 
 
@@ -95,6 +98,7 @@ begin
     end generate SelectedOutputs_GEN;
 
 
+    EXT_OutputEnable <= EXT_OutputEnable_REG;
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -253,15 +257,15 @@ begin
                     end loop SelectedOutputsWriteFor;
 
                 else
-                --case(address) is
+                    case(address) is
 
-                --    when CMD_EXT_SIGNALS_SEL_CH0 =>
-                --        REG_EXT_SelectSwitch_ch0 <= write_data_frame(7 downto 0);
+                        when CMD_EXT_SIGNALS_ADDR_BASE_OUTPUTS_ENABLE =>
+                            EXT_OutputEnable_REG <= write_data_frame(g_NumOfSelectedOutputs - 1 downto 0);
 
-                --    when others =>
-                --        null;
+                        when others =>
+                            null;
 
-                --end case;
+                    end case;
 
                 end if;
 
@@ -300,6 +304,16 @@ begin
                     end loop SelectedOutputsReadFor;
 
                 else
+                    
+                    case(address) is
+
+                        when CMD_EXT_SIGNALS_ADDR_BASE_OUTPUTS_ENABLE =>
+                            read_data_frame(g_NumOfSelectedOutputs - 1 downto 0) <= EXT_OutputEnable_REG;
+
+                        when others =>
+                            null;
+
+                    end case;
 
                 --case(address) is
 

@@ -16,6 +16,7 @@ entity EXT_Signals_OutputSwitch is
         --Reset_N : in std_logic;
     
         EXT_Select : in std_logic_vector(g_SelectNumWidth * g_NumOfSelectedOutputs - 1 downto 0);
+        EXT_OutputEnable : in std_logic_vector(g_NumOfSelectedOutputs - 1 downto 0);
 
         IO_Block_D: out std_logic_vector(g_NumOfSelectedOutputs -1 downto 0);
         IO_Block_E: out std_logic_vector(g_NumOfSelectedOutputs -1 downto 0);
@@ -55,12 +56,13 @@ begin
         EXT_Select_array(i) <= to_integer(unsigned( EXT_Select( ((i*g_SelectNumWidth) + (g_SelectNumWidth-1)) downto (i*8) ) ));
     end generate SelectedArray_GEN;
 
+    IO_Block_E <= EXT_OutputEnable;
 
 
 ------------------------------------------------------------------------------------------------------------
 --switch gen
 ------------------------------------------------------------------------------------------------------------
-    SwitchGen_GEN : for i in 1 to (g_NumOfSelectedOutputs - 1) generate
+    SwitchGen_GEN : for i in 0 to (g_NumOfSelectedOutputs - 1) generate
         IO_Block_D(i) <= EXT_VectorSignals(EXT_Select_array(i));
     end generate SwitchGen_GEN;  
 

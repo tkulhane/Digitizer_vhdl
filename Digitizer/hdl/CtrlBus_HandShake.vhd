@@ -29,7 +29,9 @@ entity CtrlBus_HandShake is
         PRH_write_read : out std_logic;
         PRH_addr_frame : out std_logic_vector(g_WidthADDR - 1 downto 0);
         PRH_write_data_frame : out std_logic_vector(g_WidthDATA - 1 downto 0);
-        PRH_read_data_frame : in std_logic_vector(g_WidthDATA - 1 downto 0)
+        PRH_read_data_frame : in std_logic_vector(g_WidthDATA - 1 downto 0);
+
+        PRH_In_Reset : in std_logic
 
     );
 end CtrlBus_HandShake;
@@ -42,15 +44,17 @@ architecture rtl of CtrlBus_HandShake is
 ------------------------------------------------------------------------------------------------------------  
 
 
-    type FSM_state is (IDLE, STORE_W_DATA, WAIT_FOR_BUSY, PRH_PROCESS, STORE_R_DATA);
+    type FSM_state is (IDLE, STORE_W_DATA, WAIT_FOR_BUSY, PRH_PROCESS, STORE_R_DATA, PRH_IN_RESET_BUSY);
     signal state_reg, next_state : FSM_state;
-
+    signal fsm_timer : unsigned(9 downto 0);
 
     signal PRH_busy_sync : std_logic;
     signal PRH_enable_cmd_fsm : std_logic;
+    signal PRH_In_Reset_sync : std_logic;
 
     signal Enable_StoreDataW : std_logic;
     signal Enable_StoreDataR : std_logic;
+    signal Enable_ResetDataR : std_logic;
 
 
 ------------------------------------------------------------------------------------------------------------
@@ -105,6 +109,18 @@ begin
 		Data_Out => PRH_busy_sync
 	);
 
+------------------------------------------------------------------------------------------------------------
+--Synchronizer instance for Busy
+------------------------------------------------------------------------------------------------------------
+	inst_Synchronizer_PRH_Reset: Synchronizer 
+	port map
+	(
+		nRST => PRH_In_Reset,
+		CLK => CTRL_Clock,
+		Data_In => '1',
+		Data_Out => PRH_In_Reset_sync
+	);
+
 
 ------------------------------------------------------------------------------------------------------------
 --Store Data W
@@ -144,6 +160,9 @@ begin
             if(Enable_StoreDataR = '1') then 
                 CTRL_read_data_frame <= PRH_read_data_frame;
 
+            elsif(Enable_ResetDataR = '1') then 
+                CTRL_read_data_frame <= (others => '0');   
+
             end if;
         end if;       
 
@@ -169,8 +188,25 @@ begin
         end if;
     end process;
 
+    --fsm timer
+    process(CTRL_Reset_N, CTRL_Clock)
+    begin
+    
+        if(CTRL_Reset_N = '0') then
+            fsm_timer <= (others => '0');
+            
+        elsif(CTRL_Clock'event and CTRL_Clock = '1') then
+            if(state_reg /= next_state) then
+                fsm_timer <= (others => '0');
+            else
+                fsm_timer <= fsm_timer + 1;
+            end if;
+    
+        end if;
+    end process;
+
     --translation function
-    process(next_state, state_reg, CTRL_enable_cmd, PRH_busy_sync)
+    process(next_state, state_reg, fsm_timer, CTRL_enable_cmd, PRH_busy_sync, PRH_In_Reset_sync)
     begin
 
         next_state <= state_reg;
@@ -178,8 +214,11 @@ begin
         case state_reg is
         
             when IDLE =>
-                if(CTRL_enable_cmd = '1') then
+                if(CTRL_enable_cmd = '1' and PRH_In_Reset_sync = '1') then
                     next_state <= STORE_W_DATA;
+
+                elsif(CTRL_enable_cmd = '1' and PRH_In_Reset_sync = '0') then
+                    next_state <= PRH_IN_RESET_BUSY;
                 end if;
                 
             when STORE_W_DATA =>
@@ -198,6 +237,12 @@ begin
             when STORE_R_DATA =>
                 next_state <= IDLE;
 
+            when PRH_IN_RESET_BUSY=>
+                if(fsm_timer >= 5 -1) then
+                    next_state <= IDLE;
+                end if;
+
+
             when others =>
                 null; 
 
@@ -215,36 +260,49 @@ begin
                 Enable_StoreDataR   <= '0';
                 PRH_enable_cmd_fsm  <= '0';
                 CTRL_busy           <= '0';
+                Enable_ResetDataR   <= '0';
 
             when STORE_W_DATA =>
                 Enable_StoreDataW   <= '1';    
                 Enable_StoreDataR   <= '0';
                 PRH_enable_cmd_fsm  <= '1';
                 CTRL_busy           <= '0';
+                Enable_ResetDataR   <= '0';
 
             when WAIT_FOR_BUSY =>
                 Enable_StoreDataW   <= '0';    
                 Enable_StoreDataR   <= '0';
                 PRH_enable_cmd_fsm  <= '1';
                 CTRL_busy           <= '0';
+                Enable_ResetDataR   <= '0';
 
             when PRH_PROCESS =>
                 Enable_StoreDataW   <= '0';    
                 Enable_StoreDataR   <= '0';
                 PRH_enable_cmd_fsm  <= '0';
                 CTRL_busy           <= '1';
+                Enable_ResetDataR   <= '0';
 
             when STORE_R_DATA =>
                 Enable_StoreDataW   <= '0';    
                 Enable_StoreDataR   <= '1';
                 PRH_enable_cmd_fsm  <= '0';
                 CTRL_busy           <= '1';
+                Enable_ResetDataR   <= '0';
+
+            when PRH_IN_RESET_BUSY =>
+                Enable_StoreDataW   <= '0';    
+                Enable_StoreDataR   <= '0';
+                PRH_enable_cmd_fsm  <= '0';
+                CTRL_busy           <= '1';
+                Enable_ResetDataR   <= '1';
 
             when others =>
                 Enable_StoreDataW   <= '0';    
                 Enable_StoreDataR   <= '0';
                 PRH_enable_cmd_fsm  <= '0';
                 CTRL_busy           <= '0';
+                Enable_ResetDataR   <= '0';
 
 
         end case;
