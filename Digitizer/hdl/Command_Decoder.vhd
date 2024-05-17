@@ -29,6 +29,13 @@ entity Command_Decoder is
         RST_addr : out std_logic_vector(7 downto 0);
         RST_data : out std_logic_vector(15 downto 0);
 
+        --Clock Controler
+        CLKC_busy : in std_logic;
+        CLKC_enable_cmd : out std_logic;
+        CLKC_write_read : out std_logic;
+        CLKC_addr : out std_logic_vector(7 downto 0);
+        CLKC_data : out std_logic_vector(15 downto 0);
+
         --registers
         REG_busy : in std_logic;
         REG_enable_cmd : out std_logic;
@@ -153,7 +160,8 @@ begin
                     GPIO_busy OR
                     COMM_busy OR
                     TRNV_busy OR
-                    ANICI_busy;
+                    ANICI_busy OR
+                    CLKC_busy;
     
     --write read
     RST_write_read      <= Has_Answer;
@@ -167,6 +175,7 @@ begin
     COMM_write_read     <= Has_Answer;
     TRNV_write_read     <= Has_Answer;
     ANICI_write_read    <= Has_Answer;
+    CLKC_write_read     <= Has_Answer;
 
     --perif data routing
     RST_addr    <= cmd_data(23 downto 16);
@@ -203,10 +212,14 @@ begin
     ANICI_addr <= cmd_data(23 downto 16);
     ANICI_data <= cmd_data(15 downto 0);
 
+    CLKC_addr <= cmd_data(23 downto 16);
+    CLKC_data <= cmd_data(15 downto 0);
+
 
 
     --decoder output routing to enable cmd signals
     RST_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Reset_Controler);
+    CLKC_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_Clock_Controler);    
     REG_enable_cmd      <= data_valid_for_decode and decode_vector(PER_NUM_CONST_TestRegisters);
     ADCSPI_enable_cmd   <= data_valid_for_decode and decode_vector(PER_NUM_CONST_ADC);
     HMCSPI_enable_cmd   <= data_valid_for_decode and decode_vector(PER_NUM_CONST_HMC);
@@ -487,6 +500,17 @@ begin
 
                 when CMD_CONST_GET_Reset_Controler =>
                     decode_vector(PER_NUM_CONST_Reset_Controler) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
+                --clock controler
+                when CMD_CONST_SET_Clock_Controler =>
+                    decode_vector(PER_NUM_CONST_Clock_Controler) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
+
+                when CMD_CONST_GET_Clock_Controler =>
+                    decode_vector(PER_NUM_CONST_Clock_Controler) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
 
