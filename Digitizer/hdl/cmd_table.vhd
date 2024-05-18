@@ -40,6 +40,9 @@ package cmd_table is
     constant CMD_CONST_SET_AnalyzInCirc         : std_logic_vector(7 downto 0) := x"39";
     constant CMD_CONST_GET_AnalyzInCirc         : std_logic_vector(7 downto 0) := x"40";
 
+    constant CMD_CONST_SET_ExtSignals           : std_logic_vector(7 downto 0) := x"41";
+    constant CMD_CONST_GET_ExtSignals           : std_logic_vector(7 downto 0) := x"42";
+
 
 
     constant CMD_CONST_EVENT_HEAD               : std_logic_vector(7 downto 0) := x"7A";
@@ -51,7 +54,7 @@ package cmd_table is
 ------------------------------------------------------------------------------------------------------------
 --perif numbers constant
 ------------------------------------------------------------------------------------------------------------
-    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 12;
+    constant PER_NUM_WidthOfPeriferiesVector        : Natural := 13;
 
     constant PER_NUM_CONST_Reset_Controler          : Natural := 0;
     constant PER_NUM_CONST_Clock_Controler          : Natural := 1;
@@ -65,6 +68,7 @@ package cmd_table is
     constant PER_NUM_CONST_COMSW                    : Natural := 9;
     constant PER_NUM_CONST_TRNV                     : Natural := 10;
     constant PER_NUM_CONST_ANICI                    : Natural := 11;
+    constant PER_NUM_CONST_EXTS                     : Natural := 12;
     
     
 

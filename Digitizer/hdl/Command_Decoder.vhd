@@ -107,6 +107,13 @@ entity Command_Decoder is
         ANICI_addr : out std_logic_vector(7 downto 0);
         ANICI_data : out std_logic_vector(15 downto 0);
 
+        --EXT Signal
+        EXTS_busy : in std_logic;
+        EXTS_enable_cmd : out std_logic;
+        EXTS_write_read : out std_logic;
+        EXTS_addr : out std_logic_vector(7 downto 0);
+        EXTS_data : out std_logic_vector(15 downto 0);
+
         Diag_Valid : out std_logic
     
 
@@ -161,7 +168,8 @@ begin
                     COMM_busy OR
                     TRNV_busy OR
                     ANICI_busy OR
-                    CLKC_busy;
+                    CLKC_busy OR
+                    EXTS_busy;
     
     --write read
     RST_write_read      <= Has_Answer;
@@ -176,6 +184,7 @@ begin
     TRNV_write_read     <= Has_Answer;
     ANICI_write_read    <= Has_Answer;
     CLKC_write_read     <= Has_Answer;
+    EXTS_write_read     <= Has_Answer;
 
     --perif data routing
     RST_addr    <= cmd_data(23 downto 16);
@@ -215,6 +224,9 @@ begin
     CLKC_addr <= cmd_data(23 downto 16);
     CLKC_data <= cmd_data(15 downto 0);
 
+    EXTS_addr <= cmd_data(23 downto 16);
+    EXTS_data <= cmd_data(15 downto 0);
+
 
 
     --decoder output routing to enable cmd signals
@@ -234,6 +246,8 @@ begin
     TRNV_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_TRNV);
     
     ANICI_enable_cmd    <= data_valid_for_decode and decode_vector(PER_NUM_CONST_ANICI);
+
+    EXTS_enable_cmd     <= data_valid_for_decode and decode_vector(PER_NUM_CONST_EXTS);
 
 ------------------------------------------------------------------------------------------------------------
 --FSM decoder ride
@@ -624,6 +638,18 @@ begin
                     decode_vector(PER_NUM_CONST_ANICI) <= '1';
                     Has_Answer          <= '1';
                     Not_Decode_Value    <= '0';
+
+                --EXT Signal
+                when CMD_CONST_SET_ExtSignals =>
+                    decode_vector(PER_NUM_CONST_EXTS) <= '1';
+                    Has_Answer          <= '0';
+                    Not_Decode_Value    <= '0';
+                    
+                when CMD_CONST_GET_ExtSignals =>
+                    decode_vector(PER_NUM_CONST_EXTS) <= '1';
+                    Has_Answer          <= '1';
+                    Not_Decode_Value    <= '0';
+
 
 
                 when others =>

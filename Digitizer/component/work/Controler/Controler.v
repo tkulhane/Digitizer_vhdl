@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 17 11:17:36 2024
+// Created by SmartDesign Sat May 18 12:48:59 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -26,6 +26,8 @@ module Controler(
     COMM_busy,
     COMM_rx_data,
     Clock,
+    EXTS_busy,
+    EXTS_rx_data,
     HMC_GPIO_0,
     HMC_GPIO_1,
     LANE_VAL,
@@ -61,6 +63,10 @@ module Controler(
     COMM_data,
     COMM_enable_cmd,
     COMM_write_read,
+    EXTS_addr,
+    EXTS_data,
+    EXTS_enable_cmd,
+    EXTS_write_read,
     EXT_ADC_Reset_N,
     EXT_HMC_Reset_N,
     EXT_LMX1_Reset_N,
@@ -118,6 +124,8 @@ input  [39:0] CMD_Fifo_Read_Data;
 input         COMM_busy;
 input  [15:0] COMM_rx_data;
 input         Clock;
+input         EXTS_busy;
+input  [15:0] EXTS_rx_data;
 input         HMC_GPIO_0;
 input         HMC_GPIO_1;
 input         LANE_VAL;
@@ -155,6 +163,10 @@ output [3:0]  COMM_comm_number;
 output [15:0] COMM_data;
 output        COMM_enable_cmd;
 output        COMM_write_read;
+output [7:0]  EXTS_addr;
+output [15:0] EXTS_data;
+output        EXTS_enable_cmd;
+output        EXTS_write_read;
 output        EXT_ADC_Reset_N;
 output        EXT_HMC_Reset_N;
 output        EXT_LMX1_Reset_N;
@@ -273,6 +285,12 @@ wire           EXT_ADC_Reset_N_net_0;
 wire           EXT_HMC_Reset_N_net_0;
 wire           EXT_LMX1_Reset_N_net_0;
 wire           EXT_LMX2_Reset_N_net_0;
+wire   [7:0]   EXTS_addr_net_0;
+wire           EXTS_busy;
+wire   [15:0]  EXTS_data_net_0;
+wire           EXTS_enable_cmd_net_0;
+wire   [15:0]  EXTS_rx_data;
+wire           EXTS_write_read_net_0;
 wire   [12:12] GPIO_0_net_0;
 wire   [13:13] GPIO_1_net_0;
 wire           gpio_controler_0_busy;
@@ -363,6 +381,8 @@ wire           TRNV_write_read_net_1;
 wire           TRNV_enable_cmd_net_1;
 wire           ANICI_write_read_net_1;
 wire           ANICI_enable_cmd_net_1;
+wire           CLKC_write_read_net_1;
+wire           CLKC_enable_cmd_net_1;
 wire   [7:0]   TRG_addr_net_1;
 wire   [15:0]  TRG_data_net_1;
 wire   [39:0]  ANW_Fifo_Write_Data_net_1;
@@ -373,10 +393,12 @@ wire   [7:0]   TRNV_addr_net_1;
 wire   [15:0]  TRNV_data_net_1;
 wire   [7:0]   ANICI_addr_net_1;
 wire   [15:0]  ANICI_data_net_1;
-wire           CLKC_write_read_net_1;
 wire   [7:0]   CLKC_addr_net_1;
 wire   [15:0]  CLKC_data_net_1;
-wire           CLKC_enable_cmd_net_1;
+wire           EXTS_write_read_net_1;
+wire   [7:0]   EXTS_addr_net_1;
+wire   [15:0]  EXTS_data_net_1;
+wire           EXTS_enable_cmd_net_1;
 wire   [10:10] Outputs_slice_0;
 wire   [11:11] Outputs_slice_1;
 wire   [3:3]   Outputs_slice_2;
@@ -463,6 +485,10 @@ assign ANICI_write_read_net_1      = ANICI_write_read_net_0;
 assign ANICI_write_read            = ANICI_write_read_net_1;
 assign ANICI_enable_cmd_net_1      = ANICI_enable_cmd_net_0;
 assign ANICI_enable_cmd            = ANICI_enable_cmd_net_1;
+assign CLKC_write_read_net_1       = CLKC_write_read_net_0;
+assign CLKC_write_read             = CLKC_write_read_net_1;
+assign CLKC_enable_cmd_net_1       = CLKC_enable_cmd_net_0;
+assign CLKC_enable_cmd             = CLKC_enable_cmd_net_1;
 assign TRG_addr_net_1              = TRG_addr_net_0;
 assign TRG_addr[7:0]               = TRG_addr_net_1;
 assign TRG_data_net_1              = TRG_data_net_0;
@@ -483,14 +509,18 @@ assign ANICI_addr_net_1            = ANICI_addr_net_0;
 assign ANICI_addr[7:0]             = ANICI_addr_net_1;
 assign ANICI_data_net_1            = ANICI_data_net_0;
 assign ANICI_data[15:0]            = ANICI_data_net_1;
-assign CLKC_write_read_net_1       = CLKC_write_read_net_0;
-assign CLKC_write_read             = CLKC_write_read_net_1;
 assign CLKC_addr_net_1             = CLKC_addr_net_0;
 assign CLKC_addr[7:0]              = CLKC_addr_net_1;
 assign CLKC_data_net_1             = CLKC_data_net_0;
 assign CLKC_data[15:0]             = CLKC_data_net_1;
-assign CLKC_enable_cmd_net_1       = CLKC_enable_cmd_net_0;
-assign CLKC_enable_cmd             = CLKC_enable_cmd_net_1;
+assign EXTS_write_read_net_1       = EXTS_write_read_net_0;
+assign EXTS_write_read             = EXTS_write_read_net_1;
+assign EXTS_addr_net_1             = EXTS_addr_net_0;
+assign EXTS_addr[7:0]              = EXTS_addr_net_1;
+assign EXTS_data_net_1             = EXTS_data_net_0;
+assign EXTS_data[15:0]             = EXTS_data_net_1;
+assign EXTS_enable_cmd_net_1       = EXTS_enable_cmd_net_0;
+assign EXTS_enable_cmd             = EXTS_enable_cmd_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -574,6 +604,7 @@ Answer_Encoder Answer_Encoder_0(
         .COMM_rx_data               ( COMM_rx_data ),
         .TRNV_rx_data               ( TRNV_rx_data ),
         .ANICI_rx_data              ( ANICI_rx_data ),
+        .EXTS_rx_data               ( EXTS_rx_data ),
         // Outputs
         .Fifo_Write_Data            ( ANW_Fifo_Write_Data_net_0 ),
         .Fifo_Write_Enable          ( ANW_Fifo_Write_Enable_net_0 ),
@@ -601,6 +632,7 @@ Command_Decoder Command_Decoder_0(
         .COMM_busy                  ( COMM_busy ),
         .TRNV_busy                  ( TRNV_busy ),
         .ANICI_busy                 ( ANICI_busy ),
+        .EXTS_busy                  ( EXTS_busy ),
         // Outputs
         .Fifo_Read_Enable           ( CMD_Fifo_Read_Enable_net_0 ),
         .AE_CMD_Data                ( Command_Decoder_0_AE_CMD_Data ),
@@ -655,6 +687,10 @@ Command_Decoder Command_Decoder_0(
         .ANICI_write_read           ( ANICI_write_read_net_0 ),
         .ANICI_addr                 ( ANICI_addr_net_0 ),
         .ANICI_data                 ( ANICI_data_net_0 ),
+        .EXTS_enable_cmd            ( EXTS_enable_cmd_net_0 ),
+        .EXTS_write_read            ( EXTS_write_read_net_0 ),
+        .EXTS_addr                  ( EXTS_addr_net_0 ),
+        .EXTS_data                  ( EXTS_data_net_0 ),
         .Diag_Valid                 (  ) 
         );
 

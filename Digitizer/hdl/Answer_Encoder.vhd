@@ -59,6 +59,9 @@ entity Answer_Encoder is
         --Analyz In Circ
         ANICI_rx_data : in std_logic_vector(15 downto 0);
 
+        --EXT Signal
+        EXTS_rx_data : in std_logic_vector(15 downto 0);
+
 
         Diag_Valid : out std_logic                                     
     );
@@ -269,7 +272,7 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --encoder
 ------------------------------------------------------------------------------------------------------------
-    process(cmd_ID,ADCSPI_rx_data,REG_rx_data,CD_CMD_Data,CMD_DATA_Part_2,CMD_DATA_Part_1,CMD_DATA_Part_0,TRG_rx_data,RST_rx_data,CLKC_rx_data)
+    process(cmd_ID,ADCSPI_rx_data,REG_rx_data,CD_CMD_Data,CMD_DATA_Part_2,CMD_DATA_Part_1,CMD_DATA_Part_0,TRG_rx_data,RST_rx_data,CLKC_rx_data,EXTS_rx_data)
     begin
 
         case cmd_ID is
@@ -363,6 +366,13 @@ begin
 
             when CMD_CONST_GET_AnalyzInCirc=>
                 periph_data <= CMD_DATA_Part_2 & ANICI_rx_data; 
+
+            --EXT Signal
+            when CMD_CONST_SET_ExtSignals=>
+                periph_data <= (others => '0');
+
+            when CMD_CONST_GET_ExtSignals=>
+                periph_data <= CMD_DATA_Part_2 & EXTS_rx_data; 
 
 
             when others =>

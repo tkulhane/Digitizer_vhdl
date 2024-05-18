@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 17 13:58:57 2024
+// Created by SmartDesign Sat May 18 21:16:42 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -34,11 +34,16 @@ module Data_Block(
     Communication_Data_Frame,
     Communication_Data_Req,
     Communication_Empty,
+    Control_Abort_Out,
+    Control_Busy_Out,
+    Control_Enable_Out,
     Control_Test_Generator_Enable,
+    Control_Trigger_Out,
     Diag_0,
     Diag_1,
     Diag_2,
-    Diag_3
+    Diag_3,
+    Fifo_NotFree_Out
 );
 
 //--------------------------------------------------------------------
@@ -72,11 +77,16 @@ output [15:0] C_read_data_frame;
 output [31:0] Communication_Data_Frame;
 output        Communication_Data_Req;
 output        Communication_Empty;
+output        Control_Abort_Out;
+output        Control_Busy_Out;
+output        Control_Enable_Out;
 output        Control_Test_Generator_Enable;
+output        Control_Trigger_Out;
 output        Diag_0;
 output        Diag_1;
 output        Diag_2;
 output        Diag_3;
+output        Fifo_NotFree_Out;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -101,7 +111,11 @@ wire   [31:0] Communication_Data_Frame_net_0;
 wire          Communication_Data_Req_net_0;
 wire          Communication_Empty_net_0;
 wire          Communication_Read;
+wire          Control_Abort_Out_net_0;
+wire          Control_Busy_Out_net_0;
+wire          Control_Enable_Out_net_0;
 wire          Control_Test_Generator_Enable_net_0;
+wire          Control_Trigger_Out_net_0;
 wire          CTRL_Clock;
 wire          CTRL_Reset_N;
 wire   [7:0]  CtrlBus_HandShake_0_PRH_addr_frame;
@@ -117,6 +131,7 @@ wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR;
 wire   [7:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Status;
+wire          Fifo_NotFree_Out_net_0;
 wire          Fifo_RESET_N;
 wire          FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
 wire          FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable;
@@ -169,6 +184,11 @@ wire          Control_Test_Generator_Enable_net_1;
 wire          ACQ_RunOut_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [31:0] Communication_Data_Frame_net_1;
+wire          Control_Trigger_Out_net_1;
+wire          Control_Busy_Out_net_1;
+wire          Control_Enable_Out_net_1;
+wire          Fifo_NotFree_Out_net_1;
+wire          Control_Abort_Out_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -219,6 +239,16 @@ assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
+assign Control_Trigger_Out_net_1           = Control_Trigger_Out_net_0;
+assign Control_Trigger_Out                 = Control_Trigger_Out_net_1;
+assign Control_Busy_Out_net_1              = Control_Busy_Out_net_0;
+assign Control_Busy_Out                    = Control_Busy_Out_net_1;
+assign Control_Enable_Out_net_1            = Control_Enable_Out_net_0;
+assign Control_Enable_Out                  = Control_Enable_Out_net_1;
+assign Fifo_NotFree_Out_net_1              = Fifo_NotFree_Out_net_0;
+assign Fifo_NotFree_Out                    = Fifo_NotFree_Out_net_1;
+assign Control_Abort_Out_net_1             = Control_Abort_Out_net_0;
+assign Control_Abort_Out                   = Control_Abort_Out_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -280,16 +310,16 @@ CtrlBus_HandShake_0(
         .PRH_Reset_N           ( Fifo_RESET_N ),
         .CTRL_enable_cmd       ( C_enable_cmd ),
         .CTRL_write_read       ( C_write_read ),
+        .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
+        .PRH_In_Reset          ( Fifo_RESET_N ),
         .CTRL_addr_frame       ( C_addr_frame ),
         .CTRL_write_data_frame ( C_write_data_frame ),
-        .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
         .PRH_read_data_frame   ( Trigger_Top_Part_0_C_read_data_frame ),
-        .PRH_In_Reset          ( Fifo_RESET_N ),
         // Outputs
         .CTRL_busy             ( C_busy_net_0 ),
-        .CTRL_read_data_frame  ( C_read_data_frame_net_0 ),
         .PRH_enable_cmd        ( CtrlBus_HandShake_0_PRH_enable_cmd ),
         .PRH_write_read        ( CtrlBus_HandShake_0_PRH_write_read ),
+        .CTRL_read_data_frame  ( C_read_data_frame_net_0 ),
         .PRH_addr_frame        ( CtrlBus_HandShake_0_PRH_addr_frame ),
         .PRH_write_data_frame  ( CtrlBus_HandShake_0_PRH_write_data_frame ) 
         );
@@ -456,7 +486,12 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .ACQ_RunOut                    ( ACQ_RunOut_net_0 ),
         .C_read_data_frame             ( Trigger_Top_Part_0_C_read_data_frame ),
         .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
-        .Q                             ( Trigger_Top_Part_0_Q ) 
+        .Q                             ( Trigger_Top_Part_0_Q ),
+        .Control_Trigger_Out           ( Control_Trigger_Out_net_0 ),
+        .Control_Busy_Out              ( Control_Busy_Out_net_0 ),
+        .Control_Enable_Out            ( Control_Enable_Out_net_0 ),
+        .Fifo_NotFree_Out              ( Fifo_NotFree_Out_net_0 ),
+        .Control_Abort_Out             ( Control_Abort_Out_net_0 ) 
         );
 
 
