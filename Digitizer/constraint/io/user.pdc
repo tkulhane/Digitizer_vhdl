@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Fri May  3 10:51:04 2024 
+# Date generated: Mon May 20 19:05:40 2024 
 
 
 # 
@@ -168,6 +168,76 @@ set_io -port_name CLK_OUT_P  \
     -fixed true              \
     -io_std LVDS33           \
     -DIRECTION OUTPUT
+
+
+set_io -port_name EIO_PAD_0  \
+    -pin_name AA3            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_1  \
+    -pin_name AB5            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_2  \
+    -pin_name AA5            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_3  \
+    -pin_name W4             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_4  \
+    -pin_name AA4            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_5  \
+    -pin_name AB6            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_6  \
+    -pin_name V3             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_7  \
+    -pin_name V4             \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_8  \
+    -pin_name L19            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
+
+
+set_io -port_name EIO_PAD_9  \
+    -pin_name L18            \
+    -fixed true              \
+    -io_std LVCMOS33         \
+    -DIRECTION INOUT
 
 
 set_io -port_name EXT_ADC_Reset_N  \
@@ -590,20 +660,6 @@ set_io -port_name FTDI_nWR  \
     -DIRECTION OUTPUT
 
 
-set_io -port_name GPIO_0  \
-    -pin_name L19         \
-    -fixed true           \
-    -io_std LVCMOS33      \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name GPIO_1  \
-    -pin_name L18         \
-    -fixed true           \
-    -io_std LVCMOS33      \
-    -DIRECTION OUTPUT
-
-
 set_io -port_name HMC_CLK_IN_N  \
     -pin_name E2                \
     -fixed true                 \
@@ -677,20 +733,6 @@ set_io -port_name HMC_ss_n  \
     -fixed true             \
     -io_std LVCMOS33        \
     -DIRECTION OUTPUT
-
-
-set_io -port_name IO_0  \
-    -pin_name AA3       \
-    -fixed true         \
-    -io_std LVCMOS33    \
-    -DIRECTION INOUT
-
-
-set_io -port_name IO_1  \
-    -pin_name AB5       \
-    -fixed true         \
-    -io_std LVCMOS33    \
-    -DIRECTION INOUT
 
 
 set_io -port_name LDO_PWR_GOOD  \
@@ -924,6 +966,16 @@ set_io -port_name DBGport_6  \
 
 set_io -port_name DBGport_7  \
     -io_std LVCMOS33         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name GPIO_0  \
+    -io_std LVCMOS33      \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name GPIO_1  \
+    -io_std LVCMOS33      \
     -DIRECTION OUTPUT
 
 
