@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sat May 18 21:16:42 2024
+// Created by SmartDesign Thu May 23 10:31:14 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -182,13 +182,13 @@ wire          Diag_1_0_net_0;
 wire          Communication_Data_Req_net_1;
 wire          Control_Test_Generator_Enable_net_1;
 wire          ACQ_RunOut_net_1;
-wire   [15:0] C_read_data_frame_net_1;
-wire   [31:0] Communication_Data_Frame_net_1;
 wire          Control_Trigger_Out_net_1;
 wire          Control_Busy_Out_net_1;
 wire          Control_Enable_Out_net_1;
 wire          Fifo_NotFree_Out_net_1;
 wire          Control_Abort_Out_net_1;
+wire   [15:0] C_read_data_frame_net_1;
+wire   [31:0] Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -235,10 +235,6 @@ assign Control_Test_Generator_Enable_net_1 = Control_Test_Generator_Enable_net_0
 assign Control_Test_Generator_Enable       = Control_Test_Generator_Enable_net_1;
 assign ACQ_RunOut_net_1                    = ACQ_RunOut_net_0;
 assign ACQ_RunOut                          = ACQ_RunOut_net_1;
-assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
-assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
-assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
-assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
 assign Control_Trigger_Out_net_1           = Control_Trigger_Out_net_0;
 assign Control_Trigger_Out                 = Control_Trigger_Out_net_1;
 assign Control_Busy_Out_net_1              = Control_Busy_Out_net_0;
@@ -249,6 +245,10 @@ assign Fifo_NotFree_Out_net_1              = Fifo_NotFree_Out_net_0;
 assign Fifo_NotFree_Out                    = Fifo_NotFree_Out_net_1;
 assign Control_Abort_Out_net_1             = Control_Abort_Out_net_0;
 assign Control_Abort_Out                   = Control_Abort_Out_net_1;
+assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
+assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
+assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
+assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -285,9 +285,9 @@ Communication_Builder Communication_Builder_0(
 COREFIFO_C10 COREFIFO_C10_0(
         // Inputs
         .WCLOCK   ( Clock ),
-        .RCLOCK   ( Clock ),
+        .RCLOCK   ( CTRL_Clock ),
         .WRESET_N ( Reset_N ),
-        .RRESET_N ( Reset_N ),
+        .RRESET_N ( CTRL_Reset_N ),
         .WE       ( Diag_0_net_0 ),
         .RE       ( Communication_Read ),
         .DATA     ( Communication_Builder_0_Communication_Data_Frame ),
@@ -484,14 +484,14 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .ALL_FIFO_Write                ( Trigger_Top_Part_0_ALL_FIFO_Write ),
         .EMPTY                         ( Trigger_Top_Part_0_EMPTY ),
         .ACQ_RunOut                    ( ACQ_RunOut_net_0 ),
-        .C_read_data_frame             ( Trigger_Top_Part_0_C_read_data_frame ),
-        .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
-        .Q                             ( Trigger_Top_Part_0_Q ),
         .Control_Trigger_Out           ( Control_Trigger_Out_net_0 ),
         .Control_Busy_Out              ( Control_Busy_Out_net_0 ),
         .Control_Enable_Out            ( Control_Enable_Out_net_0 ),
         .Fifo_NotFree_Out              ( Fifo_NotFree_Out_net_0 ),
-        .Control_Abort_Out             ( Control_Abort_Out_net_0 ) 
+        .Control_Abort_Out             ( Control_Abort_Out_net_0 ),
+        .C_read_data_frame             ( Trigger_Top_Part_0_C_read_data_frame ),
+        .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
+        .Q                             ( Trigger_Top_Part_0_Q ) 
         );
 
 

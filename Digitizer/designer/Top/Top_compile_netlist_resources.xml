@@ -3,7 +3,7 @@
 <doc>
 <title>Compile Report</title>
 <text>Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)</text>
-<text>Date: Sat May 18 21:39:44 2024
+<text>Date: Fri May 24 11:07:45 2024
 </text>
 <section><name>Device Selection</name></section>
 <table>
@@ -78,15 +78,15 @@
 </header>
 <row>
  <cell>4LUT</cell>
- <cell>144187</cell>
+ <cell>144476</cell>
  <cell>299544</cell>
- <cell>48.14</cell>
+ <cell>48.23</cell>
 </row>
 <row>
  <cell>DFF</cell>
- <cell>66929</cell>
+ <cell>67061</cell>
  <cell>299544</cell>
- <cell>22.34</cell>
+ <cell>22.39</cell>
 </row>
 <row>
  <cell>I/O Register</cell>
@@ -132,9 +132,9 @@
 </row>
 <row>
  <cell>H-Chip Global</cell>
- <cell>19</cell>
+ <cell>18</cell>
  <cell>48</cell>
- <cell>39.58</cell>
+ <cell>37.50</cell>
 </row>
 <row>
  <cell>Local Global</cell>
@@ -218,8 +218,8 @@
 </header>
 <row>
  <cell>Fabric Logic</cell>
- <cell>110311</cell>
- <cell>33053</cell>
+ <cell>110600</cell>
+ <cell>33185</cell>
 </row>
 <row>
  <cell>uSRAM Interface Logic</cell>
@@ -238,8 +238,8 @@
 </row>
 <row>
  <cell>Total Used</cell>
- <cell>144187</cell>
- <cell>66929</cell>
+ <cell>144476</cell>
+ <cell>67061</cell>
 </row>
 </table>
 <section><name>Detailed Carry Chains Resource Usage</name></section>
@@ -272,7 +272,7 @@
 </row>
 <row>
  <cell>11</cell>
- <cell>46</cell>
+ <cell>47</cell>
 </row>
 <row>
  <cell>12</cell>
@@ -332,7 +332,7 @@
 </row>
 <row>
  <cell>Total</cell>
- <cell>330</cell>
+ <cell>331</cell>
 </row>
 </table>
 <section><name>Detailed 4LUT Groups Resource Usage</name></section>
@@ -345,27 +345,27 @@
 </row>
 <row>
  <cell>2</cell>
- <cell>2573</cell>
+ <cell>2853</cell>
 </row>
 <row>
  <cell>5</cell>
- <cell>905</cell>
+ <cell>1030</cell>
 </row>
 <row>
  <cell>10</cell>
- <cell>112</cell>
+ <cell>54</cell>
 </row>
 <row>
  <cell>22</cell>
- <cell>4</cell>
+ <cell>6</cell>
 </row>
 <row>
  <cell>46</cell>
- <cell>414</cell>
+ <cell>402</cell>
 </row>
 <row>
  <cell>Total</cell>
- <cell>4008</cell>
+ <cell>4345</cell>
 </row>
 </table>
 <section><name>I/O Function</name></section>
@@ -415,7 +415,7 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>22030</cell>
+ <cell>22269</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Main_CLOCK_1</cell>
 </row>
@@ -430,7 +430,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>10460</cell>
+ <cell>10353</cell>
  <cell>INT_NET</cell>
  <cell>Net   : Clock_Reset_0_Logic_Clock</cell>
 </row>
@@ -520,7 +520,7 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>3295</cell>
+ <cell>3541</cell>
  <cell>INT_NET</cell>
  <cell>Net   : dff_arst</cell>
 </row>
@@ -535,14 +535,14 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>1339</cell>
+ <cell>1337</cell>
  <cell>INT_NET</cell>
  <cell>Net   : INT_DataFifo_Reset_N_arst</cell>
 </row>
 <row>
  <cell></cell>
  <cell></cell>
- <cell>Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2_0_a2_0_a2_0_a2_RNI73PB/U0_RGB1</cell>
+ <cell>Driver: Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_RNI3DRB/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -573,21 +573,6 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: Clock_Reset_0/Synchronizer_0/Chain_rep_RNI8C36[1]/U0_RGB1</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Source: NETLIST</cell>
-</row>
-<row>
- <cell>867</cell>
- <cell>INT_NET</cell>
- <cell>Net   : Chain_arst1_0</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: Clock_Reset_0/Clock_Switch_0/inst_Synchronizer_Reset_Out/Chain_rep_RNI9K7E[1]/U0_RGB1</cell>
 </row>
 <row>
  <cell></cell>
@@ -670,9 +655,9 @@
  <cell>Source: NETLIST</cell>
 </row>
 <row>
- <cell>3</cell>
+ <cell>2</cell>
  <cell>INT_NET</cell>
- <cell>Net   : GPIO_0_c</cell>
+ <cell>Net   : GPIO_0_net_0</cell>
 </row>
 <row>
  <cell></cell>
@@ -776,9 +761,9 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>2613</cell>
+ <cell>2715</cell>
  <cell>INT_NET</cell>
- <cell>Net   : AnalyzInCirc_Top_0_FifoInst_GEN_1_inst_AnalyzInCirc_FIFO_RD_INDEX[9]</cell>
+ <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]</cell>
 </row>
 <row>
  <cell></cell>
@@ -786,19 +771,9 @@
  <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[9]</cell>
 </row>
 <row>
- <cell>2541</cell>
+ <cell>2633</cell>
  <cell>INT_NET</cell>
- <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[7]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[7]</cell>
-</row>
-<row>
- <cell>2426</cell>
- <cell>INT_NET</cell>
- <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[8]</cell>
+ <cell>Net   : AnalyzInCirc_Top_0_FifoInst_GEN_1_inst_AnalyzInCirc_FIFO_RD_INDEX[8]</cell>
 </row>
 <row>
  <cell></cell>
@@ -874,6 +849,16 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_87_0_a2_2</cell>
+</row>
+<row>
+ <cell>2336</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_N_308</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_47_0_a2_2</cell>
 </row>
 </table>
 <section><name>High fanout nets (through buffer trees)</name></section>
@@ -884,9 +869,9 @@
  <cell>Name</cell>
 </header>
 <row>
- <cell>2613</cell>
+ <cell>2715</cell>
  <cell>INT_NET</cell>
- <cell>Net   : AnalyzInCirc_Top_0_FifoInst_GEN_1_inst_AnalyzInCirc_FIFO_RD_INDEX[9]</cell>
+ <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]</cell>
 </row>
 <row>
  <cell></cell>
@@ -894,19 +879,9 @@
  <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[9]</cell>
 </row>
 <row>
- <cell>2541</cell>
+ <cell>2633</cell>
  <cell>INT_NET</cell>
- <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[7]</cell>
-</row>
-<row>
- <cell></cell>
- <cell></cell>
- <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[7]</cell>
-</row>
-<row>
- <cell>2426</cell>
- <cell>INT_NET</cell>
- <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[8]</cell>
+ <cell>Net   : AnalyzInCirc_Top_0_FifoInst_GEN_1_inst_AnalyzInCirc_FIFO_RD_INDEX[8]</cell>
 </row>
 <row>
  <cell></cell>
@@ -982,6 +957,16 @@
  <cell></cell>
  <cell></cell>
  <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_87_0_a2_2</cell>
+</row>
+<row>
+ <cell>2336</cell>
+ <cell>INT_NET</cell>
+ <cell>Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_N_308</cell>
+</row>
+<row>
+ <cell></cell>
+ <cell></cell>
+ <cell>Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_47_0_a2_2</cell>
 </row>
 </table>
 </doc>

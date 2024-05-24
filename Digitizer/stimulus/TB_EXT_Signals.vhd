@@ -191,6 +191,66 @@ begin
 
         wait for 2000 ns;
 
+        EIO_PAD_0 <= '0';
+        EIO_PAD_1 <= '0'; 
+        EIO_PAD_2 <= '0'; 
+        EIO_PAD_3 <= '0';
+        EIO_PAD_4 <= '0';
+        EIO_PAD_5 <= '0';
+        EIO_PAD_6 <= '0';
+        EIO_PAD_7 <= '0';
+        EIO_PAD_8 <= '0';
+        EIO_PAD_9 <= '0';
+        
+        wait for 5 us;
+        
+        SEND_CMD( x"0A", X"0000", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        wait for 1 us;
+        SEND_CMD( x"0B", X"0001", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        wait for 1 us;
+        SEND_CMD( x"0C", X"0002", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        wait for 1 us;
+        SEND_CMD( x"0D", X"0003", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        wait for 1 us;
+        SEND_CMD( x"14", X"0006", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        wait for 1 us;
+        SEND_CMD( x"18", X"0007", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        
+        wait for 2 us;
+        EIO_PAD_0 <= '1';
+        EIO_PAD_1 <= '0'; 
+        EIO_PAD_2 <= '0'; 
+        EIO_PAD_3 <= '0';
+        wait for 2 us;
+        EIO_PAD_0 <= '1';
+        EIO_PAD_1 <= '1'; 
+        EIO_PAD_2 <= '0'; 
+        EIO_PAD_3 <= '0'; 
+        wait for 2 us;
+        EIO_PAD_0 <= '1';
+        EIO_PAD_1 <= '1'; 
+        EIO_PAD_2 <= '1'; 
+        EIO_PAD_3 <= '0';
+        wait for 2 us;
+        EIO_PAD_0 <= '1';
+        EIO_PAD_1 <= '1'; 
+        EIO_PAD_2 <= '1'; 
+        EIO_PAD_3 <= '1';  
+   
+        wait for 5 us;
+        EIO_PAD_0 <= 'Z';
+        EIO_PAD_1 <= 'Z'; 
+        EIO_PAD_2 <= 'Z'; 
+        EIO_PAD_3 <= 'Z';
+        EIO_PAD_4 <= 'Z';
+        EIO_PAD_5 <= 'Z';
+        EIO_PAD_6 <= 'Z';
+        EIO_PAD_7 <= 'Z';
+        EIO_PAD_8 <= 'Z';
+        EIO_PAD_9 <= 'Z';
+   
+        wait for 5 us;   
+        
 
         --set out 0
         SEND_CMD( x"6E", X"0000", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
@@ -215,6 +275,10 @@ begin
 
         
         wait for 10 us;
+        
+        
+        
+        
         --SEND_CMD( X"04", X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         --SEND_CMD( X"06", X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
        

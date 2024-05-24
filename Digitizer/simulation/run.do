@@ -18,6 +18,7 @@ if {[file exists CORESPI_LIB/_info]} {
 vmap CORESPI_LIB "CORESPI_LIB"
 
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/EXT_Signals_Controller.vhd"
+vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/EXT_Signals_InputSwitch.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/EXT_Signals_OutputSwitch.vhd"
 vlog -sv -work presynth "${PROJECT_DIR}/component/Actel/SgCore/PF_IO/2.0.104/core/vlog/PF_IO.v"
 vlog -sv -work presynth "${PROJECT_DIR}/component/work/PF_IO_C0/PF_IO_C0.v"

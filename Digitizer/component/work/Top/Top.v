@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sat May 18 21:29:09 2024
+// Created by SmartDesign Fri May 24 10:57:19 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -286,7 +286,10 @@ wire   [7:0]   Controler_0_EXTS_addr;
 wire   [15:0]  Controler_0_EXTS_data;
 wire           Controler_0_EXTS_enable_cmd;
 wire           Controler_0_EXTS_write_read;
-wire           Controler_0_GPIO_0;
+wire           Controler_0_GPO_0;
+wire           Controler_0_GPO_1;
+wire           Controler_0_GPO_2;
+wire           Controler_0_GPO_3;
 wire           Controler_0_LMX_Sync;
 wire   [7:0]   Controler_0_TRG_addr;
 wire   [15:0]  Controler_0_TRG_data;
@@ -326,6 +329,12 @@ wire           EIO_PAD_7;
 wire           EIO_PAD_8;
 wire           EIO_PAD_9;
 wire           EXT_Signals_0_busy;
+wire   [2:2]   EXT_Signals_0_EXT_InputsVectorSignals2to2;
+wire   [3:3]   EXT_Signals_0_EXT_InputsVectorSignals3to3;
+wire   [28:28] EXT_Signals_0_EXT_InputsVectorSignals28to28;
+wire   [29:29] EXT_Signals_0_EXT_InputsVectorSignals29to29;
+wire   [30:30] EXT_Signals_0_EXT_InputsVectorSignals30to30;
+wire   [31:31] EXT_Signals_0_EXT_InputsVectorSignals31to31;
 wire   [15:0]  EXT_Signals_0_read_data_frame;
 wire   [3:0]   FTDI_BE;
 wire           FTDI_CLK;
@@ -339,7 +348,6 @@ wire           FTDI_nTXE;
 wire           FTDI_nWR_net_0;
 wire           FTDI_RESET_N_net_0;
 wire           GPIO_0_net_0;
-wire           GPIO_1_net_0;
 wire           HMC_CLK_IN_N;
 wire           HMC_CLK_IN_P;
 wire           HMC_GPIO_0;
@@ -418,8 +426,6 @@ wire           DBGport_1_0_net_0;
 wire           DBGport_2_1_net_0;
 wire           DBGport_3_1_net_0;
 wire           HMC_SYNC_net_1;
-wire           GPIO_1_net_1;
-wire           GPIO_0_net_1;
 wire           ADC_PWDN_net_1;
 wire           ADC_PWR_RUN_net_1;
 wire           BOARD_PWR_RUN_net_1;
@@ -442,8 +448,35 @@ wire           LANE1_TXD_N_net_1;
 wire           LANE1_TXD_P_net_1;
 wire           LANE0_TXD_N_net_1;
 wire           LANE0_TXD_P_net_1;
+wire   [0:0]   EXT_InputsVectorSignals_slice_0;
+wire   [10:10] EXT_InputsVectorSignals_slice_1;
+wire   [11:11] EXT_InputsVectorSignals_slice_2;
+wire   [12:12] EXT_InputsVectorSignals_slice_3;
+wire   [13:13] EXT_InputsVectorSignals_slice_4;
+wire   [14:14] EXT_InputsVectorSignals_slice_5;
+wire   [15:15] EXT_InputsVectorSignals_slice_6;
+wire   [16:16] EXT_InputsVectorSignals_slice_7;
+wire   [17:17] EXT_InputsVectorSignals_slice_8;
+wire   [18:18] EXT_InputsVectorSignals_slice_9;
+wire   [19:19] EXT_InputsVectorSignals_slice_10;
+wire   [1:1]   EXT_InputsVectorSignals_slice_11;
+wire   [20:20] EXT_InputsVectorSignals_slice_12;
+wire   [21:21] EXT_InputsVectorSignals_slice_13;
+wire   [22:22] EXT_InputsVectorSignals_slice_14;
+wire   [23:23] EXT_InputsVectorSignals_slice_15;
+wire   [24:24] EXT_InputsVectorSignals_slice_16;
+wire   [25:25] EXT_InputsVectorSignals_slice_17;
+wire   [26:26] EXT_InputsVectorSignals_slice_18;
+wire   [27:27] EXT_InputsVectorSignals_slice_19;
+wire   [4:4]   EXT_InputsVectorSignals_slice_20;
+wire   [5:5]   EXT_InputsVectorSignals_slice_21;
+wire   [6:6]   EXT_InputsVectorSignals_slice_22;
+wire   [7:7]   EXT_InputsVectorSignals_slice_23;
+wire   [8:8]   EXT_InputsVectorSignals_slice_24;
+wire   [9:9]   EXT_InputsVectorSignals_slice_25;
 wire   [7:0]   Start_Triggers_net_0;
 wire   [31:0]  EXT_OutputsVectorSignals_net_0;
+wire   [31:0]  EXT_InputsVectorSignals_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -464,6 +497,8 @@ assign DBGport_6           = 1'b0;
 assign DBGport_7           = 1'b0;
 assign LED_1               = 1'b0;
 assign LED_2               = 1'b0;
+assign GPIO_1              = 1'b0;
+assign GPIO_0              = 1'b0;
 assign DBGport_8           = 1'b0;
 assign DBGport_9           = 1'b0;
 assign DBGport_3           = 1'b0;
@@ -514,10 +549,6 @@ assign DBGport_3_1_net_0   = DBGport_3_1;
 assign EXT_LMX2_Reset_N    = DBGport_3_1_net_0;
 assign HMC_SYNC_net_1      = HMC_SYNC_net_0;
 assign HMC_SYNC            = HMC_SYNC_net_1;
-assign GPIO_1_net_1        = GPIO_1_net_0;
-assign GPIO_1              = GPIO_1_net_1;
-assign GPIO_0_net_1        = GPIO_0_net_0;
-assign GPIO_0              = GPIO_0_net_1;
 assign ADC_PWDN_net_1      = ADC_PWDN_net_0;
 assign ADC_PWDN            = ADC_PWDN_net_1;
 assign ADC_PWR_RUN_net_1   = ADC_PWR_RUN_net_0;
@@ -563,10 +594,45 @@ assign LANE0_TXD_N         = LANE0_TXD_N_net_1;
 assign LANE0_TXD_P_net_1   = LANE0_TXD_P_net_0;
 assign LANE0_TXD_P         = LANE0_TXD_P_net_1;
 //--------------------------------------------------------------------
+// Slices assignments
+//--------------------------------------------------------------------
+assign EXT_Signals_0_EXT_InputsVectorSignals2to2[2]    = EXT_InputsVectorSignals_net_0[2:2];
+assign EXT_Signals_0_EXT_InputsVectorSignals3to3[3]    = EXT_InputsVectorSignals_net_0[3:3];
+assign EXT_Signals_0_EXT_InputsVectorSignals28to28[28] = EXT_InputsVectorSignals_net_0[28:28];
+assign EXT_Signals_0_EXT_InputsVectorSignals29to29[29] = EXT_InputsVectorSignals_net_0[29:29];
+assign EXT_Signals_0_EXT_InputsVectorSignals30to30[30] = EXT_InputsVectorSignals_net_0[30:30];
+assign EXT_Signals_0_EXT_InputsVectorSignals31to31[31] = EXT_InputsVectorSignals_net_0[31:31];
+assign EXT_InputsVectorSignals_slice_0[0]              = EXT_InputsVectorSignals_net_0[0:0];
+assign EXT_InputsVectorSignals_slice_1[10]             = EXT_InputsVectorSignals_net_0[10:10];
+assign EXT_InputsVectorSignals_slice_2[11]             = EXT_InputsVectorSignals_net_0[11:11];
+assign EXT_InputsVectorSignals_slice_3[12]             = EXT_InputsVectorSignals_net_0[12:12];
+assign EXT_InputsVectorSignals_slice_4[13]             = EXT_InputsVectorSignals_net_0[13:13];
+assign EXT_InputsVectorSignals_slice_5[14]             = EXT_InputsVectorSignals_net_0[14:14];
+assign EXT_InputsVectorSignals_slice_6[15]             = EXT_InputsVectorSignals_net_0[15:15];
+assign EXT_InputsVectorSignals_slice_7[16]             = EXT_InputsVectorSignals_net_0[16:16];
+assign EXT_InputsVectorSignals_slice_8[17]             = EXT_InputsVectorSignals_net_0[17:17];
+assign EXT_InputsVectorSignals_slice_9[18]             = EXT_InputsVectorSignals_net_0[18:18];
+assign EXT_InputsVectorSignals_slice_10[19]            = EXT_InputsVectorSignals_net_0[19:19];
+assign EXT_InputsVectorSignals_slice_11[1]             = EXT_InputsVectorSignals_net_0[1:1];
+assign EXT_InputsVectorSignals_slice_12[20]            = EXT_InputsVectorSignals_net_0[20:20];
+assign EXT_InputsVectorSignals_slice_13[21]            = EXT_InputsVectorSignals_net_0[21:21];
+assign EXT_InputsVectorSignals_slice_14[22]            = EXT_InputsVectorSignals_net_0[22:22];
+assign EXT_InputsVectorSignals_slice_15[23]            = EXT_InputsVectorSignals_net_0[23:23];
+assign EXT_InputsVectorSignals_slice_16[24]            = EXT_InputsVectorSignals_net_0[24:24];
+assign EXT_InputsVectorSignals_slice_17[25]            = EXT_InputsVectorSignals_net_0[25:25];
+assign EXT_InputsVectorSignals_slice_18[26]            = EXT_InputsVectorSignals_net_0[26:26];
+assign EXT_InputsVectorSignals_slice_19[27]            = EXT_InputsVectorSignals_net_0[27:27];
+assign EXT_InputsVectorSignals_slice_20[4]             = EXT_InputsVectorSignals_net_0[4:4];
+assign EXT_InputsVectorSignals_slice_21[5]             = EXT_InputsVectorSignals_net_0[5:5];
+assign EXT_InputsVectorSignals_slice_22[6]             = EXT_InputsVectorSignals_net_0[6:6];
+assign EXT_InputsVectorSignals_slice_23[7]             = EXT_InputsVectorSignals_net_0[7:7];
+assign EXT_InputsVectorSignals_slice_24[8]             = EXT_InputsVectorSignals_net_0[8:8];
+assign EXT_InputsVectorSignals_slice_25[9]             = EXT_InputsVectorSignals_net_0[9:9];
+//--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
 assign Start_Triggers_net_0           = { 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , Transceiver_Main_0_SYNCINB_OUT };
-assign EXT_OutputsVectorSignals_net_0 = { 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , GPIO_1_net_0 , Controler_0_GPIO_0 , Synchronizer_0_Data_Out , Controler_0_LMX_Sync , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , Data_Block_0_Control_Abort_Out , Data_Block_0_Fifo_NotFree_Out , Data_Block_0_Control_Busy_Out , Data_Block_0_ACQ_RunOut , Data_Block_0_Control_Trigger_Out , Data_Block_0_Control_Enable_Out , 1'b0 , 1'b0 , 1'b0 , 1'b0 , GPIO_0_net_0 , Clock_Reset_0_CLK_SRC_Ref , Clock_Reset_0_CLK_SRC_Logic , Clock_Reset_0_CLK_SRC_40M , 1'b1 , 1'b0 };
+assign EXT_OutputsVectorSignals_net_0 = { Controler_0_GPO_3 , Controler_0_GPO_2 , Controler_0_GPO_1 , Controler_0_GPO_0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , Synchronizer_0_Data_Out , Controler_0_LMX_Sync , INBUF_DIFF_0_Y , 1'b0 , 1'b0 , 1'b0 , 1'b0 , 1'b0 , Data_Block_0_Control_Abort_Out , Data_Block_0_Fifo_NotFree_Out , Data_Block_0_Control_Busy_Out , Data_Block_0_ACQ_RunOut , Data_Block_0_Control_Trigger_Out , Data_Block_0_Control_Enable_Out , 1'b0 , 1'b0 , 1'b0 , 1'b0 , GPIO_0_net_0 , Clock_Reset_0_CLK_SRC_Ref , Clock_Reset_0_CLK_SRC_Logic , Clock_Reset_0_CLK_SRC_40M , 1'b1 , 1'b0 };
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -593,9 +659,9 @@ Clock_Reset Clock_Reset_0(
         .EXT_RST_N           ( DBGport_2_net_0 ),
         .write_read          ( Controler_0_CLKC_write_read ),
         .enable_cmd          ( Controler_0_CLKC_enable_cmd ),
-        .ClockInput_EXT2     ( GND_net ),
+        .ClockInput_EXT2     ( EXT_Signals_0_EXT_InputsVectorSignals3to3 ),
         .ClockInput_HMC      ( GPIO_0_net_0 ),
-        .ClockInput_EXT1     ( GND_net ),
+        .ClockInput_EXT1     ( EXT_Signals_0_EXT_InputsVectorSignals2to2 ),
         .addr_frame          ( Controler_0_CLKC_addr ),
         .write_data_frame    ( Controler_0_CLKC_data ),
         // Outputs
@@ -610,10 +676,10 @@ Clock_Reset Clock_Reset_0(
         .Logic_Reset_N       ( Clock_Reset_0_Logic_Reset_N ),
         .Ref_Clock           ( Clock_Reset_0_Ref_Clock ),
         .Ref_Reset_N         ( Clock_Reset_0_Ref_Reset_N ),
-        .read_data_frame     ( Clock_Reset_0_read_data_frame ),
         .CLK_SRC_40M         ( Clock_Reset_0_CLK_SRC_40M ),
         .CLK_SRC_Logic       ( Clock_Reset_0_CLK_SRC_Logic ),
-        .CLK_SRC_Ref         ( Clock_Reset_0_CLK_SRC_Ref ) 
+        .CLK_SRC_Ref         ( Clock_Reset_0_CLK_SRC_Ref ),
+        .read_data_frame     ( Clock_Reset_0_read_data_frame ) 
         );
 
 //--------Communication
@@ -688,6 +754,10 @@ Controler Controler_0(
         .ANICI_busy            ( AnalyzInCirc_Top_0_busy ),
         .CLKC_busy             ( Clock_Reset_0_busy ),
         .EXTS_busy             ( EXT_Signals_0_busy ),
+        .GPI_3                 ( EXT_Signals_0_EXT_InputsVectorSignals31to31 ),
+        .GPI_0                 ( EXT_Signals_0_EXT_InputsVectorSignals28to28 ),
+        .GPI_1                 ( EXT_Signals_0_EXT_InputsVectorSignals29to29 ),
+        .GPI_2                 ( EXT_Signals_0_EXT_InputsVectorSignals30to30 ),
         .TRG_rx_data           ( Data_Block_0_C_read_data_frame ),
         .CMD_Fifo_Read_Data    ( Communication_0_CMD_Q ),
         .COMM_rx_data          ( Communication_0_read_data_frame ),
@@ -720,8 +790,8 @@ Controler Controler_0(
         .BOARD_PWR_RUN         ( BOARD_PWR_RUN_net_0 ),
         .LED_2                 ( LED_4_net_0 ),
         .LED_3                 ( LED_3_net_0 ),
-        .GPIO_0                ( Controler_0_GPIO_0 ),
-        .GPIO_1                ( GPIO_1_net_0 ),
+        .GPO_0                 ( Controler_0_GPO_0 ),
+        .GPO_1                 ( Controler_0_GPO_1 ),
         .INT_FtdiReset_N       ( FTDI_RESET_N_net_0 ),
         .HMC_GPIO_3            ( HMC_GPIO_3_net_0 ),
         .HMC_GPIO_2            ( HMC_GPIO_2_net_0 ),
@@ -738,6 +808,8 @@ Controler Controler_0(
         .CLKC_enable_cmd       ( Controler_0_CLKC_enable_cmd ),
         .EXTS_write_read       ( Controler_0_EXTS_write_read ),
         .EXTS_enable_cmd       ( Controler_0_EXTS_enable_cmd ),
+        .GPO_3                 ( Controler_0_GPO_3 ),
+        .GPO_2                 ( Controler_0_GPO_2 ),
         .TRG_addr              ( Controler_0_TRG_addr ),
         .TRG_data              ( Controler_0_TRG_data ),
         .ANW_Fifo_Write_Data   ( Controler_0_ANW_Fifo_Write_Data ),
@@ -789,13 +861,13 @@ Data_Block Data_Block_0(
         .Communication_Data_Req        (  ),
         .Control_Test_Generator_Enable ( Data_Block_0_Control_Test_Generator_Enable ),
         .ACQ_RunOut                    ( Data_Block_0_ACQ_RunOut ),
-        .C_read_data_frame             ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ),
         .Control_Trigger_Out           ( Data_Block_0_Control_Trigger_Out ),
         .Control_Busy_Out              ( Data_Block_0_Control_Busy_Out ),
         .Control_Enable_Out            ( Data_Block_0_Control_Enable_Out ),
         .Fifo_NotFree_Out              ( Data_Block_0_Fifo_NotFree_Out ),
-        .Control_Abort_Out             ( Data_Block_0_Control_Abort_Out ) 
+        .Control_Abort_Out             ( Data_Block_0_Control_Abort_Out ),
+        .C_read_data_frame             ( Data_Block_0_C_read_data_frame ),
+        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ) 
         );
 
 //--------EXT_Signals
@@ -811,7 +883,7 @@ EXT_Signals EXT_Signals_0(
         // Outputs
         .busy                     ( EXT_Signals_0_busy ),
         .read_data_frame          ( EXT_Signals_0_read_data_frame ),
-        .EXT_InputsVectorSignals  (  ),
+        .EXT_InputsVectorSignals  ( EXT_InputsVectorSignals_net_0 ),
         // Inouts
         .EIO_PAD_9                ( EIO_PAD_9 ),
         .EIO_PAD_8                ( EIO_PAD_8 ),

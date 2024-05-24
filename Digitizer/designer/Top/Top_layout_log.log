@@ -21,10 +21,11 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Running Timing based Global Demotion. 
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
-        Moved all 1385 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N_0_a2'.
+        Moved 2 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
-        Moved 56 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+        Moved 4 async pins from global to its source 'Transceiver_Main_0/Synchronizer_0_3/Chain_rep[1]'.
+        Moved 52 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3] duplicated 
    - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]_GB_DEMOTE
@@ -36,11 +37,13 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
    - AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]_GB_DEMOTE
 5  - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep duplicated 
    - Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep_GB_DEMOTE
+6  - Transceiver_Main_0/Synchronizer_0_3/Chain_rep[1] duplicated 
+   - Transceiver_Main_0/Synchronizer_0_3/Chain_rep[1]_GB_DEMOTE
 
  Timing based Global Demotion completed successfully. 
 
 Running the I/O Bank and Globals Assigner.
-Info:  I/O Bank and Globals Assigner identified 99 fixed I/O macros, 11 unfixed I/O macros
+Info:  I/O Bank and Globals Assigner identified 105 fixed I/O macros, 13 unfixed I/O macros
 Info:  I/O Bank and Globals Assigner identified bank 'Bank0' as being fixed at VCCI:1.35V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank1' as being fixed at VCCI:1.80V VCCR:n/a
 Info:  I/O Bank and Globals Assigner identified bank 'Bank2' as being fixed at VCCI:3.30V VCCR:n/a
@@ -51,10 +54,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 6 seconds
+Total time spent in I/O Bank and Globals Assigner: 8 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Fri May 10 14:50:29 2024
+Design: Top                             Started: Fri May 24 11:22:40 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -68,16 +71,16 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 35 seconds
-Placement                : 192 seconds
-Improvement              : 238 seconds
+Clustering (1 pass)      : 39 seconds
+Placement                : 238 seconds
+Improvement              : 224 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Fri May 10 14:59:55 2024
-Total CPU Time:     00:13:46            Total Elapsed Time: 00:09:26
-Total Memory Usage: 3633.0 Mbytes
+Finished: Fri May 24 11:32:56 2024
+Total CPU Time:     00:15:26            Total Elapsed Time: 00:10:16
+Total Memory Usage: 3182.2 Mbytes
                         o - o - o - o - o - o
 
 
@@ -90,33 +93,33 @@ Clock pins: 1
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Fri May 10 15:00:46 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Fri May 24 11:33:52 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Fri May 10 15:02:52 2024
-Total CPU Time:     00:04:13            Total Elapsed Time: 00:02:06
-Total Memory Usage: 4657.9 Mbytes
+Finished: Fri May 24 11:36:45 2024
+Total CPU Time:     00:04:48            Total Elapsed Time: 00:02:53
+Total Memory Usage: 4937.8 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+--------+--------+------------+
 | Type          | Used   | Total  | Percentage |
 +---------------+--------+--------+------------+
-| 4LUT          | 144021 | 299544 | 48.08      |
-| DFF           | 66726  | 299544 | 22.28      |
+| 4LUT          | 144941 | 299544 | 48.39      |
+| DFF           | 67171  | 299544 | 22.42      |
 | I/O Register  | 0      | 510    | 0.00       |
-| Logic Element | 146204 | 299544 | 48.81      |
+| Logic Element | 147179 | 299544 | 49.13      |
 +---------------+--------+--------+------------+
 
 I/O Placement
 +--------+-------+------------+
 | Type   | Count | Percentage |
 +--------+-------+------------+
-| Locked |  105  | 90.52%     |
-| Placed |  11   | 9.48%      |
+| Locked |  111  | 89.52%     |
+| Placed |  13   | 10.48%     |
 +--------+-------+------------+
 
 Completed writing pin report files.

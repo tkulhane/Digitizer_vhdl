@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity EXT_Signals_Controller is
     generic 
     (
-        g_NumOfSelectedInputs   : natural := 16;
+        g_NumOfSelectedInputs   : natural := 32;
         g_NumOfSelectedOutputs  : natural := 10;
         g_SelectNumWidth   : natural := 8
     );
@@ -220,6 +220,8 @@ begin
             SelectedOutputsResetFor : for i in 0 to (g_NumOfSelectedOutputs - 1) loop
                 EXT_SelectOutput_vector(i) <= (others => '0');
             end loop SelectedOutputsResetFor;
+
+            EXT_OutputEnable_REG <= (others => '0');
             
 
 
