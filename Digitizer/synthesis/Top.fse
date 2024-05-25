@@ -150,34 +150,34 @@ fsm_state_encoding {235985912} busy_clear {10000}
 fsm_registers {235985912} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]} 
 
 
-fsm_encoding {57151815118} onehot
+fsm_encoding {36267826719} sequential
 
-fsm_state_encoding {57151815118} idle {000001}
+fsm_state_encoding {36267826719} idle {00}
 
-fsm_state_encoding {57151815118} wait_state_1 {000010}
+fsm_state_encoding {36267826719} acq_enable {01}
 
-fsm_state_encoding {57151815118} preparation {000100}
+fsm_state_encoding {36267826719} acq_start {10}
 
-fsm_state_encoding {57151815118} read_data {001000}
+fsm_state_encoding {36267826719} acq_go {11}
 
-fsm_state_encoding {57151815118} write_data {010000}
-
-fsm_state_encoding {57151815118} wait_state_2 {100000}
-
-fsm_registers {57151815118} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
+fsm_registers {36267826719} {state_reg[1]}  {state_reg[0]} 
 
 
-fsm_encoding {36200820019} sequential
+fsm_encoding {57155815518} onehot
 
-fsm_state_encoding {36200820019} idle {00}
+fsm_state_encoding {57155815518} idle {000001}
 
-fsm_state_encoding {36200820019} acq_enable {01}
+fsm_state_encoding {57155815518} wait_state_1 {000010}
 
-fsm_state_encoding {36200820019} acq_start {10}
+fsm_state_encoding {57155815518} preparation {000100}
 
-fsm_state_encoding {36200820019} acq_go {11}
+fsm_state_encoding {57155815518} read_data {001000}
 
-fsm_registers {36200820019} {state_reg[1]}  {state_reg[0]} 
+fsm_state_encoding {57155815518} write_data {010000}
+
+fsm_state_encoding {57155815518} wait_state_2 {100000}
+
+fsm_registers {57155815518} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
 
 
 fsm_encoding {31143814321} onehot
@@ -431,6 +431,22 @@ fsm_state_encoding {50154815423} write_data {010000}
 fsm_state_encoding {50154815423} wait_state_2 {100000}
 
 fsm_registers {50154815423} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
+
+fsm_encoding {56182818220} onehot
+
+fsm_state_encoding {56182818220} idle {000001}
+
+fsm_state_encoding {56182818220} store_w_data {000010}
+
+fsm_state_encoding {56182818220} wait_for_busy {000100}
+
+fsm_state_encoding {56182818220} prh_process {001000}
+
+fsm_state_encoding {56182818220} store_r_data {010000}
+
+fsm_state_encoding {56182818220} prh_in_reset_busy {100000}
+
+fsm_registers {56182818220} {state_reg[0]}  {state_reg[1]}  {state_reg[2]}  {state_reg[3]}  {state_reg[4]}  {state_reg[5]} 
 
 fsm_encoding {9135813526} onehot
 

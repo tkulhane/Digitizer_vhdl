@@ -17,11 +17,14 @@ entity Trigger_Main is
 
         Control_EventNum : in std_logic_vector(14 - 1 downto 0);
 
+        EXT_TriggerInput : in std_logic;
+
         Control_Enable : in std_logic;
         Control_Abort : in std_logic;
         --Control_EnableRst : out std_logic; 
         Control_Threshold : in std_logic_vector(g_Data_Length - 1 downto 0);
         Control_Sample_Per_Event : in std_logic_vector(31 downto 0);
+        Control_TriggerSelect : in std_logic_vector(3 downto 0);
         Control_Trigger_Out : out std_logic;
         Control_Busy_Out : out std_logic;
         Control_AcqStart : out std_logic;
@@ -30,6 +33,7 @@ entity Trigger_Main is
         FIFO_Event_Data : out std_logic_vector(17 downto 0);
 
         ACQ_RunOut : out std_logic;
+        SelfTrigger_Out : out std_logic;
 
         --to trigger units
         TRG_Threshold : out std_logic_vector(g_Data_Length - 1 downto 0);
@@ -83,6 +87,10 @@ architecture rtl of Trigger_Main is
     signal Event_Reserved_Bit : std_logic;
     signal Event_Info : std_logic_vector(14 - 1 downto 0);
 
+    signal EXT_TriggerInput_Rising : std_logic;
+    signal EXT_TriggerInput_Falling : std_logic;
+    signal EXT_TriggerInput_Last : std_logic;
+
 
     --signal ALL_FIFO_Enable_0 : std_logic;
     --signal FIFO_Event_Data_0 : std_logic_vector(17 downto 0);
@@ -107,6 +115,9 @@ begin
     --Event_Info <= Control_EventNum;
 
     ACQ_RunOut <= ACQ_RunSignal and ACQ_FsmEnable;
+    Control_Trigger_Out <= ACQ_RunSignal;
+    SelfTrigger_Out <= Trigger_Edge_Valid;
+    --Control_Trigger_Out <= Trigger_Edge_Valid;
 
 ------------------------------------------------------------------------------------------------------------
 --Process: Delay ALL_FIFO_Enable_0 and FIFO_Event_Data_0 (1 cycle)
@@ -124,14 +135,70 @@ begin
 
         end if;  
 
-    end process;  
+    end process; 
+
+
 
 
 ------------------------------------------------------------------------------------------------------------
--- ToDo : Logic switch trigger sources
+--Ext trigger edge detection
+------------------------------------------------------------------------------------------------------------ 
+    Trg_Edge: process(Clock,Reset_N)
+    begin
+
+        if(Reset_N = '0') then
+            EXT_TriggerInput_Rising <= '0';
+            EXT_TriggerInput_Falling <= '0';
+
+        elsif(Clock'event and Clock = '1') then
+
+            if(EXT_TriggerInput = '1' and EXT_TriggerInput_Last = '0') then
+                EXT_TriggerInput_Rising <= '1';
+            else
+                EXT_TriggerInput_Rising <= '0';
+            end if;
+
+            if(EXT_TriggerInput = '0' and EXT_TriggerInput_Last = '1') then
+                EXT_TriggerInput_Falling <= '1';
+            else
+                EXT_TriggerInput_Falling <= '0';
+            end if;
+
+            EXT_TriggerInput_Last <= EXT_TriggerInput;
+
+        end if;  
+
+    end process; 
+
 ------------------------------------------------------------------------------------------------------------
-    ACQ_RunSignal <= Trigger_Edge_Valid; --prozatim jen dle "hrany"
-    Control_Trigger_Out <= Trigger_Edge_Valid;
+--Logic switch trigger sources
+------------------------------------------------------------------------------------------------------------
+    --ACQ_RunSignal <= Trigger_Edge_Valid; --prozatim jen dle "hrany"
+
+    process(Control_TriggerSelect, Trigger_Edge_Valid, EXT_TriggerInput_Rising, EXT_TriggerInput_Falling)
+
+    begin
+
+        case Control_TriggerSelect is
+            
+            when "0000" =>
+                ACQ_RunSignal <= Trigger_Edge_Valid;
+
+            when "0001" =>
+                ACQ_RunSignal <= EXT_TriggerInput_Rising;
+
+            when "0010" =>
+                ACQ_RunSignal <= EXT_TriggerInput_Falling;
+
+
+
+            when others =>
+                ACQ_RunSignal <= '0';
+
+            end case;
+
+    end process;
+    
 
 ------------------------------------------------------------------------------------------------------------
 --Process: Store last state of TRG_Detect_Vector 

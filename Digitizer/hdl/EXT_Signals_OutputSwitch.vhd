@@ -63,7 +63,12 @@ begin
 --switch gen
 ------------------------------------------------------------------------------------------------------------
     SwitchGen_GEN : for i in 0 to (g_NumOfSelectedOutputs - 1) generate
-        IO_Block_D(i) <= EXT_VectorSignals(EXT_Select_array(i));
+        
+        IO_Block_D(i) <=    '0' when EXT_Select_array(i)=255 else
+                            '1' when EXT_Select_array(i)=254 else
+                            EXT_VectorSignals(EXT_Select_array(i));    
+        
+        
     end generate SwitchGen_GEN;  
 
 

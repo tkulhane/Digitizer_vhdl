@@ -276,7 +276,14 @@ begin
         
         wait for 10 us;
         
+        SEND_CMD( x"6E", X"001C", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         
+        wait for 2 us;
+        EXT_OutputsVectorSignals(28) <= '1';
+        wait for 2 us;
+        EXT_OutputsVectorSignals(28) <= '0';
+        
+        wait for 10 us;
         
         
         --SEND_CMD( X"04", X"0000", '1', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);

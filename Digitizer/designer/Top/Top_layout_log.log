@@ -24,7 +24,7 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
         Moved 2 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
-        Moved 4 async pins from global to its source 'Transceiver_Main_0/Synchronizer_0_3/Chain_rep[1]'.
+        Moved 6 async pins from global to its source 'Transceiver_Main_0/Synchronizer_0_3/Chain_rep[1]'.
         Moved 52 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3] duplicated 
@@ -54,10 +54,10 @@ Info:  I/O Bank and Globals Assigner identified bank 'Bank7' as being fixed at V
 Info:  I/O Bank and Globals Assigner detected (7) out of (7) I/O Bank(s) with locked I/O technologies.
 
 I/O Bank and Globals Assigner completed successfully.
-Total time spent in I/O Bank and Globals Assigner: 8 seconds
+Total time spent in I/O Bank and Globals Assigner: 7 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Fri May 24 11:22:40 2024
+Design: Top                             Started: Sat May 25 10:17:06 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -66,21 +66,21 @@ Improving placement ...
 
 CDC Report:
     Total number of CDC synchronizer driver/sink pairs     : 544
-    Maximum distance between CDC synchronizer driver & sink:   2 cluster(s)
+    Maximum distance between CDC synchronizer driver & sink:   3 cluster(s)
 
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 39 seconds
-Placement                : 238 seconds
-Improvement              : 224 seconds
+Clustering (1 pass)      : 34 seconds
+Placement                : 190 seconds
+Improvement              : 214 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Fri May 24 11:32:56 2024
-Total CPU Time:     00:15:26            Total Elapsed Time: 00:10:16
-Total Memory Usage: 3182.2 Mbytes
+Finished: Sat May 25 10:26:06 2024
+Total CPU Time:     00:12:57            Total Elapsed Time: 00:09:00
+Total Memory Usage: 3686.4 Mbytes
                         o - o - o - o - o - o
 
 
@@ -93,25 +93,25 @@ Clock pins: 1
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Fri May 24 11:33:52 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Sat May 25 10:26:56 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Fri May 24 11:36:45 2024
-Total CPU Time:     00:04:48            Total Elapsed Time: 00:02:53
-Total Memory Usage: 4937.8 Mbytes
+Finished: Sat May 25 10:28:58 2024
+Total CPU Time:     00:03:57            Total Elapsed Time: 00:02:02
+Total Memory Usage: 5574.3 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+--------+--------+------------+
 | Type          | Used   | Total  | Percentage |
 +---------------+--------+--------+------------+
-| 4LUT          | 144941 | 299544 | 48.39      |
-| DFF           | 67171  | 299544 | 22.42      |
+| 4LUT          | 145032 | 299544 | 48.42      |
+| DFF           | 67223  | 299544 | 22.44      |
 | I/O Register  | 0      | 510    | 0.00       |
-| Logic Element | 147179 | 299544 | 49.13      |
+| Logic Element | 147298 | 299544 | 49.17      |
 +---------------+--------+--------+------------+
 
 I/O Placement

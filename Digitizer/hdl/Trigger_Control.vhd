@@ -35,6 +35,7 @@ entity Trigger_Control is
         --Control_EnableRst : in std_logic; 
         Control_Threshold : out std_logic_vector(g_Data_Length - 1 downto 0);
         Control_Sample_Per_Event : out std_logic_vector(31 downto 0);
+        Control_TriggerSelect : out std_logic_vector(3 downto 0);
         Control_Trigger_Out : in std_logic;
         Control_Busy_Out : in std_logic
         --Control_AcqStart : in std_logic
@@ -92,6 +93,7 @@ architecture rtl of Trigger_Control is
     signal REG_Test_Generator_Enable : std_logic;
     signal REG_Set_Number_of_Events_L : std_logic_vector(16 - 1 downto 0);
     signal REG_Set_Number_of_Events_M : std_logic_vector(16 - 1 downto 0);
+    signal REG_TriggerSelect : std_logic_vector(3 downto 0);
 
 
 begin
@@ -114,6 +116,8 @@ begin
     Control_Sample_Per_Event <= REG_Sample_Per_Event_M & REG_Sample_Per_Event_L;
 
     Control_EventNum <= Counter_Processed_Events(13 downto 0);
+
+    Control_TriggerSelect <= REG_TriggerSelect;
 
 ------------------------------------------------------------------------------------------------------------
 --Signals Routing for aborts signals and FIFO SampleEventComparator
@@ -299,6 +303,9 @@ begin
                     when CMD_TRG_TEST_GENERATOR_ENABLE  =>
                         read_data_frame <= "000000000000000" & REG_Test_Generator_Enable;
 
+                    when CMD_TRG_TRIGGER_SELECT =>
+                        read_data_frame(3 downto 0) <= REG_TriggerSelect;
+
                     when others =>
                         read_data_frame <= (others => '0');
                         --read_data_frame <= X"5678";
@@ -326,6 +333,7 @@ begin
             REG_Set_Number_of_Events_L <= X"0000";
             REG_Set_Number_of_Events_M <= X"0000";
             REG_ABORT_MODE <= "0011";
+            REG_TriggerSelect <= "0000";
             
             REQ_Counters_Reset <= '0';
 
@@ -378,6 +386,9 @@ begin
 
                     when CMD_TRG_COUNTERS_RESET =>
                         REQ_Counters_Reset <= '1';
+
+                    when CMD_TRG_TRIGGER_SELECT =>
+                        REG_TriggerSelect <= write_data_frame(3 downto 0);
                     
                     when others =>
                         null;

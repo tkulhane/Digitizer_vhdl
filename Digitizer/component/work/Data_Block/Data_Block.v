@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 23 10:31:14 2024
+// Created by SmartDesign Fri May 24 15:28:52 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -17,6 +17,7 @@ module Data_Block(
     Clock,
     Communication_Builder_RUN,
     Communication_Read,
+    EXT_TriggerInput,
     Fifo_RESET_N,
     Input_Data_0_00,
     Input_Data_0_01,
@@ -43,7 +44,8 @@ module Data_Block(
     Diag_1,
     Diag_2,
     Diag_3,
-    Fifo_NotFree_Out
+    Fifo_NotFree_Out,
+    SelfTrigger_Out
 );
 
 //--------------------------------------------------------------------
@@ -58,6 +60,7 @@ input         C_write_read;
 input         Clock;
 input         Communication_Builder_RUN;
 input         Communication_Read;
+input         EXT_TriggerInput;
 input         Fifo_RESET_N;
 input  [11:0] Input_Data_0_00;
 input  [11:0] Input_Data_0_01;
@@ -87,6 +90,7 @@ output        Diag_1;
 output        Diag_2;
 output        Diag_3;
 output        Fifo_NotFree_Out;
+output        SelfTrigger_Out;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -131,6 +135,7 @@ wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Number;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Size;
 wire   [19:0] Event_Info_RAM_Block_0_B_DOUT_Event_Start_ADDR;
 wire   [7:0]  Event_Info_RAM_Block_0_B_DOUT_Event_Status;
+wire          EXT_TriggerInput;
 wire          Fifo_NotFree_Out_net_0;
 wire          Fifo_RESET_N;
 wire          FIFOs_Reader_0_Block_0_Sample_FIFO_R_Enable;
@@ -169,6 +174,7 @@ wire   [15:0] Input_Data_Part_1_Q_2;
 wire   [15:0] Input_Data_Part_1_Q_3;
 wire          Reset_N;
 wire   [63:0] Sample_RAM_Block_0_B_Output_Data;
+wire          SelfTrigger_Out_net_0;
 wire          Trigger_Top_Part_0_ALL_FIFO_Write;
 wire          Trigger_Top_Part_0_C_busy;
 wire   [15:0] Trigger_Top_Part_0_C_read_data_frame;
@@ -189,6 +195,7 @@ wire          Fifo_NotFree_Out_net_1;
 wire          Control_Abort_Out_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [31:0] Communication_Data_Frame_net_1;
+wire          SelfTrigger_Out_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -249,6 +256,8 @@ assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
+assign SelfTrigger_Out_net_1               = SelfTrigger_Out_net_0;
+assign SelfTrigger_Out                     = SelfTrigger_Out_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -478,6 +487,7 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .C_addr_frame                  ( CtrlBus_HandShake_0_PRH_addr_frame ),
         .C_write_data_frame            ( CtrlBus_HandShake_0_PRH_write_data_frame ),
         .TRG_Detect_Vector             ( Input_Data_Part_0_TRG_Detect_Vector ),
+        .EXT_TriggerInput              ( EXT_TriggerInput ),
         // Outputs
         .C_busy                        ( Trigger_Top_Part_0_C_busy ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
@@ -491,7 +501,8 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .Control_Abort_Out             ( Control_Abort_Out_net_0 ),
         .C_read_data_frame             ( Trigger_Top_Part_0_C_read_data_frame ),
         .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
-        .Q                             ( Trigger_Top_Part_0_Q ) 
+        .Q                             ( Trigger_Top_Part_0_Q ),
+        .SelfTrigger_Out               ( SelfTrigger_Out_net_0 ) 
         );
 
 

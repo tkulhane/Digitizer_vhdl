@@ -1,4 +1,4 @@
-# Fri May 24 11:02:26 2024
+# Sat May 25 10:02:58 2024
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -29,7 +29,7 @@ Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 133MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 133MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 133MB)
 
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 133MB)
@@ -45,7 +45,7 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 233MB peak: 233MB)
 
 
-Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 215MB peak: 245MB)
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 217MB peak: 245MB)
 
 
 Begin compile point sub-process log
@@ -54,7 +54,7 @@ Begin compile point sub-process log
 		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 215MB peak: 245MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 217MB peak: 245MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
@@ -82,7 +82,7 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|Found ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) with 4 words by 16 bits.
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 235MB peak: 247MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 236MB peak: 248MB)
 
 Encoding state machine state_reg[0:5] (in view: work.Clock_Switch_1(rtl))
 original code -> new code
@@ -218,6 +218,14 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog) instance memwaddr_r[13:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memraddr_r[13:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memwaddr_r[13:0] 
+Encoding state machine state_reg[0:3] (in view: work.Trigger_Main(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":267:8:267:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":404:8:404:9|Found counter in view:work.Trigger_Main(rtl) instance SampleTactCounter[31:0] 
 Encoding state machine state_reg[0:5] (in view: work.Trigger_Control(rtl))
 original code -> new code
    000001 -> 000001
@@ -226,16 +234,8 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":401:8:401:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Processed_Events[31:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":401:8:401:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Incoming_Events[31:0] 
-Encoding state machine state_reg[0:3] (in view: work.Trigger_Main(rtl))
-original code -> new code
-   00 -> 00
-   01 -> 01
-   10 -> 10
-   11 -> 11
-@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":200:8:200:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":337:8:337:9|Found counter in view:work.Trigger_Main(rtl) instance SampleTactCounter[31:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":412:8:412:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Processed_Events[31:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":412:8:412:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Incoming_Events[31:0] 
 Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
 original code -> new code
    0000001 -> 0000001
@@ -258,7 +258,7 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":986:4:986:5|Found counter in view:work.Communication_Builder(rtl) instance Packet_Counter[19:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":848:8:848:9|Found counter in view:work.Communication_Builder(rtl) instance Event_RAM_R_Address_Integer[9:0] 
 @N: MF179 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":234:15:234:37|Found 14 by 14 bit equality operator ('==') un1_state_reg_4 (in view: work.Communication_Builder(rtl))
-Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA(rtl))
+Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_0(rtl))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -266,7 +266,7 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":195:8:195:9|Found counter in view:work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA(rtl) instance fsm_timer[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":195:8:195:9|Found counter in view:work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_0(rtl) instance fsm_timer[9:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.wptr[10:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.rptr[10:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
@@ -330,6 +330,15 @@ original code -> new code
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[9] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[15]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[15] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[13]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[13] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_1(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":195:8:195:9|Found counter in view:work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_1(rtl) instance fsm_timer[9:0] 
 Encoding state machine state_reg[0:5] (in view: work.AnalyzInCirc_Controler_2(rtl))
 original code -> new code
    000001 -> 000001
@@ -489,7 +498,7 @@ original code -> new code
    0100000 -> 0100000
    1000000 -> 1000000
 
-Starting factoring (Real Time elapsed 0h:00m:46s; CPU Time elapsed 0h:00m:46s; Memory used current: 383MB peak: 411MB)
+Starting factoring (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:45s; Memory used current: 385MB peak: 412MB)
 
 Auto Dissolve of COREFIFO_C4_0_2.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0_1.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
@@ -499,54 +508,54 @@ Auto Dissolve of COREFIFO_C4_0_2.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scnt
 Auto Dissolve of COREFIFO_C4_0_1.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[14] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[12] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[15] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[9] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[13] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:48s; Memory used current: 394MB peak: 411MB)
+Finished factoring (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:48s; Memory used current: 397MB peak: 412MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:01m:09s; CPU Time elapsed 0h:01m:09s; Memory used current: 518MB peak: 566MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:01m:08s; CPU Time elapsed 0h:01m:08s; Memory used current: 527MB peak: 569MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:01m:21s; CPU Time elapsed 0h:01m:21s; Memory used current: 548MB peak: 566MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:01m:20s; CPU Time elapsed 0h:01m:20s; Memory used current: 554MB peak: 569MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:01m:58s; CPU Time elapsed 0h:01m:58s; Memory used current: 548MB peak: 566MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:02m:01s; CPU Time elapsed 0h:02m:01s; Memory used current: 554MB peak: 569MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:02m:01s; CPU Time elapsed 0h:02m:01s; Memory used current: 548MB peak: 566MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:02m:04s; CPU Time elapsed 0h:02m:04s; Memory used current: 554MB peak: 569MB)
 
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|Found ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) with 27 words by 1 bit.
 
-Finished preparing to map (Real Time elapsed 0h:02m:27s; CPU Time elapsed 0h:02m:27s; Memory used current: 557MB peak: 566MB)
+Finished preparing to map (Real Time elapsed 0h:02m:31s; CPU Time elapsed 0h:02m:31s; Memory used current: 559MB peak: 569MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:02m:33s; CPU Time elapsed 0h:02m:33s; Memory used current: 614MB peak: 660MB)
+Finished technology mapping (Real Time elapsed 0h:02m:37s; CPU Time elapsed 0h:02m:37s; Memory used current: 622MB peak: 671MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:02m:37s		    -5.86ns		56644 /     22993
-   2		0h:02m:39s		    -5.86ns		56394 /     22993
+   1		0h:02m:40s		    -5.82ns		56763 /     23045
+   2		0h:02m:43s		    -5.82ns		56487 /     23045
 
-   3		0h:02m:51s		    -5.86ns		56395 /     22993
-   4		0h:02m:52s		    -5.49ns		56399 /     22993
+   3		0h:02m:55s		    -5.82ns		56488 /     23045
+   4		0h:02m:55s		    -5.51ns		56491 /     23045
 
 
-   5		0h:02m:54s		    -5.49ns		56397 /     22993
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1321 
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1322 
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1323 
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1324 
-
-Added 0 Buffers
-Added 0 Cells via replication
-	Added 0 Sequential Cells via replication
-	Added 0 Combinational Cells via replication
+   5		0h:02m:58s		    -5.48ns		56505 /     23045
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1477 
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1478 
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1479 
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1480 
 
 Added 0 Buffers
 Added 0 Cells via replication
@@ -563,10 +572,15 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:03m:06s; CPU Time elapsed 0h:03m:06s; Memory used current: 628MB peak: 672MB)
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:03m:10s; CPU Time elapsed 0h:03m:10s; Memory used current: 632MB peak: 676MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:03m:10s; CPU Time elapsed 0h:03m:10s; Memory used current: 653MB peak: 672MB)
+Finished restoring hierarchy (Real Time elapsed 0h:03m:13s; CPU Time elapsed 0h:03m:13s; Memory used current: 655MB peak: 676MB)
 
 
 End compile point sub-process log
@@ -580,7 +594,7 @@ Name     Status       Reason
 Top      Remapped     Design changed
 ====================================
 
-Process took 0h:03m:11s realtime, 0h:03m:11s cputime
-# Fri May 24 11:05:37 2024
+Process took 0h:03m:15s realtime, 0h:03m:15s cputime
+# Sat May 25 10:06:13 2024
 
 ###########################################################]

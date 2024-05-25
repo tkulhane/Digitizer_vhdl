@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 17 11:36:23 2024
+// Created by SmartDesign Fri May 24 12:13:17 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,7 +8,9 @@
 // Transceiver_Main
 module Transceiver_Main(
     // Inputs
+    CTRL_Clock,
     CTRL_Clock_40M,
+    CTRL_Reset_N,
     Gen_Enable,
     LANE0_RXD_N,
     LANE0_RXD_P,
@@ -46,7 +48,9 @@ module Transceiver_Main(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input          CTRL_Clock;
 input          CTRL_Clock_40M;
+input          CTRL_Reset_N;
 input          Gen_Enable;
 input          LANE0_RXD_N;
 input          LANE0_RXD_P;
@@ -88,7 +92,13 @@ wire   [7:0]     addr_frame;
 wire             AND2_0_0_Y;
 wire             AND2_0_Y;
 wire             busy_net_0;
+wire             CTRL_Clock;
 wire             CTRL_Clock_40M;
+wire             CTRL_Reset_N;
+wire   [7:0]     CtrlBus_HandShake_0_PRH_addr_frame;
+wire             CtrlBus_HandShake_0_PRH_enable_cmd;
+wire   [15:0]    CtrlBus_HandShake_0_PRH_write_data_frame;
+wire             CtrlBus_HandShake_0_PRH_write_read;
 wire             Data_Valid_net_0;
 wire             enable_cmd;
 wire             Gen_Enable;
@@ -132,7 +142,9 @@ wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_4;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_5;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_6;
 wire   [11:0]    Test_Generator_for_Lanes_0_Test_Data_7;
+wire             Transceiver_Controller_0_busy;
 wire             Transceiver_Controller_0_Lanes_Restart;
+wire   [15:0]    Transceiver_Controller_0_read_data_frame;
 wire             Transceiver_LanesConnection_0_Input_Data_Read;
 wire   [15:0]    Transceiver_LanesConnection_0_Output_Data15to0;
 wire   [31:16]   Transceiver_LanesConnection_0_Output_Data31to16;
@@ -264,6 +276,32 @@ AND2 AND2_0_0(
         .B ( Transceiver_LanesConnection_0_Input_Data_Read ),
         // Outputs
         .Y ( AND2_0_0_Y ) 
+        );
+
+//--------CtrlBus_HandShake
+CtrlBus_HandShake #( 
+        .g_WidthADDR ( 8 ),
+        .g_WidthDATA ( 16 ) )
+CtrlBus_HandShake_0(
+        // Inputs
+        .CTRL_Clock            ( CTRL_Clock ),
+        .CTRL_Reset_N          ( CTRL_Reset_N ),
+        .PRH_Clock             ( Logic_Clock ),
+        .PRH_Reset_N           ( Synchronizer_0_3_Data_Out ),
+        .CTRL_enable_cmd       ( enable_cmd ),
+        .CTRL_write_read       ( write_read ),
+        .PRH_busy              ( Transceiver_Controller_0_busy ),
+        .PRH_In_Reset          ( Synchronizer_0_3_Data_Out ),
+        .CTRL_addr_frame       ( addr_frame ),
+        .CTRL_write_data_frame ( write_data_frame ),
+        .PRH_read_data_frame   ( Transceiver_Controller_0_read_data_frame ),
+        // Outputs
+        .CTRL_busy             ( busy_net_0 ),
+        .PRH_enable_cmd        ( CtrlBus_HandShake_0_PRH_enable_cmd ),
+        .PRH_write_read        ( CtrlBus_HandShake_0_PRH_write_read ),
+        .CTRL_read_data_frame  ( read_data_frame_net_0 ),
+        .PRH_addr_frame        ( CtrlBus_HandShake_0_PRH_addr_frame ),
+        .PRH_write_data_frame  ( CtrlBus_HandShake_0_PRH_write_data_frame ) 
         );
 
 //--------SampleCompose
@@ -470,15 +508,15 @@ Transceiver_Controller_0(
         // Inputs
         .Clock              ( Logic_Clock ),
         .Reset_N            ( Synchronizer_0_3_Data_Out ),
-        .enable_cmd         ( enable_cmd ),
-        .write_read         ( write_read ),
-        .addr_frame         ( addr_frame ),
-        .write_data_frame   ( write_data_frame ),
+        .enable_cmd         ( CtrlBus_HandShake_0_PRH_enable_cmd ),
+        .write_read         ( CtrlBus_HandShake_0_PRH_write_read ),
+        .addr_frame         ( CtrlBus_HandShake_0_PRH_addr_frame ),
+        .write_data_frame   ( CtrlBus_HandShake_0_PRH_write_data_frame ),
         .StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ),
         // Outputs
-        .busy               ( busy_net_0 ),
+        .busy               ( Transceiver_Controller_0_busy ),
         .Lanes_Restart      ( Transceiver_Controller_0_Lanes_Restart ),
-        .read_data_frame    ( read_data_frame_net_0 ) 
+        .read_data_frame    ( Transceiver_Controller_0_read_data_frame ) 
         );
 
 //--------Transceiver_LanesConnection

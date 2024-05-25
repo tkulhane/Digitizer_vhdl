@@ -1,4 +1,4 @@
-# Fri May 24 11:02:22 2024
+# Sat May 25 10:02:55 2024
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -23,7 +23,7 @@ Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 120MB peak: 131MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 131MB)
 
 
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 131MB)
@@ -41,7 +41,7 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 
 Synthesis running in Multiprocessing mode
 Maximum number of parallel jobs set to 4
-Multiprocessing started at : Fri May 24 11:02:24 2024
+Multiprocessing started at : Sat May 25 10:02:56 2024
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transciever_onelane\transciever_onelane.v":9:7:9:25|Old database up-to-date, remapping Compile point view:work.Transciever_OneLane_inst_Transciever_OneLane_1(verilog) unnecessary 
 @N: MF107 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transciever_onelane\transciever_onelane.v":9:7:9:25|Old database up-to-date, remapping Compile point view:work.Transciever_OneLane_inst_Transciever_OneLane_0(verilog) unnecessary 
 Mapping Top as a separate process
@@ -52,7 +52,7 @@ MCP Status: 1 jobs running
 		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 215MB peak: 245MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 217MB peak: 245MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
@@ -80,7 +80,7 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|Found ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) with 4 words by 16 bits.
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 235MB peak: 247MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 236MB peak: 248MB)
 
 Encoding state machine state_reg[0:5] (in view: work.Clock_Switch_1(rtl))
 original code -> new code
@@ -216,6 +216,14 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog) instance memwaddr_r[13:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":644:3:644:8|Found counter in view:work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memraddr_r[13:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c5\corefifo_c5_0\rtl\vlog\core\corefifo_sync_scntr.v":628:3:628:8|Found counter in view:work.COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0(verilog) instance memwaddr_r[13:0] 
+Encoding state machine state_reg[0:3] (in view: work.Trigger_Main(rtl))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":267:8:267:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":404:8:404:9|Found counter in view:work.Trigger_Main(rtl) instance SampleTactCounter[31:0] 
 Encoding state machine state_reg[0:5] (in view: work.Trigger_Control(rtl))
 original code -> new code
    000001 -> 000001
@@ -224,16 +232,8 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":401:8:401:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Processed_Events[31:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":401:8:401:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Incoming_Events[31:0] 
-Encoding state machine state_reg[0:3] (in view: work.Trigger_Main(rtl))
-original code -> new code
-   00 -> 00
-   01 -> 01
-   10 -> 10
-   11 -> 11
-@N: MO225 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":200:8:200:9|There are no possible illegal states for state machine state_reg[0:3] (in view: work.Trigger_Main(rtl)); safe FSM implementation is not required.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_main.vhd":337:8:337:9|Found counter in view:work.Trigger_Main(rtl) instance SampleTactCounter[31:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":412:8:412:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Processed_Events[31:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":412:8:412:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Incoming_Events[31:0] 
 Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
 original code -> new code
    0000001 -> 0000001
@@ -256,7 +256,7 @@ original code -> new code
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":986:4:986:5|Found counter in view:work.Communication_Builder(rtl) instance Packet_Counter[19:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":848:8:848:9|Found counter in view:work.Communication_Builder(rtl) instance Event_RAM_R_Address_Integer[9:0] 
 @N: MF179 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":234:15:234:37|Found 14 by 14 bit equality operator ('==') un1_state_reg_4 (in view: work.Communication_Builder(rtl))
-Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA(rtl))
+Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_0(rtl))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -264,7 +264,7 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":195:8:195:9|Found counter in view:work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA(rtl) instance fsm_timer[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":195:8:195:9|Found counter in view:work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_0(rtl) instance fsm_timer[9:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":668:12:668:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.wptr[10:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":686:12:686:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.rptr[10:0] 
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c10\corefifo_c10_0\rtl\vlog\core\corefifo_async.v":840:12:840:17|Found counter in view:work.COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0(verilog) instance genblk10\.memraddr_r[9:0] 
@@ -328,6 +328,15 @@ original code -> new code
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[9] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[15]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[15] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[13]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[13] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_1(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":195:8:195:9|Found counter in view:work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_1(rtl) instance fsm_timer[9:0] 
 Encoding state machine state_reg[0:5] (in view: work.AnalyzInCirc_Controler_2(rtl))
 original code -> new code
    000001 -> 000001
@@ -487,7 +496,7 @@ original code -> new code
    0100000 -> 0100000
    1000000 -> 1000000
 
-Starting factoring (Real Time elapsed 0h:00m:46s; CPU Time elapsed 0h:00m:46s; Memory used current: 383MB peak: 411MB)
+Starting factoring (Real Time elapsed 0h:00m:45s; CPU Time elapsed 0h:00m:45s; Memory used current: 385MB peak: 412MB)
 
 Auto Dissolve of COREFIFO_C4_0_2.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0_1.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
@@ -497,54 +506,54 @@ Auto Dissolve of COREFIFO_C4_0_2.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scnt
 Auto Dissolve of COREFIFO_C4_0_1.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[14] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[12] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[15] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[9] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[13] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:48s; Memory used current: 394MB peak: 411MB)
+Finished factoring (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:48s; Memory used current: 397MB peak: 412MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:01m:09s; CPU Time elapsed 0h:01m:09s; Memory used current: 518MB peak: 566MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:01m:08s; CPU Time elapsed 0h:01m:08s; Memory used current: 527MB peak: 569MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:01m:21s; CPU Time elapsed 0h:01m:21s; Memory used current: 548MB peak: 566MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:01m:20s; CPU Time elapsed 0h:01m:20s; Memory used current: 554MB peak: 569MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:01m:58s; CPU Time elapsed 0h:01m:58s; Memory used current: 548MB peak: 566MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:02m:01s; CPU Time elapsed 0h:02m:01s; Memory used current: 554MB peak: 569MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:02m:01s; CPU Time elapsed 0h:02m:01s; Memory used current: 548MB peak: 566MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:02m:04s; CPU Time elapsed 0h:02m:04s; Memory used current: 554MB peak: 569MB)
 
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|Found ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) with 27 words by 1 bit.
 
-Finished preparing to map (Real Time elapsed 0h:02m:27s; CPU Time elapsed 0h:02m:27s; Memory used current: 557MB peak: 566MB)
+Finished preparing to map (Real Time elapsed 0h:02m:31s; CPU Time elapsed 0h:02m:31s; Memory used current: 559MB peak: 569MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:02m:33s; CPU Time elapsed 0h:02m:33s; Memory used current: 614MB peak: 660MB)
+Finished technology mapping (Real Time elapsed 0h:02m:37s; CPU Time elapsed 0h:02m:37s; Memory used current: 622MB peak: 671MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:02m:37s		    -5.86ns		56644 /     22993
-   2		0h:02m:39s		    -5.86ns		56394 /     22993
+   1		0h:02m:40s		    -5.82ns		56763 /     23045
+   2		0h:02m:43s		    -5.82ns		56487 /     23045
 
-   3		0h:02m:51s		    -5.86ns		56395 /     22993
-   4		0h:02m:52s		    -5.49ns		56399 /     22993
+   3		0h:02m:55s		    -5.82ns		56488 /     23045
+   4		0h:02m:55s		    -5.51ns		56491 /     23045
 
 
-   5		0h:02m:54s		    -5.49ns		56397 /     22993
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1321 
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1322 
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1323 
-@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1324 
-
-Added 0 Buffers
-Added 0 Cells via replication
-	Added 0 Sequential Cells via replication
-	Added 0 Combinational Cells via replication
+   5		0h:02m:58s		    -5.48ns		56505 /     23045
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1477 
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1478 
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1479 
+@N: FP130 |Promoting Net AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1480 
 
 Added 0 Buffers
 Added 0 Cells via replication
@@ -561,15 +570,20 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:03m:06s; CPU Time elapsed 0h:03m:06s; Memory used current: 628MB peak: 672MB)
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:03m:10s; CPU Time elapsed 0h:03m:10s; Memory used current: 632MB peak: 676MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:03m:10s; CPU Time elapsed 0h:03m:10s; Memory used current: 653MB peak: 672MB)
+Finished restoring hierarchy (Real Time elapsed 0h:03m:13s; CPU Time elapsed 0h:03m:13s; Memory used current: 655MB peak: 676MB)
 
 
 Finished mapping Top
-Multiprocessing finished at : Fri May 24 11:05:37 2024
-Multiprocessing took 0h:03m:12s realtime, 0h:00m:02s cputime
+Multiprocessing finished at : Sat May 25 10:06:13 2024
+Multiprocessing took 0h:03m:16s realtime, 0h:00m:02s cputime
 
 Summary of Compile Points :
 *************************** 
@@ -578,7 +592,7 @@ Name                                               Status        Reason         
 Transciever_OneLane_inst_Transciever_OneLane_1     Unchanged     -                  Sat May 18 21:34:44 2024     Sat May 18 21:35:42 2024     0h:00m:57s     0h:00m:57s     No            
 Transciever_OneLane_inst_Transciever_OneLane_0     Unchanged     -                  Sat May 18 21:34:45 2024     Sat May 18 21:35:43 2024     0h:00m:58s     0h:00m:58s     No            
 Communication                                      Unchanged     -                  Sat May 18 21:34:47 2024     Sat May 18 21:34:58 2024     0h:00m:11s     0h:00m:11s     No            
-Top                                                Remapped      Design changed     Fri May 24 11:02:26 2024     Fri May 24 11:05:37 2024     0h:03m:11s     0h:03m:11s     No            
+Top                                                Remapped      Design changed     Sat May 25 10:02:58 2024     Sat May 25 10:06:13 2024     0h:03m:14s     0h:03m:15s     No            
 ==========================================================================================================================================================================================
 Total number of compile points: 4
 ===================================
@@ -593,10 +607,10 @@ Links to Compile point Reports:
 ==============================
 
 
-Start loading CP mapped netlist (Real Time elapsed 0h:03m:15s; CPU Time elapsed 0h:00m:03s; Memory used current: 327MB peak: 336MB)
+Start loading CP mapped netlist (Real Time elapsed 0h:03m:18s; CPU Time elapsed 0h:00m:03s; Memory used current: 328MB peak: 336MB)
 
 
-Finished loading CP mapped netlist (Real Time elapsed 0h:03m:18s; CPU Time elapsed 0h:00m:07s; Memory used current: 495MB peak: 495MB)
+Finished loading CP mapped netlist (Real Time elapsed 0h:03m:22s; CPU Time elapsed 0h:00m:06s; Memory used current: 495MB peak: 495MB)
 
 @N: MT611 :|Automatically generated clock work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock is not used and is being removed
 @N: MT611 :|Automatically generated clock work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock is not used and is being removed
@@ -609,8 +623,8 @@ Finished loading CP mapped netlist (Real Time elapsed 0h:03m:18s; CPU Time elaps
 
 Clock optimization not enabled
 7 non-gated/non-generated clock tree(s) driving 1317 clock pin(s) of sequential element(s)
-11 gated/generated clock tree(s) driving 33733 clock pin(s) of sequential element(s)
-0 instances converted, 33733 sequential instances remain driven by gated/generated clocks
+11 gated/generated clock tree(s) driving 33785 clock pin(s) of sequential element(s)
+0 instances converted, 33785 sequential instances remain driven by gated/generated clocks
 
 ============================================================================================================================ Non-Gated/Non-Generated Clocks =============================================================================================================================
 Clock Tree ID     Driving Element                                                                                               Drive Element Type                   Fanout     Sample Instance                                                                                          
@@ -626,15 +640,15 @@ Clock Tree ID     Driving Element                                               
 ======================================================================================================================================================================================= Gated/Generated Clocks ========================================================================================================================================================================================
 Clock Tree ID     Driving Element                                                                                                                               Drive Element Type                 Fanout     Sample Instance                                                                                                                  Explanation                                             
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                                                                              PLL                                22269      Clock_Reset_0.Clock_Controller_0.read_data_frame_1[0]                                                                            No gated clock conversion method for cell cell:ACG4.SLE 
-@K:CKID0002       Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.pll_inst_0                                                                                              PLL                                10345      Clock_Reset_0.Clock_Switch_0.inst_Synchronizer_Reset_Out.Chain[0]                                                                No gated clock conversion method for cell cell:ACG4.SLE 
+@K:CKID0001       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                                                                              PLL                                22310      Clock_Reset_0.Clock_Controller_0.read_data_frame_1[0]                                                                            No gated clock conversion method for cell cell:ACG4.SLE 
+@K:CKID0002       Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.pll_inst_0                                                                                              PLL                                10356      Clock_Reset_0.Clock_Switch_0.inst_Synchronizer_Reset_Out.Chain[0]                                                                No gated clock conversion method for cell cell:ACG4.SLE 
 @K:CKID0003       Clock_Reset_0.PF_CCC_C0_0.PF_CCC_C0_0.pll_inst_0                                                                                              PLL                                1047       Clock_Reset_0.Synchronizer_0.Chain[0]                                                                                            No gated clock conversion method for cell cell:ACG4.SLE 
 @K:CKID0004       Clock_Reset_0.PF_CCC_C7_0_0.PF_CCC_C7_0.pll_inst_0                                                                                            PLL                                2          Clock_Reset_0.Clock_Switch_0_0.inst_Synchronizer_Reset_Out.Chain[0]                                                              No gated clock conversion method for cell cell:ACG4.SLE 
-@K:CKID0005       Clock_Reset_0.Clock_Switch_0.Clock_To_PLL_3_1_0_wmux_0                                                                                        ARI1                               1          Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.pll_inst_0                                                                                 No gated clock conversion method for cell cell:work.PLL 
-@K:CKID0006       Clock_Reset_0.Clock_Switch_0_0.Clock_To_PLL_3_1_0_wmux_0                                                                                      ARI1                               1          Clock_Reset_0.PF_CCC_C7_0_0.PF_CCC_C7_0.pll_inst_0                                                                               No gated clock conversion method for cell cell:work.PLL 
+@K:CKID0005       Clock_Reset_0.Clock_Switch_0_0.Clock_To_PLL_3_1_0_wmux_0                                                                                      ARI1                               1          Clock_Reset_0.PF_CCC_C7_0_0.PF_CCC_C7_0.pll_inst_0                                                                               No gated clock conversion method for cell cell:work.PLL 
+@K:CKID0006       Clock_Reset_0.Clock_Switch_0.Clock_To_PLL_3_2                                                                                                 CFG4                               1          Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.pll_inst_0                                                                                 No gated clock conversion method for cell cell:work.PLL 
 @K:CKID0007       Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded_1_sqmuxa_3845_i     CFG4                               1          Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[0]     No gated clock conversion method for cell cell:ACG4.SLE 
 @K:CKID0008       Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded_1_sqmuxa_3845_i     CFG4                               1          Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[0]     No gated clock conversion method for cell cell:ACG4.SLE 
-@K:CKID0010       Clock_Reset_0.PF_CLK_DIV_C2_0.PF_CLK_DIV_C2_0.I_CD                                                                                            clock definition on ICB_CLKDIV     2          Transceiver_Main_0.Synchronizer_0_2.Chain[0]                                                                                     No gated clock conversion method for cell cell:ACG4.SLE 
+@K:CKID0010       Clock_Reset_0.PF_CLK_DIV_C2_0.PF_CLK_DIV_C2_0.I_CD                                                                                            clock definition on ICB_CLKDIV     2          Transceiver_Main_0.Synchronizer_0_2.Chain[1]                                                                                     No gated clock conversion method for cell cell:ACG4.SLE 
 @K:CKID0011       Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.CTRL_CLK                                                          clock definition on port           32         Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN1                No gated clock conversion method for cell cell:ACG4.DFN1
 @K:CKID0012       Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.CTRL_CLK                                                          clock definition on port           32         Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN1                No gated clock conversion method for cell cell:ACG4.DFN1
 =======================================================================================================================================================================================================================================================================================================================================================================================================
@@ -643,11 +657,11 @@ Clock Tree ID     Driving Element                                               
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:03m:23s; CPU Time elapsed 0h:00m:11s; Memory used current: 156MB peak: 509MB)
+Start Writing Netlists (Real Time elapsed 0h:03m:26s; CPU Time elapsed 0h:00m:11s; Memory used current: 157MB peak: 509MB)
 
 Writing Analyst data base C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\Top_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:03m:33s; CPU Time elapsed 0h:00m:22s; Memory used current: 444MB peak: 509MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:03m:37s; CPU Time elapsed 0h:00m:21s; Memory used current: 445MB peak: 509MB)
 
 Writing Verilog Simulation files
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
@@ -662,13 +676,13 @@ Writing Verilog Simulation files
 @W: BW150 :|Clock work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock in set_clock_groups command cannot be found and will not be forward annotated
 @W: BW150 :|Clock work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock in set_clock_groups command cannot be found and will not be forward annotated
 
-Finished Writing Verilog Simulation files (Real Time elapsed 0h:03m:53s; CPU Time elapsed 0h:00m:42s; Memory used current: 440MB peak: 509MB)
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:03m:57s; CPU Time elapsed 0h:00m:41s; Memory used current: 440MB peak: 509MB)
 
 
-Finished Writing Netlists (Real Time elapsed 0h:03m:54s; CPU Time elapsed 0h:00m:42s; Memory used current: 440MB peak: 509MB)
+Finished Writing Netlists (Real Time elapsed 0h:03m:57s; CPU Time elapsed 0h:00m:42s; Memory used current: 440MB peak: 509MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:03m:57s; CPU Time elapsed 0h:00m:46s; Memory used current: 427MB peak: 509MB)
+Start final timing analysis (Real Time elapsed 0h:04m:01s; CPU Time elapsed 0h:00m:45s; Memory used current: 426MB peak: 509MB)
 
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_osc_c0\pf_osc_c0_0\pf_osc_c0_pf_osc_c0_0_pf_osc.v":13:17:13:25|Blackbox OSC_RC160MHZ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_init_monitor_c0\pf_init_monitor_c0_0\pf_init_monitor_c0_pf_init_monitor_c0_0_pf_init_monitor.v":38:53:38:58|Blackbox INIT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
@@ -685,18 +699,18 @@ Start final timing analysis (Real Time elapsed 0h:03m:57s; CPU Time elapsed 0h:0
 @W: MT420 |Found inferred clock PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.pll_inst_0_clkint_0.
 @W: MT420 |Found inferred clock PF_CCC_C7_PF_CCC_C7_0_PF_CCC_1|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C7_0_0.PF_CCC_C7_0.pll_inst_0_clkint_0.
 @W: MT420 |Found inferred clock Top|N_9_inferred_clock with period 10.00ns. Please declare a user-defined clock on net N_9.
-@W: MT646 |Found inferred clock EXT_Signals_InputSwitch|EXT_VectorSignals_3_inferred_clock[2] with period 10.00ns. Please declare a clock for each of the following:
+@W: MT646 |Found inferred clock EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2] with period 10.00ns. Please declare a clock for each of the following:
        net  Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.N_3
        net  EXT_Signals_0.EXT_Signals_InputSwitch_0.EXT_InputsVectorSignals_net_0[2]
 
-@W: MT646 |Found inferred clock EXT_Signals_InputSwitch|EXT_VectorSignals_4_inferred_clock[3] with period 10.00ns. Please declare a clock for each of the following:
+@W: MT646 |Found inferred clock EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3] with period 10.00ns. Please declare a clock for each of the following:
        net  Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.N_3
        net  EXT_Signals_0.EXT_Signals_InputSwitch_0.EXT_InputsVectorSignals_net_0[3]
 
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Fri May 24 11:06:22 2024
+# Timing report written on Sat May 25 10:06:58 2024
 #
 
 
@@ -724,12 +738,12 @@ Starting Clock                                                                  
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                               40.0 MHz      17.2 MHz       25.000        58.172        -1.327     generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
 Clock_Reset_0/PF_CLK_DIV_C2_0_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                             40.0 MHz      NA             25.000        NA            NA         generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
 Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                                                                    160.0 MHz     NA             6.250         NA            NA         declared                                                                 default_clkgroup     
-EXT_Signals_InputSwitch|EXT_VectorSignals_3_inferred_clock[2]                                                          100.0 MHz     NA             10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_6
-EXT_Signals_InputSwitch|EXT_VectorSignals_4_inferred_clock[3]                                                          100.0 MHz     NA             10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_7
+EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2]                                          100.0 MHz     NA             10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_6
+EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3]                                          100.0 MHz     NA             10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_7
 FTDI_CLK                                                                                                               125.0 MHz     255.6 MHz      8.000         3.912         4.088      declared                                                                 default_clkgroup     
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     151.8 MHz      10.000        6.588         2.580      inferred                                                                 Inferred_clkgroup_0_1
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     150.4 MHz      10.000        6.651         2.580      inferred                                                                 Inferred_clkgroup_0_1
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                                        100.0 MHz     271.4 MHz      10.000        3.685         6.315      inferred                                                                 Inferred_clkgroup_0_2
-PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                      100.0 MHz     145.6 MHz      10.000        6.870         3.130      inferred                                                                 Inferred_clkgroup_0_3
+PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                      100.0 MHz     143.5 MHz      10.000        6.967         3.033      inferred                                                                 Inferred_clkgroup_0_3
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC_1|pll_inst_0_clkint_0_inferred_clock                                                      100.0 MHz     2974.4 MHz     10.000        0.336         9.664      inferred                                                                 Inferred_clkgroup_0_4
 Top|N_9_inferred_clock                                                                                                 100.0 MHz     2974.4 MHz     10.000        0.336         9.664      inferred                                                                 Inferred_clkgroup_0_5
 Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     125.0 MHz     53.7 MHz       8.000         18.615        3.421      declared                                                                 default_clkgroup     
@@ -782,7 +796,7 @@ Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                        
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            |  25.000      22.483  |  No paths    -      |  No paths    -      |  No paths    -    
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     FTDI_CLK                                                                                                            |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  10.000      3.412   |  10.000      6.919  |  5.000       2.580  |  5.000       4.664
+PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  10.000      3.349   |  10.000      6.919  |  5.000       2.580  |  5.000       4.664
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_4_inferred_clock                                                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_1|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
@@ -795,15 +809,15 @@ PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock               
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  10.000      3.130   |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   EXT_Signals_InputSwitch|EXT_VectorSignals_3_inferred_clock[2]                                                       |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   EXT_Signals_InputSwitch|EXT_VectorSignals_4_inferred_clock[3]                                                       |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  10.000      3.033   |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2]                                       |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3]                                       |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC_1|pll_inst_0_clkint_0_inferred_clock                                                   Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC_1|pll_inst_0_clkint_0_inferred_clock                                                   PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC_1|pll_inst_0_clkint_0_inferred_clock                                                   PF_CCC_C7_PF_CCC_C7_0_PF_CCC_1|pll_inst_0_clkint_0_inferred_clock                                                   |  10.000      9.664   |  No paths    -      |  No paths    -      |  No paths    -    
 Top|N_9_inferred_clock                                                                                              Top|N_9_inferred_clock                                                                                              |  10.000      9.664   |  No paths    -      |  No paths    -      |  No paths    -    
-EXT_Signals_InputSwitch|EXT_VectorSignals_3_inferred_clock[2]                                                       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-EXT_Signals_InputSwitch|EXT_VectorSignals_4_inferred_clock[3]                                                       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2]                                       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3]                                       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock                                                   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 ===============================================================================================================================================================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -831,10 +845,10 @@ Instance                                                                        
                                                                                                                                             Clock                                                                                                                            
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Transceiver_Main_0.Synchronizer_0_2.Chain[1]                                                                                                Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       Chain[1]                         0.218       -1.327
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN2                           Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     DFN1     Q       I_XCVR_LANE0_SD_DFN2_Q           0.094       22.483
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN2                           Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     DFN1     Q       I_XCVR_LANE0_SD_DFN2_Q           0.094       22.483
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[1]                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[1]                        0.218       22.654
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN2                           Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     DFN1     Q       I_XCVR_LANE0_SD_DFN2_Q           0.094       22.483
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[1]                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[1]                        0.218       22.654
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[1]                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[1]                        0.218       22.654
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[3]                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[3]                        0.218       22.736
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[3]                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[3]                        0.218       22.736
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.sync_st[1]                 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       sync_st[1]                       0.201       23.002
@@ -1122,16 +1136,16 @@ Starting Points with Worst Slack
 Instance                                                                   Reference                                                           Type     Pin     Net                            Time        Slack
                                                                            Clock                                                                                                                                
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_enable     0.218       2.580
 Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable                         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_enable     0.218       2.580
+Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable                           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       SPI_interface_0_spi_enable     0.218       2.580
 Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15_rep               PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       dff_15_rep                     0.218       2.595
 Clock_Reset_0.CORERESET_PF_C0_0.CORERESET_PF_C0_0.dff_15                   PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       dff                            0.218       2.883
-AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.RD_INDEX[9]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[9]                    0.218       3.412
-AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.RD_INDEX[8]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[8]                    0.218       3.433
-AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.RD_INDEX[7]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[7]                    0.218       3.634
-AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.RD_INDEX[9]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[9]                    0.218       3.720
-AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.RD_INDEX[7]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[7]                    0.218       3.742
-AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.RD_INDEX[8]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[8]                    0.218       3.755
+AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.RD_INDEX[9]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[9]                    0.218       3.349
+AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.RD_INDEX[8]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[8]                    0.218       3.415
+AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.RD_INDEX[6]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[6]                    0.218       3.693
+AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.RD_INDEX[9]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[9]                    0.218       3.788
+AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.RD_INDEX[8]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[8]                    0.218       3.789
+AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.RD_INDEX[7]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX[7]                    0.218       3.858
 ================================================================================================================================================================================================================
 
 
@@ -1142,16 +1156,16 @@ Ending Points with Worst Slack
 Instance                                              Reference                                                           Type     Pin     Net          Time         Slack
                                                       Clock                                                                                                               
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[0]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_449_i      5.000        2.580
 Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[0]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_23_i       5.000        2.580
-Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_447_i      5.000        2.580
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[0]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_449_i      5.000        2.580
 Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[2]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_415_i      5.000        2.580
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[2]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       N_447_i      5.000        2.580
 Controler_0.SPI_LMX_0.spi_master_0.INT_ss_n           PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0_0.spi_master_0.INT_ss_n         PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
-Controler_0.SPI_LMX_0_0.spi_master_0.busy             PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0.spi_master_0.busy               PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
-Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[0]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
+Controler_0.SPI_LMX_0_0.spi_master_0.busy             PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[0]       PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[0]     PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      ALn     dff_arst     5.000        2.595
 ==========================================================================================================================================================================
 
 
@@ -1171,27 +1185,27 @@ Path information for path number 1:
     = Slack (non-critical) :                 2.580
 
     Number of logic level(s):                3
-    Starting point:                          Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable / Q
-    Ending point:                            Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[0] / D
+    Starting point:                          Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable / Q
+    Ending point:                            Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[0] / D
     The start point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
     The end   point is clocked by            PF_CCC_C0_PF_CCC_C0_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [falling] (rise=0.000 fall=5.000 period=10.000) on pin CLK
 
-Instance / Net                                                                      Pin      Pin               Arrival     No. of    
-Name                                                                       Type     Name     Dir     Delay     Time        Fan Out(s)
--------------------------------------------------------------------------------------------------------------------------------------
-Controler_0.SPI_LMX_0.SPI_interface_0.spi_enable                           SLE      Q        Out     0.218     0.218 r     -         
-SPI_interface_0_spi_enable                                                 Net      -        -       0.579     -           5         
-Controler_0.SPI_LMX_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     C        In      -         0.797 r     -         
-Controler_0.SPI_LMX_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     Y        Out     0.148     0.945 r     -         
-receive_transmit_0_sqmuxa                                                  Net      -        -       0.547     -           3         
-Controler_0.SPI_LMX_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     A        In      -         1.492 r     -         
-Controler_0.SPI_LMX_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     Y        Out     0.051     1.543 r     -         
-un1_receive_transmit_0_sqmuxa_0_0                                          Net      -        -       0.547     -           3         
-Controler_0.SPI_LMX_0.spi_master_0.fsm_timer_RNO[0]                        CFG4     D        In      -         2.090 r     -         
-Controler_0.SPI_LMX_0.spi_master_0.fsm_timer_RNO[0]                        CFG4     Y        Out     0.212     2.302 f     -         
-N_23_i                                                                     Net      -        -       0.118     -           1         
-Controler_0.SPI_LMX_0.spi_master_0.fsm_timer[0]                            SLE      D        In      -         2.420 f     -         
-=====================================================================================================================================
+Instance / Net                                                                        Pin      Pin               Arrival     No. of    
+Name                                                                         Type     Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------
+Controler_0.SPI_LMX_0_0.SPI_interface_0.spi_enable                           SLE      Q        Out     0.218     0.218 r     -         
+SPI_interface_0_spi_enable                                                   Net      -        -       0.579     -           5         
+Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     C        In      -         0.797 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.receive_transmit_0_sqmuxa_0_a3_0_a3     CFG3     Y        Out     0.148     0.945 r     -         
+receive_transmit_0_sqmuxa                                                    Net      -        -       0.547     -           3         
+Controler_0.SPI_LMX_0_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     A        In      -         1.492 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.un1_receive_transmit_0_sqmuxa_0_0       CFG3     Y        Out     0.051     1.543 r     -         
+un1_receive_transmit_0_sqmuxa_0_0_0                                          Net      -        -       0.547     -           3         
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer_RNO[0]                        CFG4     D        In      -         2.090 r     -         
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer_RNO[0]                        CFG4     Y        Out     0.212     2.302 f     -         
+N_449_i                                                                      Net      -        -       0.118     -           1         
+Controler_0.SPI_LMX_0_0.spi_master_0.fsm_timer[0]                            SLE      D        In      -         2.420 f     -         
+=======================================================================================================================================
 Total path delay (propagation time + setup) of 2.420 is 0.629(26.0%) logic and 1.791(74.0%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
@@ -1293,21 +1307,21 @@ Detailed Report for Clock: PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_in
 Starting Points with Worst Slack
 ********************************
 
-                                                                                                                                       Starting                                                                                                                      Arrival          
-Instance                                                                                                                               Reference                                                             Type     Pin     Net                                    Time        Slack
-                                                                                                                                       Clock                                                                                                                                          
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.FIFOs_Reader_0.state_reg[2]                                                                                               PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFOs_Reader_0_Sample_RAM_W_Enable     0.218       3.130
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[1]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[1]                      0.201       3.536
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[3]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[3]                      0.218       3.633
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[4]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[4]                      0.218       3.677
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[5]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[5]                      0.218       3.719
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[6]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[6]                      0.201       3.737
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[7]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[7]                      0.218       3.828
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[2]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[2]                      0.218       3.914
-Data_Block_0.FIFOs_Reader_0.BlockF_Counter[0]                                                                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[0]                      0.218       4.135
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_1[4]     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       RD_INDEX_1[4]                          0.218       5.005
-======================================================================================================================================================================================================================================================================================
+                                                                                            Starting                                                                                                                      Arrival          
+Instance                                                                                    Reference                                                             Type     Pin     Net                                    Time        Slack
+                                                                                            Clock                                                                                                                                          
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data_Block_0.FIFOs_Reader_0.state_reg[2]                                                    PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       FIFOs_Reader_0_Sample_RAM_W_Enable     0.218       3.033
+Data_Block_0.FIFOs_Reader_0.BlockF_Counter[0]                                               PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[0]                      0.201       3.997
+Data_Block_0.FIFOs_Reader_0.BlockF_Counter[2]                                               PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[2]                      0.218       4.466
+Data_Block_0.Communication_Builder_0.state_reg[1]                                           PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       state_reg[1]                           0.218       4.559
+Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk16\.U_corefifo_async.genblk10\.afull_r     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       afull_r                                0.218       4.572
+Data_Block_0.FIFOs_Reader_0.BlockF_Counter[4]                                               PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[4]                      0.201       4.595
+Data_Block_0.Communication_Builder_0.state_reg[12]                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       state_reg[12]                          0.218       4.639
+Data_Block_0.FIFOs_Reader_0.BlockF_Counter[5]                                               PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[5]                      0.218       4.688
+Data_Block_0.Communication_Builder_0.state_reg[13]                                          PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       state_reg[13]                          0.218       4.698
+Data_Block_0.FIFOs_Reader_0.BlockF_Counter[6]                                               PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     SLE      Q       BlockF_Counter[6]                      0.218       4.732
+===========================================================================================================================================================================================================================================
 
 
 Ending Points with Worst Slack
@@ -1317,16 +1331,16 @@ Ending Points with Worst Slack
 Instance                                                                                                         Reference                                                             Type        Pin          Net                                     Time         Slack
                                                                                                                  Clock                                                                                                                                                    
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0         PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1         PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C2         PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[2]     9.385        3.130
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C2       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[2]     9.385        3.130
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0         PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C0       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[0]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1         PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C1     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[1]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C2       PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[2]     9.385        3.033
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C2     PF_CCC_C7_PF_CCC_C7_0_PF_CCC_0|pll_inst_0_clkint_0_inferred_clock     RAM1K20     A_DIN[0]     FIFOs_Reader_0_Sample_RAM_W_Data[2]     9.385        3.033
 ==========================================================================================================================================================================================================================================================================
 
 
@@ -1341,9 +1355,9 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.385
 
-    - Propagation time:                      6.255
+    - Propagation time:                      6.352
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 3.130
+    = Slack (non-critical) :                 3.033
 
     Number of logic level(s):                3
     Starting point:                          Data_Block_0.FIFOs_Reader_0.state_reg[2] / Q
@@ -1355,19 +1369,19 @@ Instance / Net                                                                  
 Name                                                                                                              Type        Name         Dir     Delay     Time        Fan Out(s)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Data_Block_0.FIFOs_Reader_0.state_reg[2]                                                                          SLE         Q            Out     0.218     0.218 r     -         
-FIFOs_Reader_0_Sample_RAM_W_Enable                                                                                Net         -            -       3.101     -           1077      
-Data_Block_0.Trigger_Top_Part_0.COREFIFO_C5_0.COREFIFO_C5_0.genblk17\.u_corefifo_fwft.m60                         CFG3        A            In      -         3.319 r     -         
-Data_Block_0.Trigger_Top_Part_0.COREFIFO_C5_0.COREFIFO_C5_0.genblk17\.u_corefifo_fwft.m60                         CFG3        Y            Out     0.051     3.370 r     -         
-FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable                                                                       Net         -            -       1.080     -           121       
-Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.Q[0]                                                 CFG3        C            In      -         4.450 r     -         
-Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.Q[0]                                                 CFG3        Y            Out     0.148     4.598 f     -         
+FIFOs_Reader_0_Sample_RAM_W_Enable                                                                                Net         -            -       3.101     -           1075      
+Data_Block_0.FIFOs_Reader_0.Block_1_Sample_FIFO_R_Enable_0_a2                                                     CFG3        C            In      -         3.319 r     -         
+Data_Block_0.FIFOs_Reader_0.Block_1_Sample_FIFO_R_Enable_0_a2                                                     CFG3        Y            Out     0.148     3.467 r     -         
+FIFOs_Reader_0_Block_1_Sample_FIFO_R_Enable                                                                       Net         -            -       1.080     -           119       
+Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.Q[0]                                                 CFG3        C            In      -         4.547 r     -         
+Data_Block_0.Input_Data_Part_1.COREFIFO_C4_0_2.COREFIFO_C4_0.Q[0]                                                 CFG3        Y            Out     0.148     4.695 f     -         
 Input_Data_Part_1_Q_3[0]                                                                                          Net         -            -       0.118     -           1         
-Data_Block_0.Trigger_Top_Part_0.COREFIFO_C5_0.COREFIFO_C5_0.genblk17\.u_corefifo_fwft.m48                         CFG4        D            In      -         4.716 f     -         
-Data_Block_0.Trigger_Top_Part_0.COREFIFO_C5_0.COREFIFO_C5_0.genblk17\.u_corefifo_fwft.m48                         CFG4        Y            Out     0.192     4.908 f     -         
+Data_Block_0.FIFOs_Reader_0.Sample_RAM_W_Data[48]                                                                 CFG4        D            In      -         4.813 f     -         
+Data_Block_0.FIFOs_Reader_0.Sample_RAM_W_Data[48]                                                                 CFG4        Y            Out     0.192     5.005 f     -         
 FIFOs_Reader_0_Sample_RAM_W_Data[48]                                                                              Net         -            -       1.347     -           16        
-Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C48     RAM1K20     A_DIN[0]     In      -         6.255 f     -         
+Data_Block_0.Sample_RAM_Block_0.PF_DPSRAM_C5_0_1_0.PF_DPSRAM_C5_0.PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_R0C48     RAM1K20     A_DIN[0]     In      -         6.352 f     -         
 ===================================================================================================================================================================================
-Total path delay (propagation time + setup) of 6.870 is 1.224(17.8%) logic and 5.646(82.2%) route.
+Total path delay (propagation time + setup) of 6.967 is 1.321(19.0%) logic and 5.646(81.0%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -2161,10 +2175,10 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:04m:00s; CPU Time elapsed 0h:00m:48s; Memory used current: 434MB peak: 509MB)
+Finished final timing analysis (Real Time elapsed 0h:04m:03s; CPU Time elapsed 0h:00m:48s; Memory used current: 434MB peak: 509MB)
 
 
-Finished timing report (Real Time elapsed 0h:04m:00s; CPU Time elapsed 0h:00m:49s; Memory used current: 434MB peak: 509MB)
+Finished timing report (Real Time elapsed 0h:04m:03s; CPU Time elapsed 0h:00m:48s; Memory used current: 434MB peak: 509MB)
 
 ---------------------------------------
 Resource Usage Report for Top 
@@ -2187,21 +2201,21 @@ RCLKINT         4 uses
 TX_PLL          2 uses
 XCVR_8B10B      2 uses
 XCVR_APB_LINK_V2  2 uses
-CFG1           180 uses
-CFG2           22824 uses
-CFG3           7596 uses
-CFG4           45379 uses
+CFG1           179 uses
+CFG2           22846 uses
+CFG3           7458 uses
+CFG4           45498 uses
 
 Carry cells:
-ARI1            4335 uses - used for arithmetic functions
-ARI1            30020 uses - used for Wide-Mux implementation
-Total ARI1      34355 uses
+ARI1            4347 uses - used for arithmetic functions
+ARI1            30097 uses - used for Wide-Mux implementation
+Total ARI1      34444 uses
 
 
 Sequential Cells: 
-SLE            33170 uses
+SLE            33222 uses
 SLE_DEBUG      2 uses
-Total SLE          33172 uses
+Total SLE          33224 uses
 
 DSP Blocks:    0 of 924 (0%)
 
@@ -2220,7 +2234,7 @@ Global Clock Buffers: 21
 RAM/ROM usage summary
 Total Block RAMs (RAM1K20) : 933 of 952 (98%)
 
-Total LUTs:    110334
+Total LUTs:    110425
 
 Extra resources required for RAM and MACC_PA interface logic during P&R:
 
@@ -2229,14 +2243,14 @@ RAM1K20  Interface Logic : SLEs = 33588; LUTs = 33588;
 MACC_PA     Interface Logic : SLEs = 0; LUTs = 0;
 MACC_PA_BC_ROM     Interface Logic : SLEs = 0; LUTs = 0;
 
-Total number of SLEs after P&R:  33172 + 0 + 33588 + 0 = 66760;
-Total number of LUTs after P&R:  110334 + 0 + 33588 + 0 = 143922;
+Total number of SLEs after P&R:  33224 + 0 + 33588 + 0 = 66812;
+Total number of LUTs after P&R:  110425 + 0 + 33588 + 0 = 144013;
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:04m:01s; CPU Time elapsed 0h:00m:49s; Memory used current: 92MB peak: 509MB)
+At Mapper Exit (Real Time elapsed 0h:04m:04s; CPU Time elapsed 0h:00m:49s; Memory used current: 91MB peak: 509MB)
 
-Process took 0h:04m:01s realtime, 0h:00m:49s cputime
-# Fri May 24 11:06:24 2024
+Process took 0h:04m:04s realtime, 0h:00m:49s cputime
+# Sat May 25 10:06:59 2024
 
 ###########################################################]

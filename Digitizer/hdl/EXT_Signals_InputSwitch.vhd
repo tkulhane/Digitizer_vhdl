@@ -55,7 +55,13 @@ begin
 ------------------------------------------------------------------------------------------------------------ 
 
     SwitchGen_GEN : for i in 0 to (g_SignalVectorWidth - 1) generate
-        EXT_VectorSignals(i) <= IO_Block_Y(EXT_Select_array(i));
+        
+        EXT_VectorSignals(i) <=     '0' when EXT_Select_array(i)=255 else
+                                    '1' when EXT_Select_array(i)=254 else
+                                    IO_Block_Y(EXT_Select_array(i));    
+        
+        
+        
     end generate SwitchGen_GEN;  
 
 

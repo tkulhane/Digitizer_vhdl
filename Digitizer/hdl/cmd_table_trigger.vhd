@@ -6,6 +6,7 @@ package cmd_table_trigger is
     constant CMD_TRG_ENABLE                         : std_logic_vector(7 downto 0) := x"01";
     constant CMD_TRG_MODE                           : std_logic_vector(7 downto 0) := x"02";
     constant CMD_TRG_ABORT_MODE                     : std_logic_vector(7 downto 0) := x"03";
+    constant CMD_TRG_TRIGGER_SELECT                 : std_logic_vector(7 downto 0) := x"04";
 
     constant CMD_TRG_THRESHOLD                      : std_logic_vector(7 downto 0) := x"11";
     
