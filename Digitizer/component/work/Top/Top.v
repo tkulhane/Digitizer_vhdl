@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 24 15:32:58 2024
+// Created by SmartDesign Tue May 28 12:21:28 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -842,6 +842,7 @@ Data_Block Data_Block_0(
         .Clock                         ( Clock_Reset_0_Logic_Clock ),
         .CTRL_Reset_N                  ( Clock_Reset_0_Main_RESET_N_1 ),
         .CTRL_Clock                    ( Clock_Reset_0_Main_CLOCK_0 ),
+        .EXT_TriggerInput              ( EXT_Signals_0_EXT_InputsVectorSignals10to10 ),
         .C_addr_frame                  ( Controler_0_TRG_addr ),
         .C_write_data_frame            ( Controler_0_TRG_data ),
         .Input_Data_0_00               ( Transceiver_Main_0_Output_Data_1 ),
@@ -852,7 +853,6 @@ Data_Block Data_Block_0(
         .Input_Data_3_01               ( Transceiver_Main_0_Output_Data_6 ),
         .Input_Data_2_01               ( Transceiver_Main_0_Output_Data_7 ),
         .Input_Data_1_01               ( Transceiver_Main_0_Output_Data_4 ),
-        .EXT_TriggerInput              ( EXT_Signals_0_EXT_InputsVectorSignals10to10 ),
         // Outputs
         .C_busy                        ( Data_Block_0_C_busy ),
         .Communication_Empty           ( Data_Block_0_Communication_Empty ),
@@ -868,9 +868,9 @@ Data_Block Data_Block_0(
         .Control_Enable_Out            ( Data_Block_0_Control_Enable_Out ),
         .Fifo_NotFree_Out              ( Data_Block_0_Fifo_NotFree_Out ),
         .Control_Abort_Out             ( Data_Block_0_Control_Abort_Out ),
+        .SelfTrigger_Out               ( Data_Block_0_SelfTrigger_Out ),
         .C_read_data_frame             ( Data_Block_0_C_read_data_frame ),
-        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ),
-        .SelfTrigger_Out               ( Data_Block_0_SelfTrigger_Out ) 
+        .Communication_Data_Frame      ( Data_Block_0_Communication_Data_Frame ) 
         );
 
 //--------EXT_Signals

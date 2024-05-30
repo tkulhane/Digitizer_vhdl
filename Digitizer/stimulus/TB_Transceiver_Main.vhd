@@ -29,6 +29,8 @@ architecture behavioral of TB_Transceiver_Main is
     constant REF_Clock_PERIOD : time := 6.25 ns; 
     --constant REF_Clock_PERIOD : time := 8 ns; 
     constant CTRL_CLock_40M_PERIOD : time := 25 ns; 
+    --constant LANE_CLK_REF_PERIOD  : time := 6.25 ns; 
+    constant LANE_CLK_REF_PERIOD  : time := 8 ns; 
 
     
     
@@ -37,6 +39,8 @@ architecture behavioral of TB_Transceiver_Main is
     
     signal REF_Clock : std_logic := '0';
     signal CTRL_CLock_40M : std_logic := '0';
+    signal REF_Reset_N : std_logic := '0';
+    signal LANE_CLK_REF : std_logic := '0';
     
     signal Gen_Enable : std_logic := '1';
 
@@ -89,6 +93,8 @@ architecture behavioral of TB_Transceiver_Main is
             LANE0_RXD_N : in std_logic;
             LANE1_RXD_P : in std_logic;
             REF_Clock : in std_logic;
+            REF_Reset_N : in std_logic;
+            LANE_CLK_REF : in std_logic;
             CTRL_Clock_40M : in std_logic;
             Logic_Clock : in std_logic;
             Logic_Reset_N : in std_logic;
@@ -209,10 +215,13 @@ begin
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
     
-    REF_Clock <= not REF_Clock after (REF_Clock_PERIOD / 2.0 );
+    --REF_Clock <= not REF_Clock after (REF_Clock_PERIOD / 2.0 );
     CTRL_CLock_40M <= not CTRL_CLock_40M after (CTRL_CLock_40M_PERIOD / 2.0 );
+    LANE_CLK_REF <= not LANE_CLK_REF after (LANE_CLK_REF_PERIOD / 2.0 );
 
 
+    REF_Clock <= SYSCLK;
+    REF_Reset_N <= NSYSRESET;
 
     -- Instantiate Unit Under Test:  Transceiver_Main
     Transceiver_Main_0 : Transceiver_Main
@@ -225,8 +234,9 @@ begin
             LANE1_RXD_P => LANE1_P,
             LANE1_RXD_N => LANE1_N,
 
-
+            LANE_CLK_REF => LANE_CLK_REF,
             REF_Clock => REF_Clock,
+            REF_Reset_N => REF_Reset_N,
             CTRL_Clock_40M => CTRL_Clock_40M,
             Logic_Clock => SYSCLK,
             Logic_Reset_N => NSYSRESET,
@@ -311,9 +321,9 @@ begin
 
         wait for 70 us;
 
-        SEND_CMD( X"01", X"0001", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        --SEND_CMD( X"01", X"0001", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
         wait for 2 us;
-        SEND_CMD( X"01", X"0000", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
+        --SEND_CMD( X"01", X"0000", '0', SYSCLK, CTRL_addr_frame, CTRL_write_data_frame, CTRL_enable_cmd, CTRL_write_read, CTRL_busy);
 
 
         wait;

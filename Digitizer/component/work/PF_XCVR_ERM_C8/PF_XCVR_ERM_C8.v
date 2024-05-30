@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri Feb 23 11:25:21 2024
+// Created by SmartDesign Wed May 29 15:12:00 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -18,7 +18,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "EXPOSE_FWF_EN_PORTS:false" \
 "SHOW_UNIVERSAL_SOLN_PORTS:true" \
 "UI_CDR_LOCK_MODE:Lock to data" \
-"UI_CDR_REFERENCE_CLK_FREQ:125.0" \
+"UI_CDR_REFERENCE_CLK_FREQ:80.0" \
 "UI_CDR_REFERENCE_CLK_SOURCE:Fabric" \
 "UI_CDR_REFERENCE_CLK_TOLERANCE:1" \
 "UI_ENABLE_32BIT_DATA_WIDTH:false" \
@@ -56,9 +56,9 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "UI_TX_CLK_DIV_FACTOR:1" \
 "UI_TX_DATA_RATE:10000" \
 "UI_TX_PCS_FAB_IF_WIDTH:64" \
-"UI_TX_RX_MODE:Duplex" \
+"UI_TX_RX_MODE:Tx and Rx (Independent)" \
 "UI_USE_INTERFACE_CLK_AS_PLL_REFCLK:false" \
-"UI_XCVR_RX_CALIBRATION:None (CDR)" \
+"UI_XCVR_RX_CALIBRATION:None (DFE)" \
 "UI_XCVR_RX_DATA_EYE_CALIBRATION:false" \
 "UI_XCVR_RX_DFE_COEFF_CALIBRATION:false" \
 "UI_XCVR_RX_ENHANCED_MANAGEMENT:true" \
@@ -73,6 +73,7 @@ module PF_XCVR_ERM_C8(
     CTRL_CLK,
     LANE0_8B10B_TX_K,
     LANE0_CDR_REF_CLK_FAB,
+    LANE0_CLK_REF,
     LANE0_LOS,
     LANE0_PCS_ARST_N,
     LANE0_PMA_ARST_N,
@@ -105,6 +106,7 @@ input         CTRL_ARST_N;
 input         CTRL_CLK;
 input  [7:0]  LANE0_8B10B_TX_K;
 input         LANE0_CDR_REF_CLK_FAB;
+input         LANE0_CLK_REF;
 input         LANE0_LOS;
 input         LANE0_PCS_ARST_N;
 input         LANE0_PMA_ARST_N;
@@ -165,6 +167,7 @@ wire          I_XCVR_LANE0_SD_SLE_DEBUG_Q;
 wire   [7:0]  LANE0_8B10B_RX_K_net_0;
 wire   [7:0]  LANE0_8B10B_TX_K;
 wire          LANE0_CDR_REF_CLK_FAB;
+wire          LANE0_CLK_REF;
 wire          LANE0_LOS;
 wire          LANE0_PCS_ARST_N;
 wire          LANE0_PMA_ARST_N;
@@ -424,7 +427,7 @@ PF_XCVR_APBLINK_V I_XCVR_APBLINK_V_0(
 
 //--------CORELANEMSTR   -   Actel:DirectCore:CORELANEMSTR:2.1.100
 CORELANEMSTR #( 
-        .MODE            ( 2 ),
+        .MODE            ( 0 ),
         .SIMULATION_MODE ( 1 ) )
 I_XCVR_CORELANEMSTR_0(
         // Inputs
@@ -486,7 +489,7 @@ I_XCVR_CORERFD_0(
         // Inputs
         .ARST_N        ( CTRL_ARST_N ),
         .CLK_IN        ( LANE0_RX_CLK_R_net_0 ),
-        .CLK_REF       ( LANE0_TX_CLK_R_net_0 ),
+        .CLK_REF       ( LANE0_CLK_REF ),
         .XCVR_RX_READY ( I_XCVR_LANE0_RX_READY ),
         // Outputs
         .RX_FINE_LOCK  ( LANE0_RX_READY_net_0 ) 

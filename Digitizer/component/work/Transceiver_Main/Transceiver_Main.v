@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 24 12:13:17 2024
+// Created by SmartDesign Tue May 28 12:19:04 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -527,6 +527,7 @@ Transceiver_LanesConnection Transceiver_LanesConnection_0(
         .CTRL_Clock                   ( CTRL_Clock_40M ),
         .CTRL_Reset_N                 ( Synchronizer_0_2_Data_Out ),
         .REF_Clock                    ( REF_Clock ),
+        .LANE_CLK_REF                 ( Logic_Clock ),
         .LANE0_RXD_P                  ( LANE0_RXD_P ),
         .LANE0_RXD_N                  ( LANE0_RXD_N ),
         .LANE1_RXD_P                  ( LANE1_RXD_P ),

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Tue Apr  9 16:59:48 2024
+// Created by Microsemi SmartDesign Wed May 29 15:12:00 2024
 // Parameters for CORELCKMGT
 //--------------------------------------------------------------------
 

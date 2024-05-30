@@ -17,6 +17,7 @@ entity Transceiver_LanesConnection is
     CTRL_Reset_N : in std_logic;
 
     REF_Clock : in std_logic;
+    LANE_CLK_REF : in std_logic;
 
     LANE0_RXD_P : in std_logic;
     LANE0_RXD_N : in std_logic;
@@ -158,6 +159,7 @@ architecture rtl of Transceiver_LanesConnection is
             Read_Enable : in std_logic;
             Logic_Reser_N : in std_logic;
             REF_CLK : in std_logic;
+            LANE_CLK_REF : in std_logic;
             LANE0_RXD_P : in std_logic;
             LANE0_RXD_N : in std_logic;
             SYNC_OK : in std_logic;
@@ -312,6 +314,7 @@ begin
             CTRL_RST_N => CTRL_Reset_N,
             CTRL_CLK => CTRL_Clock,
             REF_CLK => REF_Clock,
+            LANE_CLK_REF => LANE_CLK_REF,
 
             --inputs
             Input_Data_0 => InputData_Array(0),
@@ -361,6 +364,7 @@ begin
             CTRL_RST_N => CTRL_Reset_N,
             CTRL_CLK => CTRL_Clock,
             REF_CLK => REF_Clock,
+            LANE_CLK_REF => LANE_CLK_REF,
 
             --inputs
             Input_Data_0 => InputData_Array(1),
