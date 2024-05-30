@@ -25,12 +25,14 @@ end TB_Transceiver_Main;
 
 architecture behavioral of TB_Transceiver_Main is
 
-    constant SYSCLK_PERIOD : time := 8 ns; 
-    constant REF_Clock_PERIOD : time := 6.25 ns; 
-    --constant REF_Clock_PERIOD : time := 8 ns; 
+
     constant CTRL_CLock_40M_PERIOD : time := 25 ns; 
-    --constant LANE_CLK_REF_PERIOD  : time := 6.25 ns; 
-    constant LANE_CLK_REF_PERIOD  : time := 8 ns; 
+    
+    --constant SYSCLK_PERIOD : time := 8 ns; 
+    --constant LANE_CLK_REF_PERIOD  : time := 8 ns; 
+    
+    constant SYSCLK_PERIOD : time := 6.4 ns; 
+    constant LANE_CLK_REF_PERIOD  : time := 6.4 ns; 
 
     
     
@@ -92,9 +94,10 @@ architecture behavioral of TB_Transceiver_Main is
             LANE0_RXD_P : in std_logic;
             LANE0_RXD_N : in std_logic;
             LANE1_RXD_P : in std_logic;
+            CTRL_Clock : in std_logic;
+            CTRL_Reset_N : in std_logic;
             REF_Clock : in std_logic;
             REF_Reset_N : in std_logic;
-            LANE_CLK_REF : in std_logic;
             CTRL_Clock_40M : in std_logic;
             Logic_Clock : in std_logic;
             Logic_Reset_N : in std_logic;
@@ -234,7 +237,8 @@ begin
             LANE1_RXD_P => LANE1_P,
             LANE1_RXD_N => LANE1_N,
 
-            LANE_CLK_REF => LANE_CLK_REF,
+            CTRL_Clock => SYSCLK,
+            CTRL_Reset_N => NSYSRESET,
             REF_Clock => REF_Clock,
             REF_Reset_N => REF_Reset_N,
             CTRL_Clock_40M => CTRL_Clock_40M,

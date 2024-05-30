@@ -1,8 +1,8 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Wed May 29 15:12:00 2024
+// Created by Microsemi SmartDesign Thu May 30 13:18:33 2024
 // Parameters for CORELANEMSTR
 //--------------------------------------------------------------------
 
 
-parameter MODE = 0;
+parameter MODE = 2;
 parameter SIMULATION_MODE = 1;

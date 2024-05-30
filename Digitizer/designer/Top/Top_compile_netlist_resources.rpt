@@ -1,6 +1,6 @@
 Compile Report
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
-Date: Tue May 28 12:30:00 2024
+Date: Thu May 30 17:24:23 2024
 
 Device Selection
 +--------------------------------------------+-------------+
@@ -30,7 +30,7 @@ Resource Usage
 +---------------------------+--------+--------+------------+
 | Type                      | Used   | Total  | Percentage |
 +---------------------------+--------+--------+------------+
-| 4LUT                      | 144567 | 299544 | 48.26      |
+| 4LUT                      | 144678 | 299544 | 48.30      |
 | DFF                       | 67113  | 299544 | 22.41      |
 | I/O Register              | 0      | 1536   | 0.00       |
 | User I/O                  | 124    | 512    | 24.22      |
@@ -58,26 +58,26 @@ Detailed Logic Resource Usage
 +-----------------------+--------+-------+
 | Type                  | 4LUT   | DFF   |
 +-----------------------+--------+-------+
-| Fabric Logic          | 110691 | 33237 |
+| Fabric Logic          | 110802 | 33237 |
 | uSRAM Interface Logic | 0      | 0     |
 | LSRAM Interface Logic | 33876  | 33876 |
 | Math Interface Logic  | 0      | 0     |
-| Total Used            | 144567 | 67113 |
+| Total Used            | 144678 | 67113 |
 +-----------------------+--------+-------+
 
 Detailed Carry Chains Resource Usage
 +--------+------+
 | Length | Used |
 | 6      | 4    |
-| 7      | 49   |
-| 8      | 34   |
-| 9      | 20   |
+| 7      | 47   |
+| 8      | 38   |
+| 9      | 22   |
 | 10     | 34   |
-| 11     | 48   |
-| 12     | 33   |
-| 13     | 10   |
+| 11     | 47   |
+| 12     | 32   |
+| 13     | 8    |
 | 14     | 6    |
-| 15     | 19   |
+| 15     | 18   |
 | 16     | 31   |
 | 17     | 8    |
 | 18     | 1    |
@@ -85,21 +85,21 @@ Detailed Carry Chains Resource Usage
 | 20     | 3    |
 | 21     | 3    |
 | 30     | 1    |
-| 32     | 4    |
-| 33     | 22   |
+| 32     | 8    |
+| 33     | 18   |
 | 129    | 1    |
-| Total  | 332  |
+| Total  | 331  |
 +--------+------+
 
 Detailed 4LUT Groups Resource Usage
 +--------+------+
 | Length | Used |
-| 2      | 2661 |
-| 5      | 1013 |
-| 10     | 103  |
-| 22     | 19   |
-| 46     | 397  |
-| Total  | 4193 |
+| 2      | 2590 |
+| 5      | 895  |
+| 10     | 89   |
+| 22     | 27   |
+| 46     | 412  |
+| Total  | 4013 |
 +--------+------+
 
 I/O Function
@@ -123,17 +123,17 @@ Nets assigned to chip global resources
 | 10424  | INT_NET | Net   : Clock_Reset_0_Logic_Clock                                                            |
 |        |         | Driver: Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/clkint_0/U0_RGB1                               |
 |        |         | Source: NETLIST                                                                              |
+| 9346   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX_Z[3]               |
+|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX_RNITDG7[3]/U0_RGB1 |
+|        |         | Source: NETLIST                                                                              |
+| 9346   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX_Z[3]               |
+|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX_RNIUG4B[3]/U0_RGB1 |
+|        |         | Source: NETLIST                                                                              |
 | 9345   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX_Z[4]               |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX_RNIUEG7[4]/U0_RGB1 |
 |        |         | Source: NETLIST                                                                              |
 | 9345   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX_Z[4]               |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX_RNIVH4B[4]/U0_RGB1 |
-|        |         | Source: NETLIST                                                                              |
-| 9345   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX_Z[3]               |
-|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX_RNITDG7[3]/U0_RGB1 |
-|        |         | Source: NETLIST                                                                              |
-| 9345   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX_Z[3]               |
-|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX_RNIUG4B[3]/U0_RGB1 |
 |        |         | Source: NETLIST                                                                              |
 | 6155   | INT_NET | Net   : Transceiver_Main_0/Chain_arst1                                                       |
 |        |         | Driver: Transceiver_Main_0/Synchronizer_0_3/Chain_rep_RNIM56F[1]/U0_RGB1                     |
@@ -160,7 +160,7 @@ Nets assigned to chip global resources
 |        |         | Driver: Clock_Reset_0/PF_CLK_DIV_C2_0_0/PF_CLK_DIV_C2_0/I_CD_1/U0_RGB1                       |
 |        |         | Source: NETLIST                                                                              |
 | 6      | INT_NET | Net   : Clock_Reset_0_Ref_Clock                                                              |
-|        |         | Driver: Clock_Reset_0/PF_CCC_C7_0_0/PF_CCC_C7_0/clkint_0/U0_RGB1                             |
+|        |         | Driver: Clock_Reset_0/PF_CCC_C8_0/PF_CCC_C8_0/clkint_0/U0_RGB1                               |
 |        |         | Source: NETLIST                                                                              |
 | 4      | INT_NET | Net   : Clock_Reset_0/PF_OSC_C0_0_RCOSC_160MHZ_GL                                            |
 |        |         | Driver: Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160_INT/U0_RGB1                          |
@@ -195,10 +195,12 @@ High fanout nets
 +--------+---------+-------------------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                            |
 +--------+---------+-------------------------------------------------------------------------------------------------+
-| 2774   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]                  |
+| 2655   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]                  |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[9]                    |
-| 2664   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[8]                  |
+| 2648   | INT_NET | Net   : AnalyzInCirc_Top_0_FifoInst_GEN_1_inst_AnalyzInCirc_FIFO_RD_INDEX[8]                    |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[8]                    |
+| 2337   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]                  |
+|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/RD_INDEX[9]                    |
 | 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/fifo_data_data_N_302           |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_7_0_a2_4   |
 | 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/fifo_data_data_N_301           |
@@ -213,18 +215,18 @@ High fanout nets
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_127_0_a2_1 |
 | 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_N_307           |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_87_0_a2_2  |
-| 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_N_308           |
-|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_47_0_a2_2  |
 +--------+---------+-------------------------------------------------------------------------------------------------+
 
 High fanout nets (through buffer trees)
 +--------+---------+-------------------------------------------------------------------------------------------------+
 | Fanout | Type    | Name                                                                                            |
 +--------+---------+-------------------------------------------------------------------------------------------------+
-| 2774   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]                  |
+| 2655   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]                  |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[9]                    |
-| 2664   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[8]                  |
+| 2648   | INT_NET | Net   : AnalyzInCirc_Top_0_FifoInst_GEN_1_inst_AnalyzInCirc_FIFO_RD_INDEX[8]                    |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/RD_INDEX[8]                    |
+| 2337   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/RD_INDEX_Z[9]                  |
+|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/RD_INDEX[9]                    |
 | 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/fifo_data_data_N_302           |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_7_0_a2_4   |
 | 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/fifo_data_data_N_301           |
@@ -239,7 +241,5 @@ High fanout nets (through buffer trees)
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_127_0_a2_1 |
 | 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_N_307           |
 |        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_87_0_a2_2  |
-| 2336   | INT_NET | Net   : AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_N_308           |
-|        |         | Driver: AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/fifo_data_data_awe0_47_0_a2_2  |
 +--------+---------+-------------------------------------------------------------------------------------------------+
 

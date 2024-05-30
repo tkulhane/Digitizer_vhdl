@@ -21,11 +21,11 @@ INFO: Reading User PDC file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\cons
  Running Timing based Global Demotion. 
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.1.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
-        Moved 2 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
+        Moved all 1345 async pins from global to its source 'Controler_0/Reset_Controler_0/INT_DataFifo_Reset_N'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[4]'.
         Moved 129 data pins from global to its source 'AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]'.
-        Moved 6 async pins from global to its source 'Transceiver_Main_0/Synchronizer_0_3/Chain_rep[1]'.
-        Moved 52 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
+        Moved 2 async pins from global to its source 'Transceiver_Main_0/Synchronizer_0_3/Chain_rep[1]'.
+        Moved 54 async pins from global to its source 'Clock_Reset_0/CORERESET_PF_C0_0/CORERESET_PF_C0_0/dff_15_rep'.
 === Registers Duplicated ===
 1  - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3] duplicated 
    - AnalyzInCirc_Top_0/FifoInst_GEN.0.inst_AnalyzInCirc_FIFO/WR_INDEX[3]_GB_DEMOTE
@@ -57,7 +57,7 @@ I/O Bank and Globals Assigner completed successfully.
 Total time spent in I/O Bank and Globals Assigner: 7 seconds
 
 Placer V5.0 - 2022.1.0 
-Design: Top                             Started: Tue May 28 12:37:05 2024
+Design: Top                             Started: Thu May 30 23:03:40 2024
 
 Initializing Normal-Effort Timing-Driven Placement ...
 Clustering ...
@@ -71,16 +71,16 @@ CDC Report:
 End of placement.
 
 Placer Runtime Summary   :
-Clustering (1 pass)      : 33 seconds
-Placement                : 184 seconds
-Improvement              : 208 seconds
+Clustering (1 pass)      : 34 seconds
+Placement                : 196 seconds
+Improvement              : 378 seconds
 
 Placer completed successfully.
 
 Design: Top                             
-Finished: Tue May 28 12:45:52 2024
-Total CPU Time:     00:12:42            Total Elapsed Time: 00:08:47
-Total Memory Usage: 3675.7 Mbytes
+Finished: Thu May 30 23:15:37 2024
+Total CPU Time:     00:16:07            Total Elapsed Time: 00:11:57
+Total Memory Usage: 3672.2 Mbytes
                         o - o - o - o - o - o
 
 
@@ -93,25 +93,25 @@ Clock pins: 1
 Clock pins: 1
 
 Router 
-Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Tue May 28 12:46:41 2024
+Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\TopStarted: Thu May 30 23:16:29 2024
 
 
 Router completed successfully.
 
 Design: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Top
-Finished: Tue May 28 12:48:27 2024
-Total CPU Time:     00:03:33            Total Elapsed Time: 00:01:46
-Total Memory Usage: 5581.0 Mbytes
+Finished: Thu May 30 23:18:23 2024
+Total CPU Time:     00:04:47            Total Elapsed Time: 00:01:54
+Total Memory Usage: 5571.5 Mbytes
                         o - o - o - o - o - o
 
 Resource Usage
 +---------------+--------+--------+------------+
 | Type          | Used   | Total  | Percentage |
 +---------------+--------+--------+------------+
-| 4LUT          | 145032 | 299544 | 48.42      |
+| 4LUT          | 145126 | 299544 | 48.45      |
 | DFF           | 67223  | 299544 | 22.44      |
 | I/O Register  | 0      | 510    | 0.00       |
-| Logic Element | 147271 | 299544 | 49.17      |
+| Logic Element | 147346 | 299544 | 49.19      |
 +---------------+--------+--------+------------+
 
 I/O Placement

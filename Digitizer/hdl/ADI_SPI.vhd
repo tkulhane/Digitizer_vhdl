@@ -8,7 +8,7 @@ entity ADI_SPI is
     (
         addr_width : integer := 15;                                      --width of address
         data_width : integer := 8;                                      --width of send/receive data
-        clk_divider : integer := 16                                      --clock divider
+        clk_divider : integer := 4                                      --clock divider
     );
 
     port

@@ -86,13 +86,13 @@ Synopsys VHDL Compiler, Version comp202109synp1, Build 219R, Built Feb 23 2022 0
 @N: CD140 :	| Using the VHDL 2008 Standard for file 'C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd'.
 VHDL syntax check successful!
 @N: CD231 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\vhd2008\std1164.vhd":889:16:889:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd changed - recompiling
+File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd changed - recompiling
 
 At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 98MB)
 
 
 Process completed successfully.
-# Tue May 28 12:22:36 2024
+# Thu May 30 17:16:54 2024
 
 ###########################################################]
 ###########################################################[
@@ -271,6 +271,8 @@ Synopsys Verilog Compiler, Version comp202109synp1, Build 219R, Built Feb 23 202
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C7\PF_CCC_C7_0\PF_CCC_C7_PF_CCC_C7_0_PF_CCC.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C7\PF_CCC_C7.v" (library work)
+@I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8_0\PF_CCC_C8_PF_CCC_C8_0_PF_CCC.v" (library work)
+@I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C2\PF_CLK_DIV_C2_0\PF_CLK_DIV_C2_PF_CLK_DIV_C2_0_PF_CLK_DIV.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C2\PF_CLK_DIV_C2.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v" (library work)
@@ -477,11 +479,11 @@ Synopsys Verilog Compiler, Version comp202109synp1, Build 219R, Built Feb 23 202
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v" (library work)
 Verilog syntax check successful!
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 136MB)
 
 
 Process completed successfully.
-# Tue May 28 12:22:36 2024
+# Thu May 30 17:16:54 2024
 
 ###########################################################]
 ###########################################################[
@@ -643,6 +645,8 @@ Process completed successfully.
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C7\PF_CCC_C7_0\PF_CCC_C7_PF_CCC_C7_0_PF_CCC.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C7\PF_CCC_C7.v" (library work)
+@I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8_0\PF_CCC_C8_PF_CCC_C8_0_PF_CCC.v" (library work)
+@I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C2\PF_CLK_DIV_C2_0\PF_CLK_DIV_C2_PF_CLK_DIV_C2_0_PF_CLK_DIV.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C2\PF_CLK_DIV_C2.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v" (library work)
@@ -850,55 +854,31 @@ Process completed successfully.
 Verilog syntax check successful!
 File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\_verilog_hintfile changed - recompiling
 File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\polarfire_syn_comps.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELCKMGT\2.0.100\rtl\vlog\core\CORELCKMGT.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDgrycnt.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDbincnt.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsmplcnt.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDfrqerrarb.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDplsgen.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDshcnt.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsyncen.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsync.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsicr.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFD.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\SgCore\PF_XCVR_APBLINK_V\1.1.104\hdl\PF_XCVR_APBLINK_V.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C8\I_XCVR\PF_XCVR_ERM_C8_I_XCVR_PF_XCVR.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode0.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\request_code.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode1.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\request_code.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTRmode2.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\request_code.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORELANEMSTR\2.1.100\rtl\vlog\core\CORELANEMSTR.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_XCVR_ERM_C8\PF_XCVR_ERM_C8.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transciever_OneLane\Transciever_OneLane.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Transceiver_Main\Transceiver_Main.v changed - recompiling
-File C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v changed - recompiling
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\core\corereset_pf.v":21:7:21:52|Synthesizing module CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF in library work.
 Running optimization stage 1 on CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF .......
-Finished optimization stage 1 on CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0.v":21:7:21:21|Synthesizing module CORERESET_PF_C0 in library work.
 Running optimization stage 1 on CORERESET_PF_C0 .......
-Finished optimization stage 1 on CORERESET_PF_C0 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on CORERESET_PF_C0 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":489:7:489:12|Synthesizing module CLKINT in library work.
 Running optimization stage 1 on CLKINT .......
-Finished optimization stage 1 on CLKINT (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on CLKINT (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @W: CG168 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v":41:12:41:21|Type of parameter VCOFREQUENCY on the instance pll_inst_0 is not in accordance with the type of parameter on corresponding module. Please update RTL with correct parameter type 
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\polarfire_syn_comps.v":3694:7:3694:9|Synthesizing module PLL in library work.
 Running optimization stage 1 on PLL .......
-Finished optimization stage 1 on PLL (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on PLL (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":504:7:504:9|Synthesizing module VCC in library work.
 Running optimization stage 1 on VCC .......
-Finished optimization stage 1 on VCC (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on VCC (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":500:7:500:9|Synthesizing module GND in library work.
 Running optimization stage 1 on GND .......
-Finished optimization stage 1 on GND (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on GND (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0_0\PF_CCC_C0_PF_CCC_C0_0_PF_CCC.v":5:7:5:34|Synthesizing module PF_CCC_C0_PF_CCC_C0_0_PF_CCC in library work.
 Running optimization stage 1 on PF_CCC_C0_PF_CCC_C0_0_PF_CCC .......
-Finished optimization stage 1 on PF_CCC_C0_PF_CCC_C0_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on PF_CCC_C0_PF_CCC_C0_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C0\PF_CCC_C0.v":263:7:263:15|Synthesizing module PF_CCC_C0 in library work.
 Running optimization stage 1 on PF_CCC_C0 .......
-Finished optimization stage 1 on PF_CCC_C0 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on PF_CCC_C0 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @W: CG168 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3_0\PF_CCC_C3_PF_CCC_C3_0_PF_CCC.v":39:12:39:21|Type of parameter VCOFREQUENCY on the instance pll_inst_0 is not in accordance with the type of parameter on corresponding module. Please update RTL with correct parameter type 
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3_0\PF_CCC_C3_PF_CCC_C3_0_PF_CCC.v":5:7:5:34|Synthesizing module PF_CCC_C3_PF_CCC_C3_0_PF_CCC in library work.
 Running optimization stage 1 on PF_CCC_C3_PF_CCC_C3_0_PF_CCC .......
@@ -913,6 +893,13 @@ Finished optimization stage 1 on PF_CCC_C7_PF_CCC_C7_0_PF_CCC (CPU Time 0h:00m:0
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C7\PF_CCC_C7.v":263:7:263:15|Synthesizing module PF_CCC_C7 in library work.
 Running optimization stage 1 on PF_CCC_C7 .......
 Finished optimization stage 1 on PF_CCC_C7 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
+@W: CG168 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8_0\PF_CCC_C8_PF_CCC_C8_0_PF_CCC.v":39:12:39:21|Type of parameter VCOFREQUENCY on the instance pll_inst_0 is not in accordance with the type of parameter on corresponding module. Please update RTL with correct parameter type 
+@N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8_0\PF_CCC_C8_PF_CCC_C8_0_PF_CCC.v":5:7:5:34|Synthesizing module PF_CCC_C8_PF_CCC_C8_0_PF_CCC in library work.
+Running optimization stage 1 on PF_CCC_C8_PF_CCC_C8_0_PF_CCC .......
+Finished optimization stage 1 on PF_CCC_C8_PF_CCC_C8_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
+@N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8.v":263:7:263:15|Synthesizing module PF_CCC_C8 in library work.
+Running optimization stage 1 on PF_CCC_C8 .......
+Finished optimization stage 1 on PF_CCC_C8 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\polarfire_syn_comps.v":1553:7:1553:16|Synthesizing module ICB_CLKDIV in library work.
 Running optimization stage 1 on ICB_CLKDIV .......
 Finished optimization stage 1 on ICB_CLKDIV (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
@@ -1050,7 +1037,7 @@ Running optimization stage 1 on COREFIFO_C1_COREFIFO_C1_0_corefifo_sync_scntr_Z2
 Finished optimization stage 1 on COREFIFO_C1_COREFIFO_C1_0_corefifo_sync_scntr_Z2_layer0 (CPU Time 0h:00m:00s, Memory Used current: 139MB peak: 140MB)
 @N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":578:7:578:13|Synthesizing module RAM1K20 in library work.
 Running optimization stage 1 on RAM1K20 .......
-Finished optimization stage 1 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 140MB)
+Finished optimization stage 1 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 139MB peak: 140MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO_C1_COREFIFO_C1_0_LSRAM_top.v":5:7:5:41|Synthesizing module COREFIFO_C1_COREFIFO_C1_0_LSRAM_top in library work.
 Running optimization stage 1 on COREFIFO_C1_COREFIFO_C1_0_LSRAM_top .......
 Finished optimization stage 1 on COREFIFO_C1_COREFIFO_C1_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 140MB)
@@ -1266,10 +1253,10 @@ Running optimization stage 1 on COREFIFO_C3_COREFIFO_C3_0_COREFIFO_Z3_layer0 ...
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":513:3:513:8|Pruning unused register DVLD_scntr_ecc. Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":500:3:500:8|Pruning unused register AEMPTY1_r. Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":500:3:500:8|Pruning unused register AEMPTY1_r1. Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on COREFIFO_C3_COREFIFO_C3_0_COREFIFO_Z3_layer0 (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 141MB)
+Finished optimization stage 1 on COREFIFO_C3_COREFIFO_C3_0_COREFIFO_Z3_layer0 (CPU Time 0h:00m:00s, Memory Used current: 141MB peak: 141MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3.v":49:7:49:17|Synthesizing module COREFIFO_C3 in library work.
 Running optimization stage 1 on COREFIFO_C3 .......
-Finished optimization stage 1 on COREFIFO_C3 (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 141MB)
+Finished optimization stage 1 on COREFIFO_C3 (CPU Time 0h:00m:00s, Memory Used current: 141MB peak: 141MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":29:7:29:40|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_COREFIFO in library work.
 
 	FAMILY=32'b00000000000000000000000000011010
@@ -1315,13 +1302,13 @@ Finished optimization stage 1 on COREFIFO_C3 (CPU Time 0h:00m:00s, Memory Used c
 	ADDRWIDTH=32'b00000000000000000000000000001010
    Generated name = COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10
 Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 .......
-Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 141MB)
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 (CPU Time 0h:00m:00s, Memory Used current: 141MB peak: 141MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_grayToBinConv.v":29:7:29:54|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv in library work.
 
 	ADDRWIDTH=32'b00000000000000000000000000001010
    Generated name = COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10
 Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 .......
-Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 140MB peak: 141MB)
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 141MB peak: 141MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":28:7:28:46|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_corefifo_async in library work.
 
 	WRITE_WIDTH=32'b00000000000000000000000000101000
@@ -1404,7 +1391,7 @@ Running optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z6_laye
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Pruning unused register genblk10.rdcnt_r[10:0]. Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Pruning unused register genblk10.wrcnt_r[10:0]. Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z6_layer0 (CPU Time 0h:00m:00s, Memory Used current: 142MB peak: 142MB)
+Finished optimization stage 1 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z6_layer0 (CPU Time 0h:00m:00s, Memory Used current: 142MB peak: 143MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":28:7:28:45|Synthesizing module COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft in library work.
 
 	RDEPTH=32'b00000000000000000000000000001010
@@ -1578,7 +1565,7 @@ Running optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_corefifo_sync_scntr_Z9
 @W: CL207 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\corefifo_sync_scntr.v":493:4:493:9|All reachable assignments to underflow_r assign 0, register removed by optimization.
 @W: CL207 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\corefifo_sync_scntr.v":283:3:283:8|All reachable assignments to rdcnt[8:0] assign 0, register removed by optimization.
 @W: CL207 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\corefifo_sync_scntr.v":256:3:256:8|All reachable assignments to wrcnt[8:0] assign 0, register removed by optimization.
-Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_corefifo_sync_scntr_Z9_layer0 (CPU Time 0h:00m:00s, Memory Used current: 142MB peak: 143MB)
+Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_corefifo_sync_scntr_Z9_layer0 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\corefifo_fwft.v":28:7:28:45|Synthesizing module COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft in library work.
 
 	RDEPTH=32'b00000000000000000000000000001000
@@ -1607,10 +1594,10 @@ Running optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft_Z10_laye
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\corefifo_fwft.v":241:4:241:9|Pruning unused register re_p_d. Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\corefifo_fwft.v":222:3:222:8|Pruning unused register fifo_empty_r. Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\corefifo_fwft.v":222:3:222:8|Pruning unused register update_dout_r. Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft_Z10_layer0 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_corefifo_fwft_Z10_layer0 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO_C6_COREFIFO_C6_0_LSRAM_top.v":5:7:5:41|Synthesizing module COREFIFO_C6_COREFIFO_C6_0_LSRAM_top in library work.
 Running optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_LSRAM_top .......
-Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO_C6_COREFIFO_C6_0_ram_wrapper.v":4:7:4:43|Synthesizing module COREFIFO_C6_COREFIFO_C6_0_ram_wrapper in library work.
 
 	RWIDTH=32'b00000000000000000000000000101000
@@ -1628,7 +1615,7 @@ Running optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_
 @W: CL318 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO_C6_COREFIFO_C6_0_ram_wrapper.v":47:26:47:37|*Output B_SB_CORRECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
 @W: CL318 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO_C6_COREFIFO_C6_0_ram_wrapper.v":48:26:48:36|*Output A_DB_DETECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
 @W: CL318 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO_C6_COREFIFO_C6_0_ram_wrapper.v":49:26:49:36|*Output B_DB_DETECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
-Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_ram_wrapper_40s_40s_8_8_1s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO.v":221:36:221:46|Removing wire pf_MEMRADDR, as there is no assignment to it.
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO.v":227:36:227:39|Removing wire pf_Q, as there is no assignment to it.
 @W: CG184 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO.v":246:36:246:45|Removing wire DVLD_async, as it has the load but no drivers.
@@ -1645,17 +1632,17 @@ Running optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_COREFIFO_Z8_layer0 ...
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6_0\rtl\vlog\core\COREFIFO.v":1175:3:1175:8|Pruning unused register RDATA_ext_r[39:0]. Make sure that there are no unused intermediate registers.
 
 Only the first 100 messages of id 'CL169' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_compiler.srr -id CL169' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CL169} -count unlimited' in the Tcl shell.
-Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_COREFIFO_Z8_layer0 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on COREFIFO_C6_COREFIFO_C6_0_COREFIFO_Z8_layer0 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C6\COREFIFO_C6.v":49:7:49:17|Synthesizing module COREFIFO_C6 in library work.
 Running optimization stage 1 on COREFIFO_C6 .......
-Finished optimization stage 1 on COREFIFO_C6 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on COREFIFO_C6 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Clock_gen.v":38:7:38:41|Synthesizing module COREUART_C0_COREUART_C0_0_Clock_gen in library work.
 
 	BAUD_VAL_FRCTN_EN=32'b00000000000000000000000000000000
 	SYNC_RESET=32'b00000000000000000000000000000000
    Generated name = COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s
 Running optimization stage 1 on COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s .......
-Finished optimization stage 1 on COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on COREUART_C0_COREUART_C0_0_Clock_gen_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREUART_C0\COREUART_C0_0\rtl\vlog\core\Tx_async.v":31:7:31:40|Synthesizing module COREUART_C0_COREUART_C0_0_Tx_async in library work.
 
 	SYNC_RESET=32'b00000000000000000000000000000000
@@ -1768,7 +1755,7 @@ Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_NstagesSync_
 	ADDRWIDTH=32'b00000000000000000000000000001010
    Generated name = COREFIFO_C7_COREFIFO_C7_0_corefifo_grayToBinConv_10
 Running optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_grayToBinConv_10 .......
-Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
+Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_async.v":28:7:28:46|Synthesizing module COREFIFO_C7_COREFIFO_C7_0_corefifo_async in library work.
 
 	WRITE_WIDTH=32'b00000000000000000000000000101000
@@ -1864,10 +1851,10 @@ Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_async_Z12_la
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_fwft.v":148:8:148:17|Removing wire reset_wclk, as there is no assignment to it.
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_fwft.v":149:8:149:17|Removing wire reset_rclk, as there is no assignment to it.
 Running optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_fwft_Z13_layer0 .......
-Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_fwft_Z13_layer0 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
+Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_corefifo_fwft_Z13_layer0 (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_LSRAM_top.v":5:7:5:41|Synthesizing module COREFIFO_C7_COREFIFO_C7_0_LSRAM_top in library work.
 Running optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_LSRAM_top .......
-Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
+Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v":4:7:4:43|Synthesizing module COREFIFO_C7_COREFIFO_C7_0_ram_wrapper in library work.
 
 	RWIDTH=32'b00000000000000000000000000101000
@@ -1885,7 +1872,7 @@ Running optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10
 @W: CL318 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v":47:26:47:37|*Output B_SB_CORRECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
 @W: CL318 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v":48:26:48:36|*Output A_DB_DETECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
 @W: CL318 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v":49:26:49:36|*Output B_DB_DETECT has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
-Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
+Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO.v":221:36:221:46|Removing wire pf_MEMRADDR, as there is no assignment to it.
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO.v":227:36:227:39|Removing wire pf_Q, as there is no assignment to it.
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO.v":244:36:244:42|Removing wire aresetn, as there is no assignment to it.
@@ -1900,10 +1887,10 @@ Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_1
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO.v":295:8:295:19|Removing wire reset_sync_r, as there is no assignment to it.
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO.v":296:8:296:19|Removing wire reset_sync_w, as there is no assignment to it.
 Running optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_COREFIFO_Z11_layer0 .......
-Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_COREFIFO_Z11_layer0 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
+Finished optimization stage 1 on COREFIFO_C7_COREFIFO_C7_0_COREFIFO_Z11_layer0 (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7.v":49:7:49:17|Synthesizing module COREFIFO_C7 in library work.
 Running optimization stage 1 on COREFIFO_C7 .......
-Finished optimization stage 1 on COREFIFO_C7 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
+Finished optimization stage 1 on COREFIFO_C7 (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO.v":29:7:29:40|Synthesizing module COREFIFO_C8_COREFIFO_C8_0_COREFIFO in library work.
 
 	FAMILY=32'b00000000000000000000000000011010
@@ -1949,13 +1936,13 @@ Finished optimization stage 1 on COREFIFO_C7 (CPU Time 0h:00m:00s, Memory Used c
 	ADDRWIDTH=32'b00000000000000000000000000001101
    Generated name = COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13
 Running optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13 .......
-Finished optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
+Finished optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13 (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_grayToBinConv.v":29:7:29:54|Synthesizing module COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv in library work.
 
 	ADDRWIDTH=32'b00000000000000000000000000001101
    Generated name = COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13
 Running optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13 .......
-Finished optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
+Finished optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13 (CPU Time 0h:00m:00s, Memory Used current: 145MB peak: 145MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_async.v":28:7:28:46|Synthesizing module COREFIFO_C8_COREFIFO_C8_0_corefifo_async in library work.
 
 	WRITE_WIDTH=32'b00000000000000000000000000101000
@@ -2064,10 +2051,10 @@ Finished optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_1
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO.v":295:8:295:19|Removing wire reset_sync_r, as there is no assignment to it.
 @W: CG360 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO.v":296:8:296:19|Removing wire reset_sync_w, as there is no assignment to it.
 Running optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z14_layer0 .......
-Finished optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z14_layer0 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 147MB)
+Finished optimization stage 1 on COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z14_layer0 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 148MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8.v":49:7:49:17|Synthesizing module COREFIFO_C8 in library work.
 Running optimization stage 1 on COREFIFO_C8 .......
-Finished optimization stage 1 on COREFIFO_C8 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 147MB)
+Finished optimization stage 1 on COREFIFO_C8 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 148MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C11\COREFIFO_C11_0\rtl\vlog\core\COREFIFO.v":29:7:29:42|Synthesizing module COREFIFO_C11_COREFIFO_C11_0_COREFIFO in library work.
 
 	FAMILY=32'b00000000000000000000000000011010
@@ -2382,25 +2369,25 @@ Finished optimization stage 1 on COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s
 @W: CG133 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\COREFIFO.v":260:36:260:44|Object reg_valid is declared but not assigned. Either assign a value or remove the declaration.
 @W: CG133 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\COREFIFO.v":274:36:274:41|Object reg_RD is declared but not assigned. Either assign a value or remove the declaration.
 Running optimization stage 1 on COREFIFO_C10_COREFIFO_C10_0_COREFIFO_Z19_layer0 .......
-Finished optimization stage 1 on COREFIFO_C10_COREFIFO_C10_0_COREFIFO_Z19_layer0 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 149MB)
+Finished optimization stage 1 on COREFIFO_C10_COREFIFO_C10_0_COREFIFO_Z19_layer0 (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 149MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10.v":49:7:49:18|Synthesizing module COREFIFO_C10 in library work.
 Running optimization stage 1 on COREFIFO_C10 .......
-Finished optimization stage 1 on COREFIFO_C10 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 149MB)
+Finished optimization stage 1 on COREFIFO_C10 (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 149MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7_0\PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM.v":5:7:5:43|Synthesizing module PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM in library work.
 Running optimization stage 1 on PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM .......
-Finished optimization stage 1 on PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 149MB)
+Finished optimization stage 1 on PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 149MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C7\PF_DPSRAM_C7.v":75:7:75:18|Synthesizing module PF_DPSRAM_C7 in library work.
 Running optimization stage 1 on PF_DPSRAM_C7 .......
-Finished optimization stage 1 on PF_DPSRAM_C7 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 149MB)
+Finished optimization stage 1 on PF_DPSRAM_C7 (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 149MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_Status_0\PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM.v":5:7:5:69|Synthesizing module PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM in library work.
 Running optimization stage 1 on PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM .......
-Finished optimization stage 1 on PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 149MB)
+Finished optimization stage 1 on PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 149MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_DPSRAM_C8_Event_Status\PF_DPSRAM_C8_Event_Status.v":75:7:75:31|Synthesizing module PF_DPSRAM_C8_Event_Status in library work.
 Running optimization stage 1 on PF_DPSRAM_C8_Event_Status .......
-Finished optimization stage 1 on PF_DPSRAM_C8_Event_Status (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 149MB)
+Finished optimization stage 1 on PF_DPSRAM_C8_Event_Status (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 149MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Event_Info_RAM_Block\Event_Info_RAM_Block.v":9:7:9:26|Synthesizing module Event_Info_RAM_Block in library work.
 Running optimization stage 1 on Event_Info_RAM_Block .......
-Finished optimization stage 1 on Event_Info_RAM_Block (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 149MB)
+Finished optimization stage 1 on Event_Info_RAM_Block (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 149MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO.v":29:7:29:40|Synthesizing module COREFIFO_C4_COREFIFO_C4_0_COREFIFO in library work.
 
 	FAMILY=32'b00000000000000000000000000011010
@@ -2501,7 +2488,7 @@ Finished optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z
 @N: CG179 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_fwft.v":262:38:262:55|Removing redundant assignment.
 @W: CG133 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_fwft.v":127:27:127:32|Object wr_p_r is declared but not assigned. Either assign a value or remove the declaration.
 Running optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0 .......
-Finished optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0 (CPU Time 0h:00m:00s, Memory Used current: 149MB peak: 150MB)
+Finished optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0 (CPU Time 0h:00m:00s, Memory Used current: 150MB peak: 150MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO_C4_COREFIFO_C4_0_LSRAM_top.v":5:7:5:41|Synthesizing module COREFIFO_C4_COREFIFO_C4_0_LSRAM_top in library work.
 Running optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_LSRAM_top .......
 Finished optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 150MB peak: 151MB)
@@ -2528,27 +2515,25 @@ Finished optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_1
 @W: CG133 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO.v":260:36:260:44|Object reg_valid is declared but not assigned. Either assign a value or remove the declaration.
 @W: CG133 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO.v":274:36:274:41|Object reg_RD is declared but not assigned. Either assign a value or remove the declaration.
 Running optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0 .......
-Finished optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0 (CPU Time 0h:00m:00s, Memory Used current: 150MB peak: 151MB)
+Finished optimization stage 1 on COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0 (CPU Time 0h:00m:00s, Memory Used current: 151MB peak: 151MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4.v":49:7:49:17|Synthesizing module COREFIFO_C4 in library work.
 Running optimization stage 1 on COREFIFO_C4 .......
-Finished optimization stage 1 on COREFIFO_C4 (CPU Time 0h:00m:00s, Memory Used current: 150MB peak: 151MB)
-@N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Input_Data_Part\Input_Data_Part.v":9:7:9:21|Synthesizing module Input_Data_Part in library work.
-@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Input_Data_Part\Input_Data_Part.v":171:0:171:13|Using module Trigger_Unit from library work
-Running optimization stage 1 on Input_Data_Part .......
-Finished optimization stage 1 on Input_Data_Part (CPU Time 0h:00m:00s, Memory Used current: 150MB peak: 151MB)
-@N: CG364 :"C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\lib\generic\acg5.v":199:7:199:9|Synthesizing module OR4 in library work.
-Running optimization stage 1 on OR4 .......
-Finished optimization stage 1 on OR4 (CPU Time 0h:00m:00s, Memory Used current: 154MB peak: 155MB)
+Finished optimization stage 1 on COREFIFO_C4 (CPU Time 0h:00m:00s, Memory Used current: 151MB peak: 151MB)
 
 Only the first 100 messages of id 'CG364' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_compiler.srr -id CG364' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CG364} -count unlimited' in the Tcl shell.
+@N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Input_Data_Part\Input_Data_Part.v":171:0:171:13|Using module Trigger_Unit from library work
+Running optimization stage 1 on Input_Data_Part .......
+Finished optimization stage 1 on Input_Data_Part (CPU Time 0h:00m:00s, Memory Used current: 151MB peak: 151MB)
+Running optimization stage 1 on OR4 .......
+Finished optimization stage 1 on OR4 (CPU Time 0h:00m:00s, Memory Used current: 154MB peak: 155MB)
 Running optimization stage 1 on PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM .......
-Finished optimization stage 1 on PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 170MB peak: 170MB)
+Finished optimization stage 1 on PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 171MB peak: 171MB)
 Running optimization stage 1 on PF_DPSRAM_C5 .......
-Finished optimization stage 1 on PF_DPSRAM_C5 (CPU Time 0h:00m:00s, Memory Used current: 170MB peak: 171MB)
+Finished optimization stage 1 on PF_DPSRAM_C5 (CPU Time 0h:00m:00s, Memory Used current: 171MB peak: 171MB)
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v":207:25:207:50|Using module Sample_RAM_Block_Decoder from library work
 @N: CG794 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Sample_RAM_Block\Sample_RAM_Block.v":215:21:215:42|Using module Sample_RAM_Block_MUX from library work
 Running optimization stage 1 on Sample_RAM_Block .......
-Finished optimization stage 1 on Sample_RAM_Block (CPU Time 0h:00m:00s, Memory Used current: 170MB peak: 171MB)
+Finished optimization stage 1 on Sample_RAM_Block (CPU Time 0h:00m:00s, Memory Used current: 171MB peak: 171MB)
 
 	FAMILY=32'b00000000000000000000000000011010
 	SYNC=32'b00000000000000000000000000000001
@@ -2745,9 +2730,9 @@ Running optimization stage 2 on Top .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":127:14:127:18|Input BTN_2 is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":128:14:128:18|Input BTN_3 is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\Top\Top.v":129:14:129:18|Input BTN_4 is unused.
-Finished optimization stage 2 on Top (CPU Time 0h:00m:00s, Memory Used current: 171MB peak: 172MB)
+Finished optimization stage 2 on Top (CPU Time 0h:00m:00s, Memory Used current: 172MB peak: 172MB)
 Running optimization stage 2 on Transceiver_Main .......
-Finished optimization stage 2 on Transceiver_Main (CPU Time 0h:00m:00s, Memory Used current: 171MB peak: 172MB)
+Finished optimization stage 2 on Transceiver_Main (CPU Time 0h:00m:00s, Memory Used current: 172MB peak: 172MB)
 Running optimization stage 2 on AND2 .......
 Finished optimization stage 2 on AND2 (CPU Time 0h:00m:00s, Memory Used current: 172MB peak: 172MB)
 Running optimization stage 2 on OUTBUF_DIFF .......
@@ -2827,30 +2812,30 @@ Running optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_laye
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\corefifo_fwft.v":92:26:92:28|Input din is unused.
 Finished optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0 (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
 Running optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0 .......
-Finished optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0 (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO.v":175:15:175:22|Input WRESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO.v":176:15:176:22|Input RRESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C4\COREFIFO_C4_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
-Finished optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0 (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on Event_Info_RAM_Block .......
-Finished optimization stage 2 on Event_Info_RAM_Block (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on Event_Info_RAM_Block (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on PF_DPSRAM_C8_Event_Status .......
-Finished optimization stage 2 on PF_DPSRAM_C8_Event_Status (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on PF_DPSRAM_C8_Event_Status (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM .......
-Finished optimization stage 2 on PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on PF_DPSRAM_C7 .......
-Finished optimization stage 2 on PF_DPSRAM_C7 (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on PF_DPSRAM_C7 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM .......
-Finished optimization stage 2 on PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on PF_DPSRAM_C7_PF_DPSRAM_C7_0_PF_DPSRAM (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on COREFIFO_C10 .......
-Finished optimization stage 2 on COREFIFO_C10 (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on COREFIFO_C10 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_10_10_0s_1s_2s_0s_0s .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\COREFIFO_C10_COREFIFO_C10_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\COREFIFO_C10_COREFIFO_C10_0_ram_wrapper.v":50:25:50:29|Input CLOCK is unused.
-Finished optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_ram_wrapper_32s_32s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_LSRAM_top .......
-Finished optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 173MB peak: 175MB)
+Finished optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
 Running optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C10\COREFIFO_C10_0\rtl\vlog\core\corefifo_async.v":121:31:121:36|Input re_top is unused.
 Finished optimization stage 2 on COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 175MB)
@@ -2888,42 +2873,42 @@ Running optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_corefifo_fwft_Z18_la
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C11\COREFIFO_C11_0\rtl\vlog\core\corefifo_fwft.v":98:14:98:25|Input sresetn_wclk is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C11\COREFIFO_C11_0\rtl\vlog\core\corefifo_fwft.v":86:26:86:30|Input wr_en is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C11\COREFIFO_C11_0\rtl\vlog\core\corefifo_fwft.v":92:26:92:28|Input din is unused.
-Finished optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_corefifo_fwft_Z18_layer0 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_corefifo_fwft_Z18_layer0 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z17_layer0 .......
-Finished optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z17_layer0 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_corefifo_sync_scntr_Z17_layer0 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_COREFIFO_Z16_layer0 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C11\COREFIFO_C11_0\rtl\vlog\core\COREFIFO.v":175:15:175:22|Input WRESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C11\COREFIFO_C11_0\rtl\vlog\core\COREFIFO.v":176:15:176:22|Input RRESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C11\COREFIFO_C11_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
-Finished optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_COREFIFO_Z16_layer0 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C11_COREFIFO_C11_0_COREFIFO_Z16_layer0 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C8 .......
-Finished optimization stage 2 on COREFIFO_C8 (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C8 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO_C8_COREFIFO_C8_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO_C8_COREFIFO_C8_0_ram_wrapper.v":50:25:50:29|Input CLOCK is unused.
-Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_ram_wrapper_40s_40s_13_13_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_LSRAM_top .......
-Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 174MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z15_layer0 .......
 @W: CL177 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Sharing sequential element genblk10.full_r and merging genblk10.wrcnt_r. Add a syn_preserve attribute to the element to prevent sharing.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\corefifo_async.v":121:31:121:36|Input re_top is unused.
-Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z15_layer0 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_async_Z15_layer0 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13 .......
-Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_grayToBinConv_13 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13 .......
-Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_corefifo_NstagesSync_2s_13 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z14_layer0 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO.v":174:36:174:42|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C8\COREFIFO_C8_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
-Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z14_layer0 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C8_COREFIFO_C8_0_COREFIFO_Z14_layer0 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C7 .......
-Finished optimization stage 2 on COREFIFO_C7 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C7 (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\COREFIFO_C7_COREFIFO_C7_0_ram_wrapper.v":50:25:50:29|Input CLOCK is unused.
-Finished optimization stage 2 on COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C7_COREFIFO_C7_0_ram_wrapper_40s_40s_10_10_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C7_COREFIFO_C7_0_LSRAM_top .......
-Finished optimization stage 2 on COREFIFO_C7_COREFIFO_C7_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 176MB)
+Finished optimization stage 2 on COREFIFO_C7_COREFIFO_C7_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 175MB peak: 177MB)
 Running optimization stage 2 on COREFIFO_C7_COREFIFO_C7_0_corefifo_fwft_Z13_layer0 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_fwft.v":81:26:81:31|Input wr_clk is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C7\COREFIFO_C7_0\rtl\vlog\core\corefifo_fwft.v":83:26:83:28|Input clk is unused.
@@ -3019,105 +3004,109 @@ Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z7_layer
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v":92:26:92:28|Input din is unused.
 Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft_Z7_layer0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z6_layer0 .......
-Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z6_layer0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_async_Z6_layer0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 .......
-Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv_10 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 .......
-Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync_2s_10 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z5_layer0 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":174:36:174:42|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
-Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z5_layer0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C0_COREFIFO_C0_0_COREFIFO_Z5_layer0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C3 .......
-Finished optimization stage 2 on COREFIFO_C3 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C3 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO_C3_COREFIFO_C3_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO_C3_COREFIFO_C3_0_ram_wrapper.v":44:25:44:30|Input WCLOCK is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO_C3_COREFIFO_C3_0_ram_wrapper.v":45:25:45:30|Input RCLOCK is unused.
-Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_LSRAM_top .......
-Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_corefifo_sync_scntr_Z4_layer0 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_sync_scntr.v":102:29:102:34|Input re_top is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\corefifo_sync_scntr.v":103:29:103:42|Input empty_top_fwft is unused.
-Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_corefifo_sync_scntr_Z4_layer0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_corefifo_sync_scntr_Z4_layer0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_COREFIFO_Z3_layer0 .......
 @W: CL156 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":215:36:215:41|*Input EMPTY2 to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":175:15:175:22|Input WRESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":176:15:176:22|Input RRESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C3\COREFIFO_C3_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
-Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_COREFIFO_Z3_layer0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C3_COREFIFO_C3_0_COREFIFO_Z3_layer0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C1 .......
-Finished optimization stage 2 on COREFIFO_C1 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C1 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s .......
 
 Only the first 100 messages of id 'CL159' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synlog\Top_compiler.srr -id CL159' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {CL159} -count unlimited' in the Tcl shell.
-Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_ram_wrapper_40s_40s_10_10_1s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_LSRAM_top .......
-Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on RAM1K20 .......
-Finished optimization stage 2 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_corefifo_sync_scntr_Z2_layer0 .......
-Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_corefifo_sync_scntr_Z2_layer0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_corefifo_sync_scntr_Z2_layer0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_COREFIFO_Z1_layer0 .......
 @W: CL156 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C1\COREFIFO_C1_0\rtl\vlog\core\COREFIFO.v":215:36:215:41|*Input EMPTY2 to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
-Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_COREFIFO_Z1_layer0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on COREFIFO_C1_COREFIFO_C1_0_COREFIFO_Z1_layer0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on Clock_Reset .......
-Finished optimization stage 2 on Clock_Reset (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on Clock_Reset (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_OSC_C0 .......
-Finished optimization stage 2 on PF_OSC_C0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_OSC_C0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_OSC_C0_PF_OSC_C0_0_PF_OSC .......
-Finished optimization stage 2 on PF_OSC_C0_PF_OSC_C0_0_PF_OSC (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_OSC_C0_PF_OSC_C0_0_PF_OSC (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on OSC_RC160MHZ .......
-Finished optimization stage 2 on OSC_RC160MHZ (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on OSC_RC160MHZ (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_INIT_MONITOR_C0 .......
-Finished optimization stage 2 on PF_INIT_MONITOR_C0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_INIT_MONITOR_C0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR .......
-Finished optimization stage 2 on PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on INIT .......
-Finished optimization stage 2 on INIT (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on INIT (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CLK_DIV_C2 .......
-Finished optimization stage 2 on PF_CLK_DIV_C2 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CLK_DIV_C2 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CLK_DIV_C2_PF_CLK_DIV_C2_0_PF_CLK_DIV .......
-Finished optimization stage 2 on PF_CLK_DIV_C2_PF_CLK_DIV_C2_0_PF_CLK_DIV (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CLK_DIV_C2_PF_CLK_DIV_C2_0_PF_CLK_DIV (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on ICB_CLKDIV .......
-Finished optimization stage 2 on ICB_CLKDIV (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on ICB_CLKDIV (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
+Running optimization stage 2 on PF_CCC_C8 .......
+Finished optimization stage 2 on PF_CCC_C8 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
+Running optimization stage 2 on PF_CCC_C8_PF_CCC_C8_0_PF_CCC .......
+Finished optimization stage 2 on PF_CCC_C8_PF_CCC_C8_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CCC_C7 .......
-Finished optimization stage 2 on PF_CCC_C7 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CCC_C7 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CCC_C7_PF_CCC_C7_0_PF_CCC .......
-Finished optimization stage 2 on PF_CCC_C7_PF_CCC_C7_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CCC_C7_PF_CCC_C7_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CCC_C3 .......
-Finished optimization stage 2 on PF_CCC_C3 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CCC_C3 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CCC_C3_PF_CCC_C3_0_PF_CCC .......
-Finished optimization stage 2 on PF_CCC_C3_PF_CCC_C3_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CCC_C3_PF_CCC_C3_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CCC_C0 .......
-Finished optimization stage 2 on PF_CCC_C0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CCC_C0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PF_CCC_C0_PF_CCC_C0_0_PF_CCC .......
-Finished optimization stage 2 on PF_CCC_C0_PF_CCC_C0_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PF_CCC_C0_PF_CCC_C0_0_PF_CCC (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on GND .......
-Finished optimization stage 2 on GND (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on GND (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on VCC .......
-Finished optimization stage 2 on VCC (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on VCC (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on PLL .......
-Finished optimization stage 2 on PLL (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on PLL (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on CLKINT .......
-Finished optimization stage 2 on CLKINT (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on CLKINT (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on CORERESET_PF_C0 .......
-Finished optimization stage 2 on CORERESET_PF_C0 (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on CORERESET_PF_C0 (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 Running optimization stage 2 on CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF .......
 @N: CL135 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\CORERESET_PF_C0\CORERESET_PF_C0_0\core\corereset_pf.v":58:0:58:5|Found sequential shift dff with address depth of 16 words and data bit width of 1.
-Finished optimization stage 2 on CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF (CPU Time 0h:00m:00s, Memory Used current: 176MB peak: 178MB)
+Finished optimization stage 2 on CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF (CPU Time 0h:00m:00s, Memory Used current: 177MB peak: 178MB)
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
 @L: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\layer0.rt.csv
 
 
-At c_ver Exit (Real Time elapsed 0h:00m:27s; CPU Time elapsed 0h:00m:27s; Memory used current: 176MB peak: 178MB)
+At c_ver Exit (Real Time elapsed 0h:00m:32s; CPU Time elapsed 0h:00m:32s; Memory used current: 177MB peak: 178MB)
 
 
 Process completed successfully.
-# Tue May 28 12:23:04 2024
+# Thu May 30 17:17:27 2024
 
 ###########################################################]
 ###########################################################[
@@ -3253,10 +3242,10 @@ Running optimization stage 1 on AnalyzInCirc_Controler .......
 @W: CL252 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AnalyzInCirc_Controler.vhd":88:11:88:19|Bit 15 of signal REG_State is floating -- simulation mismatch possible.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AnalyzInCirc_Controler.vhd":237:8:237:9|Feedback mux created for signal REG_TRG_Start. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AnalyzInCirc_Controler.vhd":425:8:425:9|Feedback mux created for signal Start_Triggers_Last[7:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-Finished optimization stage 1 on AnalyzInCirc_Controler (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 106MB)
+Finished optimization stage 1 on AnalyzInCirc_Controler (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 106MB)
 Post processing for work.analyzincirc_top.rtl
 Running optimization stage 1 on AnalyzInCirc_Top .......
-Finished optimization stage 1 on AnalyzInCirc_Top (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 106MB)
+Finished optimization stage 1 on AnalyzInCirc_Top (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 106MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LanesConnection.vhd":6:7:6:33|Synthesizing work.transceiver_lanesconnection.rtl.
 Running optimization stage 1 on Transciever_OneLane .......
 Finished optimization stage 1 on Transciever_OneLane (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 106MB)
@@ -3419,7 +3408,7 @@ Finished optimization stage 1 on SampleCompose (CPU Time 0h:00m:00s, Memory Used
 @W: CD610 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EXT_Signals_OutputSwitch.vhd":69:28:69:44|Index value 0 to 256 could be out of prefix range 31 downto 0. 
 Post processing for work.ext_signals_outputswitch.rtl
 Running optimization stage 1 on EXT_Signals_OutputSwitch .......
-Finished optimization stage 1 on EXT_Signals_OutputSwitch (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 106MB)
+Finished optimization stage 1 on EXT_Signals_OutputSwitch (CPU Time 0h:00m:00s, Memory Used current: 106MB peak: 107MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EXT_Signals_InputSwitch.vhd":6:7:6:29|Synthesizing work.ext_signals_inputswitch.rtl.
 @W: CD610 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EXT_Signals_InputSwitch.vhd":61:36:61:45|Index value 0 to 256 could be out of prefix range 9 downto 0. 
 @W: CD610 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\EXT_Signals_InputSwitch.vhd":61:36:61:45|Index value 0 to 256 could be out of prefix range 9 downto 0. 
@@ -3916,7 +3905,7 @@ State machine has 3 reachable states with original encodings of:
    01
    10
 @W: CL279 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\spi_master.vhd":49:4:49:5|Pruning register bits 3 to 1 of last_bit(4 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-Finished optimization stage 2 on work_spi_master_behavioural_24_5_1_data_lengthdivider (CPU Time 0h:00m:00s, Memory Used current: 115MB peak: 116MB)
+Finished optimization stage 2 on work_spi_master_behavioural_24_5_1_data_lengthdivider (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 116MB)
 Running optimization stage 2 on ADI_SPI .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\ADI_SPI.vhd":59:8:59:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -3926,7 +3915,7 @@ State machine has 5 reachable states with original encodings of:
    00100
    01000
    10000
-Finished optimization stage 2 on ADI_SPI (CPU Time 0h:00m:00s, Memory Used current: 115MB peak: 117MB)
+Finished optimization stage 2 on ADI_SPI (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 118MB)
 Running optimization stage 2 on Answer_Encoder .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Answer_Encoder.vhd":116:8:116:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -3936,7 +3925,7 @@ State machine has 5 reachable states with original encodings of:
    00100
    01000
    10000
-Finished optimization stage 2 on Answer_Encoder (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
+Finished optimization stage 2 on Answer_Encoder (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 118MB)
 Running optimization stage 2 on Command_Decoder .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Command_Decoder.vhd":259:8:259:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -3951,7 +3940,7 @@ State machine has 10 reachable states with original encodings of:
    0010000000
    0100000000
    1000000000
-Finished optimization stage 2 on Command_Decoder (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 117MB)
+Finished optimization stage 2 on Command_Decoder (CPU Time 0h:00m:00s, Memory Used current: 116MB peak: 118MB)
 Running optimization stage 2 on gpio_controler .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\gpio_controler.vhd":107:8:107:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -4016,7 +4005,7 @@ State machine has 4 reachable states with original encodings of:
    01
    10
    11
-Finished optimization stage 2 on Trigger_Main (CPU Time 0h:00m:00s, Memory Used current: 120MB peak: 124MB)
+Finished optimization stage 2 on Trigger_Main (CPU Time 0h:00m:00s, Memory Used current: 119MB peak: 124MB)
 Running optimization stage 2 on Communication_Builder .......
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":1010:4:1010:5|Pruning register bit 31 of Communication_Data_Frame(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL246 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Communication_Builder.vhd":15:8:15:34|Input port bits 19 to 18 of event_ram_r_data_start_addr(19 downto 0) are unused. Assign logic for all port bits or change the input port size.
@@ -4037,7 +4026,7 @@ State machine has 6 reachable states with original encodings of:
    001000
    010000
    100000
-Finished optimization stage 2 on work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA (CPU Time 0h:00m:00s, Memory Used current: 121MB peak: 136MB)
+Finished optimization stage 2 on work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA (CPU Time 0h:00m:00s, Memory Used current: 122MB peak: 136MB)
 Running optimization stage 2 on DataRamManage .......
 Finished optimization stage 2 on DataRamManage (CPU Time 0h:00m:00s, Memory Used current: 123MB peak: 136MB)
 Running optimization stage 2 on FIFOs_Reader .......
@@ -4142,11 +4131,11 @@ For a summary of runtime and memory usage per design unit, please see file:
 @L: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\layer1.rt.csv
 
 
-At c_vhdl Exit (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 125MB peak: 136MB)
+At c_vhdl Exit (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:15s; Memory used current: 125MB peak: 136MB)
 
 
 Process completed successfully.
-# Tue May 28 12:23:18 2024
+# Thu May 30 17:17:42 2024
 
 ###########################################################]
 ###########################################################[
@@ -4308,6 +4297,8 @@ Process completed successfully.
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C3\PF_CCC_C3.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C7\PF_CCC_C7_0\PF_CCC_C7_PF_CCC_C7_0_PF_CCC.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C7\PF_CCC_C7.v" (library work)
+@I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8_0\PF_CCC_C8_PF_CCC_C8_0_PF_CCC.v" (library work)
+@I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CCC_C8\PF_CCC_C8.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C2\PF_CLK_DIV_C2_0\PF_CLK_DIV_C2_PF_CLK_DIV_C2_0_PF_CLK_DIV.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_CLK_DIV_C2\PF_CLK_DIV_C2.v" (library work)
 @I::"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\PF_INIT_MONITOR_C0\PF_INIT_MONITOR_C0_0\PF_INIT_MONITOR_C0_PF_INIT_MONITOR_C0_0_PF_INIT_MONITOR.v" (library work)
@@ -4564,7 +4555,7 @@ Finished optimization stage 1 on COREFIFO_C12_COREFIFO_C12_0_corefifo_NstagesSyn
 	ADDRWIDTH=32'b00000000000000000000000000000110
    Generated name = COREFIFO_C12_COREFIFO_C12_0_corefifo_grayToBinConv_6
 Running optimization stage 1 on COREFIFO_C12_COREFIFO_C12_0_corefifo_grayToBinConv_6 .......
-Finished optimization stage 1 on COREFIFO_C12_COREFIFO_C12_0_corefifo_grayToBinConv_6 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 138MB)
+Finished optimization stage 1 on COREFIFO_C12_COREFIFO_C12_0_corefifo_grayToBinConv_6 (CPU Time 0h:00m:00s, Memory Used current: 138MB peak: 139MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\corefifo_async.v":28:7:28:48|Synthesizing module COREFIFO_C12_COREFIFO_C12_0_corefifo_async in library work.
 
 	WRITE_WIDTH=32'b00000000000000000000000001000000
@@ -4862,7 +4853,7 @@ Running optimization stage 1 on COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z5_la
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Optimizing register bit genblk10.wrcnt_r[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\corefifo_async.v":717:12:717:17|Pruning unused register genblk10.rdcnt_r[6:0]. Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\corefifo_async.v":784:12:784:17|Pruning unused register genblk10.wrcnt_r[6:0]. Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z5_layer2 (CPU Time 0h:00m:00s, Memory Used current: 141MB peak: 141MB)
+Finished optimization stage 1 on COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z5_layer2 (CPU Time 0h:00m:00s, Memory Used current: 141MB peak: 142MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\corefifo_fwft.v":28:7:28:47|Synthesizing module COREFIFO_C13_COREFIFO_C13_0_corefifo_fwft in library work.
 
 	RDEPTH=32'b00000000000000000000000000000110
@@ -5054,13 +5045,13 @@ Finished optimization stage 1 on CORERFDsyncen_2s_0 (CPU Time 0h:00m:00s, Memory
 	NBITS=32'b00000000000000000000000000001010
    Generated name = CORERFDbincnt_10s
 Running optimization stage 1 on CORERFDbincnt_10s .......
-Finished optimization stage 1 on CORERFDbincnt_10s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on CORERFDbincnt_10s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDsmplcnt.v":26:7:26:20|Synthesizing module CORERFDsmplcnt in library work.
 
 	CTR_SIZE=32'b00000000000000000000000000001010
    Generated name = CORERFDsmplcnt_10s
 Running optimization stage 1 on CORERFDsmplcnt_10s .......
-Finished optimization stage 1 on CORERFDsmplcnt_10s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 143MB)
+Finished optimization stage 1 on CORERFDsmplcnt_10s (CPU Time 0h:00m:00s, Memory Used current: 143MB peak: 144MB)
 @N: CG364 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\Actel\DirectCore\CORERFD\2.1.100\rtl\vlog\core\CORERFDshcnt.v":26:7:26:18|Synthesizing module CORERFDshcnt in library work.
 
 	CTR_SIZE=32'b00000000000000000000000000000110
@@ -5209,29 +5200,29 @@ Running optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_fwft_Z6_lay
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\corefifo_fwft.v":92:26:92:28|Input din is unused.
 Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_fwft_Z6_layer2 (CPU Time 0h:00m:00s, Memory Used current: 144MB peak: 145MB)
 Running optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z5_layer2 .......
-Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z5_layer2 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_async_Z5_layer2 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_grayToBinConv_6 .......
-Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_grayToBinConv_6 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_grayToBinConv_6 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_NstagesSync_2s_6 .......
-Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_NstagesSync_2s_6 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_corefifo_NstagesSync_2s_6 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_COREFIFO_Z4_layer2 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\COREFIFO.v":174:36:174:42|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C13\COREFIFO_C13_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
-Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_COREFIFO_Z4_layer2 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on COREFIFO_C13_COREFIFO_C13_0_COREFIFO_Z4_layer2 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on COREFIFO_C12 .......
-Finished optimization stage 2 on COREFIFO_C12 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on COREFIFO_C12 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\COREFIFO_C12_COREFIFO_C12_0_ram_wrapper.v":43:25:43:31|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\COREFIFO_C12_COREFIFO_C12_0_ram_wrapper.v":50:25:50:29|Input CLOCK is unused.
-Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_LSRAM_top .......
-Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_LSRAM_top (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on VCC .......
-Finished optimization stage 2 on VCC (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on VCC (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on GND .......
-Finished optimization stage 2 on GND (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on GND (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on RAM1K20 .......
-Finished optimization stage 2 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 150MB)
+Finished optimization stage 2 on RAM1K20 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 150MB)
 Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_fwft_Z3_layer2 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\corefifo_fwft.v":81:26:81:31|Input wr_clk is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\corefifo_fwft.v":83:26:83:28|Input clk is unused.
@@ -5239,28 +5230,28 @@ Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_fwft_Z3_lay
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\corefifo_fwft.v":98:14:98:25|Input sresetn_wclk is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\corefifo_fwft.v":86:26:86:30|Input wr_en is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\corefifo_fwft.v":92:26:92:28|Input din is unused.
-Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_fwft_Z3_layer2 (CPU Time 0h:00m:00s, Memory Used current: 147MB peak: 152MB)
+Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_fwft_Z3_layer2 (CPU Time 0h:00m:00s, Memory Used current: 148MB peak: 153MB)
 Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z2_layer2 .......
-Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z2_layer2 (CPU Time 0h:00m:00s, Memory Used current: 151MB peak: 153MB)
+Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z2_layer2 (CPU Time 0h:00m:00s, Memory Used current: 152MB peak: 154MB)
 Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_grayToBinConv_6 .......
-Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_grayToBinConv_6 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 153MB)
+Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_grayToBinConv_6 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 154MB)
 Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_NstagesSync_2s_6 .......
-Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_NstagesSync_2s_6 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 153MB)
+Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_corefifo_NstagesSync_2s_6 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 154MB)
 Running optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_COREFIFO_Z1_layer2 .......
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\COREFIFO.v":174:36:174:42|Input RESET_N is unused.
 @N: CL159 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\component\work\COREFIFO_C12\COREFIFO_C12_0\rtl\vlog\core\COREFIFO.v":181:36:181:40|Input MEMRD is unused.
-Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_COREFIFO_Z1_layer2 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 153MB)
+Finished optimization stage 2 on COREFIFO_C12_COREFIFO_C12_0_COREFIFO_Z1_layer2 (CPU Time 0h:00m:00s, Memory Used current: 146MB peak: 154MB)
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
 @L: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\synwork\layer2.rt.csv
 
 
-At c_ver Exit (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 146MB peak: 153MB)
+At c_ver Exit (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:13s; Memory used current: 146MB peak: 154MB)
 
 
 Process completed successfully.
-# Tue May 28 12:23:29 2024
+# Thu May 30 17:17:56 2024
 
 ###########################################################]
 ###########################################################[
@@ -5386,7 +5377,7 @@ Running optimization stage 1 on work_txlanecontrol_rtl_8_3_0_3_g_NumberOfDataOut
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd":331:8:331:9|Pruning unused register Test_Counter.Test_Data_1_5(7 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd":331:8:331:9|Pruning unused register Test_Counter.Test_Data_0_5(7 downto 0). Make sure that there are no unused intermediate registers.
 @W: CL169 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\TxLaneControl.vhd":126:8:126:9|Pruning unused register fsm_timer_4(9 downto 0). Make sure that there are no unused intermediate registers.
-Finished optimization stage 1 on work_txlanecontrol_rtl_8_3_0_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+Finished optimization stage 1 on work_txlanecontrol_rtl_8_3_0_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd":6:7:6:28|Synthesizing work.transceiver_lanestatus.rtl.
 Post processing for work.transceiver_lanestatus.rtl
 Running optimization stage 1 on Transceiver_LaneStatus .......
@@ -5395,7 +5386,7 @@ Running optimization stage 1 on Transceiver_LaneStatus .......
 @W: CL111 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd":58:8:58:9|All reachable assignments to StatusVector(29) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
 @W: CL111 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd":58:8:58:9|All reachable assignments to StatusVector(30) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
 @W: CL111 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\Transceiver_LaneStatus.vhd":58:8:58:9|All reachable assignments to StatusVector(31) are '0'; removing register. To preserve a constant register, use the syn_preserve attribute.
-Finished optimization stage 1 on Transceiver_LaneStatus (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+Finished optimization stage 1 on Transceiver_LaneStatus (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
 @N: Setting default value for generic g_numberofdataoutputbytes to 8;
 @N: Setting default value for generic g_numberofilassequences to 3;
 @N: CD630 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd":6:7:6:19|Synthesizing work.rxlanecontrol.rtl.
@@ -5413,7 +5404,7 @@ Running optimization stage 1 on work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutpu
 @W: CL271 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd":322:8:322:9|Pruning unused bits 0 to 2 of ComparatorData_Last_A_2(0 to 7). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @W: CL271 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd":322:8:322:9|Pruning unused bits 4 to 7 of ComparatorData_Last_A_2(0 to 7). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 @A: CL282 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd":322:8:322:9|Feedback mux created for signal ComparatorData_Last_A[3:3]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
-Finished optimization stage 1 on work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 104MB)
+Finished optimization stage 1 on work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 103MB)
 @N: Setting default value for generic g_numofbytes to 8;
 @N: Setting default value for generic g_byte_width to 8;
 @N: Setting default value for generic g_depth to 256;
@@ -5433,7 +5424,7 @@ Running optimization stage 2 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYT
 @W: CL190 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":214:4:214:5|Optimizing register bit write_shift.WR_ADD_INDEX_1_7(4) to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":214:4:214:5|Pruning register bit 4 of WR_ADD_INDEX_1_7(4 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 @W: CL260 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\AlignmentLane_Fifo.vhd":244:4:244:5|Pruning register bit 8 of write_index_control.WR_INDEX_7(8 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-Finished optimization stage 2 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH (CPU Time 0h:00m:31s, Memory Used current: 319MB peak: 429MB)
+Finished optimization stage 2 on work_alignmentlane_fifo_rtl_8_8_256_3_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH (CPU Time 0h:00m:32s, Memory Used current: 319MB peak: 429MB)
 Running optimization stage 2 on work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences .......
 @N: CL201 :"C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\hdl\RxLaneControl.vhd":170:8:170:9|Trying to extract state machine for register state_reg.
 Extracted state machine for register state_reg
@@ -5468,7 +5459,7 @@ At c_vhdl Exit (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:34s; Memor
 
 
 Process completed successfully.
-# Tue May 28 12:24:04 2024
+# Thu May 30 17:18:31 2024
 
 ###########################################################]
 ###########################################################[
@@ -5500,12 +5491,12 @@ For a summary of linker messages for components that did not bind, please see lo
 =======================================================================================
 
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 146MB peak: 146MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 139MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Tue May 28 12:24:05 2024
+# Thu May 30 17:18:32 2024
 
 ###########################################################]
 
@@ -5515,11 +5506,11 @@ For a summary of runtime and memory usage for all design units, please see file:
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:01m:29s; CPU Time elapsed 0h:01m:29s; Memory used current: 30MB peak: 32MB)
+At c_hdl Exit (Real Time elapsed 0h:01m:38s; CPU Time elapsed 0h:01m:38s; Memory used current: 24MB peak: 26MB)
 
-Process took 0h:01m:29s realtime, 0h:01m:29s cputime
+Process took 0h:01m:38s realtime, 0h:01m:38s cputime
 
 Process completed successfully.
-# Tue May 28 12:24:05 2024
+# Thu May 30 17:18:32 2024
 
 ###########################################################]

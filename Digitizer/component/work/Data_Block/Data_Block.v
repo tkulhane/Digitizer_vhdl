@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 24 15:28:52 2024
+// Created by SmartDesign Thu May 30 16:10:25 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -193,9 +193,9 @@ wire          Control_Busy_Out_net_1;
 wire          Control_Enable_Out_net_1;
 wire          Fifo_NotFree_Out_net_1;
 wire          Control_Abort_Out_net_1;
+wire          SelfTrigger_Out_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [31:0] Communication_Data_Frame_net_1;
-wire          SelfTrigger_Out_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -252,12 +252,12 @@ assign Fifo_NotFree_Out_net_1              = Fifo_NotFree_Out_net_0;
 assign Fifo_NotFree_Out                    = Fifo_NotFree_Out_net_1;
 assign Control_Abort_Out_net_1             = Control_Abort_Out_net_0;
 assign Control_Abort_Out                   = Control_Abort_Out_net_1;
+assign SelfTrigger_Out_net_1               = SelfTrigger_Out_net_0;
+assign SelfTrigger_Out                     = SelfTrigger_Out_net_1;
 assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign Communication_Data_Frame_net_1      = Communication_Data_Frame_net_0;
 assign Communication_Data_Frame[31:0]      = Communication_Data_Frame_net_1;
-assign SelfTrigger_Out_net_1               = SelfTrigger_Out_net_0;
-assign SelfTrigger_Out                     = SelfTrigger_Out_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -484,10 +484,10 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .C_enable_cmd                  ( CtrlBus_HandShake_0_PRH_enable_cmd ),
         .C_write_read                  ( CtrlBus_HandShake_0_PRH_write_read ),
         .RE                            ( Diag_1_0 ),
+        .EXT_TriggerInput              ( EXT_TriggerInput ),
         .C_addr_frame                  ( CtrlBus_HandShake_0_PRH_addr_frame ),
         .C_write_data_frame            ( CtrlBus_HandShake_0_PRH_write_data_frame ),
         .TRG_Detect_Vector             ( Input_Data_Part_0_TRG_Detect_Vector ),
-        .EXT_TriggerInput              ( EXT_TriggerInput ),
         // Outputs
         .C_busy                        ( Trigger_Top_Part_0_C_busy ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
@@ -499,10 +499,10 @@ Trigger_Top_Part Trigger_Top_Part_0(
         .Control_Enable_Out            ( Control_Enable_Out_net_0 ),
         .Fifo_NotFree_Out              ( Fifo_NotFree_Out_net_0 ),
         .Control_Abort_Out             ( Control_Abort_Out_net_0 ),
+        .SelfTrigger_Out               ( SelfTrigger_Out_net_0 ),
         .C_read_data_frame             ( Trigger_Top_Part_0_C_read_data_frame ),
         .TRG_Threshold                 ( Trigger_Top_Part_0_TRG_Threshold ),
-        .Q                             ( Trigger_Top_Part_0_Q ),
-        .SelfTrigger_Out               ( SelfTrigger_Out_net_0 ) 
+        .Q                             ( Trigger_Top_Part_0_Q ) 
         );
 
 

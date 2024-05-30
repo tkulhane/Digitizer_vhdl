@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sat May 18 13:01:58 2024
+// Created by SmartDesign Thu May 30 13:20:34 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -89,10 +89,10 @@ wire          Logic_Reset_N_net_0;
 wire          Main_CLOCK_0;
 wire          Main_RESET_N_0;
 wire          PF_CCC_C0_0_PLL_LOCK_0;
-wire          PF_CCC_C7_0_0_OUT0_FABCLK_0;
-wire          PF_CCC_C7_0_0_PLL_LOCK_0;
 wire          PF_CCC_C7_0_OUT0_FABCLK_0;
 wire          PF_CCC_C7_0_PLL_LOCK_0;
+wire          PF_CCC_C8_0_OUT0_FABCLK_0;
+wire          PF_CCC_C8_0_PLL_LOCK_0;
 wire          PF_INIT_MONITOR_C0_0_DEVICE_INIT_DONE;
 wire          PF_INIT_MONITOR_C0_0_FABRIC_POR_N;
 wire          PF_OSC_C0_0_RCOSC_160MHZ_GL;
@@ -115,10 +115,10 @@ wire          Logic_Clock_net_1;
 wire          Logic_Reset_N_net_1;
 wire          Ref_Clock_net_1;
 wire          Ref_Reset_N_net_1;
-wire   [15:0] read_data_frame_net_1;
 wire          CLK_SRC_40M_net_1;
 wire          CLK_SRC_Logic_net_1;
 wire          CLK_SRC_Ref_net_1;
+wire   [15:0] read_data_frame_net_1;
 wire   [1:0]  PLLs_Lock_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -155,18 +155,18 @@ assign Ref_Clock_net_1           = Ref_Clock_net_0;
 assign Ref_Clock                 = Ref_Clock_net_1;
 assign Ref_Reset_N_net_1         = Ref_Reset_N_net_0;
 assign Ref_Reset_N               = Ref_Reset_N_net_1;
-assign read_data_frame_net_1     = read_data_frame_net_0;
-assign read_data_frame[15:0]     = read_data_frame_net_1;
 assign CLK_SRC_40M_net_1         = CLK_SRC_40M_net_0;
 assign CLK_SRC_40M               = CLK_SRC_40M_net_1;
 assign CLK_SRC_Logic_net_1       = CLK_SRC_Logic_net_0;
 assign CLK_SRC_Logic             = CLK_SRC_Logic_net_1;
 assign CLK_SRC_Ref_net_1         = CLK_SRC_Ref_net_0;
 assign CLK_SRC_Ref               = CLK_SRC_Ref_net_1;
+assign read_data_frame_net_1     = read_data_frame_net_0;
+assign read_data_frame[15:0]     = read_data_frame_net_1;
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
-assign PLLs_Lock_net_0 = { PF_CCC_C7_0_0_PLL_LOCK_0 , PF_CCC_C7_0_PLL_LOCK_0 };
+assign PLLs_Lock_net_0 = { PF_CCC_C8_0_PLL_LOCK_0 , PF_CCC_C7_0_PLL_LOCK_0 };
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -219,8 +219,8 @@ Clock_Switch Clock_Switch_0_0(
         .ClockInputC    ( ClockInput_EXT1 ),
         .ClockInputD    ( ClockInput_EXT2 ),
         .SwitchEnable   ( Clock_Controller_0_SwitchEnable_Ref ),
-        .PLL_Lock       ( PF_CCC_C7_0_0_PLL_LOCK_0 ),
-        .Clock_From_PLL ( PF_CCC_C7_0_0_OUT0_FABCLK_0 ),
+        .PLL_Lock       ( PF_CCC_C8_0_PLL_LOCK_0 ),
+        .Clock_From_PLL ( PF_CCC_C8_0_OUT0_FABCLK_0 ),
         .SwitchSelect   ( Clock_Controller_0_SwitchSelect_Ref ),
         // Outputs
         .PLL_PWR_DOWN   ( Clock_Switch_0_0_PLL_PWR_DOWN ),
@@ -277,14 +277,14 @@ PF_CCC_C7 PF_CCC_C7_0(
         .PLL_LOCK_0        ( PF_CCC_C7_0_PLL_LOCK_0 ) 
         );
 
-//--------PF_CCC_C7
-PF_CCC_C7 PF_CCC_C7_0_0(
+//--------PF_CCC_C8
+PF_CCC_C8 PF_CCC_C8_0(
         // Inputs
         .REF_CLK_0         ( CLK_SRC_Ref_net_0 ),
         .PLL_POWERDOWN_N_0 ( Clock_Switch_0_0_PLL_PWR_DOWN ),
         // Outputs
-        .OUT0_FABCLK_0     ( PF_CCC_C7_0_0_OUT0_FABCLK_0 ),
-        .PLL_LOCK_0        ( PF_CCC_C7_0_0_PLL_LOCK_0 ) 
+        .OUT0_FABCLK_0     ( PF_CCC_C8_0_OUT0_FABCLK_0 ),
+        .PLL_LOCK_0        ( PF_CCC_C8_0_PLL_LOCK_0 ) 
         );
 
 //--------PF_CLK_DIV_C2

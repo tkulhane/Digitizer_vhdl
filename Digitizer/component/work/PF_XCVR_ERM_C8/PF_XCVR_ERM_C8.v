@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Wed May 29 15:12:00 2024
+// Created by SmartDesign Thu May 30 13:18:33 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -18,7 +18,7 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "EXPOSE_FWF_EN_PORTS:false" \
 "SHOW_UNIVERSAL_SOLN_PORTS:true" \
 "UI_CDR_LOCK_MODE:Lock to data" \
-"UI_CDR_REFERENCE_CLK_FREQ:80.0" \
+"UI_CDR_REFERENCE_CLK_FREQ:156.25" \
 "UI_CDR_REFERENCE_CLK_SOURCE:Fabric" \
 "UI_CDR_REFERENCE_CLK_TOLERANCE:1" \
 "UI_ENABLE_32BIT_DATA_WIDTH:false" \
@@ -50,15 +50,15 @@ create_and_configure_core -core_vlnv {Actel:SystemBuilder:PF_XCVR_ERM:3.1.200} -
 "UI_PIPE_PROTOCOL_USED:PCIe Gen1 (2.5 Gbps)" \
 "UI_PMA_ARST_N:TX and RX PMA" \
 "UI_PROTOCOL_PRESET_USED:None" \
-"UI_RX_DATA_RATE:10000" \
+"UI_RX_DATA_RATE:6250" \
 "UI_RX_PCS_FAB_IF_WIDTH:64" \
 "UI_SATA_IDLE_BURST_TIMING:MAC" \
 "UI_TX_CLK_DIV_FACTOR:1" \
-"UI_TX_DATA_RATE:10000" \
+"UI_TX_DATA_RATE:6250" \
 "UI_TX_PCS_FAB_IF_WIDTH:64" \
 "UI_TX_RX_MODE:Tx and Rx (Independent)" \
 "UI_USE_INTERFACE_CLK_AS_PLL_REFCLK:false" \
-"UI_XCVR_RX_CALIBRATION:None (DFE)" \
+"UI_XCVR_RX_CALIBRATION:None (CDR)" \
 "UI_XCVR_RX_DATA_EYE_CALIBRATION:false" \
 "UI_XCVR_RX_DFE_COEFF_CALIBRATION:false" \
 "UI_XCVR_RX_ENHANCED_MANAGEMENT:true" \
@@ -427,7 +427,7 @@ PF_XCVR_APBLINK_V I_XCVR_APBLINK_V_0(
 
 //--------CORELANEMSTR   -   Actel:DirectCore:CORELANEMSTR:2.1.100
 CORELANEMSTR #( 
-        .MODE            ( 0 ),
+        .MODE            ( 2 ),
         .SIMULATION_MODE ( 1 ) )
 I_XCVR_CORELANEMSTR_0(
         // Inputs

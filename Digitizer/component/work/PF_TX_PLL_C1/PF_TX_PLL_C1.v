@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Feb 11 13:35:34 2024
+// Created by SmartDesign Thu May 30 16:15:35 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -33,8 +33,8 @@ create_and_configure_core -core_vlnv {Actel:SgCore:PF_TX_PLL:2.0.300} -component
 "TxPLL_JITTER_MODE_SEL:10G SyncE 32Bit"  \
 "TxPLL_JITTER_MODE_WANDER:15"  \
 "TxPLL_MODE:NORMAL"  \
-"TxPLL_OUT:5000.000"  \
-"TxPLL_REF:125"  \
+"TxPLL_OUT:3125.000"  \
+"TxPLL_REF:156.25"  \
 "TxPLL_RN_FILTER:false"  \
 "TxPLL_SOURCE:FABRIC"  \
 "TxPLL_SSM_DEPTH:0"  \

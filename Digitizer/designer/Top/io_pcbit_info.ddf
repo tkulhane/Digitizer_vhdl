@@ -1,5 +1,5 @@
 ;--------------------------------------------------------------------------------
-; Date:    Tue May 28 12:49:59 2024
+; Date:    Thu May 30 23:20:01 2024
 ; version: 2022.1 2022.1.0.10
 ; Design:  Top
 ; Family:  PolarFire
@@ -31,10 +31,10 @@ Module  ICBMUXINGPC_SW_0                      584  1        714  1    ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'hA"                  U. 
+        CLKSTOP_SOURCE_SEL                    "60'h14"                 U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFFFFFFFFFFE1FFF" U. 
+        NMUX_SEL                              "72'hFFF87FFFFFFFFFFFFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
         STOP_SEL                              "24'hFFFFFC"             U. 
@@ -46,10 +46,10 @@ Module  ICBMUXINGPC_SE_0                      1748 1        1809 2    ICBMUXING 
         BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
         BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
         BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'h8200000"            U. 
+        CLKSTOP_SOURCE_SEL                    "60'h4100000"            U. 
         DYNEN                                 "1'h1"                   D. 
         DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFFF23F27FFFFFFF" U. 
+        NMUX_SEL                              "72'hFFFFFFFFF209FFFFFF" U. 
         SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
         STOP_SEL                              "24'hFFF0FF"             U. 
@@ -71,7 +71,7 @@ Module  PLL_SE_0                              2460 5        2424 12   PLL       
         DESKEW_CAL_CNT                        "3'h6"                   U. 
         DESKEW_CAL_EN                         "1'h1"                   U. 
         DIV0_RST_DELAY                        "3'h0"                   U. 
-        DIV0_VAL                              "7'hA"                   U. 
+        DIV0_VAL                              "7'h8"                   U. 
         DIV1_RST_DELAY                        "3'h0"                   U. 
         DIV1_VAL                              "7'h1"                   U. 
         DIV2_RST_DELAY                        "3'h0"                   U. 
@@ -215,38 +215,7 @@ Module  CRNCOMMON_SE                          2466 5        2436 18   CRNCOMMON 
         PC_SRMUX1_SEL                         "3'h0"                   D. 
 End_Module.
 
-Module  ICBMUXINGPC_E_0                       2468 163      2436 649  ICBMUXING       .
-        BANKCLK_BRIDGING                      "10'h0"                  N. 
-        BANKCLK_CCW_SOURCE_SEL                "30'h18C6318C"           D. 
-        BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
-        BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
-        BANK_OUT_CW_SEL                       "6'h3F"                  D. 
-        CLKSTOP_SOURCE_SEL                    "60'h982000000044940"    U. 
-        DYNEN                                 "1'h1"                   D. 
-        DYNEN_SOFT_RESET                      "1'h1"                   D. 
-        NMUX_SEL                              "72'hFFFFC203F4BFFD0FD1" U. 
-        SOFT_RESET                            "1'h0"                   D. 
-        SOFT_RESET_PERIPH                     "1'h0"                   D. 
-        STOP_SEL                              "24'h33FF03"             U. 
-End_Module.
-
-Module  QUADPLL_GPSS2_I                       2466 320      2437 1406 QUADPLL         .
-        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   U. 
-        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   U. 
-        CLK_SEL_JA_FREF_SEL                   "3'h0"                   U. 
-        CLK_SEL_REFCLK_SEL_HM                 "2'h3"                   U. 
-        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   U. 
-        CTRL_BWSEL                            "1'h0"                   U. 
-        CTRL_DSMPD                            "1'h1"                   U. 
-        CTRL_FBDIV_SEL                        "2'h0"                   U. 
-        CTRL_VBGREF_SEL                       "1'h0"                   U. 
-        DIV_1_AUXDIV                          "12'h14"                 U. 
-        DIV_1_FBDIV                           "12'h28"                 U. 
-        DIV_2_FRAC                            "24'h0"                  U. 
-        DIV_2_REFDIV                          "6'h1"                   U. 
-End_Module.
-
-Module  LANE_GPSS2_2                          2461 344      2440 1394 LANE            .
+Module  LANE_GPSS1_0                          2460 98       2439 421  LANE            .
         PCS_L64_R0_L64_CFG_BER_MON_EN         "1'h1"                   U. 
         PCS_L64_R0_L64_CFG_BYPASS_8B_MODE     "1'h0"                   U. 
         PCS_L64_R0_L64_CFG_BYPASS_DISPARITY   "1'h1"                   U. 
@@ -328,7 +297,7 @@ Module  LANE_GPSS2_2                          2461 344      2440 1394 LANE      
         PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   U. 
         PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h2"                   U. 
         PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   U. 
-        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h50"                  U. 
+        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h28"                  U. 
         PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   U. 
         PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h2"                   U. 
         PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   U. 
@@ -363,7 +332,40 @@ Module  LANE_GPSS2_2                          2461 344      2440 1394 LANE      
         PMA_SOFT_RESET_PERIPH                 "1'h0"                   U. 
 End_Module.
 
-Module  LANE_GPSS2_3                          2460 371      2437 1404 LANE            .
+Module  TXPLL_EXTPLL13_0                      2460 101      2440 350  TXPLL           .
+        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   U. 
+        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   U. 
+        CLK_SEL_JA_FREF_SEL                   "3'h0"                   U. 
+        CLK_SEL_REFCLK_SEL_HM                 "2'h3"                   U. 
+        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   U. 
+        CTRL_BWSEL                            "1'h0"                   U. 
+        CTRL_DSMPD                            "1'h1"                   U. 
+        CTRL_FBDIV_SEL                        "1'h0"                   U. 
+        CTRL_VBGREF_SEL                       "1'h0"                   U. 
+        DIV_1_AUXDIV                          "12'hD"                  U. 
+        DIV_1_FBDIV                           "12'h28"                 U. 
+        DIV_2_FRAC                            "24'h0"                  U. 
+        DIV_2_REFDIV                          "6'h2"                   U. 
+        SOFT_RESET_PERIPH                     "1'h0"                   D. 
+End_Module.
+
+Module  QUADPLL_GPSS1_I                       2466 101      2437 542  QUADPLL         .
+        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   U. 
+        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   U. 
+        CLK_SEL_JA_FREF_SEL                   "3'h0"                   U. 
+        CLK_SEL_REFCLK_SEL_HM                 "2'h3"                   U. 
+        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   U. 
+        CTRL_BWSEL                            "1'h0"                   U. 
+        CTRL_DSMPD                            "1'h1"                   U. 
+        CTRL_FBDIV_SEL                        "2'h0"                   U. 
+        CTRL_VBGREF_SEL                       "1'h0"                   U. 
+        DIV_1_AUXDIV                          "12'hD"                  U. 
+        DIV_1_FBDIV                           "12'h28"                 U. 
+        DIV_2_FRAC                            "24'h0"                  U. 
+        DIV_2_REFDIV                          "6'h2"                   U. 
+End_Module.
+
+Module  LANE_GPSS1_1                          2460 125      2437 433  LANE            .
         PCS_L64_R0_L64_CFG_BER_MON_EN         "1'h1"                   U. 
         PCS_L64_R0_L64_CFG_BYPASS_8B_MODE     "1'h0"                   U. 
         PCS_L64_R0_L64_CFG_BYPASS_DISPARITY   "1'h1"                   U. 
@@ -445,7 +447,7 @@ Module  LANE_GPSS2_3                          2460 371      2437 1404 LANE      
         PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   U. 
         PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h2"                   U. 
         PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   U. 
-        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h50"                  U. 
+        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h28"                  U. 
         PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   U. 
         PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h2"                   U. 
         PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   U. 
@@ -480,21 +482,19 @@ Module  LANE_GPSS2_3                          2460 371      2437 1404 LANE      
         PMA_SOFT_RESET_PERIPH                 "1'h0"                   U. 
 End_Module.
 
-Module  TXPLL_EXTPLL24_0                      2460 374      2439 1477 TXPLL           .
-        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   U. 
-        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   U. 
-        CLK_SEL_JA_FREF_SEL                   "3'h0"                   U. 
-        CLK_SEL_REFCLK_SEL_HM                 "2'h3"                   U. 
-        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   U. 
-        CTRL_BWSEL                            "1'h0"                   U. 
-        CTRL_DSMPD                            "1'h1"                   U. 
-        CTRL_FBDIV_SEL                        "1'h0"                   U. 
-        CTRL_VBGREF_SEL                       "1'h0"                   U. 
-        DIV_1_AUXDIV                          "12'h14"                 U. 
-        DIV_1_FBDIV                           "12'h28"                 U. 
-        DIV_2_FRAC                            "24'h0"                  U. 
-        DIV_2_REFDIV                          "6'h1"                   U. 
+Module  ICBMUXINGPC_E_0                       2468 163      2436 649  ICBMUXING       .
+        BANKCLK_BRIDGING                      "10'h0"                  N. 
+        BANKCLK_CCW_SOURCE_SEL                "30'h18C6318C"           D. 
+        BANKCLK_CW_SOURCE_SEL                 "30'h18C6318C"           D. 
+        BANK_OUT_CCW_SEL                      "6'h3F"                  D. 
+        BANK_OUT_CW_SEL                       "6'h3F"                  D. 
+        CLKSTOP_SOURCE_SEL                    "60'h54C0000000A3240"    U. 
+        DYNEN                                 "1'h1"                   D. 
+        DYNEN_SOFT_RESET                      "1'h1"                   D. 
+        NMUX_SEL                              "72'hFFF44043FFD2FC2FFF" U. 
+        SOFT_RESET                            "1'h0"                   D. 
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
+        STOP_SEL                              "24'hFFF03"              U. 
 End_Module.
 
 Module  PLL_NE_0                              2460 377      2430 1489 PLL             .
@@ -513,9 +513,9 @@ Module  PLL_NE_0                              2460 377      2430 1489 PLL       
         DESKEW_CAL_CNT                        "3'h6"                   U. 
         DESKEW_CAL_EN                         "1'h1"                   U. 
         DIV0_RST_DELAY                        "3'h0"                   U. 
-        DIV0_VAL                              "7'h5"                   U. 
+        DIV0_VAL                              "7'h4"                   U. 
         DIV1_RST_DELAY                        "3'h0"                   U. 
-        DIV1_VAL                              "7'h71"                  U. 
+        DIV1_VAL                              "7'h74"                  U. 
         DIV2_RST_DELAY                        "3'h0"                   U. 
         DIV2_VAL                              "7'h1"                   U. 
         DIV3_CLK_SEL                          "1'h0"                   U. 
@@ -525,7 +525,7 @@ Module  PLL_NE_0                              2460 377      2430 1489 PLL       
         FB_CLK_SEL_0                          "2'h0"                   U. 
         FB_CLK_SEL_1                          "1'h0"                   U. 
         FB_FRAC_VAL                           "24'h0"                  U. 
-        FB_INT_VAL                            "12'h7D"                 U. 
+        FB_INT_VAL                            "12'h10"                 U. 
         FF_REQUIRES_LOCK                      "1'h0"                   U. 
         FRAC_DAC_EN                           "1'h0"                   U. 
         FRAC_EN                               "1'h0"                   U. 
@@ -542,7 +542,7 @@ Module  PLL_NE_0                              2460 377      2430 1489 PLL       
         OUT3_DIV_EN                           "1'h0"                   U. 
         OUT3_PHASE_SEL                        "3'h0"                   U. 
         RESET_ON_LOCK                         "1'h1"                   U. 
-        RFDIV                                 "6'h8"                   U. 
+        RFDIV                                 "6'h1"                   U. 
         RFDIV_EN                              "1'h1"                   U. 
         SOFTRESET                             "1'h0"                   U. 
         SOFT_LOAD_PHASE_N                     "1'h1"                   U. 
@@ -576,7 +576,7 @@ Module  PLL_NE_1                              2461 377      2424 1490 PLL       
         DESKEW_CAL_CNT                        "3'h6"                   U. 
         DESKEW_CAL_EN                         "1'h1"                   U. 
         DIV0_RST_DELAY                        "3'h0"                   U. 
-        DIV0_VAL                              "7'hA"                   U. 
+        DIV0_VAL                              "7'h10"                  U. 
         DIV1_RST_DELAY                        "3'h0"                   U. 
         DIV1_VAL                              "7'h1"                   U. 
         DIV2_RST_DELAY                        "3'h0"                   U. 
@@ -2084,123 +2084,6 @@ Module  GPSSCOMMON_GPSS1_0                    2460 92       2443 415  GPSSCOMMON
         PMA_CMN_SOFT_RESET_PERIPH             "1'h0"                   D. 
 End_Module.
 
-Module  LANE_GPSS1_0                          2460 98       2439 421  LANE            .
-        PCS_L64_R0_L64_CFG_BER_MON_EN         "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_8B_MODE     "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_DISPARITY   "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_GEARBOX     "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_SCRAMBLER   "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_GRBX_64B67B        "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_GRBX_SM_C49        "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_GRBX_SM_C82        "1'h0"                   N. 
-        PCS_L8_R0_L8_GEARMODE                 "2'h0"                   N. 
-        PCS_LCLK_R0_LCLK_EPCS_RX_CLK_SEL      "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_EPCS_TX_CLK_SEL      "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_PCS_RX_CLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_PCS_TX_CLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_RXFWF_WCLK_PIPE      "1'h0"                   N. 
-        PCS_LCLK_R0_LCLK_RXFWF_WCLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_TXFWF_RCLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_TXFWF_TMG_MODE       "1'h0"                   N. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK_DIV2  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK_DIV2  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_RXFWF_WCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_RX_CLK     "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_TXFWF_RCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_TX_CLK     "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_RXFWF_WCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_RX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_TXFWF_RCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_TX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_PIPE_LCL         "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_PIPE_OUT         "1'h0"                   D. 
-        PCS_LFWF_R0_RXFWF_RATIO               "2'h0"                   N. 
-        PCS_LFWF_R0_TXFWF_RATIO               "2'h0"                   N. 
-        PCS_LNTV_R0_LNTV_RX_GEAR              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_RX_IN_WIDTH          "3'h0"                   N. 
-        PCS_LNTV_R0_LNTV_RX_MODE              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_TX_GEAR              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_TX_MODE              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_TX_OUT_WIDTH         "3'h0"                   N. 
-        PCS_LOVR_R0_FAB_IFC_MODE              "4'h0"                   D. 
-        PCS_LOVR_R0_PCSPMA_IFC_MODE           "4'h0"                   D. 
-        PCS_LPIP_R0_PIPEENABLE                "1'h0"                   D. 
-        PCS_LPIP_R0_PIPEMODE                  "1'h0"                   N. 
-        PCS_LPIP_R0_PIPE_PCIE_HC              "1'h0"                   D. 
-        PCS_PMA_CTRL_R0_FAB_EPCS_PMA_RESET_B_EN  "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_FLASH_FREEZE_P0S_EN   "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_FLASH_FREEZE_P1_EN    "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_FLASH_FREEZE_P2_EN    "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_PIPE_P0S_EN           "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_PIPE_P1_EN            "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_PIPE_P2_EN            "1'h0"                   N. 
-        PCS_SOFT_RESET_PERIPH                 "1'h1"                   D. 
-        PMA_DES_CDR_CTRL_3_CST1_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_CST2_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_RST1_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_RST2_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_RXDRV_CDR          "2'h0"                   N. 
-        PMA_DES_CLK_CTRL_DATALOCKDIVEN        "1'h0"                   N. 
-        PMA_DES_CLK_CTRL_DATALOCKEN           "1'h0"                   N. 
-        PMA_DES_CLK_CTRL_DESMODE              "3'h0"                   N. 
-        PMA_DES_CLK_CTRL_RXREFCLK_SEL         "3'h7"                   D. 
-        PMA_DES_DFEEM_CTRL_3_CST1_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFEEM_CTRL_3_CST2_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFEEM_CTRL_3_RST1_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFEEM_CTRL_3_RST2_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFE_CTRL_2_CTLEEN_DFE         "1'h0"                   N. 
-        PMA_DES_DFE_CTRL_2_RXDRV_DFE          "2'h0"                   N. 
-        PMA_DES_EM_CTRL_2_CTLEEN_EM           "1'h0"                   N. 
-        PMA_DES_EM_CTRL_2_RXDRV_EM            "2'h0"                   N. 
-        PMA_DES_IN_TERM_ACCOUPLE_RXVCM_EN     "1'h0"                   D. 
-        PMA_DES_IN_TERM_RXRTRIM               "4'h0"                   N. 
-        PMA_DES_IN_TERM_RXRTRIM_SEL           "2'h0"                   N. 
-        PMA_DES_IN_TERM_RXTEN                 "1'h1"                   D. 
-        PMA_DES_PKDET_RXPKDETEN               "1'h0"                   D. 
-        PMA_DES_PKDET_RXPKDETRANGE            "1'h0"                   N. 
-        PMA_DES_PKDET_RXPKDET_HIGH_THRESHOLD  "3'h0"                   N. 
-        PMA_DES_PKDET_RXPKDET_LOW_THRESHOLD   "3'h0"                   N. 
-        PMA_DES_RTL_LOCK_CTRL_FDET_SAMPLE_PERIODS  "5'h0"                   N. 
-        PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   N. 
-        PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h0"                   N. 
-        PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   N. 
-        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h0"                   N. 
-        PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   N. 
-        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h0"                   N. 
-        PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   D. 
-        PMA_SERDES_RTL_CTRL_RX_HALF_RATE10BIT  "1'h0"                   N. 
-        PMA_SERDES_RTL_CTRL_TX_HALF_RATE10BIT  "1'h0"                   N. 
-        PMA_SER_CLK_CTRL_SERMODE              "3'h0"                   N. 
-        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h0"                   D. 
-        PMA_SER_CLK_CTRL_TXPOSTDIV            "2'h0"                   N. 
-        PMA_SER_CLK_CTRL_TXPOSTDIVEN          "1'h0"                   N. 
-        PMA_SER_CTRL_TXVBGREF_SEL             "1'h0"                   N. 
-        PMA_SER_DRV_BYP_BYPASS_VALUE          "8'h0"                   N. 
-        PMA_SER_DRV_BYP_TX_BYPASS_SELECT      "1'h0"                   N. 
-        PMA_SER_DRV_BYP_TX_BYPASS_SELECT_RTL  "2'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS     "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS_BEACON  "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXDRV_CTRL_SEL   "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXMARGIN         "3'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXODRV_BOOSTER   "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXSWING          "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_TXDRV                "3'h0"                   N. 
-        PMA_SER_DRV_CTRL_TXDRVTRIM            "24'h0"                  N. 
-        PMA_SER_DRV_CTRL_TXITRIM              "2'h0"                   N. 
-        PMA_SER_DRV_CTRL_TXODRV               "2'h0"                   N. 
-        PMA_SER_DRV_DATA_CTRL_TXDATA_INV      "8'h0"                   N. 
-        PMA_SER_DRV_DATA_CTRL_TXDEL           "16'h0"                  N. 
-        PMA_SER_RXDET_CTRL_RXDETECT_STEP_WAIT_COUNT  "5'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXCM_LEVEL          "2'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXRTRIM             "4'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXRTRIM_SEL         "2'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXTEN               "1'h1"                   D. 
-        PMA_SER_TEST_BUS_TXATESTEN            "1'h0"                   D. 
-        PMA_SOFT_RESET_PERIPH                 "1'h1"                   D. 
-End_Module.
-
 Module  REFIO_EXTPLL13_0                      2466 98       2441 355  REFIO           .
         CLKBUF_CLKBUF_EN_APAD                 "1'h0"                   D. 
         CLKBUF_CLKBUF_EN_PULLUP               "1'h0"                   D. 
@@ -2213,39 +2096,6 @@ Module  REFIO_EXTPLL13_0                      2466 98       2441 355  REFIO     
         CLKBUF_DUALCLK1_ENTERM                "2'h0"                   D. 
         CLKBUF_DUALCLK1_EN_HYST               "1'h0"                   D. 
         CLKBUF_DUALCLK1_MODE                  "2'h0"                   D. 
-End_Module.
-
-Module  TXPLL_EXTPLL13_0                      2460 101      2440 350  TXPLL           .
-        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   N. 
-        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   N. 
-        CLK_SEL_JA_FREF_SEL                   "3'h0"                   N. 
-        CLK_SEL_REFCLK_SEL_HM                 "2'h0"                   N. 
-        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   N. 
-        CTRL_BWSEL                            "1'h0"                   N. 
-        CTRL_DSMPD                            "1'h0"                   N. 
-        CTRL_FBDIV_SEL                        "1'h0"                   N. 
-        CTRL_VBGREF_SEL                       "1'h0"                   N. 
-        DIV_1_AUXDIV                          "12'h0"                  N. 
-        DIV_1_FBDIV                           "12'h0"                  N. 
-        DIV_2_FRAC                            "24'h0"                  N. 
-        DIV_2_REFDIV                          "6'h0"                   N. 
-        SOFT_RESET_PERIPH                     "1'h0"                   D. 
-End_Module.
-
-Module  QUADPLL_GPSS1_I                       2466 101      2437 542  QUADPLL         .
-        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   N. 
-        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   N. 
-        CLK_SEL_JA_FREF_SEL                   "3'h0"                   N. 
-        CLK_SEL_REFCLK_SEL_HM                 "2'h0"                   N. 
-        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   N. 
-        CTRL_BWSEL                            "1'h0"                   N. 
-        CTRL_DSMPD                            "1'h1"                   D. 
-        CTRL_FBDIV_SEL                        "2'h0"                   N. 
-        CTRL_VBGREF_SEL                       "1'h0"                   N. 
-        DIV_1_AUXDIV                          "12'h0"                  N. 
-        DIV_1_FBDIV                           "12'h0"                  N. 
-        DIV_2_FRAC                            "24'h0"                  N. 
-        DIV_2_REFDIV                          "6'h0"                   N. 
 End_Module.
 
 Module  LANECTRL_W_2                          11   117      10   462  LANECTRL        .
@@ -2277,123 +2127,6 @@ Module  LANECTRL_W_2                          11   117      10   462  LANECTRL  
         TX_DQS_DELAY_LINE_EN                  "1'h0"                   D. 
         TX_DQS_DELAY_VAL                      "8'h0"                   D. 
         WRITE_MARGIN_TEST_EN                  "1'h0"                   D. 
-End_Module.
-
-Module  LANE_GPSS1_1                          2460 125      2437 433  LANE            .
-        PCS_L64_R0_L64_CFG_BER_MON_EN         "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_8B_MODE     "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_DISPARITY   "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_GEARBOX     "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_BYPASS_SCRAMBLER   "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_GRBX_64B67B        "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_GRBX_SM_C49        "1'h0"                   N. 
-        PCS_L64_R0_L64_CFG_GRBX_SM_C82        "1'h0"                   N. 
-        PCS_L8_R0_L8_GEARMODE                 "2'h0"                   N. 
-        PCS_LCLK_R0_LCLK_EPCS_RX_CLK_SEL      "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_EPCS_TX_CLK_SEL      "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_PCS_RX_CLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_PCS_TX_CLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_RXFWF_WCLK_PIPE      "1'h0"                   N. 
-        PCS_LCLK_R0_LCLK_RXFWF_WCLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_TXFWF_RCLK_SEL       "2'h0"                   D. 
-        PCS_LCLK_R0_LCLK_TXFWF_TMG_MODE       "1'h0"                   N. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK_DIV2  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK_DIV2  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_RXFWF_WCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_RX_CLK     "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_TXFWF_RCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_8B10B_TX_CLK     "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_RXFWF_WCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_RX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_TXFWF_RCLK  "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_NATIVE_TX_CLK    "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_PIPE_LCL         "1'h0"                   D. 
-        PCS_LCLK_R1_LCLK_ENA_PIPE_OUT         "1'h0"                   D. 
-        PCS_LFWF_R0_RXFWF_RATIO               "2'h0"                   N. 
-        PCS_LFWF_R0_TXFWF_RATIO               "2'h0"                   N. 
-        PCS_LNTV_R0_LNTV_RX_GEAR              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_RX_IN_WIDTH          "3'h0"                   N. 
-        PCS_LNTV_R0_LNTV_RX_MODE              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_TX_GEAR              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_TX_MODE              "1'h0"                   N. 
-        PCS_LNTV_R0_LNTV_TX_OUT_WIDTH         "3'h0"                   N. 
-        PCS_LOVR_R0_FAB_IFC_MODE              "4'h0"                   D. 
-        PCS_LOVR_R0_PCSPMA_IFC_MODE           "4'h0"                   D. 
-        PCS_LPIP_R0_PIPEENABLE                "1'h0"                   D. 
-        PCS_LPIP_R0_PIPEMODE                  "1'h0"                   N. 
-        PCS_LPIP_R0_PIPE_PCIE_HC              "1'h0"                   D. 
-        PCS_PMA_CTRL_R0_FAB_EPCS_PMA_RESET_B_EN  "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_FLASH_FREEZE_P0S_EN   "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_FLASH_FREEZE_P1_EN    "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_FLASH_FREEZE_P2_EN    "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_PIPE_P0S_EN           "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_PIPE_P1_EN            "1'h0"                   N. 
-        PCS_PMA_CTRL_R0_PIPE_P2_EN            "1'h0"                   N. 
-        PCS_SOFT_RESET_PERIPH                 "1'h1"                   D. 
-        PMA_DES_CDR_CTRL_3_CST1_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_CST2_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_RST1_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_RST2_CDR           "2'h0"                   N. 
-        PMA_DES_CDR_CTRL_3_RXDRV_CDR          "2'h0"                   N. 
-        PMA_DES_CLK_CTRL_DATALOCKDIVEN        "1'h0"                   N. 
-        PMA_DES_CLK_CTRL_DATALOCKEN           "1'h0"                   N. 
-        PMA_DES_CLK_CTRL_DESMODE              "3'h0"                   N. 
-        PMA_DES_CLK_CTRL_RXREFCLK_SEL         "3'h7"                   D. 
-        PMA_DES_DFEEM_CTRL_3_CST1_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFEEM_CTRL_3_CST2_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFEEM_CTRL_3_RST1_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFEEM_CTRL_3_RST2_DFEEM       "2'h0"                   N. 
-        PMA_DES_DFE_CTRL_2_CTLEEN_DFE         "1'h0"                   N. 
-        PMA_DES_DFE_CTRL_2_RXDRV_DFE          "2'h0"                   N. 
-        PMA_DES_EM_CTRL_2_CTLEEN_EM           "1'h0"                   N. 
-        PMA_DES_EM_CTRL_2_RXDRV_EM            "2'h0"                   N. 
-        PMA_DES_IN_TERM_ACCOUPLE_RXVCM_EN     "1'h0"                   D. 
-        PMA_DES_IN_TERM_RXRTRIM               "4'h0"                   N. 
-        PMA_DES_IN_TERM_RXRTRIM_SEL           "2'h0"                   N. 
-        PMA_DES_IN_TERM_RXTEN                 "1'h1"                   D. 
-        PMA_DES_PKDET_RXPKDETEN               "1'h0"                   D. 
-        PMA_DES_PKDET_RXPKDETRANGE            "1'h0"                   N. 
-        PMA_DES_PKDET_RXPKDET_HIGH_THRESHOLD  "3'h0"                   N. 
-        PMA_DES_PKDET_RXPKDET_LOW_THRESHOLD   "3'h0"                   N. 
-        PMA_DES_RTL_LOCK_CTRL_FDET_SAMPLE_PERIODS  "5'h0"                   N. 
-        PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   N. 
-        PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h0"                   N. 
-        PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   N. 
-        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h0"                   N. 
-        PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   N. 
-        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h0"                   N. 
-        PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   D. 
-        PMA_SERDES_RTL_CTRL_RX_HALF_RATE10BIT  "1'h0"                   N. 
-        PMA_SERDES_RTL_CTRL_TX_HALF_RATE10BIT  "1'h0"                   N. 
-        PMA_SER_CLK_CTRL_SERMODE              "3'h0"                   N. 
-        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h0"                   D. 
-        PMA_SER_CLK_CTRL_TXPOSTDIV            "2'h0"                   N. 
-        PMA_SER_CLK_CTRL_TXPOSTDIVEN          "1'h0"                   N. 
-        PMA_SER_CTRL_TXVBGREF_SEL             "1'h0"                   N. 
-        PMA_SER_DRV_BYP_BYPASS_VALUE          "8'h0"                   N. 
-        PMA_SER_DRV_BYP_TX_BYPASS_SELECT      "1'h0"                   N. 
-        PMA_SER_DRV_BYP_TX_BYPASS_SELECT_RTL  "2'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS     "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS_BEACON  "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXDRV_CTRL_SEL   "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXMARGIN         "3'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXODRV_BOOSTER   "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_SEL_TXSWING          "1'h0"                   N. 
-        PMA_SER_DRV_CTRL_TXDRV                "3'h0"                   N. 
-        PMA_SER_DRV_CTRL_TXDRVTRIM            "24'h0"                  N. 
-        PMA_SER_DRV_CTRL_TXITRIM              "2'h0"                   N. 
-        PMA_SER_DRV_CTRL_TXODRV               "2'h0"                   N. 
-        PMA_SER_DRV_DATA_CTRL_TXDATA_INV      "8'h0"                   N. 
-        PMA_SER_DRV_DATA_CTRL_TXDEL           "16'h0"                  N. 
-        PMA_SER_RXDET_CTRL_RXDETECT_STEP_WAIT_COUNT  "5'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXCM_LEVEL          "2'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXRTRIM             "4'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXRTRIM_SEL         "2'h0"                   N. 
-        PMA_SER_TERM_CTRL_TXTEN               "1'h1"                   D. 
-        PMA_SER_TEST_BUS_TXATESTEN            "1'h0"                   D. 
-        PMA_SOFT_RESET_PERIPH                 "1'h1"                   D. 
 End_Module.
 
 Module  LANE_GPSS1_2                          2461 125      2440 530  LANE            .
@@ -3795,6 +3528,22 @@ Module  TXPLL_EXTPLL02_0                      2460 320      2440 1214 TXPLL     
         SOFT_RESET_PERIPH                     "1'h0"                   D. 
 End_Module.
 
+Module  QUADPLL_GPSS2_I                       2466 320      2437 1406 QUADPLL         .
+        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   N. 
+        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   N. 
+        CLK_SEL_JA_FREF_SEL                   "3'h0"                   N. 
+        CLK_SEL_REFCLK_SEL_HM                 "2'h0"                   N. 
+        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   N. 
+        CTRL_BWSEL                            "1'h0"                   N. 
+        CTRL_DSMPD                            "1'h1"                   D. 
+        CTRL_FBDIV_SEL                        "2'h0"                   N. 
+        CTRL_VBGREF_SEL                       "1'h0"                   N. 
+        DIV_1_AUXDIV                          "12'h0"                  N. 
+        DIV_1_FBDIV                           "12'h0"                  N. 
+        DIV_2_FRAC                            "24'h0"                  N. 
+        DIV_2_REFDIV                          "6'h0"                   N. 
+End_Module.
+
 Module  LANECTRL_W_10                         11   336      10   1326 LANECTRL        .
         CDR_CLK_DIV                           "3'h0"                   D. 
         CDR_CLK_SEL                           "12'h0"                  D. 
@@ -3943,6 +3692,123 @@ Module  LANE_GPSS2_1                          2460 344      2437 1297 LANE      
         PMA_SOFT_RESET_PERIPH                 "1'h1"                   D. 
 End_Module.
 
+Module  LANE_GPSS2_2                          2461 344      2440 1394 LANE            .
+        PCS_L64_R0_L64_CFG_BER_MON_EN         "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_8B_MODE     "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_DISPARITY   "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_GEARBOX     "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_SCRAMBLER   "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_GRBX_64B67B        "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_GRBX_SM_C49        "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_GRBX_SM_C82        "1'h0"                   N. 
+        PCS_L8_R0_L8_GEARMODE                 "2'h0"                   N. 
+        PCS_LCLK_R0_LCLK_EPCS_RX_CLK_SEL      "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_EPCS_TX_CLK_SEL      "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_PCS_RX_CLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_PCS_TX_CLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_RXFWF_WCLK_PIPE      "1'h0"                   N. 
+        PCS_LCLK_R0_LCLK_RXFWF_WCLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_TXFWF_RCLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_TXFWF_TMG_MODE       "1'h0"                   N. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK_DIV2  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK_DIV2  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_RXFWF_WCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_RX_CLK     "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_TXFWF_RCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_TX_CLK     "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_RXFWF_WCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_RX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_TXFWF_RCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_TX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_PIPE_LCL         "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_PIPE_OUT         "1'h0"                   D. 
+        PCS_LFWF_R0_RXFWF_RATIO               "2'h0"                   N. 
+        PCS_LFWF_R0_TXFWF_RATIO               "2'h0"                   N. 
+        PCS_LNTV_R0_LNTV_RX_GEAR              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_RX_IN_WIDTH          "3'h0"                   N. 
+        PCS_LNTV_R0_LNTV_RX_MODE              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_TX_GEAR              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_TX_MODE              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_TX_OUT_WIDTH         "3'h0"                   N. 
+        PCS_LOVR_R0_FAB_IFC_MODE              "4'h0"                   D. 
+        PCS_LOVR_R0_PCSPMA_IFC_MODE           "4'h0"                   D. 
+        PCS_LPIP_R0_PIPEENABLE                "1'h0"                   D. 
+        PCS_LPIP_R0_PIPEMODE                  "1'h0"                   N. 
+        PCS_LPIP_R0_PIPE_PCIE_HC              "1'h0"                   D. 
+        PCS_PMA_CTRL_R0_FAB_EPCS_PMA_RESET_B_EN  "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_FLASH_FREEZE_P0S_EN   "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_FLASH_FREEZE_P1_EN    "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_FLASH_FREEZE_P2_EN    "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_PIPE_P0S_EN           "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_PIPE_P1_EN            "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_PIPE_P2_EN            "1'h0"                   N. 
+        PCS_SOFT_RESET_PERIPH                 "1'h1"                   D. 
+        PMA_DES_CDR_CTRL_3_CST1_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_CST2_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_RST1_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_RST2_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_RXDRV_CDR          "2'h0"                   N. 
+        PMA_DES_CLK_CTRL_DATALOCKDIVEN        "1'h0"                   N. 
+        PMA_DES_CLK_CTRL_DATALOCKEN           "1'h0"                   N. 
+        PMA_DES_CLK_CTRL_DESMODE              "3'h0"                   N. 
+        PMA_DES_CLK_CTRL_RXREFCLK_SEL         "3'h7"                   D. 
+        PMA_DES_DFEEM_CTRL_3_CST1_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFEEM_CTRL_3_CST2_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFEEM_CTRL_3_RST1_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFEEM_CTRL_3_RST2_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFE_CTRL_2_CTLEEN_DFE         "1'h0"                   N. 
+        PMA_DES_DFE_CTRL_2_RXDRV_DFE          "2'h0"                   N. 
+        PMA_DES_EM_CTRL_2_CTLEEN_EM           "1'h0"                   N. 
+        PMA_DES_EM_CTRL_2_RXDRV_EM            "2'h0"                   N. 
+        PMA_DES_IN_TERM_ACCOUPLE_RXVCM_EN     "1'h0"                   D. 
+        PMA_DES_IN_TERM_RXRTRIM               "4'h0"                   N. 
+        PMA_DES_IN_TERM_RXRTRIM_SEL           "2'h0"                   N. 
+        PMA_DES_IN_TERM_RXTEN                 "1'h1"                   D. 
+        PMA_DES_PKDET_RXPKDETEN               "1'h0"                   D. 
+        PMA_DES_PKDET_RXPKDETRANGE            "1'h0"                   N. 
+        PMA_DES_PKDET_RXPKDET_HIGH_THRESHOLD  "3'h0"                   N. 
+        PMA_DES_PKDET_RXPKDET_LOW_THRESHOLD   "3'h0"                   N. 
+        PMA_DES_RTL_LOCK_CTRL_FDET_SAMPLE_PERIODS  "5'h0"                   N. 
+        PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   N. 
+        PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h0"                   N. 
+        PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   N. 
+        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h0"                   N. 
+        PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   N. 
+        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h0"                   N. 
+        PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   D. 
+        PMA_SERDES_RTL_CTRL_RX_HALF_RATE10BIT  "1'h0"                   N. 
+        PMA_SERDES_RTL_CTRL_TX_HALF_RATE10BIT  "1'h0"                   N. 
+        PMA_SER_CLK_CTRL_SERMODE              "3'h0"                   N. 
+        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h0"                   D. 
+        PMA_SER_CLK_CTRL_TXPOSTDIV            "2'h0"                   N. 
+        PMA_SER_CLK_CTRL_TXPOSTDIVEN          "1'h0"                   N. 
+        PMA_SER_CTRL_TXVBGREF_SEL             "1'h0"                   N. 
+        PMA_SER_DRV_BYP_BYPASS_VALUE          "8'h0"                   N. 
+        PMA_SER_DRV_BYP_TX_BYPASS_SELECT      "1'h0"                   N. 
+        PMA_SER_DRV_BYP_TX_BYPASS_SELECT_RTL  "2'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS     "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS_BEACON  "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXDRV_CTRL_SEL   "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXMARGIN         "3'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXODRV_BOOSTER   "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXSWING          "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_TXDRV                "3'h0"                   N. 
+        PMA_SER_DRV_CTRL_TXDRVTRIM            "24'h0"                  N. 
+        PMA_SER_DRV_CTRL_TXITRIM              "2'h0"                   N. 
+        PMA_SER_DRV_CTRL_TXODRV               "2'h0"                   N. 
+        PMA_SER_DRV_DATA_CTRL_TXDATA_INV      "8'h0"                   N. 
+        PMA_SER_DRV_DATA_CTRL_TXDEL           "16'h0"                  N. 
+        PMA_SER_RXDET_CTRL_RXDETECT_STEP_WAIT_COUNT  "5'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXCM_LEVEL          "2'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXRTRIM             "4'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXRTRIM_SEL         "2'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXTEN               "1'h1"                   D. 
+        PMA_SER_TEST_BUS_TXATESTEN            "1'h0"                   D. 
+        PMA_SOFT_RESET_PERIPH                 "1'h1"                   D. 
+End_Module.
+
 Module  LANECTRL_W_11                         11   363      10   1434 LANECTRL        .
         CDR_CLK_DIV                           "3'h0"                   D. 
         CDR_CLK_SEL                           "12'h0"                  D. 
@@ -3974,6 +3840,123 @@ Module  LANECTRL_W_11                         11   363      10   1434 LANECTRL  
         WRITE_MARGIN_TEST_EN                  "1'h0"                   D. 
 End_Module.
 
+Module  LANE_GPSS2_3                          2460 371      2437 1404 LANE            .
+        PCS_L64_R0_L64_CFG_BER_MON_EN         "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_8B_MODE     "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_DISPARITY   "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_GEARBOX     "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_BYPASS_SCRAMBLER   "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_GRBX_64B67B        "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_GRBX_SM_C49        "1'h0"                   N. 
+        PCS_L64_R0_L64_CFG_GRBX_SM_C82        "1'h0"                   N. 
+        PCS_L8_R0_L8_GEARMODE                 "2'h0"                   N. 
+        PCS_LCLK_R0_LCLK_EPCS_RX_CLK_SEL      "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_EPCS_TX_CLK_SEL      "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_PCS_RX_CLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_PCS_TX_CLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_RXFWF_WCLK_PIPE      "1'h0"                   N. 
+        PCS_LCLK_R0_LCLK_RXFWF_WCLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_TXFWF_RCLK_SEL       "2'h0"                   D. 
+        PCS_LCLK_R0_LCLK_TXFWF_TMG_MODE       "1'h0"                   N. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_RX_CLK_DIV2  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_64B6XB_TX_CLK_DIV2  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_RXFWF_WCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_RX_CLK     "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_TXFWF_RCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_8B10B_TX_CLK     "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_RXFWF_WCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_RX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_TXFWF_RCLK  "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_NATIVE_TX_CLK    "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_PIPE_LCL         "1'h0"                   D. 
+        PCS_LCLK_R1_LCLK_ENA_PIPE_OUT         "1'h0"                   D. 
+        PCS_LFWF_R0_RXFWF_RATIO               "2'h0"                   N. 
+        PCS_LFWF_R0_TXFWF_RATIO               "2'h0"                   N. 
+        PCS_LNTV_R0_LNTV_RX_GEAR              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_RX_IN_WIDTH          "3'h0"                   N. 
+        PCS_LNTV_R0_LNTV_RX_MODE              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_TX_GEAR              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_TX_MODE              "1'h0"                   N. 
+        PCS_LNTV_R0_LNTV_TX_OUT_WIDTH         "3'h0"                   N. 
+        PCS_LOVR_R0_FAB_IFC_MODE              "4'h0"                   D. 
+        PCS_LOVR_R0_PCSPMA_IFC_MODE           "4'h0"                   D. 
+        PCS_LPIP_R0_PIPEENABLE                "1'h0"                   D. 
+        PCS_LPIP_R0_PIPEMODE                  "1'h0"                   N. 
+        PCS_LPIP_R0_PIPE_PCIE_HC              "1'h0"                   D. 
+        PCS_PMA_CTRL_R0_FAB_EPCS_PMA_RESET_B_EN  "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_FLASH_FREEZE_P0S_EN   "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_FLASH_FREEZE_P1_EN    "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_FLASH_FREEZE_P2_EN    "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_PIPE_P0S_EN           "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_PIPE_P1_EN            "1'h0"                   N. 
+        PCS_PMA_CTRL_R0_PIPE_P2_EN            "1'h0"                   N. 
+        PCS_SOFT_RESET_PERIPH                 "1'h1"                   D. 
+        PMA_DES_CDR_CTRL_3_CST1_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_CST2_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_RST1_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_RST2_CDR           "2'h0"                   N. 
+        PMA_DES_CDR_CTRL_3_RXDRV_CDR          "2'h0"                   N. 
+        PMA_DES_CLK_CTRL_DATALOCKDIVEN        "1'h0"                   N. 
+        PMA_DES_CLK_CTRL_DATALOCKEN           "1'h0"                   N. 
+        PMA_DES_CLK_CTRL_DESMODE              "3'h0"                   N. 
+        PMA_DES_CLK_CTRL_RXREFCLK_SEL         "3'h7"                   D. 
+        PMA_DES_DFEEM_CTRL_3_CST1_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFEEM_CTRL_3_CST2_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFEEM_CTRL_3_RST1_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFEEM_CTRL_3_RST2_DFEEM       "2'h0"                   N. 
+        PMA_DES_DFE_CTRL_2_CTLEEN_DFE         "1'h0"                   N. 
+        PMA_DES_DFE_CTRL_2_RXDRV_DFE          "2'h0"                   N. 
+        PMA_DES_EM_CTRL_2_CTLEEN_EM           "1'h0"                   N. 
+        PMA_DES_EM_CTRL_2_RXDRV_EM            "2'h0"                   N. 
+        PMA_DES_IN_TERM_ACCOUPLE_RXVCM_EN     "1'h0"                   D. 
+        PMA_DES_IN_TERM_RXRTRIM               "4'h0"                   N. 
+        PMA_DES_IN_TERM_RXRTRIM_SEL           "2'h0"                   N. 
+        PMA_DES_IN_TERM_RXTEN                 "1'h1"                   D. 
+        PMA_DES_PKDET_RXPKDETEN               "1'h0"                   D. 
+        PMA_DES_PKDET_RXPKDETRANGE            "1'h0"                   N. 
+        PMA_DES_PKDET_RXPKDET_HIGH_THRESHOLD  "3'h0"                   N. 
+        PMA_DES_PKDET_RXPKDET_LOW_THRESHOLD   "3'h0"                   N. 
+        PMA_DES_RTL_LOCK_CTRL_FDET_SAMPLE_PERIODS  "5'h0"                   N. 
+        PMA_DES_RTL_LOCK_CTRL_LOCK_MODE       "1'h0"                   N. 
+        PMA_DES_RTL_LOCK_CTRL_LOCK_OVERRIDE   "2'h0"                   N. 
+        PMA_DES_RXPLL_DIV_CDR_GAIN            "1'h0"                   N. 
+        PMA_DES_RXPLL_DIV_RXPLL_FBDIV         "8'h0"                   N. 
+        PMA_DES_RXPLL_DIV_RXPLL_RANGE         "2'h0"                   N. 
+        PMA_DES_RXPLL_DIV_RXPLL_REFDIV        "5'h0"                   N. 
+        PMA_DES_TEST_BUS_RXATESTEN            "1'h0"                   D. 
+        PMA_SERDES_RTL_CTRL_RX_HALF_RATE10BIT  "1'h0"                   N. 
+        PMA_SERDES_RTL_CTRL_TX_HALF_RATE10BIT  "1'h0"                   N. 
+        PMA_SER_CLK_CTRL_SERMODE              "3'h0"                   N. 
+        PMA_SER_CLK_CTRL_TXBITCLKSEL          "1'h0"                   D. 
+        PMA_SER_CLK_CTRL_TXPOSTDIV            "2'h0"                   N. 
+        PMA_SER_CLK_CTRL_TXPOSTDIVEN          "1'h0"                   N. 
+        PMA_SER_CTRL_TXVBGREF_SEL             "1'h0"                   N. 
+        PMA_SER_DRV_BYP_BYPASS_VALUE          "8'h0"                   N. 
+        PMA_SER_DRV_BYP_TX_BYPASS_SELECT      "1'h0"                   N. 
+        PMA_SER_DRV_BYP_TX_BYPASS_SELECT_RTL  "2'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS     "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXDEEMPHASIS_BEACON  "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXDRV_CTRL_SEL   "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXMARGIN         "3'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXODRV_BOOSTER   "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_SEL_TXSWING          "1'h0"                   N. 
+        PMA_SER_DRV_CTRL_TXDRV                "3'h0"                   N. 
+        PMA_SER_DRV_CTRL_TXDRVTRIM            "24'h0"                  N. 
+        PMA_SER_DRV_CTRL_TXITRIM              "2'h0"                   N. 
+        PMA_SER_DRV_CTRL_TXODRV               "2'h0"                   N. 
+        PMA_SER_DRV_DATA_CTRL_TXDATA_INV      "8'h0"                   N. 
+        PMA_SER_DRV_DATA_CTRL_TXDEL           "16'h0"                  N. 
+        PMA_SER_RXDET_CTRL_RXDETECT_STEP_WAIT_COUNT  "5'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXCM_LEVEL          "2'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXRTRIM             "4'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXRTRIM_SEL         "2'h0"                   N. 
+        PMA_SER_TERM_CTRL_TXTEN               "1'h1"                   D. 
+        PMA_SER_TEST_BUS_TXATESTEN            "1'h0"                   D. 
+        PMA_SOFT_RESET_PERIPH                 "1'h1"                   D. 
+End_Module.
+
 Module  REFIO_GPSS2_TX_I                      2466 371      2442 1447 REFIO           .
         CLKBUF_CLKBUF_EN_APAD                 "1'h0"                   D. 
         CLKBUF_CLKBUF_EN_PULLUP               "1'h0"                   D. 
@@ -4000,6 +3983,23 @@ Module  REFIO_EXTPLL24_0                      2467 371      2438 1482 REFIO     
         CLKBUF_DUALCLK1_ENTERM                "2'h0"                   D. 
         CLKBUF_DUALCLK1_EN_HYST               "1'h0"                   D. 
         CLKBUF_DUALCLK1_MODE                  "2'h0"                   D. 
+End_Module.
+
+Module  TXPLL_EXTPLL24_0                      2460 374      2439 1477 TXPLL           .
+        CLK_SEL_CASCADE_CLK_SEL_HM            "2'h0"                   N. 
+        CLK_SEL_CASCADE_CLK_SEL_SM            "3'h0"                   N. 
+        CLK_SEL_JA_FREF_SEL                   "3'h0"                   N. 
+        CLK_SEL_REFCLK_SEL_HM                 "2'h0"                   N. 
+        CLK_SEL_REFCLK_SEL_SM                 "3'h0"                   N. 
+        CTRL_BWSEL                            "1'h0"                   N. 
+        CTRL_DSMPD                            "1'h0"                   N. 
+        CTRL_FBDIV_SEL                        "1'h0"                   N. 
+        CTRL_VBGREF_SEL                       "1'h0"                   N. 
+        DIV_1_AUXDIV                          "12'h0"                  N. 
+        DIV_1_FBDIV                           "12'h0"                  N. 
+        DIV_2_FRAC                            "24'h0"                  N. 
+        DIV_2_REFDIV                          "6'h0"                   N. 
+        SOFT_RESET_PERIPH                     "1'h0"                   D. 
 End_Module.
 
 Module  PLL_NW_0                              0    377      18   1489 PLL             .
