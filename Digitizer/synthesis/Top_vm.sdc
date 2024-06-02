@@ -1,4 +1,4 @@
-# Written by Synplify Pro version map202109act, Build 055R. Synopsys Run ID: sid1717082325 
+# Written by Synplify Pro version map202109act, Build 055R. Synopsys Run ID: sid1717332867 
 # Top Level Design Parameters 
 
 # Clocks 
@@ -13,8 +13,8 @@ create_clock -period 10.000 -waveform {0.000 5.000} -name {PF_CCC_C8_PF_CCC_C8_0
 create_clock -period 10.000 -waveform {0.000 5.000} -name {Top|N_9_inferred_clock} [get_pins {INBUF_DIFF_0_0/Y}] 
 create_clock -period 10.000 -waveform {0.000 5.000} -name {EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2]} [get_pins {EXT_Signals_0/EXT_Signals_InputSwitch_0/SwitchGen_GEN.2.EXT_VectorSignals_5_f0[2]/Y}] 
 create_clock -period 10.000 -waveform {0.000 5.000} -name {EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3]} [get_pins {EXT_Signals_0/EXT_Signals_InputSwitch_0/SwitchGen_GEN.3.EXT_VectorSignals_7_f0[3]/Y}] 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock} [get_pins {Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i/Y}] 
-create_clock -period 10.000 -waveform {0.000 5.000} -name {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock} [get_pins {Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i/Y}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_2_inferred_clock} [get_pins {Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i/Y}] 
+create_clock -period 10.000 -waveform {0.000 5.000} -name {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_2_inferred_clock} [get_pins {Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/AlignmentLane_Fifo_0/RD_Enable_Vector_Encoded_1_sqmuxa_3845_i/Y}] 
 
 # Virtual Clocks 
 
@@ -69,8 +69,8 @@ set_clock_groups -asynchronous -group [get_clocks {PF_CCC_C8_PF_CCC_C8_0_PF_CCC|
 set_clock_groups -asynchronous -group [get_clocks {Top|N_9_inferred_clock}]
 set_clock_groups -asynchronous -group [get_clocks {EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2]}]
 set_clock_groups -asynchronous -group [get_clocks {EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3]}]
-set_clock_groups -asynchronous -group [get_clocks {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_3_inferred_clock}]
-set_clock_groups -asynchronous -group [get_clocks {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_3_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_2_inferred_clock}]
+set_clock_groups -asynchronous -group [get_clocks {work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0|N_2_inferred_clock}]
 
 # syn_mode Attributes 
 

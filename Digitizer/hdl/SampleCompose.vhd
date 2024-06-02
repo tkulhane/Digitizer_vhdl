@@ -32,9 +32,10 @@ architecture rtl of SampleCompose is
 --Signals declaration
 ------------------------------------------------------------------------------------------------------------ 
 
-  signal DATA : std_logic_vector(15 downto 0);
+  --signal DATA : std_logic_vector(15 downto 0);
 
-
+  signal Data_L : std_logic_vector(7 downto 0);
+  signal Data_M : std_logic_vector(7 downto 0);
 
 begin
 
@@ -43,8 +44,10 @@ begin
 --Signals routing
 ------------------------------------------------------------------------------------------------------------  
 
-    DATA <= Input_Data;
+    --DATA <= Input_Data;
   --DATA <= Input_Data_0 & Input_Data_1;
+  Data_L <= Input_Data(7 downto 0);
+  Data_M <= Input_Data(15 downto 8);
 
 ------------------------------------------------------------------------------------------------------------
 --buffer
@@ -60,8 +63,8 @@ begin
         elsif(Clock'event and Clock = '1') then
 
 
-            Output_Data <= DATA(15 downto 4);
-            Output_TailBits <= DATA(3 downto 0);
+            Output_Data <= Data_L & Data_M(7 downto 4);
+            Output_TailBits <= Data_M(3 downto 0);
 
 
 

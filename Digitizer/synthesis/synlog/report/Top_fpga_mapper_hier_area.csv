@@ -1,18 +1,25 @@
 
 . Module name, SLE, CFG, ARI1, BUFFER, MACC_PA, RAM1K20, RAM64X12, GLOBAL, IO
-. Top, 33224, 76130, 34408, 0, 0, 933, 0, 21, 118
-.	. AnalyzInCirc_Top, 18586, 38574, 11962, 0, 0, 0, 0, 4, 0
-.	.	. AnalyzInCirc_Controler_2, 96, 100, 49, 0, 0, 0, 0, 0, 0
-.	.	. AnalyzInCirc_FIFO_12_8_1024_Top, 9245, 19019, 6142, 0, 0, 0, 0, 2, 0
-.	.	. AnalyzInCirc_FIFO_12_8_1024_Top_0, 9245, 19455, 5771, 0, 0, 0, 0, 2, 0
-.	. Clock_Reset, 79, 86, 26, 0, 0, 0, 0, 9, 0
+. Top, 49739, 110327, 51056, 0, 0, 933, 0, 26, 118
+.	. AnalyzatorInCircuit, 35101, 72761, 22686, 0, 0, 0, 0, 8, 0
+.	.	. AnalyzInCirc_Top, 35039, 72746, 22676, 0, 0, 0, 0, 8, 0
+.	.	.	. AnalyzInCirc_Controler_4, 107, 125, 51, 0, 0, 0, 0, 0, 0
+.	.	.	. AnalyzInCirc_FIFO_12_8_1024_Top, 9245, 18836, 6354, 0, 0, 0, 0, 2, 0
+.	.	.	. AnalyzInCirc_FIFO_12_8_1024_Top_0, 8221, 17263, 5159, 0, 0, 0, 0, 2, 0
+.	.	.	. AnalyzInCirc_FIFO_12_8_1024_Top_0_0, 8221, 17178, 5233, 0, 0, 0, 0, 2, 0
+.	.	.	. AnalyzInCirc_FIFO_12_8_1024_Top_1, 9245, 19344, 5879, 0, 0, 0, 0, 2, 0
+.	.	. work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_Top, 62, 15, 10, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_1, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_3, 1, 0, 0, 0, 0, 0, 0, 0, 0
+.	. Clock_Reset, 80, 77, 24, 0, 0, 0, 0, 10, 0
 .	.	. CORERESET_PF_C0, 17, 1, 0, 0, 0, 0, 0, 1, 0
 .	.	.	. CORERESET_PF_C0_CORERESET_PF_C0_0_CORERESET_PF, 17, 1, 0, 0, 0, 0, 0, 1, 0
-.	.	. Clock_Controller, 15, 21, 0, 0, 0, 0, 0, 0, 0
-.	.	. Clock_Switch_0, 22, 33, 12, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_3_0, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	. Clock_Switch_1, 22, 30, 14, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_0, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. Clock_Controller, 15, 15, 0, 0, 0, 0, 0, 0, 0
+.	.	. Clock_Switch_0, 23, 30, 12, 0, 0, 0, 0, 1, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_3_4, 3, 0, 0, 0, 0, 0, 0, 1, 0
+.	.	. Clock_Switch_1, 22, 30, 12, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_3_3, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	. PF_CCC_C0, 0, 1, 0, 0, 0, 0, 0, 2, 0
 .	.	.	. PF_CCC_C0_PF_CCC_C0_0_PF_CCC, 0, 1, 0, 0, 0, 0, 0, 2, 0
 .	.	. PF_CCC_C3, 0, 0, 0, 0, 0, 0, 0, 1, 0
@@ -144,21 +151,21 @@
 .	.	.	. Communication_TX_Arbiter2_1_1, 7, 79, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. Synchronizer_1, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. ft601_fifo_interface, 44, 98, 0, 0, 0, 0, 0, 0, 0
-.	. Controler, 1041, 1275, 359, 0, 0, 1, 0, 1, 0
-.	.	. ADI_SPI_Top, 126, 138, 73, 0, 0, 0, 0, 0, 0
-.	.	. ADI_SPI_Top_0, 126, 137, 73, 0, 0, 0, 0, 0, 0
-.	.	. Answer_Encoder, 45, 164, 4, 0, 0, 0, 0, 0, 0
-.	.	. Command_Decoder, 99, 184, 32, 0, 0, 0, 0, 0, 0
+.	. Controler, 1041, 1233, 365, 0, 0, 1, 0, 1, 0
+.	.	. ADI_SPI_Top, 126, 143, 73, 0, 0, 0, 0, 0, 0
+.	.	. ADI_SPI_Top_0, 126, 143, 73, 0, 0, 0, 0, 0, 0
+.	.	. Answer_Encoder, 45, 208, 10, 0, 0, 0, 0, 0, 0
+.	.	. Command_Decoder, 99, 94, 32, 0, 0, 0, 0, 0, 0
 .	.	. REGISTERS, 6, 6, 0, 0, 0, 1, 0, 0, 0
-.	.	. Reset_Controler, 139, 180, 66, 0, 0, 0, 0, 1, 0
+.	.	. Reset_Controler, 139, 191, 66, 0, 0, 0, 0, 1, 0
 .	.	. SPI_LMX_Top, 115, 58, 6, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_interface_rtl_7_16_1_addr_widthdata_width, 42, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_master_behavioural_24_5_1_data_lengthdivider_1, 73, 58, 6, 0, 0, 0, 0, 0, 0
 .	.	. SPI_LMX_Top_0, 115, 58, 6, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_interface_rtl_7_16_1_addr_widthdata_width_0, 42, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. work_spi_master_behavioural_24_5_1_data_lengthdivider_1_0, 73, 58, 6, 0, 0, 0, 0, 0, 0
-.	.	. gpio_controler, 270, 350, 99, 0, 0, 0, 0, 0, 0
-.	. Data_Block, 2377, 1297, 1688, 0, 0, 886, 0, 0, 0
+.	.	. gpio_controler, 270, 332, 99, 0, 0, 0, 0, 0, 0
+.	. Data_Block, 2376, 1290, 1688, 0, 0, 886, 0, 0, 0
 .	.	. COREFIFO_C10, 169, 94, 80, 0, 0, 2, 0, 0, 0
 .	.	.	. COREFIFO_C10_COREFIFO_C10_0_COREFIFO_Z19_layer0, 169, 94, 80, 0, 0, 2, 0, 0, 0
 .	.	.	.	. COREFIFO_C10_COREFIFO_C10_0_corefifo_async_Z20_layer0, 133, 59, 80, 0, 0, 0, 0, 0, 0
@@ -180,7 +187,7 @@
 .	.	.	. PF_DPSRAM_C8_Event_Status, 0, 0, 0, 0, 0, 1, 0, 0, 0
 .	.	.	.	. PF_DPSRAM_C8_Event_Status_PF_DPSRAM_C8_Event_Status_0_PF_DPSRAM, 0, 0, 0, 0, 0, 1, 0, 0, 0
 .	.	. FIFOs_Reader, 65, 131, 57, 0, 0, 0, 0, 0, 0
-.	.	. Input_Data_Part_0, 613, 278, 356, 0, 0, 48, 0, 0, 0
+.	.	. Input_Data_Part_0, 613, 276, 356, 0, 0, 48, 0, 0, 0
 .	.	.	. COREFIFO_C4_3, 117, 68, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_3, 117, 68, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_3, 28, 19, 0, 0, 0, 0, 0, 0, 0
@@ -193,9 +200,9 @@
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top_4, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_4, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_4, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	. COREFIFO_C4_5, 116, 70, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_5, 116, 70, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_5, 28, 21, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. COREFIFO_C4_5, 116, 68, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_5, 116, 68, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_5, 28, 19, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top_5, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_5, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_5, 0, 0, 0, 0, 0, 12, 0, 0, 0
@@ -209,16 +216,16 @@
 .	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_2, 37, 1, 12, 0, 0, 0, 0, 0, 0
 .	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_3, 37, 1, 12, 0, 0, 0, 0, 0, 0
 .	.	.	. work_trigger_unit_rtl_8_3_12_g_Num_Of_TRG_Unitsg_Order_Vector_Lengthg_Data_Length_3_4, 37, 1, 12, 0, 0, 0, 0, 0, 0
-.	.	. Input_Data_Part_1, 613, 278, 356, 0, 0, 48, 0, 0, 0
+.	.	. Input_Data_Part_1, 613, 276, 356, 0, 0, 48, 0, 0, 0
 .	.	.	. COREFIFO_C4, 117, 68, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0, 117, 68, 77, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0, 28, 19, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	. COREFIFO_C4_0, 116, 69, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_0, 116, 69, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_0, 28, 20, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. COREFIFO_C4_0, 116, 68, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_0, 116, 68, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_0, 28, 19, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top_0, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_0, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_0, 0, 0, 0, 0, 0, 12, 0, 0, 0
@@ -228,9 +235,9 @@
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top_1, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_1, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_1, 0, 0, 0, 0, 0, 12, 0, 0, 0
-.	.	.	. COREFIFO_C4_2, 116, 69, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_2, 116, 69, 77, 0, 0, 12, 0, 0, 0
-.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_2, 28, 20, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. COREFIFO_C4_2, 116, 68, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_COREFIFO_Z21_layer0_2, 116, 68, 77, 0, 0, 12, 0, 0, 0
+.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_fwft_Z23_layer0_2, 28, 19, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top_2, 62, 23, 77, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s_2, 0, 0, 0, 0, 0, 12, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C4_COREFIFO_C4_0_LSRAM_top_2, 0, 0, 0, 0, 0, 12, 0, 0, 0
@@ -249,24 +256,24 @@
 .	.	.	.	. PF_DPSRAM_C5_PF_DPSRAM_C5_0_PF_DPSRAM_2, 0, 0, 0, 0, 0, 192, 0, 0, 0
 .	.	.	. Sample_RAM_Block_Decoder, 0, 4, 0, 0, 0, 0, 0, 0, 0
 .	.	.	. Sample_RAM_Block_MUX, 0, 0, 24, 0, 0, 0, 0, 0, 0
-.	.	. Trigger_Top_Part, 418, 280, 417, 0, 0, 16, 0, 0, 0
+.	.	. Trigger_Top_Part, 418, 277, 417, 0, 0, 16, 0, 0, 0
 .	.	.	. COREFIFO_C5, 149, 72, 79, 0, 0, 16, 0, 0, 0
 .	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_COREFIFO_Z24_layer0, 149, 72, 79, 0, 0, 16, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_corefifo_fwft_Z26_layer0, 36, 23, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_corefifo_sync_scntr_Z25_layer0, 78, 29, 79, 0, 0, 0, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_ram_wrapper_18s_18s_14_14_1s_1s_2s_0s_0s, 0, 0, 0, 0, 0, 16, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C5_COREFIFO_C5_0_LSRAM_top, 0, 0, 0, 0, 0, 16, 0, 0, 0
-.	.	.	. Trigger_Control, 213, 173, 164, 0, 0, 0, 0, 0, 0
-.	.	.	. Trigger_Main, 39, 33, 97, 0, 0, 0, 0, 0, 0
+.	.	.	. Trigger_Control, 213, 171, 164, 0, 0, 0, 0, 0, 0
+.	.	.	. Trigger_Main, 39, 32, 97, 0, 0, 0, 0, 0, 0
 .	.	.	. work_eventfifofreelogic_arch_15_16384_1_g_FifoRemainingWidthg_FifoDepth, 17, 2, 77, 0, 0, 0, 0, 0, 0
-.	.	. work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_0, 63, 15, 10, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_3_1, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_3_3, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	. EXT_Signals, 362, 441, 256, 0, 0, 0, 0, 0, 10
-.	.	. EXT_Signals_Controller, 362, 180, 192, 0, 0, 0, 0, 0, 0
-.	.	. EXT_Signals_InputSwitch, 0, 103, 12, 0, 0, 0, 0, 0, 0
-.	.	. EXT_Signals_OutputSwitch, 0, 158, 52, 0, 0, 0, 0, 0, 0
+.	.	. work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_Top_0, 62, 15, 10, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_1_0, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_3_0, 1, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_4, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	. EXT_Signals, 362, 508, 236, 0, 0, 0, 0, 0, 10
+.	.	. EXT_Signals_Controller, 362, 194, 192, 0, 0, 0, 0, 0, 0
+.	.	. EXT_Signals_InputSwitch, 0, 82, 24, 0, 0, 0, 0, 0, 0
+.	.	. EXT_Signals_OutputSwitch, 0, 232, 20, 0, 0, 0, 0, 0, 0
 .	.	. PF_IO_C0, 0, 0, 0, 0, 0, 0, 0, 0, 1
 .	.	.	. PF_IO_Z27_layer0, 0, 0, 0, 0, 0, 0, 0, 0, 1
 .	.	. PF_IO_C0_0, 0, 0, 0, 0, 0, 0, 0, 0, 1
@@ -288,7 +295,7 @@
 .	.	. PF_IO_C0_8, 0, 0, 0, 0, 0, 0, 0, 0, 1
 .	.	.	. PF_IO_Z27_layer0_8, 0, 0, 0, 0, 0, 0, 0, 0, 1
 .	. Synchronizer_12_8, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	. Transceiver_Main, 7509, 32060, 19005, 0, 0, 12, 0, 5, 0
+.	. Transceiver_Main, 7509, 32058, 24957, 0, 0, 12, 0, 5, 0
 .	.	. SampleCompose, 12, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	. SampleCompose_0, 12, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	. SampleCompose_1, 12, 0, 0, 0, 0, 0, 0, 0, 0
@@ -300,9 +307,9 @@
 .	.	. Synchronizer_10, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	. Synchronizer_11, 3, 0, 0, 0, 0, 0, 0, 1, 0
 .	.	. Test_Generator_for_Lanes, 79, 2, 72, 0, 0, 0, 0, 0, 0
-.	.	. Transceiver_LanesConnection, 7244, 31942, 18923, 0, 0, 12, 0, 4, 0
-.	.	.	. RxMainLinkController_2, 16, 20, 11, 0, 0, 0, 0, 0, 0
-.	.	.	. Transciever_OneLane_inst_Transciever_OneLane_0, 3613, 15958, 9456, 0, 0, 6, 0, 2, 0
+.	.	. Transceiver_LanesConnection, 7244, 31942, 24875, 0, 0, 12, 0, 4, 0
+.	.	.	. RxMainLinkController_2, 16, 19, 11, 0, 0, 0, 0, 0, 0
+.	.	.	. Transciever_OneLane_inst_Transciever_OneLane_0, 3613, 15958, 12432, 0, 0, 6, 0, 2, 0
 .	.	.	.	. COREFIFO_C12_1_1, 355, 250, 51, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C12_COREFIFO_C12_0_COREFIFO_Z1_layer2_1_2, 355, 250, 51, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z2_layer2_0, 92, 48, 51, 0, 0, 0, 0, 0, 0
@@ -371,10 +378,10 @@
 .	.	.	.	. Synchronizer_12_Transciever_OneLane_inst_Transciever_OneLane_0_4, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. Synchronizer_Transciever_OneLane_inst_Transciever_OneLane_0, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. Transceiver_LaneStatus_Transciever_OneLane_inst_Transciever_OneLane_0, 16, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1, 2256, 14928, 9028, 0, 0, 0, 0, 0, 0
+.	.	.	.	. work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1, 2256, 14927, 12004, 0, 0, 0, 0, 0, 0
 .	.	.	.	. work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_0, 186, 114, 20, 0, 0, 0, 0, 0, 0
-.	.	.	.	. work_txlanecontrol_rtl_8_3_0_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay_1, 102, 220, 163, 0, 0, 0, 0, 0, 0
-.	.	.	. Transciever_OneLane_inst_Transciever_OneLane_1, 3613, 15960, 9456, 0, 0, 6, 0, 2, 0
+.	.	.	.	. work_txlanecontrol_rtl_8_3_0_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay_1, 102, 221, 163, 0, 0, 0, 0, 0, 0
+.	.	.	. Transciever_OneLane_inst_Transciever_OneLane_1, 3613, 15961, 12432, 0, 0, 6, 0, 2, 0
 .	.	.	.	. COREFIFO_C12_0, 355, 250, 51, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	. COREFIFO_C12_COREFIFO_C12_0_COREFIFO_Z1_layer2_1_1, 355, 250, 51, 0, 0, 2, 0, 0, 0
 .	.	.	.	.	.	. COREFIFO_C12_COREFIFO_C12_0_corefifo_async_Z2_layer2_1_1, 92, 48, 51, 0, 0, 0, 0, 0, 0
@@ -443,12 +450,12 @@
 .	.	.	.	. Synchronizer_4, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. Synchronizer_Transciever_OneLane_inst_Transciever_OneLane_1, 2, 0, 0, 0, 0, 0, 0, 0, 0
 .	.	.	.	. Transceiver_LaneStatus_Transciever_OneLane_inst_Transciever_OneLane_1, 16, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	.	. work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0, 2256, 14928, 9028, 0, 0, 0, 0, 0, 0
+.	.	.	.	. work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_0, 2256, 14927, 12004, 0, 0, 0, 0, 0, 0
 .	.	.	.	. work_rxlanecontrol_rtl_8_3_3_g_NumberOfDataOutputBytesg_NumberOfIlasSequences_Transciever_OneLane_inst_Transciever_OneLane_1, 186, 114, 20, 0, 0, 0, 0, 0, 0
-.	.	.	.	. work_txlanecontrol_rtl_8_3_0_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay_0, 102, 222, 163, 0, 0, 0, 0, 0, 0
+.	.	.	.	. work_txlanecontrol_rtl_8_3_0_g_NumberOfDataOutputBytesg_NumberOfIlasSequencesg_Delay_0, 102, 224, 163, 0, 0, 0, 0, 0, 0
 .	.	.	. TxMainLinkController_2, 2, 4, 0, 0, 0, 0, 0, 0, 0
-.	.	. work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_1, 43, 15, 10, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_1, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_2, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	.	. Synchronizer_work_ctrlbus_handshake_rtl_0layer1_3_4, 2, 0, 0, 0, 0, 0, 0, 0, 0
-.	.	. work_transceiver_controller_rtl_2_1_g_NumberOfLanes, 42, 101, 0, 0, 0, 0, 0, 0, 0
+.	.	. work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_2, 43, 15, 10, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_0, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_2, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. Synchronizer_work_clock_switch_rtl_0layer1_5, 2, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. work_transceiver_controller_rtl_2_1_g_NumberOfLanes, 42, 99, 0, 0, 0, 0, 0, 0, 0

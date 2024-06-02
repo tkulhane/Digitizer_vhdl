@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 30 16:10:25 2024
+// Created by SmartDesign Sat Jun  1 00:13:21 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -316,11 +316,11 @@ CtrlBus_HandShake_0(
         .CTRL_Clock            ( CTRL_Clock ),
         .CTRL_Reset_N          ( CTRL_Reset_N ),
         .PRH_Clock             ( Clock ),
-        .PRH_Reset_N           ( Fifo_RESET_N ),
+        .PRH_Reset_N           ( Reset_N ),
         .CTRL_enable_cmd       ( C_enable_cmd ),
         .CTRL_write_read       ( C_write_read ),
         .PRH_busy              ( Trigger_Top_Part_0_C_busy ),
-        .PRH_In_Reset          ( Fifo_RESET_N ),
+        .PRH_In_Reset          ( Reset_N ),
         .CTRL_addr_frame       ( C_addr_frame ),
         .CTRL_write_data_frame ( C_write_data_frame ),
         .PRH_read_data_frame   ( Trigger_Top_Part_0_C_read_data_frame ),

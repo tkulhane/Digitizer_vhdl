@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 24 10:31:23 2024
+// Created by SmartDesign Fri May 31 09:51:50 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -95,6 +95,7 @@ module Controler(
     LMX2_sclk,
     LMX2_ss_n,
     LMX_Sync,
+    SYNCIB,
     SYS_Main_Reset_N,
     TRG_addr,
     TRG_data,
@@ -201,6 +202,7 @@ output        LMX2_mosi;
 output        LMX2_sclk;
 output        LMX2_ss_n;
 output        LMX_Sync;
+output        SYNCIB;
 output        SYS_Main_Reset_N;
 output [7:0]  TRG_addr;
 output [15:0] TRG_data;
@@ -346,6 +348,7 @@ wire           SPI_LMX_0_0_busy;
 wire   [15:0]  SPI_LMX_0_0_rx_data_frame;
 wire           SPI_LMX_0_busy;
 wire   [15:0]  SPI_LMX_0_rx_data_frame;
+wire   [3:3]   SYNCIB_net_0;
 wire           SYS_Main_Reset_N_net_0;
 wire   [7:0]   TRG_addr_net_0;
 wire           TRG_busy;
@@ -401,6 +404,8 @@ wire           CLKC_write_read_net_1;
 wire           CLKC_enable_cmd_net_1;
 wire           EXTS_write_read_net_1;
 wire           EXTS_enable_cmd_net_1;
+wire           GPO_3_net_1;
+wire           GPO_2_net_1;
 wire   [7:0]   TRG_addr_net_1;
 wire   [15:0]  TRG_data_net_1;
 wire   [39:0]  ANW_Fifo_Write_Data_net_1;
@@ -415,11 +420,9 @@ wire   [7:0]   CLKC_addr_net_1;
 wire   [15:0]  CLKC_data_net_1;
 wire   [7:0]   EXTS_addr_net_1;
 wire   [15:0]  EXTS_data_net_1;
-wire           GPO_3_net_1;
-wire           GPO_2_net_1;
-wire   [3:3]   Outputs_slice_0;
-wire   [8:8]   Outputs_slice_1;
-wire   [9:9]   Outputs_slice_2;
+wire           SYNCIB_net_1;
+wire   [8:8]   Outputs_slice_0;
+wire   [9:9]   Outputs_slice_1;
 wire   [15:0]  Inputs_net_0;
 wire   [15:0]  Outputs_net_0;
 //--------------------------------------------------------------------
@@ -509,6 +512,10 @@ assign EXTS_write_read_net_1       = EXTS_write_read_net_0;
 assign EXTS_write_read             = EXTS_write_read_net_1;
 assign EXTS_enable_cmd_net_1       = EXTS_enable_cmd_net_0;
 assign EXTS_enable_cmd             = EXTS_enable_cmd_net_1;
+assign GPO_3_net_1                 = GPO_3_net_0[15];
+assign GPO_3                       = GPO_3_net_1;
+assign GPO_2_net_1                 = GPO_2_net_0[14];
+assign GPO_2                       = GPO_2_net_1;
 assign TRG_addr_net_1              = TRG_addr_net_0;
 assign TRG_addr[7:0]               = TRG_addr_net_1;
 assign TRG_data_net_1              = TRG_data_net_0;
@@ -537,10 +544,8 @@ assign EXTS_addr_net_1             = EXTS_addr_net_0;
 assign EXTS_addr[7:0]              = EXTS_addr_net_1;
 assign EXTS_data_net_1             = EXTS_data_net_0;
 assign EXTS_data[15:0]             = EXTS_data_net_1;
-assign GPO_3_net_1                 = GPO_3_net_0[15];
-assign GPO_3                       = GPO_3_net_1;
-assign GPO_2_net_1                 = GPO_2_net_0[14];
-assign GPO_2                       = GPO_2_net_1;
+assign SYNCIB_net_1                = SYNCIB_net_0[3];
+assign SYNCIB                      = SYNCIB_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -557,9 +562,9 @@ assign HMC_SYNC_net_0[1]      = Outputs_net_0[1:1];
 assign LED_2_net_0[10]        = Outputs_net_0[10:10];
 assign LED_3_net_0[11]        = Outputs_net_0[11:11];
 assign LMX_Sync_net_0[2]      = Outputs_net_0[2:2];
-assign Outputs_slice_0[3]     = Outputs_net_0[3:3];
-assign Outputs_slice_1[8]     = Outputs_net_0[8:8];
-assign Outputs_slice_2[9]     = Outputs_net_0[9:9];
+assign SYNCIB_net_0[3]        = Outputs_net_0[3:3];
+assign Outputs_slice_0[8]     = Outputs_net_0[8:8];
+assign Outputs_slice_1[9]     = Outputs_net_0[9:9];
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------

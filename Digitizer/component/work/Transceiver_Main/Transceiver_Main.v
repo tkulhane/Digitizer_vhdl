@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue May 28 12:19:04 2024
+// Created by SmartDesign Sat Jun  1 23:16:55 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -25,6 +25,8 @@ module Transceiver_Main(
     write_data_frame,
     write_read,
     // Outputs
+    AlignmentFifo_Read_Out,
+    AlignmentFifo_Rx_Data,
     Data_Valid,
     LANE0_TXD_N,
     LANE0_TXD_P,
@@ -67,6 +69,8 @@ input          write_read;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+output         AlignmentFifo_Read_Out;
+output [127:0] AlignmentFifo_Rx_Data;
 output         Data_Valid;
 output         LANE0_TXD_N;
 output         LANE0_TXD_P;
@@ -89,6 +93,8 @@ output [15:0]  read_data_frame;
 // Nets
 //--------------------------------------------------------------------
 wire   [7:0]     addr_frame;
+wire             AlignmentFifo_Read_Out_net_0;
+wire   [127:0]   AlignmentFifo_Rx_Data_net_0;
 wire             AND2_0_0_Y;
 wire             AND2_0_Y;
 wire             busy_net_0;
@@ -177,6 +183,8 @@ wire   [83:72]   Output_Data_6_net_1;
 wire   [15:0]    read_data_frame_net_1;
 wire   [127:0]   Transceivers_Rx_Data_net_1;
 wire   [15:0]    Transceivers_Rx_K_net_1;
+wire   [127:0]   AlignmentFifo_Rx_Data_net_1;
+wire             AlignmentFifo_Read_Out_net_1;
 wire   [127:0]   Input_Data_net_0;
 wire   [127:0]   Output_Data_net_0;
 //--------------------------------------------------------------------
@@ -206,42 +214,46 @@ assign VCC_net                    = 1'b1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign LANE1_TXD_N_net_1           = LANE1_TXD_N_net_0;
-assign LANE1_TXD_N                 = LANE1_TXD_N_net_1;
-assign LANE0_TXD_P_net_1           = LANE0_TXD_P_net_0;
-assign LANE0_TXD_P                 = LANE0_TXD_P_net_1;
-assign LANE0_TXD_N_net_1           = LANE0_TXD_N_net_0;
-assign LANE0_TXD_N                 = LANE0_TXD_N_net_1;
-assign LANE1_TXD_P_net_1           = LANE1_TXD_P_net_0;
-assign LANE1_TXD_P                 = LANE1_TXD_P_net_1;
-assign Data_Valid_net_1            = Data_Valid_net_0;
-assign Data_Valid                  = Data_Valid_net_1;
-assign busy_net_1                  = busy_net_0;
-assign busy                        = busy_net_1;
-assign SYNCINB_OUT_net_1           = SYNCINB_OUT_net_0;
-assign SYNCINB_OUT                 = SYNCINB_OUT_net_1;
-assign Output_Data_7_net_1         = Output_Data_7_net_0;
-assign Output_Data_7[95:84]        = Output_Data_7_net_1;
-assign Output_Data_0_net_1         = Output_Data_0_net_0;
-assign Output_Data_0[11:0]         = Output_Data_0_net_1;
-assign Output_Data_1_net_1         = Output_Data_1_net_0;
-assign Output_Data_1[23:12]        = Output_Data_1_net_1;
-assign Output_Data_2_net_1         = Output_Data_2_net_0;
-assign Output_Data_2[35:24]        = Output_Data_2_net_1;
-assign Output_Data_3_net_1         = Output_Data_3_net_0;
-assign Output_Data_3[47:36]        = Output_Data_3_net_1;
-assign Output_Data_4_net_1         = Output_Data_4_net_0;
-assign Output_Data_4[59:48]        = Output_Data_4_net_1;
-assign Output_Data_5_net_1         = Output_Data_5_net_0;
-assign Output_Data_5[71:60]        = Output_Data_5_net_1;
-assign Output_Data_6_net_1         = Output_Data_6_net_0;
-assign Output_Data_6[83:72]        = Output_Data_6_net_1;
-assign read_data_frame_net_1       = read_data_frame_net_0;
-assign read_data_frame[15:0]       = read_data_frame_net_1;
-assign Transceivers_Rx_Data_net_1  = Transceivers_Rx_Data_net_0;
-assign Transceivers_Rx_Data[127:0] = Transceivers_Rx_Data_net_1;
-assign Transceivers_Rx_K_net_1     = Transceivers_Rx_K_net_0;
-assign Transceivers_Rx_K[15:0]     = Transceivers_Rx_K_net_1;
+assign LANE1_TXD_N_net_1            = LANE1_TXD_N_net_0;
+assign LANE1_TXD_N                  = LANE1_TXD_N_net_1;
+assign LANE0_TXD_P_net_1            = LANE0_TXD_P_net_0;
+assign LANE0_TXD_P                  = LANE0_TXD_P_net_1;
+assign LANE0_TXD_N_net_1            = LANE0_TXD_N_net_0;
+assign LANE0_TXD_N                  = LANE0_TXD_N_net_1;
+assign LANE1_TXD_P_net_1            = LANE1_TXD_P_net_0;
+assign LANE1_TXD_P                  = LANE1_TXD_P_net_1;
+assign Data_Valid_net_1             = Data_Valid_net_0;
+assign Data_Valid                   = Data_Valid_net_1;
+assign busy_net_1                   = busy_net_0;
+assign busy                         = busy_net_1;
+assign SYNCINB_OUT_net_1            = SYNCINB_OUT_net_0;
+assign SYNCINB_OUT                  = SYNCINB_OUT_net_1;
+assign Output_Data_7_net_1          = Output_Data_7_net_0;
+assign Output_Data_7[95:84]         = Output_Data_7_net_1;
+assign Output_Data_0_net_1          = Output_Data_0_net_0;
+assign Output_Data_0[11:0]          = Output_Data_0_net_1;
+assign Output_Data_1_net_1          = Output_Data_1_net_0;
+assign Output_Data_1[23:12]         = Output_Data_1_net_1;
+assign Output_Data_2_net_1          = Output_Data_2_net_0;
+assign Output_Data_2[35:24]         = Output_Data_2_net_1;
+assign Output_Data_3_net_1          = Output_Data_3_net_0;
+assign Output_Data_3[47:36]         = Output_Data_3_net_1;
+assign Output_Data_4_net_1          = Output_Data_4_net_0;
+assign Output_Data_4[59:48]         = Output_Data_4_net_1;
+assign Output_Data_5_net_1          = Output_Data_5_net_0;
+assign Output_Data_5[71:60]         = Output_Data_5_net_1;
+assign Output_Data_6_net_1          = Output_Data_6_net_0;
+assign Output_Data_6[83:72]         = Output_Data_6_net_1;
+assign read_data_frame_net_1        = read_data_frame_net_0;
+assign read_data_frame[15:0]        = read_data_frame_net_1;
+assign Transceivers_Rx_Data_net_1   = Transceivers_Rx_Data_net_0;
+assign Transceivers_Rx_Data[127:0]  = Transceivers_Rx_Data_net_1;
+assign Transceivers_Rx_K_net_1      = Transceivers_Rx_K_net_0;
+assign Transceivers_Rx_K[15:0]      = Transceivers_Rx_K_net_1;
+assign AlignmentFifo_Rx_Data_net_1  = AlignmentFifo_Rx_Data_net_0;
+assign AlignmentFifo_Rx_Data[127:0] = AlignmentFifo_Rx_Data_net_1;
+assign AlignmentFifo_Read_Out_net_1 = AlignmentFifo_Read_Out_net_0;
+assign AlignmentFifo_Read_Out       = AlignmentFifo_Read_Out_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -532,20 +544,22 @@ Transceiver_LanesConnection Transceiver_LanesConnection_0(
         .LANE0_RXD_N                  ( LANE0_RXD_N ),
         .LANE1_RXD_P                  ( LANE1_RXD_P ),
         .LANE1_RXD_N                  ( LANE1_RXD_N ),
-        .TRNV_CTRL_RESTART            ( Transceiver_Controller_0_Lanes_Restart ),
         .Input_Data                   ( Input_Data_net_0 ),
+        .TRNV_CTRL_RESTART            ( Transceiver_Controller_0_Lanes_Restart ),
         // Outputs
         .LANE0_TXD_P                  ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N                  ( LANE0_TXD_N_net_0 ),
         .LANE1_TXD_P                  ( LANE1_TXD_P_net_0 ),
         .LANE1_TXD_N                  ( LANE1_TXD_N_net_0 ),
         .Input_Data_Read              ( Transceiver_LanesConnection_0_Input_Data_Read ),
-        .Data_Valid                   ( Data_Valid_net_0 ),
-        .SYNCINB_OUT                  ( SYNCINB_OUT_net_0 ),
         .Output_Data                  ( Output_Data_net_0 ),
+        .Data_Valid                   ( Data_Valid_net_0 ),
         .TRNV_CTRL_StatusLanes_Vector ( Transceiver_LanesConnection_0_TRNV_CTRL_StatusLanes_Vector ),
         .Transceivers_Rx_Data         ( Transceivers_Rx_Data_net_0 ),
-        .Transceivers_Rx_K            ( Transceivers_Rx_K_net_0 ) 
+        .Transceivers_Rx_K            ( Transceivers_Rx_K_net_0 ),
+        .AlignmentFifo_Rx_Data        ( AlignmentFifo_Rx_Data_net_0 ),
+        .AlignmentFifo_Read_Out       ( AlignmentFifo_Read_Out_net_0 ),
+        .SYNCINB_OUT                  ( SYNCINB_OUT_net_0 ) 
         );
 
 

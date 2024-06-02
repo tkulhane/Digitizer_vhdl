@@ -41,6 +41,9 @@ entity Transceiver_LanesConnection is
 
     Transceivers_Rx_Data : out std_logic_vector((g_NumberOfLanes * 64) - 1 downto 0);
     Transceivers_Rx_K : out std_logic_vector((g_NumberOfLanes * 8) - 1 downto 0);
+
+    AlignmentFifo_Rx_Data : out std_logic_vector((g_NumberOfLanes * 64) - 1 downto 0);
+    AlignmentFifo_Read_Out : out std_logic;
     
     SYNCINB_OUT : out std_logic
 
@@ -250,6 +253,22 @@ begin
     Transceivers_Rx_K  <= LANE_RX_K_Array(1) & LANE_RX_K_Array(0);
     
     SYNCINB_OUT <= SYNCINB;
+
+
+
+    
+    AlignmentFifo_Read_Out <= Lanes_Alignment_Fifo_Read;
+
+    --OutputData_Array AlignmentFifo_Rx_Data for AnalyzInCirc
+    AlignmentFifo_Rx_Data(15 downto 0) <= OutputData_Array(0);
+    AlignmentFifo_Rx_Data(31 downto 16) <= OutputData_Array(2);
+    AlignmentFifo_Rx_Data(47 downto 32) <= OutputData_Array(4);
+    AlignmentFifo_Rx_Data(63 downto 48) <= OutputData_Array(6);           
+    
+    AlignmentFifo_Rx_Data(79 downto 64) <= OutputData_Array(1);
+    AlignmentFifo_Rx_Data(95 downto 80) <= OutputData_Array(3);
+    AlignmentFifo_Rx_Data(111 downto 96) <= OutputData_Array(5);
+    AlignmentFifo_Rx_Data(127 downto 112) <= OutputData_Array(7);
 
 
 
