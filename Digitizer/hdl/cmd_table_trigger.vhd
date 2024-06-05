@@ -28,5 +28,6 @@ package cmd_table_trigger is
     constant CMD_TRG_COUNTER_EVENT_INRUN_M          : std_logic_vector(7 downto 0) := x"26";
 
     constant CMD_TRG_TEST_GENERATOR_ENABLE          : std_logic_vector(7 downto 0) := x"41";
+    constant CMD_TRG_DATA_TEST_MUX                  : std_logic_vector(7 downto 0) := x"42";
 
 end package;

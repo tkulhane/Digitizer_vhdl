@@ -5,15 +5,22 @@
   <drc>
     <status>C:\Microsemi\Libero_SoC_v2022.1\Designer/data/drcreport\error.png</status>
     <StatusMessage>Error</StatusMessage>
-    <message>Undriven Pin</message>
-    <detail>Unconnected input pin CtrlBus_HandShake_0:CTRL_Clock</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/Transceiver_Main/pins/CtrlBus_HandShake_0:CTRL_Clock</crossprobe>
+    <message>Unused Instance</message>
+    <detail>Test_Generator_for_Lanes_0 output pins are not being used.  Connect or mark them unused</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/Transceiver_Main/instances/Test_Generator_for_Lanes_0</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microsemi\Libero_SoC_v2022.1\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin Test_Generator_for_Lanes_0:Test_DataOut[383:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/Transceiver_Main/pins/Test_Generator_for_Lanes_0:Test_DataOut</crossprobe>
   </drc>
   <drc>
     <status>C:\Microsemi\Libero_SoC_v2022.1\Designer/data/drcreport\error.png</status>
     <StatusMessage>Error</StatusMessage>
     <message>Undriven Pin</message>
-    <detail>Unconnected input pin CtrlBus_HandShake_0:CTRL_Reset_N</detail>
-    <crossprobe>liberoaction://cross_probe/smartdesign/Transceiver_Main/pins/CtrlBus_HandShake_0:CTRL_Reset_N</crossprobe>
+    <detail>Unconnected input pin Transceiver_LanesConnection_0:Input_Data[383:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/Transceiver_Main/pins/Transceiver_LanesConnection_0:Input_Data</crossprobe>
   </drc>
 </drcreport>

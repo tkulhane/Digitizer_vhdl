@@ -13,9 +13,10 @@ entity Clock_Switch is
         ClockInputB : in std_logic;
         ClockInputC : in std_logic;
         ClockInputD : in std_logic;
+        ClockInputE : in std_logic;
 
         SwitchEnable : in std_logic;
-        SwitchSelect : in std_logic_vector(1 downto 0);
+        SwitchSelect : in std_logic_vector(2 downto 0);
 
         PLL_PWR_DOWN : out std_logic;
         PLL_Lock : in std_logic;
@@ -45,7 +46,7 @@ architecture rtl of Clock_Switch is
     signal FSM_Reset_N : std_logic;
     signal FSM_PLL_PWR_DOWN : std_logic;
     signal MuxEnable : std_logic;
-    signal MUX_select_Register : std_logic_vector(1 downto 0);
+    signal MUX_select_Register : std_logic_vector(2 downto 0);
 
 ------------------------------------------------------------------------------------------------------------
 --Components
@@ -244,22 +245,25 @@ begin
 ------------------------------------------------------------------------------------------------------------
 --Clock setting MUX
 ------------------------------------------------------------------------------------------------------------ 
-	process(MUX_select_Register,ClockInputA,ClockInputB,ClockInputC,ClockInputD)
+	process(MUX_select_Register,ClockInputA,ClockInputB,ClockInputC,ClockInputD,ClockInputE)
 	begin
 	
         case MUX_select_Register is
 
-            when "00" =>
+            when "000" =>
                 Clock_To_PLL <= ClockInputA;
 
-            when "01" =>
+            when "001" =>
                 Clock_To_PLL <= ClockInputB;
 
-            when "10" =>
+            when "010" =>
                 Clock_To_PLL <= ClockInputC;
 
-            when "11" =>
+            when "011" =>
                 Clock_To_PLL <= ClockInputD;
+
+            when "100" =>
+                Clock_To_PLL <= ClockInputE;
 
             when others =>
                 Clock_To_PLL <= ClockInputA;

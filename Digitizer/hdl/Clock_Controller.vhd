@@ -22,10 +22,10 @@ entity Clock_Controller is
         read_data_frame : out std_logic_vector(15 downto 0);
 
         SwitchEnable_Logic : out std_logic;
-        SwitchSelect_Logic : out std_logic_vector(1 downto 0);
+        SwitchSelect_Logic : out std_logic_vector(2 downto 0);
         
         SwitchEnable_Ref : out std_logic;
-        SwitchSelect_Ref : out std_logic_vector(1 downto 0);
+        SwitchSelect_Ref : out std_logic_vector(2 downto 0);
 
         PLLs_Lock : in std_logic_vector(1 downto 0)
 
@@ -64,8 +64,8 @@ architecture rtl of Clock_Controller is
 
 
 
-    signal REG_SwitchSelect_Logic : std_logic_vector(1 downto 0);
-    signal REG_SwitchSelect_Ref : std_logic_vector(1 downto 0);
+    signal REG_SwitchSelect_Logic : std_logic_vector(2 downto 0);
+    signal REG_SwitchSelect_Ref : std_logic_vector(2 downto 0);
 
 
 
@@ -223,11 +223,11 @@ begin
 
                     when CMD_CLOCK_SELECT_LOGIC =>
                         SwitchEnable_Logic <= '1';
-                        REG_SwitchSelect_Logic <= write_data_frame(1 downto 0);
+                        REG_SwitchSelect_Logic <= write_data_frame(2 downto 0);
 
                     when CMD_CLOCK_SELECT_REF =>
                         SwitchEnable_Ref <= '1';
-                        REG_SwitchSelect_Ref <= write_data_frame(1 downto 0);
+                        REG_SwitchSelect_Ref <= write_data_frame(2 downto 0);
                      
                     when others =>
                         null;
@@ -244,10 +244,10 @@ begin
                 case(address) is
 
                     when CMD_CLOCK_SELECT_LOGIC => 
-                        read_data_frame(1 downto 0) <= REG_SwitchSelect_Logic;
+                        read_data_frame(2 downto 0) <= REG_SwitchSelect_Logic;
                         
                     when CMD_CLOCK_SELECT_REF =>
-                         read_data_frame(1 downto 0) <= REG_SwitchSelect_Ref; 
+                         read_data_frame(2 downto 0) <= REG_SwitchSelect_Ref; 
 
                     when CMD_CLOCK_PLLS_LOCK =>
                          read_data_frame(1 downto 0) <= PLLs_Lock; 

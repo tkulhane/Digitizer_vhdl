@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 18 09:40:00 2023
+// Created by SmartDesign Wed Jun  5 16:01:39 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -45,13 +45,9 @@ wire   [3:0]   B_Block_Address_vector;
 wire   [63:0]  B_Output_Data_net_0;
 wire           CLK;
 wire   [63:0]  PF_DPSRAM_C5_0_0_B_DOUT;
-wire   [63:0]  PF_DPSRAM_C5_0_1_0_B_DOUT;
-wire   [63:0]  PF_DPSRAM_C5_0_1_B_DOUT;
 wire   [63:0]  PF_DPSRAM_C5_0_B_DOUT;
 wire   [0:0]   Sample_RAM_Block_Decoder_0_Output_vector0to0;
 wire   [1:1]   Sample_RAM_Block_Decoder_0_Output_vector1to1;
-wire   [2:2]   Sample_RAM_Block_Decoder_0_Output_vector2to2;
-wire   [3:3]   Sample_RAM_Block_Decoder_0_Output_vector3to3;
 wire   [63:0]  B_Output_Data_net_1;
 wire   [10:10] Output_vector_slice_0;
 wire   [11:11] Output_vector_slice_1;
@@ -59,12 +55,14 @@ wire   [12:12] Output_vector_slice_2;
 wire   [13:13] Output_vector_slice_3;
 wire   [14:14] Output_vector_slice_4;
 wire   [15:15] Output_vector_slice_5;
-wire   [4:4]   Output_vector_slice_6;
-wire   [5:5]   Output_vector_slice_7;
-wire   [6:6]   Output_vector_slice_8;
-wire   [7:7]   Output_vector_slice_9;
-wire   [8:8]   Output_vector_slice_10;
-wire   [9:9]   Output_vector_slice_11;
+wire   [2:2]   Output_vector_slice_6;
+wire   [3:3]   Output_vector_slice_7;
+wire   [4:4]   Output_vector_slice_8;
+wire   [5:5]   Output_vector_slice_9;
+wire   [6:6]   Output_vector_slice_10;
+wire   [7:7]   Output_vector_slice_11;
+wire   [8:8]   Output_vector_slice_12;
+wire   [9:9]   Output_vector_slice_13;
 wire   [15:0]  Output_vector_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
@@ -73,8 +71,8 @@ wire           GND_net;
 wire           VCC_net;
 wire   [63:0]  B_DIN_const_net_0;
 wire   [63:0]  B_DIN_const_net_1;
-wire   [63:0]  B_DIN_const_net_2;
-wire   [63:0]  B_DIN_const_net_3;
+wire   [63:0]  Input_Data_2_const_net_0;
+wire   [63:0]  Input_Data_3_const_net_0;
 wire   [63:0]  Input_Data_4_const_net_0;
 wire   [63:0]  Input_Data_5_const_net_0;
 wire   [63:0]  Input_Data_6_const_net_0;
@@ -94,8 +92,8 @@ assign GND_net                   = 1'b0;
 assign VCC_net                   = 1'b1;
 assign B_DIN_const_net_0         = 64'h0000000000000000;
 assign B_DIN_const_net_1         = 64'h0000000000000000;
-assign B_DIN_const_net_2         = 64'h0000000000000000;
-assign B_DIN_const_net_3         = 64'h0000000000000000;
+assign Input_Data_2_const_net_0  = 64'h0000000000000000;
+assign Input_Data_3_const_net_0  = 64'h0000000000000000;
 assign Input_Data_4_const_net_0  = 64'h0000000000000000;
 assign Input_Data_5_const_net_0  = 64'h0000000000000000;
 assign Input_Data_6_const_net_0  = 64'h0000000000000000;
@@ -118,20 +116,20 @@ assign B_Output_Data[63:0] = B_Output_Data_net_1;
 //--------------------------------------------------------------------
 assign Sample_RAM_Block_Decoder_0_Output_vector0to0[0] = Output_vector_net_0[0:0];
 assign Sample_RAM_Block_Decoder_0_Output_vector1to1[1] = Output_vector_net_0[1:1];
-assign Sample_RAM_Block_Decoder_0_Output_vector2to2[2] = Output_vector_net_0[2:2];
-assign Sample_RAM_Block_Decoder_0_Output_vector3to3[3] = Output_vector_net_0[3:3];
 assign Output_vector_slice_0[10]                       = Output_vector_net_0[10:10];
 assign Output_vector_slice_1[11]                       = Output_vector_net_0[11:11];
 assign Output_vector_slice_2[12]                       = Output_vector_net_0[12:12];
 assign Output_vector_slice_3[13]                       = Output_vector_net_0[13:13];
 assign Output_vector_slice_4[14]                       = Output_vector_net_0[14:14];
 assign Output_vector_slice_5[15]                       = Output_vector_net_0[15:15];
-assign Output_vector_slice_6[4]                        = Output_vector_net_0[4:4];
-assign Output_vector_slice_7[5]                        = Output_vector_net_0[5:5];
-assign Output_vector_slice_8[6]                        = Output_vector_net_0[6:6];
-assign Output_vector_slice_9[7]                        = Output_vector_net_0[7:7];
-assign Output_vector_slice_10[8]                       = Output_vector_net_0[8:8];
-assign Output_vector_slice_11[9]                       = Output_vector_net_0[9:9];
+assign Output_vector_slice_6[2]                        = Output_vector_net_0[2:2];
+assign Output_vector_slice_7[3]                        = Output_vector_net_0[3:3];
+assign Output_vector_slice_8[4]                        = Output_vector_net_0[4:4];
+assign Output_vector_slice_9[5]                        = Output_vector_net_0[5:5];
+assign Output_vector_slice_10[6]                       = Output_vector_net_0[6:6];
+assign Output_vector_slice_11[7]                       = Output_vector_net_0[7:7];
+assign Output_vector_slice_12[8]                       = Output_vector_net_0[8:8];
+assign Output_vector_slice_13[9]                       = Output_vector_net_0[9:9];
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -169,40 +167,6 @@ PF_DPSRAM_C5 PF_DPSRAM_C5_0_0(
         .B_DOUT   ( PF_DPSRAM_C5_0_0_B_DOUT ) 
         );
 
-//--------PF_DPSRAM_C5
-PF_DPSRAM_C5 PF_DPSRAM_C5_0_1(
-        // Inputs
-        .A_WEN    ( A_WEN ),
-        .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector2to2 ),
-        .B_WEN    ( GND_net ),
-        .B_BLK_EN ( VCC_net ),
-        .CLK      ( CLK ),
-        .A_DIN    ( A_DIN ),
-        .A_ADDR   ( A_ADDR ),
-        .B_DIN    ( B_DIN_const_net_2 ),
-        .B_ADDR   ( B_ADDR ),
-        // Outputs
-        .A_DOUT   (  ),
-        .B_DOUT   ( PF_DPSRAM_C5_0_1_B_DOUT ) 
-        );
-
-//--------PF_DPSRAM_C5
-PF_DPSRAM_C5 PF_DPSRAM_C5_0_1_0(
-        // Inputs
-        .A_WEN    ( A_WEN ),
-        .A_BLK_EN ( Sample_RAM_Block_Decoder_0_Output_vector3to3 ),
-        .B_WEN    ( GND_net ),
-        .B_BLK_EN ( VCC_net ),
-        .CLK      ( CLK ),
-        .A_DIN    ( A_DIN ),
-        .A_ADDR   ( A_ADDR ),
-        .B_DIN    ( B_DIN_const_net_3 ),
-        .B_ADDR   ( B_ADDR ),
-        // Outputs
-        .A_DOUT   (  ),
-        .B_DOUT   ( PF_DPSRAM_C5_0_1_0_B_DOUT ) 
-        );
-
 //--------Sample_RAM_Block_Decoder
 Sample_RAM_Block_Decoder Sample_RAM_Block_Decoder_0(
         // Inputs
@@ -217,8 +181,8 @@ Sample_RAM_Block_MUX Sample_RAM_Block_MUX_0(
         .Address       ( B_Block_Address_vector ),
         .Input_Data_0  ( PF_DPSRAM_C5_0_B_DOUT ),
         .Input_Data_1  ( PF_DPSRAM_C5_0_0_B_DOUT ),
-        .Input_Data_2  ( PF_DPSRAM_C5_0_1_B_DOUT ),
-        .Input_Data_3  ( PF_DPSRAM_C5_0_1_0_B_DOUT ),
+        .Input_Data_2  ( Input_Data_2_const_net_0 ),
+        .Input_Data_3  ( Input_Data_3_const_net_0 ),
         .Input_Data_4  ( Input_Data_4_const_net_0 ),
         .Input_Data_5  ( Input_Data_5_const_net_0 ),
         .Input_Data_6  ( Input_Data_6_const_net_0 ),

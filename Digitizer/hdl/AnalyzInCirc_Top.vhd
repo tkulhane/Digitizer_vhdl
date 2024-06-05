@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 entity AnalyzInCirc_Top is
     generic
     (
-        g_NumOfTranscievers : natural := 2
+        g_NumOfTranscievers : natural := 6
     );
     port
     (
@@ -214,7 +214,7 @@ begin
         (
             g_Width => 12,
             g_InputWidthFactor => 8,
-            g_Depth => 1024
+            g_Depth => 256
         )
         port map
         (
@@ -243,7 +243,7 @@ begin
         (
             g_Width => 12,
             g_InputWidthFactor => 8,
-            g_Depth => 1024
+            g_Depth => 256
         )
         port map
         (

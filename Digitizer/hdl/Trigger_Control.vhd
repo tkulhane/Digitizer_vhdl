@@ -30,6 +30,8 @@ entity Trigger_Control is
         Control_EventNum : out std_logic_vector(14 - 1 downto 0);
 
         Control_Test_Generator_Enable : out std_logic;
+        Control_Mux_DataTest_Sel : out std_logic;
+        
         Control_Enable : out std_logic;
         Control_Abort : out std_logic;
         --Control_EnableRst : in std_logic; 
@@ -94,7 +96,7 @@ architecture rtl of Trigger_Control is
     signal REG_Set_Number_of_Events_L : std_logic_vector(16 - 1 downto 0);
     signal REG_Set_Number_of_Events_M : std_logic_vector(16 - 1 downto 0);
     signal REG_TriggerSelect : std_logic_vector(3 downto 0);
-
+    signal REG_Control_Mux_DataTest_Sel : std_logic;
 
 begin
 
@@ -118,6 +120,8 @@ begin
     Control_EventNum <= Counter_Processed_Events(13 downto 0);
 
     Control_TriggerSelect <= REG_TriggerSelect;
+    
+    Control_Mux_DataTest_Sel <= REG_Control_Mux_DataTest_Sel;
 
 ------------------------------------------------------------------------------------------------------------
 --Signals Routing for aborts signals and FIFO SampleEventComparator
@@ -302,6 +306,9 @@ begin
 
                     when CMD_TRG_TEST_GENERATOR_ENABLE  =>
                         read_data_frame <= "000000000000000" & REG_Test_Generator_Enable;
+                        
+                    when CMD_TRG_DATA_TEST_MUX =>
+                        read_data_frame <= "000000000000000" & REG_Control_Mux_DataTest_Sel;
 
                     when CMD_TRG_TRIGGER_SELECT =>
                         read_data_frame(3 downto 0) <= REG_TriggerSelect;
@@ -326,6 +333,7 @@ begin
 
         if(Reset_N = '0') then
             REG_Test_Generator_Enable <= '0';
+            REG_Control_Mux_DataTest_Sel <= '0';
             REG_Enable  <= '0';
             REG_Threshold <= X"121";
             REG_Sample_Per_Event_L <= X"000A";
@@ -383,6 +391,9 @@ begin
 
                     when CMD_TRG_TEST_GENERATOR_ENABLE  =>
                         REG_Test_Generator_Enable <= write_data_frame(0);
+                        
+                    when CMD_TRG_DATA_TEST_MUX =>
+                        REG_Control_Mux_DataTest_Sel <= write_data_frame(0);
 
                     when CMD_TRG_COUNTERS_RESET =>
                         REQ_Counters_Reset <= '1';

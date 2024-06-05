@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 30 09:25:05 2024
+// Created by SmartDesign Wed Jun  5 17:13:49 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -8,13 +8,13 @@
 // Transciever_OneLane
 module Transciever_OneLane(
     // Inputs
+    CLKS_FROM_TXPLL_0_TX_BIT_CLK_0,
+    CLKS_FROM_TXPLL_0_TX_PLL_LOCK_0,
+    CLKS_FROM_TXPLL_0_TX_PLL_REF_CLK_0,
     CTRL_CLK,
     CTRL_Fault_CLR,
     CTRL_RST_N,
-    Input_Data_0,
-    Input_Data_1,
-    Input_Data_2,
-    Input_Data_3,
+    Input_Data,
     LANE0_RXD_N,
     LANE0_RXD_P,
     LANE_CLK_REF,
@@ -34,23 +34,20 @@ module Transciever_OneLane(
     LANE0_TXD_P,
     LANE_RX_DATA,
     LANE_RX_K,
-    Output_Data_0,
-    Output_Data_1,
-    Output_Data_2,
-    Output_Data_3,
+    Output_Data,
     StatusVector
 );
 
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input         CLKS_FROM_TXPLL_0_TX_BIT_CLK_0;
+input         CLKS_FROM_TXPLL_0_TX_PLL_LOCK_0;
+input         CLKS_FROM_TXPLL_0_TX_PLL_REF_CLK_0;
 input         CTRL_CLK;
 input         CTRL_Fault_CLR;
 input         CTRL_RST_N;
-input  [15:0] Input_Data_0;
-input  [15:0] Input_Data_1;
-input  [15:0] Input_Data_2;
-input  [15:0] Input_Data_3;
+input  [63:0] Input_Data;
 input         LANE0_RXD_N;
 input         LANE0_RXD_P;
 input         LANE_CLK_REF;
@@ -72,125 +69,111 @@ output        LANE0_TXD_N;
 output        LANE0_TXD_P;
 output [63:0] LANE_RX_DATA;
 output [7:0]  LANE_RX_K;
-output [15:0] Output_Data_0;
-output [15:0] Output_Data_1;
-output [15:0] Output_Data_2;
-output [15:0] Output_Data_3;
+output [63:0] Output_Data;
 output [31:0] StatusVector;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire   [15:0]  AlignmentLane_Fifo_0_Count;
-wire           COREFIFO_C12_0_1_EMPTY;
-wire           COREFIFO_C12_0_1_FULL;
-wire           COREFIFO_C12_0_EMPTY;
-wire           COREFIFO_C12_0_FULL;
-wire   [63:0]  COREFIFO_C12_0_Q;
-wire           COREFIFO_C13_0_0_EMPTY;
-wire           COREFIFO_C13_0_0_FULL;
-wire           COREFIFO_C13_0_EMPTY;
-wire           COREFIFO_C13_0_FULL;
-wire   [7:0]   COREFIFO_C13_0_Q;
-wire           CTRL_CLK;
-wire           CTRL_Data_Go_net_0;
-wire           CTRL_Fault_net_0;
-wire           CTRL_Fault_CLR;
-wire           CTRL_ILAS_Go_net_0;
-wire           CTRL_RST_N;
-wire           CTRL_Synced_net_0;
-wire           Empty_For_NonAll_net_0;
-wire   [15:0]  Input_Data_0;
-wire   [15:0]  Input_Data_1;
-wire   [15:0]  Input_Data_2;
-wire   [15:0]  Input_Data_3;
-wire           Input_MainData_Read_net_0;
-wire           LANE0_RXD_N;
-wire           LANE0_RXD_P;
-wire           LANE0_TXD_N_net_0;
-wire           LANE0_TXD_P_net_0;
-wire           LANE_CLK_REF;
-wire   [63:0]  LANE_RX_DATA_net_0;
-wire   [7:0]   LANE_RX_K_net_0;
-wire           Logic_Clock;
-wire           Logic_Reser_N;
-wire           OR2_0_0_0_Y;
-wire           OR2_0_0_1_Y;
-wire           OR2_0_0_Y;
-wire           OR2_0_Y;
-wire   [15:0]  Output_Data_0_net_0;
-wire   [31:16] Output_Data_1_net_0;
-wire   [47:32] Output_Data_2_net_0;
-wire   [63:48] Output_Data_3_net_0;
-wire           PF_TX_PLL_C1_0_CLKS_TO_XCVR_BIT_CLK;
-wire           PF_TX_PLL_C1_0_CLKS_TO_XCVR_LOCK;
-wire           PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE;
-wire   [7:0]   PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K;
-wire           PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R;
-wire   [63:0]  PF_XCVR_ERM_C8_0_LANE0_RX_DATA;
-wire           PF_XCVR_ERM_C8_0_LANE0_RX_READY;
-wire           PF_XCVR_ERM_C8_0_LANE0_RX_VAL;
-wire           PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R_0;
-wire           PF_XCVR_ERM_C8_0_LANE0_TX_CLK_STABLE;
-wire           Read_Enable;
-wire           REF_CLK;
-wire   [63:0]  RxLaneControl_0_Output_Data;
-wire   [7:0]   RxLaneControl_0_Output_DataWrite;
-wire           RxLaneControl_0_Status_CTRL_Fault;
-wire   [2:0]   RxLaneControl_0_Status_FSM_State;
-wire   [31:0]  StatusVector_net_0;
-wire           SYNC_OK;
-wire           Synchronizer_0_0_Data_Out;
-wire           Synchronizer_0_2_0_Data_Out;
-wire           Synchronizer_0_2_1_Data_Out;
-wire           Synchronizer_0_2_2_Data_Out;
-wire           Synchronizer_0_2_3_Data_Out;
-wire           Synchronizer_0_2_4_Data_Out;
-wire           Synchronizer_0_2_Data_Out;
-wire           Synchronizer_0_Data_Out;
-wire   [63:0]  TxLaneControl_0_Output_Data;
-wire   [7:0]   TxLaneControl_0_Output_K;
-wire           Input_MainData_Read_net_1;
-wire           Empty_For_NonAll_net_1;
-wire           CTRL_Data_Go_net_1;
-wire           CTRL_Synced_net_1;
-wire           CTRL_ILAS_Go_net_1;
-wire           LANE0_TXD_P_net_1;
-wire           LANE0_TXD_N_net_1;
-wire           CTRL_Fault_net_1;
-wire   [15:0]  Output_Data_0_net_1;
-wire   [15:0]  Output_Data_1_net_1;
-wire   [15:0]  Output_Data_2_net_1;
-wire   [15:0]  Output_Data_3_net_1;
-wire   [31:0]  StatusVector_net_1;
-wire   [63:0]  LANE_RX_DATA_net_1;
-wire   [7:0]   LANE_RX_K_net_1;
-wire   [63:0]  Read_Data_net_0;
-wire   [63:0]  Input_MainData_net_0;
+wire   [15:0] AlignmentLane_Fifo_0_Count;
+wire          CLKS_FROM_TXPLL_0_TX_BIT_CLK_0;
+wire          CLKS_FROM_TXPLL_0_TX_PLL_LOCK_0;
+wire          CLKS_FROM_TXPLL_0_TX_PLL_REF_CLK_0;
+wire          COREFIFO_C12_0_1_EMPTY;
+wire          COREFIFO_C12_0_1_FULL;
+wire          COREFIFO_C12_0_EMPTY;
+wire          COREFIFO_C12_0_FULL;
+wire   [63:0] COREFIFO_C12_0_Q;
+wire          COREFIFO_C13_0_0_EMPTY;
+wire          COREFIFO_C13_0_0_FULL;
+wire          COREFIFO_C13_0_EMPTY;
+wire          COREFIFO_C13_0_FULL;
+wire   [7:0]  COREFIFO_C13_0_Q;
+wire          CTRL_CLK;
+wire          CTRL_Data_Go_net_0;
+wire          CTRL_Fault_net_0;
+wire          CTRL_Fault_CLR;
+wire          CTRL_ILAS_Go_net_0;
+wire          CTRL_RST_N;
+wire          CTRL_Synced_net_0;
+wire          Empty_For_NonAll_net_0;
+wire   [63:0] Input_Data;
+wire          Input_MainData_Read_net_0;
+wire          LANE0_RXD_N;
+wire          LANE0_RXD_P;
+wire          LANE0_TXD_N_net_0;
+wire          LANE0_TXD_P_net_0;
+wire          LANE_CLK_REF;
+wire   [63:0] LANE_RX_DATA_net_0;
+wire   [7:0]  LANE_RX_K_net_0;
+wire          Logic_Clock;
+wire          Logic_Reser_N;
+wire          OR2_0_0_0_Y;
+wire          OR2_0_0_1_Y;
+wire          OR2_0_0_Y;
+wire          OR2_0_Y;
+wire   [63:0] Output_Data_net_0;
+wire   [7:0]  PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K;
+wire          PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R;
+wire   [63:0] PF_XCVR_ERM_C8_0_LANE0_RX_DATA;
+wire          PF_XCVR_ERM_C8_0_LANE0_RX_READY;
+wire          PF_XCVR_ERM_C8_0_LANE0_RX_VAL;
+wire          PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R_0;
+wire          PF_XCVR_ERM_C8_0_LANE0_TX_CLK_STABLE;
+wire          Read_Enable;
+wire          REF_CLK;
+wire   [63:0] RxLaneControl_0_Output_Data;
+wire   [7:0]  RxLaneControl_0_Output_DataWrite;
+wire          RxLaneControl_0_Status_CTRL_Fault;
+wire   [2:0]  RxLaneControl_0_Status_FSM_State;
+wire   [31:0] StatusVector_net_0;
+wire          SYNC_OK;
+wire          Synchronizer_0_0_Data_Out;
+wire          Synchronizer_0_2_0_Data_Out;
+wire          Synchronizer_0_2_1_Data_Out;
+wire          Synchronizer_0_2_2_Data_Out;
+wire          Synchronizer_0_2_3_Data_Out;
+wire          Synchronizer_0_2_4_Data_Out;
+wire          Synchronizer_0_2_Data_Out;
+wire          Synchronizer_0_Data_Out;
+wire   [63:0] TxLaneControl_0_Output_Data;
+wire   [7:0]  TxLaneControl_0_Output_K;
+wire          Input_MainData_Read_net_1;
+wire          Empty_For_NonAll_net_1;
+wire          CTRL_Data_Go_net_1;
+wire          CTRL_Synced_net_1;
+wire          CTRL_ILAS_Go_net_1;
+wire          LANE0_TXD_P_net_1;
+wire          LANE0_TXD_N_net_1;
+wire          CTRL_Fault_net_1;
+wire   [31:0] StatusVector_net_1;
+wire   [63:0] LANE_RX_DATA_net_1;
+wire   [7:0]  LANE_RX_K_net_1;
+wire   [63:0] Output_Data_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire           VCC_net;
-wire   [7:0]   Read_Data_Enable_const_net_0;
-wire   [15:0]  LANE0_TX_DISPFNC_const_net_0;
-wire           GND_net;
+wire          VCC_net;
+wire   [7:0]  Read_Data_Enable_const_net_0;
+wire          GND_net;
+wire   [15:0] LANE0_TX_DISPFNC_const_net_0;
 //--------------------------------------------------------------------
 // Inverted Nets
 //--------------------------------------------------------------------
-wire           WE_IN_POST_INV0_0;
-wire           RE_IN_POST_INV1_0;
-wire           WE_IN_POST_INV2_0;
-wire           RE_IN_POST_INV3_0;
-wire           WE_IN_POST_INV4_0;
-wire           RE_IN_POST_INV5_0;
-wire           WE_IN_POST_INV6_0;
-wire           RE_IN_POST_INV7_0;
+wire          WE_IN_POST_INV0_0;
+wire          RE_IN_POST_INV1_0;
+wire          WE_IN_POST_INV2_0;
+wire          RE_IN_POST_INV3_0;
+wire          WE_IN_POST_INV4_0;
+wire          RE_IN_POST_INV5_0;
+wire          WE_IN_POST_INV6_0;
+wire          RE_IN_POST_INV7_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
 assign VCC_net                      = 1'b1;
 assign Read_Data_Enable_const_net_0 = 8'hFF;
-assign LANE0_TX_DISPFNC_const_net_0 = 16'h0000;
 assign GND_net                      = 1'b0;
+assign LANE0_TX_DISPFNC_const_net_0 = 16'h0000;
 //--------------------------------------------------------------------
 // Inversions
 //--------------------------------------------------------------------
@@ -221,31 +204,14 @@ assign LANE0_TXD_N_net_1         = LANE0_TXD_N_net_0;
 assign LANE0_TXD_N               = LANE0_TXD_N_net_1;
 assign CTRL_Fault_net_1          = CTRL_Fault_net_0;
 assign CTRL_Fault                = CTRL_Fault_net_1;
-assign Output_Data_0_net_1       = Output_Data_0_net_0;
-assign Output_Data_0[15:0]       = Output_Data_0_net_1;
-assign Output_Data_1_net_1       = Output_Data_1_net_0;
-assign Output_Data_1[15:0]       = Output_Data_1_net_1;
-assign Output_Data_2_net_1       = Output_Data_2_net_0;
-assign Output_Data_2[15:0]       = Output_Data_2_net_1;
-assign Output_Data_3_net_1       = Output_Data_3_net_0;
-assign Output_Data_3[15:0]       = Output_Data_3_net_1;
 assign StatusVector_net_1        = StatusVector_net_0;
 assign StatusVector[31:0]        = StatusVector_net_1;
 assign LANE_RX_DATA_net_1        = LANE_RX_DATA_net_0;
 assign LANE_RX_DATA[63:0]        = LANE_RX_DATA_net_1;
 assign LANE_RX_K_net_1           = LANE_RX_K_net_0;
 assign LANE_RX_K[7:0]            = LANE_RX_K_net_1;
-//--------------------------------------------------------------------
-// Slices assignments
-//--------------------------------------------------------------------
-assign Output_Data_0_net_0 = Read_Data_net_0[15:0];
-assign Output_Data_1_net_0 = Read_Data_net_0[31:16];
-assign Output_Data_2_net_0 = Read_Data_net_0[47:32];
-assign Output_Data_3_net_0 = Read_Data_net_0[63:48];
-//--------------------------------------------------------------------
-// Concatenation assignments
-//--------------------------------------------------------------------
-assign Input_MainData_net_0 = { Input_Data_3 , Input_Data_2 , Input_Data_1 , Input_Data_0 };
+assign Output_Data_net_1         = Output_Data_net_0;
+assign Output_Data[63:0]         = Output_Data_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -269,7 +235,7 @@ AlignmentLane_Fifo_0(
         .Empty             (  ),
         .Empty_For_NonAll  ( Empty_For_NonAll_net_0 ),
         .Count             ( AlignmentLane_Fifo_0_Count ),
-        .Read_Data         ( Read_Data_net_0 ),
+        .Read_Data         ( Output_Data_net_0 ),
         .Read_Data_Empty   (  ) 
         );
 
@@ -373,48 +339,37 @@ OR2 OR2_0_0_1(
         .Y ( OR2_0_0_1_Y ) 
         );
 
-//--------PF_TX_PLL_C1
-PF_TX_PLL_C1 PF_TX_PLL_C1_0(
-        // Inputs
-        .FAB_REF_CLK     ( REF_CLK ),
-        // Outputs
-        .PLL_LOCK        (  ),
-        .LOCK            ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_LOCK ),
-        .BIT_CLK         ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_BIT_CLK ),
-        .REF_CLK_TO_LANE ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE ) 
-        );
-
 //--------PF_XCVR_ERM_C8
 PF_XCVR_ERM_C8 PF_XCVR_ERM_C8_0(
         // Inputs
         .LANE0_RXD_P              ( LANE0_RXD_P ),
         .LANE0_RXD_N              ( LANE0_RXD_N ),
-        .LANE0_TX_DATA            ( COREFIFO_C12_0_Q ),
         .LANE0_CDR_REF_CLK_FAB    ( REF_CLK ),
         .LANE0_PCS_ARST_N         ( CTRL_RST_N ),
         .LANE0_PMA_ARST_N         ( CTRL_RST_N ),
-        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_0 ),
-        .LANE0_8B10B_TX_K         ( COREFIFO_C13_0_Q ),
-        .TX_PLL_LOCK_0            ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_LOCK ),
-        .TX_BIT_CLK_0             ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_BIT_CLK ),
-        .TX_PLL_REF_CLK_0         ( PF_TX_PLL_C1_0_CLKS_TO_XCVR_REF_CLK_TO_LANE ),
+        .TX_PLL_LOCK_0            ( CLKS_FROM_TXPLL_0_TX_PLL_LOCK_0 ),
+        .TX_BIT_CLK_0             ( CLKS_FROM_TXPLL_0_TX_BIT_CLK_0 ),
+        .TX_PLL_REF_CLK_0         ( CLKS_FROM_TXPLL_0_TX_PLL_REF_CLK_0 ),
         .CTRL_CLK                 ( CTRL_CLK ),
         .CTRL_ARST_N              ( CTRL_RST_N ),
         .LANE0_LOS                ( GND_net ),
         .LANE0_CLK_REF            ( LANE_CLK_REF ),
+        .LANE0_TX_DATA            ( COREFIFO_C12_0_Q ),
+        .LANE0_TX_DISPFNC         ( LANE0_TX_DISPFNC_const_net_0 ),
+        .LANE0_8B10B_TX_K         ( COREFIFO_C13_0_Q ),
         // Outputs
         .LANE0_TXD_P              ( LANE0_TXD_P_net_0 ),
         .LANE0_TXD_N              ( LANE0_TXD_N_net_0 ),
-        .LANE0_RX_DATA            ( PF_XCVR_ERM_C8_0_LANE0_RX_DATA ),
         .LANE0_TX_CLK_R           ( PF_XCVR_ERM_C8_0_LANE0_TX_CLK_R_0 ),
         .LANE0_RX_CLK_R           ( PF_XCVR_ERM_C8_0_LANE0_RX_CLK_R ),
         .LANE0_RX_IDLE            (  ),
         .LANE0_TX_CLK_STABLE      ( PF_XCVR_ERM_C8_0_LANE0_TX_CLK_STABLE ),
+        .LANE0_RX_READY           ( PF_XCVR_ERM_C8_0_LANE0_RX_READY ),
+        .LANE0_RX_VAL             ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL ),
+        .LANE0_RX_DATA            ( PF_XCVR_ERM_C8_0_LANE0_RX_DATA ),
         .LANE0_RX_CODE_VIOLATION  (  ),
         .LANE0_RX_DISPARITY_ERROR (  ),
-        .LANE0_8B10B_RX_K         ( PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K ),
-        .LANE0_RX_READY           ( PF_XCVR_ERM_C8_0_LANE0_RX_READY ),
-        .LANE0_RX_VAL             ( PF_XCVR_ERM_C8_0_LANE0_RX_VAL ) 
+        .LANE0_8B10B_RX_K         ( PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K ) 
         );
 
 //--------RxLaneControl
@@ -551,7 +506,7 @@ TxLaneControl_0(
         .Clock               ( Logic_Clock ),
         .Reset_N             ( Synchronizer_0_2_4_Data_Out ),
         .SYNC_OK             ( SYNC_OK ),
-        .Input_MainData      ( Input_MainData_net_0 ),
+        .Input_MainData      ( Input_Data ),
         // Outputs
         .Input_MainData_Read ( Input_MainData_Read_net_0 ),
         .Output_Data         ( TxLaneControl_0_Output_Data ),

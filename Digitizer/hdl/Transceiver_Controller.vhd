@@ -63,8 +63,9 @@ architecture rtl of Transceiver_Controller is
     constant ADDR_Reserved_9            : natural := 9;
 
 
-    constant CMD_TRNV_GENERAL_STATUS    : std_logic_vector(7 downto 0) := x"00";
+    constant CMD_TRNV_DUMMYREG          : std_logic_vector(7 downto 0) := x"00";
     constant CMD_TRNV_LANES_RESTART     : std_logic_vector(7 downto 0) := x"01";
+    constant CMD_TRNV_GENERAL_LANE_STATUS : std_logic_vector(7 downto 0) := x"02";
  
  
 
@@ -271,7 +272,7 @@ begin
                 case(address) is
 
 
-                    when CMD_TRNV_GENERAL_STATUS =>
+                    when CMD_TRNV_DUMMYREG =>
                         --REG_EXT_Resets <= write_data_frame;
                         null;
 
@@ -337,7 +338,7 @@ begin
 
                     case(address) is
 
-                        when CMD_TRNV_GENERAL_STATUS => 
+                        when CMD_TRNV_DUMMYREG => 
                             read_data_frame <= X"5555";
                         
                         when CMD_TRNV_LANES_RESTART =>

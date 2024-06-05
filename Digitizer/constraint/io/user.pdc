@@ -6,7 +6,7 @@
 
 # Family: PolarFire , Die: MPF300TS_ES , Package: FCG1152
 
-# Date generated: Thu May 30 23:00:22 2024 
+# Date generated: Wed Jun  5 16:24:35 2024 
 
 
 # 
@@ -985,55 +985,124 @@ set_io -port_name GPIO_1  \
 
 #
 
-set_io -port_name LANE0_RXD_N  \
-    -pin_name P30              \
-    -RX_CTLE No_Peak_+2.4dB    \
-    -RX_TERMINATION 100        \
+set_io -port_name {LANE_RXD_N_Vector[0]}  \
+    -pin_name M30                         \
     -DIRECTION INPUT
 
 
-set_io -port_name LANE0_RXD_P  \
-    -pin_name P29              \
-    -RX_CTLE No_Peak_+2.4dB    \
-    -RX_TERMINATION 100        \
+set_io -port_name {LANE_RXD_N_Vector[1]}  \
+    -pin_name P30                         \
     -DIRECTION INPUT
 
 
-set_io -port_name LANE0_TXD_N  \
-    -pin_name P34              \
-    -TX_IMPEDANCE 100          \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LANE0_TXD_P  \
-    -pin_name P33              \
-    -TX_IMPEDANCE 100          \
-    -DIRECTION OUTPUT
-
-
-set_io -port_name LANE1_RXD_N  \
-    -pin_name M30              \
-    -RX_CTLE No_Peak_+2.4dB    \
-    -RX_TERMINATION 100        \
+set_io -port_name {LANE_RXD_N_Vector[2]}  \
+    -pin_name T30                         \
     -DIRECTION INPUT
 
 
-set_io -port_name LANE1_RXD_P  \
-    -pin_name M29              \
-    -RX_CTLE No_Peak_+2.4dB    \
-    -RX_TERMINATION 100        \
+set_io -port_name {LANE_RXD_N_Vector[3]}  \
+    -pin_name R32                         \
     -DIRECTION INPUT
 
 
-set_io -port_name LANE1_TXD_N  \
-    -pin_name N32              \
-    -TX_IMPEDANCE 100          \
+set_io -port_name {LANE_RXD_N_Vector[4]}  \
+    -pin_name J32                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_RXD_N_Vector[5]}  \
+    -pin_name G32                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_RXD_P_Vector[0]}  \
+    -pin_name M29                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_RXD_P_Vector[1]}  \
+    -pin_name P29                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_RXD_P_Vector[2]}  \
+    -pin_name T29                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_RXD_P_Vector[3]}  \
+    -pin_name R31                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_RXD_P_Vector[4]}  \
+    -pin_name J31                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_RXD_P_Vector[5]}  \
+    -pin_name G31                         \
+    -DIRECTION INPUT
+
+
+set_io -port_name {LANE_TXD_N_Vector[0]}  \
+    -pin_name N32                         \
     -DIRECTION OUTPUT
 
 
-set_io -port_name LANE1_TXD_P  \
-    -pin_name N31              \
-    -TX_IMPEDANCE 100          \
+set_io -port_name {LANE_TXD_N_Vector[1]}  \
+    -pin_name P34                         \
     -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_N_Vector[2]}  \
+    -pin_name U32                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_N_Vector[3]}  \
+    -pin_name T34                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_N_Vector[4]}  \
+    -pin_name H34                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_N_Vector[5]}  \
+    -pin_name F34                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_P_Vector[0]}  \
+    -pin_name N31                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_P_Vector[1]}  \
+    -pin_name P33                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_P_Vector[2]}  \
+    -pin_name U31                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_P_Vector[3]}  \
+    -pin_name T33                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_P_Vector[4]}  \
+    -pin_name H33                         \
+    -DIRECTION OUTPUT
+
+
+set_io -port_name {LANE_TXD_P_Vector[5]}  \
+    -pin_name F33                         \
+    -DIRECTION OUTPUT
+
 
 

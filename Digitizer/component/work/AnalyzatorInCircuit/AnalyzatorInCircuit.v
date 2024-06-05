@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Jun  2 13:45:41 2024
+// Created by SmartDesign Wed Jun  5 15:13:08 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -28,7 +28,7 @@ module AnalyzatorInCircuit(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
-input  [127:0] AlignmentFifo_Rx_Data;
+input  [383:0] AlignmentFifo_Rx_Data;
 input          CTRL_Clock;
 input          CTRL_Reset_N;
 input  [7:0]   CTRL_addr_frame;
@@ -38,8 +38,8 @@ input          CTRL_write_read;
 input          Logic_Clock;
 input          Logic_Reset_N;
 input  [7:0]   Start_Triggers;
-input  [127:0] Transceiver_Rx_Data;
-input  [15:0]  Transceiver_Rx_K;
+input  [383:0] Transceiver_Rx_Data;
+input  [47:0]  Transceiver_Rx_K;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
@@ -48,7 +48,7 @@ output [15:0]  CTRL_read_data_frame;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire   [127:0] AlignmentFifo_Rx_Data;
+wire   [383:0] AlignmentFifo_Rx_Data;
 wire           AnalyzInCirc_Top_0_busy;
 wire   [15:0]  AnalyzInCirc_Top_0_read_data_frame;
 wire   [7:0]   CTRL_addr_frame;
@@ -66,8 +66,8 @@ wire           CtrlBus_HandShake_0_PRH_write_read;
 wire           Logic_Clock;
 wire           Logic_Reset_N;
 wire   [7:0]   Start_Triggers;
-wire   [127:0] Transceiver_Rx_Data;
-wire   [15:0]  Transceiver_Rx_K;
+wire   [383:0] Transceiver_Rx_Data;
+wire   [47:0]  Transceiver_Rx_K;
 wire           CTRL_busy_net_1;
 wire   [15:0]  CTRL_read_data_frame_net_1;
 //--------------------------------------------------------------------
@@ -110,16 +110,16 @@ CtrlBus_HandShake_0(
         .PRH_Reset_N           ( Logic_Reset_N ),
         .CTRL_enable_cmd       ( CTRL_enable_cmd ),
         .CTRL_write_read       ( CTRL_write_read ),
+        .PRH_busy              ( AnalyzInCirc_Top_0_busy ),
+        .PRH_In_Reset          ( Logic_Reset_N ),
         .CTRL_addr_frame       ( CTRL_addr_frame ),
         .CTRL_write_data_frame ( CTRL_write_data_frame ),
-        .PRH_busy              ( AnalyzInCirc_Top_0_busy ),
         .PRH_read_data_frame   ( AnalyzInCirc_Top_0_read_data_frame ),
-        .PRH_In_Reset          ( Logic_Reset_N ),
         // Outputs
         .CTRL_busy             ( CTRL_busy_net_0 ),
-        .CTRL_read_data_frame  ( CTRL_read_data_frame_net_0 ),
         .PRH_enable_cmd        ( CtrlBus_HandShake_0_PRH_enable_cmd ),
         .PRH_write_read        ( CtrlBus_HandShake_0_PRH_write_read ),
+        .CTRL_read_data_frame  ( CTRL_read_data_frame_net_0 ),
         .PRH_addr_frame        ( CtrlBus_HandShake_0_PRH_addr_frame ),
         .PRH_write_data_frame  ( CtrlBus_HandShake_0_PRH_write_data_frame ) 
         );

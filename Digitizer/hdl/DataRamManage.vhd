@@ -23,7 +23,7 @@ end DataRamManage;
 architecture arch of DataRamManage is
 
     constant MaxOfEvents : natural := 1024;
-    constant MaxOfSamples : natural := 4*65536;
+    constant MaxOfSamples : natural := 2*65536;
     --constant MaxOfSamples : natural := 3000;
 
 	signal CountOfSampleWord_xWrite : unsigned(128 - 1 downto 0);

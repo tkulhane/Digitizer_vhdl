@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu May 30 13:20:34 2024
+// Created by SmartDesign Tue Jun  4 11:11:21 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -12,6 +12,7 @@ module Clock_Reset(
     ClockInput_EXT2,
     ClockInput_HMC,
     EXT_RST_N,
+    OSC_EXT,
     addr_frame,
     enable_cmd,
     write_data_frame,
@@ -41,6 +42,7 @@ input         ClockInput_EXT1;
 input         ClockInput_EXT2;
 input         ClockInput_HMC;
 input         EXT_RST_N;
+input         OSC_EXT;
 input  [7:0]  addr_frame;
 input         enable_cmd;
 input  [15:0] write_data_frame;
@@ -73,8 +75,8 @@ wire          CLK_SRC_Logic_net_0;
 wire          CLK_SRC_Ref_net_0;
 wire          Clock_Controller_0_SwitchEnable_Logic;
 wire          Clock_Controller_0_SwitchEnable_Ref;
-wire   [1:0]  Clock_Controller_0_SwitchSelect_Logic;
-wire   [1:0]  Clock_Controller_0_SwitchSelect_Ref;
+wire   [2:0]  Clock_Controller_0_SwitchSelect_Logic;
+wire   [2:0]  Clock_Controller_0_SwitchSelect_Ref;
 wire          Clock_Switch_0_0_PLL_PWR_DOWN;
 wire          Clock_Switch_0_PLL_PWR_DOWN;
 wire          ClockInput_EXT1;
@@ -88,11 +90,13 @@ wire          Logic_Clock_net_0;
 wire          Logic_Reset_N_net_0;
 wire          Main_CLOCK_0;
 wire          Main_RESET_N_0;
+wire          OSC_EXT;
 wire          PF_CCC_C0_0_PLL_LOCK_0;
 wire          PF_CCC_C7_0_OUT0_FABCLK_0;
 wire          PF_CCC_C7_0_PLL_LOCK_0;
 wire          PF_CCC_C8_0_OUT0_FABCLK_0;
 wire          PF_CCC_C8_0_PLL_LOCK_0;
+wire          PF_CCC_C9_0_OUT0_FABCLK_0;
 wire          PF_INIT_MONITOR_C0_0_DEVICE_INIT_DONE;
 wire          PF_INIT_MONITOR_C0_0_FABRIC_POR_N;
 wire          PF_OSC_C0_0_RCOSC_160MHZ_GL;
@@ -182,10 +186,10 @@ Clock_Controller Clock_Controller_0(
         .PLLs_Lock          ( PLLs_Lock_net_0 ),
         // Outputs
         .busy               ( busy_net_0 ),
-        .SwitchEnable_Logic ( Clock_Controller_0_SwitchEnable_Logic ),
-        .SwitchEnable_Ref   ( Clock_Controller_0_SwitchEnable_Ref ),
         .read_data_frame    ( read_data_frame_net_0 ),
+        .SwitchEnable_Logic ( Clock_Controller_0_SwitchEnable_Logic ),
         .SwitchSelect_Logic ( Clock_Controller_0_SwitchSelect_Logic ),
+        .SwitchEnable_Ref   ( Clock_Controller_0_SwitchEnable_Ref ),
         .SwitchSelect_Ref   ( Clock_Controller_0_SwitchSelect_Ref ) 
         );
 
@@ -198,10 +202,11 @@ Clock_Switch Clock_Switch_0(
         .ClockInputB    ( ClockInput_HMC ),
         .ClockInputC    ( ClockInput_EXT1 ),
         .ClockInputD    ( ClockInput_EXT2 ),
+        .ClockInputE    ( PF_CCC_C9_0_OUT0_FABCLK_0 ),
         .SwitchEnable   ( Clock_Controller_0_SwitchEnable_Logic ),
+        .SwitchSelect   ( Clock_Controller_0_SwitchSelect_Logic ),
         .PLL_Lock       ( PF_CCC_C7_0_PLL_LOCK_0 ),
         .Clock_From_PLL ( PF_CCC_C7_0_OUT0_FABCLK_0 ),
-        .SwitchSelect   ( Clock_Controller_0_SwitchSelect_Logic ),
         // Outputs
         .PLL_PWR_DOWN   ( Clock_Switch_0_PLL_PWR_DOWN ),
         .Clock_To_PLL   ( CLK_SRC_Logic_net_0 ),
@@ -218,10 +223,11 @@ Clock_Switch Clock_Switch_0_0(
         .ClockInputB    ( ClockInput_HMC ),
         .ClockInputC    ( ClockInput_EXT1 ),
         .ClockInputD    ( ClockInput_EXT2 ),
+        .ClockInputE    ( PF_CCC_C9_0_OUT0_FABCLK_0 ),
         .SwitchEnable   ( Clock_Controller_0_SwitchEnable_Ref ),
+        .SwitchSelect   ( Clock_Controller_0_SwitchSelect_Ref ),
         .PLL_Lock       ( PF_CCC_C8_0_PLL_LOCK_0 ),
         .Clock_From_PLL ( PF_CCC_C8_0_OUT0_FABCLK_0 ),
-        .SwitchSelect   ( Clock_Controller_0_SwitchSelect_Ref ),
         // Outputs
         .PLL_PWR_DOWN   ( Clock_Switch_0_0_PLL_PWR_DOWN ),
         .Clock_To_PLL   ( CLK_SRC_Ref_net_0 ),
@@ -285,6 +291,16 @@ PF_CCC_C8 PF_CCC_C8_0(
         // Outputs
         .OUT0_FABCLK_0     ( PF_CCC_C8_0_OUT0_FABCLK_0 ),
         .PLL_LOCK_0        ( PF_CCC_C8_0_PLL_LOCK_0 ) 
+        );
+
+//--------PF_CCC_C9
+PF_CCC_C9 PF_CCC_C9_0(
+        // Inputs
+        .REF_CLK_0         ( OSC_EXT ),
+        .PLL_POWERDOWN_N_0 ( CORERESET_PF_C0_0_PLL_POWERDOWN_B ),
+        // Outputs
+        .OUT0_FABCLK_0     ( PF_CCC_C9_0_OUT0_FABCLK_0 ),
+        .PLL_LOCK_0        (  ) 
         );
 
 //--------PF_CLK_DIV_C2

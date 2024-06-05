@@ -19,8 +19,6 @@ vmap CORESPI_LIB "CORESPI_LIB"
 
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Synchronizer.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/CtrlBus_HandShake.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SampleCompose.vhd"
-vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/SampleTxDeCompose.vhd"
 vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/hdl/Test_Generator_for_Lanes.vhd"
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C12/COREFIFO_C12_0/rtl/vlog/core/corefifo_sync_scntr.v"
 vlog "+incdir+${PROJECT_DIR}/component/Actel/DirectCore/CORELANEMSTR/2.1.100/rtl/vlog/core" -sv -work presynth "${PROJECT_DIR}/component/work/COREFIFO_C12/COREFIFO_C12_0/rtl/vlog/core/corefifo_sync.v"

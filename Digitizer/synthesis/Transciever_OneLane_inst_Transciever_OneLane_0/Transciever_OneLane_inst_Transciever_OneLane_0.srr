@@ -1,4 +1,4 @@
-# Sun Jun  2 13:50:04 2024
+# Tue Jun  4 13:27:11 2024
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -26,7 +26,7 @@ Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 134MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
 
 
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 134MB)
@@ -47,10 +47,10 @@ Begin environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00
 Finished environment creation (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 189MB)
 
 
-Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 189MB)
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 190MB)
 
 
-Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 189MB)
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 190MB)
 
 
 Begin compile point sub-process log
@@ -59,7 +59,7 @@ Begin compile point sub-process log
 		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 189MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 189MB peak: 190MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_2(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_2(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c12\corefifo_c12_0\rtl\vlog\core\corefifo_c12_corefifo_c12_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_2(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C12_COREFIFO_C12_0_ram_wrapper_64s_64s_6_6_0s_1s_2s_0s_0s_1_2(verilog)) has its enable tied to GND.
@@ -76,7 +76,7 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 
 #### END OF SSF LOG MESSAGES ####
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 193MB peak: 200MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 197MB peak: 201MB)
 
 Encoding state machine Transceiver_Main_0.Transceiver_LanesConnection_0.inst_RxMainLinkController.state_reg[0:5] (in view: work.Top(verilog))
 original code -> new code
@@ -141,12 +141,12 @@ original code -> new code
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_5[0] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_7[0] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.read_index_control.RD_INDEX_1[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Starting factoring (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 258MB peak: 272MB)
+Starting factoring (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 256MB peak: 273MB)
 
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":317:6:317:7|Removing sequential instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[1] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":317:6:317:7|Removing sequential instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[2] because it is equivalent to instance Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Enable_Vector_Encoded[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 306MB peak: 306MB)
+Finished factoring (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:23s; Memory used current: 306MB peak: 306MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -161,26 +161,26 @@ Available hyper_sources - for debug and ip models
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing sequential instance AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_6[7] (in view: work.Transciever_OneLane_inst_Transciever_OneLane_0(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\alignmentlane_fifo.vhd":347:4:347:5|Removing sequential instance AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_7[7] (in view: work.Transciever_OneLane_inst_Transciever_OneLane_0(verilog)) because it does not drive other instances.
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:26s; Memory used current: 310MB peak: 361MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:32s; CPU Time elapsed 0h:00m:32s; Memory used current: 313MB peak: 361MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:31s; CPU Time elapsed 0h:00m:31s; Memory used current: 324MB peak: 361MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:38s; Memory used current: 328MB peak: 361MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:40s; CPU Time elapsed 0h:00m:40s; Memory used current: 325MB peak: 361MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:50s; CPU Time elapsed 0h:00m:50s; Memory used current: 328MB peak: 361MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:41s; CPU Time elapsed 0h:00m:41s; Memory used current: 325MB peak: 361MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:52s; CPU Time elapsed 0h:00m:52s; Memory used current: 328MB peak: 361MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:48s; CPU Time elapsed 0h:00m:48s; Memory used current: 302MB peak: 361MB)
+Finished preparing to map (Real Time elapsed 0h:00m:58s; CPU Time elapsed 0h:00m:58s; Memory used current: 306MB peak: 361MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:52s; CPU Time elapsed 0h:00m:52s; Memory used current: 363MB peak: 381MB)
+Finished technology mapping (Real Time elapsed 0h:01m:04s; CPU Time elapsed 0h:01m:04s; Memory used current: 366MB peak: 384MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:54s		    -1.85ns		28189 /      3772
+   1		0h:01m:06s		    -1.33ns		28192 /      3773
 
 
 
@@ -190,10 +190,10 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:01m:02s; CPU Time elapsed 0h:01m:02s; Memory used current: 385MB peak: 385MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:01m:14s; CPU Time elapsed 0h:01m:14s; Memory used current: 387MB peak: 387MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:01m:04s; CPU Time elapsed 0h:01m:04s; Memory used current: 387MB peak: 390MB)
+Finished restoring hierarchy (Real Time elapsed 0h:01m:15s; CPU Time elapsed 0h:01m:15s; Memory used current: 390MB peak: 392MB)
 
 
 End compile point sub-process log
@@ -202,12 +202,13 @@ End compile point sub-process log
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\pf_xcvr_erm_c8\pf_xcvr_erm_c8.v":476:13:476:29|Blackbox CORELNKTMR_V is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @W: MT246 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\actel\sgcore\pf_xcvr_apblink_v\1.1.104\hdl\pf_xcvr_apblink_v.v":57:17:57:18|Blackbox XCVR_APB_LINK_V2 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @N: MT615 |Found clock Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK with period 6.25ns 
-@N: MT615 |Found clock Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R with period 12.80ns 
-@N: MT615 |Found clock Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R with period 12.80ns 
+@N: MT615 |Found clock Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R with period 11.43ns 
+@N: MT615 |Found clock Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R with period 11.43ns 
 @N: MT615 |Found clock Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0 with period 6.25ns 
 @N: MT615 |Found clock Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1 with period 181.25ns 
 @N: MT615 |Found clock Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV with period 25.00ns 
 @N: MT615 |Found clock Clock_Reset_0/PF_CLK_DIV_C2_0_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV with period 25.00ns 
+@W: MT420 |Found inferred clock PF_CCC_C9_PF_CCC_C9_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C9_0.PF_CCC_C9_0.pll_inst_0_clkint_0.
 @W: MT420 |Found inferred clock PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.PF_CCC_C7_0.PF_CCC_C7_0.pll_inst_0_clkint_0.
 @W: MT420 |Found inferred clock Top|N_9_inferred_clock with period 10.00ns. Please declare a user-defined clock on net N_9.
 @W: MT420 |Found inferred clock EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2] with period 10.00ns. Please declare a user-defined clock on net Clock_Reset_0.Clock_Switch_0.ClockInputC.
@@ -216,7 +217,7 @@ End compile point sub-process log
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Sun Jun  2 13:51:09 2024
+# Timing report written on Tue Jun  4 13:28:27 2024
 #
 
 
@@ -236,32 +237,33 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -2.100
+Worst slack in design: -1.586
 
                                                                                                                        Requested     Estimated     Requested     Estimated                Clock                                                                    Clock                
 Starting Clock                                                                                                         Frequency     Frequency     Period        Period        Slack      Type                                                                     Group                
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT0                                                                  160.0 MHz     NA            6.250         NA            NA         generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
 Clock_Reset_0/PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0/OUT1                                                                  5.5 MHz       NA            181.250       NA            NA         generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                               40.0 MHz      3.5 MHz       25.000        287.488       -2.100     generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                               40.0 MHz      12.4 MHz      25.000        80.495        -1.586     generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
 Clock_Reset_0/PF_CLK_DIV_C2_0_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                             40.0 MHz      NA            25.000        NA            NA         generated (from Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK)     default_clkgroup     
 Clock_Reset_0/PF_OSC_C0_0/PF_OSC_C0_0/I_OSC_160/CLK                                                                    160.0 MHz     NA            6.250         NA            NA         declared                                                                 default_clkgroup     
-EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2]                                          100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_4
-EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3]                                          100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_5
+EXT_Signals_InputSwitch|SwitchGen_GEN_2_EXT_VectorSignals_5_inferred_clock[2]                                          100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_5
+EXT_Signals_InputSwitch|SwitchGen_GEN_3_EXT_VectorSignals_7_inferred_clock[3]                                          100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_6
 FTDI_CLK                                                                                                               125.0 MHz     NA            8.000         NA            NA         declared                                                                 default_clkgroup     
-PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     189.2 MHz     10.000        5.285         4.715      inferred                                                                 Inferred_clkgroup_0_1
-Top|N_9_inferred_clock                                                                                                 100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_3
-Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     78.1 MHz      6.8 MHz       12.800        147.194       8.221      declared                                                                 default_clkgroup     
-Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     78.1 MHz      256.6 MHz     12.800        3.897         8.903      declared                                                                 default_clkgroup     
-Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     78.1 MHz      NA            12.800        NA            NA         declared                                                                 default_clkgroup     
-Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     78.1 MHz      NA            12.800        NA            NA         declared                                                                 default_clkgroup     
-work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_2_inferred_clock                               100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_6
+PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     189.2 MHz     10.000        5.285         4.715      inferred                                                                 Inferred_clkgroup_0_2
+PF_CCC_C9_PF_CCC_C9_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                        100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_1
+Top|N_9_inferred_clock                                                                                                 100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_4
+Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     87.5 MHz      27.2 MHz      11.429        36.798        6.850      declared                                                                 default_clkgroup     
+Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     87.5 MHz      256.6 MHz     11.429        3.897         7.531      declared                                                                 default_clkgroup     
+Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     87.5 MHz      NA            11.429        NA            NA         declared                                                                 default_clkgroup     
+Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     87.5 MHz      NA            11.429        NA            NA         declared                                                                 default_clkgroup     
+work_alignmentlane_fifo_rtl_8_8_256_g_NumOfBYTESg_BYTE_WIDTHg_DEPTH_1|N_2_inferred_clock                               100.0 MHz     NA            10.000        NA            NA         inferred                                                                 Inferred_clkgroup_0_7
 System                                                                                                                 100.0 MHz     925.9 MHz     10.000        1.080         8.920      system                                                                   system_clkgroup      
 ========================================================================================================================================================================================================================================================================================
 Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
 
 
-@W: MT116 |Paths from clock (Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV:r) to clock (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R:r) are overconstrained because the required time of 0.20 ns is too small.  
+@W: MT116 |Paths from clock (Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV:r) to clock (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R:r) are overconstrained because the required time of 0.71 ns is too small.  
 
 
 
@@ -274,12 +276,12 @@ Starting                                                                        
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 System                                                                                                              System                                                                                                              |  10.000      8.920   |  No paths    -      |  No paths    -      |  No paths    -    
 System                                                                                                              Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            |  25.000      22.907  |  No paths    -      |  No paths    -      |  No paths    -    
-Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  12.800      8.903   |  No paths    -      |  No paths    -      |  No paths    -    
+Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  |  11.429      7.531   |  No paths    -      |  No paths    -      |  No paths    -    
 Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R  PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
-Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  12.800      8.221   |  No paths    -      |  No paths    -      |  No paths    -    
+Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  11.429      6.850   |  No paths    -      |  No paths    -      |  No paths    -    
 Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            System                                                                                                              |  25.000      23.773  |  No paths    -      |  No paths    -      |  No paths    -    
-Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  0.200       -2.100  |  No paths    -      |  No paths    -      |  No paths    -    
+Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R  |  0.714       -1.586  |  No paths    -      |  No paths    -      |  No paths    -    
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            |  25.000      22.483  |  No paths    -      |  No paths    -      |  No paths    -    
 Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV                                                            PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
 PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock                                                     System                                                                                                              |  10.000      4.715   |  No paths    -      |  No paths    -      |  No paths    -    
@@ -315,7 +317,7 @@ Starting Points with Worst Slack
 Instance                                                                                                                                           Reference                                                    Type     Pin     Net                                              Time        Slack 
                                                                                                                                                    Clock                                                                                                                                            
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Transceiver_Main_0.Synchronizer_0_2.Chain[1]                                                                                                       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       Transceiver_Main_0.Synchronizer_0_2.Chain[1]     0.218       -2.100
+Transceiver_Main_0.Synchronizer_0_2.Chain[1]                                                                                                       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       Transceiver_Main_0.Synchronizer_0_2.Chain[1]     0.218       -1.586
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_LANE0_SD_DFN2                                  Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     DFN1     Q       I_XCVR_LANE0_SD_DFN2_Q                           0.094       22.483
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[1]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[1]                                        0.218       22.654
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.fsm_st[3]                         Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      Q       fsm_st[3]                                        0.218       22.736
@@ -335,9 +337,9 @@ Ending Points with Worst Slack
 Instance                                                                                                                                                Reference                                                    Type     Pin     Net                Time         Slack 
                                                                                                                                                         Clock                                                                                                               
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0]     Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               0.200        -2.100
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               0.200        -2.100
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       rstn               0.200        -2.100
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0]     Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               0.714        -1.586
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      ALn     rstn               0.714        -1.586
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0]       Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       rstn               0.714        -1.586
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.lckfrc_st                              Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      EN      un1_lckfrc_nx6     24.873       22.483
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[6]                             Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       intg_st_s[6]       25.000       22.654
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORELCKMGT_0.intg_st[5]                             Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV     SLE      D       intg_st_s[5]       25.000       22.662
@@ -354,20 +356,20 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      0.200
+      Requested Period:                      0.714
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         0.200
+    = Required time:                         0.714
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -2.100
+    = Slack (critical) :                     -1.586
 
     Number of logic level(s):                1
     Starting point:                          Transceiver_Main_0.Synchronizer_0_2.Chain[1] / Q
     Ending point:                            Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncOutput[0] / ALn
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=6.400 period=12.800) on pin CLK
+    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=5.714 period=11.429) on pin CLK
 
 Instance / Net                                                                                                                                                   Pin      Pin               Arrival     No. of    
 Name                                                                                                                                                    Type     Name     Dir     Delay     Time        Fan Out(s)
@@ -384,20 +386,20 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 
 Path information for path number 2: 
-      Requested Period:                      0.200
+      Requested Period:                      0.714
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         0.200
+    = Required time:                         0.714
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -2.100
+    = Slack (critical) :                     -1.586
 
     Number of logic level(s):                1
     Starting point:                          Transceiver_Main_0.Synchronizer_0_2.Chain[1] / Q
     Ending point:                            Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0] / D
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=6.400 period=12.800) on pin CLK
+    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=5.714 period=11.429) on pin CLK
 
 Instance / Net                                                                                                                                                 Pin      Pin               Arrival     No. of    
 Name                                                                                                                                                  Type     Name     Dir     Delay     Time        Fan Out(s)
@@ -414,20 +416,20 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 
 
 Path information for path number 3: 
-      Requested Period:                      0.200
+      Requested Period:                      0.714
     - Setup time:                            0.000
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         0.200
+    = Required time:                         0.714
 
     - Propagation time:                      2.300
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -2.100
+    = Slack (critical) :                     -1.586
 
     Number of logic level(s):                1
     Starting point:                          Transceiver_Main_0.Synchronizer_0_2.Chain[1] / Q
     Ending point:                            Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR_CORERFD_0.u_sicr.Xrst_Sync_clk_in.syncTemp[0] / ALn
     The start point is clocked by            Clock_Reset_0/PF_CLK_DIV_C2_0/PF_CLK_DIV_C2_0/I_CD/Y_DIV [rising] (rise=0.000 fall=12.500 period=25.000) on pin CLK
-    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=6.400 period=12.800) on pin CLK
+    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=5.714 period=11.429) on pin CLK
 
 Instance / Net                                                                                                                                                 Pin      Pin               Arrival     No. of    
 Name                                                                                                                                                  Type     Name     Dir     Delay     Time        Fan Out(s)
@@ -565,14 +567,14 @@ Ending Points with Worst Slack
 Instance                                                                                                    Reference                                                           Type     Pin     Net                                                     Time         Slack
                                                                                                             Clock                                                                                                                                                          
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[11]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[8]      10.000       4.715
-AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[12]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[9]      10.000       4.715
-AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[13]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[10]     10.000       4.715
-AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[14]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[11]     10.000       4.715
 AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[15]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[12]     10.000       4.715
 AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[16]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[13]     10.000       4.715
 AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[17]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[14]     10.000       4.715
 AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data[18]       PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[15]     10.000       4.715
+AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_0[11]     PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[0]      10.000       4.715
+AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_0[12]     PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[1]      10.000       4.715
+AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_0[13]     PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[2]      10.000       4.715
+AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_0[14]     PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[3]      10.000       4.715
 AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_0[15]     PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[4]      10.000       4.715
 AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_0[16]     PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock     SLE      D       Transceiver_Main_0.SampleCompose_0_5.Input_Data[5]      10.000       4.715
 ===========================================================================================================================================================================================================================================================================
@@ -596,7 +598,7 @@ Path information for path number 1:
 
     Number of logic level(s):                8
     Starting point:                          Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_3[6] / Q
-    Ending point:                            AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_3[11] / D
+    Ending point:                            AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_3[15] / D
     The start point is clocked by            PF_CCC_C7_PF_CCC_C7_0_PF_CCC|pll_inst_0_clkint_0_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CLK
     The end   point is clocked by            System [rising] on pin CLK
 
@@ -605,31 +607,31 @@ Name                                                                            
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.read_index_control\.RD_INDEX_3[6]     SLE      Q        Out     0.218     0.218 r     -         
 RD_INDEX_3[6]                                                                                                                          Net      -        -       1.725     -           1025      
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_3[0]       ARI1     B        In      -         1.943 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_3[0]       ARI1     Y        Out     0.207     2.150 r     -         
-RD_Data_Array_3_126_2_y0_1[0]                                                                                                          Net      -        -       0.118     -           1         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_4[0]       ARI1     A        In      -         2.268 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_4[0]       ARI1     Y        Out     0.126     2.394 r     -         
-RD_Data_Array_3_126_2_0_y5[0]                                                                                                          Net      -        -       0.118     -           1         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_7[0]       ARI1     B        In      -         2.512 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_7[0]       ARI1     Y        Out     0.207     2.719 r     -         
-RD_Data_Array_3_126_2_y0_3[0]                                                                                                          Net      -        -       0.118     -           1         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_8[0]       ARI1     A        In      -         2.837 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_8[0]       ARI1     Y        Out     0.126     2.963 r     -         
-RD_Data_Array_3_126_2_0_y9[0]                                                                                                          Net      -        -       0.118     -           1         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_10[0]      ARI1     B        In      -         3.081 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_10[0]      ARI1     Y        Out     0.207     3.288 r     -         
-RD_Data_Array_3_126_2_y0_4[0]                                                                                                          Net      -        -       0.118     -           1         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_9[0]       ARI1     B        In      -         3.406 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_9[0]       ARI1     Y        Out     0.207     3.613 r     -         
-RD_Data_Array_3_126_2_wmux_9_Y[0]                                                                                                      Net      -        -       0.118     -           1         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_0_wmux[0]       ARI1     D        In      -         3.731 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_0_wmux[0]       ARI1     Y        Out     0.363     4.094 r     -         
-RD_Data_Array_3_255_1_0_y0[0]                                                                                                          Net      -        -       0.118     -           1         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_wmux_0[0]       ARI1     A        In      -         4.212 r     -         
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_wmux_0[0]       ARI1     Y        Out     0.126     4.337 r     -         
-Read_Data_net_0[24]                                                                                                                    Net      -        -       0.948     -           2         
-AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_3[11]                                SLE      D        In      -         5.285 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_3[4]       ARI1     B        In      -         1.943 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_3[4]       ARI1     Y        Out     0.207     2.150 r     -         
+RD_Data_Array_3_126_2_y0_1[4]                                                                                                          Net      -        -       0.118     -           1         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_4[4]       ARI1     A        In      -         2.268 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_4[4]       ARI1     Y        Out     0.126     2.394 r     -         
+RD_Data_Array_3_126_2_0_y5[4]                                                                                                          Net      -        -       0.118     -           1         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_7[4]       ARI1     B        In      -         2.512 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_7[4]       ARI1     Y        Out     0.207     2.719 r     -         
+RD_Data_Array_3_126_2_y0_3[4]                                                                                                          Net      -        -       0.118     -           1         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_8[4]       ARI1     A        In      -         2.837 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_8[4]       ARI1     Y        Out     0.126     2.963 r     -         
+RD_Data_Array_3_126_2_0_y9[4]                                                                                                          Net      -        -       0.118     -           1         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_10[4]      ARI1     B        In      -         3.081 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_10[4]      ARI1     Y        Out     0.207     3.288 r     -         
+RD_Data_Array_3_126_2_y0_4[4]                                                                                                          Net      -        -       0.118     -           1         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_9[4]       ARI1     B        In      -         3.406 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_126_2_wmux_9[4]       ARI1     Y        Out     0.207     3.613 r     -         
+RD_Data_Array_3_126_2_wmux_9_Y[4]                                                                                                      Net      -        -       0.118     -           1         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_0_wmux[4]       ARI1     D        In      -         3.731 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_0_wmux[4]       ARI1     Y        Out     0.363     4.094 r     -         
+RD_Data_Array_3_255_1_0_y0[4]                                                                                                          Net      -        -       0.118     -           1         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_wmux_0[4]       ARI1     A        In      -         4.212 r     -         
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.AlignmentLane_Fifo_0.RD_Data_Array_3_255_1_wmux_0[4]       ARI1     Y        Out     0.126     4.337 r     -         
+Read_Data_net_0[28]                                                                                                                    Net      -        -       0.948     -           2         
+AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data_3[15]                                SLE      D        In      -         5.285 r     -         
 =================================================================================================================================================================================================
 Total path delay (propagation time + setup) of 5.285 is 1.786(33.8%) logic and 3.499(66.2%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
@@ -650,16 +652,16 @@ Starting Points with Worst Slack
 Instance                                                                                                      Reference                                                                                                              Type           Pin             Net                                      Time        Slack
                                                                                                               Clock                                                                                                                                                                                                           
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[3]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        2.964       8.221
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[0]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        2.954       8.231
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[1]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        2.937       8.248
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[2]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        2.928       8.257
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[7]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[7]     2.911       8.274
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[1]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     2.904       8.281
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[3]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     2.903       8.282
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[0]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     2.898       8.287
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[2]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     2.890       8.295
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[33]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[33]       2.886       8.299
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[3]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        2.964       6.850
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[0]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        2.954       6.860
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[1]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        2.937       6.877
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[2]      PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        2.928       6.886
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[7]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[7]     2.911       6.903
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[1]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     2.904       6.910
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[3]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     2.903       6.911
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[0]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     2.898       6.916
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_K[2]         PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     2.890       6.924
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     XCVR_8B10B     RX_DATA[33]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[33]       2.886       6.928
 ==============================================================================================================================================================================================================================================================================================================================
 
 
@@ -670,16 +672,16 @@ Ending Points with Worst Slack
 Instance                                                                                                                                                                                              Reference                                                                                                              Type        Pin          Net                                      Time         Slack
                                                                                                                                                                                                       Clock                                                                                                                                                                                                      
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        11.997       8.221
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        11.997       8.231
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        11.997       8.248
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        11.997       8.257
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[7]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[7]     11.997       8.274
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     11.997       8.281
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     11.997       8.282
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     11.997       8.287
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     11.997       8.295
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C1     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[33]       11.997       8.299
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[3]        10.626       6.850
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[0]        10.626       6.860
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[1]        10.626       6.877
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[2]        10.626       6.886
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[7]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[7]     10.626       6.903
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[1]     10.626       6.910
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[3]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[3]     10.626       6.911
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[0]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[0]     10.626       6.916
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C13_COREFIFO_C13_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[2]     PF_XCVR_ERM_C8_0_LANE0_8B10B_RX_K[2]     10.626       6.924
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C1     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R     RAM1K20     B_DIN[1]     PF_XCVR_ERM_C8_0_LANE0_RX_DATA[33]       10.626       6.928
 =================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -689,20 +691,20 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      12.800
+      Requested Period:                      11.429
     - Setup time:                            0.803
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         11.997
+    = Required time:                         10.626
 
     - Propagation time:                      3.776
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 8.221
+    = Slack (non-critical) :                 6.850
 
     Number of logic level(s):                0
     Starting point:                          Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.PF_XCVR_ERM_C8_0.I_XCVR.LANE0 / RX_DATA[3]
     Ending point:                            Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0 / B_DIN[3]
-    The start point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=6.400 period=12.800) on pin RX_FWF_CLK
-    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=6.400 period=12.800) on pin B_CLK
+    The start point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=5.714 period=11.429) on pin RX_FWF_CLK
+    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/RX_CLK_R [rising] (rise=0.000 fall=5.714 period=11.429) on pin B_CLK
 
 Instance / Net                                                                                                                                                                                                       Pin            Pin               Arrival     No. of    
 Name                                                                                                                                                                                                  Type           Name           Dir     Delay     Time        Fan Out(s)
@@ -730,16 +732,16 @@ Starting Points with Worst Slack
 Instance                                                                                                                                                                                            Reference                                                                                                              Type        Pin           Net                      Time        Slack
                                                                                                                                                                                                     Clock                                                                                                                                                                                      
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.empty                                                           Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE         Q             COREFIFO_C12_0_EMPTY     0.201       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_valid                                                    Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE         Q             middle_valid             0.218       8.966
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[0]     RDATA_int[16]            3.023       9.115
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[1]     RDATA_int[17]            3.023       9.115
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[2]     RDATA_int[18]            3.023       9.115
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[3]     RDATA_int[19]            3.023       9.115
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[4]     RDATA_int[20]            3.023       9.115
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[5]     RDATA_int[21]            3.023       9.115
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[6]     RDATA_int[22]            3.023       9.115
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[7]     RDATA_int[23]            3.023       9.115
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.empty                                                           Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE         Q             COREFIFO_C12_0_EMPTY     0.201       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_valid                                                    Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE         Q             middle_valid             0.218       7.595
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[0]     RDATA_int[16]            3.023       7.743
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[1]     RDATA_int[17]            3.023       7.743
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[2]     RDATA_int[18]            3.023       7.743
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[3]     RDATA_int[19]            3.023       7.743
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[4]     RDATA_int[20]            3.023       7.743
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[5]     RDATA_int[21]            3.023       7.743
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[6]     RDATA_int[22]            3.023       7.743
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk23\.UI_ram_wrapper_1.L1_asyncnonpipe.COREFIFO_C12_COREFIFO_C12_0_LSRAM_top_R0C0     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     RAM1K20     A_DOUT[7]     RDATA_int[23]            3.023       7.743
 ===============================================================================================================================================================================================================================================================================================================================================================================================
 
 
@@ -750,16 +752,16 @@ Ending Points with Worst Slack
 Instance                                                                                                                                               Reference                                                                                                              Type     Pin     Net        Time         Slack
                                                                                                                                                        Clock                                                                                                                                                                
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[0]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[1]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[2]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[3]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[4]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[5]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[6]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[7]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[8]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
-Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[9]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     12.673       8.903
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[0]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[1]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[2]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[3]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[4]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[5]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[6]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[7]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[8]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
+Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[9]     Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R     SLE      EN      N_60_i     11.302       7.531
 ============================================================================================================================================================================================================================================================================================================================
 
 
@@ -769,20 +771,20 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      12.800
+      Requested Period:                      11.429
     - Setup time:                            0.127
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         12.673
+    = Required time:                         11.302
 
     - Propagation time:                      3.771
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 8.903
+    = Slack (non-critical) :                 7.531
 
     Number of logic level(s):                2
     Starting point:                          Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.empty / Q
     Ending point:                            Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_0.COREFIFO_C12_0.COREFIFO_C12_0.genblk17\.u_corefifo_fwft.middle_dout[0] / EN
-    The start point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=6.400 period=12.800) on pin CLK
-    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=6.400 period=12.800) on pin CLK
+    The start point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=5.714 period=11.429) on pin CLK
+    The end   point is clocked by            Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0/TX_CLK_R [rising] (rise=0.000 fall=5.714 period=11.429) on pin CLK
 
 Instance / Net                                                                                                                                                       Pin      Pin               Arrival     No. of    
 Name                                                                                                                                                        Type     Name     Dir     Delay     Time        Fan Out(s)
@@ -881,17 +883,17 @@ Path delay compensated for clock skew. Clock skew is added to clock-to-out value
 ##### END OF TIMING REPORT #####]
 
 Timing exceptions that could not be applied
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":21:0:21:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":22:0:22:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":23:0:23:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":24:0:24:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":25:0:25:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":26:0:26:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":27:0:27:0|Timing constraint (to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":29:0:29:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":31:0:31:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":33:0:33:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
-@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":35:0:35:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":22:0:22:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":23:0:23:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_inst_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":24:0:24:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_0.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":25:0:25:0|Timing constraint (to [get_cells { Communication_0.UART_Protocol_1.COREFIFO_C0_0_0.COREFIFO_C0_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":26:0:26:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C7_0.COREFIFO_C7_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":27:0:27:0|Timing constraint (to [get_cells { Communication_0.USB_3_Protocol_0.COREFIFO_C8_0.COREFIFO_C8_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":28:0:28:0|Timing constraint (to [get_cells { Data_Block_0.COREFIFO_C10_0.COREFIFO_C10_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":30:0:30:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C12_0.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":32:0:32:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C12_0_1.COREFIFO_C12_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":34:0:34:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C13_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/vhdl_temp/digitizer/digitizer_vhdl/digitizer/designer/top/synthesis.fdc":36:0:36:0|Timing constraint (to [get_cells { Transceiver_Main_0.Transceiver_LanesConnection_0.inst_Transciever_OneLane_1.COREFIFO_C13_0_0.COREFIFO_C13_0.genblk*.U_corefifo_async.*.shift_reg* }]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
 None
 Writing compile point status file C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Transciever_OneLane_inst_Transciever_OneLane_0\cpprop
 
@@ -902,7 +904,7 @@ Name                                               Status       Reason
 Transciever_OneLane_inst_Transciever_OneLane_0     Remapped     Design changed
 ==============================================================================
 
-Process took 0h:01m:05s realtime, 0h:01m:05s cputime
-# Sun Jun  2 13:51:10 2024
+Process took 0h:01m:17s realtime, 0h:01m:17s cputime
+# Tue Jun  4 13:28:28 2024
 
 ###########################################################]

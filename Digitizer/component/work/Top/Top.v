@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Sun Jun  2 13:47:25 2024
+// Created by SmartDesign Wed Jun  5 16:03:50 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -26,10 +26,8 @@ module Top(
     HMC_CLK_IN_P,
     HMC_GPIO_0,
     HMC_GPIO_1,
-    LANE0_RXD_N,
-    LANE0_RXD_P,
-    LANE1_RXD_N,
-    LANE1_RXD_P,
+    LANE_RXD_N_Vector,
+    LANE_RXD_P_Vector,
     LDO_PWR_GOOD,
     LMX1_miso,
     LMX2_miso,
@@ -73,10 +71,8 @@ module Top(
     HMC_SYNC,
     HMC_sclk,
     HMC_ss_n,
-    LANE0_TXD_N,
-    LANE0_TXD_P,
-    LANE1_TXD_N,
-    LANE1_TXD_P,
+    LANE_TXD_N_Vector,
+    LANE_TXD_P_Vector,
     LED_1,
     LED_2,
     LED_3,
@@ -134,10 +130,8 @@ input         HMC_CLK_IN_N;
 input         HMC_CLK_IN_P;
 input         HMC_GPIO_0;
 input         HMC_GPIO_1;
-input         LANE0_RXD_N;
-input         LANE0_RXD_P;
-input         LANE1_RXD_N;
-input         LANE1_RXD_P;
+input  [5:0]  LANE_RXD_N_Vector;
+input  [5:0]  LANE_RXD_P_Vector;
 input         LDO_PWR_GOOD;
 input         LMX1_miso;
 input         LMX2_miso;
@@ -183,10 +177,8 @@ output        HMC_GPIO_3;
 output        HMC_SYNC;
 output        HMC_sclk;
 output        HMC_ss_n;
-output        LANE0_TXD_N;
-output        LANE0_TXD_P;
-output        LANE1_TXD_N;
-output        LANE1_TXD_P;
+output [5:0]  LANE_TXD_N_Vector;
+output [5:0]  LANE_TXD_P_Vector;
 output        LED_1;
 output        LED_2;
 output        LED_3;
@@ -362,14 +354,10 @@ wire           HMC_sdio;
 wire           HMC_ss_n_net_0;
 wire           HMC_SYNC_net_0;
 wire           INBUF_DIFF_0_Y;
-wire           LANE0_RXD_N;
-wire           LANE0_RXD_P;
-wire           LANE0_TXD_N_net_0;
-wire           LANE0_TXD_P_net_0;
-wire           LANE1_RXD_N;
-wire           LANE1_RXD_P;
-wire           LANE1_TXD_N_net_0;
-wire           LANE1_TXD_P_net_0;
+wire   [5:0]   LANE_RXD_N_Vector;
+wire   [5:0]   LANE_RXD_P_Vector;
+wire   [5:0]   LANE_TXD_N_Vector_net_0;
+wire   [5:0]   LANE_TXD_P_Vector_net_0;
 wire           LDO_PWR_GOOD;
 wire           LED_3_net_0;
 wire           LED_4_net_0;
@@ -395,20 +383,13 @@ wire           Synchronizer_0_Data_Out;
 wire           SYNCINB_N_net_0;
 wire           SYNCINB_P_net_0;
 wire           Transceiver_Main_0_AlignmentFifo_Read_Out;
-wire   [127:0] Transceiver_Main_0_AlignmentFifo_Rx_Data;
+wire   [383:0] Transceiver_Main_0_AlignmentFifo_Rx_Data;
 wire           Transceiver_Main_0_busy;
-wire   [11:0]  Transceiver_Main_0_Output_Data_0;
-wire   [23:12] Transceiver_Main_0_Output_Data_1;
-wire   [35:24] Transceiver_Main_0_Output_Data_2;
-wire   [47:36] Transceiver_Main_0_Output_Data_3;
-wire   [59:48] Transceiver_Main_0_Output_Data_4;
-wire   [71:60] Transceiver_Main_0_Output_Data_5;
-wire   [83:72] Transceiver_Main_0_Output_Data_6;
-wire   [95:84] Transceiver_Main_0_Output_Data_7;
+wire   [383:0] Transceiver_Main_0_Output_Data;
 wire   [15:0]  Transceiver_Main_0_read_data_frame;
 wire           Transceiver_Main_0_SYNCINB_OUT;
-wire   [127:0] Transceiver_Main_0_Transceivers_Rx_Data;
-wire   [15:0]  Transceiver_Main_0_Transceivers_Rx_K;
+wire   [383:0] Transceiver_Main_0_Transceivers_Rx_Data;
+wire   [47:0]  Transceiver_Main_0_Transceivers_Rx_K;
 wire           TX_0_net_0;
 wire           TX_1_net_0;
 wire           LED_3_net_1;
@@ -450,10 +431,8 @@ wire           FTDI_GPIO_1_net_1;
 wire           SIWU_N_net_1;
 wire           TX_0_net_1;
 wire           TX_1_net_1;
-wire           LANE1_TXD_N_net_1;
-wire           LANE1_TXD_P_net_1;
-wire           LANE0_TXD_N_net_1;
-wire           LANE0_TXD_P_net_1;
+wire   [5:0]   LANE_TXD_P_Vector_net_1;
+wire   [5:0]   LANE_TXD_N_Vector_net_1;
 wire   [0:0]   EXT_InputsVectorSignals_slice_0;
 wire   [11:11] EXT_InputsVectorSignals_slice_1;
 wire   [12:12] EXT_InputsVectorSignals_slice_2;
@@ -494,109 +473,105 @@ assign VCC_net     = 1'b1;
 //--------------------------------------------------------------------
 // TieOff assignments
 //--------------------------------------------------------------------
-assign DBGport_1           = 1'b0;
-assign DBGport_4           = 1'b0;
-assign DBGport_5           = 1'b0;
-assign DBGport_6           = 1'b0;
-assign DBGport_7           = 1'b0;
-assign LED_1               = 1'b0;
-assign LED_2               = 1'b0;
-assign GPIO_1              = 1'b0;
-assign GPIO_0              = 1'b0;
-assign DBGport_8           = 1'b0;
-assign DBGport_9           = 1'b0;
-assign DBGport_3           = 1'b0;
-assign DBGport_2           = 1'b0;
-assign DBGport_0           = 1'b0;
+assign DBGport_1               = 1'b0;
+assign DBGport_4               = 1'b0;
+assign DBGport_5               = 1'b0;
+assign DBGport_6               = 1'b0;
+assign DBGport_7               = 1'b0;
+assign LED_1                   = 1'b0;
+assign LED_2                   = 1'b0;
+assign GPIO_1                  = 1'b0;
+assign GPIO_0                  = 1'b0;
+assign DBGport_8               = 1'b0;
+assign DBGport_9               = 1'b0;
+assign DBGport_3               = 1'b0;
+assign DBGport_2               = 1'b0;
+assign DBGport_0               = 1'b0;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign LED_3_net_1         = LED_3_net_0;
-assign LED_3               = LED_3_net_1;
-assign LED_4_net_1         = LED_4_net_0;
-assign LED_4               = LED_4_net_1;
-assign FTDI_nWR_net_1      = FTDI_nWR_net_0;
-assign FTDI_nWR            = FTDI_nWR_net_1;
-assign FTDI_RESET_N_net_1  = FTDI_RESET_N_net_0;
-assign FTDI_RESET_N        = FTDI_RESET_N_net_1;
-assign FTDI_nOE_net_1      = FTDI_nOE_net_0;
-assign FTDI_nOE            = FTDI_nOE_net_1;
-assign FTDI_nRD_net_1      = FTDI_nRD_net_0;
-assign FTDI_nRD            = FTDI_nRD_net_1;
-assign ADC_sclk_net_1      = ADC_sclk_net_0;
-assign ADC_sclk            = ADC_sclk_net_1;
-assign ADC_ss_n_net_1      = ADC_ss_n_net_0;
-assign ADC_ss_n            = ADC_ss_n_net_1;
-assign DBGport_3_0_net_0   = DBGport_3_0;
-assign HMC_sclk            = DBGport_3_0_net_0;
-assign HMC_ss_n_net_1      = HMC_ss_n_net_0;
-assign HMC_ss_n            = HMC_ss_n_net_1;
-assign LMX1_mosi_net_1     = LMX1_mosi_net_0;
-assign LMX1_mosi           = LMX1_mosi_net_1;
-assign LMX1_ss_n_net_1     = LMX1_ss_n_net_0;
-assign LMX1_ss_n           = LMX1_ss_n_net_1;
-assign LMX1_sclk_net_1     = LMX1_sclk_net_0;
-assign LMX1_sclk           = LMX1_sclk_net_1;
-assign LMX2_sclk_net_1     = LMX2_sclk_net_0;
-assign LMX2_sclk           = LMX2_sclk_net_1;
-assign LMX2_ss_n_net_1     = LMX2_ss_n_net_0;
-assign LMX2_ss_n           = LMX2_ss_n_net_1;
-assign LMX2_mosi_net_1     = LMX2_mosi_net_0;
-assign LMX2_mosi           = LMX2_mosi_net_1;
-assign DBGport_0_1_net_0   = DBGport_0_1;
-assign EXT_ADC_Reset_N     = DBGport_0_1_net_0;
-assign DBGport_1_0_net_0   = DBGport_1_0;
-assign EXT_HMC_Reset_N     = DBGport_1_0_net_0;
-assign DBGport_2_1_net_0   = DBGport_2_1;
-assign EXT_LMX1_Reset_N    = DBGport_2_1_net_0;
-assign DBGport_3_1_net_0   = DBGport_3_1;
-assign EXT_LMX2_Reset_N    = DBGport_3_1_net_0;
-assign HMC_SYNC_net_1      = HMC_SYNC_net_0;
-assign HMC_SYNC            = HMC_SYNC_net_1;
-assign ADC_PWDN_net_1      = ADC_PWDN_net_0;
-assign ADC_PWDN            = ADC_PWDN_net_1;
-assign ADC_PWR_RUN_net_1   = ADC_PWR_RUN_net_0;
-assign ADC_PWR_RUN         = ADC_PWR_RUN_net_1;
-assign BOARD_PWR_RUN_net_1 = BOARD_PWR_RUN_net_0;
-assign BOARD_PWR_RUN       = BOARD_PWR_RUN_net_1;
-assign SYNC_OUT_1_P_net_1  = SYNC_OUT_1_P_net_0;
-assign SYNC_OUT_1_P        = SYNC_OUT_1_P_net_1;
-assign SYNC_OUT_1_N_net_1  = SYNC_OUT_1_N_net_0;
-assign SYNC_OUT_1_N        = SYNC_OUT_1_N_net_1;
-assign SYNC_OUT_2_P_net_1  = SYNC_OUT_2_P_net_0;
-assign SYNC_OUT_2_P        = SYNC_OUT_2_P_net_1;
-assign SYNC_OUT_2_N_net_1  = SYNC_OUT_2_N_net_0;
-assign SYNC_OUT_2_N        = SYNC_OUT_2_N_net_1;
-assign CLK_OUT_P_net_1     = CLK_OUT_P_net_0;
-assign CLK_OUT_P           = CLK_OUT_P_net_1;
-assign CLK_OUT_N_net_1     = CLK_OUT_N_net_0;
-assign CLK_OUT_N           = CLK_OUT_N_net_1;
-assign SYNCINB_P_net_1     = SYNCINB_P_net_0;
-assign SYNCINB_P           = SYNCINB_P_net_1;
-assign SYNCINB_N_net_1     = SYNCINB_N_net_0;
-assign SYNCINB_N           = SYNCINB_N_net_1;
-assign HMC_GPIO_2_net_1    = HMC_GPIO_2_net_0;
-assign HMC_GPIO_2          = HMC_GPIO_2_net_1;
-assign HMC_GPIO_3_net_1    = HMC_GPIO_3_net_0;
-assign HMC_GPIO_3          = HMC_GPIO_3_net_1;
-assign FTDI_GPIO_0_net_1   = FTDI_GPIO_0_net_0;
-assign FTDI_GPIO_0         = FTDI_GPIO_0_net_1;
-assign FTDI_GPIO_1_net_1   = FTDI_GPIO_1_net_0;
-assign FTDI_GPIO_1         = FTDI_GPIO_1_net_1;
-assign SIWU_N_net_1        = SIWU_N_net_0;
-assign SIWU_N              = SIWU_N_net_1;
-assign TX_0_net_1          = TX_0_net_0;
-assign TX_0                = TX_0_net_1;
-assign TX_1_net_1          = TX_1_net_0;
-assign TX_1                = TX_1_net_1;
-assign LANE1_TXD_N_net_1   = LANE1_TXD_N_net_0;
-assign LANE1_TXD_N         = LANE1_TXD_N_net_1;
-assign LANE1_TXD_P_net_1   = LANE1_TXD_P_net_0;
-assign LANE1_TXD_P         = LANE1_TXD_P_net_1;
-assign LANE0_TXD_N_net_1   = LANE0_TXD_N_net_0;
-assign LANE0_TXD_N         = LANE0_TXD_N_net_1;
-assign LANE0_TXD_P_net_1   = LANE0_TXD_P_net_0;
-assign LANE0_TXD_P         = LANE0_TXD_P_net_1;
+assign LED_3_net_1             = LED_3_net_0;
+assign LED_3                   = LED_3_net_1;
+assign LED_4_net_1             = LED_4_net_0;
+assign LED_4                   = LED_4_net_1;
+assign FTDI_nWR_net_1          = FTDI_nWR_net_0;
+assign FTDI_nWR                = FTDI_nWR_net_1;
+assign FTDI_RESET_N_net_1      = FTDI_RESET_N_net_0;
+assign FTDI_RESET_N            = FTDI_RESET_N_net_1;
+assign FTDI_nOE_net_1          = FTDI_nOE_net_0;
+assign FTDI_nOE                = FTDI_nOE_net_1;
+assign FTDI_nRD_net_1          = FTDI_nRD_net_0;
+assign FTDI_nRD                = FTDI_nRD_net_1;
+assign ADC_sclk_net_1          = ADC_sclk_net_0;
+assign ADC_sclk                = ADC_sclk_net_1;
+assign ADC_ss_n_net_1          = ADC_ss_n_net_0;
+assign ADC_ss_n                = ADC_ss_n_net_1;
+assign DBGport_3_0_net_0       = DBGport_3_0;
+assign HMC_sclk                = DBGport_3_0_net_0;
+assign HMC_ss_n_net_1          = HMC_ss_n_net_0;
+assign HMC_ss_n                = HMC_ss_n_net_1;
+assign LMX1_mosi_net_1         = LMX1_mosi_net_0;
+assign LMX1_mosi               = LMX1_mosi_net_1;
+assign LMX1_ss_n_net_1         = LMX1_ss_n_net_0;
+assign LMX1_ss_n               = LMX1_ss_n_net_1;
+assign LMX1_sclk_net_1         = LMX1_sclk_net_0;
+assign LMX1_sclk               = LMX1_sclk_net_1;
+assign LMX2_sclk_net_1         = LMX2_sclk_net_0;
+assign LMX2_sclk               = LMX2_sclk_net_1;
+assign LMX2_ss_n_net_1         = LMX2_ss_n_net_0;
+assign LMX2_ss_n               = LMX2_ss_n_net_1;
+assign LMX2_mosi_net_1         = LMX2_mosi_net_0;
+assign LMX2_mosi               = LMX2_mosi_net_1;
+assign DBGport_0_1_net_0       = DBGport_0_1;
+assign EXT_ADC_Reset_N         = DBGport_0_1_net_0;
+assign DBGport_1_0_net_0       = DBGport_1_0;
+assign EXT_HMC_Reset_N         = DBGport_1_0_net_0;
+assign DBGport_2_1_net_0       = DBGport_2_1;
+assign EXT_LMX1_Reset_N        = DBGport_2_1_net_0;
+assign DBGport_3_1_net_0       = DBGport_3_1;
+assign EXT_LMX2_Reset_N        = DBGport_3_1_net_0;
+assign HMC_SYNC_net_1          = HMC_SYNC_net_0;
+assign HMC_SYNC                = HMC_SYNC_net_1;
+assign ADC_PWDN_net_1          = ADC_PWDN_net_0;
+assign ADC_PWDN                = ADC_PWDN_net_1;
+assign ADC_PWR_RUN_net_1       = ADC_PWR_RUN_net_0;
+assign ADC_PWR_RUN             = ADC_PWR_RUN_net_1;
+assign BOARD_PWR_RUN_net_1     = BOARD_PWR_RUN_net_0;
+assign BOARD_PWR_RUN           = BOARD_PWR_RUN_net_1;
+assign SYNC_OUT_1_P_net_1      = SYNC_OUT_1_P_net_0;
+assign SYNC_OUT_1_P            = SYNC_OUT_1_P_net_1;
+assign SYNC_OUT_1_N_net_1      = SYNC_OUT_1_N_net_0;
+assign SYNC_OUT_1_N            = SYNC_OUT_1_N_net_1;
+assign SYNC_OUT_2_P_net_1      = SYNC_OUT_2_P_net_0;
+assign SYNC_OUT_2_P            = SYNC_OUT_2_P_net_1;
+assign SYNC_OUT_2_N_net_1      = SYNC_OUT_2_N_net_0;
+assign SYNC_OUT_2_N            = SYNC_OUT_2_N_net_1;
+assign CLK_OUT_P_net_1         = CLK_OUT_P_net_0;
+assign CLK_OUT_P               = CLK_OUT_P_net_1;
+assign CLK_OUT_N_net_1         = CLK_OUT_N_net_0;
+assign CLK_OUT_N               = CLK_OUT_N_net_1;
+assign SYNCINB_P_net_1         = SYNCINB_P_net_0;
+assign SYNCINB_P               = SYNCINB_P_net_1;
+assign SYNCINB_N_net_1         = SYNCINB_N_net_0;
+assign SYNCINB_N               = SYNCINB_N_net_1;
+assign HMC_GPIO_2_net_1        = HMC_GPIO_2_net_0;
+assign HMC_GPIO_2              = HMC_GPIO_2_net_1;
+assign HMC_GPIO_3_net_1        = HMC_GPIO_3_net_0;
+assign HMC_GPIO_3              = HMC_GPIO_3_net_1;
+assign FTDI_GPIO_0_net_1       = FTDI_GPIO_0_net_0;
+assign FTDI_GPIO_0             = FTDI_GPIO_0_net_1;
+assign FTDI_GPIO_1_net_1       = FTDI_GPIO_1_net_0;
+assign FTDI_GPIO_1             = FTDI_GPIO_1_net_1;
+assign SIWU_N_net_1            = SIWU_N_net_0;
+assign SIWU_N                  = SIWU_N_net_1;
+assign TX_0_net_1              = TX_0_net_0;
+assign TX_0                    = TX_0_net_1;
+assign TX_1_net_1              = TX_1_net_0;
+assign TX_1                    = TX_1_net_1;
+assign LANE_TXD_P_Vector_net_1 = LANE_TXD_P_Vector_net_0;
+assign LANE_TXD_P_Vector[5:0]  = LANE_TXD_P_Vector_net_1;
+assign LANE_TXD_N_Vector_net_1 = LANE_TXD_N_Vector_net_0;
+assign LANE_TXD_N_Vector[5:0]  = LANE_TXD_N_Vector_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -647,14 +622,14 @@ AnalyzatorInCircuit AnalyzatorInCircuit_0(
         .CTRL_Clock            ( Clock_Reset_0_Main_CLOCK_0 ),
         .Logic_Reset_N         ( Clock_Reset_0_Logic_Reset_N ),
         .Logic_Clock           ( Clock_Reset_0_Logic_Clock ),
-        .Transceiver_Rx_K      ( Transceiver_Main_0_Transceivers_Rx_K ),
-        .Transceiver_Rx_Data   ( Transceiver_Main_0_Transceivers_Rx_Data ),
-        .Start_Triggers        ( Start_Triggers_net_0 ),
         .CTRL_write_read       ( Controler_0_ANICI_write_read ),
-        .CTRL_addr_frame       ( Controler_0_ANICI_addr ),
         .CTRL_enable_cmd       ( Controler_0_ANICI_enable_cmd ),
+        .Start_Triggers        ( Start_Triggers_net_0 ),
+        .CTRL_addr_frame       ( Controler_0_ANICI_addr ),
         .CTRL_write_data_frame ( Controler_0_ANICI_data ),
         .AlignmentFifo_Rx_Data ( Transceiver_Main_0_AlignmentFifo_Rx_Data ),
+        .Transceiver_Rx_Data   ( Transceiver_Main_0_Transceivers_Rx_Data ),
+        .Transceiver_Rx_K      ( Transceiver_Main_0_Transceivers_Rx_K ),
         // Outputs
         .CTRL_busy             ( AnalyzatorInCircuit_0_CTRL_busy ),
         .CTRL_read_data_frame  ( AnalyzatorInCircuit_0_CTRL_read_data_frame ) 
@@ -669,6 +644,7 @@ Clock_Reset Clock_Reset_0(
         .ClockInput_EXT2     ( EXT_Signals_0_EXT_InputsVectorSignals3to3 ),
         .ClockInput_HMC      ( GPIO_0_net_0 ),
         .ClockInput_EXT1     ( EXT_Signals_0_EXT_InputsVectorSignals2to2 ),
+        .OSC_EXT             ( GND_net ),
         .addr_frame          ( Controler_0_CLKC_addr ),
         .write_data_frame    ( Controler_0_CLKC_data ),
         // Outputs
@@ -817,6 +793,7 @@ Controler Controler_0(
         .EXTS_enable_cmd       ( Controler_0_EXTS_enable_cmd ),
         .GPO_3                 ( Controler_0_GPO_3 ),
         .GPO_2                 ( Controler_0_GPO_2 ),
+        .SYNCIB                ( Controler_0_SYNCIB ),
         .TRG_addr              ( Controler_0_TRG_addr ),
         .TRG_data              ( Controler_0_TRG_data ),
         .ANW_Fifo_Write_Data   ( Controler_0_ANW_Fifo_Write_Data ),
@@ -831,7 +808,6 @@ Controler Controler_0(
         .CLKC_data             ( Controler_0_CLKC_data ),
         .EXTS_addr             ( Controler_0_EXTS_addr ),
         .EXTS_data             ( Controler_0_EXTS_data ),
-        .SYNCIB                ( Controler_0_SYNCIB ),
         // Inouts
         .HMC_sdio              ( HMC_sdio ),
         .ADC_sdio              ( ADC_sdio ) 
@@ -852,14 +828,7 @@ Data_Block Data_Block_0(
         .EXT_TriggerInput              ( EXT_Signals_0_EXT_InputsVectorSignals10to10 ),
         .C_addr_frame                  ( Controler_0_TRG_addr ),
         .C_write_data_frame            ( Controler_0_TRG_data ),
-        .Input_Data_0_00               ( Transceiver_Main_0_Output_Data_1 ),
-        .Input_Data_3_00               ( Transceiver_Main_0_Output_Data_2 ),
-        .Input_Data_2_00               ( Transceiver_Main_0_Output_Data_3 ),
-        .Input_Data_1_00               ( Transceiver_Main_0_Output_Data_0 ),
-        .Input_Data_0_01               ( Transceiver_Main_0_Output_Data_5 ),
-        .Input_Data_3_01               ( Transceiver_Main_0_Output_Data_6 ),
-        .Input_Data_2_01               ( Transceiver_Main_0_Output_Data_7 ),
-        .Input_Data_1_01               ( Transceiver_Main_0_Output_Data_4 ),
+        .Data_In                       ( Transceiver_Main_0_Output_Data ),
         // Outputs
         .C_busy                        ( Data_Block_0_C_busy ),
         .Communication_Empty           ( Data_Block_0_Communication_Empty ),
@@ -974,10 +943,6 @@ Synchronizer Synchronizer_0(
 //--------Transceiver_Main
 Transceiver_Main Transceiver_Main_0(
         // Inputs
-        .LANE1_RXD_N            ( LANE1_RXD_N ),
-        .LANE0_RXD_P            ( LANE0_RXD_P ),
-        .LANE0_RXD_N            ( LANE0_RXD_N ),
-        .LANE1_RXD_P            ( LANE1_RXD_P ),
         .REF_Clock              ( Clock_Reset_0_Ref_Clock ),
         .CTRL_Clock_40M         ( Clock_Reset_0_XCVR_CTRL_Clock_40M ),
         .Logic_Clock            ( Clock_Reset_0_Logic_Clock ),
@@ -990,27 +955,20 @@ Transceiver_Main Transceiver_Main_0(
         .CTRL_Reset_N           ( Clock_Reset_0_Main_RESET_N_1 ),
         .addr_frame             ( Controler_0_TRNV_addr ),
         .write_data_frame       ( Controler_0_TRNV_data ),
+        .LANE_RXD_N_Vector      ( LANE_RXD_N_Vector ),
+        .LANE_RXD_P_Vector      ( LANE_RXD_P_Vector ),
         // Outputs
-        .LANE1_TXD_N            ( LANE1_TXD_N_net_0 ),
-        .LANE0_TXD_P            ( LANE0_TXD_P_net_0 ),
-        .LANE0_TXD_N            ( LANE0_TXD_N_net_0 ),
-        .LANE1_TXD_P            ( LANE1_TXD_P_net_0 ),
         .Data_Valid             (  ),
         .busy                   ( Transceiver_Main_0_busy ),
         .SYNCINB_OUT            ( Transceiver_Main_0_SYNCINB_OUT ),
-        .Output_Data_7          ( Transceiver_Main_0_Output_Data_7 ),
-        .Output_Data_0          ( Transceiver_Main_0_Output_Data_0 ),
-        .Output_Data_1          ( Transceiver_Main_0_Output_Data_1 ),
-        .Output_Data_2          ( Transceiver_Main_0_Output_Data_2 ),
-        .Output_Data_3          ( Transceiver_Main_0_Output_Data_3 ),
-        .Output_Data_4          ( Transceiver_Main_0_Output_Data_4 ),
-        .Output_Data_5          ( Transceiver_Main_0_Output_Data_5 ),
-        .Output_Data_6          ( Transceiver_Main_0_Output_Data_6 ),
+        .AlignmentFifo_Read_Out ( Transceiver_Main_0_AlignmentFifo_Read_Out ),
         .read_data_frame        ( Transceiver_Main_0_read_data_frame ),
+        .Output_Data            ( Transceiver_Main_0_Output_Data ),
+        .AlignmentFifo_Rx_Data  ( Transceiver_Main_0_AlignmentFifo_Rx_Data ),
         .Transceivers_Rx_Data   ( Transceiver_Main_0_Transceivers_Rx_Data ),
         .Transceivers_Rx_K      ( Transceiver_Main_0_Transceivers_Rx_K ),
-        .AlignmentFifo_Rx_Data  ( Transceiver_Main_0_AlignmentFifo_Rx_Data ),
-        .AlignmentFifo_Read_Out ( Transceiver_Main_0_AlignmentFifo_Read_Out ) 
+        .LANE_TXD_N_Vector      ( LANE_TXD_N_Vector_net_0 ),
+        .LANE_TXD_P_Vector      ( LANE_TXD_P_Vector_net_0 ) 
         );
 
 

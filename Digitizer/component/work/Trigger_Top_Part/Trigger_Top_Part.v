@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Fri May 24 15:32:48 2024
+// Created by SmartDesign Wed Jun  5 15:13:47 2024
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -25,6 +25,7 @@ module Trigger_Top_Part(
     Control_Abort_Out,
     Control_Busy_Out,
     Control_Enable_Out,
+    Control_Mux_DataTest_Sel,
     Control_Test_Generator_Enable,
     Control_Trigger_Out,
     EMPTY,
@@ -56,6 +57,7 @@ output [15:0] C_read_data_frame;
 output        Control_Abort_Out;
 output        Control_Busy_Out;
 output        Control_Enable_Out;
+output        Control_Mux_DataTest_Sel;
 output        Control_Test_Generator_Enable;
 output        Control_Trigger_Out;
 output        EMPTY;
@@ -78,6 +80,7 @@ wire          Clock;
 wire          Control_Abort_Out_net_0;
 wire          Control_Busy_Out_net_0;
 wire          Control_Enable_Out_net_0;
+wire          Control_Mux_DataTest_Sel_net_0;
 wire          Control_Test_Generator_Enable_net_0;
 wire          Control_Trigger_Out_net_0;
 wire          COREFIFO_C5_0_AFULL;
@@ -106,10 +109,11 @@ wire          Control_Busy_Out_net_1;
 wire          Control_Enable_Out_net_1;
 wire          Fifo_NotFree_Out_net_1;
 wire          Control_Abort_Out_net_1;
+wire          SelfTrigger_Out_net_1;
 wire   [15:0] C_read_data_frame_net_1;
 wire   [11:0] TRG_Threshold_net_1;
 wire   [17:0] Q_net_1;
-wire          SelfTrigger_Out_net_1;
+wire          Control_Mux_DataTest_Sel_net_1;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
@@ -133,14 +137,16 @@ assign Fifo_NotFree_Out_net_1              = Fifo_NotFree_Out_net_0;
 assign Fifo_NotFree_Out                    = Fifo_NotFree_Out_net_1;
 assign Control_Abort_Out_net_1             = Control_Abort_Out_net_0;
 assign Control_Abort_Out                   = Control_Abort_Out_net_1;
+assign SelfTrigger_Out_net_1               = SelfTrigger_Out_net_0;
+assign SelfTrigger_Out                     = SelfTrigger_Out_net_1;
 assign C_read_data_frame_net_1             = C_read_data_frame_net_0;
 assign C_read_data_frame[15:0]             = C_read_data_frame_net_1;
 assign TRG_Threshold_net_1                 = TRG_Threshold_net_0;
 assign TRG_Threshold[11:0]                 = TRG_Threshold_net_1;
 assign Q_net_1                             = Q_net_0;
 assign Q[17:0]                             = Q_net_1;
-assign SelfTrigger_Out_net_1               = SelfTrigger_Out_net_0;
-assign SelfTrigger_Out                     = SelfTrigger_Out_net_1;
+assign Control_Mux_DataTest_Sel_net_1      = Control_Mux_DataTest_Sel_net_0;
+assign Control_Mux_DataTest_Sel            = Control_Mux_DataTest_Sel_net_1;
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -192,6 +198,7 @@ Trigger_Control Trigger_Control_0(
         .read_data_frame               ( C_read_data_frame_net_0 ),
         .Control_EventNum              ( Trigger_Control_0_Control_EventNum ),
         .Control_Test_Generator_Enable ( Control_Test_Generator_Enable_net_0 ),
+        .Control_Mux_DataTest_Sel      ( Control_Mux_DataTest_Sel_net_0 ),
         .Control_Enable                ( Control_Enable_Out_net_0 ),
         .Control_Abort                 ( Control_Abort_Out_net_0 ),
         .Control_Threshold             ( Trigger_Control_0_Control_Threshold ),
@@ -204,10 +211,10 @@ Trigger_Main Trigger_Main_0(
         // Inputs
         .Clock                    ( Clock ),
         .Reset_N                  ( Reset_N ),
-        .Control_EventNum         ( Trigger_Control_0_Control_EventNum ),
         .EXT_TriggerInput         ( EXT_TriggerInput ),
         .Control_Enable           ( Control_Enable_Out_net_0 ),
         .Control_Abort            ( Control_Abort_Out_net_0 ),
+        .Control_EventNum         ( Trigger_Control_0_Control_EventNum ),
         .Control_Threshold        ( Trigger_Control_0_Control_Threshold ),
         .Control_Sample_Per_Event ( Trigger_Control_0_Control_Sample_Per_Event ),
         .Control_TriggerSelect    ( Trigger_Control_0_Control_TriggerSelect ),
@@ -217,9 +224,9 @@ Trigger_Main Trigger_Main_0(
         .Control_Busy_Out         ( Control_Busy_Out_net_0 ),
         .Control_AcqStart         (  ),
         .ALL_FIFO_Enable          ( ALL_FIFO_Write_net_0 ),
-        .FIFO_Event_Data          ( Trigger_Main_0_FIFO_Event_Data ),
         .ACQ_RunOut               ( ACQ_RunOut_net_0 ),
         .SelfTrigger_Out          ( SelfTrigger_Out_net_0 ),
+        .FIFO_Event_Data          ( Trigger_Main_0_FIFO_Event_Data ),
         .TRG_Threshold            ( TRG_Threshold_net_0 ) 
         );
 

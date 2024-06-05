@@ -32,15 +32,15 @@ Sample_RAM_Block_MUX
 Trigger_Control
 Trigger_Main
 Communication_Builder
-|CtrlBus_HandShake|parameter g_WidthADDR 8;,parameter g_WidthDATA 16;|
 DataRamManage
+Dummy_Block
 FIFOs_Reader
+Test_Generator_for_Lanes
+VectorMux
 work.IOD
 EXT_Signals_Controller
 EXT_Signals_InputSwitch
 EXT_Signals_OutputSwitch
-SampleCompose
-SampleTxDeCompose
-Test_Generator_for_Lanes
-|Transceiver_Controller|parameter g_NumberOfLanes 2;|
+work.TX_PLL
+|Transceiver_Controller|parameter g_NumberOfLanes 6;|
 Transceiver_LanesConnection

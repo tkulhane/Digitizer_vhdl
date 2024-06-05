@@ -1,12 +1,3 @@
-----------------------------------------------------------------------
--- Created by Microsemi SmartDesign Sat Mar 23 14:19:27 2024
--- Testbench Template
--- This is a basic testbench that instantiates your design with basic 
--- clock and reset pins connected.  If your design has special
--- clock/reset or testbench driver requirements then you should 
--- copy this file and modify it. 
-----------------------------------------------------------------------
-
 --------------------------------------------------------------------------------
 -- Company: <Name>
 --
@@ -39,23 +30,39 @@ architecture behavioral of xxx is
     signal SYSCLK : std_logic := '0';
     signal NSYSRESET : std_logic := '0';
 
-    component AnalyzInCirc_Top
+    component Transciever_OneLane
         -- ports
         port( 
             -- Inputs
-            Clock : in std_logic;
-            Reset_N : in std_logic;
-            enable_cmd : in std_logic;
-            write_read : in std_logic;
-            addr_frame : in std_logic_vector(7 downto 0);
-            write_data_frame : in std_logic_vector(15 downto 0);
-            Start_Triggers : in std_logic_vector(7 downto 0);
-            Transceiver_Rx_Data : in std_logic_vector(127 downto 0);
-            Transceiver_Rx_K : in std_logic_vector(15 downto 0);
+            Logic_Clock : in std_logic;
+            CTRL_RST_N : in std_logic;
+            CTRL_CLK : in std_logic;
+            Read_Enable : in std_logic;
+            Logic_Reser_N : in std_logic;
+            REF_CLK : in std_logic;
+            LANE0_RXD_P : in std_logic;
+            LANE0_RXD_N : in std_logic;
+            SYNC_OK : in std_logic;
+            CTRL_Fault_CLR : in std_logic;
+            LANE_CLK_REF : in std_logic;
+            Input_Data : in std_logic_vector(63 downto 0);
+            CLKS_FROM_TXPLL_0_TX_PLL_LOCK_0 : in std_logic;
+            CLKS_FROM_TXPLL_0_TX_BIT_CLK_0 : in std_logic;
+            CLKS_FROM_TXPLL_0_TX_PLL_REF_CLK_0 : in std_logic;
 
             -- Outputs
-            busy : out std_logic;
-            read_data_frame : out std_logic_vector(15 downto 0)
+            Input_MainData_Read : out std_logic;
+            Empty_For_NonAll : out std_logic;
+            CTRL_Data_Go : out std_logic;
+            CTRL_Synced : out std_logic;
+            CTRL_ILAS_Go : out std_logic;
+            LANE0_TXD_P : out std_logic;
+            LANE0_TXD_N : out std_logic;
+            CTRL_Fault : out std_logic;
+            StatusVector : out std_logic_vector(31 downto 0);
+            LANE_RX_DATA : out std_logic_vector(63 downto 0);
+            LANE_RX_K : out std_logic_vector(7 downto 0);
+            Output_Data : out std_logic_vector(63 downto 0)
 
             -- Inouts
 
@@ -81,24 +88,40 @@ begin
     -- Clock Driver
     SYSCLK <= not SYSCLK after (SYSCLK_PERIOD / 2.0 );
 
-    -- Instantiate Unit Under Test:  AnalyzInCirc_Top
-    AnalyzInCirc_Top_0 : AnalyzInCirc_Top
+    -- Instantiate Unit Under Test:  Transciever_OneLane
+    Transciever_OneLane_0 : Transciever_OneLane
         -- port map
         port map( 
             -- Inputs
-            Clock => SYSCLK,
-            Reset_N => NSYSRESET,
-            enable_cmd => '0',
-            write_read => '0',
-            addr_frame => (others=> '0'),
-            write_data_frame => (others=> '0'),
-            Start_Triggers => (others=> '0'),
-            Transceiver_Rx_Data => (others=> '0'),
-            Transceiver_Rx_K => (others=> '0'),
+            Logic_Clock => SYSCLK,
+            CTRL_RST_N => NSYSRESET,
+            CTRL_CLK => SYSCLK,
+            Read_Enable => '0',
+            Logic_Reser_N => '0',
+            REF_CLK => SYSCLK,
+            LANE0_RXD_P => '0',
+            LANE0_RXD_N => '0',
+            SYNC_OK => '0',
+            CTRL_Fault_CLR => '0',
+            LANE_CLK_REF => SYSCLK,
+            Input_Data => (others=> '0'),
+            CLKS_FROM_TXPLL_0_TX_PLL_LOCK_0 => SYSCLK,
+            CLKS_FROM_TXPLL_0_TX_BIT_CLK_0 => SYSCLK,
+            CLKS_FROM_TXPLL_0_TX_PLL_REF_CLK_0 => SYSCLK,
 
             -- Outputs
-            busy =>  open,
-            read_data_frame => open
+            Input_MainData_Read =>  open,
+            Empty_For_NonAll =>  open,
+            CTRL_Data_Go =>  open,
+            CTRL_Synced =>  open,
+            CTRL_ILAS_Go =>  open,
+            LANE0_TXD_P =>  open,
+            LANE0_TXD_N =>  open,
+            CTRL_Fault =>  open,
+            StatusVector => open,
+            LANE_RX_DATA => open,
+            LANE_RX_K => open,
+            Output_Data => open
 
             -- Inouts
 

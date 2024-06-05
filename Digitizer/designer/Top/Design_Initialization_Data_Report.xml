@@ -6,7 +6,7 @@
 <text>Family: PolarFire</text>
 <text>Die: MPF300TS_ES</text>
 <text>Package: FCG1152</text>
-<text>Date: Sun Jun  2 15:31:25 2024
+<text>Date: Wed Jun  5 20:15:39 2024
 </text>
 <text>Report path: C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\designer\Top\Design_Initialization_Data_Report.xml</text>
 <section>
@@ -21,11 +21,11 @@ Power Up to Functional Timing (PUFT)</name>
 INFO: The PUFT timing numbers reflect the time elapsed between the assertion of FABRIC_POR_N signal and the assertion of each signal in the below table.</text>
 <row>
  <cell>XCVR_INIT_DONE</cell>
- <cell>462.000</cell>
+ <cell>1268.400</cell>
 </row>
 <row>
  <cell>DEVICE_INIT_DONE</cell>
- <cell>481.200</cell>
+ <cell>1287.600</cell>
 </row>
 </table>
 </section>
@@ -8281,7 +8281,715 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>Q1_PMA_LANE1   (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<name>Q1_PMA_LANE3   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.2.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x1088000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_1</cell>
+ <cell>0x1088004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_2</cell>
+ <cell>0x1088008</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_3</cell>
+ <cell>0x108800C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0005034F</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_1</cell>
+ <cell>0x1088010</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_2</cell>
+ <cell>0x1088014</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_3</cell>
+ <cell>0x1088018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00004F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_1</cell>
+ <cell>0x1088020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_2</cell>
+ <cell>0x1088024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x05000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_1</cell>
+ <cell>0x1088028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_2</cell>
+ <cell>0x108802C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_IN_TERM</cell>
+ <cell>0x1088030</cell>
+ <cell>0x000000A7</cell>
+ <cell>0x000000D7</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_PKDET</cell>
+ <cell>0x1088034</cell>
+ <cell>0x000000AC</cell>
+ <cell>0x00000041</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RTL_EM</cell>
+ <cell>0x1088038</cell>
+ <cell>0x000000C8</cell>
+ <cell>0x000007D0</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_LOCK_CTRL</cell>
+ <cell>0x108803C</cell>
+ <cell>0x00000008</cell>
+ <cell>0x0000000C</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RXPLL_DIV</cell>
+ <cell>0x1088040</cell>
+ <cell>0x00002219</cell>
+ <cell>0x00000238</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_TEST_BUS</cell>
+ <cell>0x1088044</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CLK_CTRL</cell>
+ <cell>0x1088048</cell>
+ <cell>0x0000003C</cell>
+ <cell>0x00000038</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RSTPD</cell>
+ <cell>0x108804C</cell>
+ <cell>0x0000002F</cell>
+ <cell>0x0000003C</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_ERR_CHK</cell>
+ <cell>0x1088050</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_PCIE1_2_RXPLL_DIV</cell>
+ <cell>0x1088054</cell>
+ <cell>0x02322219</cell>
+ <cell>0x02322219</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA1_2_RXPLL_DIV</cell>
+ <cell>0x1088058</cell>
+ <cell>0x22184418</cell>
+ <cell>0x22184418</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA3_RXPLL_DIV</cell>
+ <cell>0x108805C</cell>
+ <cell>0x00000230</cell>
+ <cell>0x00000230</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_CTRL</cell>
+ <cell>0x1088070</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_CLK_CTRL</cell>
+ <cell>0x1088074</cell>
+ <cell>0x00000070</cell>
+ <cell>0x00000070</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RSTPD</cell>
+ <cell>0x1088078</cell>
+ <cell>0x00000006</cell>
+ <cell>0x00000001</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_BYP</cell>
+ <cell>0x108807C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_CTRL</cell>
+ <cell>0x1088080</cell>
+ <cell>0x00008A10</cell>
+ <cell>0x00008A10</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_OUT</cell>
+ <cell>0x1088084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_LSB</cell>
+ <cell>0x1088088</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_MSB</cell>
+ <cell>0x108808C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_TERM_CTRL</cell>
+ <cell>0x1088090</cell>
+ <cell>0x00007200</cell>
+ <cell>0x00007500</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_TEST_BUS</cell>
+ <cell>0x1088094</cell>
+ <cell>0xE0000000</cell>
+ <cell>0xE0000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_DATA_CTRL</cell>
+ <cell>0x1088098</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL</cell>
+ <cell>0x108809C</cell>
+ <cell>0x01000000</cell>
+ <cell>0x11000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_SEL</cell>
+ <cell>0x10880A0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0000000D</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M0</cell>
+ <cell>0x10880A4</cell>
+ <cell>0x001B3423</cell>
+ <cell>0x001B3423</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M1</cell>
+ <cell>0x10880A8</cell>
+ <cell>0x00232C27</cell>
+ <cell>0x00232C27</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M2</cell>
+ <cell>0x10880AC</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M3</cell>
+ <cell>0x10880B0</cell>
+ <cell>0x001B1B14</cell>
+ <cell>0x001B1B14</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M4</cell>
+ <cell>0x10880B4</cell>
+ <cell>0x00240C0A</cell>
+ <cell>0x00240C0A</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M5</cell>
+ <cell>0x10880B8</cell>
+ <cell>0x1B383B38</cell>
+ <cell>0x1B383B38</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SERDES_RTL_CTRL</cell>
+ <cell>0x10880C0</cell>
+ <cell>0x00000100</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_0</cell>
+ <cell>0x10880D0</cell>
+ <cell>0x64100702</cell>
+ <cell>0xFF3F0715</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_1</cell>
+ <cell>0x10880D4</cell>
+ <cell>0x01034018</cell>
+ <cell>0x010149FC</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_2</cell>
+ <cell>0x10880D8</cell>
+ <cell>0x00800000</cell>
+ <cell>0x00800010</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CMD</cell>
+ <cell>0x10880DC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_BYPASS</cell>
+ <cell>0x10880E0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00213201</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_EYE_DATA</cell>
+ <cell>0x10880E4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CDRH0_MON</cell>
+ <cell>0x10880E8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_0</cell>
+ <cell>0x10880EC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_1</cell>
+ <cell>0x10880F0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_OS_MON</cell>
+ <cell>0x10880F4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_0</cell>
+ <cell>0x10880F8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_1</cell>
+ <cell>0x10880FC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_FLAG</cell>
+ <cell>0x1088100</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q1_PCS_LANE3   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.2.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x88000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LFWF_R0</cell>
+ <cell>0x88004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LOVR_R0</cell>
+ <cell>0x88008</cell>
+ <cell>0x00000010</cell>
+ <cell>0x00000044</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LPIP_R0</cell>
+ <cell>0x8800C</cell>
+ <cell>0x0000005D</cell>
+ <cell>0x00000058</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>L64_R0</cell>
+ <cell>0x88010</cell>
+ <cell>0x01400000</cell>
+ <cell>0x00000012</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R1</cell>
+ <cell>0x88014</cell>
+ <cell>0x00000001</cell>
+ <cell>0x00000001</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R2</cell>
+ <cell>0x88018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R3</cell>
+ <cell>0x8801C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R4</cell>
+ <cell>0x88020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R5</cell>
+ <cell>0x88024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R6</cell>
+ <cell>0x88028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R7</cell>
+ <cell>0x8802C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R8</cell>
+ <cell>0x88030</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R9</cell>
+ <cell>0x88034</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R10</cell>
+ <cell>0x88038</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L8_R0</cell>
+ <cell>0x88040</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00020000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LNTV_R0</cell>
+ <cell>0x88050</cell>
+ <cell>0x00000E0E</cell>
+ <cell>0x00000E0E</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R0</cell>
+ <cell>0x88058</cell>
+ <cell>0x00000000</cell>
+ <cell>0x000A1E11</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R1</cell>
+ <cell>0x8805C</cell>
+ <cell>0x03000000</cell>
+ <cell>0x00000F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LRST_R0</cell>
+ <cell>0x88068</cell>
+ <cell>0x00000004</cell>
+ <cell>0x00000405</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LRST_OPT</cell>
+ <cell>0x8806C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000002</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R0</cell>
+ <cell>0x88078</cell>
+ <cell>0x110F110F</cell>
+ <cell>0x110F110F</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R1</cell>
+ <cell>0x8807C</cell>
+ <cell>0x9888332D</cell>
+ <cell>0x9888332D</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R2</cell>
+ <cell>0x88080</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R3</cell>
+ <cell>0x88084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R0</cell>
+ <cell>0x88088</cell>
+ <cell>0x03030347</cell>
+ <cell>0x0303037F</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R1</cell>
+ <cell>0x8808C</cell>
+ <cell>0x000A0640</cell>
+ <cell>0x000A0640</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R2</cell>
+ <cell>0x88090</cell>
+ <cell>0x000000A6</cell>
+ <cell>0x000000A6</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>MSTR_CTRL</cell>
+ <cell>0x88094</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q1_PMA_LANE1   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.1.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
 <table>
 <header>
  <cell>Register Name</cell>
@@ -8319,7 +9027,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_CDR_CTRL_3</cell>
  <cell>0x108200C</cell>
  <cell>0x00000000</cell>
- <cell>0x00050280</cell>
+ <cell>0x0005034F</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
@@ -8359,7 +9067,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_DFE_CTRL_2</cell>
  <cell>0x1082024</cell>
  <cell>0x00000000</cell>
- <cell>0x05000002</cell>
+ <cell>0x05000003</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -8375,7 +9083,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_EM_CTRL_2</cell>
  <cell>0x108202C</cell>
  <cell>0x00000000</cell>
- <cell>0x00000002</cell>
+ <cell>0x00000003</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -8383,7 +9091,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_IN_TERM</cell>
  <cell>0x1082030</cell>
  <cell>0x000000A7</cell>
- <cell>0x000000B7</cell>
+ <cell>0x000000D7</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -8415,7 +9123,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_RXPLL_DIV</cell>
  <cell>0x1082040</cell>
  <cell>0x00002219</cell>
- <cell>0x00000228</cell>
+ <cell>0x00000238</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -8487,8 +9195,8 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>SER_CLK_CTRL</cell>
  <cell>0x1082074</cell>
  <cell>0x00000070</cell>
- <cell>0x00000078</cell>
- <cell>Yes</cell>
+ <cell>0x00000070</cell>
+ <cell>No</cell>
  <cell>1</cell>
 </row>
 <row>
@@ -8543,7 +9251,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>SER_TERM_CTRL</cell>
  <cell>0x1082090</cell>
  <cell>0x00007200</cell>
- <cell>0x00007300</cell>
+ <cell>0x00007500</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -8647,7 +9355,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_DFE_CAL_CTRL_1</cell>
  <cell>0x10820D4</cell>
  <cell>0x01034018</cell>
- <cell>0x010148FC</cell>
+ <cell>0x010149FC</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
@@ -8743,7 +9451,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>Q1_PCS_LANE1   (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<name>Q1_PCS_LANE1   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.1.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
 <table>
 <header>
  <cell>Register Name</cell>
@@ -8989,7 +9697,715 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>Q1_PMA_LANE0   (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<name>Q1_PMA_LANE2   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.3.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x1084000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_1</cell>
+ <cell>0x1084004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_2</cell>
+ <cell>0x1084008</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_3</cell>
+ <cell>0x108400C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0005034F</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_1</cell>
+ <cell>0x1084010</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_2</cell>
+ <cell>0x1084014</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_3</cell>
+ <cell>0x1084018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00004F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_1</cell>
+ <cell>0x1084020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_2</cell>
+ <cell>0x1084024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x05000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_1</cell>
+ <cell>0x1084028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_2</cell>
+ <cell>0x108402C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_IN_TERM</cell>
+ <cell>0x1084030</cell>
+ <cell>0x000000A7</cell>
+ <cell>0x000000D7</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_PKDET</cell>
+ <cell>0x1084034</cell>
+ <cell>0x000000AC</cell>
+ <cell>0x00000041</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RTL_EM</cell>
+ <cell>0x1084038</cell>
+ <cell>0x000000C8</cell>
+ <cell>0x000007D0</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_LOCK_CTRL</cell>
+ <cell>0x108403C</cell>
+ <cell>0x00000008</cell>
+ <cell>0x0000000C</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RXPLL_DIV</cell>
+ <cell>0x1084040</cell>
+ <cell>0x00002219</cell>
+ <cell>0x00000238</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_TEST_BUS</cell>
+ <cell>0x1084044</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CLK_CTRL</cell>
+ <cell>0x1084048</cell>
+ <cell>0x0000003C</cell>
+ <cell>0x00000038</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RSTPD</cell>
+ <cell>0x108404C</cell>
+ <cell>0x0000002F</cell>
+ <cell>0x0000003C</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_ERR_CHK</cell>
+ <cell>0x1084050</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_PCIE1_2_RXPLL_DIV</cell>
+ <cell>0x1084054</cell>
+ <cell>0x02322219</cell>
+ <cell>0x02322219</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA1_2_RXPLL_DIV</cell>
+ <cell>0x1084058</cell>
+ <cell>0x22184418</cell>
+ <cell>0x22184418</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA3_RXPLL_DIV</cell>
+ <cell>0x108405C</cell>
+ <cell>0x00000230</cell>
+ <cell>0x00000230</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_CTRL</cell>
+ <cell>0x1084070</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_CLK_CTRL</cell>
+ <cell>0x1084074</cell>
+ <cell>0x00000070</cell>
+ <cell>0x00000070</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RSTPD</cell>
+ <cell>0x1084078</cell>
+ <cell>0x00000006</cell>
+ <cell>0x00000001</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_BYP</cell>
+ <cell>0x108407C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_CTRL</cell>
+ <cell>0x1084080</cell>
+ <cell>0x00008A10</cell>
+ <cell>0x00008A10</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_OUT</cell>
+ <cell>0x1084084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_LSB</cell>
+ <cell>0x1084088</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_MSB</cell>
+ <cell>0x108408C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_TERM_CTRL</cell>
+ <cell>0x1084090</cell>
+ <cell>0x00007200</cell>
+ <cell>0x00007500</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_TEST_BUS</cell>
+ <cell>0x1084094</cell>
+ <cell>0xE0000000</cell>
+ <cell>0xE0000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_DATA_CTRL</cell>
+ <cell>0x1084098</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL</cell>
+ <cell>0x108409C</cell>
+ <cell>0x01000000</cell>
+ <cell>0x11000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_SEL</cell>
+ <cell>0x10840A0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0000000D</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M0</cell>
+ <cell>0x10840A4</cell>
+ <cell>0x001B3423</cell>
+ <cell>0x001B3423</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M1</cell>
+ <cell>0x10840A8</cell>
+ <cell>0x00232C27</cell>
+ <cell>0x00232C27</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M2</cell>
+ <cell>0x10840AC</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M3</cell>
+ <cell>0x10840B0</cell>
+ <cell>0x001B1B14</cell>
+ <cell>0x001B1B14</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M4</cell>
+ <cell>0x10840B4</cell>
+ <cell>0x00240C0A</cell>
+ <cell>0x00240C0A</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M5</cell>
+ <cell>0x10840B8</cell>
+ <cell>0x1B383B38</cell>
+ <cell>0x1B383B38</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SERDES_RTL_CTRL</cell>
+ <cell>0x10840C0</cell>
+ <cell>0x00000100</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_0</cell>
+ <cell>0x10840D0</cell>
+ <cell>0x64100702</cell>
+ <cell>0xFF3F0715</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_1</cell>
+ <cell>0x10840D4</cell>
+ <cell>0x01034018</cell>
+ <cell>0x010149FC</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_2</cell>
+ <cell>0x10840D8</cell>
+ <cell>0x00800000</cell>
+ <cell>0x00800010</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CMD</cell>
+ <cell>0x10840DC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_BYPASS</cell>
+ <cell>0x10840E0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00213201</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_EYE_DATA</cell>
+ <cell>0x10840E4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CDRH0_MON</cell>
+ <cell>0x10840E8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_0</cell>
+ <cell>0x10840EC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_1</cell>
+ <cell>0x10840F0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_OS_MON</cell>
+ <cell>0x10840F4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_0</cell>
+ <cell>0x10840F8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_1</cell>
+ <cell>0x10840FC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_FLAG</cell>
+ <cell>0x1084100</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q1_PCS_LANE2   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.3.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x84000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LFWF_R0</cell>
+ <cell>0x84004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LOVR_R0</cell>
+ <cell>0x84008</cell>
+ <cell>0x00000010</cell>
+ <cell>0x00000044</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LPIP_R0</cell>
+ <cell>0x8400C</cell>
+ <cell>0x0000005D</cell>
+ <cell>0x00000058</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>L64_R0</cell>
+ <cell>0x84010</cell>
+ <cell>0x01400000</cell>
+ <cell>0x00000012</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R1</cell>
+ <cell>0x84014</cell>
+ <cell>0x00000001</cell>
+ <cell>0x00000001</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R2</cell>
+ <cell>0x84018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R3</cell>
+ <cell>0x8401C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R4</cell>
+ <cell>0x84020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R5</cell>
+ <cell>0x84024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R6</cell>
+ <cell>0x84028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R7</cell>
+ <cell>0x8402C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R8</cell>
+ <cell>0x84030</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R9</cell>
+ <cell>0x84034</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R10</cell>
+ <cell>0x84038</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L8_R0</cell>
+ <cell>0x84040</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00020000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LNTV_R0</cell>
+ <cell>0x84050</cell>
+ <cell>0x00000E0E</cell>
+ <cell>0x00000E0E</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R0</cell>
+ <cell>0x84058</cell>
+ <cell>0x00000000</cell>
+ <cell>0x000A1E11</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R1</cell>
+ <cell>0x8405C</cell>
+ <cell>0x03000000</cell>
+ <cell>0x00000F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LRST_R0</cell>
+ <cell>0x84068</cell>
+ <cell>0x00000004</cell>
+ <cell>0x00000405</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LRST_OPT</cell>
+ <cell>0x8406C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000002</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R0</cell>
+ <cell>0x84078</cell>
+ <cell>0x110F110F</cell>
+ <cell>0x110F110F</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R1</cell>
+ <cell>0x8407C</cell>
+ <cell>0x9888332D</cell>
+ <cell>0x9888332D</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R2</cell>
+ <cell>0x84080</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R3</cell>
+ <cell>0x84084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R0</cell>
+ <cell>0x84088</cell>
+ <cell>0x03030347</cell>
+ <cell>0x0303037F</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R1</cell>
+ <cell>0x8408C</cell>
+ <cell>0x000A0640</cell>
+ <cell>0x000A0640</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R2</cell>
+ <cell>0x84090</cell>
+ <cell>0x000000A6</cell>
+ <cell>0x000000A6</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>MSTR_CTRL</cell>
+ <cell>0x84094</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q1_PMA_LANE0   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.0.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
 <table>
 <header>
  <cell>Register Name</cell>
@@ -9027,7 +10443,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_CDR_CTRL_3</cell>
  <cell>0x108100C</cell>
  <cell>0x00000000</cell>
- <cell>0x00050280</cell>
+ <cell>0x0005034F</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
@@ -9067,7 +10483,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_DFE_CTRL_2</cell>
  <cell>0x1081024</cell>
  <cell>0x00000000</cell>
- <cell>0x05000002</cell>
+ <cell>0x05000003</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -9083,7 +10499,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_EM_CTRL_2</cell>
  <cell>0x108102C</cell>
  <cell>0x00000000</cell>
- <cell>0x00000002</cell>
+ <cell>0x00000003</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -9091,7 +10507,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_IN_TERM</cell>
  <cell>0x1081030</cell>
  <cell>0x000000A7</cell>
- <cell>0x000000B7</cell>
+ <cell>0x000000D7</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -9123,7 +10539,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_RXPLL_DIV</cell>
  <cell>0x1081040</cell>
  <cell>0x00002219</cell>
- <cell>0x00000228</cell>
+ <cell>0x00000238</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -9251,7 +10667,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>SER_TERM_CTRL</cell>
  <cell>0x1081090</cell>
  <cell>0x00007200</cell>
- <cell>0x00007300</cell>
+ <cell>0x00007500</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -9355,7 +10771,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>DES_DFE_CAL_CTRL_1</cell>
  <cell>0x10810D4</cell>
  <cell>0x01034018</cell>
- <cell>0x010148FC</cell>
+ <cell>0x010149FC</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
@@ -9451,7 +10867,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>Q1_PCS_LANE0   (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<name>Q1_PCS_LANE0   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.0.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
 <table>
 <header>
  <cell>Register Name</cell>
@@ -9743,7 +11159,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>Q1_PMA_CMN   (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_1/PF_TX_PLL_C1_0/PF_TX_PLL_C1_0/txpll_isnt_0)</name>
+<name>Q1_PMA_CMN   (Transceiver_Main_0/PF_TX_PLL_C2_0/PF_TX_PLL_C2_0/txpll_isnt_0)</name>
 <table>
 <header>
  <cell>Register Name</cell>
@@ -9789,7 +11205,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>TXPLL_DIV_1</cell>
  <cell>0x1090010</cell>
  <cell>0x00190019</cell>
- <cell>0x0028000D</cell>
+ <cell>0x001C000E</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -9797,7 +11213,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>TXPLL_DIV_2</cell>
  <cell>0x1090014</cell>
  <cell>0x01000001</cell>
- <cell>0x02000000</cell>
+ <cell>0x01000000</cell>
  <cell>Yes</cell>
  <cell>1</cell>
 </row>
@@ -9938,1422 +11354,6 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <row>
  <cell>SPARE</cell>
  <cell>0x2090190</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q1_PMA_LANE3   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x1088000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_1</cell>
- <cell>0x1088004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_2</cell>
- <cell>0x1088008</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_3</cell>
- <cell>0x108800C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_1</cell>
- <cell>0x1088010</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_2</cell>
- <cell>0x1088014</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_3</cell>
- <cell>0x1088018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_1</cell>
- <cell>0x1088020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_2</cell>
- <cell>0x1088024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_1</cell>
- <cell>0x1088028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_2</cell>
- <cell>0x108802C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_IN_TERM</cell>
- <cell>0x1088030</cell>
- <cell>0x000000A7</cell>
- <cell>0x00000010</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_PKDET</cell>
- <cell>0x1088034</cell>
- <cell>0x000000AC</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RTL_EM</cell>
- <cell>0x1088038</cell>
- <cell>0x000000C8</cell>
- <cell>0x000000C8</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_LOCK_CTRL</cell>
- <cell>0x108803C</cell>
- <cell>0x00000008</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RXPLL_DIV</cell>
- <cell>0x1088040</cell>
- <cell>0x00002219</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_TEST_BUS</cell>
- <cell>0x1088044</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CLK_CTRL</cell>
- <cell>0x1088048</cell>
- <cell>0x0000003C</cell>
- <cell>0x00000007</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RSTPD</cell>
- <cell>0x108804C</cell>
- <cell>0x0000002F</cell>
- <cell>0x0000002F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_ERR_CHK</cell>
- <cell>0x1088050</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_PCIE1_2_RXPLL_DIV</cell>
- <cell>0x1088054</cell>
- <cell>0x02322219</cell>
- <cell>0x02322219</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA1_2_RXPLL_DIV</cell>
- <cell>0x1088058</cell>
- <cell>0x22184418</cell>
- <cell>0x22184418</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA3_RXPLL_DIV</cell>
- <cell>0x108805C</cell>
- <cell>0x00000230</cell>
- <cell>0x00000230</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_CTRL</cell>
- <cell>0x1088070</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_CLK_CTRL</cell>
- <cell>0x1088074</cell>
- <cell>0x00000070</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RSTPD</cell>
- <cell>0x1088078</cell>
- <cell>0x00000006</cell>
- <cell>0x00000006</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_BYP</cell>
- <cell>0x108807C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_CTRL</cell>
- <cell>0x1088080</cell>
- <cell>0x00008A10</cell>
- <cell>0x00008A00</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_OUT</cell>
- <cell>0x1088084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_LSB</cell>
- <cell>0x1088088</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_MSB</cell>
- <cell>0x108808C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_TERM_CTRL</cell>
- <cell>0x1088090</cell>
- <cell>0x00007200</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_TEST_BUS</cell>
- <cell>0x1088094</cell>
- <cell>0xE0000000</cell>
- <cell>0xE0000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_DATA_CTRL</cell>
- <cell>0x1088098</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL</cell>
- <cell>0x108809C</cell>
- <cell>0x01000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_SEL</cell>
- <cell>0x10880A0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M0</cell>
- <cell>0x10880A4</cell>
- <cell>0x001B3423</cell>
- <cell>0x001B3423</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M1</cell>
- <cell>0x10880A8</cell>
- <cell>0x00232C27</cell>
- <cell>0x00232C27</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M2</cell>
- <cell>0x10880AC</cell>
- <cell>0x001B1B1B</cell>
- <cell>0x001B1B1B</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M3</cell>
- <cell>0x10880B0</cell>
- <cell>0x001B1B14</cell>
- <cell>0x001B1B14</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M4</cell>
- <cell>0x10880B4</cell>
- <cell>0x00240C0A</cell>
- <cell>0x00240C0A</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M5</cell>
- <cell>0x10880B8</cell>
- <cell>0x1B383B38</cell>
- <cell>0x1B383B38</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SERDES_RTL_CTRL</cell>
- <cell>0x10880C0</cell>
- <cell>0x00000100</cell>
- <cell>0x00000100</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_0</cell>
- <cell>0x10880D0</cell>
- <cell>0x64100702</cell>
- <cell>0x64100702</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_1</cell>
- <cell>0x10880D4</cell>
- <cell>0x01034018</cell>
- <cell>0x01034018</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_2</cell>
- <cell>0x10880D8</cell>
- <cell>0x00800000</cell>
- <cell>0x00800000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CMD</cell>
- <cell>0x10880DC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_BYPASS</cell>
- <cell>0x10880E0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_EYE_DATA</cell>
- <cell>0x10880E4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CDRH0_MON</cell>
- <cell>0x10880E8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_0</cell>
- <cell>0x10880EC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_1</cell>
- <cell>0x10880F0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_OS_MON</cell>
- <cell>0x10880F4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_0</cell>
- <cell>0x10880F8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_1</cell>
- <cell>0x10880FC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_FLAG</cell>
- <cell>0x1088100</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q1_PCS_LANE3   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x88000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LFWF_R0</cell>
- <cell>0x88004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LOVR_R0</cell>
- <cell>0x88008</cell>
- <cell>0x00000010</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LPIP_R0</cell>
- <cell>0x8800C</cell>
- <cell>0x0000005D</cell>
- <cell>0x00000058</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>L64_R0</cell>
- <cell>0x88010</cell>
- <cell>0x01400000</cell>
- <cell>0x01400000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R1</cell>
- <cell>0x88014</cell>
- <cell>0x00000001</cell>
- <cell>0x00000001</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R2</cell>
- <cell>0x88018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R3</cell>
- <cell>0x8801C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R4</cell>
- <cell>0x88020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R5</cell>
- <cell>0x88024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R6</cell>
- <cell>0x88028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R7</cell>
- <cell>0x8802C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R8</cell>
- <cell>0x88030</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R9</cell>
- <cell>0x88034</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R10</cell>
- <cell>0x88038</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L8_R0</cell>
- <cell>0x88040</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LNTV_R0</cell>
- <cell>0x88050</cell>
- <cell>0x00000E0E</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R0</cell>
- <cell>0x88058</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R1</cell>
- <cell>0x8805C</cell>
- <cell>0x03000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LRST_R0</cell>
- <cell>0x88068</cell>
- <cell>0x00000004</cell>
- <cell>0x00000004</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LRST_OPT</cell>
- <cell>0x8806C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R0</cell>
- <cell>0x88078</cell>
- <cell>0x110F110F</cell>
- <cell>0x110F110F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R1</cell>
- <cell>0x8807C</cell>
- <cell>0x9888332D</cell>
- <cell>0x9888332D</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R2</cell>
- <cell>0x88080</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R3</cell>
- <cell>0x88084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R0</cell>
- <cell>0x88088</cell>
- <cell>0x03030347</cell>
- <cell>0x03030300</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R1</cell>
- <cell>0x8808C</cell>
- <cell>0x000A0640</cell>
- <cell>0x000A0640</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R2</cell>
- <cell>0x88090</cell>
- <cell>0x000000A6</cell>
- <cell>0x000000A6</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>MSTR_CTRL</cell>
- <cell>0x88094</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q1_PMA_LANE2   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x1084000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_1</cell>
- <cell>0x1084004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_2</cell>
- <cell>0x1084008</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_3</cell>
- <cell>0x108400C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_1</cell>
- <cell>0x1084010</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_2</cell>
- <cell>0x1084014</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_3</cell>
- <cell>0x1084018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_1</cell>
- <cell>0x1084020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_2</cell>
- <cell>0x1084024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_1</cell>
- <cell>0x1084028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_2</cell>
- <cell>0x108402C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_IN_TERM</cell>
- <cell>0x1084030</cell>
- <cell>0x000000A7</cell>
- <cell>0x00000010</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_PKDET</cell>
- <cell>0x1084034</cell>
- <cell>0x000000AC</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RTL_EM</cell>
- <cell>0x1084038</cell>
- <cell>0x000000C8</cell>
- <cell>0x000000C8</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_LOCK_CTRL</cell>
- <cell>0x108403C</cell>
- <cell>0x00000008</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RXPLL_DIV</cell>
- <cell>0x1084040</cell>
- <cell>0x00002219</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_TEST_BUS</cell>
- <cell>0x1084044</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CLK_CTRL</cell>
- <cell>0x1084048</cell>
- <cell>0x0000003C</cell>
- <cell>0x00000007</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RSTPD</cell>
- <cell>0x108404C</cell>
- <cell>0x0000002F</cell>
- <cell>0x0000002F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_ERR_CHK</cell>
- <cell>0x1084050</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_PCIE1_2_RXPLL_DIV</cell>
- <cell>0x1084054</cell>
- <cell>0x02322219</cell>
- <cell>0x02322219</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA1_2_RXPLL_DIV</cell>
- <cell>0x1084058</cell>
- <cell>0x22184418</cell>
- <cell>0x22184418</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA3_RXPLL_DIV</cell>
- <cell>0x108405C</cell>
- <cell>0x00000230</cell>
- <cell>0x00000230</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_CTRL</cell>
- <cell>0x1084070</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_CLK_CTRL</cell>
- <cell>0x1084074</cell>
- <cell>0x00000070</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RSTPD</cell>
- <cell>0x1084078</cell>
- <cell>0x00000006</cell>
- <cell>0x00000006</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_BYP</cell>
- <cell>0x108407C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_CTRL</cell>
- <cell>0x1084080</cell>
- <cell>0x00008A10</cell>
- <cell>0x00008A00</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_OUT</cell>
- <cell>0x1084084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_LSB</cell>
- <cell>0x1084088</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_MSB</cell>
- <cell>0x108408C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_TERM_CTRL</cell>
- <cell>0x1084090</cell>
- <cell>0x00007200</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_TEST_BUS</cell>
- <cell>0x1084094</cell>
- <cell>0xE0000000</cell>
- <cell>0xE0000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_DATA_CTRL</cell>
- <cell>0x1084098</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL</cell>
- <cell>0x108409C</cell>
- <cell>0x01000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_SEL</cell>
- <cell>0x10840A0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M0</cell>
- <cell>0x10840A4</cell>
- <cell>0x001B3423</cell>
- <cell>0x001B3423</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M1</cell>
- <cell>0x10840A8</cell>
- <cell>0x00232C27</cell>
- <cell>0x00232C27</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M2</cell>
- <cell>0x10840AC</cell>
- <cell>0x001B1B1B</cell>
- <cell>0x001B1B1B</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M3</cell>
- <cell>0x10840B0</cell>
- <cell>0x001B1B14</cell>
- <cell>0x001B1B14</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M4</cell>
- <cell>0x10840B4</cell>
- <cell>0x00240C0A</cell>
- <cell>0x00240C0A</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M5</cell>
- <cell>0x10840B8</cell>
- <cell>0x1B383B38</cell>
- <cell>0x1B383B38</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SERDES_RTL_CTRL</cell>
- <cell>0x10840C0</cell>
- <cell>0x00000100</cell>
- <cell>0x00000100</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_0</cell>
- <cell>0x10840D0</cell>
- <cell>0x64100702</cell>
- <cell>0x64100702</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_1</cell>
- <cell>0x10840D4</cell>
- <cell>0x01034018</cell>
- <cell>0x01034018</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_2</cell>
- <cell>0x10840D8</cell>
- <cell>0x00800000</cell>
- <cell>0x00800000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CMD</cell>
- <cell>0x10840DC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_BYPASS</cell>
- <cell>0x10840E0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_EYE_DATA</cell>
- <cell>0x10840E4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CDRH0_MON</cell>
- <cell>0x10840E8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_0</cell>
- <cell>0x10840EC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_1</cell>
- <cell>0x10840F0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_OS_MON</cell>
- <cell>0x10840F4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_0</cell>
- <cell>0x10840F8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_1</cell>
- <cell>0x10840FC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_FLAG</cell>
- <cell>0x1084100</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q1_PCS_LANE2   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x84000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LFWF_R0</cell>
- <cell>0x84004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LOVR_R0</cell>
- <cell>0x84008</cell>
- <cell>0x00000010</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LPIP_R0</cell>
- <cell>0x8400C</cell>
- <cell>0x0000005D</cell>
- <cell>0x00000058</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>L64_R0</cell>
- <cell>0x84010</cell>
- <cell>0x01400000</cell>
- <cell>0x01400000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R1</cell>
- <cell>0x84014</cell>
- <cell>0x00000001</cell>
- <cell>0x00000001</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R2</cell>
- <cell>0x84018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R3</cell>
- <cell>0x8401C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R4</cell>
- <cell>0x84020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R5</cell>
- <cell>0x84024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R6</cell>
- <cell>0x84028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R7</cell>
- <cell>0x8402C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R8</cell>
- <cell>0x84030</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R9</cell>
- <cell>0x84034</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R10</cell>
- <cell>0x84038</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L8_R0</cell>
- <cell>0x84040</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LNTV_R0</cell>
- <cell>0x84050</cell>
- <cell>0x00000E0E</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R0</cell>
- <cell>0x84058</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R1</cell>
- <cell>0x8405C</cell>
- <cell>0x03000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LRST_R0</cell>
- <cell>0x84068</cell>
- <cell>0x00000004</cell>
- <cell>0x00000004</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LRST_OPT</cell>
- <cell>0x8406C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R0</cell>
- <cell>0x84078</cell>
- <cell>0x110F110F</cell>
- <cell>0x110F110F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R1</cell>
- <cell>0x8407C</cell>
- <cell>0x9888332D</cell>
- <cell>0x9888332D</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R2</cell>
- <cell>0x84080</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R3</cell>
- <cell>0x84084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R0</cell>
- <cell>0x84088</cell>
- <cell>0x03030347</cell>
- <cell>0x03030300</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R1</cell>
- <cell>0x8408C</cell>
- <cell>0x000A0640</cell>
- <cell>0x000A0640</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R2</cell>
- <cell>0x84090</cell>
- <cell>0x000000A6</cell>
- <cell>0x000000A6</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>MSTR_CTRL</cell>
- <cell>0x84094</cell>
  <cell>0x00000000</cell>
  <cell>0x00000000</cell>
  <cell>No</cell>
@@ -14445,6 +14445,1672 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
+<name>Q3_PMA_LANE0   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.5.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x1201000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_1</cell>
+ <cell>0x1201004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_2</cell>
+ <cell>0x1201008</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_3</cell>
+ <cell>0x120100C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0005034F</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_1</cell>
+ <cell>0x1201010</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_2</cell>
+ <cell>0x1201014</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_3</cell>
+ <cell>0x1201018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00004F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_1</cell>
+ <cell>0x1201020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_2</cell>
+ <cell>0x1201024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x05000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_1</cell>
+ <cell>0x1201028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_2</cell>
+ <cell>0x120102C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_IN_TERM</cell>
+ <cell>0x1201030</cell>
+ <cell>0x000000A7</cell>
+ <cell>0x000000D7</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_PKDET</cell>
+ <cell>0x1201034</cell>
+ <cell>0x000000AC</cell>
+ <cell>0x00000041</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RTL_EM</cell>
+ <cell>0x1201038</cell>
+ <cell>0x000000C8</cell>
+ <cell>0x000007D0</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_LOCK_CTRL</cell>
+ <cell>0x120103C</cell>
+ <cell>0x00000008</cell>
+ <cell>0x0000000C</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RXPLL_DIV</cell>
+ <cell>0x1201040</cell>
+ <cell>0x00002219</cell>
+ <cell>0x00000238</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_TEST_BUS</cell>
+ <cell>0x1201044</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CLK_CTRL</cell>
+ <cell>0x1201048</cell>
+ <cell>0x0000003C</cell>
+ <cell>0x00000038</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RSTPD</cell>
+ <cell>0x120104C</cell>
+ <cell>0x0000002F</cell>
+ <cell>0x0000003C</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_ERR_CHK</cell>
+ <cell>0x1201050</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_PCIE1_2_RXPLL_DIV</cell>
+ <cell>0x1201054</cell>
+ <cell>0x02322219</cell>
+ <cell>0x02322219</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA1_2_RXPLL_DIV</cell>
+ <cell>0x1201058</cell>
+ <cell>0x22184418</cell>
+ <cell>0x22184418</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA3_RXPLL_DIV</cell>
+ <cell>0x120105C</cell>
+ <cell>0x00000230</cell>
+ <cell>0x00000230</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_CTRL</cell>
+ <cell>0x1201070</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_CLK_CTRL</cell>
+ <cell>0x1201074</cell>
+ <cell>0x00000070</cell>
+ <cell>0x00000070</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RSTPD</cell>
+ <cell>0x1201078</cell>
+ <cell>0x00000006</cell>
+ <cell>0x00000001</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_BYP</cell>
+ <cell>0x120107C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_CTRL</cell>
+ <cell>0x1201080</cell>
+ <cell>0x00008A10</cell>
+ <cell>0x00008A10</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_OUT</cell>
+ <cell>0x1201084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_LSB</cell>
+ <cell>0x1201088</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_MSB</cell>
+ <cell>0x120108C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_TERM_CTRL</cell>
+ <cell>0x1201090</cell>
+ <cell>0x00007200</cell>
+ <cell>0x00007500</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_TEST_BUS</cell>
+ <cell>0x1201094</cell>
+ <cell>0xE0000000</cell>
+ <cell>0xE0000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_DATA_CTRL</cell>
+ <cell>0x1201098</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL</cell>
+ <cell>0x120109C</cell>
+ <cell>0x01000000</cell>
+ <cell>0x11000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_SEL</cell>
+ <cell>0x12010A0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0000000D</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M0</cell>
+ <cell>0x12010A4</cell>
+ <cell>0x001B3423</cell>
+ <cell>0x001B3423</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M1</cell>
+ <cell>0x12010A8</cell>
+ <cell>0x00232C27</cell>
+ <cell>0x00232C27</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M2</cell>
+ <cell>0x12010AC</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M3</cell>
+ <cell>0x12010B0</cell>
+ <cell>0x001B1B14</cell>
+ <cell>0x001B1B14</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M4</cell>
+ <cell>0x12010B4</cell>
+ <cell>0x00240C0A</cell>
+ <cell>0x00240C0A</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M5</cell>
+ <cell>0x12010B8</cell>
+ <cell>0x1B383B38</cell>
+ <cell>0x1B383B38</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SERDES_RTL_CTRL</cell>
+ <cell>0x12010C0</cell>
+ <cell>0x00000100</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_0</cell>
+ <cell>0x12010D0</cell>
+ <cell>0x64100702</cell>
+ <cell>0xFF3F0715</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_1</cell>
+ <cell>0x12010D4</cell>
+ <cell>0x01034018</cell>
+ <cell>0x010149FC</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_2</cell>
+ <cell>0x12010D8</cell>
+ <cell>0x00800000</cell>
+ <cell>0x00800010</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CMD</cell>
+ <cell>0x12010DC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_BYPASS</cell>
+ <cell>0x12010E0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00213201</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_EYE_DATA</cell>
+ <cell>0x12010E4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CDRH0_MON</cell>
+ <cell>0x12010E8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_0</cell>
+ <cell>0x12010EC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_1</cell>
+ <cell>0x12010F0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_OS_MON</cell>
+ <cell>0x12010F4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_0</cell>
+ <cell>0x12010F8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_1</cell>
+ <cell>0x12010FC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_FLAG</cell>
+ <cell>0x1201100</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q3_PCS_LANE0   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.5.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x201000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LFWF_R0</cell>
+ <cell>0x201004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LOVR_R0</cell>
+ <cell>0x201008</cell>
+ <cell>0x00000010</cell>
+ <cell>0x00000044</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LPIP_R0</cell>
+ <cell>0x20100C</cell>
+ <cell>0x0000005D</cell>
+ <cell>0x00000058</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>L64_R0</cell>
+ <cell>0x201010</cell>
+ <cell>0x01400000</cell>
+ <cell>0x00000012</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R1</cell>
+ <cell>0x201014</cell>
+ <cell>0x00000001</cell>
+ <cell>0x00000001</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R2</cell>
+ <cell>0x201018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R3</cell>
+ <cell>0x20101C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R4</cell>
+ <cell>0x201020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R5</cell>
+ <cell>0x201024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R6</cell>
+ <cell>0x201028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R7</cell>
+ <cell>0x20102C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R8</cell>
+ <cell>0x201030</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R9</cell>
+ <cell>0x201034</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R10</cell>
+ <cell>0x201038</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L8_R0</cell>
+ <cell>0x201040</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00020000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LNTV_R0</cell>
+ <cell>0x201050</cell>
+ <cell>0x00000E0E</cell>
+ <cell>0x00000E0E</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R0</cell>
+ <cell>0x201058</cell>
+ <cell>0x00000000</cell>
+ <cell>0x000A1E11</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R1</cell>
+ <cell>0x20105C</cell>
+ <cell>0x03000000</cell>
+ <cell>0x00000F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LRST_R0</cell>
+ <cell>0x201068</cell>
+ <cell>0x00000004</cell>
+ <cell>0x00000405</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LRST_OPT</cell>
+ <cell>0x20106C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000002</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R0</cell>
+ <cell>0x201078</cell>
+ <cell>0x110F110F</cell>
+ <cell>0x110F110F</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R1</cell>
+ <cell>0x20107C</cell>
+ <cell>0x9888332D</cell>
+ <cell>0x9888332D</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R2</cell>
+ <cell>0x201080</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R3</cell>
+ <cell>0x201084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R0</cell>
+ <cell>0x201088</cell>
+ <cell>0x03030347</cell>
+ <cell>0x0303037F</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R1</cell>
+ <cell>0x20108C</cell>
+ <cell>0x000A0640</cell>
+ <cell>0x000A0640</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R2</cell>
+ <cell>0x201090</cell>
+ <cell>0x000000A6</cell>
+ <cell>0x000000A6</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>MSTR_CTRL</cell>
+ <cell>0x201094</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q3_PMA_LANE1   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.4.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x1202000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_1</cell>
+ <cell>0x1202004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_2</cell>
+ <cell>0x1202008</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_CDR_CTRL_3</cell>
+ <cell>0x120200C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0005034F</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_1</cell>
+ <cell>0x1202010</cell>
+ <cell>0x00000015</cell>
+ <cell>0x00000015</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_2</cell>
+ <cell>0x1202014</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFEEM_CTRL_3</cell>
+ <cell>0x1202018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00004F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_1</cell>
+ <cell>0x1202020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CTRL_2</cell>
+ <cell>0x1202024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x05000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_1</cell>
+ <cell>0x1202028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_EM_CTRL_2</cell>
+ <cell>0x120202C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_IN_TERM</cell>
+ <cell>0x1202030</cell>
+ <cell>0x000000A7</cell>
+ <cell>0x000000D7</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_PKDET</cell>
+ <cell>0x1202034</cell>
+ <cell>0x000000AC</cell>
+ <cell>0x00000041</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RTL_EM</cell>
+ <cell>0x1202038</cell>
+ <cell>0x000000C8</cell>
+ <cell>0x000007D0</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_LOCK_CTRL</cell>
+ <cell>0x120203C</cell>
+ <cell>0x00000008</cell>
+ <cell>0x0000000C</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RXPLL_DIV</cell>
+ <cell>0x1202040</cell>
+ <cell>0x00002219</cell>
+ <cell>0x00000238</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_TEST_BUS</cell>
+ <cell>0x1202044</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_CLK_CTRL</cell>
+ <cell>0x1202048</cell>
+ <cell>0x0000003C</cell>
+ <cell>0x00000038</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_RSTPD</cell>
+ <cell>0x120204C</cell>
+ <cell>0x0000002F</cell>
+ <cell>0x0000003C</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_RTL_ERR_CHK</cell>
+ <cell>0x1202050</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_PCIE1_2_RXPLL_DIV</cell>
+ <cell>0x1202054</cell>
+ <cell>0x02322219</cell>
+ <cell>0x02322219</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA1_2_RXPLL_DIV</cell>
+ <cell>0x1202058</cell>
+ <cell>0x22184418</cell>
+ <cell>0x22184418</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_SATA3_RXPLL_DIV</cell>
+ <cell>0x120205C</cell>
+ <cell>0x00000230</cell>
+ <cell>0x00000230</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_CTRL</cell>
+ <cell>0x1202070</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_CLK_CTRL</cell>
+ <cell>0x1202074</cell>
+ <cell>0x00000070</cell>
+ <cell>0x00000070</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RSTPD</cell>
+ <cell>0x1202078</cell>
+ <cell>0x00000006</cell>
+ <cell>0x00000001</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_BYP</cell>
+ <cell>0x120207C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_CTRL</cell>
+ <cell>0x1202080</cell>
+ <cell>0x00008A10</cell>
+ <cell>0x00008A10</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_RXDET_OUT</cell>
+ <cell>0x1202084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_LSB</cell>
+ <cell>0x1202088</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_STATIC_MSB</cell>
+ <cell>0x120208C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_TERM_CTRL</cell>
+ <cell>0x1202090</cell>
+ <cell>0x00007200</cell>
+ <cell>0x00007500</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_TEST_BUS</cell>
+ <cell>0x1202094</cell>
+ <cell>0xE0000000</cell>
+ <cell>0xE0000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_DATA_CTRL</cell>
+ <cell>0x1202098</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL</cell>
+ <cell>0x120209C</cell>
+ <cell>0x01000000</cell>
+ <cell>0x11000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_SEL</cell>
+ <cell>0x12020A0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0000000D</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M0</cell>
+ <cell>0x12020A4</cell>
+ <cell>0x001B3423</cell>
+ <cell>0x001B3423</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M1</cell>
+ <cell>0x12020A8</cell>
+ <cell>0x00232C27</cell>
+ <cell>0x00232C27</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M2</cell>
+ <cell>0x12020AC</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>0x001B1B1B</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M3</cell>
+ <cell>0x12020B0</cell>
+ <cell>0x001B1B14</cell>
+ <cell>0x001B1B14</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M4</cell>
+ <cell>0x12020B4</cell>
+ <cell>0x00240C0A</cell>
+ <cell>0x00240C0A</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SER_DRV_CTRL_M5</cell>
+ <cell>0x12020B8</cell>
+ <cell>0x1B383B38</cell>
+ <cell>0x1B383B38</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SERDES_RTL_CTRL</cell>
+ <cell>0x12020C0</cell>
+ <cell>0x00000100</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_0</cell>
+ <cell>0x12020D0</cell>
+ <cell>0x64100702</cell>
+ <cell>0xFF3F0715</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_1</cell>
+ <cell>0x12020D4</cell>
+ <cell>0x01034018</cell>
+ <cell>0x010149FC</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CTRL_2</cell>
+ <cell>0x12020D8</cell>
+ <cell>0x00800000</cell>
+ <cell>0x00800010</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_CMD</cell>
+ <cell>0x12020DC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_BYPASS</cell>
+ <cell>0x12020E0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00213201</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_EYE_DATA</cell>
+ <cell>0x12020E4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CDRH0_MON</cell>
+ <cell>0x12020E8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_0</cell>
+ <cell>0x12020EC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_COEFF_MON_1</cell>
+ <cell>0x12020F0</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_OS_MON</cell>
+ <cell>0x12020F4</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_0</cell>
+ <cell>0x12020F8</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_ST_1</cell>
+ <cell>0x12020FC</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>DES_DFE_CAL_FLAG</cell>
+ <cell>0x1202100</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q3_PCS_LANE1   (Transceiver_Main_0/Transceiver_LanesConnection_0/LanesConn_GEN.4.inst_Transciever_OneLane_1/PF_XCVR_ERM_C8_0/I_XCVR/LANE0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x202000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LFWF_R0</cell>
+ <cell>0x202004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LOVR_R0</cell>
+ <cell>0x202008</cell>
+ <cell>0x00000010</cell>
+ <cell>0x00000044</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LPIP_R0</cell>
+ <cell>0x20200C</cell>
+ <cell>0x0000005D</cell>
+ <cell>0x00000058</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>L64_R0</cell>
+ <cell>0x202010</cell>
+ <cell>0x01400000</cell>
+ <cell>0x00000012</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R1</cell>
+ <cell>0x202014</cell>
+ <cell>0x00000001</cell>
+ <cell>0x00000001</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R2</cell>
+ <cell>0x202018</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R3</cell>
+ <cell>0x20201C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R4</cell>
+ <cell>0x202020</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R5</cell>
+ <cell>0x202024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R6</cell>
+ <cell>0x202028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R7</cell>
+ <cell>0x20202C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R8</cell>
+ <cell>0x202030</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R9</cell>
+ <cell>0x202034</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L64_R10</cell>
+ <cell>0x202038</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>L8_R0</cell>
+ <cell>0x202040</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00020000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LNTV_R0</cell>
+ <cell>0x202050</cell>
+ <cell>0x00000E0E</cell>
+ <cell>0x00000E0E</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R0</cell>
+ <cell>0x202058</cell>
+ <cell>0x00000000</cell>
+ <cell>0x000A1E11</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LCLK_R1</cell>
+ <cell>0x20205C</cell>
+ <cell>0x03000000</cell>
+ <cell>0x00000F00</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LRST_R0</cell>
+ <cell>0x202068</cell>
+ <cell>0x00000004</cell>
+ <cell>0x00000405</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>LRST_OPT</cell>
+ <cell>0x20206C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000002</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R0</cell>
+ <cell>0x202078</cell>
+ <cell>0x110F110F</cell>
+ <cell>0x110F110F</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R1</cell>
+ <cell>0x20207C</cell>
+ <cell>0x9888332D</cell>
+ <cell>0x9888332D</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R2</cell>
+ <cell>0x202080</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>OOB_R3</cell>
+ <cell>0x202084</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R0</cell>
+ <cell>0x202088</cell>
+ <cell>0x03030347</cell>
+ <cell>0x0303037F</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R1</cell>
+ <cell>0x20208C</cell>
+ <cell>0x000A0640</cell>
+ <cell>0x000A0640</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PMA_CTRL_R2</cell>
+ <cell>0x202090</cell>
+ <cell>0x000000A6</cell>
+ <cell>0x000000A6</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>MSTR_CTRL</cell>
+ <cell>0x202094</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q3_PCSCMN</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x210000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>GSSCLK_CTRL</cell>
+ <cell>0x210004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>QRST_R0</cell>
+ <cell>0x210008</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>QDBG_R0</cell>
+ <cell>0x21000C</cell>
+ <cell>0x00001000</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q3_PMA_CMN   (Transceiver_Main_0/PF_TX_PLL_C2_0_0/PF_TX_PLL_C2_0/txpll_isnt_0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x1210000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>TXPLL_CLKBUF</cell>
+ <cell>0x1210004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>TXPLL_CTRL</cell>
+ <cell>0x1210008</cell>
+ <cell>0x00E60010</cell>
+ <cell>0x00800010</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>TXPLL_CLK_SEL</cell>
+ <cell>0x121000C</cell>
+ <cell>0x3F3F1C03</cell>
+ <cell>0x3F3F0003</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>TXPLL_DIV_1</cell>
+ <cell>0x1210010</cell>
+ <cell>0x00190019</cell>
+ <cell>0x001C000E</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>TXPLL_DIV_2</cell>
+ <cell>0x1210014</cell>
+ <cell>0x01000001</cell>
+ <cell>0x01000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_1</cell>
+ <cell>0x1210018</cell>
+ <cell>0x00640064</cell>
+ <cell>0x00640064</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_2</cell>
+ <cell>0x121001C</cell>
+ <cell>0x00000064</cell>
+ <cell>0x00000064</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_3</cell>
+ <cell>0x1210020</cell>
+ <cell>0x00640064</cell>
+ <cell>0x00640064</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_4</cell>
+ <cell>0x1210024</cell>
+ <cell>0x01010001</cell>
+ <cell>0x01010001</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_5</cell>
+ <cell>0x1210028</cell>
+ <cell>0x01010101</cell>
+ <cell>0x01010101</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_6</cell>
+ <cell>0x121002C</cell>
+ <cell>0x01010101</cell>
+ <cell>0x01010101</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_7</cell>
+ <cell>0x1210030</cell>
+ <cell>0x07000001</cell>
+ <cell>0x07000001</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_8</cell>
+ <cell>0x1210034</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_9</cell>
+ <cell>0x1210038</cell>
+ <cell>0x00180014</cell>
+ <cell>0x00180014</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_10</cell>
+ <cell>0x121003C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>TXPLL_JA_RST</cell>
+ <cell>0x1210040</cell>
+ <cell>0x00000055</cell>
+ <cell>0x00000055</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SERDES_SSMOD</cell>
+ <cell>0x1210044</cell>
+ <cell>0x007F0102</cell>
+ <cell>0x007F0102</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SERDES_RTERM</cell>
+ <cell>0x1210050</cell>
+ <cell>0x000D0703</cell>
+ <cell>0x000D0703</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SERDES_RTT</cell>
+ <cell>0x1210054</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>Q3_MAIN</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x2210000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>SPARE</cell>
+ <cell>0x2210190</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
 <name>Q3_PMA_LANE3   (Unused)</name>
 <table>
 <header>
@@ -15144,964 +16810,6 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <row>
  <cell>MSTR_CTRL</cell>
  <cell>0x208094</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q3_PCSCMN   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x210000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>GSSCLK_CTRL</cell>
- <cell>0x210004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>QRST_R0</cell>
- <cell>0x210008</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>QDBG_R0</cell>
- <cell>0x21000C</cell>
- <cell>0x00001000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q3_PMA_CMN   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x1210000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>TXPLL_CLKBUF</cell>
- <cell>0x1210004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>TXPLL_CTRL</cell>
- <cell>0x1210008</cell>
- <cell>0x00E60010</cell>
- <cell>0x00E60010</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>TXPLL_CLK_SEL</cell>
- <cell>0x121000C</cell>
- <cell>0x3F3F1C03</cell>
- <cell>0x3F3F0000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>TXPLL_DIV_1</cell>
- <cell>0x1210010</cell>
- <cell>0x00190019</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>TXPLL_DIV_2</cell>
- <cell>0x1210014</cell>
- <cell>0x01000001</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>TXPLL_JA_1</cell>
- <cell>0x1210018</cell>
- <cell>0x00640064</cell>
- <cell>0x00640064</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_2</cell>
- <cell>0x121001C</cell>
- <cell>0x00000064</cell>
- <cell>0x00000064</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_3</cell>
- <cell>0x1210020</cell>
- <cell>0x00640064</cell>
- <cell>0x00640064</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_4</cell>
- <cell>0x1210024</cell>
- <cell>0x01010001</cell>
- <cell>0x01010001</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_5</cell>
- <cell>0x1210028</cell>
- <cell>0x01010101</cell>
- <cell>0x01010101</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_6</cell>
- <cell>0x121002C</cell>
- <cell>0x01010101</cell>
- <cell>0x01010101</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_7</cell>
- <cell>0x1210030</cell>
- <cell>0x07000001</cell>
- <cell>0x07000001</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_8</cell>
- <cell>0x1210034</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_9</cell>
- <cell>0x1210038</cell>
- <cell>0x00180014</cell>
- <cell>0x00180014</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_10</cell>
- <cell>0x121003C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>TXPLL_JA_RST</cell>
- <cell>0x1210040</cell>
- <cell>0x00000055</cell>
- <cell>0x00000055</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SERDES_SSMOD</cell>
- <cell>0x1210044</cell>
- <cell>0x007F0102</cell>
- <cell>0x007F0102</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SERDES_RTERM</cell>
- <cell>0x1210050</cell>
- <cell>0x000D0703</cell>
- <cell>0x000D0703</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SERDES_RTT</cell>
- <cell>0x1210054</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q3_MAIN   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x2210000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SPARE</cell>
- <cell>0x2210190</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q3_PMA_LANE1   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x1202000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_1</cell>
- <cell>0x1202004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_2</cell>
- <cell>0x1202008</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_3</cell>
- <cell>0x120200C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_1</cell>
- <cell>0x1202010</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_2</cell>
- <cell>0x1202014</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_3</cell>
- <cell>0x1202018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_1</cell>
- <cell>0x1202020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_2</cell>
- <cell>0x1202024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_1</cell>
- <cell>0x1202028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_2</cell>
- <cell>0x120202C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_IN_TERM</cell>
- <cell>0x1202030</cell>
- <cell>0x000000A7</cell>
- <cell>0x00000010</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_PKDET</cell>
- <cell>0x1202034</cell>
- <cell>0x000000AC</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RTL_EM</cell>
- <cell>0x1202038</cell>
- <cell>0x000000C8</cell>
- <cell>0x000000C8</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_LOCK_CTRL</cell>
- <cell>0x120203C</cell>
- <cell>0x00000008</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RXPLL_DIV</cell>
- <cell>0x1202040</cell>
- <cell>0x00002219</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_TEST_BUS</cell>
- <cell>0x1202044</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CLK_CTRL</cell>
- <cell>0x1202048</cell>
- <cell>0x0000003C</cell>
- <cell>0x00000007</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RSTPD</cell>
- <cell>0x120204C</cell>
- <cell>0x0000002F</cell>
- <cell>0x0000002F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_ERR_CHK</cell>
- <cell>0x1202050</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_PCIE1_2_RXPLL_DIV</cell>
- <cell>0x1202054</cell>
- <cell>0x02322219</cell>
- <cell>0x02322219</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA1_2_RXPLL_DIV</cell>
- <cell>0x1202058</cell>
- <cell>0x22184418</cell>
- <cell>0x22184418</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA3_RXPLL_DIV</cell>
- <cell>0x120205C</cell>
- <cell>0x00000230</cell>
- <cell>0x00000230</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_CTRL</cell>
- <cell>0x1202070</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_CLK_CTRL</cell>
- <cell>0x1202074</cell>
- <cell>0x00000070</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RSTPD</cell>
- <cell>0x1202078</cell>
- <cell>0x00000006</cell>
- <cell>0x00000006</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_BYP</cell>
- <cell>0x120207C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_CTRL</cell>
- <cell>0x1202080</cell>
- <cell>0x00008A10</cell>
- <cell>0x00008A00</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_OUT</cell>
- <cell>0x1202084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_LSB</cell>
- <cell>0x1202088</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_MSB</cell>
- <cell>0x120208C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_TERM_CTRL</cell>
- <cell>0x1202090</cell>
- <cell>0x00007200</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_TEST_BUS</cell>
- <cell>0x1202094</cell>
- <cell>0xE0000000</cell>
- <cell>0xE0000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_DATA_CTRL</cell>
- <cell>0x1202098</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL</cell>
- <cell>0x120209C</cell>
- <cell>0x01000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_SEL</cell>
- <cell>0x12020A0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M0</cell>
- <cell>0x12020A4</cell>
- <cell>0x001B3423</cell>
- <cell>0x001B3423</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M1</cell>
- <cell>0x12020A8</cell>
- <cell>0x00232C27</cell>
- <cell>0x00232C27</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M2</cell>
- <cell>0x12020AC</cell>
- <cell>0x001B1B1B</cell>
- <cell>0x001B1B1B</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M3</cell>
- <cell>0x12020B0</cell>
- <cell>0x001B1B14</cell>
- <cell>0x001B1B14</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M4</cell>
- <cell>0x12020B4</cell>
- <cell>0x00240C0A</cell>
- <cell>0x00240C0A</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M5</cell>
- <cell>0x12020B8</cell>
- <cell>0x1B383B38</cell>
- <cell>0x1B383B38</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SERDES_RTL_CTRL</cell>
- <cell>0x12020C0</cell>
- <cell>0x00000100</cell>
- <cell>0x00000100</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_0</cell>
- <cell>0x12020D0</cell>
- <cell>0x64100702</cell>
- <cell>0x64100702</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_1</cell>
- <cell>0x12020D4</cell>
- <cell>0x01034018</cell>
- <cell>0x01034018</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_2</cell>
- <cell>0x12020D8</cell>
- <cell>0x00800000</cell>
- <cell>0x00800000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CMD</cell>
- <cell>0x12020DC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_BYPASS</cell>
- <cell>0x12020E0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_EYE_DATA</cell>
- <cell>0x12020E4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CDRH0_MON</cell>
- <cell>0x12020E8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_0</cell>
- <cell>0x12020EC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_1</cell>
- <cell>0x12020F0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_OS_MON</cell>
- <cell>0x12020F4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_0</cell>
- <cell>0x12020F8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_1</cell>
- <cell>0x12020FC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_FLAG</cell>
- <cell>0x1202100</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q3_PCS_LANE1   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x202000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LFWF_R0</cell>
- <cell>0x202004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LOVR_R0</cell>
- <cell>0x202008</cell>
- <cell>0x00000010</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LPIP_R0</cell>
- <cell>0x20200C</cell>
- <cell>0x0000005D</cell>
- <cell>0x00000058</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>L64_R0</cell>
- <cell>0x202010</cell>
- <cell>0x01400000</cell>
- <cell>0x01400000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R1</cell>
- <cell>0x202014</cell>
- <cell>0x00000001</cell>
- <cell>0x00000001</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R2</cell>
- <cell>0x202018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R3</cell>
- <cell>0x20201C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R4</cell>
- <cell>0x202020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R5</cell>
- <cell>0x202024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R6</cell>
- <cell>0x202028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R7</cell>
- <cell>0x20202C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R8</cell>
- <cell>0x202030</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R9</cell>
- <cell>0x202034</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R10</cell>
- <cell>0x202038</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L8_R0</cell>
- <cell>0x202040</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LNTV_R0</cell>
- <cell>0x202050</cell>
- <cell>0x00000E0E</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R0</cell>
- <cell>0x202058</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R1</cell>
- <cell>0x20205C</cell>
- <cell>0x03000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LRST_R0</cell>
- <cell>0x202068</cell>
- <cell>0x00000004</cell>
- <cell>0x00000004</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LRST_OPT</cell>
- <cell>0x20206C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R0</cell>
- <cell>0x202078</cell>
- <cell>0x110F110F</cell>
- <cell>0x110F110F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R1</cell>
- <cell>0x20207C</cell>
- <cell>0x9888332D</cell>
- <cell>0x9888332D</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R2</cell>
- <cell>0x202080</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R3</cell>
- <cell>0x202084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R0</cell>
- <cell>0x202088</cell>
- <cell>0x03030347</cell>
- <cell>0x03030300</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R1</cell>
- <cell>0x20208C</cell>
- <cell>0x000A0640</cell>
- <cell>0x000A0640</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R2</cell>
- <cell>0x202090</cell>
- <cell>0x000000A6</cell>
- <cell>0x000000A6</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>MSTR_CTRL</cell>
- <cell>0x202094</cell>
  <cell>0x00000000</cell>
  <cell>0x00000000</cell>
  <cell>No</cell>
@@ -16819,864 +17527,6 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>Q3_PMA_LANE0   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x1201000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_1</cell>
- <cell>0x1201004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_2</cell>
- <cell>0x1201008</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_CDR_CTRL_3</cell>
- <cell>0x120100C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_1</cell>
- <cell>0x1201010</cell>
- <cell>0x00000015</cell>
- <cell>0x00000015</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_2</cell>
- <cell>0x1201014</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFEEM_CTRL_3</cell>
- <cell>0x1201018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_1</cell>
- <cell>0x1201020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CTRL_2</cell>
- <cell>0x1201024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_1</cell>
- <cell>0x1201028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_EM_CTRL_2</cell>
- <cell>0x120102C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_IN_TERM</cell>
- <cell>0x1201030</cell>
- <cell>0x000000A7</cell>
- <cell>0x00000010</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_PKDET</cell>
- <cell>0x1201034</cell>
- <cell>0x000000AC</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RTL_EM</cell>
- <cell>0x1201038</cell>
- <cell>0x000000C8</cell>
- <cell>0x000000C8</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_LOCK_CTRL</cell>
- <cell>0x120103C</cell>
- <cell>0x00000008</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RXPLL_DIV</cell>
- <cell>0x1201040</cell>
- <cell>0x00002219</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_TEST_BUS</cell>
- <cell>0x1201044</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_CLK_CTRL</cell>
- <cell>0x1201048</cell>
- <cell>0x0000003C</cell>
- <cell>0x00000007</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_RSTPD</cell>
- <cell>0x120104C</cell>
- <cell>0x0000002F</cell>
- <cell>0x0000002F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_RTL_ERR_CHK</cell>
- <cell>0x1201050</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_PCIE1_2_RXPLL_DIV</cell>
- <cell>0x1201054</cell>
- <cell>0x02322219</cell>
- <cell>0x02322219</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA1_2_RXPLL_DIV</cell>
- <cell>0x1201058</cell>
- <cell>0x22184418</cell>
- <cell>0x22184418</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_SATA3_RXPLL_DIV</cell>
- <cell>0x120105C</cell>
- <cell>0x00000230</cell>
- <cell>0x00000230</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_CTRL</cell>
- <cell>0x1201070</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_CLK_CTRL</cell>
- <cell>0x1201074</cell>
- <cell>0x00000070</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RSTPD</cell>
- <cell>0x1201078</cell>
- <cell>0x00000006</cell>
- <cell>0x00000006</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_BYP</cell>
- <cell>0x120107C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_CTRL</cell>
- <cell>0x1201080</cell>
- <cell>0x00008A10</cell>
- <cell>0x00008A00</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_RXDET_OUT</cell>
- <cell>0x1201084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_LSB</cell>
- <cell>0x1201088</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_STATIC_MSB</cell>
- <cell>0x120108C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_TERM_CTRL</cell>
- <cell>0x1201090</cell>
- <cell>0x00007200</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_TEST_BUS</cell>
- <cell>0x1201094</cell>
- <cell>0xE0000000</cell>
- <cell>0xE0000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_DATA_CTRL</cell>
- <cell>0x1201098</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL</cell>
- <cell>0x120109C</cell>
- <cell>0x01000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_SEL</cell>
- <cell>0x12010A0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M0</cell>
- <cell>0x12010A4</cell>
- <cell>0x001B3423</cell>
- <cell>0x001B3423</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M1</cell>
- <cell>0x12010A8</cell>
- <cell>0x00232C27</cell>
- <cell>0x00232C27</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M2</cell>
- <cell>0x12010AC</cell>
- <cell>0x001B1B1B</cell>
- <cell>0x001B1B1B</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M3</cell>
- <cell>0x12010B0</cell>
- <cell>0x001B1B14</cell>
- <cell>0x001B1B14</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M4</cell>
- <cell>0x12010B4</cell>
- <cell>0x00240C0A</cell>
- <cell>0x00240C0A</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SER_DRV_CTRL_M5</cell>
- <cell>0x12010B8</cell>
- <cell>0x1B383B38</cell>
- <cell>0x1B383B38</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>SERDES_RTL_CTRL</cell>
- <cell>0x12010C0</cell>
- <cell>0x00000100</cell>
- <cell>0x00000100</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_0</cell>
- <cell>0x12010D0</cell>
- <cell>0x64100702</cell>
- <cell>0x64100702</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_1</cell>
- <cell>0x12010D4</cell>
- <cell>0x01034018</cell>
- <cell>0x01034018</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CTRL_2</cell>
- <cell>0x12010D8</cell>
- <cell>0x00800000</cell>
- <cell>0x00800000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_CMD</cell>
- <cell>0x12010DC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_BYPASS</cell>
- <cell>0x12010E0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_EYE_DATA</cell>
- <cell>0x12010E4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CDRH0_MON</cell>
- <cell>0x12010E8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_0</cell>
- <cell>0x12010EC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_COEFF_MON_1</cell>
- <cell>0x12010F0</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_OS_MON</cell>
- <cell>0x12010F4</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_0</cell>
- <cell>0x12010F8</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_ST_1</cell>
- <cell>0x12010FC</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>DES_DFE_CAL_FLAG</cell>
- <cell>0x1201100</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q3_PCS_LANE0   (Unused)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x201000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000100</cell>
- <cell>Yes</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LFWF_R0</cell>
- <cell>0x201004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LOVR_R0</cell>
- <cell>0x201008</cell>
- <cell>0x00000010</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LPIP_R0</cell>
- <cell>0x20100C</cell>
- <cell>0x0000005D</cell>
- <cell>0x00000058</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>L64_R0</cell>
- <cell>0x201010</cell>
- <cell>0x01400000</cell>
- <cell>0x01400000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R1</cell>
- <cell>0x201014</cell>
- <cell>0x00000001</cell>
- <cell>0x00000001</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R2</cell>
- <cell>0x201018</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R3</cell>
- <cell>0x20101C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R4</cell>
- <cell>0x201020</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R5</cell>
- <cell>0x201024</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R6</cell>
- <cell>0x201028</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R7</cell>
- <cell>0x20102C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R8</cell>
- <cell>0x201030</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R9</cell>
- <cell>0x201034</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L64_R10</cell>
- <cell>0x201038</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>L8_R0</cell>
- <cell>0x201040</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LNTV_R0</cell>
- <cell>0x201050</cell>
- <cell>0x00000E0E</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R0</cell>
- <cell>0x201058</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LCLK_R1</cell>
- <cell>0x20105C</cell>
- <cell>0x03000000</cell>
- <cell>0x00000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>LRST_R0</cell>
- <cell>0x201068</cell>
- <cell>0x00000004</cell>
- <cell>0x00000004</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>LRST_OPT</cell>
- <cell>0x20106C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R0</cell>
- <cell>0x201078</cell>
- <cell>0x110F110F</cell>
- <cell>0x110F110F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R1</cell>
- <cell>0x20107C</cell>
- <cell>0x9888332D</cell>
- <cell>0x9888332D</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R2</cell>
- <cell>0x201080</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>OOB_R3</cell>
- <cell>0x201084</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R0</cell>
- <cell>0x201088</cell>
- <cell>0x03030347</cell>
- <cell>0x03030300</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R1</cell>
- <cell>0x20108C</cell>
- <cell>0x000A0640</cell>
- <cell>0x000A0640</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>PMA_CTRL_R2</cell>
- <cell>0x201090</cell>
- <cell>0x000000A6</cell>
- <cell>0x000000A6</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>MSTR_CTRL</cell>
- <cell>0x201094</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
-<name>Q1_TXPLL1   (Transceiver_Main_0/Transceiver_LanesConnection_0/inst_Transciever_OneLane_0/PF_TX_PLL_C1_0/PF_TX_PLL_C1_0/txpll_isnt_0)</name>
-<table>
-<header>
- <cell>Register Name</cell>
- <cell>Address</cell>
- <cell>Silicon Default Value</cell>
- <cell>Configured Value</cell>
- <cell>Modified</cell>
- <cell>Lock Value(*)</cell>
-</header>
-<row>
- <cell>SOFT_RESET</cell>
- <cell>0x4020000</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>EXTPLL_CLKBUF</cell>
- <cell>0x4020004</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>EXTPLL_CTRL</cell>
- <cell>0x4020008</cell>
- <cell>0x00CE0009</cell>
- <cell>0x00800008</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>EXTPLL_CLK_SEL</cell>
- <cell>0x402000C</cell>
- <cell>0x00001F00</cell>
- <cell>0x00000003</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>EXTPLL_DIV_1</cell>
- <cell>0x4020010</cell>
- <cell>0x00140014</cell>
- <cell>0x0028000D</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>EXTPLL_DIV_2</cell>
- <cell>0x4020014</cell>
- <cell>0x01000001</cell>
- <cell>0x02000000</cell>
- <cell>Yes</cell>
- <cell>1</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_1</cell>
- <cell>0x4020018</cell>
- <cell>0x00640064</cell>
- <cell>0x00640064</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_2</cell>
- <cell>0x402001C</cell>
- <cell>0x00000064</cell>
- <cell>0x00000064</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_3</cell>
- <cell>0x4020020</cell>
- <cell>0x000A0064</cell>
- <cell>0x000A0064</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_4</cell>
- <cell>0x4020024</cell>
- <cell>0x0101000F</cell>
- <cell>0x0101000F</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_5</cell>
- <cell>0x4020028</cell>
- <cell>0x01010101</cell>
- <cell>0x01010101</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_6</cell>
- <cell>0x402002C</cell>
- <cell>0x01010101</cell>
- <cell>0x01010101</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_7</cell>
- <cell>0x4020030</cell>
- <cell>0x07000001</cell>
- <cell>0x07000001</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_8</cell>
- <cell>0x4020034</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_9</cell>
- <cell>0x4020038</cell>
- <cell>0x00180014</cell>
- <cell>0x00180014</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_10</cell>
- <cell>0x402003C</cell>
- <cell>0x00000000</cell>
- <cell>0x00000000</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-<row>
- <cell>EXTPLL_JA_RST</cell>
- <cell>0x4020040</cell>
- <cell>0x00000055</cell>
- <cell>0x00000055</cell>
- <cell>No</cell>
- <cell>N/A</cell>
-</row>
-</table>
-<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
-</section>
-<section>
 <name>PLL_SE_0   (Clock_Reset_0/PF_CCC_C8_0/PF_CCC_C8_0/pll_inst_0)</name>
 <table>
 <header>
@@ -17723,7 +17573,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>PLL_DIV_0_1</cell>
  <cell>0x8010010</cell>
  <cell>0x00000000</cell>
- <cell>0x01000800</cell>
+ <cell>0x01000A00</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
@@ -17795,7 +17645,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>PLL_NW_0   (Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/pll_inst_0)</name>
+<name>PLL_NE_1   (Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/pll_inst_0)</name>
 <table>
 <header>
  <cell>Register Name</cell>
@@ -17807,7 +17657,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </header>
 <row>
  <cell>SOFT_RESET</cell>
- <cell>0x8100000</cell>
+ <cell>0x8080000</cell>
  <cell>0x00000000</cell>
  <cell>0x00000000</cell>
  <cell>No</cell>
@@ -17815,7 +17665,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>PLL_CTRL</cell>
- <cell>0x8100004</cell>
+ <cell>0x8080004</cell>
  <cell>0x0000107C</cell>
  <cell>0x00001087</cell>
  <cell>Yes</cell>
@@ -17823,15 +17673,15 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>PLL_REF_FB</cell>
- <cell>0x8100008</cell>
+ <cell>0x8080008</cell>
  <cell>0x00000000</cell>
- <cell>0x00000100</cell>
+ <cell>0x00000200</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
 <row>
  <cell>PLL_FRACN</cell>
- <cell>0x810000C</cell>
+ <cell>0x808000C</cell>
  <cell>0x00000000</cell>
  <cell>0x00000000</cell>
  <cell>No</cell>
@@ -17839,15 +17689,15 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>PLL_DIV_0_1</cell>
- <cell>0x8100010</cell>
+ <cell>0x8080010</cell>
  <cell>0x00000000</cell>
- <cell>0x01001000</cell>
+ <cell>0x01000E00</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
 <row>
  <cell>PLL_DIV_2_3</cell>
- <cell>0x8100014</cell>
+ <cell>0x8080014</cell>
  <cell>0x00000000</cell>
  <cell>0x01000100</cell>
  <cell>Yes</cell>
@@ -17855,7 +17705,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>PLL_CTRL2</cell>
- <cell>0x8100018</cell>
+ <cell>0x8080018</cell>
  <cell>0x00001006</cell>
  <cell>0x00001014</cell>
  <cell>Yes</cell>
@@ -17863,7 +17713,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>PLL_CAL</cell>
- <cell>0x810001C</cell>
+ <cell>0x808001C</cell>
  <cell>0x00000000</cell>
  <cell>0x0000000E</cell>
  <cell>Yes</cell>
@@ -17871,7 +17721,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>PLL_PHADJ</cell>
- <cell>0x8100020</cell>
+ <cell>0x8080020</cell>
  <cell>0x00004001</cell>
  <cell>0x00004000</cell>
  <cell>Yes</cell>
@@ -17879,7 +17729,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>SSCG_REG_0</cell>
- <cell>0x8100024</cell>
+ <cell>0x8080024</cell>
  <cell>0x00000000</cell>
  <cell>0x00000001</cell>
  <cell>Yes</cell>
@@ -17887,7 +17737,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>SSCG_REG_1</cell>
- <cell>0x8100028</cell>
+ <cell>0x8080028</cell>
  <cell>0x00000000</cell>
  <cell>0x0000000A</cell>
  <cell>Yes</cell>
@@ -17895,15 +17745,15 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>SSCG_REG_2</cell>
- <cell>0x810002C</cell>
+ <cell>0x808002C</cell>
  <cell>0x00000000</cell>
- <cell>0x0000007D</cell>
+ <cell>0x000000F5</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
 <row>
  <cell>SSCG_REG_3</cell>
- <cell>0x8100030</cell>
+ <cell>0x8080030</cell>
  <cell>0x00000000</cell>
  <cell>0x00000001</cell>
  <cell>Yes</cell>
@@ -17913,7 +17763,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
-<name>PLL_SW_0   (Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0)</name>
+<name>PLL_SW_0   (Clock_Reset_0/PF_CCC_C9_0/PF_CCC_C9_0/pll_inst_0)</name>
 <table>
 <header>
  <cell>Register Name</cell>
@@ -17943,7 +17793,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>PLL_REF_FB</cell>
  <cell>0x8400008</cell>
  <cell>0x00000000</cell>
- <cell>0x00000100</cell>
+ <cell>0x00002700</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
@@ -17959,7 +17809,7 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>PLL_DIV_0_1</cell>
  <cell>0x8400010</cell>
  <cell>0x00000000</cell>
- <cell>0x01000C00</cell>
+ <cell>0x01001F00</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
@@ -18015,13 +17865,131 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
  <cell>SSCG_REG_2</cell>
  <cell>0x840002C</cell>
  <cell>0x00000000</cell>
- <cell>0x0000001E</cell>
+ <cell>0x000004D6</cell>
  <cell>Yes</cell>
  <cell>N/A</cell>
 </row>
 <row>
  <cell>SSCG_REG_3</cell>
  <cell>0x8400030</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000001</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
+<name>PLL_SE_1   (Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x8020000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_CTRL</cell>
+ <cell>0x8020004</cell>
+ <cell>0x0000107C</cell>
+ <cell>0x00001087</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_REF_FB</cell>
+ <cell>0x8020008</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000100</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_FRACN</cell>
+ <cell>0x802000C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_DIV_0_1</cell>
+ <cell>0x8020010</cell>
+ <cell>0x00000000</cell>
+ <cell>0x01000C00</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_DIV_2_3</cell>
+ <cell>0x8020014</cell>
+ <cell>0x00000000</cell>
+ <cell>0x01000100</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_CTRL2</cell>
+ <cell>0x8020018</cell>
+ <cell>0x00001006</cell>
+ <cell>0x00001014</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_CAL</cell>
+ <cell>0x802001C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0000000E</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>PLL_PHADJ</cell>
+ <cell>0x8020020</cell>
+ <cell>0x00004001</cell>
+ <cell>0x00004000</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SSCG_REG_0</cell>
+ <cell>0x8020024</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000001</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SSCG_REG_1</cell>
+ <cell>0x8020028</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0000000A</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SSCG_REG_2</cell>
+ <cell>0x802002C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x0000001E</cell>
+ <cell>Yes</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>SSCG_REG_3</cell>
+ <cell>0x8020030</cell>
  <cell>0x00000000</cell>
  <cell>0x00000001</cell>
  <cell>Yes</cell>
@@ -18599,6 +18567,156 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
 </section>
 <section>
+<name>Q1_TXPLL1   (Unused)</name>
+<table>
+<header>
+ <cell>Register Name</cell>
+ <cell>Address</cell>
+ <cell>Silicon Default Value</cell>
+ <cell>Configured Value</cell>
+ <cell>Modified</cell>
+ <cell>Lock Value(*)</cell>
+</header>
+<row>
+ <cell>SOFT_RESET</cell>
+ <cell>0x4020000</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>EXTPLL_CLKBUF</cell>
+ <cell>0x4020004</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>EXTPLL_CTRL</cell>
+ <cell>0x4020008</cell>
+ <cell>0x00CE0009</cell>
+ <cell>0x00CE0000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>EXTPLL_CLK_SEL</cell>
+ <cell>0x402000C</cell>
+ <cell>0x00001F00</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>EXTPLL_DIV_1</cell>
+ <cell>0x4020010</cell>
+ <cell>0x00140014</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>EXTPLL_DIV_2</cell>
+ <cell>0x4020014</cell>
+ <cell>0x01000001</cell>
+ <cell>0x00000000</cell>
+ <cell>Yes</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_1</cell>
+ <cell>0x4020018</cell>
+ <cell>0x00640064</cell>
+ <cell>0x00640064</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_2</cell>
+ <cell>0x402001C</cell>
+ <cell>0x00000064</cell>
+ <cell>0x00000064</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_3</cell>
+ <cell>0x4020020</cell>
+ <cell>0x000A0064</cell>
+ <cell>0x000A0064</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_4</cell>
+ <cell>0x4020024</cell>
+ <cell>0x0101000F</cell>
+ <cell>0x0101000F</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_5</cell>
+ <cell>0x4020028</cell>
+ <cell>0x01010101</cell>
+ <cell>0x01010101</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_6</cell>
+ <cell>0x402002C</cell>
+ <cell>0x01010101</cell>
+ <cell>0x01010101</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_7</cell>
+ <cell>0x4020030</cell>
+ <cell>0x07000001</cell>
+ <cell>0x07000001</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_8</cell>
+ <cell>0x4020034</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_9</cell>
+ <cell>0x4020038</cell>
+ <cell>0x00180014</cell>
+ <cell>0x00180014</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_10</cell>
+ <cell>0x402003C</cell>
+ <cell>0x00000000</cell>
+ <cell>0x00000000</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+<row>
+ <cell>EXTPLL_JA_RST</cell>
+ <cell>0x4020040</cell>
+ <cell>0x00000055</cell>
+ <cell>0x00000055</cell>
+ <cell>No</cell>
+ <cell>N/A</cell>
+</row>
+</table>
+<text>Note: (*) Lock Value = 0, disables modification of the Register. Lock Value = N/A, locking does not apply to the Register.</text>
+</section>
+<section>
 <name>Q3_TXPLL   (Unused)</name>
 <table>
 <header>
@@ -18936,13 +19054,13 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <row>
  <cell>CCC PLL</cell>
  <cell>PLL_NE_1_LOCK</cell>
- <cell>N/A</cell>
+ <cell>Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/pll_inst_0</cell>
  <cell>1</cell>
 </row>
 <row>
  <cell>CCC PLL</cell>
  <cell>PLL_NW_0_LOCK</cell>
- <cell>Clock_Reset_0/PF_CCC_C7_0/PF_CCC_C7_0/pll_inst_0</cell>
+ <cell>N/A</cell>
  <cell>1</cell>
 </row>
 <row>
@@ -18960,13 +19078,13 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 <row>
  <cell>CCC PLL</cell>
  <cell>PLL_SE_1_LOCK</cell>
- <cell>N/A</cell>
+ <cell>Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0</cell>
  <cell>1</cell>
 </row>
 <row>
  <cell>CCC PLL</cell>
  <cell>PLL_SW_0_LOCK</cell>
- <cell>Clock_Reset_0/PF_CCC_C3_0/PF_CCC_C3_0/pll_inst_0</cell>
+ <cell>Clock_Reset_0/PF_CCC_C9_0/PF_CCC_C9_0/pll_inst_0</cell>
  <cell>1</cell>
 </row>
 <row>
@@ -25476,6 +25594,1749 @@ INFO: The PUFT timing numbers reflect the time elapsed between the assertion of 
 </row>
 <row>
  <cell>XCVR_ARST_N[1]</cell>
+ <cell>1</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Q0_TXPLL0 (Unused pin tie-off)</name>
+<table>
+<header>
+ <cell>Input Pin</cell>
+ <cell>Tie-Off</cell>
+</header>
+<row>
+ <cell>DRI_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[11]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[12]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[13]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[14]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[15]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[16]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[17]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[18]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[19]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[20]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[21]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[22]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[23]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[24]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[25]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[26]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[27]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[28]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[29]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[30]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[31]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[32]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>FAB_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>JA_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_EN</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_P</cell>
+ <cell>1</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Q0_TXPLL1 (Unused pin tie-off)</name>
+<table>
+<header>
+ <cell>Input Pin</cell>
+ <cell>Tie-Off</cell>
+</header>
+<row>
+ <cell>DRI_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[11]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[12]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[13]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[14]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[15]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[16]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[17]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[18]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[19]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[20]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[21]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[22]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[23]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[24]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[25]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[26]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[27]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[28]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[29]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[30]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[31]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[32]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>FAB_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>JA_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_EN</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_P</cell>
+ <cell>1</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Q1_TXPLL0 (Unused pin tie-off)</name>
+<table>
+<header>
+ <cell>Input Pin</cell>
+ <cell>Tie-Off</cell>
+</header>
+<row>
+ <cell>DRI_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[11]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[12]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[13]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[14]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[15]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[16]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[17]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[18]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[19]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[20]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[21]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[22]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[23]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[24]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[25]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[26]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[27]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[28]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[29]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[30]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[31]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[32]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>FAB_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>JA_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_EN</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_P</cell>
+ <cell>1</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Q1_TXPLL1 (Unused pin tie-off)</name>
+<table>
+<header>
+ <cell>Input Pin</cell>
+ <cell>Tie-Off</cell>
+</header>
+<row>
+ <cell>DRI_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[11]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[12]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[13]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[14]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[15]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[16]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[17]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[18]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[19]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[20]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[21]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[22]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[23]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[24]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[25]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[26]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[27]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[28]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[29]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[30]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[31]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[32]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>FAB_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>JA_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_EN</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_P</cell>
+ <cell>1</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Q2_TXPLL0 (Unused pin tie-off)</name>
+<table>
+<header>
+ <cell>Input Pin</cell>
+ <cell>Tie-Off</cell>
+</header>
+<row>
+ <cell>DRI_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[11]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[12]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[13]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[14]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[15]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[16]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[17]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[18]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[19]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[20]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[21]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[22]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[23]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[24]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[25]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[26]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[27]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[28]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[29]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[30]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[31]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[32]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>FAB_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>JA_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_EN</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_P</cell>
+ <cell>1</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Q2_TXPLL1 (Unused pin tie-off)</name>
+<table>
+<header>
+ <cell>Input Pin</cell>
+ <cell>Tie-Off</cell>
+</header>
+<row>
+ <cell>DRI_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[11]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[12]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[13]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[14]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[15]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[16]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[17]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[18]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[19]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[20]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[21]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[22]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[23]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[24]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[25]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[26]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[27]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[28]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[29]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[30]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[31]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[32]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>FAB_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>JA_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_EN</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_P</cell>
+ <cell>1</cell>
+</row>
+</table>
+</section>
+<section>
+<name>Q3_TXPLL (Unused pin tie-off)</name>
+<table>
+<header>
+ <cell>Input Pin</cell>
+ <cell>Tie-Off</cell>
+</header>
+<row>
+ <cell>DRI_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_CTRL[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[10]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[11]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[12]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[13]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[14]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[15]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[16]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[17]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[18]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[19]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[20]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[21]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[22]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[23]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[24]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[25]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[26]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[27]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[28]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[29]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[30]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[31]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[32]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[4]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[5]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[6]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[7]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[8]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>DRI_WDATA[9]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>FAB_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>JA_REF_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ADDR[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_ARST_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_CLK</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_EN</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[0]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[1]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[2]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>LINK_WDATA[3]</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_N</cell>
+ <cell>1</cell>
+</row>
+<row>
+ <cell>REF_CLK_P</cell>
  <cell>1</cell>
 </row>
 </table>

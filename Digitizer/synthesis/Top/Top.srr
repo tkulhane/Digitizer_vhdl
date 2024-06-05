@@ -1,4 +1,4 @@
-# Sun Jun  2 14:54:31 2024
+# Wed Jun  5 19:50:22 2024
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -23,29 +23,28 @@ Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:0
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 133MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 133MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 134MB)
 
 
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 133MB)
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 134MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 133MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 134MB)
 
 
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transciever_onelane\transciever_onelane.v":9:7:9:25|Found compile point of type hard on View view:work.Transciever_OneLane_inst_Transciever_OneLane_1(verilog) 
-@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\transciever_onelane\transciever_onelane.v":9:7:9:25|Found compile point of type hard on View view:work.Transciever_OneLane_inst_Transciever_OneLane_0(verilog) 
+@N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_lanesconnection.vhd":6:7:6:33|Found compile point of type hard on View view:work.Transceiver_LanesConnection(rtl) 
 @N: MF104 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\communication\communication.v":9:7:9:19|Found compile point of type hard on View view:work.Communication(verilog) 
 
 
 @N: MF105 |Performing bottom-up mapping of Top level view:work.Top(verilog) 
 
-Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 234MB peak: 234MB)
+Start loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 262MB peak: 262MB)
 
 
-Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 218MB peak: 246MB)
+Finished loading ILMs (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 236MB peak: 299MB)
 
 
 Begin compile point sub-process log
@@ -54,7 +53,7 @@ Begin compile point sub-process log
 		 RTL and/or Constraints changed.
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 218MB peak: 246MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 236MB peak: 299MB)
 
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":49:26:49:36|Tristate driver B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net B_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
 @N: MO111 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\component\work\corefifo_c4\corefifo_c4_0\rtl\vlog\core\corefifo_c4_corefifo_c4_0_ram_wrapper.v":48:26:48:36|Tristate driver A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) on net A_DB_DETECT (in view: work.COREFIFO_C4_COREFIFO_C4_0_ram_wrapper_16s_16s_14_14_1s_1s_2s_0s_0s(verilog)) has its enable tied to GND.
@@ -80,11 +79,32 @@ Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapse
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|Found ROM decode_vector_16[12:0] (in view: work.Command_Decoder(rtl)) with 27 words by 13 bits.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
-@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|Found ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) with 4 words by 16 bits.
+@N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\sample_ram_block_decoder.vhd":36:8:36:11|Found ROM Sample_RAM_Block_Decoder_0.Output_vector_1[15:0] (in view: work.Sample_RAM_Block(verilog)) with 2 words by 16 bits.
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 237MB peak: 250MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 244MB peak: 299MB)
 
-Encoding state machine state_reg[0:5] (in view: work.AnalyzInCirc_Controler_4(rtl))
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_12[4] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_12[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_12[1] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_12[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_8[4] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_8[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_8[2] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_8[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_8[1] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_8[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_16[3] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_16[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_16[2] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_16[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_16[1] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_16[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_20[3] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_20[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_20[1] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_20[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_24[2] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_24[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_24[1] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_24[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_28[1] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_28[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_12[3] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_12[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_20[4] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_20[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_24[4] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_24[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_28[4] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_28[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_28[3] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_28[2]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_4[3] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_4[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_4[1] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_4[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":57:8:57:9|Removing instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_4[4] because it is equivalent to instance Data_Block_0.Test_Generator_for_Lanes_0.Test_Counter.Test_Data_Array_4[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+Encoding state machine state_reg[0:5] (in view: work.AnalyzInCirc_Controler_12(rtl))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -92,114 +112,114 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_1024_Top(rtl) instance WR_INDEX[9:3] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_1024_Top(rtl) instance RD_INDEX[9:0] 
-@N: MF135 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|RAM fifo_data_data[11:0] (in view: work.AnalyzInCirc_FIFO_12_8_1024_Top(rtl)) is 1024 words by 12 bits.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1023_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1023_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1023_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1022_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1022_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1022_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1021_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1021_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1021_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1020_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1020_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1020_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1019_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1019_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1019_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1018_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1018_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1018_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1017_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1017_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1017_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1016_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1016_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1016_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1015_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1015_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1015_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1014_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1014_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1014_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1013_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1013_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1013_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1012_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1012_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1012_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1011_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1011_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1011_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1010_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1010_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1010_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1009_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1009_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1009_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1008_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1008_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1008_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1007_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1007_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1007_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1006_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1006_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1006_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1005_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1005_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1005_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1004_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1004_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1004_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1003_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1003_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1003_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1002_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1002_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1002_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1001_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1001_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1001_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1000_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1000_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram1000_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram999_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram999_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram999_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram998_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram998_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram998_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram997_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram997_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram997_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram996_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram996_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram996_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram995_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram995_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram995_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram994_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram994_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram994_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram993_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram993_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram993_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram992_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram992_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram992_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram991_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram991_[10] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram991_[9] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
-@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram990_[11] (in view: work.SYNRAM1024X12(decomp)) because it does not drive other instances.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_256_Top(rtl) instance WR_INDEX[7:3] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_256_Top(rtl) instance RD_INDEX[7:0] 
+@N: MF135 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|RAM fifo_data_data[11:0] (in view: work.AnalyzInCirc_FIFO_12_8_256_Top(rtl)) is 256 words by 12 bits.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram255_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram255_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram255_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram254_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram254_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram254_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram253_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram253_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram253_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram252_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram252_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram252_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram251_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram251_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram251_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram250_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram250_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram250_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram249_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram249_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram249_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram248_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram248_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram248_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram247_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram247_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram247_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram246_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram246_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram246_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram245_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram245_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram245_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram244_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram244_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram244_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram243_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram243_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram243_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram242_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram242_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram242_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram241_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram241_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram241_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram240_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram240_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram240_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram239_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram239_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram239_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram238_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram238_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram238_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram237_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram237_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram237_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram236_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram236_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram236_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram235_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram235_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram235_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram234_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram234_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram234_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram233_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram233_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram233_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram232_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram232_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram232_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram231_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram231_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram231_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram230_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram230_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram230_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram229_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram229_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram229_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram228_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram228_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram228_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram227_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram227_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram227_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram226_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram226_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram226_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram225_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram225_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram225_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram224_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram224_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram224_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram223_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram223_[10] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram223_[9] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
+@N: BN362 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing sequential instance ram222_[11] (in view: work.SYNRAM256X12(decomp)) because it does not drive other instances.
 
 Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log C:\VHDL_temp\Digitizer\Digitizer_vhdl\Digitizer\synthesis\Top\Top.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_1024_Top_0(rtl) instance WR_INDEX[9:3] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_1024_Top_0(rtl) instance RD_INDEX[9:0] 
-@N: MF135 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|RAM fifo_data_data[11:0] (in view: work.AnalyzInCirc_FIFO_12_8_1024_Top_0(rtl)) is 1024 words by 12 bits.
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_256_Top_0(rtl) instance WR_INDEX[7:3] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":66:8:66:9|Found counter in view:work.AnalyzInCirc_FIFO_12_8_256_Top_0(rtl) instance RD_INDEX[7:0] 
+@N: MF135 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|RAM fifo_data_data[11:0] (in view: work.AnalyzInCirc_FIFO_12_8_256_Top_0(rtl)) is 256 words by 12 bits.
 Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_Top(rtl))
 original code -> new code
    000001 -> 000001
@@ -217,16 +237,7 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":116:8:116:9|Found counter in view:work.Clock_Switch_1(rtl) instance fsm_timer[11:0] 
-Encoding state machine state_reg[0:5] (in view: work.Clock_Switch_0(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":116:8:116:9|Found counter in view:work.Clock_Switch_0(rtl) instance fsm_timer[11:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":117:8:117:9|Found counter in view:work.Clock_Switch_1(rtl) instance fsm_timer[11:0] 
 Encoding state machine state_reg[0:5] (in view: work.Clock_Controller(rtl))
 original code -> new code
    000001 -> 000001
@@ -235,7 +246,16 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":202:8:202:9|Removing instance Clock_Reset_0.Clock_Controller_0.read_data_frame_1[2] because it is equivalent to instance Clock_Reset_0.Clock_Controller_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_controller.vhd":202:8:202:9|Removing instance Clock_Reset_0.Clock_Controller_0.read_data_frame_1[3] because it is equivalent to instance Clock_Reset_0.Clock_Controller_0.read_data_frame_1[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+Encoding state machine state_reg[0:5] (in view: work.Clock_Switch_0(rtl))
+original code -> new code
+   000001 -> 000001
+   000010 -> 000010
+   000100 -> 000100
+   001000 -> 001000
+   010000 -> 010000
+   100000 -> 100000
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\clock_switch.vhd":117:8:117:9|Found counter in view:work.Clock_Switch_0(rtl) instance fsm_timer[11:0] 
 Encoding state machine state_reg[0:5] (in view: work.Reset_Controler(rtl))
 original code -> new code
    000001 -> 000001
@@ -359,8 +379,8 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":412:8:412:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Processed_Events[31:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":412:8:412:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Incoming_Events[31:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":423:8:423:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Processed_Events[31:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\trigger_control.vhd":423:8:423:9|Found counter in view:work.Trigger_Control(rtl) instance Counter_Incoming_Events[31:0] 
 Encoding state machine state_reg[0:6] (in view: work.FIFOs_Reader(rtl))
 original code -> new code
    0000001 -> 0000001
@@ -370,10 +390,10 @@ original code -> new code
    0010000 -> 0010000
    0100000 -> 0100000
    1000000 -> 1000000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":609:8:609:9|Found counter in view:work.FIFOs_Reader(rtl) instance BlockF_Counter[7:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":563:8:563:9|Found counter in view:work.FIFOs_Reader(rtl) instance Event_Size_Counter[19:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":514:8:514:9|Found counter in view:work.FIFOs_Reader(rtl) instance Sample_RAM_W_Address_Unsigned[17:0] 
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":537:8:537:9|Found counter in view:work.FIFOs_Reader(rtl) instance Event_RAM_W_Address_Integer[9:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":611:8:611:9|Found counter in view:work.FIFOs_Reader(rtl) instance BlockF_Counter[7:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":565:8:565:9|Found counter in view:work.FIFOs_Reader(rtl) instance Event_Size_Counter[19:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":515:8:515:9|Found counter in view:work.FIFOs_Reader(rtl) instance Sample_RAM_W_Address_Unsigned[16:0] 
+@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\fifos_reader.vhd":539:8:539:9|Found counter in view:work.FIFOs_Reader(rtl) instance Event_RAM_W_Address_Integer[9:0] 
 @N: MO230 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\datarammanage.vhd":78:8:78:9|Found up-down counter in view:work.DataRamManage(arch) instance CountOfSampleWord[127:0]  
 @N: MO230 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\datarammanage.vhd":50:8:50:9|Found up-down counter in view:work.DataRamManage(arch) instance CountOfEventWord[31:0]  
 @N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\communication_builder.vhd":230:8:230:9|Found counter in view:work.Communication_Builder(rtl) instance fsm_timer[7:0] 
@@ -395,12 +415,7 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-Encoding state machine state_reg[0:2] (in view: work.TxMainLinkController_2(rtl))
-original code -> new code
-   00 -> 00
-   01 -> 01
-   10 -> 10
-Encoding state machine state_reg[0:5] (in view: work.RxMainLinkController_2(rtl))
+Encoding state machine state_reg[0:5] (in view: work.work_transceiver_controller_rtl_6_1_g_NumberOfLanes(rtl))
 original code -> new code
    000001 -> 000001
    000010 -> 000010
@@ -408,44 +423,11 @@ original code -> new code
    001000 -> 001000
    010000 -> 010000
    100000 -> 100000
-@N: MO231 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\rxmainlinkcontroller.vhd":91:8:91:9|Found counter in view:work.RxMainLinkController_2(rtl) instance fsm_timer[9:0] 
-Encoding state machine RxLaneControl_0.state_reg[0:5] (in view: work.Transciever_OneLane_inst_Transciever_OneLane_1(verilog))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-Encoding state machine RxLaneControl_0.state_reg[0:5] (in view: work.Transciever_OneLane_inst_Transciever_OneLane_0(verilog))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_4[1] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_4[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_5[2] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_5[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_6[2] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_6[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_7[1] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_7[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_7[2] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_7[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_1[2] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_1[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_3[1] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_3[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\test_generator_for_lanes.vhd":66:8:66:9|Removing instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_2[2] because it is equivalent to instance Transceiver_Main_0.Test_Generator_for_Lanes_0.Test_Data_2[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-Encoding state machine state_reg[0:5] (in view: work.work_transceiver_controller_rtl_2_1_g_NumberOfLanes(rtl))
-original code -> new code
-   000001 -> 000001
-   000010 -> 000010
-   000100 -> 000100
-   001000 -> 001000
-   010000 -> 010000
-   100000 -> 100000
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[14] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[12] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[9] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[15]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[15] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[13]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":255:8:255:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[13] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":256:8:256:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[14] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[12]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":256:8:256:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[12] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":256:8:256:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[13] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":256:8:256:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[9] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\transceiver_controller.vhd":256:8:256:9|Removing instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[15] because it is equivalent to instance Transceiver_Main_0.Transceiver_Controller_0.read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 Encoding state machine state_reg[0:5] (in view: work.work_ctrlbus_handshake_rtl_8_16_1_g_WidthADDRg_WidthDATA_2(rtl))
 original code -> new code
    000001 -> 000001
@@ -501,8 +483,14 @@ original code -> new code
    0100000 -> 0100000
    1000000 -> 1000000
 
-Starting factoring (Real Time elapsed 0h:01m:22s; CPU Time elapsed 0h:01m:22s; Memory used current: 425MB peak: 450MB)
+Starting factoring (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:16s; Memory used current: 300MB peak: 303MB)
 
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing instance FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO_2.fifo_data_data (in view: work.AnalyzInCirc_Top(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing instance FifoInst_GEN\.3\.inst_AnalyzInCirc_FIFO_2.fifo_data_data (in view: work.AnalyzInCirc_Top(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing instance FifoInst_GEN\.4\.inst_AnalyzInCirc_FIFO_2.fifo_data_data (in view: work.AnalyzInCirc_Top(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing instance FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.fifo_data_data (in view: work.AnalyzInCirc_Top(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing instance FifoInst_GEN\.2\.inst_AnalyzInCirc_FIFO_2.fifo_data_data (in view: work.AnalyzInCirc_Top(rtl)) because it does not drive other instances.
+@N: BN115 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\analyzincirc_fifo.vhd":35:11:35:24|Removing instance FifoInst_GEN\.5\.inst_AnalyzInCirc_FIFO_2.fifo_data_data (in view: work.AnalyzInCirc_Top(rtl)) because it does not drive other instances.
 Auto Dissolve of COREFIFO_C4_0_2.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0_1.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
 Auto Dissolve of COREFIFO_C4_0_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr (inst of view:work.COREFIFO_C4_COREFIFO_C4_0_corefifo_sync_scntr_Z22_layer0_Top(verilog))
@@ -516,54 +504,50 @@ Auto Dissolve of COREFIFO_C4_0.COREFIFO_C4_0.genblk16\.fifo_corefifo_sync_scntr 
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[15] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[9] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 @W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\ctrlbus_handshake.vhd":155:8:155:9|Removing instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[13] because it is equivalent to instance Transceiver_Main_0.CtrlBus_HandShake_0.CTRL_read_data_frame[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing instance AnalyzatorInCircuit_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[0] because it is equivalent to instance Data_Block_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing instance Data_Block_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[1] because it is equivalent to instance AnalyzatorInCircuit_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished factoring (Real Time elapsed 0h:01m:27s; CPU Time elapsed 0h:01m:27s; Memory used current: 439MB peak: 450MB)
+Finished factoring (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:18s; Memory used current: 317MB peak: 317MB)
 
 
 Available hyper_sources - for debug and ip models
 	None Found
 
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing instance AnalyzatorInCircuit_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[0] because it is equivalent to instance Data_Block_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
-@W: BN132 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\synchronizer.vhd":28:12:28:13|Removing instance Data_Block_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[1] because it is equivalent to instance AnalyzatorInCircuit_0.CtrlBus_HandShake_0.inst_Synchronizer_PRH_Reset.Chain[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:01m:56s; CPU Time elapsed 0h:01m:56s; Memory used current: 761MB peak: 780MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:30s; CPU Time elapsed 0h:00m:30s; Memory used current: 431MB peak: 458MB)
 
 
-Starting Early Timing Optimization (Real Time elapsed 0h:02m:14s; CPU Time elapsed 0h:02m:14s; Memory used current: 704MB peak: 802MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:38s; Memory used current: 446MB peak: 458MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:03m:45s; CPU Time elapsed 0h:03m:45s; Memory used current: 735MB peak: 802MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:01m:03s; CPU Time elapsed 0h:01m:03s; Memory used current: 453MB peak: 458MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:03m:49s; CPU Time elapsed 0h:03m:49s; Memory used current: 735MB peak: 802MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:01m:04s; CPU Time elapsed 0h:01m:04s; Memory used current: 453MB peak: 458MB)
 
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @W: FA239 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) mapped in logic. To map to a technology ROM, apply attribute syn_romstyle on this instance.
 @N: MO106 :"c:\vhdl_temp\digitizer\digitizer_vhdl\digitizer\hdl\command_decoder.vhd":502:12:502:15|Found ROM Controler_0.Command_Decoder_0.Has_Answer_2_0 (in view: work.Top(verilog)) with 27 words by 1 bit.
 
-Finished preparing to map (Real Time elapsed 0h:04m:33s; CPU Time elapsed 0h:04m:33s; Memory used current: 749MB peak: 802MB)
+Finished preparing to map (Real Time elapsed 0h:01m:15s; CPU Time elapsed 0h:01m:15s; Memory used current: 433MB peak: 458MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:04m:44s; CPU Time elapsed 0h:04m:44s; Memory used current: 753MB peak: 895MB)
+Finished technology mapping (Real Time elapsed 0h:01m:19s; CPU Time elapsed 0h:01m:19s; Memory used current: 463MB peak: 481MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:04m:50s		    -9.93ns		102089 /     39559
-   2		0h:04m:54s		    -9.58ns		101693 /     39559
+   1		0h:01m:21s		    -9.93ns		34668 /     21737
+   2		0h:01m:23s		    -9.58ns		34483 /     21737
 
-   3		0h:05m:12s		    -9.57ns		101694 /     39559
+   3		0h:01m:31s		    -9.57ns		34484 /     21737
+   4		0h:01m:31s		    -9.57ns		34484 /     21737
+   5		0h:01m:31s		    -9.57ns		34484 /     21737
 
 
-   4		0h:05m:19s		    -9.25ns		101702 /     39559
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1892 
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1893 
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[3] on CLKINT  I_1894 
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO.WR_INDEX[4] on CLKINT  I_1895 
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.WR_INDEX[5] on CLKINT  I_1896 
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.0\.inst_AnalyzInCirc_FIFO_2.WR_INDEX[6] on CLKINT  I_1897 
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO_2.WR_INDEX[5] on CLKINT  I_1898 
-@N: FP130 |Promoting Net AnalyzatorInCircuit_0.AnalyzInCirc_Top_0.FifoInst_GEN\.1\.inst_AnalyzInCirc_FIFO_2.WR_INDEX[6] on CLKINT  I_1899 
+   6		0h:01m:34s		    -9.58ns		34489 /     21737
+   7		0h:01m:34s		    -9.58ns		34489 /     21737
+@N: FP130 |Promoting Net Transceiver_Main_0.Transceiver_LanesConnection_0.inst_RxMainLinkController.Chain_arst1_i on CLKINT  I_10955 
 
 Added 0 Buffers
 Added 0 Cells via replication
@@ -580,15 +564,10 @@ Added 0 Cells via replication
 	Added 0 Sequential Cells via replication
 	Added 0 Combinational Cells via replication
 
-Added 0 Buffers
-Added 0 Cells via replication
-	Added 0 Sequential Cells via replication
-	Added 0 Combinational Cells via replication
-
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:05m:41s; CPU Time elapsed 0h:05m:41s; Memory used current: 805MB peak: 895MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:01m:42s; CPU Time elapsed 0h:01m:42s; Memory used current: 480MB peak: 532MB)
 
 
-Finished restoring hierarchy (Real Time elapsed 0h:05m:47s; CPU Time elapsed 0h:05m:47s; Memory used current: 843MB peak: 895MB)
+Finished restoring hierarchy (Real Time elapsed 0h:01m:44s; CPU Time elapsed 0h:01m:44s; Memory used current: 493MB peak: 532MB)
 
 
 End compile point sub-process log
@@ -602,7 +581,7 @@ Name     Status       Reason
 Top      Remapped     Design changed
 ====================================
 
-Process took 0h:05m:49s realtime, 0h:05m:49s cputime
-# Sun Jun  2 15:00:21 2024
+Process took 0h:01m:45s realtime, 0h:01m:45s cputime
+# Wed Jun  5 19:52:08 2024
 
 ###########################################################]
